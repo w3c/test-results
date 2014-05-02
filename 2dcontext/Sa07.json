@@ -4055,7 +4055,7 @@
         {
           "name": "Canvas test: 2d.pattern.image.broken",
           "status": "FAIL",
-          "message": "assert_equals: ctx.createPattern(img, 'repeat') === null (got [object CanvasPattern][object], expected [object]) expected null but got object \"[object CanvasPattern]\"(stack: assert@http://web-platform.test:8000/resources/testharness.js:2150:42\nassert_equals@http://web-platform.test:8000/resources/testharness.js:747:15\n_assertSame@http://web-platform.test:8000/common/canvas-tests.js:43:18\nhttp://web-platform.test:8000/2dcontext/fill-and-stroke-styles/2d.pattern.image.broken.html:24:12\nstep@http://web-platform.test:8000/resources/testharness.js:1210:30\nhttp://web-platform.test:8000/common/canvas-tests.js:182:19)"
+          "message": "assert_throws: function \"function () { ctx.createPattern(img, 'repeat'); }\" did not throw(stack: assert@http://web-platform.test:8000/resources/testharness.js:2150:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:995:19\n_assert_throws@http://web-platform.test:8000/common/canvas-tests.js:216:18\nhttp://web-platform.test:8000/2dcontext/fill-and-stroke-styles/2d.pattern.image.broken.html:24:15\nstep@http://web-platform.test:8000/resources/testharness.js:1210:30\nhttp://web-platform.test:8000/common/canvas-tests.js:182:19)"
         }
       ],
       "status": "OK",
@@ -4450,8 +4450,8 @@
       "subtests": [
         {
           "name": "Canvas test: 2d.pattern.repeat.null",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function () { ctx.createPattern(canvas, null); }\" did not throw(stack: assert@http://web-platform.test:8000/resources/testharness.js:2150:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:995:19\n_assert_throws@http://web-platform.test:8000/common/canvas-tests.js:216:18\nhttp://web-platform.test:8000/2dcontext/fill-and-stroke-styles/2d.pattern.repeat.null.html:23:15\nstep@http://web-platform.test:8000/resources/testharness.js:1210:30\nhttp://web-platform.test:8000/common/canvas-tests.js:182:19)"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4494,12 +4494,51 @@
       "message": null
     },
     {
+      "test": "/2dcontext/fill-and-stroke-styles/2d.pattern.repeat.unrecognisednull.html",
+      "subtests": [
+        {
+          "name": "Canvas test: 2d.pattern.repeat.unrecognisednull",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/2dcontext/fill-and-stroke-styles/2d.strokeStyle.default.html",
       "subtests": [
         {
           "name": "Canvas test: 2d.strokeStyle.default",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html",
+      "subtests": [
+        {
+          "name": "fillRect should not affect current default path and NotSupportedError should be thrown.",
+          "status": "FAIL",
+          "message": "assert_throws: fillRect should not affect current default path and NotSupportedError should be thrown. function \"function () {\n            var canvas = document.getElemen...\" threw object \"TypeError: undefined is not a function (evaluating 'conte...\" (\"TypeError\") expected object \"[object Object]\" (\"NotSupportedError\")(stack: assert@http://web-platform.test:8000/resources/testharness.js:2150:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:1005:23\nhttp://web-platform.test:8000/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html:15:18\nstep@http://web-platform.test:8000/resources/testharness.js:1210:30\ntest@http://web-platform.test:8000/resources/testharness.js:485:22\nglobal code@http://web-platform.test:8000/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html:14:5)"
+        },
+        {
+          "name": "strokeRect should not affect current default path and NotSupportedError should be thrown.",
+          "status": "FAIL",
+          "message": "assert_throws: strokeRect should not affect current default path and NotSupportedError should be thrown. function \"function () {\n            var canvas = document.getElemen...\" threw object \"TypeError: undefined is not a function (evaluating 'conte...\" (\"TypeError\") expected object \"[object Object]\" (\"NotSupportedError\")(stack: assert@http://web-platform.test:8000/resources/testharness.js:2150:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:1005:23\nhttp://web-platform.test:8000/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html:34:18\nstep@http://web-platform.test:8000/resources/testharness.js:1210:30\ntest@http://web-platform.test:8000/resources/testharness.js:485:22\nglobal code@http://web-platform.test:8000/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html:33:5)"
+        },
+        {
+          "name": "fillText should not affect current default path and NotSupportedError should be thrown.",
+          "status": "FAIL",
+          "message": "assert_throws: fillText should not affect current default path and NotSupportedError should be thrown. function \"function () {\n            var canvas = document.getElemen...\" threw object \"TypeError: undefined is not a function (evaluating 'conte...\" (\"TypeError\") expected object \"[object Object]\" (\"NotSupportedError\")(stack: assert@http://web-platform.test:8000/resources/testharness.js:2150:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:1005:23\nhttp://web-platform.test:8000/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html:53:18\nstep@http://web-platform.test:8000/resources/testharness.js:1210:30\ntest@http://web-platform.test:8000/resources/testharness.js:485:22\nglobal code@http://web-platform.test:8000/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html:52:5)"
+        },
+        {
+          "name": "strokeText should not affect current default path and NotSupportedError shuld be thrown.",
+          "status": "FAIL",
+          "message": "assert_throws: strokeText should not affect current default path and NotSupportedError shuld be thrown. function \"function () {\n            var canvas = document.getElemen...\" threw object \"TypeError: undefined is not a function (evaluating 'conte...\" (\"TypeError\") expected object \"[object Object]\" (\"NotSupportedError\")(stack: assert@http://web-platform.test:8000/resources/testharness.js:2150:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:1005:23\nhttp://web-platform.test:8000/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html:72:18\nstep@http://web-platform.test:8000/resources/testharness.js:1210:30\ntest@http://web-platform.test:8000/resources/testharness.js:485:22\nglobal code@http://web-platform.test:8000/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html:71:5)"
         }
       ],
       "status": "OK",

@@ -4055,7 +4055,7 @@
         {
           "name": "Canvas test: 2d.pattern.image.broken",
           "status": "FAIL",
-          "message": "assert_equals: ctx.createPattern(img, 'repeat') === null (got [object CanvasPattern][object], expected [object]) expected null but got object \"[object CanvasPattern]\""
+          "message": "assert_throws: function \"function() { ctx.createPattern(img, 'repeat'); }\" did not throw"
         }
       ],
       "status": "OK",
@@ -4450,8 +4450,8 @@
       "subtests": [
         {
           "name": "Canvas test: 2d.pattern.repeat.null",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() { ctx.createPattern(canvas, null); }\" did not throw"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4494,12 +4494,51 @@
       "message": null
     },
     {
+      "test": "/2dcontext/fill-and-stroke-styles/2d.pattern.repeat.unrecognisednull.html",
+      "subtests": [
+        {
+          "name": "Canvas test: 2d.pattern.repeat.unrecognisednull",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/2dcontext/fill-and-stroke-styles/2d.strokeStyle.default.html",
       "subtests": [
         {
           "name": "Canvas test: 2d.strokeStyle.default",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/2dcontext/hit-regions/addHitRegions-NotSupportedError-01.html",
+      "subtests": [
+        {
+          "name": "fillRect should not affect current default path and NotSupportedError should be thrown.",
+          "status": "FAIL",
+          "message": "assert_throws: fillRect should not affect current default path and NotSupportedError should be thrown. function \"function () {\r\n            var canvas = document.getEleme...\" threw object \"TypeError: Object doesn't support property or method 'add...\" (\"TypeError\") expected object \"[object Object]\" (\"NotSupportedError\")"
+        },
+        {
+          "name": "strokeRect should not affect current default path and NotSupportedError should be thrown.",
+          "status": "FAIL",
+          "message": "assert_throws: strokeRect should not affect current default path and NotSupportedError should be thrown. function \"function () {\r\n            var canvas = document.getEleme...\" threw object \"TypeError: Object doesn't support property or method 'add...\" (\"TypeError\") expected object \"[object Object]\" (\"NotSupportedError\")"
+        },
+        {
+          "name": "fillText should not affect current default path and NotSupportedError should be thrown.",
+          "status": "FAIL",
+          "message": "assert_throws: fillText should not affect current default path and NotSupportedError should be thrown. function \"function () {\r\n            var canvas = document.getEleme...\" threw object \"TypeError: Object doesn't support property or method 'add...\" (\"TypeError\") expected object \"[object Object]\" (\"NotSupportedError\")"
+        },
+        {
+          "name": "strokeText should not affect current default path and NotSupportedError shuld be thrown.",
+          "status": "FAIL",
+          "message": "assert_throws: strokeText should not affect current default path and NotSupportedError shuld be thrown. function \"function () {\r\n            var canvas = document.getEleme...\" threw object \"TypeError: Object doesn't support property or method 'add...\" (\"TypeError\") expected object \"[object Object]\" (\"NotSupportedError\")"
         }
       ],
       "status": "OK",
