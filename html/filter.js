@@ -15,7 +15,7 @@ exports.excludeCase = function (file, name) {
     if (/is(Protocol|Content)HandlerRegistered/.test(name)) return true;
     if (/unregister(Protocol|Content)Handler/.test(name)) return true;
     if (/cssElementMap|contextMenu|forceSpellCheck/.test(name)) return true;
-    if (/scoped|command|srcset|seamless/.test(name)) return true;
+    if (/scoped|command|srcset|seamless|:dir|:progress/.test(name)) return true;
     if (/(before|append|after|replace)\(/.test(name)) return true;
     if (/HD\(/.test(name)) return true;
     if (/(transferControlToProxy|setContext|supportsContext)/.test(name)) return true;
