@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>HTML5: Analysis of failed tests</title>
+    <link rel='stylesheet' href='bootstrap.min.css'>
+    <link rel='stylesheet' href='analysis.css'>
+  </head>
+  <body>
+    <div class='container'>
+      <header>
+        <h1>HTML5: Analysis of failed tests</h1>
+      </header>
+      <section>
+        <h2>Introduction</h2>
+        <p>
+          NOTE: this analysis is provisional (2014-05-28), the situation is expected to evolve over
+          the next few months.
+        </p>
+        <p>
+          Historically, W3C test suites have altogether too often been subpar in their coverage,
+          barely scraping the surface of interoperability. In such a context, with only a few 
+          hundred simple tests, it is naturally expected that one would expect to hit the 100%
+          pass mark.
+        </p>
+        <p>
+          With the more recent focus on testing however, notably through the
+          <a href='https://github.com/w3c/web-platform-tests/'>Web Platform Tests</a> and
+          <a href='http://testthewebforward.org/'>Test The Web Forward</a> projects the quality
+          of test suites has improved massively. And since we don't live in a perfect world, if one
+          looks for trouble hard enough one will find it.
+        </p>
+        <p>
+          The HTML test suite, which is nearing 100,000 tests (and growing), certainly did set out
+          to look for trouble. Given that, it seems useful to accompany the test results with this
+          this note explaining where the failures come from.
+        </p>
+        <p>
+          In total, 3190 tests fail to pass in two implementations, which amounts to 3.30% of the
+          total. The sections below provide context in which to appraise these failures.
+        </p>
+      </section>
+      <section>
+        <h2>WebIDL</h2>
+        <p>
+          2437 of the failures (76%) are linked to WebIDL-related problems. Essentially, they are
+          attributes being present on instances instead of prototypes, wrong exception types, and
+          other similar issues.
+        </p>
+        <p>
+          These will get better over time as WebIDL compliance progresses. It is a slow process,
+          but also one that does not threaten to break HTML (or other specifications depending on
+          WebIDL).
+        </p>
+        <p>
+          These failures do not adversely affect regular everyday development. Removing them leaves
+          us with just a 0.77% failure rate.
+        </p>
+      </section>
+      <section>
+        <h2>New features</h2>
+        <p>
+          HTML5 introduces a number of newer features, and some of those have not entirely finished
+          stabilising yet. This concerns mostly forms (9.6%), the template element (4.9%), and
+          the new media elements, most of all <code>&lt;track></code> (2.4%).
+        </p>
+        <p>
+          That these are partially failing should not hide the fact that they otherwise 
+          overwhelmingly pass their tests. It is only to be expected that more recent additions to
+          the stack have their darker corners for which not everyone is yet on the same page. These
+          do not seem to be pointing at implementability issues (the features are by and large known
+          to be usable already).
+        </p>
+      </section>
+      <section>
+        <h2>Historical features</h2>
+        <p>
+          The haphazard manner in which HTML was for much of its lifetime developed means that there
+          are some features that never really were interoperable. HTML5 takes great strides in the
+          direction of fixing this, but while some core aspects have been the subject of driven
+          alignment (e.g. parsing) defining the behaviour of historical features which have never
+          been reliable naturally ends up entering an area of diminishing returns.
+        </p>
+        <p>
+          These are failures for features that will likely get fixed eventually but that aren't high
+          on anyone's priority list at this point. Tests in this segment represent 2.2% of all
+          failures.
+        </p>
+      </section>
+      <section>
+        <h2>Miscellaneous</h2>
+        <p>
+          The remaining 138 failing test cases (0.14% of total) do not appear to subject themselves
+          to easy categorisation. Many of these are corner cases that have little impact on everyday
+          development, if any.
+        </p>
+      </section>
+      <section>
+        <h2>Conclusion</h2>
+        <p>
+          Considering that:
+        </p>
+        <ol>
+          <li>
+            the volume of failures is low to start with (we have over 96% success over close to
+            100,000 tests);
+          </li>
+          <li>
+            76% of failures come from WebIDL with minimal risk to practical interoperability;
+          </li>
+          <li>
+            17% of failures come from corner cases of new features being actively worked on;
+          </li>
+          <li>
+            the percentage of issues that point to problems that could affect developers is
+            so vanishingly small as to be negligible and none of the remaining tests indicates
+            a failure in interoperability;
+          </li>
+        </ol>
+        <p>
+          We contend that the specification being proposed for advancement through the process has
+          demonstrated interoperability.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
