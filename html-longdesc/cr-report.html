@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>longdesc test-results</title>
+    <style>
+      body {background-color: white; color: black;}
+table
+{ border-collapse:collapse; }
+table,th, td { border: 1px solid black; } td { text-align: center; }
+td.pass { background-color: #6c3; }
+td.fail { background-color: #9A9; text-transform: lowercase; }
+.pass, .fail { font-weight: bold; }
+</style> </head>
+  <body>
+    <h1>CR Implementation report - longdesc</h1>
+    <p>This document shows that the <code>longdesc</code> attribute as
+      described in the <a href="http://www.w3.org/TR/2014/CR-html-longdesc-20140812/">HTML
+        Image Description Extension (longdesc)</a> specification is
+      implementable, and that independent implementations are highly
+      interoperable. In summary, there are a number of independent
+      implementations that demonstrate interoperability in each of the specification's
+      requirements, for a variety of real-world scenarios .</p>
+    <p>The specification explicitly defines 3 requirements for User Agents in
+      section 3.03, plus a requirement on how the attribute is treated in the
+      DOM in section 3.1.1, which in practice applies to User Agents:</p>
+    <ol>
+      <li>If the<span class="Apple-converted-space">&nbsp;</span><code>longdesc</code><span
+          class="Apple-converted-space">&nbsp;</span>value is valid, User agents<span
+          class="Apple-converted-space">&nbsp;</span><em class="rfc2119" style="text-transform: lowercase; font-variant: small-caps; font-style: normal; color: rgb(153, 0, 0);">must</em><span
+          class="Apple-converted-space">&nbsp;</span>make the link available to
+        all users through the regular user interface(s).</li>
+      <li>If the<span class="Apple-converted-space">&nbsp;</span><code>longdesc</code><span
+          class="Apple-converted-space">&nbsp;</span>value is valid, User agents<span
+          class="Apple-converted-space">&nbsp;</span><em class="rfc2119" style="text-transform: lowercase; font-variant: small-caps; font-style: normal; color: rgb(153, 0, 0);">must</em><span
+          class="Apple-converted-space">&nbsp;</span>expose the link to relevant
+        APIs, especially accessibility-oriented APIs.</li>
+      <li>User agents<span class="Apple-converted-space">&nbsp;</span><em class="rfc2119"
+          style="text-transform: lowercase; font-variant: small-caps; font-style: normal; color: rgb(153, 0, 0);">should</em><span
+          class="Apple-converted-space">&nbsp;</span>enable users to discover
+        when images in a page contain a long description.</li>
+      <li> <span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">The<span
+            class="Apple-converted-space">&nbsp;</span></span><code style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">longdesc</code><span
+          style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+            class="Apple-converted-space">&nbsp;</span>IDL attribute<span class="Apple-converted-space">&nbsp;</span></span><em
+          class="rfc2119" style="text-transform: lowercase; font-variant: small-caps; font-style: normal; color: rgb(153, 0, 0); font-family: sans-serif; font-size: medium; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">must</em><span
+          style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+            class="Apple-converted-space">&nbsp;</span></span><a href="http://www.w3.org/TR/html5/infrastructure.html#reflect"
+          style="color: rgb(102, 0, 153); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background: rgb(255, 255, 255);">reflect</a><span
+          style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+            class="Apple-converted-space">&nbsp;</span>the HTML content
+          attribute<span class="Apple-converted-space">&nbsp;</span></span><code
+          style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">longdesc</code><span
+          style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">.</span></li>
+    </ol>
+    <p> "Plan-2014" recognises that a User Agent may be a single piece of
+      software such as a browser, but may in practice consist of a set of
+      software that a user runs togther, such as a browser plus extensions,
+      assistive technologies, and OS-based "helpers" or specific settings.</p>
+    <p>A set of tests are used to test the following requirements for User
+      Agents (in section 3.03):</p>
+    <ol>
+    </ol>
+    <ol>
+      <li>If the<span class="Apple-converted-space">&nbsp;</span><code>longdesc</code><span
+          class="Apple-converted-space">&nbsp;</span>value is valid, User agents<span
+          class="Apple-converted-space">&nbsp;</span><em class="rfc2119" style="text-transform: lowercase; font-variant: small-caps; font-style: normal; color: rgb(153, 0, 0);">must</em><span
+          class="Apple-converted-space">&nbsp;</span>make the link available to
+        all users through the regular user interface(s).</li>
+      <li>User agents<span class="Apple-converted-space">&nbsp;</span><em class="rfc2119"
+          style="text-transform: lowercase; font-variant: small-caps; font-style: normal; color: rgb(153, 0, 0);">should</em><span
+          class="Apple-converted-space">&nbsp;</span>enable users to discover
+        when images in a page contain a long description.</li>
+    </ol>
+    <p>The tests cover a variety of different scenarios, for example whether the
+      longdesc refers to a description on the same page as or a different page
+      from the image, where there is a base element used on the page, where a
+      data: URI is used as the value of the longdesc, etc. The results of these
+      tests are shown in table 1, but in summary there are a number of User
+      Agents (or composite user agents) in public release that enable discovery
+      of and access to descriptions of images linked by a <code>longdesc</code>
+      attribute.</p>
+    <p>The same set of tests were used to demonstrate that user agents make the
+      relevant information available through at least the MSAA accessibility
+      interface, as shown in Table 2, as per the requirement</p>
+    <ol>
+      <li>If the<span class="Apple-converted-space">&nbsp;</span><code>longdesc</code><span
+          class="Apple-converted-space">&nbsp;</span>value is valid, User agents<span
+          class="Apple-converted-space">&nbsp;</span><em class="rfc2119" style="text-transform: lowercase; font-variant: small-caps; font-style: normal; color: rgb(153, 0, 0);">must</em><span
+          class="Apple-converted-space">&nbsp;</span>expose the link to relevant
+        APIs, especially accessibility-oriented APIs. <br>
+      </li>
+    </ol>
+    <p>In addition, since the DOM is used as an accessibility API by many
+      systems (e.g. screenreaders), the test showing that <code>longdesc</code>
+      is reflected in the DOM is evidence that this requirement is met by
+      multiple user agents.</p>
+    <p>The test that <code>longdesc</code> is reflected in the DOM primarily
+      shows that the requirement</p>
+    <ul>
+      <li> <span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">The<span
+            class="Apple-converted-space">&nbsp;</span></span><code style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">longdesc</code><span
+          style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+            class="Apple-converted-space">&nbsp;</span>IDL attribute<span class="Apple-converted-space">&nbsp;</span></span><em
+          class="rfc2119" style="text-transform: lowercase; font-variant: small-caps; font-style: normal; color: rgb(153, 0, 0); font-family: sans-serif; font-size: medium; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">must</em><span
+          style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+            class="Apple-converted-space">&nbsp;</span></span><a href="http://www.w3.org/TR/html5/infrastructure.html#reflect"
+          style="color: rgb(102, 0, 153); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background: rgb(255, 255, 255);">reflect</a><span
+          style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);"><span
+            class="Apple-converted-space">&nbsp;</span>the HTML content
+          attribute<span class="Apple-converted-space">&nbsp;</span></span><code
+          style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">longdesc</code><span
+          style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">.</span></li>
+    </ul>
+    <p>(section 3.1.1) is met by multiple browsers, as per Table 3.</p>
+    <ol>
+    </ol>
+    <h2 id="muft">Table 1: Multi-function tests - discovery, availability to the
+      user</h2>
+    <table border="1">
+      <tbody>
+        <tr>
+          <th rowspan="2" scope="col">Test</th>
+          <th colspan="2" scope="col">Yandex 1.7 + "Longdesc" extension, MacOS</th>
+          <th colspan="2" scope="col">FF 23, MacOS 10.7.5</th>
+          <th colspan="2" scope="col">FF 23+ JAWS 15, Win</th>
+          <th colspan="2" scope="col">IE10, JAWS 15, Win</th>
+          <th colspan="2" scope="col">FF 27 Aviewer, Win</th>
+          <th colspan="2" scope="col">FF23 + NVDA2013.2, Win</th>
+          <th colspan="2" scope="col">IE10 + NVDA2013.2, Win</th>
+          <th colspan="2" scope="col">Opera 12.15, MacOS 10.7.5</th>
+          <th colspan="2" scope="col">iCab 5.1, MacOS 10.7.5</th>
+        </tr>
+        <tr>
+          <th scope="col">Discover</th>
+          <th scope="col">Access</th>
+          <th scope="col">Discover</th>
+          <th scope="col">Access</th>
+          <th scope="col">Discover</th>
+          <th scope="col">Access</th>
+          <th scope="col">Discover</th>
+          <th scope="col">Access</th>
+          <th scope="col">Discover</th>
+          <th scope="col">Access</th>
+          <th scope="col">Discover</th>
+          <th scope="col">Access</th>
+          <th scope="col">Discover</th>
+          <th scope="col">Access</th>
+          <th scope="col">Discover</th>
+          <th scope="col">Access</th>
+          <th scope="col">Discover</th>
+          <th scope="col">Access</th>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-data-uri-description.html">ext
+              img - data:URI desc</a></th>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/empty-image-external-description.html">empty
+              img - external desc</a></th>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description.html">ext
+              img - ext desc</a></th>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-internal-description.html">ext
+              img - internal desc</a></th>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description-fragment-girt-by-spaces.html">ext
+              img - ext desc fragment with spaces</a></th>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description-fragment.html">ext
+              img - ext desc fragment</a></th>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-with-absolute-base-external-description.html">ext
+              img - ext desc with absolute base</a></th>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="fail">FAIL</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-with-relative-base-external-description.html">ext
+              img - ext desc with relative base</a></th>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/iframe-discoverability.html">img
+              in <code>&lt;iframe&gt;</code></a></th>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="fail">FAIL</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+        </tr>
+        <tr>
+          <th scope="row">Comments</th>
+          <td colspan="2">Discovery is configurable in the extension</td>
+          <td colspan="2">Access to the description is poor. You can get the URL
+            of the longdesc, then copy it and paste it into a tab</td>
+          <td colspan="2"><br>
+          </td>
+          <td colspan="2"><br>
+          </td>
+          <td colspan="2"><br>
+          </td>
+          <td colspan="2"><br>
+          </td>
+          <td colspan="2"><br>
+          </td>
+          <td colspan="2">Discovery is weak - there is a longdesc option in the
+            context menu when there is a longdesc available</td>
+          <td colspan="2">Data:uri images fail to render properly. (This is not
+            a <code>longdesc</code> bug).</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th rowspan="2" scope="col">Test</th>
+          <th colspan="2" scope="col">Yandex 1.7 + "Longdesc" extension (made
+            for Chrome),&nbsp; MacOS</th>
+          <th colspan="2" scope="col">FF 23, MacOS 10.7.5</th>
+          <th colspan="2" scope="col">FF 23, JAWS 15</th>
+          <th colspan="2" scope="col">IE10, JAWS 15</th>
+          <th colspan="2" scope="col">FF 27 Aviewer</th>
+          <th colspan="2" scope="col">NVDA2013.2, FF23</th>
+          <th colspan="2" scope="col">NVDA2013.2, IE10</th>
+          <th colspan="2" scope="col">Opera 12.15, MacOS 10.7.5</th>
+          <th colspan="2" scope="col">iCab 5.1, MacOS 10.7.5</th>
+        </tr>
+      </tfoot>
+    </table>
+    <h2 id="muftapi">Table 2: Multi-function tests - MSAA exposure</h2>
+    <table style="width: 1091px; height: 818px;" border="1">
+      <tbody>
+        <tr>
+          <th scope="col">Test</th>
+          <th scope="col">IE 11.09,MSAA, Aviewer,WIN</th>
+          <th scope="col">FF 27.0a1,MSAA,Aviewer,WIN</th>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-data-uri-description.html">ext
+              img - data:URI desc</a></th>
+          <td class="pass">PASS <sup>[<a href="#fn1">1</a>]</sup> <sup>[<a href="#fn7">6</a>]</sup></td>
+          <td class="pass">PASS <sup>[<a href="#fn8">7</a>]</sup></td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/empty-image-external-description.html">empty
+              img - external desc</a></th>
+          <td class="pass">PASS <sup>[<a href="#fn2">2</a>]</sup> <sup>[<a href="#fn7">6</a>]</sup></td>
+          <td class="fail">FAIL <sup>[<a href="#fn7">6</a>]</sup></td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description.html">ext
+              img - ext desc</a></th>
+          <td class="pass">PASS <sup>[<a href="#fn2">2</a>]</sup> <sup>[<a href="#fn7">6</a>]</sup></td>
+          <td class="pass">PASS <sup>[<a href="#fn8">7</a>]</sup></td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-internal-description.html">ext
+              img - internal desc</a></th>
+          <td class="pass">FAIL <sup>[<a href="#fn3">3</a>]</sup> <sup>[<a href="#fn7">6</a>]</sup></td>
+          <td class="pass">PASS <sup>[<a href="#fn8">7</a>]</sup></td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description-fragment-girt-by-spaces.html">ext
+              img - ext desc fragment with spaces</a></th>
+          <td class="pass">PASS <sup>[<a href="#fn4">4</a>] [<a href="#fn7">6</a>]</sup></td>
+          <td class="pass">PASS <sup>[<a href="#fn8">7</a>]</sup></td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-external-description-fragment.html">ext
+              img - ext desc fragment</a></th>
+          <td class="pass">PASS <sup>[<a href="#fn4">4</a>] [<a href="#fn7">6</a>]</sup></td>
+          <td class="pass">PASS <sup>[<a href="#fn8">7</a>]</sup></td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-with-absolute-base-external-description.html">ext
+              img - ext desc with absolute base</a></th>
+          <td class="pass">PASS <sup>[<a href="#fn5">5</a>] [<a href="#fn7">6</a>]</sup></td>
+          <td class="pass">PASS <sup>[<a href="#fn8">7</a>]</sup></td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/external-image-with-relative-base-external-description.html">ext
+              img - ext desc with relative base</a></th>
+          <td class="pass">PASS <sup>[<a href="#fn5">5</a>] [<a href="#fn7">6</a>]</sup></td>
+          <td class="pass">PASS <sup>[<a href="#fn8">7</a>]</sup></td>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/iframe-discoverability.html">img
+              in <code>&lt;iframe&gt;</code></a></th>
+          <td class="pass">PASS <sup>[<a href="#fn2">2</a>]</sup> <sup>[<a href="#fn7">6</a>]</sup></td>
+          <td class="pass">PASS <sup>[<a href="#fn8">7</a>]</sup></td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li><sup id="fn1">[1]</sup> accDescription has value of "data:text/html"</li>
+      <li><sup id="fn2">[2]</sup> accDescription has value of "pass.html"</li>
+      <li><sup id="fn3">[3]</sup> accDescription has value of "#pass"</li>
+      <li><sup id="fn4">[4]</sup> accDescription has value of
+        "pass-fragment.html#fragment"</li>
+      <li><sup id="fn5">[5]</sup> accDescription has value of "fail.html"</li>
+      <li><sup id="fn7">[6]</sup> FAIL: accDefaultAction: [null]</li>
+      <li><sup id="fn8">[7]</sup> PASS: accDefaultAction: showlongdesc</li>
+    </ul>
+    <h2 id="auto"><br>
+      Table 3: DOM reflection</h2>
+    <table border="1">
+      <tbody>
+        <tr>
+          <th scope="col">Test</th>
+          <th>Yandex browser 1.7 + "Longdesc" extension, MacOS</th>
+          <th>FF 23 + JAWS 15, Win</th>
+          <th>IE10 + JAWS 15, Win</th>
+          <th>FF23 + NVDA2013.2, Win</th>
+          <th>IE 10 + NVDA2013.2, Win</th>
+          <th>Opera 12.15, MacOS 10.7.5</th>
+        </tr>
+        <tr>
+          <th scope="row"><a href="https://rawgithub.com/chaals/longdesc-tests/master/reflected-changing-longdesc.html">longdesc
+              updated by javascript</a></th>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+          <td class="pass">PASS</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </body>
+</html>
