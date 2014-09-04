@@ -65,7 +65,7 @@ td.fail { background-color: #9A9; text-transform: lowercase; }
         discover when images in a page contain a long description.</li>
     </ol>
     <p>The tests The results of these tests are shown in <a href="#muft">table
-        1</a>.</p>
+        1</a>. There are a number of user agents that pass these tests.</p>
     <h2>Exposure through Accessibility API</h2>
     <p>The same set of tests were used to demonstrate that user agents make the
       relevant information available through the MSAA accessibility interface,
@@ -77,12 +77,17 @@ td.fail { background-color: #9A9; text-transform: lowercase; }
       </li>
     </ol>
     <p>In addition, the DOM is used as an accessibility API by many systems
-      (e.g. screenreaders). The test showing that <code>longdesc</code> is
-      reflected in the DOM by multiple independent browsers (<a href="#auto">table
-        3</a>) is further evidence that this requirement is met. </p>
+      (e.g. screenreaders interacting with Internet Explorer, such as NVDA). The
+      test showing that <code>longdesc</code> is reflected in the DOM by
+      multiple independent browsers (<a href="#auto">table 3</a>) is further
+      evidence that this requirement is met.</p>
     <p>In practice, the fact that nearly all screenreaders except VoiceOver
       provide native access to longdesc demonstrates that this requirement is
-      effectively met in the real world.</p>
+      effectively met in the real world. For example in order to get data from
+      Firefox, NVDA uses the IA2 accessibility API. Although there are no formal
+      results testing the API directly, the fact the NVDA and Orca with Firefox
+      successfully implement the specification shows that in practice Firefox
+      exposes correct data to both IA2 on Windows and AT-SPI/ATK on Linux.</p>
     <h2>Reflecting the attribute</h2>
     <p>The test that <code>longdesc</code> is reflected in the DOM primarily
       shows that the requirement</p>
@@ -95,6 +100,44 @@ td.fail { background-color: #9A9; text-transform: lowercase; }
     </ol>
     <p>(section 3.1.1) is met by multiple browsers, as per <a href="#auto">Table
         3</a>.</p>
+    <h2>Reported implementation Experience</h2>
+    <h3>Extensions</h3>
+    <p>There are <a href="http://www.d.umn.edu/itss/training/online/moodle_downloads/accessibility_104/longdesc_tools.html">a
+        number of independently developed extensions for different browsers</a>
+      that make <code>longdesc</code> more readily available to users. These
+      demonstrate a variety of approaches to enabling discoverability, whether
+      by adding elements to the rendered webpage itself (as is also typical of
+      screenreaders, which do not <em>have</em> a visible browser UI) or
+      leaving the rendering intact and providing relevant indicators through the
+      visible browser UI.</p>
+    <p>Dirk Ginader ports his extension from C<span style="font-family: monospace;">h</span>rome
+      to Firefox as part of a one-hour presentation. Jim Thatcher's "favelet" is
+      designed as a cross-browser 'extension'. An experimental (but not
+      release-quality) port of the TellMeMore extension from Opera/Presto to
+      Blink took a few hours. Whle the major bug (support for <code>longdesc</code>
+      in <code>frame</code> and <code>iframe</code>) was not fixed in this
+      experimental effort, the difficulties are not relevant to <code>longdesc</code>,
+      but the complications of interacting with <code>frame</code> and <code>iframe</code>.
+    </p>
+    <h3>Opera</h3>
+    <p>The Opera browser implemented support for <code>longdesc</code> in
+      version 10.1. The implementation took about a week to develop, including
+      time to debug and fix.</p>
+    <h3>NVDA</h3>
+    <p>During the Last Call for the specification, it was implemented in the
+      NVDA screenreader. The developers had stated that they thought it made
+      more sense to implement directly in the browser, but eventually decided
+      that it was more important to provide the functionality to their users
+      than wait for Firefox to implement <code>longdesc</code> natively. As the
+      test results show, NVDA managed to successfully implement for at least two
+      browsers. The developers <a href="http://lists.w3.org/Archives/Public/public-html-admin/2014Aug/0046.html">clarified
+        in mail</a> that they are using different accessibility APIs on the same
+      platform.</p>
+    <h3>Orca</h3>
+    <p>During the CR period, Orca (the most popular Linux screenreader) did an
+      implementation from the specification without assistance from members of
+      the Task Force. It reportedly took a few hours, and as Tables 1 and 2
+      shows, is a highly interoperable implementation.</p>
     <ol>
     </ol>
     <h2 id="muft">Table 1: Multi-function tests - discovery, availability to the
@@ -422,6 +465,7 @@ td.fail { background-color: #9A9; text-transform: lowercase; }
           <th colspan="2" scope="col">NVDA2013.2, IE10</th>
           <th colspan="2" scope="col">Opera 12.15, MacOS 10.7.5</th>
           <th colspan="2" scope="col">iCab 5.1, MacOS 10.7.5</th>
+          <th colspan="2" scope="col">Orca, FF 32, Linux</th>
         </tr>
       </tfoot>
     </table>
@@ -431,7 +475,7 @@ td.fail { background-color: #9A9; text-transform: lowercase; }
         <tr>
           <th rowspan="2">Accessibility API / User Agent</th>
           <th colspan="2">Windows - MSAA </th>
-          <th>Linux - ATK </th>
+          <th>Linux - ATK-SPI/ATK </th>
         </tr>
         <tr>
           <th scope="col">IE 11.09,MSAA, Aviewer,WIN</th>
