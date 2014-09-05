@@ -12,10 +12,12 @@
         <h1>HTML5: Analysis of failed tests</h1>
       </header>
       <section>
+        <p>Nearby: <a href="less-than-2.html">less-than-2</a>, <a href="complete-fails.html">complete-fails</a>, <a href="all.html">all results</a>,
+      </section>
+      <section>
         <h2>Introduction</h2>
         <p>
-          NOTE: this analysis is provisional (2014-05-28), the situation is expected to evolve over
-          the next few months.
+          NOTE: this analysis is pretty final (2014-09-01).
         </p>
         <p>
           Historically, W3C test suites have altogether too often been subpar in their coverage,
@@ -37,14 +39,14 @@
           this note explaining where the failures come from.
         </p>
         <p>
-          In total, 3190 tests fail to pass in two implementations, which amounts to 3.30% of the
-          total. The sections below provide context in which to appraise these failures.
+          In total, 2875 tests fail to pass in two implementations, which amounts to 2.93% of the
+          total (down from  3.30% in May 2014). The sections below provide context in which to appraise these failures.
         </p>
       </section>
       <section>
         <h2>WebIDL</h2>
         <p>
-          2437 of the failures (76%) are linked to WebIDL-related problems. Essentially, they are
+          2437 of the failures (84%) or less are linked to WebIDL-related problems. Essentially, they are
           attributes being present on instances instead of prototypes, wrong exception types, and
           other similar issues.
         </p>
@@ -55,7 +57,7 @@
         </p>
         <p>
           These failures do not adversely affect regular everyday development. Removing them leaves
-          us with just a 0.77% failure rate.
+          us with just a 0.44% failure rate.
         </p>
       </section>
       <section>
@@ -122,6 +124,45 @@
           We contend that the specification being proposed for advancement through the process has
           demonstrated interoperability.
         </p>
+      </section>
+      <section>
+        <h2>File API</h2>
+        <p>HTML5 uses the interfaces File, FileList, and Blob, including the type attribute and the close method. The following tests were used to check implementations:</p>
+        <ul>
+          <li><a href="http://w3c-test.org/FileAPI/filelist-section/filelist.html">FileList</a></li>
+          <li><a href="http://w3c-test.org/FileAPI/File-constructor.html">File-constructor</a></li>
+          <li><a href="http://w3c-test.org/FileAPI/Blob-constructor.html">Blob-constructor</a></li>
+          <li><a href="http://w3c-test.org/FileAPI/idlharness.html">idlharness</a></li>
+        </ul>
+        <p>While not being fully intereoperable in the details, those 3 interfaces are supported by at least 2 browser implementations.</p>
+      </section>
+      <section>
+        <h2>DOM Parsing and Serialization</h2>
+        <p>HTML5 uses the attributes innerHTML and outerHTML. The following tests were used to check implementations:</p>
+        <ul>
+          <li><a href="http://w3c-test.org/submissions/446/domparsing/serializing_html.html">serializing_html</a></li>
+          <li><a href="http://w3c-test.org/submissions/493/DOM-parsing/innerhtml-03.xhtml">innerhtml-03</a></li>
+          <li><a href="http://w3c-test.org/submissions/493/DOM-parsing/outerhtml-02.html">outerhtml-02</a></li>
+        </ul>
+        <p>While not being fully intereoperable in the details, those 2 attributres have been around for a while.</p>
+      </section>
+      <section>
+        <h2>Web Messaging</h2>
+        <p>HTML5 mentions the interface MessagePort from the Web Messaging specification but does not make use for it. The following test was used to check implementations:</p>
+        <ul>
+          <li><a href="http://w3c-test.org/webmessaging/message-channels/001.html">001</a></li>
+        </ul>
+        <p>While not being fully intereoperable in the details, this interface is supported by at least 2 browser implementations.</p>
+      </section>
+      <section>
+        <h2>URL</h2>
+
+        <p>HTML5 mentions the interface <a href="http://url.spec.whatwg.org/#urlutils">URLUtils</a>, href and protocol attritutes which are all exposed through the URL interface. The following test was used to check implementations:</p>
+
+        <ul>
+          <li><a href="http://w3c-test.org/url/interfaces.html">interfaces</a></li>
+        </ul>
+        
       </section>
     </div>
   </body>
