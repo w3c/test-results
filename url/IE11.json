@@ -1,0 +1,2831 @@
+{
+  "results": [
+    {
+      "test": "/url/a-element.html",
+      "subtests": [
+        {
+          "name": "Loading data…",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <http://example\t.\norg> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://user:pass@foo:21/bar;par?b#c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:foo.com> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <\t   :foo.com   \n> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: < foo.com  > against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <a:\t foo.com> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"a:\" but got \"file:\""
+        },
+        {
+          "name": "Parsing: <http://f:21/ b ? d # e > against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/%20b%20\" but got \"%20b%20\""
+        },
+        {
+          "name": "Parsing: <http://f:/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://f:0/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/c\" but got \"c\""
+        },
+        {
+          "name": "Parsing: <http://f:00000000000000/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/c\" but got \"c\""
+        },
+        {
+          "name": "Parsing: <http://f:00000000000000000000080/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://f:b/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://f: /c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://f:\n/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://f:fifty-two/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://f:999999/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://f: 21 / b ? d # e > against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \"\""
+        },
+        {
+          "name": "Parsing: <  \t> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:foo.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:foo.com\\> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:a> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:\\> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:#> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <?> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:23> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </:23> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <::> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <::23> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <foo://> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"//\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://a:b@c:29/d> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http::@c:29> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://&a:foo(b]c@d:2/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://::@c@d:2> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://foo.com:b@d/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://foo.com/\\@> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http:\\\\foo.com\\> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http:\\\\a\\b:c\\d@foo.com\\> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <foo:/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <foo:/bar.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/bar.com/\" but got \"bar.com/\""
+        },
+        {
+          "name": "Parsing: <foo://///////> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/////////\" but got \"//////\""
+        },
+        {
+          "name": "Parsing: <foo://///////bar.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/////////bar.com/\" but got \"//////bar.com/\""
+        },
+        {
+          "name": "Parsing: <foo:////://///> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"////://///\" but got \"/://///\""
+        },
+        {
+          "name": "Parsing: <c:/foo> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"c:\" but got \"file:\""
+        },
+        {
+          "name": "Parsing: <//foo/bar> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <http://foo/path;a??e#f#g> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://foo/abcd?efgh?ijkl> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://foo/abcd#foo?bar> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <[61:24:74]:98> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <http:[61:27]/:foo> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://[1::2]:3:4> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://2001::1> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://2001::1]> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://2001::1]:80> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://[2001::1]> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"[2001::1]\" but got \"2001::1\""
+        },
+        {
+          "name": "Parsing: <http://[2001::1]:80> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"[2001::1]\" but got \"2001::1\""
+        },
+        {
+          "name": "Parsing: <http:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ftp:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <https:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <madeupscheme:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <file:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <ftps:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <gopher:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <data:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <javascript:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <mailto:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <http:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ftp:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <https:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <madeupscheme:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <ftps:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <gopher:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <data:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <javascript:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <mailto:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: </a/b/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </a/ /c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </a%2fc> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </a/%2f/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <data:text/html,test#test> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <file:c:\\foo\\bar.html> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/c:/foo/bar.html\" but got \"c:/foo/bar.html\""
+        },
+        {
+          "name": "Parsing: <  File:c|////foo\\bar.html> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/c:////foo/bar.html\" but got \"c%7C////foo/bar.html\""
+        },
+        {
+          "name": "Parsing: <C|/foo/bar> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </C|\\foo\\bar> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <//C|/foo/bar> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <//server/file> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <\\\\server\\file> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/file\" but got \"file\""
+        },
+        {
+          "name": "Parsing: </\\server/file> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <file:///foo/bar.txt> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/foo/bar.txt\" but got \"foo/bar.txt\""
+        },
+        {
+          "name": "Parsing: <file:///home/me> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/home/me\" but got \"home/me\""
+        },
+        {
+          "name": "Parsing: <//> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <///> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <///test> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <file://test> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <file://localhost> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"localhost\" but got \"\""
+        },
+        {
+          "name": "Parsing: <file://localhost/> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"localhost\" but got \"\""
+        },
+        {
+          "name": "Parsing: <file://localhost/test> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"localhost\" but got \"\""
+        },
+        {
+          "name": "Parsing: <test> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <file:test> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/tmp/mock/test\" but got \"test\""
+        },
+        {
+          "name": "Parsing: <http://example.com/././foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/./.foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/.> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/./> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar/..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar/../> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/..bar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar/../ton> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar/../ton/../../a> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/../../..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/../../../ton> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/%2e> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/%2e%2> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/%2e./%2e%2e/.%2e/%2e.bar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com////../..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar//../..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar//..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/%20foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%2> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%2zbar> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%2Â©zbar> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%41%7a> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo\t%91> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%00%51> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/(%28:%3A%29)> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/%3A%3a%3C%3c> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo\tbar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com\\\\foo\\\\bar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/%7Ffp3%3Eju%3Dduvgw%3Dd> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/@asdf%40> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/你好你好> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/‥/foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/﻿/foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/‮/foo/‭/bar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://www.google.com/foo?bar=baz#> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://www.google.com/foo?bar=baz# »> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://[www.google.com]/> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://www.google.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://192.0x00A80001> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"192.0x00a80001\" but got \"192.168.0.1\""
+        },
+        {
+          "name": "Parsing: <http://www/foo%2Ehtml> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://www/foo/%2E/html> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://user:pass@/> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%25DOMAIN:foobar@foodomain.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:\\\\www.google.com\\foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://foo:80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://foo:81/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <httpa://foo:80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"\" but got \"foo\""
+        },
+        {
+          "name": "Parsing: <http://foo:-80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <https://foo:443/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"443\""
+        },
+        {
+          "name": "Parsing: <https://foo:80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ftp://foo:21/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"21\""
+        },
+        {
+          "name": "Parsing: <ftp://foo:80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <gopher://foo:70/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"70\""
+        },
+        {
+          "name": "Parsing: <gopher://foo:443/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws://foo:80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <ws://foo:81/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws://foo:443/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws://foo:815/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss://foo:80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss://foo:81/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss://foo:443/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"443\""
+        },
+        {
+          "name": "Parsing: <wss://foo:815/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ftp:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <https:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <madeupscheme:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <file:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <ftps:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <gopher:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <data:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <javascript:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <mailto:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/example.com/\" but got \"example.com/\""
+        },
+        {
+          "name": "Parsing: <http:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ftp:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <https:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <madeupscheme:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <ftps:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <gopher:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <data:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <javascript:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <mailto:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <http:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http:/@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:a:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http:/a:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://a:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://@pple.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http::b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http:/:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:/:@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://user@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:/@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <https:@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:a:b@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:/a:b@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://a:b@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http::@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:a:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http:/a:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://a:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://www.@pple.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:@:www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:/@:www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://@:www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.html:41:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: </> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <.> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <..> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <./test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <../test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <../aaa/test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <../../test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <中/test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <http://www.example2.com> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://ExAmPlE.CoM> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example example.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://Goo%20 goo%7C|.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://GOO 　goo.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Unspecified error.(stack: Error: Unspecified error.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://GOO​⁠﻿goo.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://www.foo。bar.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://�zyx.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Unspecified error.(stack: Error: Unspecified error.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%ef%b7%90zyx.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://Ｇｏ.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://％４１.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Unspecified error.(stack: Error: Unspecified error.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%ef%bc%85%ef%bc%94%ef%bc%91.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://％００.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Unspecified error.(stack: Error: Unspecified error.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%ef%bc%85%ef%bc%90%ef%bc%90.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://你好你好> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"xn--6qqa088eba\" but got \"你好你好\""
+        },
+        {
+          "name": "Parsing: <http://%zz%66%a.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%25> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://hello%00> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%30%78%63%30%2e%30%32%35%30.01> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"127.0.0.1\" but got \"0xc0.0250.01\""
+        },
+        {
+          "name": "Parsing: <http://%30%78%63%30%2e%30%32%35%30.01%2e> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://%3g%78%63%30%2e%30%32%35%30%2E.01> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://192.168.0.1 hello> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://０Ｘｃ０．０２５０．０１> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"192.168.0.1\" but got \"0xc0.0250.01\""
+        },
+        {
+          "name": "Parsing: <http://192.168.0.257> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://[google.com]> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.html:39:7)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.html:37:5)\n   at Anonymous function (http://w3c-test.org/url/a-element.html:16:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/url/a-element.xhtml",
+      "subtests": [
+        {
+          "name": "Loading data…",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <http://example\t.\norg> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://user:pass@foo:21/bar;par?b#c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:foo.com> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <\t   :foo.com   \n> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: < foo.com  > against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <a:\t foo.com> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"a:\" but got \"file:\""
+        },
+        {
+          "name": "Parsing: <http://f:21/ b ? d # e > against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: search expected \"?%20d%20\" but got \"? d \""
+        },
+        {
+          "name": "Parsing: <http://f:/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://f:0/c> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <http://f:00000000000000/c> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <http://f:00000000000000000000080/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://f:b/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://f: /c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://f:\n/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://f:fifty-two/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://f:999999/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://f: 21 / b ? d # e > against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \"\""
+        },
+        {
+          "name": "Parsing: <  \t> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:foo.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:foo.com\\> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:a> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:\\> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:#> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <?> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <:23> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </:23> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <::> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <::23> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <foo://> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"//\" but got \"/\""
+        },
+        {
+          "name": "Parsing: <http://a:b@c:29/d> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http::@c:29> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://&a:foo(b]c@d:2/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://::@c@d:2> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://foo.com:b@d/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://foo.com/\\@> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http:\\\\foo.com\\> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http:\\\\a\\b:c\\d@foo.com\\> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <foo:/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <foo:/bar.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <foo://///////> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/////////\" but got \"///////\""
+        },
+        {
+          "name": "Parsing: <foo://///////bar.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/////////bar.com/\" but got \"///////bar.com/\""
+        },
+        {
+          "name": "Parsing: <foo:////://///> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"////://///\" but got \"//://///\""
+        },
+        {
+          "name": "Parsing: <c:/foo> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"c:\" but got \"file:\""
+        },
+        {
+          "name": "Parsing: <//foo/bar> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <http://foo/path;a??e#f#g> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://foo/abcd?efgh?ijkl> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://foo/abcd#foo?bar> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <[61:24:74]:98> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <http:[61:27]/:foo> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://[1::2]:3:4> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://2001::1> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://2001::1]> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://2001::1]:80> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://[2001::1]> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"[2001::1]\" but got \"2001::1\""
+        },
+        {
+          "name": "Parsing: <http://[2001::1]:80> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"[2001::1]\" but got \"2001::1\""
+        },
+        {
+          "name": "Parsing: <http:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ftp:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <https:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <madeupscheme:/example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <file:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: href expected \"file:///example.com/\" but got \"file:/example.com/\""
+        },
+        {
+          "name": "Parsing: <ftps:/example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <gopher:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss:/example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <data:/example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <javascript:/example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <mailto:/example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <http:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.org\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ftp:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <https:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <madeupscheme:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <ftps:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <gopher:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss:example.com/> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <data:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <javascript:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <mailto:example.com/> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: </a/b/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </a/ /c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </a%2fc> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </a/%2f/c> against <http://example.org/foo/bar>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <data:text/html,test#test> against <http://example.org/foo/bar>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <file:c:\\foo\\bar.html> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: href expected \"file:///c:/foo/bar.html\" but got \"file:c:/foo/bar.html\""
+        },
+        {
+          "name": "Parsing: <  File:c|////foo\\bar.html> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/c:////foo/bar.html\" but got \"/c%7C////foo/bar.html\""
+        },
+        {
+          "name": "Parsing: <C|/foo/bar> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </C|\\foo\\bar> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <//C|/foo/bar> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <//server/file> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <\\\\server\\file> against <file:///tmp/mock/path>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: </\\server/file> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <file:///foo/bar.txt> against <file:///tmp/mock/path>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <file:///home/me> against <file:///tmp/mock/path>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <//> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <///> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <///test> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <file://test> against <file:///tmp/mock/path>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <file://localhost> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"localhost\" but got \"\""
+        },
+        {
+          "name": "Parsing: <file://localhost/> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"localhost\" but got \"\""
+        },
+        {
+          "name": "Parsing: <file://localhost/test> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"localhost\" but got \"\""
+        },
+        {
+          "name": "Parsing: <test> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"file:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <file:test> against <file:///tmp/mock/path>",
+          "status": "FAIL",
+          "message": "assert_equals: path expected \"/tmp/mock/test\" but got \"/test\""
+        },
+        {
+          "name": "Parsing: <http://example.com/././foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/./.foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/.> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/./> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar/..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar/../> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/..bar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar/../ton> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar/../ton/../../a> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/../../..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/../../../ton> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/%2e> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/%2e%2> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/%2e./%2e%2e/.%2e/%2e.bar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com////../..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar//../..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo/bar//..> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/%20foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%2> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%2zbar> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%2Â©zbar> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%41%7a> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo\t%91> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo%00%51> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://example.com/(%28:%3A%29)> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/%3A%3a%3C%3c> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/foo\tbar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com\\\\foo\\\\bar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/%7Ffp3%3Eju%3Dduvgw%3Dd> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/@asdf%40> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/你好你好> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/‥/foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/﻿/foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example.com/‮/foo/‭/bar> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://www.google.com/foo?bar=baz#> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://www.google.com/foo?bar=baz# »> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://[www.google.com]/> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://www.google.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://192.0x00A80001> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"192.0x00a80001\" but got \"192.168.0.1\""
+        },
+        {
+          "name": "Parsing: <http://www/foo%2Ehtml> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://www/foo/%2E/html> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://user:pass@/> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%25DOMAIN:foobar@foodomain.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:\\\\www.google.com\\foo> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://foo:80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://foo:81/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <httpa://foo:80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"\" but got \"foo\""
+        },
+        {
+          "name": "Parsing: <http://foo:-80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <https://foo:443/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"443\""
+        },
+        {
+          "name": "Parsing: <https://foo:80/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <ftp://foo:21/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"21\""
+        },
+        {
+          "name": "Parsing: <ftp://foo:80/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <gopher://foo:70/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"70\""
+        },
+        {
+          "name": "Parsing: <gopher://foo:443/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <ws://foo:80/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <ws://foo:81/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <ws://foo:443/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <ws://foo:815/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <wss://foo:80/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <wss://foo:81/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <wss://foo:443/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"443\""
+        },
+        {
+          "name": "Parsing: <wss://foo:815/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <http:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ftp:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <https:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <madeupscheme:/example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <file:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: href expected \"file:///example.com/\" but got \"file:/example.com/\""
+        },
+        {
+          "name": "Parsing: <ftps:/example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <gopher:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss:/example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <data:/example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <javascript:/example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <mailto:/example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <http:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ftp:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <https:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <madeupscheme:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <ftps:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <gopher:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <ws:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <wss:example.com/> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <data:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <javascript:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <mailto:example.com/> against <about:blank>",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Parsing: <http:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http:/@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:a:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http:/a:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://a:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://@pple.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http::b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http:/:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://:b@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:/:@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://user@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:/@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <https:@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:a:b@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:/a:b@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://a:b@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http::@/www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:a:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http:/a:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"www.example.com\" but got \"\""
+        },
+        {
+          "name": "Parsing: <http://a:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://www.@pple.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http:@:www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http:/@:www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://@:www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://:@www.example.com> against <about:blank>",
+          "status": "FAIL",
+          "message": "A security problem occurred.\r\n(stack: Error: A security problem occurred.\r\n\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:36:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: </> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: </test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <.> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <..> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <./test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <../test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <../aaa/test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <../../test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <中/test.txt> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: scheme expected \"http:\" but got \":\""
+        },
+        {
+          "name": "Parsing: <http://www.example2.com> against <http://www.example.com/test>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://ExAmPlE.CoM> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://example example.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://Goo%20 goo%7C|.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://GOO 　goo.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Unspecified error.(stack: Error: Unspecified error.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://GOO​⁠﻿goo.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://www.foo。bar.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://�zyx.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Unspecified error.(stack: Error: Unspecified error.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%ef%b7%90zyx.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://Ｇｏ.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: port expected \"\" but got \"80\""
+        },
+        {
+          "name": "Parsing: <http://％４１.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Unspecified error.(stack: Error: Unspecified error.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%ef%bc%85%ef%bc%94%ef%bc%91.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://％００.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Unspecified error.(stack: Error: Unspecified error.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%ef%bc%85%ef%bc%90%ef%bc%90.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://你好你好> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"xn--6qqa088eba\" but got \"你好你好\""
+        },
+        {
+          "name": "Parsing: <http://%zz%66%a.com> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%25> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://hello%00> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://%30%78%63%30%2e%30%32%35%30.01> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"127.0.0.1\" but got \"0xc0.0250.01\""
+        },
+        {
+          "name": "Parsing: <http://%30%78%63%30%2e%30%32%35%30.01%2e> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://%3g%78%63%30%2e%30%32%35%30%2E.01> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        },
+        {
+          "name": "Parsing: <http://192.168.0.1 hello> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://０Ｘｃ０．０２５０．０１> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_equals: host expected \"192.168.0.1\" but got \"0xc0.0250.01\""
+        },
+        {
+          "name": "Parsing: <http://192.168.0.257> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "assert_unreached: Expected URL to fail parsing Reached unreachable code"
+        },
+        {
+          "name": "Parsing: <http://[google.com]> against <http://other.com/>",
+          "status": "FAIL",
+          "message": "Invalid argument.(stack: Error: Invalid argument.\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:34:11)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at runURLTests (http://w3c-test.org/url/a-element.xhtml:32:9)\n   at Anonymous function (http://w3c-test.org/url/a-element.xhtml:10:9)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/url/interfaces.html",
+      "subtests": [
+        {
+          "name": "URL interface: existence and properties of interface object",
+          "status": "FAIL",
+          "message": "assert_equals: prototype of window's property \"URL\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+        },
+        {
+          "name": "URL interface object length",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"length\" missing"
+        },
+        {
+          "name": "URL interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: operation domainToASCII(ScalarValueString)",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: operation domainToUnicode(ScalarValueString)",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute href",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute origin",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute protocol",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute username",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute password",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute host",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute hostname",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute port",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute pathname",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute search",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute searchParams",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL interface: attribute hash",
+          "status": "FAIL",
+          "message": "assert_own_property: interface \"URL\" does not have own property \"prototype\" expected property \"prototype\" missing"
+        },
+        {
+          "name": "URL must be primary interface of new URL(\"http://foo\")",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "Stringification of new URL(\"http://foo\")",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"domainToASCII\" with the proper type (0)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: calling domainToASCII(ScalarValueString) on new URL(\"http://foo\") with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"domainToUnicode\" with the proper type (1)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: calling domainToUnicode(ScalarValueString) on new URL(\"http://foo\") with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"href\" with the proper type (2)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"origin\" with the proper type (3)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"protocol\" with the proper type (4)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"username\" with the proper type (5)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"password\" with the proper type (6)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"host\" with the proper type (7)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"hostname\" with the proper type (8)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"port\" with the proper type (9)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"pathname\" with the proper type (10)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"search\" with the proper type (11)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"searchParams\" with the proper type (12)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URL interface: new URL(\"http://foo\") must inherit property \"hash\" with the proper type (13)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Object doesn't support this action\""
+        },
+        {
+          "name": "URLSearchParams interface: existence and properties of interface object",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface object length",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface: operation append(ScalarValueString,ScalarValueString)",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface: operation delete(ScalarValueString)",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface: operation get(ScalarValueString)",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface: operation getAll(ScalarValueString)",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface: operation has(ScalarValueString)",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface: operation set(ScalarValueString,ScalarValueString)",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        },
+        {
+          "name": "URLSearchParams interface: stringifier",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"URLSearchParams\" expected property \"URLSearchParams\" missing"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
+
