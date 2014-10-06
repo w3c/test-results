@@ -2,20 +2,26 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>DOM4: Analysis of failed tests</title>
+    <title>DOM: Analysis of failed tests</title>
     <link rel='stylesheet' href='bootstrap.min.css'>
     <link rel='stylesheet' href='analysis.css'>
   </head>
   <body>
     <div class='container'>
       <header>
-        <h1>DOM4: Analysis of failed tests</h1>
+        <h1>DOM: Analysis of failed tests</h1>
       </header>
+      <section>
+        <p>Nearby: <a href="less-than-2.html">less-than-2</a>, <a href="complete-fails.html">complete-fails</a>, <a href="all.html">all results</a>,
+      </section>
       <section>
         <h2>Introduction</h2>
         <p>
+          NOTE: this analysis is final (2014-10-06).
+        </p>
+        <p>
           Historically, W3C test suites have altogether too often been subpar in their coverage,
-          barely scraping the surface of interoperability. In such a context, with only a few 
+          barely scraping the surface of interoperability. In such a context, with only a few
           hundred simple tests, it is naturally expected that one would expect to hit the 100%
           pass mark.
         </p>
@@ -27,76 +33,41 @@
           looks for trouble hard enough one will find it.
         </p>
         <p>
-          The DOM test suite, which is now 47,000 tests strong (and growing), certainly did set out
-          to look for trouble. Given that, it seems useful to accompany the test results with this
+          <a href="https://github.com/w3c/web-platform-tests/tree/master/dom">The DOM test suite</a>,
+          which is over 50,000 tests (and growing), certainly did set out
+          to look for trouble, like its HTML counterpart. Given that, it seems useful to accompany the
+          test results with this
           this note explaining where the failures come from.
         </p>
         <p>
-          In total, 856 tests fail to pass in two implementations, which amounts to 1.82% of the
+          In total, 353 tests fail to pass in two implementations, which amounts to 0.69% of the
           total. The sections below provide context in which to appraise these failures.
         </p>
       </section>
       <section>
-        <h2>Failures from <code>Range.compareBoundaryPoints()</code></h2>
+        <h2>WebIDL</h2>
         <p>
-          A full 425 of the 856 (49.6%) come from a single test file. This test file generates
-          8000 tests by going through a list of ranges that need comparing under a wide array of
-          configurations. These failures all boil down to a single problem: difference in validation
-          of the first argument to the method.
+          278 of the failures (79%) or less are linked to <a href="http://www.w3c-test.org/dom/interfaces.html">WebIDL-related problems</a>. Essentially, they are
+          attributes being present on instances instead of prototypes, wrong exception types, and
+          other similar issues.
+        </p>
+<p>DOM4 (4 failures) also introduces a <a href="http://www.w3c-test.org/dom/nodes/Document-constructor.html">constructor for Document object</a>, which is only supported by one implementation so far.</p>
+<p><a href="http://www.w3c-test.org/dom/errors/exceptions.html">DOMException</a> (2 failures) doesn't own the message property properly.</p>
+        <p>
+          These will get better over time as WebIDL compliance progresses. It is a slow process,
+          but also one that does not threaten to break DOM (or other specifications depending on
+          WebIDL).
         </p>
         <p>
-          For each different comparison of range types, the test suite tries a list of invalid
-          values for the first argument (which is an enumeration). The cross product leads to a
-          great number of tests even though this is just a single failure, in most cases of not
-          using the correct exception type (i.e. an exception is thrown but of a different type).
-          This is, at heart, a WebIDL compatibility issue. It is also a very simple bug to fix.
-          Finally, it is extremely rare in JavaScript to rely on checking a specific exception type.
-          This has no practical real-world implication.
-        </p>
-      </section>
-      <section>
-        <h2>WebIDL related issues</h2>
-        <p>
-          Eleven of the test files exhibit various degrees of WebIDL-related problems, for a total
-          of 321 tests (37.5%). These are largely in the <code>interfaces.html</code> tests which
-          are auto-generated WebIDL conformance tests. In many cases, if just one bug were fixed the
-          number of failures would fall dramatically.
-        </p>
-        <p>
-          Failures in other files are usually either conversion errors (e.g. failing to convert
-          <code>undefined</code> to the empty string) or exception type errors.
-        </p>
-        <p>
-          None of these failures are particularly important and actual in-the-trenches 
-          interoperability only suffers ever so lightly from these.
-        </p>
-      </section>
-      <section>
-        <h2>Event failures</h2>
-        <p>
-          Four files, with a total of 35 failures (4%), concern Events. Two of those are for
-          Progress Events which are defined in a separate specification (they will be moved). The
-          rest is essentially issues with default values being applied properly to synthetically
-          created events. While these issues would possibly cause interoperability bugs in real
-          code, they do not demonstrate implementatibility problems and we are confident that they
-          will get fixed.
-        </p>
-      </section>
-      <section>
-        <h2>Historical checks</h2>
-        <p>
-          In order to encourage implementers to deprecate features that can safely be removed from
-          the platform, the test suite checks for the existence of a number of things that should
-          no longer be there. This causes 16 failures over two files (1.8%). These tests however
-          do not match requirements from the specification (it lists the features as obsolete but
-          does not require their removal yet).
+          These failures do not adversely affect regular everyday development.
         </p>
       </section>
       <section>
         <h2>Miscellaneous</h2>
         <p>
-          What remains is a hodgepodge of 59 small corner case problems (6.8%). Most are corner
-          cases or obscure failures from the diminishing returns corner.
+          The remaining 81 failing test cases do not appear to subject themselves
+          to easy categorisation. Many of these are corner cases that have little impact on everyday
+          development, if any.
         </p>
       </section>
       <section>
@@ -106,12 +77,11 @@
         </p>
         <ol>
           <li>
-            the volume of failures is low to start with (we have over 98% success over almost 
+            the volume of failures is really low to start with (we have over 99%% success over
             50,000 tests);
           </li>
           <li>
-            over 90% of failures come from single, circumscribed sources that do not pose major
-            threats to practical interoperability;
+            79% of failures come from WebIDL with minimal risk to practical interoperability;
           </li>
           <li>
             the percentage of issues that point to problems that could affect developers is

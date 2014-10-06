@@ -2,10 +2,11 @@
 
 exports.excludeFile = function (file) {
     if (/closest/.test(file)) return true;
+    if (/ProgressEvent/.test(file)) return true;
+    if (/historical/.test(file)) return true;
     return false;
     // /html/dom/reflection-obsolete.html ?
 };
-
 
 exports.excludeCase = function (file, name) {
     if (name === "null") return true;
