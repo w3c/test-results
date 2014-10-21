@@ -1,25 +1,28 @@
 {
   "ua": [
     "Ch40",
-    "FF36"
+    "FF36",
+    "Op12"
   ],
   "results": {
     "/eventsource/dedicated-worker/eventsource-close.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "dedicated worker - EventSource: close()": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -28,59 +31,72 @@
     "/eventsource/dedicated-worker/eventsource-constructor-non-same-origin.htm": {
       "byUA": {
         "Ch40": "TIMEOUT",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
         "TIMEOUT": 1,
-        "OK": 1
+        "OK": 2
       },
       "subtests": {
         "dedicated worker - EventSource: constructor (act as if there is a network error) (http://example.not/)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "dedicated worker - EventSource: constructor (act as if there is a network error) (https://example.not/test)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "dedicated worker - EventSource: constructor (act as if there is a network error) (ftp://example.not/)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "dedicated worker - EventSource: constructor (act as if there is a network error) (about:blank)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "dedicated worker - EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "dedicated worker - EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         }
       }
@@ -88,19 +104,22 @@
     "/eventsource/dedicated-worker/eventsource-constructor-url-bogus.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "dedicated worker - EventSource: constructor (invalid URL)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 2,
+            "PASS": 1
           }
         }
       }
@@ -108,19 +127,21 @@
     "/eventsource/dedicated-worker/eventsource-eventtarget.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "dedicated worker - EventSource: addEventListener()": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -129,19 +150,21 @@
     "/eventsource/dedicated-worker/eventsource-onmesage.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "dedicated worker - EventSource: onmessage": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -150,19 +173,21 @@
     "/eventsource/dedicated-worker/eventsource-onopen.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "dedicated worker - EventSource: onopen (announcing the connection)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -171,19 +196,21 @@
     "/eventsource/dedicated-worker/eventsource-prototype.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "dedicated worker - EventSource: prototype et al": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -192,19 +219,21 @@
     "/eventsource/dedicated-worker/eventsource-url.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "dedicated worker - EventSource: url": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -213,19 +242,22 @@
     "/eventsource/event-data.html": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: lines and data parsing": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
@@ -233,28 +265,31 @@
     "/eventsource/eventsource-close.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: close()": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: close(), test events": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -262,69 +297,77 @@
     "/eventsource/eventsource-constructor-document-domain.htm": {
       "byUA": {
         "Ch40": "TIMEOUT",
-        "FF36": "TIMEOUT"
+        "FF36": "TIMEOUT",
+        "Op12": "TIMEOUT"
       },
       "totals": {
-        "TIMEOUT": 2
+        "TIMEOUT": 3
       },
       "subtests": {}
     },
     "/eventsource/eventsource-constructor-non-same-origin.htm": {
       "byUA": {
         "Ch40": "TIMEOUT",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
         "TIMEOUT": 1,
-        "OK": 1
+        "OK": 2
       },
       "subtests": {
         "EventSource: constructor (act as if there is a network error) (http://example.not/)": {
           "byUA": {
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         },
         "EventSource: constructor (act as if there is a network error) (https://example.not/test)": {
           "byUA": {
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         },
         "EventSource: constructor (act as if there is a network error) (ftp://example.not/)": {
           "byUA": {
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         },
         "EventSource: constructor (act as if there is a network error) (about:blank)": {
           "byUA": {
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         },
         "EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)": {
           "byUA": {
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         },
         "EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))": {
           "byUA": {
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
@@ -332,46 +375,51 @@
     "/eventsource/eventsource-constructor-stringify.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: stringify argument, object": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: stringify argument, 1": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: stringify argument, null": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: stringify argument, undefined": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -379,20 +427,22 @@
     "/eventsource/eventsource-constructor-url-bogus.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: constructor (invalid URL)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
             "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
@@ -400,19 +450,21 @@
     "/eventsource/eventsource-constructor-url-multi-window.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: resolving URLs": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -420,64 +472,73 @@
     "/eventsource/eventsource-cross-origin.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "TIMEOUT"
       },
       "totals": {
-        "OK": 2
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
         "EventSource: cross-origin basic use": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: cross-origin redirect use": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: cross-origin redirect use recon": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "TIMEOUT"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         },
         "EventSource: cross-origin allow-origin: http://example.org should fail": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: cross-origin allow-origin:'' should fail": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: cross-origin No allow-origin should fail": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -485,19 +546,21 @@
     "/eventsource/eventsource-eventtarget.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: addEventListener()": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -505,19 +568,21 @@
     "/eventsource/eventsource-onmessage.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: onmessage": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -525,19 +590,21 @@
     "/eventsource/eventsource-onopen.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: onopen (announcing the connection)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -545,19 +612,21 @@
     "/eventsource/eventsource-prototype.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: prototype et al": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -565,28 +634,31 @@
     "/eventsource/eventsource-reconnect.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: reconnection 200": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: reconnection, test reconnection events": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -594,20 +666,22 @@
     "/eventsource/eventsource-request-cancellation.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: request cancellation": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
             "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
@@ -615,19 +689,21 @@
     "/eventsource/eventsource-url.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: url": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -635,19 +711,21 @@
     "/eventsource/format-bom-2.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: Double BOM": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -656,19 +734,21 @@
     "/eventsource/format-bom.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: BOM": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -676,19 +756,22 @@
     "/eventsource/format-comments.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: comment fest": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
@@ -696,19 +779,22 @@
     "/eventsource/format-data-before-final-empty-line.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: a data before final empty line": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
@@ -716,19 +802,22 @@
     "/eventsource/format-field-data.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: data field parsing": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
@@ -736,19 +825,21 @@
     "/eventsource/format-field-event-empty.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: empty \"event\" field": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -756,19 +847,21 @@
     "/eventsource/format-field-event.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: custom event name": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -776,20 +869,22 @@
     "/eventsource/format-field-id-2.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: Last-Event-ID (2)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
             "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
@@ -797,20 +892,22 @@
     "/eventsource/format-field-id.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: Last-Event-ID": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
             "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
@@ -818,19 +915,23 @@
     "/eventsource/format-field-parsing.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "TIMEOUT"
       },
       "totals": {
-        "OK": 2
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
         "EventSource: field parsing": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "TIMEOUT"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
@@ -838,21 +939,24 @@
     "/eventsource/format-field-retry-bogus.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "TIMEOUT"
+        "FF36": "TIMEOUT",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 1,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
         "EventSource: \"retry\" field (bogus)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "TIMEOUT"
+            "FF36": "TIMEOUT",
+            "Op12": "PASS"
           },
           "totals": {
             "FAIL": 1,
-            "TIMEOUT": 1
+            "TIMEOUT": 1,
+            "PASS": 1
           }
         }
       }
@@ -860,19 +964,21 @@
     "/eventsource/format-field-retry-empty.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: empty retry field": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -880,21 +986,24 @@
     "/eventsource/format-field-retry.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "TIMEOUT"
+        "FF36": "TIMEOUT",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 1,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
         "EventSource: \"retry\" field": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "TIMEOUT"
+            "FF36": "TIMEOUT",
+            "Op12": "PASS"
           },
           "totals": {
             "FAIL": 1,
-            "TIMEOUT": 1
+            "TIMEOUT": 1,
+            "PASS": 1
           }
         }
       }
@@ -902,19 +1011,21 @@
     "/eventsource/format-field-unknown.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: unknown fields and parsing fun": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -922,19 +1033,21 @@
     "/eventsource/format-leading-space.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: leading space": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -942,19 +1055,21 @@
     "/eventsource/format-mime-bogus.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: bogus MIME type": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -962,19 +1077,21 @@
     "/eventsource/format-mime-trailing-semicolon.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: MIME type with trailing ;": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -982,19 +1099,21 @@
     "/eventsource/format-mime-valid-bogus.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: incorrect valid MIME type": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -1002,19 +1121,21 @@
     "/eventsource/format-newlines.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: newline fest": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -1022,19 +1143,22 @@
     "/eventsource/format-null-character.html": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: null character in response": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
@@ -1042,19 +1166,21 @@
     "/eventsource/format-utf-8.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: always UTF-8": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -1062,284 +1188,315 @@
     "/eventsource/interfaces.html": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource interface: existence and properties of interface object": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "EventSource interface object length": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "EventSource interface: existence and properties of interface prototype object": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "EventSource interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: attribute url": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: attribute withCredentials": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: constant CONNECTING on interface object": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: constant CONNECTING on interface prototype object": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: constant OPEN on interface object": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: constant OPEN on interface prototype object": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: constant CLOSED on interface object": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: constant CLOSED on interface prototype object": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: attribute readyState": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: attribute onopen": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: attribute onmessage": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: attribute onerror": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: operation close()": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
             "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "EventSource must be primary interface of new EventSource(\"http://foo\")": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "Stringification of new EventSource(\"http://foo\")": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"url\" with the proper type (0)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"withCredentials\" with the proper type (1)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"CONNECTING\" with the proper type (2)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"OPEN\" with the proper type (3)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"CLOSED\" with the proper type (4)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"readyState\" with the proper type (5)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"onopen\" with the proper type (6)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"onmessage\" with the proper type (7)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"onerror\" with the proper type (8)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "EventSource interface: new EventSource(\"http://foo\") must inherit property \"close\" with the proper type (9)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -1347,19 +1504,21 @@
     "/eventsource/request-accept.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: Accept header": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -1367,46 +1526,51 @@
     "/eventsource/request-cache-control.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: Cache-Control": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: Cache-Control 1": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: Cache-Control 2": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: Cache-Control 3": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -1414,37 +1578,45 @@
     "/eventsource/request-credentials.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "TIMEOUT"
       },
       "totals": {
-        "OK": 2
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
         "EventSource: credentials: credentials enabled": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "TIMEOUT"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         },
         "EventSource: credentials: credentials disabled": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "TIMEOUT"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         },
         "EventSource: credentials: credentials default": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "TIMEOUT"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
@@ -1452,46 +1624,51 @@
     "/eventsource/request-redirect.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: redirect (301)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: redirect (302)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: redirect (303)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: redirect (307)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -1499,73 +1676,81 @@
     "/eventsource/request-status-error.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "EventSource: incorrect HTTP status code (204)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: incorrect HTTP status code (205)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: incorrect HTTP status code (210)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: incorrect HTTP status code (299)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: incorrect HTTP status code (404)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: incorrect HTTP status code (410)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "EventSource: incorrect HTTP status code (503)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "PASS"
+            "FF36": "PASS",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -1573,19 +1758,21 @@
     "/eventsource/shared-worker/eventsource-close.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "shared worker - EventSource: close()": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -1594,59 +1781,72 @@
     "/eventsource/shared-worker/eventsource-constructor-non-same-origin.htm": {
       "byUA": {
         "Ch40": "TIMEOUT",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
         "TIMEOUT": 1,
-        "OK": 1
+        "OK": 2
       },
       "subtests": {
         "shared worker - EventSource: constructor (act as if there is a network error) (http://example.not)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "shared worker - EventSource: constructor (act as if there is a network error) (https://example.not/test)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "shared worker - EventSource: constructor (act as if there is a network error) (ftp://example.not)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "shared worker - EventSource: constructor (act as if there is a network error) (about:blank)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "shared worker - EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "shared worker - EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))": {
           "byUA": {
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 1,
+            "PASS": 1
           }
         }
       }
@@ -1654,19 +1854,22 @@
     "/eventsource/shared-worker/eventsource-constructor-url-bogus.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "shared worker - EventSource: constructor (invalid URL)": {
           "byUA": {
             "Ch40": "FAIL",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 2,
+            "PASS": 1
           }
         }
       }
@@ -1674,19 +1877,21 @@
     "/eventsource/shared-worker/eventsource-eventtarget.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "shared worker - EventSource: addEventListener()": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -1695,19 +1900,21 @@
     "/eventsource/shared-worker/eventsource-onmesage.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "shared worker - EventSource: onmessage": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -1716,19 +1923,21 @@
     "/eventsource/shared-worker/eventsource-onopen.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "shared worker - EventSource: onopen (announcing the connection)": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -1737,19 +1946,21 @@
     "/eventsource/shared-worker/eventsource-prototype.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "shared worker - EventSource: prototype et al": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
@@ -1758,19 +1969,21 @@
     "/eventsource/shared-worker/eventsource-url.htm": {
       "byUA": {
         "Ch40": "OK",
-        "FF36": "OK"
+        "FF36": "OK",
+        "Op12": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "shared worker - EventSource: url": {
           "byUA": {
             "Ch40": "PASS",
-            "FF36": "FAIL"
+            "FF36": "FAIL",
+            "Op12": "PASS"
           },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 1
           }
         }
