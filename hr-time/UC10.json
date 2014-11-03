@@ -1,0 +1,102 @@
+{
+  "results": [
+    {
+      "test": "/hr-time/basic.html",
+      "subtests": [
+        {
+          "name": "window.performance is defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "High Resolution Time extension to the Performance interface",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "window.performance.now() function",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "window.performance.now() returns a number",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/hr-time/idlharness.html",
+      "subtests": [
+        {
+          "name": "Performance interface: operation now()",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"Performance\" expected property \"Performance\" missing"
+        },
+        {
+          "name": "Performance must be primary interface of window.performance",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"Performance\" expected property \"Performance\" missing"
+        },
+        {
+          "name": "Stringification of window.performance",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Performance interface: window.performance must inherit property \"now\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/hr-time/monotonic-clock.html",
+      "subtests": [
+        {
+          "name": "window.performance.now() returns a positive number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "window.performance.now() difference is not negative",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/hr-time/test_cross_frame_start.html",
+      "subtests": [
+        {
+          "name": "parent performance.now() > 0",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "child performance.now() > 0",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Child created at least 1 second after parent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Child and parent time bases are correct",
+          "status": "FAIL",
+          "message": "assert_true: Child and parent's now()s have different bases (skewed more than 1 second) expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

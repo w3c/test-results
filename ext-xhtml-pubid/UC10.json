@@ -1,0 +1,36 @@
+{
+  "results": [
+    {
+      "test": "/ext-xhtml-pubid/the-xhtml-syntax/parsing-xhtml-documents/xhtml-pubid-1.html",
+      "subtests": [
+        {
+          "name": "Sqrt entity is U+221a with XHTML PUBID Extension spec",
+          "status": "FAIL",
+          "message": "assert_equals: expected (string) \"√\" but got (object) null"
+        },
+        {
+          "name": "lang entity is U+27E8 with XHTML PUBID Extension spec",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sqrt entity is U+221a with legacy DTD",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "lang entity is U+27E8 not U+2329 with legacy DTD",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "nbsp should not be recognised without known PUBLIC identifier",
+          "status": "FAIL",
+          "message": "Cannot call method 'hasOwnProperty' of null(stack: TypeError: Cannot call method 'hasOwnProperty' of null\n    at check_equal (http://www.w3c-test.org/resources/testharness.js:370:34)\n    at assert_object_equals (http://www.w3c-test.org/resources/testharness.js:390:10)\n    at Object.<anonymous> (http://www.w3c-test.org/ext-xhtml-pubid/the-xhtml-syntax/parsing-xhtml-documents/xhtml-pubid-1.html:52:1)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at t2 (http://www.w3c-test.org/ext-xhtml-pubid/the-xhtml-syntax/parsing-xhtml-documents/xhtml-pubid-1.html:51:1)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/ext-xhtml-pubid/the-xhtml-syntax/parsing-xhtml-documents/xhtml-pubid-1.html:15:201)\n    at HTMLIFrameElement.onload (http://www.w3c-test.org/ext-xhtml-pubid/the-xhtml-syntax/parsing-xhtml-documents/xhtml-pubid-1.html:16:4))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "results": [
+    {
+      "test": "/html-imports/document/document-method-changes.html",
+      "subtests": [
+        {
+          "name": "Throws an InvalidStateError exception if the Document is an import: From the master document",
+          "status": "FAIL",
+          "message": "assert_throws: document.open() function \"function () { importLink.import.open(); }\" threw object \"TypeError: Cannot call method 'open' of undefined\" that is not a DOMException INVALID_STATE_ERR: property \"code\" is equal to undefined, expected 11"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html-imports/fetching/already-in-import-map.html",
+      "subtests": [
+        {
+          "name": "If LOCATION is already in the import map, let IMPORT be the imported document for LOCATION and stop. (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If LOCATION is already in the import map, let IMPORT be the imported document for LOCATION and stop. (2)",
+          "status": "FAIL",
+          "message": "Cannot call method 'getElementById' of undefined(stack: TypeError: Cannot call method 'getElementById' of undefined\n    at Object.<anonymous> (http://www.w3c-test.org/html-imports/fetching/already-in-import-map.html:24:68)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/html-imports/fetching/already-in-import-map.html:22:1)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html-imports/fetching/loading-attempt.html",
+      "subtests": [
+        {
+          "name": "The loading attempt must be considered successful if IMPORT is not null on the algorithm completion, and failed otherwise. (1)",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        },
+        {
+          "name": "The loading attempt must be considered successful if IMPORT is not null on the algorithm completion, and failed otherwise. (2)",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        },
+        {
+          "name": "The loading attempt must be considered successful if IMPORT is not null on the algorithm completion, and failed otherwise. (3)",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Every import that is not marked as async delays the load event in the Document.",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/html-imports/html-link-element/import-attribute.html",
+      "subtests": [
+        {
+          "name": "The import attribute must return null if the link does not represent an import.",
+          "status": "FAIL",
+          "message": "assert_equals: expected (object) null but got (undefined) undefined"
+        },
+        {
+          "name": "The import attribute must return null if the link element is not in a Document.",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        },
+        {
+          "name": "The attribute must return the imported document for the import.",
+          "status": "FAIL",
+          "message": "Cannot read property 'body' of undefined(stack: TypeError: Cannot read property 'body' of undefined\n    at Object.<anonymous> (http://www.w3c-test.org/html-imports/html-link-element/import-attribute.html:31:35)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/html-imports/html-link-element/import-attribute.html:30:1)"
+        },
+        {
+          "name": "The same object must be returned each time.",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

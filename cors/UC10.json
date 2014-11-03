@@ -1,0 +1,1718 @@
+{
+  "results": [
+    {
+      "test": "/cors/allow-headers.htm",
+      "subtests": [
+        {
+          "name": "Allow origin: *",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: _*__",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: [tab]*",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: _http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: _http://www.w3c-test.org___[tab]_",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: [tab]http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: //www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ftp://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:/www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org?",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org /",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org#",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org%23",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org:80",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org, *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org\\0",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: HTTP://WWW.W3C-TEST.ORG",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: HTTP://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: -",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: **",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *\\0",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: '*'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \"*\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *, http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: null http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://example.net",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org/cors/allow-headers.htm",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org/cors/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org/cors/",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/basic.htm",
+      "subtests": [
+        {
+          "name": "Same domain basic usage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Cross domain basic usage",
+          "status": "FAIL",
+          "message": "assert_true: Got CORS-allowed response expected true got false"
+        },
+        {
+          "name": "Same domain different port",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Cross domain different port",
+          "status": "FAIL",
+          "message": "assert_true: Got CORS-allowed response expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/credentials-flag.htm",
+      "subtests": [
+        {
+          "name": "Setting withCredentials on a sync XHR object should throw",
+          "status": "FAIL",
+          "message": "assert_throws: setting withCredentials function \"function () { client.withCredentials = true; }\" did not throw"
+        },
+        {
+          "name": "Don't send cookie by default",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Don't send cookie part 2",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Don't obey Set-Cookie when withCredentials=false",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: TRUE should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: True should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: \"true\" should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: false should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: 1 should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: 0 should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/cors/late-upload-events.htm",
+      "subtests": [
+        {
+          "name": "Late listeners: No preflight",
+          "status": "FAIL",
+          "message": "assert_equals: expected 200 but got 0"
+        },
+        {
+          "name": "Late listeners: Preflight",
+          "status": "FAIL",
+          "message": "assert_equals: expected 200 but got 0"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/origin.htm",
+      "subtests": [
+        {
+          "name": "Allow origin: *",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: _*__",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: [tab]*",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: _http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: _http://www.w3c-test.org___[tab]_",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Allow origin: [tab]http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: //www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ftp://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:/www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org?",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org /",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org#",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org%23",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org:80",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org, *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org\\0",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: HTTP://WWW.W3C-TEST.ORG",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: HTTP://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: -",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: **",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *\\0",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: '*'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \"*\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *, http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: null http://www.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://example.net",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: null *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org/cors/origin.htm",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org/cors/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org/cors/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: .w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://*.w3c-test.org",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (, *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (*, )",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (*, *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (, http://www.w3c-test.org)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (*, http://www.w3c-test.org)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (http://www.w3c-test.org, http://www.w3c-test.org)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/preflight-cache.htm",
+      "subtests": [
+        {
+          "name": "Test preflight",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "preflight for x-print should be cached",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "age = 0, should not be cached",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "age = -1, should not be cached",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "preflight first request, second from cache, wait, third should preflight again",
+          "status": "FAIL",
+          "message": "assert_unreached: Got unexpected error event on the XHR object Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/redirect-origin.htm",
+      "subtests": [
+        {
+          "name": "local (*) to remote (*), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "local (*) to remote (http://www.w3c-test.org), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "local (*) to remote (null), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (*) to remote (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (http://www.w3c-test.org) to remote (*), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "local (http://www.w3c-test.org) to remote (http://www.w3c-test.org), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "local (http://www.w3c-test.org) to remote (null), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (http://www.w3c-test.org) to remote (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (null) to remote (*), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "local (none) to remote (*), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (*) to local (*), expect origin=null",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (*) to local (http://www.w3c-test.org), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to local (null), expect origin=null",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (*) to local (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to local (*), expect origin=null",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to local (http://www.w3c-test.org), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to local (null), expect origin=null",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to local (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (null) to local (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (none) to local (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote (*), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (*) to remote (http://www.w3c-test.org), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (*) to remote (null), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to remote (*), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to remote (http://www.w3c-test.org), expect origin=http://www.w3c-test.org",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to remote (null), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to remote (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (null) to remote (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (none) to remote (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote2 (*), expect origin=null",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (*) to remote2 (http://www.w3c-test.org), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote2 (null), expect origin=null",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (*) to remote2 (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to remote2 (*), expect origin=null",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to remote2 (http://www.w3c-test.org), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to remote2 (null), expect origin=null",
+          "status": "FAIL",
+          "message": "assert_true: Got response expected true got false"
+        },
+        {
+          "name": "remote (http://www.w3c-test.org) to remote2 (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (null) to remote2 (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (none) to remote2 (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote (http://www1.www.w3c-test.org), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote2 (http://www1.www.w3c-test.org), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://www1.www.w3c-test.org) to remote (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/redirect-preflight-2.htm",
+      "subtests": [
+        {
+          "name": "Same-origin custom-header request, redirect to cross-origin fails after doing a non-successful preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Same-origin custom-header request, redirect to cross-origin succeeds after doing a preflight",
+          "status": "FAIL",
+          "message": "assert_unreached: Error during request Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/redirect-preflight.htm",
+      "subtests": [
+        {
+          "name": "Redirect 301 on preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Redirect 302 on preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Redirect 303 on preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Redirect 307 on preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Redirect 308 on preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect 301 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect 302 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect 303 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect 307 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect 308 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/redirect-userinfo.htm",
+      "subtests": [
+        {
+          "name": "Disallow redirect with userinfo (//user:pass@)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect with userinfo (//user:@)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect with userinfo (//user@)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect with userinfo (//:@)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect with userinfo (//:pass@)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow redirect with userinfo (//@)",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/cors/remote-origin.htm",
+      "subtests": [
+        {
+          "name": "Allow origin: *",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Allow origin: _*__",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Allow origin: [tab]*",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Allow origin: http://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Allow origin: _http://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Allow origin: _http://www1.www.w3c-test.org___[tab]_",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Allow origin: [tab]http://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: //www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: ://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: ftp://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http:://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http:/www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http:www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org?",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org/",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org_/",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org#",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org%23",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org:80",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org,_*",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org\\0",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: HTTP://WWW1.WWW.W3C-TEST.ORG",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: HTTP://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://WWW1.WWW.W3C-TEST.ORG",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: -",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: **",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: \\0*",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: *\\0",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: '*'",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: \"*\"",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: *_*",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: *http://*",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: *http://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: *_http://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: *,_http://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: \\0http://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: null_http://www1.www.w3c-test.org",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://example.net",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: null",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: ",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org/cors/remote-origin.htm",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www.w3c-test.org/cors/",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Disallow origin: http://www1.www.w3c-test.org/cors/",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/cors/request-headers.htm",
+      "subtests": [
+        {
+          "name": "basic request header",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Simple request headers need not be in allow-headers",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Unspecified request headers are disallowed",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Strange allowheaders (case insensitive)",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "INVALID_STATE_ERR on setRequestHeader before open()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "INVALID_STATE_ERR on setRequestHeader after send()",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/response-headers.htm",
+      "subtests": [
+        {
+          "name": "getResponseHeader: Expose Access-Control-Expose-Headers (x-custom-header-comma)",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Expose second Access-Control-Expose-Headers (x-second-expose)",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Don't trim whitespace",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: x-custom-header bytes",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Exposed server field readable (Date)",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Cache-Control: readable by default",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Content-Language: readable by default",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Expires: readable by default",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Last-Modified: readable by default",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Pragma: readable by default",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Server: unreadable by default",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: X-Powered-By: unreadable by default",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getResponseHeader: Combined testing of cors response headers",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "getResponse: don't expose x-nonexposed",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "getAllResponseHeaders: don't expose x-nonexposed",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/cors/simple-requests.htm",
+      "subtests": [
+        {
+          "name": "No preflight GET and {\"Accept\":\"test\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight HEAD and {\"Accept\":\"test\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight POST and {\"Accept\":\"test\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight GET and {\"accept-language\":\"test\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight HEAD and {\"accept-language\":\"test\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight POST and {\"accept-language\":\"test\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight GET and {\"CONTENT-language\":\"test\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight HEAD and {\"CONTENT-language\":\"test\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight POST and {\"CONTENT-language\":\"test\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight GET and {\"Content-Type\":\"application/x-www-form-urlencoded\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight HEAD and {\"Content-Type\":\"application/x-www-form-urlencoded\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight POST and {\"Content-Type\":\"application/x-www-form-urlencoded\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight GET and {\"content-type\":\"multipart/form-data\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight HEAD and {\"content-type\":\"multipart/form-data\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight POST and {\"content-type\":\"multipart/form-data\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight GET and {\"content-type\":\"text/plain\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight HEAD and {\"content-type\":\"text/plain\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight POST and {\"content-type\":\"text/plain\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight GET and {\"accept\":\"test\",\"accept-language\":\"test\",\"content-language\":\"test\",\"content-type\":\"text/plain; parameter=whatever\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight HEAD and {\"accept\":\"test\",\"accept-language\":\"test\",\"content-language\":\"test\",\"content-type\":\"text/plain; parameter=whatever\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight POST and {\"accept\":\"test\",\"accept-language\":\"test\",\"content-language\":\"test\",\"content-type\":\"text/plain; parameter=whatever\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight Get and {\"content-type\":\"text/plain; parameter=extra_bonus\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "No preflight post and {\"content-type\":\"text/plain\"}",
+          "status": "FAIL",
+          "message": "NETWORK_ERR: XMLHttpRequest Exception 101"
+        },
+        {
+          "name": "Check simple headers (async)",
+          "status": "FAIL",
+          "message": "assert_unreached: onerror Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/status-async.htm",
+      "subtests": [
+        {
+          "name": "Status on GET 200",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 200 but got 0"
+        },
+        {
+          "name": "Status on GET 201",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 201 but got 0"
+        },
+        {
+          "name": "Status on GET 202",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 202 but got 0"
+        },
+        {
+          "name": "Status on GET 203",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 203 but got 0"
+        },
+        {
+          "name": "Status on GET 204",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 204 but got 0"
+        },
+        {
+          "name": "Status on GET 205",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 205 but got 0"
+        },
+        {
+          "name": "Status on GET 206",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 206 but got 0"
+        },
+        {
+          "name": "Status on GET 209",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 209 but got 0"
+        },
+        {
+          "name": "Status on GET 299",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 299 but got 0"
+        },
+        {
+          "name": "Status on POST 200",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 200 but got 0"
+        },
+        {
+          "name": "Status on HEAD 200",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 200 but got 0"
+        },
+        {
+          "name": "Status on PUT 200",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 200 but got 0"
+        },
+        {
+          "name": "Status on CHICKEN 200",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 200 but got 0"
+        },
+        {
+          "name": "Status on GET 400",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 400 but got 0"
+        },
+        {
+          "name": "Status on HEAD 401",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 401 but got 0"
+        },
+        {
+          "name": "Status on POST 404",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 404 but got 0"
+        },
+        {
+          "name": "Status on POST 500",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 500 but got 0"
+        },
+        {
+          "name": "Status on PUT 699",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on CHICKEN 501",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 400 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on HEAD 401 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on POST 404 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on PUT 699 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on CHICKEN 501 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/status-preflight.htm",
+      "subtests": [
+        {
+          "name": "CORS - status after preflight on GET 200",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 200 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on GET 204",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 204 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on GET 400",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 400 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on GET 401",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 401 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 200",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 200 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 204",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 204 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 400",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 400 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 401",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 401 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 501",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 501 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 699",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 699 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on POST 204",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 204 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on POST 400",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 400 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on POST 401",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 401 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on POST 404",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 404 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on PUT 699",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 699 but got 0"
+        },
+        {
+          "name": "CORS - status after preflight on CHICKEN 501",
+          "status": "FAIL",
+          "message": "assert_equals: response status expected 501 but got 0"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/status.htm",
+      "subtests": [
+        {
+          "name": "1. CORS disallowed, response status 400.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "2. CORS disallowed, preflight status 200.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "3. CORS allowed, response status 400.",
+          "status": "FAIL",
+          "message": "assert_unreached: error event Reached unreachable code"
+        },
+        {
+          "name": "4. CORS allowed, preflight status 200, response status 400.",
+          "status": "FAIL",
+          "message": "assert_unreached: error event Reached unreachable code"
+        },
+        {
+          "name": "5. CORS allowed, preflight status 400.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "results": [
+    {
+      "test": "/geolocation-API/PositionOptions.html",
+      "subtests": [
+        {
+          "name": "Call getCurrentPosition with wrong type for enableHighAccuracy. No exception expected.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Call watchPosition with wrong type for enableHighAccuracy. No exception expected.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PositionOptions tests",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set timeout and maximumAge to 0, check that timeout error raised (getCurrentPosition)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set timeout and maximumAge to 0, check that timeout error raised (watchPosition)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check that a negative timeout value is equivalent to a 0 timeout value (getCurrentLocation)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check that a negative timeout value is equivalent to a 0 timeout value (watchPosition)",
+          "status": "FAIL",
+          "message": "assert_unreached: A success callback was invoked unexpectedly Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/geolocation-API/clearWatch_TypeError.html",
+      "subtests": [
+        {
+          "name": "Test that calling clearWatch with invalid watch IDs does not cause an exception",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/geolocation-API/getCurrentPosition_IDL.html",
+      "subtests": [
+        {
+          "name": "getCurrentPosition success callback tests",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getCurrentPosition error callback tests",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PositionError toString",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PERMISSION_DENIED value is 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "POSITION_UNAVAILABLE is 2",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "TIMEOUT value is 3",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Position toString",
+          "status": "FAIL",
+          "message": "assert_equals: Position.toString should result in '[object Position]' was: [object Geoposition] expected \"[object Position]\" but got \"[object Geoposition]\""
+        },
+        {
+          "name": "Position.coordinates toString",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Position.timestamp is type number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "speed is null or number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "speed readonly",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "heading is null or number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "heading readonly",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "altitudeAccuracy is null or number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "altitudeAccuracy readonly",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "accuracy is type number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "accuracy readonly",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "altitude is null or number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "altitude readonly",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "longitude is type number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "longitude readonly",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "latitude is type number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "latitude readonly",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/geolocation-API/getCurrentPosition_TypeError.html",
+      "subtests": [
+        {
+          "name": "Call getCurrentPosition without arguments, check that exception is thrown",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.getCurrentPosition();\n  }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call getCurrentPosition with null success callback, check that exception is thrown",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.getCurrentPosition(null);\n  }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call getCurrentPosition with null success and error callbacks, check that exception is thrown",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.getCurrentPosition(null, null);\n  }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call getCurrentPosition() with wrong type for first argument. Exception expected.",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.getCurrentPosition(3);\n  }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call getCurrentPosition() with wrong type for second argument. Exception expected.",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.getCurrentPosition(dummyFunction, 4...\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call getCurrentPosition() with wrong type for third argument. Exception expected.",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.getCurrentPosition(dummyFunction, d...\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/geolocation-API/getCurrentPosition_permission_allow.html",
+      "subtests": [
+        {
+          "name": "User allows access, check that success callback is called or error callback is called with correct code.",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Check that getCurrentPosition returns synchronously before any callbacks are invoked.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/geolocation-API/getCurrentPosition_permission_deny.html",
+      "subtests": [
+        {
+          "name": "User denies access, check that error callback is called with correct code",
+          "status": "FAIL",
+          "message": "assert_unreached: A success callback was invoked unexpectedly with position [lat: 0, lon: 0, acc: 30] Reached unreachable code"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/geolocation-API/interfaces.html",
+      "subtests": [
+        {
+          "name": "Navigator interface: attribute geolocation",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"Navigator\" expected property \"Navigator\" missing"
+        },
+        {
+          "name": "Navigator must be primary interface of navigator",
+          "status": "FAIL",
+          "message": "assert_own_property: window does not have own property \"Navigator\" expected property \"Navigator\" missing"
+        },
+        {
+          "name": "Stringification of navigator",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Navigator interface: navigator must inherit property \"geolocation\" with the proper type (0)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"geolocation\" found on object expected in prototype chain"
+        },
+        {
+          "name": "Stringification of navigator.geolocation",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Geolocation interface: navigator.geolocation must inherit property \"getCurrentPosition\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Geolocation interface: calling getCurrentPosition(PositionCallback,PositionErrorCallback,PositionOptions) on navigator.geolocation with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: Called with 0 arguments function \"function () { [native code] }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Geolocation interface: navigator.geolocation must inherit property \"watchPosition\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Geolocation interface: calling watchPosition(PositionCallback,PositionErrorCallback,PositionOptions) on navigator.geolocation with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: Called with 0 arguments function \"function () { [native code] }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Geolocation interface: navigator.geolocation must inherit property \"clearWatch\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Geolocation interface: calling clearWatch(long) on navigator.geolocation with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/geolocation-API/watchPosition_TypeError.html",
+      "subtests": [
+        {
+          "name": "Call watchPosition without arguments, check that exception is thrown",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.watchPosition();\n  }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call watchPosition with null success callback, check that exception is thrown",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.watchPosition(null);\n  }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call watchPosition with null success and error callbacks, check that exception is thrown",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.watchPosition(null, null);\n  }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call watchPosition() with wrong type for first argument. Exception expected.",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.watchPosition(3);\n  }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call watchPosition() with wrong type for second argument. Exception expected.",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.watchPosition(dummyFunction, 4);\n  }\" threw object \"Error: TYPE_MISMATCH_ERR: DOM Exception 17\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Call watchPosition() with wrong type for third argument. Exception expected.",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    geo.watchPosition(dummyFunction, dummyF...\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/geolocation-API/watchPosition_permission_deny.html",
+      "subtests": [
+        {
+          "name": "Check that watchPosition returns synchronously before any callbacks are invoked.",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Check that watchPosition returns a long",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    }
+  ]
+}

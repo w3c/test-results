@@ -1,0 +1,135 @@
+{
+  "ua": [
+    "UC10"
+  ],
+  "results": {
+    "/html-imports/document/document-method-changes.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Throws an InvalidStateError exception if the Document is an import: From the master document": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/html-imports/fetching/already-in-import-map.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "If LOCATION is already in the import map, let IMPORT be the imported document for LOCATION and stop. (1)": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "If LOCATION is already in the import map, let IMPORT be the imported document for LOCATION and stop. (2)": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/html-imports/fetching/loading-attempt.html": {
+      "byUA": {
+        "UC10": "TIMEOUT"
+      },
+      "totals": {
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "The loading attempt must be considered successful if IMPORT is not null on the algorithm completion, and failed otherwise. (1)": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        },
+        "The loading attempt must be considered successful if IMPORT is not null on the algorithm completion, and failed otherwise. (2)": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        },
+        "The loading attempt must be considered successful if IMPORT is not null on the algorithm completion, and failed otherwise. (3)": {
+          "byUA": {
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        },
+        "Every import that is not marked as async delays the load event in the Document.": {
+          "byUA": {
+            "UC10": "NOTRUN"
+          },
+          "totals": {
+            "NOTRUN": 1
+          }
+        }
+      }
+    },
+    "/html-imports/html-link-element/import-attribute.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "The import attribute must return null if the link does not represent an import.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        },
+        "The import attribute must return null if the link element is not in a Document.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        },
+        "The attribute must return the imported document for the import.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        },
+        "The same object must be returned each time.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    }
+  }
+}

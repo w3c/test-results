@@ -1,0 +1,75 @@
+{
+  "results": [
+    {
+      "test": "/animation-timing/callback-invoked.html",
+      "subtests": [
+        {
+          "name": "requestAnimationFrame callback is invoked at least once before the timeout",
+          "status": "FAIL",
+          "message": "assert_false: document.hidden must be exist and be false to run this test properly expected false got undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/animation-timing/cancel-invoked.html",
+      "subtests": [
+        {
+          "name": "cancelAnimationFrame does nothing if there is no callback with the given handle",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/animation-timing/idlharness.html",
+      "subtests": [
+        {
+          "name": "Window interface: operation requestAnimationFrame(FrameRequestCallback)",
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
+        },
+        {
+          "name": "Window interface: operation cancelAnimationFrame(long)",
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
+        },
+        {
+          "name": "Window must be primary interface of window",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of window",
+          "status": "FAIL",
+          "message": "assert_equals: class string of window expected \"[object Window]\" but got \"[object global]\""
+        },
+        {
+          "name": "Window interface: window must inherit property \"requestAnimationFrame\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Window interface: calling requestAnimationFrame(FrameRequestCallback) on window with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Window interface: window must inherit property \"cancelAnimationFrame\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Window interface: calling cancelAnimationFrame(long) on window with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

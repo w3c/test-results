@@ -1,0 +1,1613 @@
+{
+  "results": [
+    {
+      "test": "/custom-elements/concepts/custom-elements-type-allowed-chars-first-char.html",
+      "subtests": [
+        {
+          "name": "Registering valid custom element name starting with '_' char",
+          "status": "FAIL",
+          "message": "assert_unreached: The custom element name '_-x5f' should be registered without errors Reached unreachable code"
+        },
+        {
+          "name": "Registering valid custom element name starting with base char",
+          "status": "FAIL",
+          "message": "assert_unreached: The custom element name 'Ά-x386' should be registered without errors Reached unreachable code"
+        },
+        {
+          "name": "Registering valid custom element name starting with ideographic char",
+          "status": "FAIL",
+          "message": "assert_unreached: The custom element name '〇-x3007' should be registered without errors Reached unreachable code"
+        },
+        {
+          "name": "Registering custom element starting with invalid character (general) should fail",
+          "status": "FAIL",
+          "message": "assert_throws: Registering invalid custom element name '.-x2e' should fail function \"function () {\n            doc.registerElement(name);\n    ...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException SyntaxError: property \"code\" is equal to undefined, expected 12"
+        },
+        {
+          "name": "Registering custom element starting with invalid character (combining char) should fail",
+          "status": "FAIL",
+          "message": "assert_throws: Registering invalid custom element name '̀-x300' should fail function \"function () {\n            doc.registerElement(name);\n    ...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException SyntaxError: property \"code\" is equal to undefined, expected 12"
+        },
+        {
+          "name": "Registering custom element starting with invalid character (extender char) should fail",
+          "status": "FAIL",
+          "message": "assert_throws: Registering invalid custom element name '·-xb7' should fail function \"function () {\n            doc.registerElement(name);\n    ...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException SyntaxError: property \"code\" is equal to undefined, expected 12"
+        },
+        {
+          "name": "Registering custom element starting with invalid character (digit char) should fail",
+          "status": "FAIL",
+          "message": "assert_throws: Registering invalid custom element name '0-x30' should fail function \"function () {\n            doc.registerElement(name);\n    ...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException SyntaxError: property \"code\" is equal to undefined, expected 12"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/custom-elements/concepts/custom-elements-type-allowed-chars.html",
+      "subtests": [
+        {
+          "name": "Registering valid custom element types with base char",
+          "status": "FAIL",
+          "message": "assert_unreached: The custom element name 'x-Ά-x386' should be registered without errors Reached unreachable code"
+        },
+        {
+          "name": "Registering valid custom element types with ideographic char",
+          "status": "FAIL",
+          "message": "assert_unreached: The custom element name 'x-〇-x3007' should be registered without errors Reached unreachable code"
+        },
+        {
+          "name": "Registering valid custom element types with digit chars",
+          "status": "FAIL",
+          "message": "assert_unreached: The custom element name 'x-0-x30' should be registered without errors Reached unreachable code"
+        },
+        {
+          "name": "Registering valid custom element types with characters '.', '-', '_'",
+          "status": "FAIL",
+          "message": "assert_unreached: The custom element name 'x-.-x2e' should be registered without errors Reached unreachable code"
+        },
+        {
+          "name": "Registering valid custom element types with combining char",
+          "status": "FAIL",
+          "message": "assert_unreached: The custom element name 'x-̀-x300' should be registered without errors Reached unreachable code"
+        },
+        {
+          "name": "Registering valid custom element types with extender char",
+          "status": "FAIL",
+          "message": "assert_unreached: The custom element name 'x-·-xb7' should be registered without errors Reached unreachable code"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/concepts/custom-elements-type-naming.html",
+      "subtests": [
+        {
+          "name": "Registering valid custom element types",
+          "status": "FAIL",
+          "message": "assert_unreached: Exception should not be thrown in case of attempt to register a custom element with a name 'x-frame' Reached unreachable code"
+        },
+        {
+          "name": "Registering invalid custom element types should fail",
+          "status": "FAIL",
+          "message": "assert_throws: Exception should be thrown in case of attempt to register element with the name 'xframe' function \"function () {\n            doc.registerElement(value);\n   ...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException SyntaxError: property \"code\" is equal to undefined, expected 12"
+        },
+        {
+          "name": "Registering forbidden custom element types should fail",
+          "status": "FAIL",
+          "message": "assert_throws: Exception should be thrown in case of attempt to register element with the name 'annotation-xml' function \"function () {\n            doc.registerElement(value);\n   ...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException SyntaxError: property \"code\" is equal to undefined, expected 12"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/creating-and-passing-registries/new-registry-test.html",
+      "subtests": [
+        {
+          "name": "Document, loaded into browsing context, must have a new empty registry",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Document, loaded into browsing context, must have a new empty registry, which is different from other documents' registries",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/creating-and-passing-registries/no-registry-test.html",
+      "subtests": [
+        {
+          "name": "Document of type other than HTML, not loaded into browsing context, must not have a registry",
+          "status": "FAIL",
+          "message": "assert_throws: Registering valid custom element in a document without registry should fail function \"function () { doc.registerElement('x-element'); }\" threw object \"TypeError: Object #<Document> has no method 'registerElem...\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
+        },
+        {
+          "name": "XMLHttpRequest's asynchronous response HTML document must not have a registry",
+          "status": "FAIL",
+          "message": "assert_throws: Registering valid custom element in an XMLHttpRequest's response document should fail function \"function () { doc.registerElement('x-element'); }\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/creating-and-passing-registries/share-registry-create-document.html",
+      "subtests": [
+        {
+          "name": "Document created by createHTMLDocument should share an existing registry",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/creating-and-passing-registries/share-registry-create-document.html:20:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/creating-and-passing-registries/share-registry-create-document.html:16:1)"
+        },
+        {
+          "name": "Document created by createDocument with HTML namespace should share an existing registry",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/creating-and-passing-registries/share-registry-create-document.html:38:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/creating-and-passing-registries/share-registry-create-document.html:34:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/creating-and-passing-registries/share-registry-import-document.html",
+      "subtests": [
+        {
+          "name": "Registry of the imported document should be shared with master document. Import is asynchronous",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Registry of the master document should be shared with imported document. Import is asynchronous",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Registry of the imported document should be shared with master document. Import is syncronous",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Registry of the master document should be shared with imported document. Import is syncronous",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/enqueuing-and-invoking-callbacks/invoke-callbacks.html",
+      "subtests": [
+        {
+          "name": "Test 'this' value inside created callback.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/enqueuing-and-invoking-callbacks/invoke-callbacks.html:20:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/enqueuing-and-invoking-callbacks/invoke-callbacks.html:17:1)"
+        },
+        {
+          "name": "Test 'this' value inside attached callback.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test 'this' value inside detached callback.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test 'this' value inside attributeChanged callback.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/enqueuing-and-invoking-callbacks/invoke-callbacks.html:52:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/enqueuing-and-invoking-callbacks/invoke-callbacks.html:49:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-move-element-test.html",
+      "subtests": [
+        {
+          "name": "Test attached callback if moving custom element inside document without browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-move-element-test.html:19:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-move-element-test.html:16:1)"
+        },
+        {
+          "name": "Test attached callback if moving custom element from document without browsing context to document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback if moving custom element from document with browsing context to document without browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback if moving custom element inside document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback if indirectly moving custom element inside document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback if moving custom element from document with browsing context to document with browsing context",
+          "status": "FAIL",
+          "message": "Object [object HTMLDocument] has no method 'registerElement'(stack: TypeError: Object [object HTMLDocument] has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-move-element-test.html:127:14)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html",
+      "subtests": [
+        {
+          "name": "Test attached callback if custom element is instantiated via constructor. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html:16:1)"
+        },
+        {
+          "name": "Test attached callback if custom element is created via innerHTML property. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html:30:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html:27:1)"
+        },
+        {
+          "name": "Test attached callback if custom element is created via innerHTML property before registration. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html:42:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html:38:1)"
+        },
+        {
+          "name": "Test attached callback if custom element is unregistered",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html:55:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attached-callback-test.html:49:1)"
+        },
+        {
+          "name": "Test attached callback. Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback. Registered element is created via document.createElement(). Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback. Unregistered element is created via document.createElement(). Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback. Registered element is created via innerHTML property. Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback. Unresolved element is created via innerHTML property. Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html",
+      "subtests": [
+        {
+          "name": "Test attributeChanged callback is called if attribute value is changed by method setAttribute(). The custom element is created via constructor",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:20:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:17:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is changed by method setAttribute(). The custom element is created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:35:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:32:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is changed by method classList.add(). The custom element is created via constructor",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:52:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:49:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is changed by method classList.add(). The custom element is created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:67:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:64:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is changed as property. The custom element is created via constructor",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:84:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:81:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is changed as property. The custom element is created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:99:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:96:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is changed by classList.toggle(). The custom element is created via constructor",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:116:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:113:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is changed by classList.toggle(). The custom element is created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:131:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:128:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is not called if custom element is not registered",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:153:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-change-attribute-test.html:145:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is changed. The document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is changed. The document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback is not called if custom element is not registered. The document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html",
+      "subtests": [
+        {
+          "name": "Test attributeChanged callback if attribute is removed. The custom element created via constructor",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:16:1)"
+        },
+        {
+          "name": "Test attributeChanged callback if attribute is removed. The custom element created via constructor and extends HTML element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:37:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:34:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:32:1)"
+        },
+        {
+          "name": "Test attributeChanged callback if attribute is removed. The custom element created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:58:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:55:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute is removed. The custom element created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:73:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:70:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is not called if attribute is removed. The custom element created via innerHTML property and unresolved at first",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:101:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-remove-attribute-test.html:88:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute is removed. The custom element created via constructor and the document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute is removed. The custom element created via innerHTML property and the document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback if attribute is removed. The custom element created via innerHTML property and unresolved at first. The document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html",
+      "subtests": [
+        {
+          "name": "Test attributeChanged callback is called if attribute value is set by method setAttribute(). The custom element is created via constructor.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:20:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:17:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is set by method setAttribute(). The custom element is created via constructor.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:33:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:30:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is set by method classList.add(). The custom element is created via constructor.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:46:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:43:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is set by method classList.add(). The custom element is created via constructor.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:59:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:56:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is set by method classList.toggle(). The custom element is created via constructor.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:72:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:69:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is set by method classList.toggle(). The custom element is created via constructor.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:85:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:82:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is set as property. The custom element is created via constructor.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:98:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:95:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is set as property. The custom element is created via constructor.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:111:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:108:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is not called if attribute value is specified in HTML. The custom element is created via innerHTML property.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:124:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:121:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is set by method setAttribute(). The custom element is created via innerHTML property.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:136:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:133:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is set by method setAttribute(). The custom element is created via innerHTML property.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:150:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:147:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is not called if attribute value of unresolved element is set by method setAttribute().",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:170:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:161:1)"
+        },
+        {
+          "name": "Test attributeChanged callback of the custom element that extends some HTML element. Test that the callback is called",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:186:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:183:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:181:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute is set by method classList.add(). The custom element extends some HTML element.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:205:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:202:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:200:1)"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is set by method setAttribute(). The custom element extends some HTML element.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:224:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:221:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/attribute-changed-callback-set-attribute-test.html:219:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is set by method setAttribute(). The document has browsing context.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is set by method setAttribute(). The document has browsing context.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is set by method classList.add(). The document has browsing context.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is set by method classList.add(). The document has browsing context.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback is not called if attribute value of unresolved element is set by method setAttribute(). The document has browsing context.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback is called if attribute value is set by method setAttribute(). The document has browsing context. The custom element extends some HTML element.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback arguments if attribute value is set by method setAttribute(). The document has browsing context. The custom element extends some HTML element.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html",
+      "subtests": [
+        {
+          "name": "Test custom element prototype inside created callback when custom element is created in HTML before registration of a custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:22:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:17:1)"
+        },
+        {
+          "name": "Test custom element prototype inside created callback when custom element is created in HTML after registration of a custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:33:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:29:1)"
+        },
+        {
+          "name": "Test custom element prototype inside created callback when custom element is created via document.createElement() before registration of a custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:47:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:41:1)"
+        },
+        {
+          "name": "Test custom element prototype inside created callback when custom element is created via document.createElement() after registration of a custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:57:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:54:1)"
+        },
+        {
+          "name": "Test custom element prototype inside created callback when custom element is created via constructor returned by method registerElement",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:70:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-element-prototype-test.html:67:1)"
+        },
+        {
+          "name": "Test custom element prototype inside created callback when custom element is created by UA parser before registration of a custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-order-test.html",
+      "subtests": [
+        {
+          "name": "Test attached callback is enqueued after created callback",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback is enqueued after created callback. Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback is enqueued after created callback. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-order-test.html:65:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-order-test.html:62:1)"
+        },
+        {
+          "name": "Test detached callback is enqueued after created callback.",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback is not enqueued before created callback started. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-order-test.html:100:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-order-test.html:90:1)"
+        },
+        {
+          "name": "Test attributeChanged callback is not enqueued before created callback started. Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attributeChanged callback is enqueued after created callback started. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-order-test.html:136:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-order-test.html:129:1)"
+        },
+        {
+          "name": "Test attached callback is enqueued after created callback, but before created callback had started",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback is enqueued after created callback had started",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback is not enqueued before created callback had started",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback is enqueued after created callback had started",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test attached callback is enqueued after created callback after registration of custom element type",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html",
+      "subtests": [
+        {
+          "name": "Test created callback when custom element is created by constructor",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:20:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:17:1)"
+        },
+        {
+          "name": "Test created callback when custom element is created in HTML",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:32:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:29:1)"
+        },
+        {
+          "name": "Test created callback when custom element is created in HTML as descendant of another element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:44:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:41:1)"
+        },
+        {
+          "name": "Test created callback when custom element is created by createElement",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:57:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:54:1)"
+        },
+        {
+          "name": "Test created callback when custom element is created in HTML before registration of a custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:71:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:66:1)"
+        },
+        {
+          "name": "Test created callback if custom element is unresolved.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:81:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:78:1)"
+        },
+        {
+          "name": "Test created callback is called after custom element is created and registered. Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test created callback is called after custom element is registered and created. Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test created callback when custom element is created by createElement before registration of a custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:113:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:108:1)"
+        },
+        {
+          "name": "Test created callback. Create several custom elements using different ways",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:123:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/created-callback-invocation-test.html:120:1)"
+        },
+        {
+          "name": "Test created callback. Create several custom elements using different ways. Document has browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-move-element-test.html",
+      "subtests": [
+        {
+          "name": "Test detached callback is not called if moving custom element inside document without browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-move-element-test.html:19:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-move-element-test.html:16:1)"
+        },
+        {
+          "name": "Test detached callback is not called if moving custom element from document without browsing context to document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback if moving custom element from document with browsing context to document without browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback if moving custom element inside document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback if moving custom element from document with browsing context to document with browsing context",
+          "status": "FAIL",
+          "message": "Object [object HTMLDocument] has no method 'registerElement'(stack: TypeError: Object [object HTMLDocument] has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-move-element-test.html:97:14)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html",
+      "subtests": [
+        {
+          "name": "Test detached callback if custom element is created via innerHTML property. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:20:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:17:1)"
+        },
+        {
+          "name": "Test detached callback if custom element is via innerHTML property before registration of a custom element. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:35:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:31:1)"
+        },
+        {
+          "name": "Test detached callback if custom element is unregistered. Document has no browsing context",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test detached callback if removing custom element via innerHTML property. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:64:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:60:1)"
+        },
+        {
+          "name": "Test detached callback if removing perent of custom element. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:78:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:74:1)"
+        },
+        {
+          "name": "Test detached callback if removing perent of custom element via innerHTML property. Document has no browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:93:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:89:1)"
+        },
+        {
+          "name": "Test detached callback is not called if document lose browsing context and custom element is removed",
+          "status": "FAIL",
+          "message": "Object [object HTMLDocument] has no method 'registerElement'(stack: TypeError: Object [object HTMLDocument] has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:111:13)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback is not called, if document's window is navigated to another document and custom element is removed",
+          "status": "FAIL",
+          "message": "Object [object HTMLDocument] has no method 'registerElement'(stack: TypeError: Object [object HTMLDocument] has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-no-browsing-context-test.html:132:13)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/custom-element-lifecycle/types-of-callbacks/detached-callback-with-browsing-context-test.html",
+      "subtests": [
+        {
+          "name": "Test detached callback is called if custom element is removed by method removeChild() from document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback is called if ancestor node of custom element is removed by method removeChild() from document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback is called if custom element is removed by method replaceChild() from document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback is called if ancestor node of custom element is removed by method replaceChild() from document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback is called after changing custom element direct parent innerHTML property in the document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test detached callback is called after changing custom element ancestor innerHTML property in the document with browsing context",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/changing-is-attribute.html",
+      "subtests": [
+        {
+          "name": "Test custom element type, after assigning IS attribute value. Element is created by constructor",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:17:1)"
+        },
+        {
+          "name": "Test custom element type, after assigning IS attribute value. Element is created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:31:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:29:1)"
+        },
+        {
+          "name": "Test custom element type, after assigning IS attribute value to unresolved element. Element is created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:47:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:42:1)"
+        },
+        {
+          "name": "Test custom element type, after assigning IS attribute value. Element is defined in loaded HTML document",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test custom element type, after assigning IS attribute value to unresolved element. Element is defined in loaded HTML document",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test custom element type after changing IS attribute value. Element is HTML5 element with IS attribute referring to custom element type",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:86:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:79:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:77:1)"
+        },
+        {
+          "name": "Test custom element type after changing IS attribute value several times. Element is HTML5 element with IS attribute referring to custom element type",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:115:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:110:1)"
+        },
+        {
+          "name": "Test custom element type, after removing IS attribute value. Element is created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:134:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:132:1)"
+        },
+        {
+          "name": "Test custom element type, after removing IS attribute value. Element is HTML5 element with IS attribute referring to custom element type",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:149:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/changing-is-attribute.html:145:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/custom-element-constructor-is-attribute.html",
+      "subtests": [
+        {
+          "name": "Test that the constructor of a type extension sets the IS attribute value to the type",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-is-attribute.html:25:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-is-attribute.html:18:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-is-attribute.html:16:1)"
+        },
+        {
+          "name": "Test that the constructor of a custom element does not set the IS attribute if local name is the same as type",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-is-attribute.html:41:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-is-attribute.html:36:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-is-attribute.html:34:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/custom-element-constructor-local-name.html",
+      "subtests": [
+        {
+          "name": "Custom element constructor sets local name to the name from custom element definition",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-local-name.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-local-name.html:17:1)"
+        },
+        {
+          "name": "Custom element constructor sets local name to the name from custom element definition. Test constructor of extended HTML element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-local-name.html:32:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-local-name.html:28:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-local-name.html:26:1)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/custom-element-constructor-namespace.html",
+      "subtests": [
+        {
+          "name": "Custom element constructor sets namespace to the namespace from custom element definition",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-namespace.html:18:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-namespace.html:16:1)"
+        },
+        {
+          "name": "Custom element constructor sets namespace to the namespace from custom element definition. Test constructor of extended HTML element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-namespace.html:31:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-namespace.html:27:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-namespace.html:25:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html",
+      "subtests": [
+        {
+          "name": "Custom element constructor sets owner document to the document, where custom element type is registered",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:18:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:16:1)"
+        },
+        {
+          "name": "Custom element constructor sets owner document to the document, where custom element type is registered. Test constructor of extended HTML element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:33:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:29:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:27:1)"
+        },
+        {
+          "name": "Custom element constructor sets owner document to the document, where custom element type is registered. Test different documents with shared registry",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:52:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:47:1)"
+        },
+        {
+          "name": "Custom element constructor sets owner document to the document, where custom element type is registered. Test constructor of extended HTML element for different documents with shared registry",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:75:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:71:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-node-document.html:68:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/custom-element-constructor-prototype.html",
+      "subtests": [
+        {
+          "name": "If custom element type is registered with prototype, the custom element constructor should have the prototype specified in registerElement() call",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-prototype.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-constructor-prototype.html:16:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/custom-element-prototype.html",
+      "subtests": [
+        {
+          "name": "If custom element type is registered with prototype, the custom element instance should have the prototype specified in registerElement() call",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-prototype.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-prototype.html:16:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/custom-element-type-is-attribute.html",
+      "subtests": [
+        {
+          "name": "Instantiation of custom element: custom element type is given as the value of the IS attribute",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-is-attribute.html:26:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-is-attribute.html:19:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-is-attribute.html:17:1)"
+        },
+        {
+          "name": "Instantiation of custom element: custom element type is given as the value of the IS attribute. Custom element is unresolved at first",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-is-attribute.html:63:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-is-attribute.html:47:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-is-attribute.html:45:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html",
+      "subtests": [
+        {
+          "name": "Custom element type must be taken from the local name of the element even if IS attribute provided.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:17:1)"
+        },
+        {
+          "name": "Custom element type must be taken from the local name of the element even if IS attribute provided. Custom element is unresolved at first",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:32:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:30:1)"
+        },
+        {
+          "name": "Custom element type must be taken from the local name of the element even if IS attribute provided. There's no definition for the value of IS attribute at first",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:45:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:43:1)"
+        },
+        {
+          "name": "Custom element type must be taken from the local name of the element even if IS attribute provided. IS attribute refers to another custom element type, which extends HTML5 elements",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:60:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:58:1)"
+        },
+        {
+          "name": "Custom element type must be taken from the local name of the custom element even if IS attribute provided. The element extends HTML5 elements, IS attribute refers to another custom element type.",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:80:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name-and-is-attribute.html:78:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/custom-element-type-local-name.html",
+      "subtests": [
+        {
+          "name": "Test custom element type, which is given via the local name of the custom element. Custom element created via innerHTML property",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/custom-element-type-local-name.html:17:1)"
+        },
+        {
+          "name": "Test custom element type, which is given via the local name of the custom element. Custom element is defined in loaded HTML document",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-local-name.html",
+      "subtests": [
+        {
+          "name": "Test Document.createElement() creates custom element of type, specified by localName argument, if an element definition with matching localName, namespace, and type is not registered",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-local-name.html:20:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-local-name.html:16:1)"
+        },
+        {
+          "name": "Test Document.createElementNS() creates custom element of type, specified by localName argument, if an element definition with matching localName, namespace, and type is not registered",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-local-name.html:34:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-local-name.html:30:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-type-extension.html",
+      "subtests": [
+        {
+          "name": "Test Document.createElement() creates custom element of type, specified by typeExtension argument",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-type-extension.html:19:37)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-type-extension.html:16:1)"
+        },
+        {
+          "name": "Test Document.createElementNS() creates custom element of type, specified by typeExtension argument",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-type-extension.html:33:37)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-type-extension.html:30:1)"
+        },
+        {
+          "name": "Test Document.createElement() creates custom element of type, specified by typeExtension argument. Definition for localName is absent",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-type-extension.html:48:37)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-type-extension.html:44:1)"
+        },
+        {
+          "name": "Test Document.createElementNS() creates custom element of type, specified by typeExtension argument. Definition for localName is absent",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-type-extension.html:61:37)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-interface-type-is-a-type-extension.html:57:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-is-attribute.html",
+      "subtests": [
+        {
+          "name": "Test Document.createElement() sets the element's IS attribute value to type, if type is not the same as localName",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-is-attribute.html:22:13\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-is-attribute.html:18:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-is-attribute.html:16:1)"
+        },
+        {
+          "name": "Test Document.createElement() sets the element's IS attribute value to type, if type is not the same as localName and an element definition with matching localName, namespace, and type is not registered",
+          "status": "FAIL",
+          "message": "assert_equals: Value of the IS attribute should be set to type by Document.createElement() expected (string) \"x-b-a\" but got (object) null"
+        },
+        {
+          "name": "Test Document.createElementNS() sets the element's IS attribute value to type, if type is not the same as localName",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-is-attribute.html:50:13\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-is-attribute.html:46:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-is-attribute.html:44:1)"
+        },
+        {
+          "name": "Test Document.createElementNS() sets the element's IS attribute value to type, if type is not the same as localNameand and an element definition with matching localName, namespace, and type is not registered ",
+          "status": "FAIL",
+          "message": "assert_equals: Value of the IS attribute should be set to type by Document.createElementNS() expected (string) \"x-d-a\" but got (object) null"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-namespace.html",
+      "subtests": [
+        {
+          "name": "Test Document.createElement() sets custom element namespace to HTML Namespace",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-namespace.html:19:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-namespace.html:16:1)"
+        },
+        {
+          "name": "Test Document.createElement() sets custom element namespace to HTML Namespace and an element definition with matching localName, namespace, and type is not registered",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Document.createElement() sets custom element namespace to HTML Namespace. Custom element is extending standard HTML tag",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-namespace.html:42:13\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-namespace.html:38:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-namespace.html:36:1)"
+        },
+        {
+          "name": "Document.createElement() sets custom element namespace to HTML Namespace. Document.createElement() is called with standard HTML tag name and type without registered custom element of such type",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-is-a-type.html",
+      "subtests": [
+        {
+          "name": "Test Document.createElement() creates custom element of type, specified by typeExtension argument",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-is-a-type.html:22:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-is-a-type.html:18:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-is-a-type.html:16:1)"
+        },
+        {
+          "name": "Test Document.createElementNS() creates custom element of type, specified by typeExtension argument",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-is-a-type.html:38:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-is-a-type.html:34:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-is-a-type.html:32:1)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-unresolved.html",
+      "subtests": [
+        {
+          "name": "If typeExtension is unresolved when createElement called then local name is a type",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-unresolved.html:26:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-unresolved.html:18:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-unresolved.html:16:1)"
+        },
+        {
+          "name": "If typeExtension is unresolved when createElementNS called then local name is a type",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-unresolved.html:43:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-unresolved.html:35:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-extension-unresolved.html:33:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-is-a-local-name.html",
+      "subtests": [
+        {
+          "name": "Test Document.createElement() creates custom element of type, specified by single localName argument",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-is-a-local-name.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-is-a-local-name.html:16:1)"
+        },
+        {
+          "name": "Test Document.createElementNS() creates custom element of type, specified by localName argument. Argument typeExtension is not passed",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-is-a-local-name.html:31:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/create-element-type-is-a-local-name.html:28:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html",
+      "subtests": [
+        {
+          "name": "Test Document.createElementNS() without typeExtension argument enqueues created callback",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html:22:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html:17:1)"
+        },
+        {
+          "name": "Test Document.createElementNS() with typeExtension argument enqueues created callback",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html:34:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html:29:1)"
+        },
+        {
+          "name": "Document.createElementNS() should not enqueue created callback for unresolved custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html:50:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html:41:1)"
+        },
+        {
+          "name": "Test Document.createElementNS() enqueues created callback for custom elements that are extensions of HTML5 elements",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html:63:13\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html:59:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element-ns.html:57:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html",
+      "subtests": [
+        {
+          "name": "Test Document.createElement() without typeExtension argument enqueues created callback",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html:22:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html:17:1)"
+        },
+        {
+          "name": "Test Document.createElement() with typeExtension argument enqueues created callback",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html:34:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html:29:1)"
+        },
+        {
+          "name": "Document.createElement() should not enqueue created callback for unresolved custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html:50:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html:41:1)"
+        },
+        {
+          "name": "Test Document.createElement() enqueues created callback for custom elements that are extensions of HTML5 elements",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html:63:13\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html:59:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/extensions-to-document-interface/created-callback-create-element.html:57:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/non-configurable-constructor-property.html",
+      "subtests": [
+        {
+          "name": "Test Document.registerElement() throws NotSupportedError if prototype has a non-configurable property named constructor",
+          "status": "FAIL",
+          "message": "assert_throws: Exception should be thrown in case of attempt to register element with a non-configurable property named constructor function \"function () {\n        doc.registerElement('x-a', {prototy...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
+        },
+        {
+          "name": "Test Document.registerElement() accepts prototype with a configurable property named constructor without throwing errors",
+          "status": "FAIL",
+          "message": "assert_unreached: Exception should not be thrown in case of attempt to register element with a configurable property named constructor Reached unreachable code"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/instantiating-custom-elements/prototype-is-interface-prototype-object.html",
+      "subtests": [
+        {
+          "name": "Test Document.registerElement() throws NotSupportedError if prototype is already an interface prototype object",
+          "status": "FAIL",
+          "message": "assert_throws: Exception should be thrown in case of attempt to register element if prototype is already an interface prototype object (x-a-a) function \"function () {\n            doc.registerElement(name, {prot...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
+        },
+        {
+          "name": "Test Document.registerElement() throws NotSupportedError if prototype is already used for another custom element type",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/instantiating-custom-elements/prototype-is-interface-prototype-object.html:33:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/instantiating-custom-elements/prototype-is-interface-prototype-object.html:30:1)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/definition-construction-algorithm-default-namespace.html",
+      "subtests": [
+        {
+          "name": "Default namespace is HTML namespace",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-default-namespace.html:18:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-default-namespace.html:16:1)"
+        },
+        {
+          "name": "Default namespace is HTML namespace. Test constructor of extended HTML element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-default-namespace.html:32:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-default-namespace.html:28:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-default-namespace.html:26:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/definition-construction-algorithm-duplicate-definition.html",
+      "subtests": [
+        {
+          "name": "Check duplicate definition",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-duplicate-definition.html:19:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-duplicate-definition.html:16:1)"
+        },
+        {
+          "name": "Check duplicate definition. Specify constructor",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-duplicate-definition.html:29:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-duplicate-definition.html:26:1)"
+        },
+        {
+          "name": "Check duplicate definition. Test different prototypes and extends",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-duplicate-definition.html:43:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-duplicate-definition.html:40:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/definition-construction-algorithm-invalid-type.html",
+      "subtests": [
+        {
+          "name": "Registering invalid custom element type should throw SyntaxError",
+          "status": "FAIL",
+          "message": "assert_throws: Registering invalid custom element type should throw SyntaxError function \"function () { doc.registerElement('1xa2'); }\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException SyntaxError: property \"code\" is equal to undefined, expected 12"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/definition-construction-algorithm-local-name-lowercased.html",
+      "subtests": [
+        {
+          "name": "Custom element local name should be lowercased if document is an HTML document",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-local-name-lowercased.html:22:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-local-name-lowercased.html:18:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-local-name-lowercased.html:16:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/definition-construction-algorithm-name-is-null.html",
+      "subtests": [
+        {
+          "name": "If NAME is not specified then localName must be set to TYPE",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-name-is-null.html:21:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-name-is-null.html:17:1)"
+        },
+        {
+          "name": "If NAME is null then localName must be set to TYPE",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-name-is-null.html:33:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-name-is-null.html:29:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/definition-construction-algorithm-no-interface-for-name.html",
+      "subtests": [
+        {
+          "name": "Exception should be thrown in case of attempt to register a custom element which extends another custom element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-no-interface-for-name.html:18:9)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-no-interface-for-name.html:16:1)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/definition-construction-algorithm-svg-namespace-name-is-null.html",
+      "subtests": [
+        {
+          "name": "Error should be thrown if namespace is SVG and local name is not specified",
+          "status": "FAIL",
+          "message": "assert_throws: Exception should be thrown in case of attempt to register a custom element with SVG namespace and name is not specified function \"function () {\n        doc.registerElement('x-svg-a', {pro...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
+        },
+        {
+          "name": "Error should be thrown if namespace is SVG and local name is null",
+          "status": "FAIL",
+          "message": "assert_throws: Exception should be thrown in case of attempt to register a custom element with SVG namespace and name is null function \"function () {\n        doc.registerElement('x-svg-b', {pro...\" threw object \"TypeError: Object #<HTMLDocument> has no method 'register...\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/definition-construction-algorithm-svg-namespace.html",
+      "subtests": [
+        {
+          "name": "For SVG prototype namespace is SVG namespace",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-svg-namespace.html:19:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-svg-namespace.html:16:1)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/definition-construction-algorithm-type-name-lowercased.html",
+      "subtests": [
+        {
+          "name": "Custom element type should be lowercased. Test constructor",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-type-name-lowercased.html:18:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-type-name-lowercased.html:16:1)"
+        },
+        {
+          "name": "Custom element type should be lowercased. Test constructor of extended HTML element",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-type-name-lowercased.html:31:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-type-name-lowercased.html:27:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/definition-construction-algorithm-type-name-lowercased.html:25:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/element-registration-algorithm-no-registry.html",
+      "subtests": [
+        {
+          "name": "Registering valid custom element without options in document without registry should throw NotSupportedError",
+          "status": "FAIL",
+          "message": "assert_throws: Registering valid custom element in document without registry should throw NotSupportedError function \"function (){\n                      doc.registerElement('x...\" threw object \"TypeError: Object #<Document> has no method 'registerElem...\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
+        },
+        {
+          "name": "Registering valid custom element with options in document without registry should throw NotSupportedError",
+          "status": "FAIL",
+          "message": "assert_throws: Registering valid custom element in document without registry should throw NotSupportedError function \"function (){\n                      doc.registerElement('x...\" threw object \"TypeError: Object #<Document> has no method 'registerElem...\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/extensions-to-document-interface/custom-element-name.html",
+      "subtests": [
+        {
+          "name": "Custom element local name is the lowercased value of the EXTENDS property, supplied to Document.registerElement()",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/extensions-to-document-interface/custom-element-name.html:23:40\n    at Array.forEach (native)\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/extensions-to-document-interface/custom-element-name.html:19:20)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/extensions-to-document-interface/custom-element-name.html:16:1)"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/extensions-to-document-interface/custom-element-prototype.html",
+      "subtests": [
+        {
+          "name": "Custom element should have HTMLElement prototype, if its type is registered without prototype",
+          "status": "FAIL",
+          "message": "Object #<HTMLDocument> has no method 'registerElement'(stack: TypeError: Object #<HTMLDocument> has no method 'registerElement'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/registering-custom-elements/extensions-to-document-interface/custom-element-prototype.html:18:36)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at test (http://www.w3c-test.org/resources/testharness.js:73:18)\n    at http://www.w3c-test.org/custom-elements/registering-custom-elements/extensions-to-document-interface/custom-element-prototype.html:16:1)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/unresolved-element-pseudoclass/unresolved-element-pseudoclass-matching-query-selector-all.html",
+      "subtests": [
+        {
+          "name": "Test that single unresolved custom element is accessible by Document.querySelectorAll(':unresolved')",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "Test that single registered custom element is not accessible by :unresolved",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "If there are more than one unresolved custom element then all of them accessible by Document.querySelectorAll(':unresolved')",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "Unresolved custom element, created via Document.createElement(), should be accessible by Document.querySelectorAll(':unresolved')",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "All unresolved custom element including nested ones are accessible by Document.querySelectorAll(':unresolved')",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "Unresolved custom element should be accessible by Document.querySelectorAll(':unresolved') in a loaded document",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test that Document.querySelectorAll(':unresolved') returns unresolved custom elements, extending HTML elements by IS attribute",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "Test Document.querySelectorAll(':unresolved') returns mix of custom elements of different types",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/unresolved-element-pseudoclass/unresolved-element-pseudoclass-matching-query-selector.html",
+      "subtests": [
+        {
+          "name": "Test that unresolved custom element is accessible by Document.querySelector(':unresolved')",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "Test that registered custom element are not accessible by :unresolved",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "If there are more than one unresolved custom element, all of them should be accessible by :unresolved pseudoclass",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "Unresolved custom element, created via Document.createElement(), should be accessible by Document.querySelector(':unresolved')",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "Unresolved custom element inside div element should be accessible by :unresolved pseudoclass",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "All unresolved custom element including nested ones should be accessible by Document.querySelector(':unresolved')",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        },
+        {
+          "name": "Document.querySelector(): Unresolved custom element should be accessible by :unresolved in loaded document",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        },
+        {
+          "name": "Test that Document.querySelector(':unresolved') returns custom element, extending HTML elements by IS attribute",
+          "status": "FAIL",
+          "message": "SYNTAX_ERR: DOM Exception 12"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/unresolved-elements-interface-html-element.html",
+      "subtests": [
+        {
+          "name": "Test interface of unresolved element, created via innerHTML property",
+          "status": "FAIL",
+          "message": "assert_equals: Unresolved custom element must be a HTML element expected \"[object HTMLElement]\" but got \"[object HTMLUnknownElement]\""
+        },
+        {
+          "name": "Test interface of unresolved element, created by Document.createElement",
+          "status": "FAIL",
+          "message": "assert_equals: Unresolved custom element must be a HTML element expected \"[object HTMLElement]\" but got \"[object HTMLUnknownElement]\""
+        },
+        {
+          "name": "Test interface of unresolved element, created by Document.createElementNS",
+          "status": "FAIL",
+          "message": "assert_equals: Unresolved custom element must be a HTML element expected \"[object HTMLElement]\" but got \"[object HTMLUnknownElement]\""
+        },
+        {
+          "name": "Test unresolved element interface in loaded HTML document",
+          "status": "FAIL",
+          "message": "Object #<HTMLIFrameElement> has no method 'remove'(stack: TypeError: Object #<HTMLIFrameElement> has no method 'remove'\n    at Object.<anonymous> (http://www.w3c-test.org/custom-elements/testcommon.js:240:24)\n    at Object.Test.step (http://www.w3c-test.org/resources/testharness.js:798:25)\n    at HTMLIFrameElement.<anonymous> (http://www.w3c-test.org/resources/testharness.js:827:35))"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/unresolved-elements-interface-html-unknown-element.html",
+      "subtests": [
+        {
+          "name": "Test interface of unresolved element with MathML namespace, created via innerHTML property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test interface of unresolved element with MathML namespace, created by Document.createElementNS",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test interface of unresolved element in loaded HTML document with embedded MathML elements",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/custom-elements/registering-custom-elements/unresolved-elements-interface-svg-element.html",
+      "subtests": [
+        {
+          "name": "Test interface of unresolved element with valid name, created by Document.createElementNS()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test interface of unresolved element with valid name, created via innerHTML property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test interface of unresolved element in loaded HTML document with embedded SVG elements",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    }
+  ]
+}

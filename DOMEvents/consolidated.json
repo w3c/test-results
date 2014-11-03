@@ -1,0 +1,805 @@
+{
+  "ua": [
+    "UC10"
+  ],
+  "results": {
+    "/DOMEvents/ClickFakeEvent.nondocument.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Click event on an element not in the document": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Click event can be dispatched to an element that is not in the document.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/event-phases-order.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Event phases order": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/DOM.event.flow.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Dispatch an event in a DOM tree using the DOM event flow.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/Determined.candidate.EventListeners.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Once determined, the current target's registered candidate event listeners cannot be changed; adding or removing listeners does not affect the current target's candidate event listeners.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/Event.bubbles.false.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: If the Event.bubbles attribute is set to false, the bubble phase shall be skipped.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/EventListener.dispatch.new.event.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Implementations of the DOM event model must be reentrant. Event listeners may perform actions that cause additional events to be dispatched. Such events are handled in a synchronous manner, the event propagation that causes the event listener to be triggered must resume only after the event dispatch of the new event is completed.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/EventListener.eventHandler.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: handleEvent - This method shall be called whenever an event occurs of the event type for which the EventListener interface was registered.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/EventObject.after.dispatchEvent.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: As the final step of the event dispatch, the implementation must reset the event object's default-action-prevention state. ": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/EventObject.multiple.dispatchEvent.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: An event object may be properly dispatched multiple times while also allowing to prevent the event objects propagation prior to the event dispatch.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/ProcessingInstruction.DOMCharacterDataModified.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: DOMCharacterDataModified event fires after ProcessingInstruction.data have been modified, but the node itself has not been inserted or deleted. The proximal event target of this event shall be the ProcessingInstruction node.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/Propagation.path.target.moved.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Once determined, the event propagation path must not be changed, even if an element in the propagation path is moved within the DOM.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/Propagation.path.target.removed.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Once determined, the event propagation path must not be changed, even if an element in the propagation path is removed from the DOM.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/addEventListener.optional.useCapture.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: useCapture is an optional parameter for EventTarget.addEventListener and EventTarget.removeEventListener. If it is not provided, both methods must behave as if useCapture were specified to be false.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/createEvent.NOT_SUPPORTED_ERR.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: createEvent - DOMException NOT_SUPPORTED_ERR raises if the implementation does not support the Event interface requested.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/dispatchEvent.click.checkbox.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Checkbox state is unchanged before the synthetic click event is dispatched": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Test Description: MouseEvent: Default action is performed when a synthetic click event is dispatched on a checkbox element": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/dispatchEvent.return.value.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: dispatchEvent() return value indicates whether any of the listeners which handled the event called Event.preventDefault(). If Event.preventDefault() was called the returned value must be false, else it must be true.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/domnodeinserted.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: DOMNodeInserted event fires when a node has been added as a child of another node.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/stopImmediatePropagation.effect.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: stopImmediatePropagation() prevents other event listeners from being triggered and, unlike Event.stopPropagation(), its effect must be immediate. Once it has been called, further calls to this method have no additional effect.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/stopPropagation.deferred.effect.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: stopPropagation() prevents other event listeners from being triggered but its effect must be deferred until all event listeners attached on the Event.currentTarget have been triggered.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/approved/stopPropagation.dispatchEvent.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: If Event.stopPropagation() has been called prior to the dispatch, all phases must be skipped.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/DOM.event.flow.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Dispatch an event in a DOM tree using the DOM event flow.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/Determined.candidate.EventListeners.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Once determined, the current target's registered candidate event listeners cannot be changed; adding or removing listeners does not affect the current target's candidate event listeners.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/Event.bubbles.false.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: If the Event.bubbles attribute is set to false, the bubble phase shall be skipped.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/EventListener.dispatch.new.event.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Implementations of the DOM event model must be reentrant. Event listeners may perform actions that cause additional events to be dispatched. Such events are handled in a synchronous manner, the event propagation that causes the event listener to be triggered must resume only after the event dispatch of the new event is completed.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/EventListener.eventHandler.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: handleEvent - This method shall be called whenever an event occurs of the event type for which the EventListener interface was registered.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/EventObject.after.dispatchEvent.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: As the final step of the event dispatch, the implementation must reset the event object's default-action-prevention state. ": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/EventObject.multiple.dispatchEvent.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: An event object may be properly dispatched multiple times while also allowing to prevent the event objects propagation prior to the event dispatch.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/ProcessingInstruction.DOMCharacterDataModified.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: DOMCharacterDataModified event fires after ProcessingInstruction.data have been modified, but the node itself has not been inserted or deleted. The proximal event target of this event shall be the ProcessingInstruction node.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/Propagation.path.target.moved.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Once determined, the event propagation path must not be changed, even if an element in the propagation path is moved within the DOM.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/Propagation.path.target.removed.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: Once determined, the event propagation path must not be changed, even if an element in the propagation path is removed from the DOM.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/addEventListener.optional.useCapture.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: useCapture is an optional parameter for EventTarget.addEventListener and EventTarget.removeEventListener. If it is not provided, both methods must behave as if useCapture were specified to be false.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/createEvent.NOT_SUPPORTED_ERR.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: createEvent - DOMException NOT_SUPPORTED_ERR raises if the implementation does not support the Event interface requested.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.DISPATCH_REQUEST_ERR.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: dispatchEvent() raises DISPATCH_REQUEST_ERR EventException if the Event object is already being dispatched.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.NOT_SUPPORTED_ERR.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: dispatchEvent - DOMException NOT_SUPPORTED_ERR raises if the Event object has not been created using DocumentEvent.createEvent().": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.UNSPECIFIED_EVENT_TYPE_ERR.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: dispatchEvent - EventException UNSPECIFIED_EVENT_TYPE_ERR raises if the Event.type was not specified by initializing the event before dispatchEvent was called.": {
+          "byUA": {
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.click.checkbox.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Checkbox state is unchanged before the synthetic click event is dispatched": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Test Description: MouseEvent: Default action is performed when a synthetic click event is dispatched on a checkbox element": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.return.value.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: dispatchEvent() return value indicates whether any of the listeners which handled the event called Event.preventDefault(). If Event.preventDefault() was called the returned value must be false, else it must be true.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/domnodeinserted.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: DOMNodeInserted event fires when a node has been added as a child of another node.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/stopImmediatePropagation.effect.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: stopImmediatePropagation() prevents other event listeners from being triggered and, unlike Event.stopPropagation(), its effect must be immediate. Once it has been called, further calls to this method have no additional effect.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/stopPropagation.deferred.effect.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: stopPropagation() prevents other event listeners from being triggered but its effect must be deferred until all event listeners attached on the Event.currentTarget have been triggered.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/tests/submissions/Microsoft/converted/stopPropagation.dispatchEvent.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Test Description: If Event.stopPropagation() has been called prior to the dispatch, all phases must be skipped.": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/throwing-in-listener-and-window-error-event.html": {
+      "byUA": {
+        "UC10": "ERROR"
+      },
+      "totals": {
+        "ERROR": 1
+      },
+      "subtests": {
+        "Throwing in event listener generates an error event on the window object": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/DOMEvents/throwing-in-listener-when-all-have-not-run-yet.html": {
+      "byUA": {
+        "UC10": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "Throwing in event listener": {
+          "byUA": {
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    }
+  }
+}

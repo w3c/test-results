@@ -1,0 +1,535 @@
+{
+  "results": [
+    {
+      "test": "/DOMEvents/ClickFakeEvent.nondocument.html",
+      "subtests": [
+        {
+          "name": "Click event on an element not in the document",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Click event can be dispatched to an element that is not in the document.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/event-phases-order.html",
+      "subtests": [
+        {
+          "name": "Event phases order",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/DOM.event.flow.html",
+      "subtests": [
+        {
+          "name": "Test Description: Dispatch an event in a DOM tree using the DOM event flow.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/Determined.candidate.EventListeners.html",
+      "subtests": [
+        {
+          "name": "Test Description: Once determined, the current target's registered candidate event listeners cannot be changed; adding or removing listeners does not affect the current target's candidate event listeners.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/Event.bubbles.false.html",
+      "subtests": [
+        {
+          "name": "Test Description: If the Event.bubbles attribute is set to false, the bubble phase shall be skipped.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/EventListener.dispatch.new.event.html",
+      "subtests": [
+        {
+          "name": "Test Description: Implementations of the DOM event model must be reentrant. Event listeners may perform actions that cause additional events to be dispatched. Such events are handled in a synchronous manner, the event propagation that causes the event listener to be triggered must resume only after the event dispatch of the new event is completed.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/EventListener.eventHandler.html",
+      "subtests": [
+        {
+          "name": "Test Description: handleEvent - This method shall be called whenever an event occurs of the event type for which the EventListener interface was registered.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/EventObject.after.dispatchEvent.html",
+      "subtests": [
+        {
+          "name": "Test Description: As the final step of the event dispatch, the implementation must reset the event object's default-action-prevention state. ",
+          "status": "FAIL",
+          "message": "assert_array_equals: property 2, expected false but got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/EventObject.multiple.dispatchEvent.html",
+      "subtests": [
+        {
+          "name": "Test Description: An event object may be properly dispatched multiple times while also allowing to prevent the event objects propagation prior to the event dispatch.",
+          "status": "FAIL",
+          "message": "assert_array_equals: lengths differ, expected 5 got 2"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/ProcessingInstruction.DOMCharacterDataModified.html",
+      "subtests": [
+        {
+          "name": "Test Description: DOMCharacterDataModified event fires after ProcessingInstruction.data have been modified, but the node itself has not been inserted or deleted. The proximal event target of this event shall be the ProcessingInstruction node.",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/Propagation.path.target.moved.html",
+      "subtests": [
+        {
+          "name": "Test Description: Once determined, the event propagation path must not be changed, even if an element in the propagation path is moved within the DOM.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/Propagation.path.target.removed.html",
+      "subtests": [
+        {
+          "name": "Test Description: Once determined, the event propagation path must not be changed, even if an element in the propagation path is removed from the DOM.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/addEventListener.optional.useCapture.html",
+      "subtests": [
+        {
+          "name": "Test Description: useCapture is an optional parameter for EventTarget.addEventListener and EventTarget.removeEventListener. If it is not provided, both methods must behave as if useCapture were specified to be false.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/createEvent.NOT_SUPPORTED_ERR.html",
+      "subtests": [
+        {
+          "name": "Test Description: createEvent - DOMException NOT_SUPPORTED_ERR raises if the implementation does not support the Event interface requested.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/dispatchEvent.click.checkbox.html",
+      "subtests": [
+        {
+          "name": "Checkbox state is unchanged before the synthetic click event is dispatched",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test Description: MouseEvent: Default action is performed when a synthetic click event is dispatched on a checkbox element",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/dispatchEvent.return.value.html",
+      "subtests": [
+        {
+          "name": "Test Description: dispatchEvent() return value indicates whether any of the listeners which handled the event called Event.preventDefault(). If Event.preventDefault() was called the returned value must be false, else it must be true.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/domnodeinserted.html",
+      "subtests": [
+        {
+          "name": "Test Description: DOMNodeInserted event fires when a node has been added as a child of another node.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/stopImmediatePropagation.effect.html",
+      "subtests": [
+        {
+          "name": "Test Description: stopImmediatePropagation() prevents other event listeners from being triggered and, unlike Event.stopPropagation(), its effect must be immediate. Once it has been called, further calls to this method have no additional effect.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/stopPropagation.deferred.effect.html",
+      "subtests": [
+        {
+          "name": "Test Description: stopPropagation() prevents other event listeners from being triggered but its effect must be deferred until all event listeners attached on the Event.currentTarget have been triggered.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/approved/stopPropagation.dispatchEvent.html",
+      "subtests": [
+        {
+          "name": "Test Description: If Event.stopPropagation() has been called prior to the dispatch, all phases must be skipped.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/DOM.event.flow.html",
+      "subtests": [
+        {
+          "name": "Test Description: Dispatch an event in a DOM tree using the DOM event flow.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/Determined.candidate.EventListeners.html",
+      "subtests": [
+        {
+          "name": "Test Description: Once determined, the current target's registered candidate event listeners cannot be changed; adding or removing listeners does not affect the current target's candidate event listeners.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/Event.bubbles.false.html",
+      "subtests": [
+        {
+          "name": "Test Description: If the Event.bubbles attribute is set to false, the bubble phase shall be skipped.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/EventListener.dispatch.new.event.html",
+      "subtests": [
+        {
+          "name": "Test Description: Implementations of the DOM event model must be reentrant. Event listeners may perform actions that cause additional events to be dispatched. Such events are handled in a synchronous manner, the event propagation that causes the event listener to be triggered must resume only after the event dispatch of the new event is completed.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/EventListener.eventHandler.html",
+      "subtests": [
+        {
+          "name": "Test Description: handleEvent - This method shall be called whenever an event occurs of the event type for which the EventListener interface was registered.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/EventObject.after.dispatchEvent.html",
+      "subtests": [
+        {
+          "name": "Test Description: As the final step of the event dispatch, the implementation must reset the event object's default-action-prevention state. ",
+          "status": "FAIL",
+          "message": "assert_array_equals: property 2, expected false but got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/EventObject.multiple.dispatchEvent.html",
+      "subtests": [
+        {
+          "name": "Test Description: An event object may be properly dispatched multiple times while also allowing to prevent the event objects propagation prior to the event dispatch.",
+          "status": "FAIL",
+          "message": "assert_array_equals: lengths differ, expected 5 got 2"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/ProcessingInstruction.DOMCharacterDataModified.html",
+      "subtests": [
+        {
+          "name": "Test Description: DOMCharacterDataModified event fires after ProcessingInstruction.data have been modified, but the node itself has not been inserted or deleted. The proximal event target of this event shall be the ProcessingInstruction node.",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/Propagation.path.target.moved.html",
+      "subtests": [
+        {
+          "name": "Test Description: Once determined, the event propagation path must not be changed, even if an element in the propagation path is moved within the DOM.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/Propagation.path.target.removed.html",
+      "subtests": [
+        {
+          "name": "Test Description: Once determined, the event propagation path must not be changed, even if an element in the propagation path is removed from the DOM.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/addEventListener.optional.useCapture.html",
+      "subtests": [
+        {
+          "name": "Test Description: useCapture is an optional parameter for EventTarget.addEventListener and EventTarget.removeEventListener. If it is not provided, both methods must behave as if useCapture were specified to be false.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/createEvent.NOT_SUPPORTED_ERR.html",
+      "subtests": [
+        {
+          "name": "Test Description: createEvent - DOMException NOT_SUPPORTED_ERR raises if the implementation does not support the Event interface requested.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.DISPATCH_REQUEST_ERR.html",
+      "subtests": [
+        {
+          "name": "Test Description: dispatchEvent() raises DISPATCH_REQUEST_ERR EventException if the Event object is already being dispatched.",
+          "status": "FAIL",
+          "message": "Test bug: unrecognized DOMException code \"DISPATCH_REQUEST_ERR\" passed to assert_throws()"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.NOT_SUPPORTED_ERR.html",
+      "subtests": [
+        {
+          "name": "Test Description: dispatchEvent - DOMException NOT_SUPPORTED_ERR raises if the Event object has not been created using DocumentEvent.createEvent().",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function ()\n        {\n            TARGET.dispatchEvent(Ev...\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.UNSPECIFIED_EVENT_TYPE_ERR.html",
+      "subtests": [
+        {
+          "name": "Test Description: dispatchEvent - EventException UNSPECIFIED_EVENT_TYPE_ERR raises if the Event.type was not specified by initializing the event before dispatchEvent was called.",
+          "status": "FAIL",
+          "message": "Test bug: unrecognized DOMException code \"UNSPECIFIED_EVENT_TYPE_ERR\" passed to assert_throws()"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.click.checkbox.html",
+      "subtests": [
+        {
+          "name": "Checkbox state is unchanged before the synthetic click event is dispatched",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test Description: MouseEvent: Default action is performed when a synthetic click event is dispatched on a checkbox element",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/dispatchEvent.return.value.html",
+      "subtests": [
+        {
+          "name": "Test Description: dispatchEvent() return value indicates whether any of the listeners which handled the event called Event.preventDefault(). If Event.preventDefault() was called the returned value must be false, else it must be true.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/domnodeinserted.html",
+      "subtests": [
+        {
+          "name": "Test Description: DOMNodeInserted event fires when a node has been added as a child of another node.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/stopImmediatePropagation.effect.html",
+      "subtests": [
+        {
+          "name": "Test Description: stopImmediatePropagation() prevents other event listeners from being triggered and, unlike Event.stopPropagation(), its effect must be immediate. Once it has been called, further calls to this method have no additional effect.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/stopPropagation.deferred.effect.html",
+      "subtests": [
+        {
+          "name": "Test Description: stopPropagation() prevents other event listeners from being triggered but its effect must be deferred until all event listeners attached on the Event.currentTarget have been triggered.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/tests/submissions/Microsoft/converted/stopPropagation.dispatchEvent.html",
+      "subtests": [
+        {
+          "name": "Test Description: If Event.stopPropagation() has been called prior to the dispatch, all phases must be skipped.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/DOMEvents/throwing-in-listener-and-window-error-event.html",
+      "subtests": [
+        {
+          "name": "Throwing in event listener generates an error event on the window object",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught Error: Error from listener"
+    },
+    {
+      "test": "/DOMEvents/throwing-in-listener-when-all-have-not-run-yet.html",
+      "subtests": [
+        {
+          "name": "Throwing in event listener",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

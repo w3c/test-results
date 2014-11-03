@@ -1,0 +1,214 @@
+{
+  "results": [
+    {
+      "test": "/page-visibility/idlharness.html",
+      "subtests": [
+        {
+          "name": "Document interface: attribute hidden",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"hidden\" expected true got false"
+        },
+        {
+          "name": "Document interface: attribute visibilityState",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"visibilityState\" expected true got false"
+        },
+        {
+          "name": "Document must be primary interface of window.document",
+          "status": "FAIL",
+          "message": "assert_equals: window.document's prototype is not Document.prototype expected object \"[object Object]\" but got object \"[object Object]\""
+        },
+        {
+          "name": "Stringification of window.document",
+          "status": "FAIL",
+          "message": "assert_equals: class string of window.document expected \"[object Document]\" but got \"[object HTMLDocument]\""
+        },
+        {
+          "name": "Document interface: window.document must inherit property \"hidden\" with the proper type (0)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"hidden\" not found in prototype chain"
+        },
+        {
+          "name": "Document interface: window.document must inherit property \"visibilityState\" with the proper type (1)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"visibilityState\" not found in prototype chain"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/test_attributes_exist.html",
+      "subtests": [
+        {
+          "name": "document.hidden is defined and not null.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is defined and not null. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is defined and not null.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is defined and not null. expected true got false"
+        },
+        {
+          "name": "document.hidden is defined.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is defined. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is defined.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is defined. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/test_child_document.html",
+      "subtests": [
+        {
+          "name": "document.hidden is defined and not null.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is defined and not null. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is defined and not null.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is defined and not null. expected true got false"
+        },
+        {
+          "name": "Page Visibility API Child Document Test",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is defined for frame with no style attribute.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is defined for frame with no style attribute. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is defined for frame with no style attribute.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is defined for frame with no style attribute. expected true got false"
+        },
+        {
+          "name": "document.visibilityState for frame with no style attribute == visible",
+          "status": "FAIL",
+          "message": "assert_equals: document.visibilityState for frame with no style attribute == visible expected (string) \"visible\" but got (undefined) undefined"
+        },
+        {
+          "name": "Page Visibility API Child Document Test 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is defined for frame with 'display:none' style.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is defined for frame with 'display:none' style. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is defined for frame with 'display:none' style.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is defined for frame with 'display:none' style. expected true got false"
+        },
+        {
+          "name": "document.visibilityState for frame with 'display:none' style == visible",
+          "status": "FAIL",
+          "message": "assert_equals: document.visibilityState for frame with 'display:none' style == visible expected (string) \"visible\" but got (undefined) undefined"
+        },
+        {
+          "name": "Page Visibility API Child Document Test 2",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is defined for frame with 'visibility:hidden' style.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is defined for frame with 'visibility:hidden' style. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is defined for frame with 'visibility:hidden' style.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is defined for frame with 'visibility:hidden' style. expected true got false"
+        },
+        {
+          "name": "document.visibilityState for frame with 'visibility:hidden' style == visible",
+          "status": "FAIL",
+          "message": "assert_equals: document.visibilityState for frame with 'visibility:hidden' style == visible expected (string) \"visible\" but got (undefined) undefined"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Uncaught ReferenceError: getExtractedNovelData is not defined"
+    },
+    {
+      "test": "/page-visibility/test_default_view.html",
+      "subtests": [
+        {
+          "name": "document.hidden is defined and not null.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is defined and not null. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is defined and not null.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is defined and not null. expected true got false"
+        },
+        {
+          "name": "windowless subdocument generated for test has a null default view",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is definedwindowless subdocument.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is definedwindowless subdocument. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is definedwindowless subdocument.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is definedwindowless subdocument. expected true got false"
+        },
+        {
+          "name": "hidden == true for windowless subdocuments with a null default view",
+          "status": "FAIL",
+          "message": "assert_true: hidden == true for windowless subdocuments with a null default view expected true got undefined"
+        },
+        {
+          "name": "visibilityState == hidden for windowless subdocuments with a null default view",
+          "status": "FAIL",
+          "message": "assert_equals: visibilityState == hidden for windowless subdocuments with a null default view expected (string) \"hidden\" but got (undefined) undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/test_read_only.html",
+      "subtests": [
+        {
+          "name": "document.hidden is defined and not null.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is defined and not null. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is defined and not null.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is defined and not null. expected true got false"
+        },
+        {
+          "name": "document.hidden is read only.",
+          "status": "FAIL",
+          "message": "assert_true: document.hidden is read only. expected true got false"
+        },
+        {
+          "name": "document.visibilityState is read only.",
+          "status": "FAIL",
+          "message": "assert_true: document.visibilityState is read only. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
