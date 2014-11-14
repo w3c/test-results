@@ -1,0 +1,913 @@
+{
+  "results": [
+    {
+      "test": "/media-source/SourceBuffer-abort-readyState.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort() (video/webm; codecs=\"vorbis,vp8\") : If the readyState attribute of the parent media source is not in the \"open\" state then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "SourceBuffer#abort() (video/mp4) : If the readyState attribute of the parent media source is not in the \"open\" state then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/SourceBuffer-abort-removed.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort (video/webm; codecs=\"vorbis,vp8\") : if this object has been removed from the sourceBuffers attribute of the parent media source, then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer#abort (video/mp4) : if this object has been removed from the sourceBuffers attribute of the parent media source, then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/SourceBuffer-abort-updating.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort() (video/webm; codecs=\"vorbis,vp8\") : Check the algorithm when the updating attribute is true.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer#abort() (video/mp4) : Check the algorithm when the updating attribute is true.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code"
+        }
+      ],
+      "status": "ERROR",
+      "message": "NS_ERROR_FAILURE: "
+    },
+    {
+      "test": "/media-source/SourceBuffer-abort.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort() (video/webm; codecs=\"vorbis,vp8\"): Check the values of appendWindowStart and appendWindowEnd.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer#abort() (video/mp4): Check the values of appendWindowStart and appendWindowEnd.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/URL-createObjectURL-null.html",
+      "subtests": [
+        {
+          "name": "URL.createObjectURL(null)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/URL-createObjectURL-revoke.html",
+      "subtests": [
+        {
+          "name": "Check revoking behavior of URL.revokeObjectURL(url).",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/URL-createObjectURL.html",
+      "subtests": [
+        {
+          "name": "URL.createObjectURL(mediaSource) should return a unique Blob URI.",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/interfaces.html",
+      "subtests": [],
+      "status": "ERROR",
+      "message": "NS_ERROR_FAILURE: "
+    },
+    {
+      "test": "/media-source/mediasource-addsourcebuffer.html",
+      "subtests": [
+        {
+          "name": "Test addSourceBuffer() with empty type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with unsupported type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with Vorbis and VP8",
+          "status": "FAIL",
+          "message": "assert_equals: SourceBuffer is not in mediaSource.activeSourceBuffers expected 0 but got 1"
+        },
+        {
+          "name": "Test addSourceBuffer() with Vorbis and VP8 in separate SourceBuffers",
+          "status": "FAIL",
+          "message": "assert_equals: SourceBufferA is not in mediaSource.activeSourceBuffers expected 0 but got 2"
+        },
+        {
+          "name": "Test addSourceBuffer() with AAC and H.264",
+          "status": "FAIL",
+          "message": "assert_true: video/mp4;codecs=\"avc1.4D4001,mp4a.40.2\" is supported expected true got false"
+        },
+        {
+          "name": "Test addSourceBuffer() with AAC and H.264 in separate SourceBuffers",
+          "status": "FAIL",
+          "message": "assert_true: video/mp4;codecs=\"avc1.4D4001\" is supported expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-append-buffer.html",
+      "subtests": [
+        {
+          "name": "Test SourceBuffer.appendBuffer() event dispatching.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:19:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test SourceBuffer.appendBuffer() call during a pending appendBuffer().",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:37:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test SourceBuffer.abort() call during a pending appendBuffer().",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:61:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test SourceBuffer.appendBuffer() triggering an 'ended' to 'open' transition.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:83:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test MediaSource.removeSourceBuffer() call during a pending appendBuffer().",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:124:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test set MediaSource.duration during a pending appendBuffer() for one of its SourceBuffers.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:151:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test MediaSource.endOfStream() during a pending appendBuffer() for one of its SourceBuffers.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:173:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test set SourceBuffer.timestampOffset during a pending appendBuffer().",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:197:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test appending an empty ArrayBufferView.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:219:0\nwindow.mediasource_test/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:390:16\nonSourceOpen@http://www.web-platform.test:8000/media-source/mediasource-util.js:169:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test appending an empty ArrayBuffer.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-append-buffer.html:238:0\nwindow.mediasource_test/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:390:16\nonSourceOpen@http://www.web-platform.test:8000/media-source/mediasource-util.js:169:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-appendwindow.html",
+      "subtests": [
+        {
+          "name": "Test correctly reset appendWindowStart and appendWindowEnd values",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set wrong values to appendWindowStart and appendWindowEnd.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appendwindow throw error when mediasource object is not associated with a sourebuffer.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set appendWindowStart and appendWindowEnd when source buffer updating.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-appendwindow.html:78:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test appendWindowStart and appendWindowEnd value after a sourceBuffer.abort().",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-appendwindow.html:99:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-buffered.html",
+      "subtests": [
+        {
+          "name": "Demuxed content with different lengths",
+          "status": "FAIL",
+          "message": "(stack: appendData@http://www.web-platform.test:8000/media-source/mediasource-buffered.html:56:16\n@http://www.web-platform.test:8000/media-source/mediasource-buffered.html:69:16\nmediaSourceDemuxedTest/</</<@http://www.web-platform.test:8000/media-source/mediasource-buffered.html:43:28\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Muxed tracks with different lengths",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-buffered.html:96:20\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Demuxed content with an empty buffered range on one SourceBuffer",
+          "status": "FAIL",
+          "message": "(stack: appendData@http://www.web-platform.test:8000/media-source/mediasource-buffered.html:56:16\n@http://www.web-platform.test:8000/media-source/mediasource-buffered.html:126:0\nmediaSourceDemuxedTest/</</<@http://www.web-platform.test:8000/media-source/mediasource-buffered.html:43:28\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Muxed content empty buffered ranges.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-buffered.html:153:0\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-closed.html",
+      "subtests": [
+        {
+          "name": "Test attribute values on a closed MediaSource object.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removeSourceBuffer() while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test endOfStream() while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting duration while closed.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-a-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 audio-only bitrate changes.",
+          "status": "FAIL",
+          "message": "assert_true: audio/mp4;codecs=\"mp4a.40.2\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-av-audio-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 audio bitrate changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "assert_true: video/mp4;codecs=\"avc1.4D4001,mp4a.40.2\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-av-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 frame size changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "assert_true: video/mp4;codecs=\"avc1.4D4001,mp4a.40.2\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-av-video-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video bitrate changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "assert_true: video/mp4;codecs=\"avc1.4D4001,mp4a.40.2\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-v-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video-only bitrate changes.",
+          "status": "FAIL",
+          "message": "assert_true: video/mp4;codecs=\"avc1.4D4001\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-v-framerate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video-only frame rate changes.",
+          "status": "FAIL",
+          "message": "assert_true: video/mp4;codecs=\"avc1.4D4001\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-v-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video-only frame size changes.",
+          "status": "FAIL",
+          "message": "assert_true: video/mp4;codecs=\"avc1.4D4001\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-a-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm audio-only bitrate changes.",
+          "status": "FAIL",
+          "message": "(stack: appendBuffer@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:15:4\nmediaSourceConfigChangeTest/</</<@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:37:16\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-av-audio-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm audio bitrate changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "(stack: appendBuffer@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:15:4\nmediaSourceConfigChangeTest/</</<@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:37:16\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-av-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests webm frame size changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "(stack: appendBuffer@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:15:4\nmediaSourceConfigChangeTest/</</<@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:37:16\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-av-video-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm video bitrate changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "(stack: appendBuffer@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:15:4\nmediaSourceConfigChangeTest/</</<@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:37:16\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-v-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm video-only bitrate changes.",
+          "status": "FAIL",
+          "message": "(stack: appendBuffer@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:15:4\nmediaSourceConfigChangeTest/</</<@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:37:16\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-v-framerate.html",
+      "subtests": [
+        {
+          "name": "Tests webm video-only frame rate changes.",
+          "status": "FAIL",
+          "message": "(stack: appendBuffer@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:15:4\nmediaSourceConfigChangeTest/</</<@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:37:16\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-v-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests webm video-only frame size changes.",
+          "status": "FAIL",
+          "message": "(stack: appendBuffer@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:15:4\nmediaSourceConfigChangeTest/</</<@http://www.web-platform.test:8000/media-source/mediasource-config-changes.js:37:16\nMediaSourceUtil.fetchManifestAndData/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:201:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-duration.html",
+      "subtests": [
+        {
+          "name": "Test seek starts on duration truncation below currentTime",
+          "status": "FAIL",
+          "message": "(stack: mediasource_truncated_duration_seek_test/<@http://www.web-platform.test:8000/media-source/mediasource-duration.html:27:18\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test appendBuffer completes previous seek to truncated duration",
+          "status": "FAIL",
+          "message": "(stack: mediasource_truncated_duration_seek_test/<@http://www.web-platform.test:8000/media-source/mediasource-duration.html:27:18\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test endOfStream completes previous seek to truncated duration",
+          "status": "FAIL",
+          "message": "(stack: mediasource_truncated_duration_seek_test/<@http://www.web-platform.test:8000/media-source/mediasource-duration.html:27:18\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test setting same duration multiple times does not fire duplicate durationchange",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-duration.html:163:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-endofstream-invaliderror.html",
+      "subtests": [
+        {
+          "name": "Test MediaSource.endOfStream() with invalid non-empty error string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.endOfStream() with invalid empty error string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.endOfStream() with invalid null error parameter.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-getvideoplaybackquality.html",
+      "subtests": [
+        {
+          "name": "Test HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-getvideoplaybackquality.html:41:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-is-type-supported.html",
+      "subtests": [
+        {
+          "name": "Test invalid MIME format \"video\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\"\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\",\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between major type and codec ID \"audio/webm;codecs=\"vp8\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid mismatch between major type and codec ID \"audio/mp4;codecs=\"avc1.4d001e\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"audio/mp4;codecs=\"vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"audio/webm;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vp8\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/webm;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/webm;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a.40\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a.40.\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a.67.3\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vp8\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vp8,vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vorbis, vp8\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"audio/webm;codecs=\"vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.4d001e\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.42001e\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid MP4 type \"audio/mp4;codecs=\"mp4a.40.2\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid MP4 type \"audio/mp4;codecs=\"mp4a.40.5\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid MP4 type \"audio/mp4;codecs=\"mp4a.67\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"mp4a.40.2\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.4d001e,mp4a.40.2\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"mp4a.40.2 , avc1.4d001e \"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.4d001e,mp4a.40.5\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-multiple-attach.html",
+      "subtests": [
+        {
+          "name": "Test exactly one succeeds when two MediaElements attach to same MediaSource",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test that MediaSource can reattach if closed first",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-play-then-seek-back.html",
+      "subtests": [
+        {
+          "name": "Test playing then seeking back.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-play-then-seek-back.html:20:16\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-play.html",
+      "subtests": [
+        {
+          "name": "Test normal playback case with MediaSource API",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-play.html:21:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-redundant-seek.html",
+      "subtests": [
+        {
+          "name": "Test redundant fully prebuffered seek",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-redundant-seek.html:21:16\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-remove.html",
+      "subtests": [
+        {
+          "name": "Test remove with an negative start.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a start beyond the duration.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a start larger than the end.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove after SourceBuffer removed from mediaSource.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove while update pending.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test aborting a remove operation.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove transitioning readyState from 'ended' to 'open'.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-remove.html:124:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test removing all appended data.",
+          "status": "FAIL",
+          "message": "(stack: removeAppendedDataTests/<@http://www.web-platform.test:8000/media-source/mediasource-remove.html:155:18\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test removing beginning of appended data.",
+          "status": "FAIL",
+          "message": "(stack: removeAppendedDataTests/<@http://www.web-platform.test:8000/media-source/mediasource-remove.html:155:18\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test removing the middle of appended data.",
+          "status": "FAIL",
+          "message": "(stack: removeAppendedDataTests/<@http://www.web-platform.test:8000/media-source/mediasource-remove.html:155:18\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test removing the end of appended data.",
+          "status": "FAIL",
+          "message": "(stack: removeAppendedDataTests/<@http://www.web-platform.test:8000/media-source/mediasource-remove.html:155:18\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-seek-beyond-duration.html",
+      "subtests": [
+        {
+          "name": "Test seeking beyond updated media duration.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-seek-beyond-duration.html:50:16\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test seeking beyond media duration.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-seek-beyond-duration.html:82:16\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-seek-during-pending-seek.html",
+      "subtests": [
+        {
+          "name": "Test seeking to a new location before transitioning beyond HAVE_METADATA.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-seek-during-pending-seek.html:24:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test seeking to a new location during a pending seek.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-seek-during-pending-seek.html:82:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebuffer-mode.html",
+      "subtests": [
+        {
+          "name": "Test initial value of SourceBuffer.mode is \"segments\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting a removed SourceBuffer's mode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode while still updating",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-sourcebuffer-mode.html:46:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test setting SourceBuffer.mode triggers parent MediaSource 'ended' to 'open' transition.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-sourcebuffer-mode.html:57:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        },
+        {
+          "name": "Test setting SourceBuffer.mode and SourceBuffer.timestampOffset while parsing media segment.",
+          "status": "FAIL",
+          "message": "(stack: @http://www.web-platform.test:8000/media-source/mediasource-sourcebuffer-mode.html:95:14\nwindow.mediasource_testafterdataloaded/</<@http://www.web-platform.test:8000/media-source/mediasource-util.js:411:16\nloadData_/request.onload<@http://www.web-platform.test:8000/media-source/mediasource-util.js:150:12\nTest.prototype.step@http://www.web-platform.test:8000/resources/testharness.js:1210:19\nTest.prototype.step_func/<@http://www.web-platform.test:8000/resources/testharness.js:1239:0\n)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebufferlist.html",
+      "subtests": [
+        {
+          "name": "Test SourceBufferList event dispatching.",
+          "status": "FAIL",
+          "message": "assert_equals: activeSourceBuffers length expected 0 but got 2"
+        },
+        {
+          "name": "Test that only 1 removesourcebuffer event fires on each SourceBufferList when the MediaSource closes.",
+          "status": "FAIL",
+          "message": "assert_equals: activeSourceBuffers length expected 0 but got 2"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
