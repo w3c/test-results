@@ -2,20 +2,49 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Media Source: Complete Failures</title>
+    <title>Complete Failures</title>
     <link rel='stylesheet' href='bootstrap.min.css'>
     <link rel='stylesheet' href='analysis.css'>
   </head>
   <body>
     <div class='container'>
       <header>
-        <h1>Media Source: Complete Failures</h1>
+        <h1>Complete Failures</h1>
       </header>
-      <p><strong>Completely failed files</strong>: 0; <strong>Completely failed subtests</strong>: 0; <strong>Failure level</strong>: 0/0 (NaN%)</p>
+      <p><strong>Completely failed files</strong>: 34; <strong>Completely failed subtests</strong>: 15; <strong>Failure level</strong>: 15/126 (11.90%)</p>
       <h3>Test Files</h3>
-<ol class='toc'></ol>
+<ol class='toc'><li><a href='#test-file-0'>/media-source/SourceBuffer-abort-readyState.html</a> <small>(1/2, 50.00%, 0.79% of total)</small></li>
+<li><a href='#test-file-1'>/media-source/SourceBuffer-abort-updating.html</a> <small>(1/2, 50.00%, 0.79% of total)</small></li>
+<li><a href='#test-file-2'>/media-source/mediasource-duration.html</a> <small>(4/4, 100.00%, 3.17% of total)</small></li>
+<li><a href='#test-file-3'>/media-source/mediasource-getvideoplaybackquality.html</a> <small>(1/1, 100.00%, 0.79% of total)</small></li>
+<li><a href='#test-file-4'>/media-source/mediasource-remove.html</a> <small>(4/11, 36.36%, 3.17% of total)</small></li>
+<li><a href='#test-file-5'>/media-source/mediasource-seek-during-pending-seek.html</a> <small>(1/2, 50.00%, 0.79% of total)</small></li>
+<li><a href='#test-file-6'>/media-source/mediasource-sourcebuffer-mode.html</a> <small>(3/6, 50.00%, 2.38% of total)</small></li>
+</ol>
       <table class='table persist-area'>
-        <thead><tr class='persist-header'><th>Test</th><th>UC10</th></tr></thead>
+        <thead><tr class='persist-header'><th>Test</th><th>Ch41</th><th>Fx36</th><th>IE11</th><th>UC10</th></tr></thead>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/media-source/SourceBuffer-abort-readyState.html' target='_blank'>/media-source/SourceBuffer-abort-readyState.html</a> <small>(1/2, 50.00%, 0.79% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='ERROR'>ERROR</td></tr>
+<tr class='subtest'><td>SourceBuffer#abort() (video/mp4) : If the readyState attribute of the parent media source is not in the "open" state then throw an INVALID_STATE_ERR exception and abort these steps.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='TIMEOUT'>TIMEOUT</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/media-source/SourceBuffer-abort-updating.html' target='_blank'>/media-source/SourceBuffer-abort-updating.html</a> <small>(1/2, 50.00%, 0.79% of total)</small></td><td class='OK'>OK</td><td class='ERROR'>ERROR</td><td class='OK'>OK</td><td class='ERROR'>ERROR</td></tr>
+<tr class='subtest'><td>SourceBuffer#abort() (video/mp4) : Check the algorithm when the updating attribute is true.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/media-source/mediasource-duration.html' target='_blank'>/media-source/mediasource-duration.html</a> <small>(4/4, 100.00%, 3.17% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='undefined'>-</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Test seek starts on duration truncation below currentTime</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test appendBuffer completes previous seek to truncated duration</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test endOfStream completes previous seek to truncated duration</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test setting same duration multiple times does not fire duplicate durationchange</td><td class='TIMEOUT'>TIMEOUT</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/media-source/mediasource-getvideoplaybackquality.html' target='_blank'>/media-source/mediasource-getvideoplaybackquality.html</a> <small>(1/1, 100.00%, 0.79% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='undefined'>-</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Test HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/media-source/mediasource-remove.html' target='_blank'>/media-source/mediasource-remove.html</a> <small>(4/11, 36.36%, 3.17% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='undefined'>-</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Test removing all appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test removing beginning of appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test removing the middle of appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test removing the end of appended data.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-5'><td><a href='http://www.w3c-test.org/media-source/mediasource-seek-during-pending-seek.html' target='_blank'>/media-source/mediasource-seek-during-pending-seek.html</a> <small>(1/2, 50.00%, 0.79% of total)</small></td><td class='ERROR'>ERROR</td><td class='OK'>OK</td><td class='undefined'>-</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Test seeking to a new location during a pending seek.</td><td class='TIMEOUT'>TIMEOUT</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-6'><td><a href='http://www.w3c-test.org/media-source/mediasource-sourcebuffer-mode.html' target='_blank'>/media-source/mediasource-sourcebuffer-mode.html</a> <small>(3/6, 50.00%, 2.38% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='undefined'>-</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Test setting SourceBuffer.mode while still updating</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test setting SourceBuffer.mode triggers parent MediaSource 'ended' to 'open' transition.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Test setting SourceBuffer.mode and SourceBuffer.timestampOffset while parsing media segment.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td></tr>
 
       </table>
     </div>
