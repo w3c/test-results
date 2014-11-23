@@ -1,645 +1,977 @@
 {
   "ua": [
+    "Ch39",
+    "FF34",
+    "IE11",
+    "Op12",
     "UC10"
   ],
   "results": {
     "/webmessaging/Channel_MessagePort_initial_disabled.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "ERROR"
       },
       "totals": {
-        "ERROR": 1
+        "OK": 3,
+        "ERROR": 2
       },
       "subtests": {
         "Test Description: A port message queue can be enabled or disabled, and is initially disabled.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "NOTRUN": 1
           }
         }
       }
     },
     "/webmessaging/Channel_MessagePort_onmessage_start.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: The first time a MessagePort object's onmessage IDL attribute is set, the port's port message queue must be enabled, as if the start() method had been called.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "NOTRUN": 1
           }
         }
       }
     },
     "/webmessaging/Channel_postMessage_DataCloneErr.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Throw a DataCloneError when a host object (e.g. a DOM node) is used with postMessage.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/Channel_postMessage_clone_port.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: Test Description: When the user agent is to clone a port original port, with the clone being owned by owner, it must return a new MessagePort object": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "NOTRUN": 1
           }
         },
         "Data sent through remote port is received by the new cloned port": {
           "byUA": {
+            "Ch39": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         }
       }
     },
     "/webmessaging/Channel_postMessage_clone_port_error.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: Throw a DataCloneError if transfer array in postMessage contains source port.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/Channel_postMessage_event_properties.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: The postMessage() method - Create an event that uses the MessageEvent interface, with the name message, which does not bubble and is not cancelable.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "NOTRUN": 1
           }
         }
       }
     },
     "/webmessaging/Channel_postMessage_ports_readonly_array.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: The postMessage() method - Make new ports into a read only array.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "FAIL",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 3,
+            "NOTRUN": 1,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/Channel_postMessage_target_source.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: The postMessage() method - Let target port be the port with which source port is entangled, if any.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "NOTRUN": 1
           }
         }
       }
     },
     "/webmessaging/MessageEvent_properties.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: Create an event that uses the MessageEvent interface, with the event type message, which does not bubble, is not cancelable, and has no default action.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/Transferred_objects_unusable.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: Objects listed in transfer are transferred, not just cloned, meaning that they are no longer usable on the sending side.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "NOTRUN": 1
           }
         },
         "MessageChannel is supported.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "FAIL",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
     },
     "/webmessaging/event.data.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: event.data returns the data of the message.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/event.origin.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: event.origin returns the origin of the message.": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         }
       }
     },
     "/webmessaging/event.ports.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: event.ports returns the MessagePort array sent with the message.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "NOTRUN": 1
           }
         },
         "MessageChannel is supported.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/event.source.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: Same-origin: event.source returns the WindowProxy of the source window.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/event.source.xorigin.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: Corss-origin: event.source returns the WindowProxy of the source window.": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         }
       }
     },
     "/webmessaging/message-channels/001.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "basic messagechannel test": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/message-channels/002.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "without start()": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/message-channels/003.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "onmessage implied start()": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/message-channels/004.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "cross-document channel": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/postMessage_ArrayBuffer.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: postMessage with ArrayBuffer object.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "ArrayBuffer is supported.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_Date.sub.htm": {
       "byUA": {
+        "Ch39": "TIMEOUT",
+        "FF34": "ERROR",
+        "IE11": "TIMEOUT",
+        "Op12": "TIMEOUT",
         "UC10": "TIMEOUT"
       },
       "totals": {
-        "TIMEOUT": 1
+        "TIMEOUT": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: Messages can contain JavaScript values (e.g., Dates).": {
           "byUA": {
+            "Ch39": "NOTRUN",
+            "FF34": "NOTRUN",
+            "IE11": "NOTRUN",
+            "Op12": "NOTRUN",
             "UC10": "NOTRUN"
           },
           "totals": {
-            "NOTRUN": 1
+            "NOTRUN": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_Document.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: postMessage with Document object: Throw a DataCloneError if message could not be cloned.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_Function.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: postMessage with Function object: Throw a DataCloneError if message could not be cloned.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_MessagePorts_sorigin.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: postMessage to same-origin iframe with MessagePort array containing 100 ports.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "NOTRUN": 1
           }
         },
         "MessageChannel is supported.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/postMessage_MessagePorts_xorigin.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: postMessage to cross-origin iframe with MessagePort array containing 100 ports.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "NOTRUN",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "NOTRUN": 1
           }
         },
         "MessageChannel is supported.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/postMessage_arrays.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: Messages can be structured objects, e.g., arrays.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_asterisk_xorigin.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: To send the message to the target regardless of origin, set the target origin to '*'.": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_dup_transfer_objects.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: postMessage with duplicate transfer objects raises DataCloneError exception.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/postMessage_invalid_targetOrigin.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: If the value of the targetOrigin argument is neither a single U+002A ASTERISK character (*), a single U+002F SOLIDUS character (/), nor an absolute URL, then throw a SyntaxError exception and abort the overall set of steps.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_objects.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Test Description: Messages can be structured objects, e.g., nested objects.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_origin_mismatch.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: Same-origin: If the origin of the target window doesn't match the given origin, the message is discarded.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_origin_mismatch_xorigin.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: Cross-origin: If the origin of the target window doesn't match the given origin, the message is discarded.": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         }
       }
     },
     "/webmessaging/postMessage_solidus_sorigin.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "ERROR"
       },
       "totals": {
+        "OK": 4,
         "ERROR": 1
       },
       "subtests": {
         "Test Description: To restrict the message to same-origin targets only, without needing to explicitly state the origin, set the target origin to '/'.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "NOTRUN"
           },
           "totals": {
+            "PASS": 4,
             "NOTRUN": 1
           }
         }
@@ -647,17 +979,26 @@
     },
     "/webmessaging/postMessage_solidus_xorigin.sub.htm": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Test Description: If the targetOrigin argument is a single literal U+002F SOLIDUS character (/), and the Document of the Window object on which the method was invoked does not have the same origin as the entry script's document, then abort these steps silently.": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 4,
             "FAIL": 1
           }
         }
@@ -665,71 +1006,105 @@
     },
     "/webmessaging/with-ports/001.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving broken url": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "PASS",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
     },
     "/webmessaging/with-ports/002.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving url with stuff in host-specific": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/003.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving 'example.org'": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/004.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "special value '/'": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 4,
             "FAIL": 1
           }
         }
@@ -737,291 +1112,430 @@
     },
     "/webmessaging/with-ports/005.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving a same origin targetOrigin": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/006.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving a same origin targetOrigin with trailing slash": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/007.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "targetOrigin '*'": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/010.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "1": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "undefined": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "null": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "false": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "true": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "NaN": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "Infinity": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "string": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "date": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "regex": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "self": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "array": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         },
         "object": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         },
         "error": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "unreached": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/011.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "posting an imagedata (from a cloned canvas) in an array": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/012.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "loop in array in structured clone": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/013.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "loop in object in structured clone": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/014.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "structured clone vs reference": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/015.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "different origin": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/016.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "TIMEOUT"
       },
       "totals": {
+        "OK": 4,
         "TIMEOUT": 1
       },
       "subtests": {
         "origin of the script that invoked the method, data:": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "TIMEOUT"
           },
           "totals": {
+            "PASS": 3,
+            "FAIL": 1,
             "TIMEOUT": 1
           }
         }
@@ -1029,71 +1543,106 @@
     },
     "/webmessaging/with-ports/017.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "origin of the script that invoked the method, about:blank": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/018.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "origin of the script that invoked the method, javascript:": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/019.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "origin of the script that invoked the method, scheme/host/port": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/020.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "cross-origin test": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 4,
             "FAIL": 1
           }
         }
@@ -1101,17 +1650,27 @@
     },
     "/webmessaging/with-ports/021.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "cross-origin test": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 4,
             "FAIL": 1
           }
         }
@@ -1119,161 +1678,239 @@
     },
     "/webmessaging/with-ports/023.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "null ports": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
     },
     "/webmessaging/with-ports/024.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "undefined as ports": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/with-ports/025.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "1 as ports": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 4,
+            "PASS": 1
           }
         }
       }
     },
     "/webmessaging/with-ports/026.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "object with length as transferable": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         }
       }
     },
     "/webmessaging/with-ports/027.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "message channel as ports": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
     },
     "/webmessaging/without-ports/001.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving broken url": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "PASS",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
     },
     "/webmessaging/without-ports/002.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving url with stuff in host-specific": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/003.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving 'example.org'": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/004.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "special value '/'": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 4,
             "FAIL": 1
           }
         }
@@ -1281,327 +1918,482 @@
     },
     "/webmessaging/without-ports/005.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving a same origin targetOrigin": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/006.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "resolving a same origin targetOrigin with trailing slash": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/007.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "targetOrigin '*'": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/008.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "just one argument": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/009.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "zero arguments": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/010.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "1": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "undefined": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "null": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "false": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "true": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "NaN": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "Infinity": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "string": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "date": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "regex": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "self": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "array": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         },
         "object": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 5
           }
         },
         "error": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         },
         "unreached": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/011.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "posting an imagedata (from a cloned canvas) in an array": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/012.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "loop in array in structured clone": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/013.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "loop in object in structured clone": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/014.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "structured clone vs reference": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/015.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "different origin": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/016.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "TIMEOUT"
       },
       "totals": {
+        "OK": 4,
         "TIMEOUT": 1
       },
       "subtests": {
         "origin of the script that invoked the method, data:": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "TIMEOUT"
           },
           "totals": {
+            "PASS": 3,
+            "FAIL": 1,
             "TIMEOUT": 1
           }
         }
@@ -1609,71 +2401,109 @@
     },
     "/webmessaging/without-ports/017.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "origin of the script that invoked the method, about:blank": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/without-ports/018.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "origin of the script that invoked the method, javascript:": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/019.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "origin of the script that invoked the method, scheme/host/port": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/without-ports/020.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "cross-origin test": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 4,
             "FAIL": 1
           }
         }
@@ -1681,17 +2511,27 @@
     },
     "/webmessaging/without-ports/021.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "cross-origin test": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 4,
             "FAIL": 1
           }
         }
@@ -1699,108 +2539,162 @@
     },
     "/webmessaging/without-ports/023.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "ERROR",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4,
+        "ERROR": 1
       },
       "subtests": {
         "Object cloning: own properties only, don't follow prototype": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/without-ports/024.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Object cloning: throw an exception if function values encountered": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/webmessaging/without-ports/025.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "MessagePort constructor properties": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 4,
+            "PASS": 1
           }
         }
       }
     },
     "/webmessaging/without-ports/026.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Cloning objects with getter properties": {
           "byUA": {
+            "Ch39": "FAIL",
+            "FF34": "FAIL",
+            "IE11": "FAIL",
+            "Op12": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 4,
+            "PASS": 1
           }
         }
       }
     },
     "/webmessaging/without-ports/027.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Cloning objects, preserving sharing": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "PASS",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 5
           }
         }
       }
     },
     "/webmessaging/without-ports/028.html": {
       "byUA": {
+        "Ch39": "OK",
+        "FF34": "OK",
+        "IE11": "OK",
+        "Op12": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 5
       },
       "subtests": {
         "Cloning objects, preserving sharing #2": {
           "byUA": {
+            "Ch39": "PASS",
+            "FF34": "FAIL",
+            "IE11": "PASS",
+            "Op12": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
