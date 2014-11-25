@@ -2,17 +2,23 @@
   "results": [
     {
       "test": "/IndexedDB/abort-in-initial-upgradeneeded.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "Test that an abort in the initial upgradeneeded sets version back to 0",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/close-in-upgradeneeded.html",
       "subtests": [
         {
           "name": "When db.close is called in upgradeneeded, the db is cleaned up on refresh",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected open.success event Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -47,18 +53,18 @@
       "subtests": [
         {
           "name": "IDBCursor asyncness - advance",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"data2\" but got \"data\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor asyncness - continue",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor asyncness - fresh advance still async",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor asyncness - fresh continue still async",
@@ -74,33 +80,33 @@
       "subtests": [
         {
           "name": "IDBCursor.advance() - invalid - attempt to call advance twice",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - invalid - pass something other than number",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - invalid - pass null/undefined",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - invalid - missing argument",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - invalid - pass negative numbers",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - invalid - got value not set on exception",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -111,33 +117,33 @@
       "subtests": [
         {
           "name": "IDBCursor.advance() - advances",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - advances backwards",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - skip far forward",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - within range",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - within single key range",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.advance() - within single key range, with several results",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -148,33 +154,33 @@
       "subtests": [
         {
           "name": "IDBCursor.continue() - continues",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.continue() - with given key",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.continue() - skip far forward",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error2 (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.continue() - within range",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error1 (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.continue() - within single key range",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error1 (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.continue() - within single key range, with several results",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected error1 (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -212,109 +218,109 @@
       "subtests": [
         {
           "name": "IDBCursor direction - index - next",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "IDBCursor direction - index - prev",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "IDBCursor direction - index - nextunique",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "IDBCursor direction - index - prevunique",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         }
       ],
-      "status": "ERROR",
-      "message": "DataError"
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/idbcursor-direction-objectstore-keyrange.htm",
       "subtests": [
         {
           "name": "IDBCursor direction - object store with keyrange - next",
-          "status": "FAIL",
-          "message": "assert_unreached: open_rq.onerror Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor direction - object store with keyrange - prev",
-          "status": "FAIL",
-          "message": "assert_unreached: open_rq.onerror Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor direction - object store with keyrange - nextunique",
-          "status": "FAIL",
-          "message": "assert_unreached: open_rq.onerror Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor direction - object store with keyrange - prevunique",
-          "status": "FAIL",
-          "message": "assert_unreached: open_rq.onerror Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "ERROR",
-      "message": "DataError"
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/idbcursor-direction-objectstore.htm",
       "subtests": [
         {
           "name": "IDBCursor direction - object store - next",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "IDBCursor direction - object store - prev",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "IDBCursor direction - object store - nextunique",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "IDBCursor direction - object store - prevunique",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         }
       ],
-      "status": "ERROR",
-      "message": "DataError"
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/idbcursor-direction.htm",
       "subtests": [
         {
           "name": "IDBCursor.direction - undefined",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.direction - next",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.direction - prev",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.direction - nextunique",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.direction - prevunique",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -335,8 +341,8 @@
         },
         {
           "name": "IDBCursor.key - my,key",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -347,18 +353,18 @@
       "subtests": [
         {
           "name": "IDBCursor.primaryKey - 1",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected db.error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.primaryKey - key",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected db.error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor.primaryKey - my,key",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -386,8 +392,8 @@
         },
         {
           "name": "IDBCursor.source - IDBIndex",
-          "status": "FAIL",
-          "message": "assert_unreached: Transaction got error. UnknownError Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -410,8 +416,8 @@
       "subtests": [
         {
           "name": "IDBCursor.advance() - attempt to pass a count parameter that is not a number",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() { cursor.advance(document); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -422,8 +428,8 @@
       "subtests": [
         {
           "name": "IDBCursor.advance() - index - attempt to advance backwards",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -446,8 +452,8 @@
       "subtests": [
         {
           "name": "IDBCursor.advance() - index - throw TypeError",
-          "status": "FAIL",
-          "message": "assert_throws: Calling advance() with count argument 0 should throw TypeError. function \"function() {\n                cursor.advance(0);\n         ...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -506,8 +512,8 @@
       "subtests": [
         {
           "name": "IDBCursor.advance() - object store - throw TypeError",
-          "status": "FAIL",
-          "message": "assert_throws: Calling advance() with count argument 0 should throw TypeError. function \"function() {\n                cursor.advance(0);\n         ...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -578,8 +584,8 @@
       "subtests": [
         {
           "name": "IDBCursor.continue() - index - attempt to iterate to the previous record when the direction is set for the next record ",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -590,8 +596,8 @@
       "subtests": [
         {
           "name": "IDBCursor.continue() - index - attempt to iterate to the next record when the direction is set for the previous record",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -602,8 +608,8 @@
       "subtests": [
         {
           "name": "IDBCursor.continue() - index - iterate using 'prevunique'",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -614,8 +620,8 @@
       "subtests": [
         {
           "name": "IDBCursor.continue() - index - iterate using nextunique",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -650,8 +656,8 @@
       "subtests": [
         {
           "name": "IDBCursor.continue() - attempt to call continue two times",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected db.error (UnknownError) Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -686,8 +692,8 @@
       "subtests": [
         {
           "name": "IDBCursor.continue() - object store - attempt to iterate to the previous record when the direction is set for the next record",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -782,8 +788,8 @@
       "subtests": [
         {
           "name": "IDBCursor.delete() - index - throw InvalidStateError when the cursor is being iterated",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                cursor.delete();\n            }\" did not throw"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -842,8 +848,8 @@
       "subtests": [
         {
           "name": "IDBCursor.delete() - object store - throw InvalidStateError when the cursor is being iterated",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                cursor.delete();\n            }\" did not throw"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -866,8 +872,8 @@
       "subtests": [
         {
           "name": "IDBCursor.continue() - index - delete next element, and iterate to it",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -878,8 +884,8 @@
       "subtests": [
         {
           "name": "IDBCursor.continue() - index - add next element, and iterate to it",
-          "status": "FAIL",
-          "message": "assert_equals: cursor run count expected 3 but got 0"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -962,8 +968,8 @@
       "subtests": [
         {
           "name": "IDBCursor.update() - index - throw DataCloneError",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                cursor.update(record);\n     ...\" threw object \"DataError\" that is not a DOMException DataCloneError: property \"code\" is equal to 0, expected 25"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -986,8 +992,8 @@
       "subtests": [
         {
           "name": "IDBCursor.update() - index - throw DataError",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() { cursor.update(null); }\" threw object \"Error: 参数无效。\" that is not a DOMException DataError: property \"code\" is equal to undefined, expected 0"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1058,8 +1064,8 @@
       "subtests": [
         {
           "name": "IDBCursor.update() - object store - throw DataCloneError",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                cursor.update(record);\n     ...\" threw object \"DataError\" that is not a DOMException DataCloneError: property \"code\" is equal to 0, expected 25"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1082,8 +1088,8 @@
       "subtests": [
         {
           "name": "IDBCursor.update() - object store - throw DataError",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() { cursor.update(null); }\" threw object \"Error: 参数无效。\" that is not a DOMException DataError: property \"code\" is equal to undefined, expected 0"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1094,8 +1100,8 @@
       "subtests": [
         {
           "name": "IDBDatabase.close() - unblock the version change transaction created by an open database request",
-          "status": "FAIL",
-          "message": "assert_equals: block event fired # expected (number) 0 but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1106,8 +1112,8 @@
       "subtests": [
         {
           "name": "IDBDatabase.close() - unblock the delete database request",
-          "status": "FAIL",
-          "message": "assert_true: versionchange event fired expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1118,8 +1124,8 @@
       "subtests": [
         {
           "name": "IDBDatabase.createObjectStore() and IDBObjectStore.createIndex() - both with empty name",
-          "status": "FAIL",
-          "message": "assert_equals: indexNames[0] expected (string) \"\" but got (object) null"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1166,8 +1172,8 @@
       "subtests": [
         {
           "name": "IDBDatabase.createObjectStore() - object store 'name' and 'keyPath' properties are correctly set ",
-          "status": "FAIL",
-          "message": "assert_equals: auto increment expected (boolean) false but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1243,13 +1249,13 @@
         },
         {
           "name": "IDBObjectStoreParameters - autoInc true, keyPath null",
-          "status": "FAIL",
-          "message": "InvalidAccessError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBObjectStoreParameters - autoInc true, keyPath undefined",
-          "status": "FAIL",
-          "message": "InvalidAccessError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBObjectStoreParameters - autoInc true, keyPath string",
@@ -1258,8 +1264,8 @@
         },
         {
           "name": "IDBObjectStoreParameters - autoInc false, keyPath empty",
-          "status": "FAIL",
-          "message": "InvalidAccessError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBObjectStoreParameters - autoInc false, keyPath array",
@@ -1273,8 +1279,8 @@
         },
         {
           "name": "IDBObjectStoreParameters - keyPath empty",
-          "status": "FAIL",
-          "message": "InvalidAccessError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBObjectStoreParameters - keyPath array",
@@ -1288,13 +1294,13 @@
         },
         {
           "name": "IDBObjectStoreParameters - keyPath null",
-          "status": "FAIL",
-          "message": "InvalidAccessError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBObjectStoreParameters - keyPath undefined",
-          "status": "FAIL",
-          "message": "InvalidAccessError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1315,8 +1321,8 @@
         },
         {
           "name": "createObjectStore: Invalid optionalParameters - autoInc and keyPath array 2",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                e.target.result.createObject...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "createObjectStore: Invalid optionalParameters - autoInc and keyPath object",
@@ -1416,8 +1422,8 @@
       "subtests": [
         {
           "name": "IDBDatabase.transaction() - attempt to open a transaction with invalid mode",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() { db.transaction('test', 'whatever'); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1457,8 +1463,8 @@
         },
         {
           "name": "IDBFactory.cmp() - null",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n            indexedDB.cmp(null, null);\n     ...\" threw object \"Error: 参数无效。\" that is not a DOMException DataError: property \"code\" is equal to undefined, expected 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBFactory.cmp() - NaN",
@@ -1498,8 +1504,8 @@
       "subtests": [
         {
           "name": "IDBFactory.deleteDatabase() - success event",
-          "status": "FAIL",
-          "message": "assert_equals: oldVersion expected (number) 9 but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1568,8 +1574,8 @@
         },
         {
           "name": "IDBFactory.open() - upgradeneeded gets VersionChangeEvent - second upgrade",
-          "status": "FAIL",
-          "message": "assert_unreached: unexpected open.blocked event Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1649,92 +1655,98 @@
     },
     {
       "test": "/IndexedDB/idbfactory_open8.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "IDBFactory.open() - error in version change transaction aborts open",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/idbfactory_open9.htm",
       "subtests": [
         {
           "name": "Calling open() with version argument -1 should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument -0.5 should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument 0 should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument 0.5 should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument 0.8 should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument 9007199254740992 should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument NaN should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument Infinity should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument -Infinity should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument \"foo\" should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument undefined should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument null should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"Error: 参数无效。\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument false should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument object should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument object (second) should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument object (third) should throw TypeError.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n        window.indexedDB.open('test', val);\n...\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling open() with version argument 1.5 should not throw.",
@@ -1750,8 +1762,8 @@
       "subtests": [
         {
           "name": "IDBIndex.multiEntry: array keyPath with multiEntry",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n            store.createIndex('actors', ['na...\" did not throw"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1767,8 +1779,8 @@
         },
         {
           "name": "Getting the one item by 1000 indeced keys ",
-          "status": "FAIL",
-          "message": "无法获取未定义或 null 引用的属性“test”(stack: TypeError: 无法获取未定义或 null 引用的属性“test”\n   at Anonymous function (http://w3c-test.org/IndexedDB/idbindex-multientry-big.htm:45:21)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1779,8 +1791,8 @@
       "subtests": [
         {
           "name": "IDBIndex.multiEntry - adding keys",
-          "status": "FAIL",
-          "message": "assert_object_equals: property \"1\" expected [1, 2, 2, 3, 3] got [1, undefined, undefined, undefined, undefined]"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2126,13 +2138,13 @@
         },
         {
           "name": "IDBKeyRange.bound(null, null) - null parameters are incorrect.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                    IDBKeyRange.bound(null, ...\" threw object \"Error: 参数无效。\" that is not a DOMException DataError: property \"code\" is equal to undefined, expected 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKeyRange.bound(1, null / null, 1) - null parameter is incorrect.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                    IDBKeyRange.bound(1, nul...\" threw object \"Error: 参数无效。\" that is not a DOMException DataError: property \"code\" is equal to undefined, expected 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKeyRange.bound(lower, upper / lower > upper) -  'lower' is greater than 'upper'.",
@@ -2451,8 +2463,8 @@
       "subtests": [
         {
           "name": "IDBObjectStore.createIndex() - returns an IDBIndex and the properties are set correctly",
-          "status": "FAIL",
-          "message": "assert_false: multiEntry expected false got undefined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2508,9 +2520,15 @@
     },
     {
       "test": "/IndexedDB/idbobjectstore_createIndex2.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "IDBObjectStore.createIndex() - attempt to create an index that requires unique values on an object store already contains duplicates ",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/idbobjectstore_createIndex4-deleteIndex-event_order.htm",
@@ -2529,8 +2547,8 @@
       "subtests": [
         {
           "name": "IDBObjectStore.createIndex() - empty keyPath",
-          "status": "FAIL",
-          "message": "assert_equals: result expected (string) \"object_4\" but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2538,23 +2556,35 @@
     },
     {
       "test": "/IndexedDB/idbobjectstore_createIndex6-event_order.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "IDBObjectStore.createIndex() - event order when unique constraint is triggered",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/idbobjectstore_createIndex7-event_order.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "IDBObjectStore.createIndex() - Event ordering for ConstraintError on request",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/idbobjectstore_createIndex9-emptyname.htm",
       "subtests": [
         {
           "name": "IDBObjectStore.createIndex() - empty name",
-          "status": "FAIL",
-          "message": "assert_equals: indexNames[0] expected (string) \"\" but got (object) null"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2987,17 +3017,23 @@
     },
     {
       "test": "/IndexedDB/idbtransaction_abort.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "IDBTransaction - abort",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/idbversionchangeevent.htm",
       "subtests": [
         {
           "name": "IDBVersionChangeEvent fired in upgradeneeded, versionchange and deleteDatabase",
-          "status": "FAIL",
-          "message": "assert_unreached: delete.blocked Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3082,18 +3118,18 @@
       "subtests": [
         {
           "name": "IDBKeyRange interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBKeyRange\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKeyRange interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBKeyRange.length is not configurable expected true got false"
         },
         {
           "name": "IDBKeyRange interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of IDBKeyRange.prototype expected \"[object IDBKeyRangePrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBKeyRange interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3102,58 +3138,58 @@
         },
         {
           "name": "IDBKeyRange interface: attribute lower",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"lower\" expected true got false"
         },
         {
           "name": "IDBKeyRange interface: attribute upper",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"upper\" expected true got false"
         },
         {
           "name": "IDBKeyRange interface: attribute lowerOpen",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"lowerOpen\" expected true got false"
         },
         {
           "name": "IDBKeyRange interface: attribute upperOpen",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"upperOpen\" expected true got false"
+        },
+        {
+          "name": "IDBKeyRange interface: operation only(any)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "IDBKeyRange interface: operation only(any)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
-        },
-        {
           "name": "IDBKeyRange interface: operation lowerBound(any,boolean)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKeyRange interface: operation upperBound(any,boolean)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKeyRange interface: operation bound(any,any,boolean,boolean)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 2 but got 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBRequest interface: existence and properties of interface object",
           "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBRequest\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "message": "assert_equals: prototype of window's property \"IDBRequest\" is not Function.prototype expected function \"function Empty() {}\" but got function \"function EventTarget() { [native code] }\""
         },
         {
           "name": "IDBRequest interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBRequest.length is not configurable expected true got false"
         },
         {
           "name": "IDBRequest interface: existence and properties of interface prototype object",
           "status": "FAIL",
-          "message": "assert_own_property: should inherit from EventTarget, but window has no such property expected property \"EventTarget\" missing"
+          "message": "assert_equals: class string of IDBRequest.prototype expected \"[object IDBRequestPrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBRequest interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3162,53 +3198,53 @@
         },
         {
           "name": "IDBRequest interface: attribute result",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"result\" expected true got false"
         },
         {
           "name": "IDBRequest interface: attribute error",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"error\" expected true got false"
         },
         {
           "name": "IDBRequest interface: attribute source",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"source\" expected true got false"
         },
         {
           "name": "IDBRequest interface: attribute transaction",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"transaction\" expected true got false"
         },
         {
           "name": "IDBRequest interface: attribute readyState",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"readyState\" expected true got false"
         },
         {
           "name": "IDBRequest interface: attribute onsuccess",
           "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "message": "assert_true: The prototype object must have a property \"onsuccess\" expected true got false"
         },
         {
           "name": "IDBRequest interface: attribute onerror",
           "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "message": "assert_true: The prototype object must have a property \"onerror\" expected true got false"
         },
         {
           "name": "IDBOpenDBRequest interface: existence and properties of interface object",
           "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBOpenDBRequest\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "message": "assert_equals: prototype of window's property \"IDBOpenDBRequest\" is not Function.prototype expected function \"function Empty() {}\" but got function \"function IDBRequest() { [native code] }\""
         },
         {
           "name": "IDBOpenDBRequest interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBOpenDBRequest.length is not configurable expected true got false"
         },
         {
           "name": "IDBOpenDBRequest interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of IDBOpenDBRequest.prototype expected \"[object IDBOpenDBRequestPrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBOpenDBRequest interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3218,27 +3254,27 @@
         {
           "name": "IDBOpenDBRequest interface: attribute onblocked",
           "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "message": "assert_true: The prototype object must have a property \"onblocked\" expected true got false"
         },
         {
           "name": "IDBOpenDBRequest interface: attribute onupgradeneeded",
           "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "message": "assert_true: The prototype object must have a property \"onupgradeneeded\" expected true got false"
         },
         {
           "name": "IDBVersionChangeEvent interface: existence and properties of interface object",
           "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBVersionChangeEvent\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "message": "assert_equals: prototype of window's property \"IDBVersionChangeEvent\" is not Function.prototype expected function \"function Empty() {}\" but got function \"function Event() { [native code] }\""
         },
         {
           "name": "IDBVersionChangeEvent interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBVersionChangeEvent.length is not configurable expected true got false"
         },
         {
           "name": "IDBVersionChangeEvent interface: existence and properties of interface prototype object",
           "status": "FAIL",
-          "message": "无法获取未定义或 null 引用的属性“has_extended_attribute”(stack: TypeError: 无法获取未定义或 null 引用的属性“has_extended_attribute”\n   at Anonymous function (http://w3c-test.org/resources/idlharness.js:1120:13)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at test (http://w3c-test.org/resources/testharness.js:73:9)\n   at IdlInterface.prototype.test_self (http://w3c-test.org/resources/idlharness.js:1074:5)\n   at IdlExceptionOrInterface.prototype.test (http://w3c-test.org/resources/idlharness.js:585:9)\n   at IdlArray.prototype.test (http://w3c-test.org/resources/idlharness.js:311:9)\n   at Anonymous function (http://w3c-test.org/IndexedDB/interfaces.html:200:3)\n   at Tests.prototype.setup (http://w3c-test.org/resources/testharness.js:1033:17)\n   at setup (http://w3c-test.org/resources/testharness.js:107:9)\n   at Global code (http://w3c-test.org/IndexedDB/interfaces.html:174:1))"
+          "message": "Cannot read property 'has_extended_attribute' of undefined(stack: TypeError: Cannot read property 'has_extended_attribute' of undefined\n    at IdlObject.<anonymous> (http://w3c-test.org/resources/idlharness.js:1123:22)\n    at Object.Test.step (http://w3c-test.org/resources/testharness.js:798:25)\n    at test (http://w3c-test.org/resources/testharness.js:73:18)\n    at IdlObject.IdlInterface.test_self (http://w3c-test.org/resources/idlharness.js:1160:29)\n    at IdlObject.IdlExceptionOrInterface.test (http://w3c-test.org/resources/idlharness.js:585:14)\n    at IdlArray.test (http://w3c-test.org/resources/idlharness.js:311:28)\n    at http://w3c-test.org/IndexedDB/interfaces.html:200:12\n    at Tests.setup (http://w3c-test.org/resources/testharness.js:1033:17)\n    at setup (http://w3c-test.org/resources/testharness.js:107:15)\n    at http://w3c-test.org/IndexedDB/interfaces.html:174:1)"
         },
         {
           "name": "IDBVersionChangeEvent interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3247,48 +3283,48 @@
         },
         {
           "name": "IDBVersionChangeEvent interface: attribute oldVersion",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"oldVersion\" expected true got false"
         },
         {
           "name": "IDBVersionChangeEvent interface: attribute newVersion",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"newVersion\" expected true got false"
         },
         {
           "name": "IDBVersionChangeEvent must be primary interface of new IDBVersionChangeEvent(\"foo\")",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: 对象不支持此操作\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Stringification of new IDBVersionChangeEvent(\"foo\")",
           "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: 对象不支持此操作\""
+          "message": "Cannot read property 'has_stringifier' of undefined(stack: TypeError: Cannot read property 'has_stringifier' of undefined\n    at IdlObject.IdlInterface.has_stringifier (http://w3c-test.org/resources/idlharness.js:1669:38)\n    at IdlObject.<anonymous> (http://w3c-test.org/resources/idlharness.js:1557:19)\n    at Object.Test.step (http://w3c-test.org/resources/testharness.js:798:25)\n    at test (http://w3c-test.org/resources/testharness.js:73:18)\n    at IdlObject.IdlInterface.test_primary_interface_of (http://w3c-test.org/resources/idlharness.js:1561:41)\n    at IdlObject.IdlInterface.test_object (http://w3c-test.org/resources/idlharness.js:1502:10)\n    at null.<anonymous> (http://w3c-test.org/resources/idlharness.js:316:36)\n    at Array.forEach (native)\n    at IdlArray.test (http://w3c-test.org/resources/idlharness.js:314:32)\n    at http://w3c-test.org/IndexedDB/interfaces.html:200:12)"
         },
         {
           "name": "IDBVersionChangeEvent interface: new IDBVersionChangeEvent(\"foo\") must inherit property \"oldVersion\" with the proper type (0)",
           "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: 对象不支持此操作\""
+          "message": "assert_inherits: property \"oldVersion\" found on object expected in prototype chain"
         },
         {
           "name": "IDBVersionChangeEvent interface: new IDBVersionChangeEvent(\"foo\") must inherit property \"newVersion\" with the proper type (1)",
           "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: 对象不支持此操作\""
+          "message": "assert_inherits: property \"newVersion\" found on object expected in prototype chain"
         },
         {
           "name": "IDBFactory interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBFactory\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBFactory interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBFactory.length is not configurable expected true got false"
         },
         {
           "name": "IDBFactory interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of IDBFactory.prototype expected \"[object IDBFactoryPrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBFactory interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3298,17 +3334,17 @@
         {
           "name": "IDBFactory interface: operation open(DOMString,unsigned long long)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBFactory interface: operation deleteDatabase(DOMString)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBFactory interface: operation cmp(any,any)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 2 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBFactory must be primary interface of window.indexedDB",
@@ -3353,17 +3389,17 @@
         {
           "name": "IDBDatabase interface: existence and properties of interface object",
           "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBDatabase\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "message": "assert_equals: prototype of window's property \"IDBDatabase\" is not Function.prototype expected function \"function Empty() {}\" but got function \"function EventTarget() { [native code] }\""
         },
         {
           "name": "IDBDatabase interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBDatabase.length is not configurable expected true got false"
         },
         {
           "name": "IDBDatabase interface: existence and properties of interface prototype object",
           "status": "FAIL",
-          "message": "assert_own_property: should inherit from EventTarget, but window has no such property expected property \"EventTarget\" missing"
+          "message": "assert_equals: class string of IDBDatabase.prototype expected \"[object IDBDatabasePrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBDatabase interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3372,48 +3408,48 @@
         },
         {
           "name": "IDBDatabase interface: attribute name",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"name\" expected true got false"
         },
         {
           "name": "IDBDatabase interface: attribute version",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"version\" expected true got false"
         },
         {
           "name": "IDBDatabase interface: attribute objectStoreNames",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"objectStoreNames\" expected true got false"
         },
         {
           "name": "IDBDatabase interface: operation createObjectStore(DOMString,IDBObjectStoreParameters)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBDatabase interface: operation deleteObjectStore(DOMString)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBDatabase interface: operation transaction([object Object],[object Object],IDBTransactionMode)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBDatabase interface: operation close()",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBDatabase interface: attribute onabort",
           "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "message": "assert_true: The prototype object must have a property \"onabort\" expected true got false"
         },
         {
           "name": "IDBDatabase interface: attribute onerror",
           "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "message": "assert_true: The prototype object must have a property \"onerror\" expected true got false"
         },
         {
           "name": "IDBDatabase interface: attribute onversionchange",
@@ -3422,18 +3458,18 @@
         },
         {
           "name": "IDBObjectStore interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBObjectStore\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBObjectStore interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBObjectStore.length is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of IDBObjectStore.prototype expected \"[object IDBObjectStorePrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBObjectStore interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3442,23 +3478,23 @@
         },
         {
           "name": "IDBObjectStore interface: attribute name",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"name\" expected true got false"
         },
         {
           "name": "IDBObjectStore interface: attribute keyPath",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"keyPath\" expected true got false"
         },
         {
           "name": "IDBObjectStore interface: attribute indexNames",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"indexNames\" expected true got false"
         },
         {
           "name": "IDBObjectStore interface: attribute transaction",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"transaction\" expected true got false"
         },
         {
           "name": "IDBObjectStore interface: attribute autoIncrement",
@@ -3468,67 +3504,67 @@
         {
           "name": "IDBObjectStore interface: operation put(any,any)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: operation add(any,any)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: operation delete(any)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: operation get(any)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: operation clear()",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: operation openCursor(any,IDBCursorDirection)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: operation createIndex(DOMString,[object Object],[object Object],IDBIndexParameters)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 2 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: operation index(DOMString)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: operation deleteIndex(DOMString)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBObjectStore interface: operation count(any)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBIndex interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBIndex\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBIndex interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBIndex.length is not configurable expected true got false"
         },
         {
           "name": "IDBIndex interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of IDBIndex.prototype expected \"[object IDBIndexPrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBIndex interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3537,18 +3573,18 @@
         },
         {
           "name": "IDBIndex interface: attribute name",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"name\" expected true got false"
         },
         {
           "name": "IDBIndex interface: attribute objectStore",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"objectStore\" expected true got false"
         },
         {
           "name": "IDBIndex interface: attribute keyPath",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"keyPath\" expected true got false"
         },
         {
           "name": "IDBIndex interface: attribute multiEntry",
@@ -3557,48 +3593,48 @@
         },
         {
           "name": "IDBIndex interface: attribute unique",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"unique\" expected true got false"
         },
         {
           "name": "IDBIndex interface: operation openCursor(any,IDBCursorDirection)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBIndex interface: operation openKeyCursor(any,IDBCursorDirection)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBIndex interface: operation get(any)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBIndex interface: operation getKey(any)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBIndex interface: operation count(any)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBCursor interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBCursor\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBCursor interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBCursor.length is not configurable expected true got false"
         },
         {
           "name": "IDBCursor interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of IDBCursor.prototype expected \"[object IDBCursorPrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBCursor interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3607,58 +3643,58 @@
         },
         {
           "name": "IDBCursor interface: attribute source",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"source\" expected true got false"
         },
         {
           "name": "IDBCursor interface: attribute direction",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"direction\" expected true got false"
         },
         {
           "name": "IDBCursor interface: attribute key",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"key\" expected true got false"
         },
         {
           "name": "IDBCursor interface: attribute primaryKey",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"primaryKey\" expected true got false"
         },
         {
           "name": "IDBCursor interface: operation update(any)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBCursor interface: operation advance(unsigned long)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBCursor interface: operation continue(any)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBCursor interface: operation delete()",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBCursorWithValue interface: existence and properties of interface object",
           "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBCursorWithValue\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "message": "assert_equals: prototype of window's property \"IDBCursorWithValue\" is not Function.prototype expected function \"function Empty() {}\" but got function \"function IDBCursor() { [native code] }\""
         },
         {
           "name": "IDBCursorWithValue interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBCursorWithValue.length is not configurable expected true got false"
         },
         {
           "name": "IDBCursorWithValue interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of IDBCursorWithValue.prototype expected \"[object IDBCursorWithValuePrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBCursorWithValue interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3667,23 +3703,23 @@
         },
         {
           "name": "IDBCursorWithValue interface: attribute value",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"value\" expected true got false"
         },
         {
           "name": "IDBTransaction interface: existence and properties of interface object",
           "status": "FAIL",
-          "message": "assert_equals: prototype of window's property \"IDBTransaction\" is not Function.prototype expected (function) function \"\nfunction() {\n    [native code]\n}\n\" but got (object) object \"[object Object]\""
+          "message": "assert_equals: prototype of window's property \"IDBTransaction\" is not Function.prototype expected function \"function Empty() {}\" but got function \"function EventTarget() { [native code] }\""
         },
         {
           "name": "IDBTransaction interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_true: IDBTransaction.length is not configurable expected true got false"
         },
         {
           "name": "IDBTransaction interface: existence and properties of interface prototype object",
           "status": "FAIL",
-          "message": "assert_own_property: should inherit from EventTarget, but window has no such property expected property \"EventTarget\" missing"
+          "message": "assert_equals: class string of IDBTransaction.prototype expected \"[object IDBTransactionPrototype]\" but got \"[object Object]\""
         },
         {
           "name": "IDBTransaction interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -3692,48 +3728,48 @@
         },
         {
           "name": "IDBTransaction interface: attribute mode",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"mode\" expected true got false"
         },
         {
           "name": "IDBTransaction interface: attribute db",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"db\" expected true got false"
         },
         {
           "name": "IDBTransaction interface: attribute error",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"error\" expected true got false"
         },
         {
           "name": "IDBTransaction interface: operation objectStore(DOMString)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBTransaction interface: operation abort()",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: property is not configurable expected true got false"
         },
         {
           "name": "IDBTransaction interface: attribute onabort",
           "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "message": "assert_true: The prototype object must have a property \"onabort\" expected true got false"
         },
         {
           "name": "IDBTransaction interface: attribute oncomplete",
           "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "message": "assert_true: The prototype object must have a property \"oncomplete\" expected true got false"
         },
         {
           "name": "IDBTransaction interface: attribute onerror",
           "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "message": "assert_true: The prototype object must have a property \"onerror\" expected true got false"
         },
         {
           "name": "Window interface: attribute indexedDB",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"indexedDB\" expected true got false"
         },
         {
           "name": "WorkerUtils interface: attribute indexedDB",
@@ -3759,8 +3795,8 @@
         },
         {
           "name": "Invalid key - null",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                objStore.add(\"value\", key);\n...\" threw object \"Error: 参数无效。\" that is not a DOMException DataError: property \"code\" is equal to undefined, expected 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid key - NaN",
@@ -3824,13 +3860,13 @@
         },
         {
           "name": "Invalid key - new String()",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                objStore.add(\"value\", key);\n...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid key - new Number()",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                objStore.add(\"value\", key);\n...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid key - new Boolean()",
@@ -3864,23 +3900,23 @@
         },
         {
           "name": "Invalid key - new Date(NaN)",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                objStore.add(\"value\", key);\n...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid key - new Date(Infinity)",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                objStore.add(\"value\", key);\n...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid key - /foo/",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                objStore.add(\"value\", key);\n...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid key - new RegExp()",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n                objStore.add(\"value\", key);\n...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid key - sparse array",
@@ -3926,93 +3962,93 @@
       "subtests": [
         {
           "name": "Valid key - new Date()",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - new Date(0)",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - []",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - new Array()",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - [\"undefined\"]",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - Infinity",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - -Infinity",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - 0",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - 1.5",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - 3e38",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - 3e-38",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - \"foo\"",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - \"\\n\"",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - \"\"",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - \"\\\"\"",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - \"\\u1234\"",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - \"\\u0000\"",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Valid key - \"NaN\"",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4035,8 +4071,8 @@
       "subtests": [
         {
           "name": "Keygenerator overflow",
-          "status": "FAIL",
-          "message": "assert_equals: error name expected \"ConstraintError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4057,8 +4093,8 @@
         },
         {
           "name": "Keygenerator - don't increment when new key is not bigger than current",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4069,18 +4105,18 @@
       "subtests": [
         {
           "name": "Database readback sort - String < Array",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKey.cmp sorted - String < Array",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Database readback sort - float < String",
-          "status": "FAIL",
-          "message": "assert_object_equals: keyorder array property \"0\" expected [0, 100, Infinity, \"\", \"yo\"] got [\"\", 0, 100, Infinity, \"yo\"]"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKey.cmp sorted - float < String",
@@ -4099,13 +4135,13 @@
         },
         {
           "name": "Database readback sort - float < Date < String < Array",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKey.cmp sorted - float < Date < String < Array",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Database readback sort - Date(1 sec ago) < Date(now) < Date(1 minute in future)",
@@ -4149,43 +4185,43 @@
         },
         {
           "name": "Database readback sort - Arrays",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKey.cmp sorted - Arrays",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Database readback sort - Array.length: 10,000 < Array.length: 10,001",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKey.cmp sorted - Array.length: 10,000 < Array.length: 10,001",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Database readback sort - Infinity inside arrays",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKey.cmp sorted - Infinity inside arrays",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Database readback sort - Test different stuff at once",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "IDBKey.cmp sorted - Test different stuff at once",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4251,43 +4287,43 @@
         },
         {
           "name": "Keypath - '' uses value as key",
-          "status": "FAIL",
-          "message": "InvalidAccessError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Keypath - [''] uses value as [key]",
-          "status": "FAIL",
-          "message": "InvalidAccessError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Keypath - ['x', 'y']",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Keypath - [['x'], 'y'] (stringifies)",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Keypath - ['x', {toString->'y'}] (stringifies)",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Keypath - name,type",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Keypath - name,type.name",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Keypath - array loop -> stringify becomes ['']",
-          "status": "FAIL",
-          "message": "InvalidAccessError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4308,13 +4344,13 @@
         },
         {
           "name": "Invalid keyPath - \"yo,lo\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - []",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" threw object \"InvalidAccessError\" that is not a DOMException SyntaxError: property \"code\" is equal to 15, expected 12"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - [\"array with space\"]",
@@ -4323,23 +4359,23 @@
         },
         {
           "name": "Invalid keyPath - multidimensional array (invalid toString)",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"3m\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - {toString->3m}",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"my.1337\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"..yo\"",
@@ -4363,58 +4399,58 @@
         },
         {
           "name": "Invalid keyPath - \"m.*\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"\\\"m\\\"\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"m%\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"m/\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"m/a\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"m&\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"m!\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"*\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"*.*\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"^m\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Invalid keyPath - \"/m/\"",
-          "status": "FAIL",
-          "message": "assert_throws: createObjectStore with keyPath function \"function() {\n                    db.createObjectStore(sto...\" did not throw"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4459,8 +4495,8 @@
       "subtests": [
         {
           "name": "Bubbling and capturing of request events",
-          "status": "FAIL",
-          "message": "assert_object_equals: events property \"0\" expected [\"capture  db.success\", \"capture txn.success\", \"capture rq1.success\", \"bubble  rq1.success\", \"capture  db.error: ConstraintError\", \"capture txn.error: ConstraintError\", \"capture rq2.error: ConstraintError\", \"bubble  rq2.error: ConstraintError\", \"bubble  txn.error: ConstraintError\", \"bubble   db.error: ConstraintError\", \"open_rq.success\"] got [\"capture rq1.success\", \"bubble  rq1.success\", \"capture  db.error: ConstraintError\", \"capture txn.error: ConstraintError\", \"capture rq2.error: ConstraintError\", \"bubble  rq2.error: ConstraintError\", \"bubble  txn.error: ConstraintError\", \"bubble   db.error: ConstraintError\", \"open_rq.success\"]"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4495,8 +4531,8 @@
       "subtests": [
         {
           "name": "Blocked event",
-          "status": "FAIL",
-          "message": "assert_array_equals: lengths differ, expected 1 got 0"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4507,8 +4543,8 @@
       "subtests": [
         {
           "name": "Test events opening a second database when one connection is open already",
-          "status": "FAIL",
-          "message": "assert_array_equals: lengths differ, expected 1 got 0"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4531,8 +4567,8 @@
       "subtests": [
         {
           "name": "Capture and bubble",
-          "status": "FAIL",
-          "message": "assert_object_equals: events property \"0\" expected [\"capture db.success\", \"capture txn.success\", \"capture rq1.success\", \"bubble  rq1.success\", \"capture db.error: ConstraintError\", \"capture txn.error: ConstraintError\", \"capture rq2.error: ConstraintError\", \"bubble  rq2.error: ConstraintError\", \"bubble  txn.error: ConstraintError\", \"bubble  db.error: ConstraintError\", \"open_rq.success\"] got [\"capture rq1.success\", \"bubble  rq1.success\", \"capture db.error: ConstraintError\", \"capture txn.error: ConstraintError\", \"capture rq2.error: ConstraintError\", \"bubble  rq2.error: ConstraintError\", \"bubble  txn.error: ConstraintError\", \"bubble  db.error: ConstraintError\", \"open_rq.success\"]"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -4542,12 +4578,12 @@
       "test": "/IndexedDB/value.htm",
       "subtests": [
         {
-          "name": "Values - undefined",
+          "name": "Values - Date",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Values - undefined",
+          "name": "Values - Array",
           "status": "PASS",
           "message": null
         }
@@ -4579,9 +4615,15 @@
     },
     {
       "test": "/IndexedDB/idbdatabase_createObjectStore10-1000ends.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "IDBDatabase.createObjectStore() - create 1000 object stores, add one item and delete",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/IndexedDB/idbobjectstore_createIndex3-usable-right-away.htm",
@@ -4600,8 +4642,8 @@
       "subtests": [
         {
           "name": "IDBObjectStore.createIndex() - index can be valid keys",
-          "status": "FAIL",
-          "message": "DataError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
