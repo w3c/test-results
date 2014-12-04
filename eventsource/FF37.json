@@ -13,43 +13,6 @@
       "message": null
     },
     {
-      "test": "/eventsource/dedicated-worker/eventsource-constructor-non-same-origin.htm",
-      "subtests": [
-        {
-          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (http://example.not/)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (https://example.not/test)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (ftp://example.not/)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (about:blank)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
       "test": "/eventsource/dedicated-worker/eventsource-constructor-url-bogus.htm",
       "subtests": [
         {
@@ -152,40 +115,9 @@
     },
     {
       "test": "/eventsource/eventsource-constructor-document-domain.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/eventsource/eventsource-constructor-non-same-origin.htm",
       "subtests": [
         {
-          "name": "EventSource: constructor (act as if there is a network error) (http://example.not/)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "EventSource: constructor (act as if there is a network error) (https://example.not/test)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "EventSource: constructor (act as if there is a network error) (ftp://example.not/)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "EventSource: constructor (act as if there is a network error) (about:blank)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))",
+          "name": "EventSource: document.domain",
           "status": "PASS",
           "message": null
         }
@@ -495,11 +427,11 @@
       "subtests": [
         {
           "name": "EventSource: \"retry\" field (bogus)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -519,11 +451,11 @@
       "subtests": [
         {
           "name": "EventSource: \"retry\" field",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -638,7 +570,7 @@
         {
           "name": "EventSource interface: existence and properties of interface prototype object",
           "status": "FAIL",
-          "message": "this.array.members[inherit_interface] is undefined(stack: IdlInterface.prototype.test_self/<@http://w3c-test.org/resources/idlharness.js:1119:1\nTest.prototype.step@http://w3c-test.org/resources/testharness.js:798:20\ntest@http://w3c-test.org/resources/testharness.js:73:9\nIdlInterface.prototype.test_self@http://w3c-test.org/resources/idlharness.js:1071:1\nIdlExceptionOrInterface.prototype.test@http://w3c-test.org/resources/idlharness.js:582:9\nIdlArray.prototype.test@http://w3c-test.org/resources/idlharness.js:311:9\nwindow.onload@http://w3c-test.org/eventsource/interfaces.html:55:2\n)"
+          "message": "this.array.members[inherit_interface] is undefined(stack: IdlInterface.prototype.test_self/<@http://web-platform.test:8000/resources/idlharness.js:1122:1\nTest.prototype.step@http://web-platform.test:8000/resources/testharness.js:798:20\ntest@http://web-platform.test:8000/resources/testharness.js:73:9\nIdlInterface.prototype.test_self@http://web-platform.test:8000/resources/idlharness.js:1074:1\nIdlExceptionOrInterface.prototype.test@http://web-platform.test:8000/resources/idlharness.js:585:9\nIdlArray.prototype.test@http://web-platform.test:8000/resources/idlharness.js:311:9\nwindow.onload@http://web-platform.test:8000/eventsource/interfaces.html:55:2\n)"
         },
         {
           "name": "EventSource interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -718,7 +650,7 @@
         {
           "name": "Stringification of new EventSource(\"http://foo\")",
           "status": "FAIL",
-          "message": "this.array.members[this.base] is undefined(stack: IdlInterface.prototype.has_stringifier@http://w3c-test.org/resources/idlharness.js:1662:1\nIdlInterface.prototype.test_primary_interface_of/<@http://w3c-test.org/resources/idlharness.js:1550:14\nTest.prototype.step@http://w3c-test.org/resources/testharness.js:798:20\ntest@http://w3c-test.org/resources/testharness.js:73:9\nIdlInterface.prototype.test_primary_interface_of@http://w3c-test.org/resources/idlharness.js:1545:1\nIdlInterface.prototype.test_object@http://w3c-test.org/resources/idlharness.js:1495:5\nIdlArray.prototype.test/<@http://w3c-test.org/resources/idlharness.js:316:17\nIdlArray.prototype.test@http://w3c-test.org/resources/idlharness.js:314:13\nwindow.onload@http://w3c-test.org/eventsource/interfaces.html:55:2\n)"
+          "message": "this.array.members[this.base] is undefined(stack: IdlInterface.prototype.has_stringifier@http://web-platform.test:8000/resources/idlharness.js:1669:1\nIdlInterface.prototype.test_primary_interface_of/<@http://web-platform.test:8000/resources/idlharness.js:1557:14\nTest.prototype.step@http://web-platform.test:8000/resources/testharness.js:798:20\ntest@http://web-platform.test:8000/resources/testharness.js:73:9\nIdlInterface.prototype.test_primary_interface_of@http://web-platform.test:8000/resources/idlharness.js:1552:1\nIdlInterface.prototype.test_object@http://web-platform.test:8000/resources/idlharness.js:1502:5\nIdlArray.prototype.test/<@http://web-platform.test:8000/resources/idlharness.js:316:17\nIdlArray.prototype.test@http://web-platform.test:8000/resources/idlharness.js:314:13\nwindow.onload@http://web-platform.test:8000/eventsource/interfaces.html:55:2\n)"
         },
         {
           "name": "EventSource interface: new EventSource(\"http://foo\") must inherit property \"url\" with the proper type (0)",
@@ -917,43 +849,6 @@
       "message": null
     },
     {
-      "test": "/eventsource/shared-worker/eventsource-constructor-non-same-origin.htm",
-      "subtests": [
-        {
-          "name": "shared worker - EventSource: constructor (act as if there is a network error) (http://example.not)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "shared worker - EventSource: constructor (act as if there is a network error) (https://example.not/test)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "shared worker - EventSource: constructor (act as if there is a network error) (ftp://example.not)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "shared worker - EventSource: constructor (act as if there is a network error) (about:blank)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "shared worker - EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        },
-        {
-          "name": "shared worker - EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))",
-          "status": "FAIL",
-          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
       "test": "/eventsource/shared-worker/eventsource-constructor-url-bogus.htm",
       "subtests": [
         {
@@ -1018,6 +913,117 @@
       "subtests": [
         {
           "name": "shared worker - EventSource: url",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/eventsource/dedicated-worker/eventsource-constructor-non-same-origin.htm",
+      "subtests": [
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (http://example.not/)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (https://example.not/test)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (ftp://example.not/)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (about:blank)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/eventsource/eventsource-constructor-non-same-origin.htm",
+      "subtests": [
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (http://example.not/)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (https://example.not/test)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (ftp://example.not/)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (about:blank)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/eventsource/shared-worker/eventsource-constructor-non-same-origin.htm",
+      "subtests": [
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (http://example.not)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (https://example.not/test)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (ftp://example.not)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (about:blank)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)",
+          "status": "FAIL",
+          "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))",
           "status": "FAIL",
           "message": "assert_true: ReferenceError: EventSource is not defined expected true got false"
         }
