@@ -13,12 +13,6 @@
       "message": null
     },
     {
-      "test": "/eventsource/dedicated-worker/eventsource-constructor-non-same-origin.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
       "test": "/eventsource/dedicated-worker/eventsource-constructor-url-bogus.htm",
       "subtests": [
         {
@@ -121,15 +115,15 @@
     },
     {
       "test": "/eventsource/eventsource-constructor-document-domain.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/eventsource/eventsource-constructor-non-same-origin.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "EventSource: document.domain",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/eventsource/eventsource-constructor-stringify.htm",
@@ -457,8 +451,8 @@
       "subtests": [
         {
           "name": "EventSource: \"retry\" field",
-          "status": "FAIL",
-          "message": "assert_true: expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -570,13 +564,13 @@
         },
         {
           "name": "EventSource interface object length",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: EventSource.length is not configurable expected true got false"
         },
         {
           "name": "EventSource interface: existence and properties of interface prototype object",
           "status": "FAIL",
-          "message": "Cannot read property 'has_extended_attribute' of undefined(stack: TypeError: Cannot read property 'has_extended_attribute' of undefined\n    at IdlObject.<anonymous> (http://w3c-test.org/resources/idlharness.js:1120:22)\n    at Object.Test.step (http://w3c-test.org/resources/testharness.js:798:25)\n    at test (http://w3c-test.org/resources/testharness.js:73:18)\n    at IdlObject.IdlInterface.test_self (http://w3c-test.org/resources/idlharness.js:1157:29)\n    at IdlObject.IdlExceptionOrInterface.test (http://w3c-test.org/resources/idlharness.js:582:14)\n    at IdlArray.test (http://w3c-test.org/resources/idlharness.js:311:28)\n    at window.onload (http://w3c-test.org/eventsource/interfaces.html:55:11))"
+          "message": "Cannot read property 'has_extended_attribute' of undefined(stack: TypeError: Cannot read property 'has_extended_attribute' of undefined\n    at IdlObject.<anonymous> (http://web-platform.test:8000/resources/idlharness.js:1123:22)\n    at Object.Test.step (http://web-platform.test:8000/resources/testharness.js:798:25)\n    at test (http://web-platform.test:8000/resources/testharness.js:73:18)\n    at IdlObject.IdlInterface.test_self (http://web-platform.test:8000/resources/idlharness.js:1160:29)\n    at IdlObject.IdlExceptionOrInterface.test (http://web-platform.test:8000/resources/idlharness.js:585:14)\n    at IdlArray.test (http://web-platform.test:8000/resources/idlharness.js:311:28)\n    at window.onload (http://web-platform.test:8000/eventsource/interfaces.html:55:11))"
         },
         {
           "name": "EventSource interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -656,7 +650,7 @@
         {
           "name": "Stringification of new EventSource(\"http://foo\")",
           "status": "FAIL",
-          "message": "Cannot read property 'has_stringifier' of undefined(stack: TypeError: Cannot read property 'has_stringifier' of undefined\n    at IdlObject.IdlInterface.has_stringifier (http://w3c-test.org/resources/idlharness.js:1662:38)\n    at IdlObject.<anonymous> (http://w3c-test.org/resources/idlharness.js:1550:19)\n    at Object.Test.step (http://w3c-test.org/resources/testharness.js:798:25)\n    at test (http://w3c-test.org/resources/testharness.js:73:18)\n    at IdlObject.IdlInterface.test_primary_interface_of (http://w3c-test.org/resources/idlharness.js:1554:41)\n    at IdlObject.IdlInterface.test_object (http://w3c-test.org/resources/idlharness.js:1495:10)\n    at null.<anonymous> (http://w3c-test.org/resources/idlharness.js:316:36)\n    at Array.forEach (native)\n    at IdlArray.test (http://w3c-test.org/resources/idlharness.js:314:32)\n    at window.onload (http://w3c-test.org/eventsource/interfaces.html:55:11))"
+          "message": "Cannot read property 'has_stringifier' of undefined(stack: TypeError: Cannot read property 'has_stringifier' of undefined\n    at IdlObject.IdlInterface.has_stringifier (http://web-platform.test:8000/resources/idlharness.js:1669:38)\n    at IdlObject.<anonymous> (http://web-platform.test:8000/resources/idlharness.js:1557:19)\n    at Object.Test.step (http://web-platform.test:8000/resources/testharness.js:798:25)\n    at test (http://web-platform.test:8000/resources/testharness.js:73:18)\n    at IdlObject.IdlInterface.test_primary_interface_of (http://web-platform.test:8000/resources/idlharness.js:1561:41)\n    at IdlObject.IdlInterface.test_object (http://web-platform.test:8000/resources/idlharness.js:1502:10)\n    at null.<anonymous> (http://web-platform.test:8000/resources/idlharness.js:316:36)\n    at Array.forEach (native)\n    at IdlArray.test (http://web-platform.test:8000/resources/idlharness.js:314:32)\n    at window.onload (http://web-platform.test:8000/eventsource/interfaces.html:55:11))"
         },
         {
           "name": "EventSource interface: new EventSource(\"http://foo\") must inherit property \"url\" with the proper type (0)",
@@ -855,12 +849,6 @@
       "message": null
     },
     {
-      "test": "/eventsource/shared-worker/eventsource-constructor-non-same-origin.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
       "test": "/eventsource/shared-worker/eventsource-constructor-url-bogus.htm",
       "subtests": [
         {
@@ -925,6 +913,117 @@
       "subtests": [
         {
           "name": "shared worker - EventSource: url",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/eventsource/dedicated-worker/eventsource-constructor-non-same-origin.htm",
+      "subtests": [
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (http://example.not/)",
+          "status": "FAIL",
+          "message": "assert_equals: source.readyState expected 2 but got 0"
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (https://example.not/test)",
+          "status": "FAIL",
+          "message": "assert_equals: source.readyState expected 2 but got 0"
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (ftp://example.not/)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (about:blank)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "dedicated worker - EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/eventsource/eventsource-constructor-non-same-origin.htm",
+      "subtests": [
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (http://example.not/)",
+          "status": "FAIL",
+          "message": "assert_equals: expected 2 but got 0"
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (https://example.not/test)",
+          "status": "FAIL",
+          "message": "assert_equals: expected 2 but got 0"
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (ftp://example.not/)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (about:blank)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/eventsource/shared-worker/eventsource-constructor-non-same-origin.htm",
+      "subtests": [
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (http://example.not)",
+          "status": "FAIL",
+          "message": "assert_equals: source.readyState expected 2 but got 0"
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (https://example.not/test)",
+          "status": "FAIL",
+          "message": "assert_equals: source.readyState expected 2 but got 0"
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (ftp://example.not)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (about:blank)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (mailto:whatwg@awesome.example)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "shared worker - EventSource: constructor (act as if there is a network error) (javascript:alert('FAIL'))",
           "status": "PASS",
           "message": null
         }
