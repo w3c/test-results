@@ -360,7 +360,7 @@
         {
           "name": "Test Description: postMessage with duplicate transfer objects raises DataCloneError exception.",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n                assert_own_property(window,...\" threw object \"Error: InvalidStateError: DOM Exception 11\" that is not a DOMException DATA_CLONE_ERR: property \"code\" is equal to 11, expected 25(stack: assert@http://w3c-test.org/resources/testharness.js:1738:42\nassert_throws@http://w3c-test.org/resources/testharness.js:682:23\nhttp://w3c-test.org/webmessaging/postMessage_dup_transfer_objects.htm:28:26\nstep@http://w3c-test.org/resources/testharness.js:798:30\ntest@http://w3c-test.org/resources/testharness.js:73:22\nPostMessageTest@http://w3c-test.org/webmessaging/postMessage_dup_transfer_objects.htm:26:13\nonload@http://w3c-test.org/webmessaging/postMessage_dup_transfer_objects.htm:12:16)"
+          "message": "assert_throws: function \"function () {\n                assert_own_property(window,...\" threw object \"Error: InvalidStateError: DOM Exception 11\" that is not a DOMException DATA_CLONE_ERR: property \"code\" is equal to 11, expected 25(stack: assert@http://web-platform.test:8000/resources/testharness.js:1738:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:682:23\nhttp://web-platform.test:8000/webmessaging/postMessage_dup_transfer_objects.htm:28:26\nstep@http://web-platform.test:8000/resources/testharness.js:798:30\ntest@http://web-platform.test:8000/resources/testharness.js:73:22\nPostMessageTest@http://web-platform.test:8000/webmessaging/postMessage_dup_transfer_objects.htm:26:13\nonload@http://web-platform.test:8000/webmessaging/postMessage_dup_transfer_objects.htm:12:16)"
         }
       ],
       "status": "OK",
@@ -669,11 +669,11 @@
       "subtests": [
         {
           "name": "origin of the script that invoked the method, data:",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -765,8 +765,8 @@
       "subtests": [
         {
           "name": "1 as ports",
-          "status": "FAIL",
-          "message": "Value is not a sequence(stack: postMessage@[native code]\nhttp://w3c-test.org/webmessaging/with-ports/025.html:8:14\nstep@http://w3c-test.org/resources/testharness.js:798:30\nasync_test@http://w3c-test.org/resources/testharness.js:90:26\nglobal code@http://w3c-test.org/webmessaging/with-ports/025.html:7:11)"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -778,7 +778,7 @@
         {
           "name": "object with length as transferable",
           "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11(stack: postMessage@[native code]\nhttp://w3c-test.org/webmessaging/with-ports/026.html:8:14\nstep@http://w3c-test.org/resources/testharness.js:798:30\nasync_test@http://w3c-test.org/resources/testharness.js:90:26\nglobal code@http://w3c-test.org/webmessaging/with-ports/026.html:7:11)"
+          "message": "assert_throws: function \"function () {\n      postMessage('', '*', {length:1});\n   }\" threw object \"Error: InvalidStateError: DOM Exception 11\" (\"InvalidStateError\") expected object \"TypeError\" (\"TypeError\")(stack: assert@http://web-platform.test:8000/resources/testharness.js:1738:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:593:23\nhttp://web-platform.test:8000/webmessaging/with-ports/026.html:8:17\nstep@http://web-platform.test:8000/resources/testharness.js:798:30\ntest@http://web-platform.test:8000/resources/testharness.js:73:22\nglobal code@http://web-platform.test:8000/webmessaging/with-ports/026.html:7:5)"
         }
       ],
       "status": "OK",
@@ -886,7 +886,7 @@
         {
           "name": "just one argument",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    postMessage('');\n  }\" threw object \"Error: SyntaxError: DOM Exception 12\" that is not a DOMException NOT_SUPPORTED_ERR: property \"code\" is equal to 12, expected 9(stack: assert@http://w3c-test.org/resources/testharness.js:1738:42\nassert_throws@http://w3c-test.org/resources/testharness.js:682:23\nhttp://w3c-test.org/webmessaging/without-ports/008.html:8:16\nstep@http://w3c-test.org/resources/testharness.js:798:30\ntest@http://w3c-test.org/resources/testharness.js:73:22\nglobal code@http://w3c-test.org/webmessaging/without-ports/008.html:7:5)"
+          "message": "assert_throws: function \"function () {\n    postMessage('');\n  }\" threw object \"Error: SyntaxError: DOM Exception 12\" (\"SyntaxError\") expected object \"TypeError\" (\"TypeError\")(stack: assert@http://web-platform.test:8000/resources/testharness.js:1738:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:593:23\nhttp://web-platform.test:8000/webmessaging/without-ports/008.html:8:16\nstep@http://web-platform.test:8000/resources/testharness.js:798:30\ntest@http://web-platform.test:8000/resources/testharness.js:73:22\nglobal code@http://web-platform.test:8000/webmessaging/without-ports/008.html:7:5)"
         }
       ],
       "status": "OK",
@@ -898,7 +898,7 @@
         {
           "name": "zero arguments",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    postMessage();\n  }\" threw object \"Error: SyntaxError: DOM Exception 12\" that is not a DOMException NOT_SUPPORTED_ERR: property \"code\" is equal to 12, expected 9(stack: assert@http://w3c-test.org/resources/testharness.js:1738:42\nassert_throws@http://w3c-test.org/resources/testharness.js:682:23\nhttp://w3c-test.org/webmessaging/without-ports/009.html:8:16\nstep@http://w3c-test.org/resources/testharness.js:798:30\ntest@http://w3c-test.org/resources/testharness.js:73:22\nglobal code@http://w3c-test.org/webmessaging/without-ports/009.html:7:5)"
+          "message": "assert_throws: function \"function () {\n    postMessage();\n  }\" threw object \"Error: SyntaxError: DOM Exception 12\" (\"SyntaxError\") expected object \"TypeError\" (\"TypeError\")(stack: assert@http://web-platform.test:8000/resources/testharness.js:1738:42\nassert_throws@http://web-platform.test:8000/resources/testharness.js:593:23\nhttp://web-platform.test:8000/webmessaging/without-ports/009.html:8:16\nstep@http://web-platform.test:8000/resources/testharness.js:798:30\ntest@http://web-platform.test:8000/resources/testharness.js:73:22\nglobal code@http://web-platform.test:8000/webmessaging/without-ports/009.html:7:5)"
         }
       ],
       "status": "OK",
@@ -1148,7 +1148,7 @@
         {
           "name": "MessagePort constructor properties",
           "status": "FAIL",
-          "message": "assert_true: Worker MessageChannel's port not an instance of MessagePort expected true got false(stack: assert@http://w3c-test.org/resources/testharness.js:1738:42\nassert_true@http://w3c-test.org/resources/testharness.js:299:15\nhttp://w3c-test.org/webmessaging/without-ports/025.html:14:17\nstep@http://w3c-test.org/resources/testharness.js:798:30\nhttp://w3c-test.org/resources/testharness.js:827:40)"
+          "message": "assert_true: Worker MessageChannel's port not an instance of MessagePort expected true got false(stack: assert@http://web-platform.test:8000/resources/testharness.js:1738:42\nassert_true@http://web-platform.test:8000/resources/testharness.js:299:15\nhttp://web-platform.test:8000/webmessaging/without-ports/025.html:13:17\nstep@http://web-platform.test:8000/resources/testharness.js:798:30\nhttp://web-platform.test:8000/resources/testharness.js:827:40)"
         }
       ],
       "status": "OK",
@@ -1159,8 +1159,8 @@
       "subtests": [
         {
           "name": "Cloning objects with getter properties",
-          "status": "FAIL",
-          "message": "assert_unreached: Reached unreachable code(stack: assert@http://w3c-test.org/resources/testharness.js:1738:42\nassert_unreached@http://w3c-test.org/resources/testharness.js:692:16\nhttp://w3c-test.org/webmessaging/without-ports/026.html:9:78\nstep@http://w3c-test.org/resources/testharness.js:798:30\nhttp://w3c-test.org/resources/testharness.js:827:40\npostMessage@[native code]\nhttp://w3c-test.org/webmessaging/without-ports/026.html:12:18\nassert_throws@http://w3c-test.org/resources/testharness.js:582:22\nhttp://w3c-test.org/webmessaging/without-ports/026.html:11:17\nstep@http://w3c-test.org/resources/testharness.js:798:30\nasync_test@http://w3c-test.org/resources/testharness.js:90:26\nglobal code@http://w3c-test.org/webmessaging/without-ports/026.html:7:11)"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1184,7 +1184,19 @@
         {
           "name": "Cloning objects, preserving sharing #2",
           "status": "FAIL",
-          "message": "assert_equals: expected object \"[object ImageData]\" but got object \"[object ImageData]\"(stack: assert@http://w3c-test.org/resources/testharness.js:1738:42\nassert_equals@http://w3c-test.org/resources/testharness.js:335:15\nhttp://w3c-test.org/webmessaging/without-ports/028.html:16:18\nstep@http://w3c-test.org/resources/testharness.js:798:30\nhttp://w3c-test.org/resources/testharness.js:827:40)"
+          "message": "assert_equals: expected object \"[object ImageData]\" but got object \"[object ImageData]\"(stack: assert@http://web-platform.test:8000/resources/testharness.js:1738:42\nassert_equals@http://web-platform.test:8000/resources/testharness.js:335:15\nhttp://web-platform.test:8000/webmessaging/without-ports/028.html:16:18\nstep@http://web-platform.test:8000/resources/testharness.js:798:30\nhttp://web-platform.test:8000/resources/testharness.js:827:40)"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webmessaging/without-ports/029.html",
+      "subtests": [
+        {
+          "name": "Check that getters don't linger after deletion wrt cloning",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",

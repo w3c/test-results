@@ -83,7 +83,7 @@
         {
           "name": "Test Description: The postMessage() method - Make new ports into a read only array.",
           "status": "FAIL",
-          "message": "MessagePortList doesn't have an indexed property setter.(stack: TestMessageEvent@http://w3c-test.org/webmessaging/Channel_postMessage_ports_readonly_array.htm:30:9\nTest.prototype.step@http://w3c-test.org/resources/testharness.js:798:20\nTest.prototype.step_func/<@http://w3c-test.org/resources/testharness.js:827:1\n)"
+          "message": "MessagePortList doesn't have an indexed property setter.(stack: TestMessageEvent@http://web-platform.test:8000/webmessaging/Channel_postMessage_ports_readonly_array.htm:30:9\nTest.prototype.step@http://web-platform.test:8000/resources/testharness.js:798:20\nTest.prototype.step_func/<@http://web-platform.test:8000/resources/testharness.js:827:1\n)"
         }
       ],
       "status": "OK",
@@ -742,7 +742,7 @@
         {
           "name": "null ports",
           "status": "FAIL",
-          "message": "Argument 3 of Window.postMessage can't be converted to a sequence.(stack: @http://w3c-test.org/webmessaging/with-ports/023.html:8:3\nTest.prototype.step@http://w3c-test.org/resources/testharness.js:798:20\nasync_test@http://w3c-test.org/resources/testharness.js:90:13\n@http://w3c-test.org/webmessaging/with-ports/023.html:7:1\n)"
+          "message": "Argument 3 of Window.postMessage can't be converted to a sequence.(stack: @http://web-platform.test:8000/webmessaging/with-ports/023.html:8:3\nTest.prototype.step@http://web-platform.test:8000/resources/testharness.js:798:20\nasync_test@http://web-platform.test:8000/resources/testharness.js:90:13\n@http://web-platform.test:8000/webmessaging/with-ports/023.html:7:1\n)"
         }
       ],
       "status": "OK",
@@ -765,8 +765,8 @@
       "subtests": [
         {
           "name": "1 as ports",
-          "status": "FAIL",
-          "message": "Argument 3 of Window.postMessage can't be converted to a sequence.(stack: @http://w3c-test.org/webmessaging/with-ports/025.html:8:3\nTest.prototype.step@http://w3c-test.org/resources/testharness.js:798:20\nasync_test@http://w3c-test.org/resources/testharness.js:90:13\n@http://w3c-test.org/webmessaging/with-ports/025.html:7:1\n)"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -777,8 +777,8 @@
       "subtests": [
         {
           "name": "object with length as transferable",
-          "status": "FAIL",
-          "message": "Argument 3 of Window.postMessage can't be converted to a sequence.(stack: @http://w3c-test.org/webmessaging/with-ports/026.html:8:1\nTest.prototype.step@http://w3c-test.org/resources/testharness.js:798:20\nasync_test@http://w3c-test.org/resources/testharness.js:90:13\n@http://w3c-test.org/webmessaging/with-ports/026.html:7:1\n)"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -790,7 +790,7 @@
         {
           "name": "message channel as ports",
           "status": "FAIL",
-          "message": "Argument 3 of Window.postMessage can't be converted to a sequence.(stack: @http://w3c-test.org/webmessaging/with-ports/027.html:12:3\nTest.prototype.step@http://w3c-test.org/resources/testharness.js:798:20\nasync_test@http://w3c-test.org/resources/testharness.js:90:13\n@http://w3c-test.org/webmessaging/with-ports/027.html:7:1\n)"
+          "message": "Argument 3 of Window.postMessage can't be converted to a sequence.(stack: @http://web-platform.test:8000/webmessaging/with-ports/027.html:12:3\nTest.prototype.step@http://web-platform.test:8000/resources/testharness.js:798:20\nasync_test@http://web-platform.test:8000/resources/testharness.js:90:13\n@http://web-platform.test:8000/webmessaging/with-ports/027.html:7:1\n)"
         }
       ],
       "status": "OK",
@@ -885,8 +885,8 @@
       "subtests": [
         {
           "name": "just one argument",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    postMessage('');\n  }\" threw object \"TypeError: Not enough arguments to Window.postMessage.\" that is not a DOMException NOT_SUPPORTED_ERR: property \"code\" is equal to undefined, expected 9"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -897,8 +897,8 @@
       "subtests": [
         {
           "name": "zero arguments",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    postMessage();\n  }\" threw object \"TypeError: Not enough arguments to Window.postMessage.\" that is not a DOMException NOT_SUPPORTED_ERR: property \"code\" is equal to undefined, expected 9"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1159,8 +1159,8 @@
       "subtests": [
         {
           "name": "Cloning objects with getter properties",
-          "status": "FAIL",
-          "message": "assert_unreached: Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1185,6 +1185,18 @@
           "name": "Cloning objects, preserving sharing #2",
           "status": "FAIL",
           "message": "assert_equals: expected object \"[object Uint8ClampedArray]\" but got object \"[object ImageData]\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webmessaging/without-ports/029.html",
+      "subtests": [
+        {
+          "name": "Check that getters don't linger after deletion wrt cloning",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",

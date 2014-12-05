@@ -765,8 +765,8 @@
       "subtests": [
         {
           "name": "1 as ports",
-          "status": "FAIL",
-          "message": "Failed to execute 'postMessage' on 'Window': The 3rd argument is neither an array, nor does it have indexed properties.(stack: TypeError: Failed to execute 'postMessage' on 'Window': The 3rd argument is neither an array, nor does it have indexed properties.\n    at TypeError (native)\n    at Object.<anonymous> (http://w3c-test.org/webmessaging/with-ports/025.html:8:3)\n    at Object.Test.step (http://w3c-test.org/resources/testharness.js:798:25)\n    at async_test (http://w3c-test.org/resources/testharness.js:90:22)\n    at http://w3c-test.org/webmessaging/with-ports/025.html:7:1)"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -778,7 +778,7 @@
         {
           "name": "object with length as transferable",
           "status": "FAIL",
-          "message": "Failed to execute 'postMessage' on 'Window': Value at index 0 is an untransferable 'undefined' value.(stack: Error: Failed to execute 'postMessage' on 'Window': Value at index 0 is an untransferable 'undefined' value.\n    at Error (native)\n    at Object.<anonymous> (http://w3c-test.org/webmessaging/with-ports/026.html:8:3)\n    at Object.Test.step (http://w3c-test.org/resources/testharness.js:798:25)\n    at async_test (http://w3c-test.org/resources/testharness.js:90:22)\n    at http://w3c-test.org/webmessaging/with-ports/026.html:7:1)"
+          "message": "assert_throws: function \"function () {\n      postMessage('', '*', {length:1});\n   }\" threw object \"DataCloneError: Failed to execute 'postMessage' on 'Windo...\" (\"DataCloneError\") expected object \"TypeError\" (\"TypeError\")"
         }
       ],
       "status": "OK",
@@ -886,7 +886,7 @@
         {
           "name": "just one argument",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    postMessage('');\n  }\" threw object \"SyntaxError: Failed to execute 'postMessage' on 'Window':...\" that is not a DOMException NOT_SUPPORTED_ERR: property \"code\" is equal to 12, expected 9"
+          "message": "assert_throws: function \"function () {\n    postMessage('');\n  }\" threw object \"SyntaxError: Failed to execute 'postMessage' on 'Window':...\" (\"SyntaxError\") expected object \"TypeError\" (\"TypeError\")"
         }
       ],
       "status": "OK",
@@ -898,7 +898,7 @@
         {
           "name": "zero arguments",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    postMessage();\n  }\" threw object \"SyntaxError: Failed to execute 'postMessage' on 'Window':...\" that is not a DOMException NOT_SUPPORTED_ERR: property \"code\" is equal to 12, expected 9"
+          "message": "assert_throws: function \"function () {\n    postMessage();\n  }\" threw object \"SyntaxError: Failed to execute 'postMessage' on 'Window':...\" (\"SyntaxError\") expected object \"TypeError\" (\"TypeError\")"
         }
       ],
       "status": "OK",
@@ -1159,8 +1159,8 @@
       "subtests": [
         {
           "name": "Cloning objects with getter properties",
-          "status": "FAIL",
-          "message": "assert_unreached: Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1183,6 +1183,18 @@
       "subtests": [
         {
           "name": "Cloning objects, preserving sharing #2",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webmessaging/without-ports/029.html",
+      "subtests": [
+        {
+          "name": "Check that getters don't linger after deletion wrt cloning",
           "status": "PASS",
           "message": null
         }
