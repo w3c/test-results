@@ -147,8 +147,8 @@
       "subtests": [
         {
           "name": "Test Description: event.origin returns the origin of the message.",
-          "status": "FAIL",
-          "message": "assert_array_equals: ActualResult property 1, expected \"http://www.w3c-test.org:80\" but got \"http://www.w3c-test.org\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -187,9 +187,9 @@
       "test": "/webmessaging/event.source.xorigin.sub.htm",
       "subtests": [
         {
-          "name": "Test Description: Corss-origin: event.source returns the WindowProxy of the source window.",
-          "status": "FAIL",
-          "message": "assert_array_equals: ActualResult property 0, expected \"http://www1.w3c-test.org:80\" but got \"http://www1.w3c-test.org\""
+          "name": "Test Description: Cross-origin: event.source returns the WindowProxy of the source window.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -265,11 +265,11 @@
       "subtests": [
         {
           "name": "Test Description: Messages can contain JavaScript values (e.g., Dates).",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -347,8 +347,8 @@
       "subtests": [
         {
           "name": "Test Description: To send the message to the target regardless of origin, set the target origin to '*'.",
-          "status": "FAIL",
-          "message": "assert_array_equals: ActualResult property 1, expected \"http://www.w3c-test.org:80\" but got \"http://www.w3c-test.org\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -407,8 +407,8 @@
       "subtests": [
         {
           "name": "Test Description: Cross-origin: If the origin of the target window doesn't match the given origin, the message is discarded.",
-          "status": "FAIL",
-          "message": "assert_array_equals: ActualResult property 1, expected \"http://www1.w3c-test.org:80/\" but got \"http://www1.w3c-test.org\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -582,13 +582,13 @@
         },
         {
           "name": "array",
-          "status": "FAIL",
-          "message": "assert_array_equals: array property 8, expected true but got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "object",
-          "status": "FAIL",
-          "message": "assert_equals: object expected true but got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "error",
@@ -670,7 +670,7 @@
         {
           "name": "origin of the script that invoked the method, data:",
           "status": "FAIL",
-          "message": "Permission denied"
+          "message": "没有权限"
         }
       ],
       "status": "OK",
@@ -742,7 +742,7 @@
         {
           "name": "null ports",
           "status": "FAIL",
-          "message": "Unable to get property 'length' of undefined or null reference(stack: TypeError: Unable to get property 'length' of undefined or null reference\n   at assert_array_equals (http://w3c-test.org/resources/testharness.js:396:9)\n   at Anonymous function (http://w3c-test.org/webmessaging/with-ports/023.html:10:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+          "message": "无法获取未定义或 null 引用的属性“length”(stack: TypeError: 无法获取未定义或 null 引用的属性“length”\n   at assert_array_equals (http://w3c-test.org/resources/testharness.js:769:9)\n   at Anonymous function (http://w3c-test.org/webmessaging/with-ports/023.html:10:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:1176:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:1205:13))"
         }
       ],
       "status": "OK",
@@ -754,7 +754,7 @@
         {
           "name": "undefined as ports",
           "status": "FAIL",
-          "message": "Unable to get property 'length' of undefined or null reference(stack: TypeError: Unable to get property 'length' of undefined or null reference\n   at assert_array_equals (http://w3c-test.org/resources/testharness.js:396:9)\n   at Anonymous function (http://w3c-test.org/webmessaging/with-ports/024.html:10:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+          "message": "无法获取未定义或 null 引用的属性“length”(stack: TypeError: 无法获取未定义或 null 引用的属性“length”\n   at assert_array_equals (http://w3c-test.org/resources/testharness.js:769:9)\n   at Anonymous function (http://w3c-test.org/webmessaging/with-ports/024.html:10:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:1176:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:1205:13))"
         }
       ],
       "status": "OK",
@@ -766,7 +766,7 @@
         {
           "name": "1 as ports",
           "status": "FAIL",
-          "message": "DataCloneError"
+          "message": "assert_throws: function \"function() {\n      postMessage('', '*', 1);\n   }\" threw object \"DataCloneError\" (\"DataCloneError\") expected object \"TypeError\" (\"TypeError\")"
         }
       ],
       "status": "OK",
@@ -778,7 +778,7 @@
         {
           "name": "object with length as transferable",
           "status": "FAIL",
-          "message": "DataCloneError"
+          "message": "assert_throws: function \"function() {\n      postMessage('', '*', {length:1});\n   }\" threw object \"DataCloneError\" (\"DataCloneError\") expected object \"TypeError\" (\"TypeError\")"
         }
       ],
       "status": "OK",
@@ -790,7 +790,7 @@
         {
           "name": "message channel as ports",
           "status": "FAIL",
-          "message": "Unable to get property 'length' of undefined or null reference(stack: TypeError: Unable to get property 'length' of undefined or null reference\n   at Anonymous function (http://w3c-test.org/webmessaging/with-ports/027.html:14:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+          "message": "无法获取未定义或 null 引用的属性“length”(stack: TypeError: 无法获取未定义或 null 引用的属性“length”\n   at Anonymous function (http://w3c-test.org/webmessaging/with-ports/027.html:14:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:1176:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:1205:13))"
         }
       ],
       "status": "OK",
@@ -885,8 +885,8 @@
       "subtests": [
         {
           "name": "just one argument",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n    postMessage('');\n  }\" threw object \"TypeError: Argument not optional\" that is not a DOMException NOT_SUPPORTED_ERR: property \"code\" is equal to undefined, expected 9"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -897,8 +897,8 @@
       "subtests": [
         {
           "name": "zero arguments",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() {\n    postMessage();\n  }\" threw object \"TypeError: Argument not optional\" that is not a DOMException NOT_SUPPORTED_ERR: property \"code\" is equal to undefined, expected 9"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -964,13 +964,13 @@
         },
         {
           "name": "array",
-          "status": "FAIL",
-          "message": "assert_array_equals: array property 8, expected true but got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "object",
-          "status": "FAIL",
-          "message": "assert_equals: object expected true but got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "error",
@@ -1052,7 +1052,7 @@
         {
           "name": "origin of the script that invoked the method, data:",
           "status": "FAIL",
-          "message": "Permission denied"
+          "message": "没有权限"
         }
       ],
       "status": "OK",
@@ -1064,7 +1064,7 @@
         {
           "name": "origin of the script that invoked the method, about:blank",
           "status": "FAIL",
-          "message": "Unable to get property 'length' of undefined or null reference(stack: TypeError: Unable to get property 'length' of undefined or null reference\n   at assert_array_equals (http://w3c-test.org/resources/testharness.js:396:9)\n   at Anonymous function (http://w3c-test.org/webmessaging/without-ports/017.html:12:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+          "message": "无法获取未定义或 null 引用的属性“length”(stack: TypeError: 无法获取未定义或 null 引用的属性“length”\n   at assert_array_equals (http://w3c-test.org/resources/testharness.js:769:9)\n   at Anonymous function (http://w3c-test.org/webmessaging/without-ports/017.html:12:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:1176:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:1205:13))"
         }
       ],
       "status": "OK",
@@ -1088,7 +1088,7 @@
         {
           "name": "origin of the script that invoked the method, scheme/host/port",
           "status": "FAIL",
-          "message": "Unable to get property 'length' of undefined or null reference(stack: TypeError: Unable to get property 'length' of undefined or null reference\n   at assert_array_equals (http://w3c-test.org/resources/testharness.js:396:9)\n   at Anonymous function (http://w3c-test.org/webmessaging/without-ports/019.html:12:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:798:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:827:13))"
+          "message": "无法获取未定义或 null 引用的属性“length”(stack: TypeError: 无法获取未定义或 null 引用的属性“length”\n   at assert_array_equals (http://w3c-test.org/resources/testharness.js:769:9)\n   at Anonymous function (http://w3c-test.org/webmessaging/without-ports/019.html:12:5)\n   at Test.prototype.step (http://w3c-test.org/resources/testharness.js:1176:13)\n   at Anonymous function (http://w3c-test.org/resources/testharness.js:1205:13))"
         }
       ],
       "status": "OK",
@@ -1159,8 +1159,8 @@
       "subtests": [
         {
           "name": "Cloning objects with getter properties",
-          "status": "FAIL",
-          "message": "assert_unreached: Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1183,6 +1183,18 @@
       "subtests": [
         {
           "name": "Cloning objects, preserving sharing #2",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webmessaging/without-ports/029.html",
+      "subtests": [
+        {
+          "name": "Check that getters don't linger after deletion wrt cloning",
           "status": "PASS",
           "message": null
         }
