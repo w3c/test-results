@@ -10,6 +10,7 @@ To browse particular test results, visit the following:
 * `http://w3c.github.io/test-results/SHORTNAME/less-than-2.html`
 
 …where `SHORTNAME` is a subdirectory name from https://github.com/w3c/test-results.
+
 For example, http://w3c.github.io/test-results/webmessaging/all.html
 
 To add new tests results:
