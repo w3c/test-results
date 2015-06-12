@@ -1,1276 +1,858 @@
 {
   "ua": [
-    "Ch44",
-    "FF40"
+    "Ch45",
+    "FF38",
+    "IE11"
   ],
   "results": {
-    "/webstorage/builtins.html": {
-      "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
-      },
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Builtins in localStorage": {
-          "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "Builtins in sessionStorage": {
-          "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        }
-      }
-    },
-    "/webstorage/clear.html": {
-      "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
-      },
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Clear in localStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Clear in sessionStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
     "/webstorage/event_constructor.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "TIMEOUT"
       },
       "totals": {
-        "OK": 2
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
-        "Web Storage": {
+        "The initial values of storage event properties.": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "storageeventinit test": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "NOTRUN"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "NOTRUN": 1
           }
         }
       }
     },
-    "/webstorage/event_constructor_js.html": {
+    "/webstorage/event_constructor_eventinit.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "TIMEOUT"
       },
       "totals": {
-        "OK": 2
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
-        "Web Storage": {
+        "Construct StorageEvent with StorageEventInit.": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "StorageEvent constructor and nulls": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "NOTRUN"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "NOTRUN": 1
           }
         }
       }
     },
     "/webstorage/event_local_key.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "key property test of local event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Local event is fired due to an invocation of the setItem(), clear() methods.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/event_local_newvalue.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "newValue property test of local event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Local event is fired due to an invocation of the setItem(), clear() methods.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/event_local_oldvalue.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "oldValue property test of local event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Local event is fired due to an invocation of the setItem(), clear() methods.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "OK"
+          },
+          "totals": {
+            "PASS": 2,
+            "OK": 1
           }
         }
       }
     },
     "/webstorage/event_local_storagearea.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "storageArea property test of local event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
+          }
+        },
+        "Local event is fired due to an invocation of the setItem() method.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/event_local_storageeventinit.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "TIMEOUT"
       },
       "totals": {
-        "OK": 2
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
-        "Web Storage": {
+        "Storage event is fired due to set values for StorageEventInit.": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "storageeventinit test": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "NOTRUN"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "NOTRUN": 1
           }
         }
       }
     },
     "/webstorage/event_local_url.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "url property test of local event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Local event is fired due to an invocation of the setItem() method.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/event_session_key.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "key property test of session event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Session event is fired due to an invocation of the setItem(), clear() methods.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/event_session_newvalue.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "newvalue property test of session event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Session event is fired due to an invocation of the setItem(), clear() methods.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/event_session_oldvalue.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "oldvalue property test of session event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Session event is fired due to an invocation of the setItem(), clear() methods.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/event_session_storagearea.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "storageArea property test of session event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
+          }
+        },
+        "Session event is fired due to an invocation of the setItem() method.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/event_session_storageeventinit.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "TIMEOUT"
       },
       "totals": {
-        "OK": 2
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
-        "Web Storage": {
+        "Storage event is fired due to set values for StorageEventInit.": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "storageeventinit test": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "NOTRUN"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "NOTRUN": 1
           }
         }
       }
     },
     "/webstorage/event_session_url.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
         "url property test of session event": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/webstorage/getitem.html": {
-      "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
-      },
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Builtins in localStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
-        "All items should be added to localStorage.": {
+        "Session event is fired due to an invocation of the setItem() method.": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
-          }
-        },
-        "Named access to localStorage should be correct": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.getItem should be correct": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Builtins in sessionStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "All items should be added to sessionStorage.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Named access to sessionStorage should be correct": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.getItem should be correct": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/idlharness.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "Window interface: attribute sessionStorage": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "Window interface: attribute localStorage": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "Storage interface: existence and properties of interface object": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface object length": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface: existence and properties of interface prototype object": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
             "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "Storage interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "Storage interface: attribute length": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "Storage interface: operation key(unsigned long)": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "Storage interface: operation getItem(DOMString)": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "Storage interface: operation setItem(DOMString,DOMString)": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "Storage interface: operation removeItem(DOMString)": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "Storage interface: operation clear()": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "PASS": 1
           }
         },
         "Storage must be primary interface of window.localStorage": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "Stringification of window.localStorage": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "Storage interface: window.localStorage must inherit property \"length\" with the proper type (0)": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 3
           }
         },
         "Storage interface: window.localStorage must inherit property \"key\" with the proper type (1)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface: calling key(unsigned long) on window.localStorage with too few arguments must throw TypeError": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface: window.localStorage must inherit property \"getItem\" with the proper type (2)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface: calling getItem(DOMString) on window.localStorage with too few arguments must throw TypeError": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface: window.localStorage must inherit property \"setItem\" with the proper type (3)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface: calling setItem(DOMString,DOMString) on window.localStorage with too few arguments must throw TypeError": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface: window.localStorage must inherit property \"removeItem\" with the proper type (4)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface: calling removeItem(DOMString) on window.localStorage with too few arguments must throw TypeError": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Storage interface: window.localStorage must inherit property \"clear\" with the proper type (5)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "StorageEvent interface: existence and properties of interface object": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "StorageEvent interface object length": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "StorageEvent interface: existence and properties of interface prototype object": {
           "byUA": {
-            "Ch44": "FAIL",
-            "FF40": "PASS"
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
             "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "StorageEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "StorageEvent interface: attribute key": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "StorageEvent interface: attribute oldValue": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "StorageEvent interface: attribute newValue": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "StorageEvent interface: attribute url": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "StorageEvent interface: attribute storageArea": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/webstorage/in.html": {
-      "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
-      },
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "The in operator in localStorage: property access": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "The in operator in localStorage: method access": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "The in operator in sessionStorage: property access": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "The in operator in sessionStorage: method access": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/webstorage/indexing.html": {
-      "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
-      },
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Indexed getter on localStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Getting number properties on localStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Getting number-valued string properties on localStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Getting existing number-valued properties on localStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Indexed getter on sessionStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Getting number properties on sessionStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Getting number-valued string properties on sessionStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Getting existing number-valued properties on sessionStorage": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/webstorage/key.html": {
-      "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
-      },
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "localStorage.key": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key(0) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key(4294967296) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key(1) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key(4294967297) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key(2) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key(4294967298) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key(3) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key(4294967299) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key() should return null for out-of-range arguments.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.key with value changes": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key(0) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key(4294967296) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key(1) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key(4294967297) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key(2) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key(4294967298) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key(3) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key(4294967299) should return the right thing.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key() should return null for out-of-range arguments.": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.key with value changes": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/webstorage/length.html": {
-      "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
-      },
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "localStorage.length (method access)": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "localStorage.length (proprty access)": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.length (method access)": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "sessionStorage.length (proprty access)": {
-          "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
-          },
-          "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/missing_arguments.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "Should throw TypeError for function \"function () { localStorage.key(); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1278,8 +860,8 @@
         },
         "Should throw TypeError for function \"function () { localStorage.getItem(); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1287,8 +869,8 @@
         },
         "Should throw TypeError for function \"function () { localStorage.setItem(); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1296,8 +878,8 @@
         },
         "Should throw TypeError for function \"function () { localStorage.setItem(\"a\"); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1305,8 +887,8 @@
         },
         "Should throw TypeError for function \"function () { localStorage.removeItem(); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1314,8 +896,8 @@
         },
         "Should throw TypeError for function \"function () { sessionStorage.key(); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1323,8 +905,8 @@
         },
         "Should throw TypeError for function \"function () { sessionStorage.getItem(); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1332,8 +914,8 @@
         },
         "Should throw TypeError for function \"function () { sessionStorage.setItem(); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1341,8 +923,8 @@
         },
         "Should throw TypeError for function \"function () { sessionStorage.setItem(\"a\"); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1350,8 +932,8 @@
         },
         "Should throw TypeError for function \"function () { sessionStorage.removeItem(); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
@@ -1359,359 +941,1144 @@
         },
         "Should throw TypeError for function \"function () { new StorageEvent(); }\".": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS"
           },
           "totals": {
             "PASS": 2
           }
+        },
+        "Should throw TypeError for function \"function() { localStorage.key(); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { localStorage.getItem(); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { localStorage.setItem(); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { localStorage.setItem(\"a\"); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { localStorage.removeItem(); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { sessionStorage.key(); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { sessionStorage.getItem(); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { sessionStorage.setItem(); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { sessionStorage.setItem(\"a\"); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { sessionStorage.removeItem(); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "Should throw TypeError for function \"function() { new StorageEvent(); }\".": {
+          "byUA": {
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
         }
       }
     },
-    "/webstorage/removeitem.html": {
+    "/webstorage/storage_builtins.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
+      },
+      "subtests": {
+        "Builtins in localStorage": {
+          "byUA": {
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 1
+          }
+        },
+        "Builtins in sessionStorage": {
+          "byUA": {
+            "Ch45": "FAIL",
+            "FF38": "PASS",
+            "IE11": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/webstorage/storage_clear.html": {
+      "byUA": {
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "Clear in localStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Clear in sessionStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/webstorage/storage_getitem.html": {
+      "byUA": {
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "Get value by getIten(key) and named access in localStorage.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "All items should be added to localStorage.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Named access to localStorage should be correct": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.getItem should be correct": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Get value by getIten(key) and named access in sessionStorage.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "All items should be added to sessionStorage.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Named access to sessionStorage should be correct": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.getItem should be correct": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/webstorage/storage_in.html": {
+      "byUA": {
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "The in operator in localStorage: property access": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "The in operator in localStorage: method access": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "The in operator in sessionStorage: property access": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "The in operator in sessionStorage: method access": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/webstorage/storage_indexing.html": {
+      "byUA": {
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "Indexed getter on localStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Getting number properties on localStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Getting number-valued string properties on localStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Getting existing number-valued properties on localStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Indexed getter on sessionStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Getting number properties on sessionStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Getting number-valued string properties on sessionStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Getting existing number-valued properties on sessionStorage": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/webstorage/storage_key.html": {
+      "byUA": {
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "localStorage.key": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key(0) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key(4294967296) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key(1) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key(4294967297) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key(2) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key(4294967298) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key(3) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key(4294967299) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key() should return null for out-of-range arguments.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.key with value changes": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key(0) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key(4294967296) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key(1) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key(4294967297) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key(2) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key(4294967298) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key(3) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key(4294967299) should return the right thing.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key() should return null for out-of-range arguments.": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key with value changes": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/webstorage/storage_key_empty_string.html": {
+      "byUA": {
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "localStorage.key with empty string": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.key with empty string": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/webstorage/storage_length.html": {
+      "byUA": {
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "localStorage.length (method access)": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "localStorage.length (proprty access)": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.length (method access)": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "sessionStorage.length (proprty access)": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/webstorage/storage_removeitem.html": {
+      "byUA": {
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
+      },
+      "totals": {
+        "OK": 3
       },
       "subtests": {
         "localStorage.removeItem()": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "delete localStorage[]": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage.removeItem(null)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage.removeItem(undefined)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage.removeItem()": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "delete sessionStorage[]": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage.removeItem(null)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage.removeItem(undefined)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
-    "/webstorage/setitem.html": {
+    "/webstorage/storage_set_value_enumerate.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
+      },
+      "subtests": {
+        "enumerate a localStorage object with the key and get the values": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "enumerate a sessionStorage object with the key and get the values": {
+          "byUA": {
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/webstorage/storage_setitem.html": {
+      "byUA": {
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
+      },
+      "totals": {
+        "OK": 3
       },
       "subtests": {
         "localStorage.setItem()": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage[]": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage[] update": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage.setItem(_, null)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage[] = null": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage.setItem(_, undefined)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage[] = undefined": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage.setItem({ throws })": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage[] = { throws }": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "localStorage.setItem(undefined, _)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage[undefined]": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage.setItem(null, _)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "localStorage[null]": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage.setItem()": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage[]": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage[] update": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage.setItem(_, null)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage[] = null": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage.setItem(_, undefined)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage[] = undefined": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage.setItem({ throws })": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage[] = { throws }": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "sessionStorage.setItem(undefined, _)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage[undefined]": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage.setItem(null, _)": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "sessionStorage[null]": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "PASS"
+            "Ch45": "PASS",
+            "FF38": "PASS",
+            "IE11": "PASS"
           },
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
     "/webstorage/storage_local_setitem_quotaexceedederr.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "OK"
+        "Ch45": "OK",
+        "FF38": "OK",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
-        "Web Storage": {
+        "Throws QuotaExceededError when the quota of 800 has been exceeded": {
           "byUA": {
-            "Ch44": "PASS",
-            "FF40": "FAIL"
+            "Ch45": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
             "PASS": 1,
+            "FAIL": 1
+          }
+        },
+        "Web Storage": {
+          "byUA": {
+            "FF38": "FAIL"
+          },
+          "totals": {
             "FAIL": 1
           }
         }
@@ -1719,20 +2086,23 @@
     },
     "/webstorage/storage_session_setitem_quotaexceedederr.html": {
       "byUA": {
-        "Ch44": "OK",
-        "FF40": "TIMEOUT"
+        "Ch45": "OK",
+        "FF38": "TIMEOUT",
+        "IE11": "OK"
       },
       "totals": {
-        "OK": 1,
+        "OK": 2,
         "TIMEOUT": 1
       },
       "subtests": {
-        "Web Storage": {
+        "Throws QuotaExceededError when the quota of 800 has been exceeded": {
           "byUA": {
-            "Ch44": "PASS"
+            "Ch45": "PASS",
+            "IE11": "FAIL"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 1,
+            "FAIL": 1
           }
         }
       }
