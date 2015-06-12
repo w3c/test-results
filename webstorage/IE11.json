@@ -1,46 +1,12 @@
 {
   "results": [
     {
-      "test": "/webstorage/builtins.html",
-      "subtests": [
-        {
-          "name": "Builtins in localStorage",
-          "status": "FAIL",
-          "message": "assert_array_equals: b property 0, expected function \"\nfunction key() {\n    [native code]\n}\n\" but got \"key\""
-        },
-        {
-          "name": "Builtins in sessionStorage",
-          "status": "FAIL",
-          "message": "assert_array_equals: b property 0, expected function \"\nfunction key() {\n    [native code]\n}\n\" but got \"key\""
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/webstorage/clear.html",
-      "subtests": [
-        {
-          "name": "Clear in localStorage",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "Clear in sessionStorage",
-          "status": "FAIL",
-          "message": "缺少函数"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
       "test": "/webstorage/event_constructor.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "The initial values of storage event properties.",
           "status": "FAIL",
-          "message": "对象不支持此操作"
+          "message": "Object doesn't support this action"
         },
         {
           "name": "storageeventinit test",
@@ -52,12 +18,12 @@
       "message": null
     },
     {
-      "test": "/webstorage/event_constructor_js.html",
+      "test": "/webstorage/event_constructor_eventinit.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "Construct StorageEvent with StorageEventInit.",
           "status": "FAIL",
-          "message": "对象不支持此操作"
+          "message": "Object doesn't support this action"
         },
         {
           "name": "StorageEvent constructor and nulls",
@@ -72,9 +38,14 @@
       "test": "/webstorage/event_local_key.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "key property test of local event",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_equals: expected \"name\" but got \"\""
+        },
+        {
+          "name": "Local event is fired due to an invocation of the setItem(), clear() methods.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -84,9 +55,14 @@
       "test": "/webstorage/event_local_newvalue.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "newValue property test of local event",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_equals: expected \"user1\" but got \"\""
+        },
+        {
+          "name": "Local event is fired due to an invocation of the setItem(), clear() methods.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -96,9 +72,14 @@
       "test": "/webstorage/event_local_oldvalue.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "oldValue property test of local event",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_equals: expected (object) null but got (string) \"\""
+        },
+        {
+          "name": "Local event is fired due to an invocation of the setItem(), clear() methods.",
+          "status": "OK",
+          "message": null
         }
       ],
       "status": "OK",
@@ -108,9 +89,14 @@
       "test": "/webstorage/event_local_storagearea.html",
       "subtests": [
         {
-          "name": "Web Storage",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "name": "storageArea property test of local event",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Local event is fired due to an invocation of the setItem() method.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -120,9 +106,9 @@
       "test": "/webstorage/event_local_storageeventinit.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "Storage event is fired due to set values for StorageEventInit.",
           "status": "FAIL",
-          "message": "对象不支持此操作"
+          "message": "Object doesn't support this action"
         },
         {
           "name": "storageeventinit test",
@@ -137,9 +123,14 @@
       "test": "/webstorage/event_local_url.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "url property test of local event",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_equals: expected \"http://localhost:8080/webstorage/iframe/local_set_item_iframe.html\" but got \"http://localhost:8080/webstorage/event_local_url.html\""
+        },
+        {
+          "name": "Local event is fired due to an invocation of the setItem() method.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -149,9 +140,14 @@
       "test": "/webstorage/event_session_key.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "key property test of session event",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_equals: expected \"name\" but got \"\""
+        },
+        {
+          "name": "Session event is fired due to an invocation of the setItem(), clear() methods.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -161,9 +157,14 @@
       "test": "/webstorage/event_session_newvalue.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "newvalue property test of session event",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_equals: expected \"user1\" but got \"\""
+        },
+        {
+          "name": "Session event is fired due to an invocation of the setItem(), clear() methods.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -173,9 +174,14 @@
       "test": "/webstorage/event_session_oldvalue.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "oldvalue property test of session event",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_equals: expected (object) null but got (string) \"\""
+        },
+        {
+          "name": "Session event is fired due to an invocation of the setItem(), clear() methods.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -185,26 +191,26 @@
       "test": "/webstorage/event_session_storagearea.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "storageArea property test of session event",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "storageArea property test of session event",
-          "status": "NOTRUN",
+          "name": "Session event is fired due to an invocation of the setItem() method.",
+          "status": "PASS",
           "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
       "test": "/webstorage/event_session_storageeventinit.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "Storage event is fired due to set values for StorageEventInit.",
           "status": "FAIL",
-          "message": "对象不支持此操作"
+          "message": "Object doesn't support this action"
         },
         {
           "name": "storageeventinit test",
@@ -219,26 +225,14 @@
       "test": "/webstorage/event_session_url.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "url property test of session event",
           "status": "FAIL",
-          "message": "缺少函数"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/webstorage/getitem.html",
-      "subtests": [
-        {
-          "name": "Builtins in localStorage",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_equals: expected \"http://w3c-test.org/webstorage/iframe/session_set_item_iframe.html\" but got \"http://w3c-test.org/webstorage/event_session_url.html\""
         },
         {
-          "name": "Builtins in sessionStorage",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "name": "Session event is fired due to an invocation of the setItem() method.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -417,104 +411,6 @@
       "message": null
     },
     {
-      "test": "/webstorage/in.html",
-      "subtests": [
-        {
-          "name": "The in operator in localStorage: property access",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "The in operator in localStorage: method access",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "The in operator in sessionStorage: property access",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "The in operator in sessionStorage: method access",
-          "status": "FAIL",
-          "message": "缺少函数"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/webstorage/indexing.html",
-      "subtests": [
-        {
-          "name": "Indexed getter on localStorage",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "Indexed getter on sessionStorage",
-          "status": "FAIL",
-          "message": "缺少函数"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/webstorage/key.html",
-      "subtests": [
-        {
-          "name": "localStorage.key",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "localStorage.key with value changes",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "sessionStorage.key",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "sessionStorage.key with value changes",
-          "status": "FAIL",
-          "message": "缺少函数"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/webstorage/length.html",
-      "subtests": [
-        {
-          "name": "localStorage.length (method access)",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "localStorage.length (proprty access)",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "sessionStorage.length (method access)",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "sessionStorage.length (proprty access)",
-          "status": "FAIL",
-          "message": "缺少函数"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
       "test": "/webstorage/missing_arguments.html",
       "subtests": [
         {
@@ -577,184 +473,517 @@
       "message": null
     },
     {
-      "test": "/webstorage/removeitem.html",
+      "test": "/webstorage/storage_builtins.html",
       "subtests": [
         {
-          "name": "localStorage.removeItem()",
+          "name": "Builtins in localStorage",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "Function expected"
         },
         {
-          "name": "delete localStorage[]",
+          "name": "Builtins in sessionStorage",
           "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "localStorage.removeItem(null)",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "localStorage.removeItem(undefined)",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "sessionStorage.removeItem()",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "delete sessionStorage[]",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "sessionStorage.removeItem(null)",
-          "status": "FAIL",
-          "message": "缺少函数"
-        },
-        {
-          "name": "sessionStorage.removeItem(undefined)",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_array_equals: b property 0, expected function \"\nfunction key() {\n    [native code]\n}\n\" but got \"key\""
         }
       ],
       "status": "OK",
       "message": null
     },
     {
-      "test": "/webstorage/setitem.html",
+      "test": "/webstorage/storage_clear.html",
+      "subtests": [
+        {
+          "name": "Clear in localStorage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Clear in sessionStorage",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webstorage/storage_getitem.html",
+      "subtests": [
+        {
+          "name": "Get value by getIten(key) and named access in localStorage.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "All items should be added to localStorage.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Named access to localStorage should be correct",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.getItem should be correct",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get value by getIten(key) and named access in sessionStorage.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "All items should be added to sessionStorage.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Named access to sessionStorage should be correct",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.getItem should be correct",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webstorage/storage_in.html",
+      "subtests": [
+        {
+          "name": "The in operator in localStorage: property access",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The in operator in localStorage: method access",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The in operator in sessionStorage: property access",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The in operator in sessionStorage: method access",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webstorage/storage_indexing.html",
+      "subtests": [
+        {
+          "name": "Indexed getter on localStorage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Getting number properties on localStorage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Getting number-valued string properties on localStorage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Getting existing number-valued properties on localStorage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Indexed getter on sessionStorage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Getting number properties on sessionStorage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Getting number-valued string properties on sessionStorage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Getting existing number-valued properties on sessionStorage",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webstorage/storage_key.html",
+      "subtests": [
+        {
+          "name": "localStorage.key",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key(0) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key(4294967296) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key(1) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key(4294967297) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key(2) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key(4294967298) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key(3) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key(4294967299) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key() should return null for out-of-range arguments.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.key with value changes",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key(0) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key(4294967296) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key(1) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key(4294967297) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key(2) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key(4294967298) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key(3) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key(4294967299) should return the right thing.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key() should return null for out-of-range arguments.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key with value changes",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webstorage/storage_key_empty_string.html",
+      "subtests": [
+        {
+          "name": "localStorage.key with empty string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.key with empty string",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webstorage/storage_length.html",
+      "subtests": [
+        {
+          "name": "localStorage.length (method access)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.length (proprty access)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.length (method access)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.length (proprty access)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webstorage/storage_removeitem.html",
+      "subtests": [
+        {
+          "name": "localStorage.removeItem()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "delete localStorage[]",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.removeItem(null)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "localStorage.removeItem(undefined)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.removeItem()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "delete sessionStorage[]",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.removeItem(null)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sessionStorage.removeItem(undefined)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webstorage/storage_set_value_enumerate.html",
+      "subtests": [
+        {
+          "name": "enumerate a localStorage object with the key and get the values",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "enumerate a sessionStorage object with the key and get the values",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webstorage/storage_setitem.html",
       "subtests": [
         {
           "name": "localStorage.setItem()",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage[]",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage[] update",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage.setItem(_, null)",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage[] = null",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage.setItem(_, undefined)",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage[] = undefined",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage.setItem({ throws })",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage[] = { throws }",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_throws: function \"function() { storage[\"age\"] = ...\" did not throw"
         },
         {
           "name": "localStorage.setItem(undefined, _)",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage[undefined]",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage.setItem(null, _)",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "localStorage[null]",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage.setItem()",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage[]",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage[] update",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage.setItem(_, null)",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage[] = null",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage.setItem(_, undefined)",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage[] = undefined",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage.setItem({ throws })",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage[] = { throws }",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "assert_throws: function \"function() { storage[\"age\"] = ...\" did not throw"
         },
         {
           "name": "sessionStorage.setItem(undefined, _)",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage[undefined]",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage.setItem(null, _)",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "sessionStorage[null]",
-          "status": "FAIL",
-          "message": "缺少函数"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -764,9 +993,9 @@
       "test": "/webstorage/storage_local_setitem_quotaexceedederr.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "Throws QuotaExceededError when the quota of 800 has been exceeded",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "Crashed"
         }
       ],
       "status": "OK",
@@ -776,9 +1005,9 @@
       "test": "/webstorage/storage_session_setitem_quotaexceedederr.html",
       "subtests": [
         {
-          "name": "Web Storage",
+          "name": "Throws QuotaExceededError when the quota of 800 has been exceeded",
           "status": "FAIL",
-          "message": "缺少函数"
+          "message": "Crashed"
         }
       ],
       "status": "OK",
