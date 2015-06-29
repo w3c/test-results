@@ -1,0 +1,1286 @@
+{
+  "results": [
+    {
+      "test": "/media-source/SourceBuffer-abort-readyState.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort() (video/webm; codecs=\"vorbis,vp8\") : If the readyState attribute of the parent media source is not in the \"open\" state then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" Reached unreachable code"
+        },
+        {
+          "name": "SourceBuffer#abort() (video/mp4) : If the readyState attribute of the parent media source is not in the \"open\" state then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/SourceBuffer-abort-removed.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort (video/webm; codecs=\"vorbis,vp8\") : if this object has been removed from the sourceBuffers attribute of the parent media source, then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" Reached unreachable code"
+        },
+        {
+          "name": "SourceBuffer#abort (video/mp4) : if this object has been removed from the sourceBuffers attribute of the parent media source, then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/SourceBuffer-abort-updating.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort() (video/webm; codecs=\"vorbis,vp8\") : Check the algorithm when the updating attribute is true.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" Reached unreachable code"
+        },
+        {
+          "name": "SourceBuffer#abort() (video/mp4) : Check the algorithm when the updating attribute is true.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/SourceBuffer-abort.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort() (video/webm; codecs=\"vorbis,vp8\"): Check the values of appendWindowStart and appendWindowEnd.",
+          "status": "FAIL",
+          "message": "assert_true: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer#abort() (video/mp4): Check the values of appendWindowStart and appendWindowEnd.",
+          "status": "FAIL",
+          "message": "assert_true: Browser doesn't support the MIME used in this test: video/mp4 expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/URL-createObjectURL-null.html",
+      "subtests": [
+        {
+          "name": "URL.createObjectURL(null)",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n        window.URL.createObjectURL(null);\n ...\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/URL-createObjectURL-revoke.html",
+      "subtests": [
+        {
+          "name": "Check revoking behavior of URL.revokeObjectURL(url).",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/URL-createObjectURL.html",
+      "subtests": [
+        {
+          "name": "URL.createObjectURL(mediaSource) should return a unique Blob URI.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/interfaces.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
+    },
+    {
+      "test": "/media-source/mediasource-addsourcebuffer.html",
+      "subtests": [
+        {
+          "name": "Test addSourceBuffer() in 'ended' state.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with empty type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with unsupported type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with Vorbis and VP8",
+          "status": "FAIL",
+          "message": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported expected true got false"
+        },
+        {
+          "name": "Test addSourceBuffer() with Vorbis and VP8 in separate SourceBuffers",
+          "status": "FAIL",
+          "message": "assert_true: video/webm;codecs=\"vp8\" is supported expected true got false"
+        },
+        {
+          "name": "Test addSourceBuffer() video only",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() audio only",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with AAC and H.264",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with AAC and H.264 in separate SourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() QuotaExceededError.",
+          "status": "FAIL",
+          "message": "assert_true: Reached SourceBuffer limit. expected true got false"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-append-buffer.html",
+      "subtests": [
+        {
+          "name": "Test SourceBuffer.appendBuffer() event dispatching.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test SourceBuffer.appendBuffer() call during a pending appendBuffer().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test SourceBuffer.abort() call during a pending appendBuffer().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test SourceBuffer.appendBuffer() triggering an 'ended' to 'open' transition.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test zero byte SourceBuffer.appendBuffer() call triggering an 'ended' to 'open' transition.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.removeSourceBuffer() call during a pending appendBuffer().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set MediaSource.duration during a pending appendBuffer() for one of its SourceBuffers.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.endOfStream() during a pending appendBuffer() for one of its SourceBuffers.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set SourceBuffer.timestampOffset during a pending appendBuffer().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending an empty ArrayBufferView.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending a neutered ArrayBufferView.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending an empty ArrayBuffer.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending a neutered ArrayBuffer.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appendBuffer with partial init segments.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 6.0756 but got 0"
+        },
+        {
+          "name": "Test appendBuffer with partial media segments.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 6.0756 but got 0"
+        },
+        {
+          "name": "Test abort in the middle of an initialization segment.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test abort after removing sourcebuffer.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test abort after readyState is ended following init segment and media segment.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test abort after appendBuffer update ends.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending after removeSourceBuffer().",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-appendwindow.html",
+      "subtests": [
+        {
+          "name": "Test correctly reset appendWindowStart and appendWindowEnd values",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set wrong values to appendWindowStart and appendWindowEnd.",
+          "status": "FAIL",
+          "message": "assert_throws: set appendWindowStart throws an exception for Number.NEGATIVE_INFINITY. function \"function () { sourceBuffer.appendWindowStart = Number.NEG...\" threw object \"Error: InvalidAccessError: DOM Exception 15\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test set correct values to appendWindowStart and appendWindowEnd.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appendwindow throw error when mediasource object is not associated with a sourebuffer.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set appendWindowStart and appendWindowEnd when source buffer updating.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appendWindowStart and appendWindowEnd value after a sourceBuffer.abort().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test read appendWindowStart and appendWindowEnd initial values.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-buffered.html",
+      "subtests": [
+        {
+          "name": "Demuxed content with different lengths",
+          "status": "FAIL",
+          "message": "assert_equals: mediaSource.activeSourceBuffers[1] expected \"{ [0.000, 2.000) }\" but got \"{ [0.067, 2.067) }\""
+        },
+        {
+          "name": "Muxed content with different lengths",
+          "status": "FAIL",
+          "message": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.000, 2.000) }\" but got \"{ [0.000, 2.067) }\""
+        },
+        {
+          "name": "Demuxed content with an empty buffered range on one SourceBuffer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Muxed content empty buffered ranges.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get buffered range when sourcebuffer is empty.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get buffered range when only init segment is appended.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get buffered range after removing sourcebuffer.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-closed.html",
+      "subtests": [
+        {
+          "name": "Test attribute values on a closed MediaSource object.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removeSourceBuffer() while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test endOfStream() while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test endOfStream(decode) while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test endOfStream(network) while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting duration while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting duration while open->closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test getting duration while open->closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test sourcebuffer.abort when closed.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-a-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 audio-only bitrate changes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-av-audio-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 audio bitrate changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "assert_false: updating expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-av-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 frame size changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "assert_false: updating expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-av-video-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video bitrate changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "assert_false: updating expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-v-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video-only bitrate changes.",
+          "status": "FAIL",
+          "message": "assert_false: updating expected false got true"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-v-framerate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video-only frame rate changes.",
+          "status": "FAIL",
+          "message": "assert_false: updating expected false got true"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-v-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video-only frame size changes.",
+          "status": "FAIL",
+          "message": "assert_false: updating expected false got true"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-a-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm audio-only bitrate changes.",
+          "status": "FAIL",
+          "message": "assert_true: audio/webm;codecs=\"vorbis\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-av-audio-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm audio bitrate changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-av-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests webm frame size changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-av-video-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm video bitrate changes in multiplexed content.",
+          "status": "FAIL",
+          "message": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-v-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm video-only bitrate changes.",
+          "status": "FAIL",
+          "message": "assert_true: video/webm;codecs=\"vp8\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-v-framerate.html",
+      "subtests": [
+        {
+          "name": "Tests webm video-only frame rate changes.",
+          "status": "FAIL",
+          "message": "assert_true: video/webm;codecs=\"vp8\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-v-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests webm video-only frame size changes.",
+          "status": "FAIL",
+          "message": "assert_true: video/webm;codecs=\"vp8\" is supported. expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-duration-boundaryconditions.html",
+      "subtests": [
+        {
+          "name": "Set duration to 2^31 - 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to Number.MAX_VALUE",
+          "status": "FAIL",
+          "message": "assert_equals: mediaSource.duration expected 1.7976931348623157e+308 but got Infinity"
+        },
+        {
+          "name": "Set duration to Number.MIN_VALUE",
+          "status": "FAIL",
+          "message": "assert_equals: mediaSource.duration expected 5e-324 but got 0"
+        },
+        {
+          "name": "Set duration to Number.MAX_VALUE - 1",
+          "status": "FAIL",
+          "message": "assert_equals: mediaSource.duration expected 1.7976931348623157e+308 but got Infinity"
+        },
+        {
+          "name": "Set duration to Number.MIN_VALUE - 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to Number.POSITIVE_INFINITY",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to Number.NEGATIVE_INFINITY",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to lowest value.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to a negative double.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to a positive double.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to zero",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Set duration to NaN",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-duration.html",
+      "subtests": [
+        {
+          "name": "Test seek starts on duration truncation below currentTime",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
+        },
+        {
+          "name": "Test appendBuffer completes previous seek to truncated duration",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
+        },
+        {
+          "name": "Test endOfStream completes previous seek to truncated duration",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
+        },
+        {
+          "name": "Test setting same duration multiple times does not fire duplicate durationchange",
+          "status": "FAIL",
+          "message": "assert_true: adjusted duration expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-endofstream-invaliderror.html",
+      "subtests": [
+        {
+          "name": "Test MediaSource.endOfStream() with invalid non-empty error string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.endOfStream() with invalid empty error string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.endOfStream() with invalid null error parameter.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-getvideoplaybackquality.html",
+      "subtests": [
+        {
+          "name": "Test HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-is-type-supported.html",
+      "subtests": [
+        {
+          "name": "Test invalid MIME format \"video\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\"\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\",\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"null\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between major type and codec ID \"audio/webm;codecs=\"vp8\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between major type and codec ID \"audio/mp4;codecs=\"avc1.4d001e\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"audio/mp4;codecs=\"vorbis\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"audio/webm;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vp8\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/webm;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vorbis\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/webm;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a.40\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a.40.\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a.67.3\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vp8\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vorbis\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vp8,vorbis\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vorbis, vp8\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid WebM type \"audio/webm;codecs=\"vorbis\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid WebM type \"AUDIO/WEBM;CODECS=\"vorbis\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected true but got false"
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.4d001e\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.42001e\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"audio/mp4;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"audio/mp4;codecs=\"mp4a.40.5\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"audio/mp4;codecs=\"mp4a.67\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.4d001e,mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"mp4a.40.2 , avc1.4d001e \"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.4d001e,mp4a.40.5\"\"",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-multiple-attach.html",
+      "subtests": [
+        {
+          "name": "Test exactly one succeeds when two MediaElements attach to same MediaSource",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test that MediaSource can reattach if closed first",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-play-then-seek-back.html",
+      "subtests": [
+        {
+          "name": "Test playing then seeking back.",
+          "status": "FAIL",
+          "message": "assert_true: mediaElement is seeking expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-play.html",
+      "subtests": [
+        {
+          "name": "Test normal playback case with MediaSource API",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-remove.html",
+      "subtests": [
+        {
+          "name": "Test remove with an negative start.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with non-finite start.",
+          "status": "FAIL",
+          "message": "assert_throws: remove function \"function ()\n                  {\n                      sou...\" threw object \"Error: InvalidAccessError: DOM Exception 15\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test remove with a start beyond the duration.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a start larger than the end.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a NEGATIVE_INFINITY end.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a NaN end.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove after SourceBuffer removed from mediaSource.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove while update pending.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test aborting a remove operation.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a start at the duration.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove transitioning readyState from 'ended' to 'open'.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removing all appended data.",
+          "status": "FAIL",
+          "message": "assert_false: updating expected false got true"
+        },
+        {
+          "name": "Test removing beginning of appended data.",
+          "status": "FAIL",
+          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [3.154, 6.076) }\" but got \"{ [3.204, 6.076) }\""
+        },
+        {
+          "name": "Test removing the middle of appended data.",
+          "status": "FAIL",
+          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [0.000, 1.022) [3.154, 6.076) }\" but got \"{ [0.000, 0.996) [3.204, 6.076) }\""
+        },
+        {
+          "name": "Test removing the end of appended data.",
+          "status": "FAIL",
+          "message": "assert_false: updating expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-removesourcebuffer.html",
+      "subtests": [
+        {
+          "name": "Test addSourceBuffer(), removeSourceBuffer(), addSourceBuffer() sequence.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removeSourceBuffer() with null",
+          "status": "FAIL",
+          "message": "assert_throws: removeSourceBuffer() threw an exception when passed null. function \"function () { mediaSource.removeSourceBuffer(null); }\" threw object \"Error: InvalidAccessError: DOM Exception 15\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test calling removeSourceBuffer() twice with the same object.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test calling removeSourceBuffer() in ended state.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removesourcebuffer event on activeSourceBuffers.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 6.0756 but got 0"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-seek-beyond-duration.html",
+      "subtests": [
+        {
+          "name": "Test seeking beyond updated media duration.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 6.0756 but got 2.1248"
+        },
+        {
+          "name": "Test seeking beyond media duration.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-seek-during-pending-seek.html",
+      "subtests": [
+        {
+          "name": "Test seeking to a new location before transitioning beyond HAVE_METADATA.",
+          "status": "FAIL",
+          "message": "assert_equals: Still in HAVE_METADATA expected 1 but got 4"
+        },
+        {
+          "name": "Test seeking to a new location during a pending seek.",
+          "status": "FAIL",
+          "message": "assert_true: mediaElement is still seeking expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sequencemode-append-buffer.html",
+      "subtests": [
+        {
+          "name": "Test sequence AppendMode appendBuffer(first media segment)",
+          "status": "FAIL",
+          "message": "assert_equals: expectedTimestampOffset expected 0 but got NaN"
+        },
+        {
+          "name": "Test sequence AppendMode appendBuffer(second media segment)",
+          "status": "FAIL",
+          "message": "assert_equals: expectedTimestampOffset expected -0.465 but got NaN"
+        },
+        {
+          "name": "Test sequence AppendMode appendBuffer(second media segment, then first media segment)",
+          "status": "FAIL",
+          "message": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0 but got 0.465"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebuffer-mode.html",
+      "subtests": [
+        {
+          "name": "Test initial value of SourceBuffer.mode is \"segments\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting a removed SourceBuffer's mode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode while still updating",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode triggers parent MediaSource 'ended' to 'open' transition.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode and SourceBuffer.timestampOffset while parsing media segment.",
+          "status": "FAIL",
+          "message": "assert_throws: Setting valid sourceBuffer.mode while still parsing media segment threw InvalidStateError. function \"function () { sourceBuffer.mode = 'segments'; }\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebufferlist.html",
+      "subtests": [
+        {
+          "name": "Test SourceBufferList event dispatching.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test that only 1 removesourcebuffer event fires on each SourceBufferList when the MediaSource closes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-timestamp-offset.html",
+      "subtests": [
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to a positive number.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to a negative number.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to zero.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to positive infinity.",
+          "status": "FAIL",
+          "message": "assert_throws: setting timestampOffset to positive infinity throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw"
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to negative infinity.",
+          "status": "FAIL",
+          "message": "assert_throws: setting timestampOffset to negative infinity throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw"
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to NaN.",
+          "status": "FAIL",
+          "message": "assert_throws: setting timestampOffset to NaN throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw"
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to undefined.",
+          "status": "FAIL",
+          "message": "assert_throws: setting timestampOffset to undefined throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw"
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to false.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to true.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to a number string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to an empty string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting timestampOffset in 'ended' state causes a transition to 'open'.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test getting the initial value of timestampOffset.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting timestampoffset after removing the sourcebuffer.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-redundant-seek.html",
+      "subtests": [
+        {
+          "name": "Test redundant fully prebuffered seek",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
