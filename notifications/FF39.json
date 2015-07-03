@@ -1,10 +1,22 @@
 {
   "results": [
     {
-      "test": "/notifications/Notification-permission.html",
+      "test": "/notifications/constructor-basic.html",
       "subtests": [
         {
-          "name": "Test checks that notification the value of permission is in array",
+          "name": "Called the notification constructor with one argument.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/notifications/constructor-invalid.html",
+      "subtests": [
+        {
+          "name": "Called the notification constructor with no arguments.",
           "status": "PASS",
           "message": null
         }
@@ -16,7 +28,12 @@
       "test": "/notifications/event-onclose.html",
       "subtests": [
         {
-          "name": "the notification.onclose event can be invoked",
+          "name": "Checked test prerequisites.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Invoked the onclose event handler.",
           "status": "PASS",
           "message": null
         }
@@ -28,7 +45,12 @@
       "test": "/notifications/event-onshow.html",
       "subtests": [
         {
-          "name": "the notification.onshow event can be invoked",
+          "name": "Checked test prerequisites.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Invoked the onshow event handler.",
           "status": "PASS",
           "message": null
         }
@@ -306,37 +328,8 @@
       "message": null
     },
     {
-      "test": "/notifications/notification-constructor-basic.html",
+      "test": "/notifications/lang.html",
       "subtests": [
-        {
-          "name": "Test checks that notification constructor is correct",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/notifications/notification-constructor-invalid.html",
-      "subtests": [
-        {
-          "name": "Test checks that notification constructor arguments can't be empty",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/notifications/notification-lang.html",
-      "subtests": [
-        {
-          "name": "We have permission to use the notifications API.",
-          "status": "PASS",
-          "message": null
-        },
         {
           "name": "Roundtripping lang \"\". Expecting \"\".",
           "status": "PASS",
@@ -527,10 +520,10 @@
       "message": null
     },
     {
-      "test": "/notifications/Notification-requestPermission-denied-manual.html",
+      "test": "/notifications/permission.html",
       "subtests": [
         {
-          "name": "the notification the value of permission is denied",
+          "name": "Checked the Notification.permission property.",
           "status": "PASS",
           "message": null
         }
@@ -539,16 +532,34 @@
       "message": null
     },
     {
-      "test": "/notifications/Notification-requestPermission-granted-manual.html",
-      "subtests": [
-        {
-          "name": "the notification the value of permission is granted",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "test": "/notifications/body-basic-manual.html",
+      "subtests": [],
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "test": "/notifications/body-empty-manual.html",
+      "subtests": [],
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "test": "/notifications/dir-auto-manual.html",
+      "subtests": [],
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "test": "/notifications/dir-ltr-manual.html",
+      "subtests": [],
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "test": "/notifications/dir-rtl-manual.html",
+      "subtests": [],
+      "status": "FAIL",
+      "message": ""
     },
     {
       "test": "/notifications/event-onclick-manual.html",
@@ -564,72 +575,42 @@
     },
     {
       "test": "/notifications/event-onerror-denied-manual.html",
-      "subtests": [
-        {
-          "name": "the notification.onerror event can be invoked",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/notifications/notification-body-basic-manual.html",
       "subtests": [],
       "status": "PASS",
       "message": ""
     },
     {
-      "test": "/notifications/notification-body-empty-manual.html",
+      "test": "/notifications/icon-basic-manual.html",
       "subtests": [],
       "status": "PASS",
       "message": ""
     },
     {
-      "test": "/notifications/notification-close-manual.html",
+      "test": "/notifications/icon-empty-manual.html",
       "subtests": [],
       "status": "PASS",
       "message": ""
     },
     {
-      "test": "/notifications/notification-dir-auto-manual.html",
+      "test": "/notifications/requestPermission-denied-manual.html",
       "subtests": [],
       "status": "PASS",
       "message": ""
     },
     {
-      "test": "/notifications/notification-dir-ltr-manual.html",
+      "test": "/notifications/requestPermission-granted-manual.html",
       "subtests": [],
       "status": "PASS",
       "message": ""
     },
     {
-      "test": "/notifications/notification-dir-rtl-manual.html",
-      "subtests": [],
-      "status": "FAIL",
-      "message": ""
-    },
-    {
-      "test": "/notifications/notification-icon-basic-manual.html",
+      "test": "/notifications/tag-different-manual.html",
       "subtests": [],
       "status": "PASS",
       "message": ""
     },
     {
-      "test": "/notifications/notification-icon-empty-manual.html",
-      "subtests": [],
-      "status": "PASS",
-      "message": ""
-    },
-    {
-      "test": "/notifications/notification-tag-different-manual.html",
-      "subtests": [],
-      "status": "PASS",
-      "message": ""
-    },
-    {
-      "test": "/notifications/notification-tag-same-manual.html",
+      "test": "/notifications/tag-same-manual.html",
       "subtests": [],
       "status": "PASS",
       "message": ""
