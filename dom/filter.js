@@ -13,9 +13,9 @@ exports.excludeCase = function (file, name) {
     if (/prepend|append\(/i.test(name)) return true;
     if (/AttributeNode/i.test(name)) return true;
     if (/closest/i.test(name)) return true;
-    if (/\bafter\b/i.test(name)) return true;
-    if (/\bbefore\b/i.test(name)) return true;
-    if (/\bquery\b/i.test(name)) return true;
-    if (/\bqueryAll\b/i.test(name)) return true;
+    if (/\bmatches\b/.test(name)) return true;
+    if (/\bafter\b/.test(name)) return true;
+    if (/\bbefore\b/.test(name)) return true;
+    if (/\bquery(?:All)\b/.test(name)) return true;
     return false;
 };
