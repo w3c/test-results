@@ -17,55 +17,72 @@
       <section>
         <h2>Introduction</h2>
         <p>
-          NOTE: this analysis is final (2014-10-06).
-        </p>
-        <p>
           Historically, W3C test suites have altogether too often been subpar in their coverage,
           barely scraping the surface of interoperability. In such a context, with only a few
           hundred simple tests, it is naturally expected that one would expect to hit the 100%
           pass mark.
         </p>
         <p>
-          With the more recent focus on testing however, notably through the
-          <a href='https://github.com/w3c/web-platform-tests/'>Web Platform Tests</a> and
-          <a href='http://testthewebforward.org/'>Test The Web Forward</a> projects the quality
-          of test suites has improved massively. And since we don't live in a perfect world, if one
-          looks for trouble hard enough one will find it.
+          With the increased focus on testing however, notably through the <a
+          href='https://github.com/w3c/web-platform-tests/'>Web Platform Tests</a> and <a
+          href='http://testthewebforward.org/'>Test The Web Forward</a> projects the quality of test
+          suites has improved massively. And since we don't live in a perfect world, if one looks
+          for trouble hard enough one will find it.
         </p>
         <p>
-          <a href="https://github.com/w3c/web-platform-tests/tree/master/dom">The DOM test suite</a>,
-          which is over 50,000 tests (and growing), certainly did set out
-          to look for trouble, like its HTML counterpart. Given that, it seems useful to accompany the
-          test results with this
-          this note explaining where the failures come from.
+          <a href="https://github.com/w3c/web-platform-tests/tree/master/dom">The DOM test
+          suite</a>, which is over 52,000 tests (and growing), certainly did set out to look for
+          trouble. Given that, it seems useful to accompany the test results with this this note
+          explaining where the failures come from.
         </p>
         <p>
-          In total, 353 tests fail to pass in two implementations, which amounts to 0.69% of the
-          total. The sections below provide context in which to appraise these failures.
+          In total, 743 tests fail to pass in two implementations, which amounts to 1.43% of the
+          total. The sections below provide context in which to appraise these failures. This is an
+          increase compared to the last time the DOM test results were reported upon; it is due to
+          the test suite expanding in scope, counteracting actual improvements in implementations.
+        </p>
+      </section>
+      <section>
+        <h2><code>createNodeIterator()</code></h2>
+        <p>
+          555 of the failures (75%) come from this single method. This method is actually already in
+          DOM Level 2, but its interoperability in browsers has only recently started improving.
+        </p>
+        <p>
+          Given that this is existing functionality, already Recommended, that mostly needs to be
+          improved upon, the volume of failures is not particularly worrying.
+        </p>
+      </section>
+      <section>
+        <h2><code>createDocument()</code></h2>
+        <p>
+          81 of the failures (11%) come from this method. The failures are actually mostly for
+          fields that need to be set or not to specific values on the created <code>Document</code>
+          object.
+        </p>
+        <p>
+          While it would be useful to sort these problems out, the interoperability issues around
+          this topic are well-known and there has been little interest from implementers in
+          resolving them. The specification features explicit warnings about these.
         </p>
       </section>
       <section>
         <h2>WebIDL</h2>
         <p>
-          278 of the failures (79%) or less are linked to <a href="http://www.w3c-test.org/dom/interfaces.html">WebIDL-related problems</a>. Essentially, they are
-          attributes being present on instances instead of prototypes, wrong exception types, and
-          other similar issues.
-        </p>
-<p>DOM4 (4 failures) also introduces a <a href="http://www.w3c-test.org/dom/nodes/Document-constructor.html">constructor for Document object</a>, which is only supported by one implementation so far.</p>
-<p><a href="http://www.w3c-test.org/dom/errors/exceptions.html">DOMException</a> (2 failures) doesn't own the message property properly.</p>
-        <p>
-          These will get better over time as WebIDL compliance progresses. It is a slow process,
-          but also one that does not threaten to break DOM (or other specifications depending on
-          WebIDL).
+          43 of the failures (6%) or less are linked to WebIDL-related problems. Essentially, they
+          are attributes being present on instances instead of prototypes, wrong exception types,
+          and other similar issues.
         </p>
         <p>
-          These failures do not adversely affect regular everyday development.
+          This is marked improvement on previous reports in which WebIDL heavily dominated the
+          interoperability landscape. While still not perfect, this area is moving in the right
+          direction, and the failures are unlikely to impact regular development much.
         </p>
       </section>
       <section>
         <h2>Miscellaneous</h2>
         <p>
-          The remaining 81 failing test cases do not appear to subject themselves
+          The remaining 64 failing test cases do not appear to subject themselves
           to easy categorisation. Many of these are corner cases that have little impact on everyday
           development, if any.
         </p>
@@ -77,11 +94,11 @@
         </p>
         <ol>
           <li>
-            the volume of failures is really low to start with (we have over 99%% success over
-            50,000 tests);
+            the volume of failures is really low to start with (we have over 98% success over
+            52,000 tests);
           </li>
           <li>
-            79% of failures come from WebIDL with minimal risk to practical interoperability;
+            the vast majority of failures are circumscribed to limited areas with well-known issues;
           </li>
           <li>
             the percentage of issues that point to problems that could affect developers is
