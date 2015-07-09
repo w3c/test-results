@@ -1,30 +1,6 @@
 {
   "results": [
     {
-      "test": "/workers/MessagePort_initial_disabled.htm",
-      "subtests": [
-        {
-          "name": " MessageChannel: port message queue is initially disabled ",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/workers/MessagePort_onmessage_start.htm",
-      "subtests": [
-        {
-          "name": " MessageChannel: port.onmessage enables message queue ",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
       "test": "/workers/WorkerGlobalScope_ErrorEvent_colno.htm",
       "subtests": [
         {
@@ -101,8 +77,8 @@
       "subtests": [
         {
           "name": " importScripts() with non-existent script file ",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Pass\" but got \"Fail\""
         }
       ],
       "status": "OK",
@@ -361,6 +337,18 @@
       "message": null
     },
     {
+      "test": "/workers/Worker_ErrorEvent_bubbles_cancelable.htm",
+      "subtests": [
+        {
+          "name": "ErrorEvent on worker doesn't bubble and is cancelable",
+          "status": "FAIL",
+          "message": "assert_false: onerror on worker doesn't bubble expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/workers/Worker_ErrorEvent_filename.htm",
       "subtests": [
         {
@@ -452,8 +440,8 @@
         },
         {
           "name": "document.createEvent('ErrorEvent')",
-          "status": "FAIL",
-          "message": "assert_throws: should not be supported function \"function () {\n    document.createEvent(\"ErrorEvent\");\n  }\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "initErrorEvent",
@@ -483,6 +471,66 @@
           "name": " AbstractWorker terminate(): clear event queue ",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/baseurl/alpha/importScripts.html",
+      "subtests": [
+        {
+          "name": "Base URL in workers: importScripts",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/baseurl/alpha/sharedworker.html",
+      "subtests": [
+        {
+          "name": "Base URL in workers: new SharedWorker()",
+          "status": "FAIL",
+          "message": "assert_unreached: Got error event Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/baseurl/alpha/worker.html",
+      "subtests": [
+        {
+          "name": "Base URL in workers: new Worker()",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/baseurl/alpha/xhr.html",
+      "subtests": [
+        {
+          "name": "Base URL in workers: XHR",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/constructors/SharedWorker/URLMismatchError.htm",
+      "subtests": [
+        {
+          "name": "Create SharedWorker with different URLs but same name",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n      new SharedWorker('some-other-url.js',...\" did not throw"
         }
       ],
       "status": "OK",
@@ -554,7 +602,7 @@
         {
           "name": "expected interface objects/constructors",
           "status": "FAIL",
-          "message": "assert_equals: expected \"\" but got \"These were missing: Worker, SharedWorker, ApplicationCache\""
+          "message": "assert_equals: expected \"\" but got \"These were missing: EventSource, SharedWorker\""
         }
       ],
       "status": "OK",
@@ -649,18 +697,18 @@
       "subtests": [
         {
           "name": "unsupported_scheme",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { new SharedWorker('unsupported:', ''); }\" threw object \"[Exception... \"<no message>\"  nsresult: \"0x805e0006 (<unk...\" that is not a DOMException SecurityError: property \"code\" is equal to undefined, expected 18"
         },
         {
           "name": "data_url",
-          "status": "FAIL",
-          "message": "Failed to construct 'SharedWorker': Script at 'data:,onconnect = function(e) { e.ports[0].postMessage(1); }' cannot be accessed from origin 'http://w3c-test.org'."
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "javascript_url",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { new SharedWorker('javascript:\"\"', ''); }\" did not throw"
         },
         {
           "name": "about_blank",
@@ -767,8 +815,8 @@
       "subtests": [
         {
           "name": "resolving broken url",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    var worker = new SharedWorker('http://f...\" threw object \"SecurityError: Failed to construct 'SharedWorker': Script...\" that is not a DOMException SyntaxError: property \"code\" is equal to 18, expected 12"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -779,8 +827,20 @@
       "subtests": [
         {
           "name": "AbstractWorker.onerror",
-          "status": "FAIL",
-          "message": "assert_equals: ErrorEvent.filename expected \"http://w3c-test.org/workers/constructors/Worker/AbstractWorker.onerror.html#\" but got \"http://w3c-test.org/workers/constructors/Worker/AbstractWorker.onerror.html\""
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/constructors/Worker/Blob-url.html",
+      "subtests": [
+        {
+          "name": "Worker supports Blob url",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -791,8 +851,8 @@
       "subtests": [
         {
           "name": "members of DedicatedWorkerGlobalScope",
-          "status": "FAIL",
-          "message": "assert_unreached: onoffline did not exist Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -840,7 +900,7 @@
         {
           "name": "expected interface objects/constructors",
           "status": "FAIL",
-          "message": "assert_unreached: Worker did not exist Reached unreachable code"
+          "message": "assert_unreached: EventSource did not exist Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -875,13 +935,13 @@
       "subtests": [
         {
           "name": "unsupported_scheme",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { new Worker('unsupported:'); }\" threw object \"Error: Failed to load script (nsresult = 0x805e0006)\" that is not a DOMException SecurityError: property \"code\" is equal to undefined, expected 18"
         },
         {
           "name": "data_url",
-          "status": "FAIL",
-          "message": "Failed to construct 'Worker': Script at 'data:,postMessage(1);' cannot be accessed from origin 'http://w3c-test.org'."
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "about_blank",
@@ -915,8 +975,8 @@
         },
         {
           "name": "javascript_url",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { new Worker('javascript:\"\"'); }\" did not throw"
         }
       ],
       "status": "OK",
@@ -951,8 +1011,8 @@
       "subtests": [
         {
           "name": "unresolvable url",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function () { new Worker('http://invalid url/'); }\" threw object \"SecurityError: Failed to construct 'Worker': Script at 'h...\" that is not a DOMException SyntaxError: property \"code\" is equal to 18, expected 12"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -973,8 +1033,8 @@
         },
         {
           "name": "EventTarget interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_equals: class string of EventTarget.prototype expected \"[object EventTargetPrototype]\" but got \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "EventTarget interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -983,13 +1043,13 @@
         },
         {
           "name": "EventTarget interface: operation addEventListener(DOMString,EventListener,boolean)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 2 but got 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "EventTarget interface: operation removeEventListener(DOMString,EventListener,boolean)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 2 but got 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "EventTarget interface: operation dispatchEvent(Event)",
@@ -1028,8 +1088,8 @@
         },
         {
           "name": "WorkerGlobalScope interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_equals: class string of WorkerGlobalScope.prototype expected \"[object WorkerGlobalScopePrototype]\" but got \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerGlobalScope interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1059,17 +1119,17 @@
         {
           "name": "WorkerGlobalScope interface: attribute onlanguagechange",
           "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onlanguagechange\" expected true got false"
+          "message": "document is not defined"
         },
         {
           "name": "WorkerGlobalScope interface: attribute onoffline",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onoffline\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerGlobalScope interface: attribute ononline",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"ononline\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerGlobalScope interface: operation importScripts(DOMString)",
@@ -1133,8 +1193,8 @@
         },
         {
           "name": "DedicatedWorkerGlobalScope interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_equals: class string of DedicatedWorkerGlobalScope.prototype expected \"[object DedicatedWorkerGlobalScopePrototype]\" but got \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "DedicatedWorkerGlobalScope interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1143,13 +1203,13 @@
         },
         {
           "name": "DedicatedWorkerGlobalScope interface: operation postMessage(any,[object Object])",
-          "status": "FAIL",
-          "message": "assert_own_property: global object missing non-static operation expected property \"postMessage\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "DedicatedWorkerGlobalScope interface: attribute onmessage",
-          "status": "FAIL",
-          "message": "assert_own_property: The global object must have a property \"onmessage\" expected property \"onmessage\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "DedicatedWorkerGlobalScope must be primary interface of self",
@@ -1158,23 +1218,23 @@
         },
         {
           "name": "Stringification of self",
-          "status": "FAIL",
-          "message": "assert_equals: class string of self expected \"[object DedicatedWorkerGlobalScope]\" but got \"[object global]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "DedicatedWorkerGlobalScope interface: self must inherit property \"postMessage\" with the proper type (0)",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"postMessage\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "DedicatedWorkerGlobalScope interface: calling postMessage(any,[object Object]) on self with too few arguments must throw TypeError",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"postMessage\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "DedicatedWorkerGlobalScope interface: self must inherit property \"onmessage\" with the proper type (1)",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"onmessage\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerGlobalScope interface: self must inherit property \"self\" with the proper type (0)",
@@ -1199,17 +1259,17 @@
         {
           "name": "WorkerGlobalScope interface: self must inherit property \"onlanguagechange\" with the proper type (4)",
           "status": "FAIL",
-          "message": "assert_inherits: property \"onlanguagechange\" not found in prototype chain"
+          "message": "document is not defined"
         },
         {
           "name": "WorkerGlobalScope interface: self must inherit property \"onoffline\" with the proper type (5)",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"onoffline\" not found in prototype chain"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerGlobalScope interface: self must inherit property \"ononline\" with the proper type (6)",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"ononline\" not found in prototype chain"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerGlobalScope interface: self must inherit property \"importScripts\" with the proper type (7)",
@@ -1313,8 +1373,8 @@
         },
         {
           "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on self with too few arguments must throw TypeError",
-          "status": "FAIL",
-          "message": "assert_throws: Called with 0 arguments function \"function () { [native code] }\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "EventTarget interface: self must inherit property \"removeEventListener\" with the proper type (1)",
@@ -1323,8 +1383,8 @@
         },
         {
           "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on self with too few arguments must throw TypeError",
-          "status": "FAIL",
-          "message": "assert_throws: Called with 0 arguments function \"function () { [native code] }\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "EventTarget interface: self must inherit property \"dispatchEvent\" with the proper type (2)",
@@ -1348,8 +1408,8 @@
         },
         {
           "name": "WorkerNavigator interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_equals: class string of WorkerNavigator.prototype expected \"[object WorkerNavigatorPrototype]\" but got \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerNavigator interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1388,13 +1448,13 @@
         },
         {
           "name": "WorkerNavigator interface: attribute language",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"language\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerNavigator interface: attribute languages",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"languages\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerNavigator interface: attribute onLine",
@@ -1443,13 +1503,13 @@
         },
         {
           "name": "WorkerNavigator interface: self.navigator must inherit property \"language\" with the proper type (6)",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"language\" not found in prototype chain"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerNavigator interface: self.navigator must inherit property \"languages\" with the proper type (7)",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"languages\" not found in prototype chain"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerNavigator interface: self.navigator must inherit property \"onLine\" with the proper type (8)",
@@ -1468,8 +1528,8 @@
         },
         {
           "name": "WorkerLocation interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_equals: class string of WorkerLocation.prototype expected \"[object WorkerLocationPrototype]\" but got \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WorkerLocation interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1590,8 +1650,8 @@
         },
         {
           "name": "target",
-          "status": "FAIL",
-          "message": "assert_equals: expected object \"[object global]\" but got object \"[object DedicatedWorkerGlobalScope]\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1653,8 +1713,8 @@
       "subtests": [
         {
           "name": "Properties of the 'message' event",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: cancelable should be false expected false got true"
         }
       ],
       "status": "OK",
@@ -1677,8 +1737,8 @@
       "subtests": [
         {
           "name": "Using [null] in postMessage's second argument",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
         }
       ],
       "status": "OK",
@@ -1689,8 +1749,8 @@
       "subtests": [
         {
           "name": "Using null in postMessage's second argument",
-          "status": "FAIL",
-          "message": "assert_true: expected true got 1"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1797,8 +1857,8 @@
         },
         {
           "name": "array",
-          "status": "FAIL",
-          "message": "assert_array_equals: property 0, property expected to be \"present\" but was \"missing\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "object",
@@ -1865,8 +1925,8 @@
       "subtests": [
         {
           "name": "close() and incoming message",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "Error: assert_unreached: Got message Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -1889,8 +1949,8 @@
       "subtests": [
         {
           "name": "close() and setInterval",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "Error: assert_unreached: Got error Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -1901,8 +1961,8 @@
       "subtests": [
         {
           "name": "close() and setTimeout",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "Error: assert_unreached: Got error Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -1925,8 +1985,8 @@
       "subtests": [
         {
           "name": "location with a worker in separate file that redirects",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"http://w3c-test.org/workers/interfaces/WorkerGlobalScope/location/post-location-members.js?a\" but got \"http://w3c-test.org/workers/interfaces/WorkerGlobalScope/location/helper-redirect.py?fail\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1973,8 +2033,8 @@
       "subtests": [
         {
           "name": "onerror, \"not handled\" with an error in the onerror function",
-          "status": "FAIL",
-          "message": "assert_equals: e.filename expected \"http://w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/exception-in-onerror.html#\" but got \"http://w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/exception-in-onerror.html\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1985,8 +2045,8 @@
       "subtests": [
         {
           "name": "onerror, \"handled\"",
-          "status": "FAIL",
-          "message": "assert_equals: second argument expected \"http://w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/handled.html#\" but got \"http://w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/handled.html\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1997,8 +2057,8 @@
       "subtests": [
         {
           "name": "onerror, \"not handled\"",
-          "status": "FAIL",
-          "message": "assert_equals: e.filename expected \"http://w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/not-handled.html#\" but got \"http://w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/not-handled.html\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2009,11 +2069,11 @@
       "subtests": [
         {
           "name": "onerror, \"not handled\" with only window.onerror defined",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -2094,7 +2154,7 @@
         {
           "name": "importScripts resolving urls",
           "status": "FAIL",
-          "message": "assert_false: first argument to importScripts ran expected false got true"
+          "message": "assert_equals: exception code expected 12 but got 11"
         }
       ],
       "status": "OK",
@@ -2117,8 +2177,8 @@
       "subtests": [
         {
           "name": "importScripts broken script",
-          "status": "FAIL",
-          "message": "assert_true: expected SyntaxError expected true got \"Error: Script error.\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2141,11 +2201,11 @@
       "subtests": [
         {
           "name": "importScripts uncaught exception",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -2297,8 +2357,8 @@
       "subtests": [
         {
           "name": "navigator.language",
-          "status": "FAIL",
-          "message": "assert_equals: expected (string) \"en-US\" but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2309,11 +2369,11 @@
       "subtests": [
         {
           "name": "Nested worker",
-          "status": "FAIL",
-          "message": "Worker is not defined"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -2357,8 +2417,8 @@
       "subtests": [
         {
           "name": " postMessage(): MessageEvent properties ",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: source expected null but got object \"[object MessagePort]\""
         }
       ],
       "status": "OK",
@@ -2369,8 +2429,8 @@
       "subtests": [
         {
           "name": " postMessage(): read-only ports array ",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "MessagePortList doesn't have an indexed property setter for '1'"
         }
       ],
       "status": "OK",
@@ -2393,8 +2453,8 @@
       "subtests": [
         {
           "name": "encoding, dedicated worker",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"å\" but got \"Ã¥\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2405,8 +2465,8 @@
       "subtests": [
         {
           "name": "encoding, shared worker",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"å\" but got \"Ã¥\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2417,8 +2477,8 @@
       "subtests": [
         {
           "name": "URL encoding, dedicated worker",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
         }
       ],
       "status": "OK",
@@ -2429,8 +2489,8 @@
       "subtests": [
         {
           "name": "URL encoding, shared worker",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
         }
       ],
       "status": "OK",
@@ -2457,7 +2517,7 @@
         {
           "name": "The ErrorEvent interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"ErrorEvent\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The Event interface object should be exposed.",
@@ -2466,8 +2526,8 @@
         },
         {
           "name": "The Worker interface object should be exposed.",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"Worker\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "The DOMException interface object should be exposed.",
@@ -2477,7 +2537,7 @@
         {
           "name": "The SharedWorker interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"SharedWorker\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The MessagePort interface object should be exposed.",
@@ -2521,8 +2581,8 @@
         },
         {
           "name": "The FileList interface object should be exposed.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "document is not defined"
         },
         {
           "name": "The XMLHttpRequest interface object should be exposed.",
@@ -2532,7 +2592,7 @@
         {
           "name": "The ProgressEvent interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"ProgressEvent\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The FormData interface object should be exposed.",
@@ -2597,42 +2657,42 @@
         {
           "name": "The CanvasProxy interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"CanvasProxy\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The ImageBitmap interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"ImageBitmap\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The CanvasRenderingContext2D interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"CanvasRenderingContext2D\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The DrawingStyle interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"DrawingStyle\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The CanvasGradient interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"CanvasGradient\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The CanvasPattern interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"CanvasPattern\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The Path interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"Path\" missing"
+          "message": "document is not defined"
         },
         {
           "name": "The TextMetrics interface object should be exposed.",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"TextMetrics\" missing"
+          "message": "document is not defined"
         }
       ],
       "status": "OK",
@@ -2696,7 +2756,7 @@
         {
           "name": "available interface objects in shared worker",
           "status": "FAIL",
-          "message": "assert_equals: these interface objects were missing expected \"\" but got \"ApplicationCache, ErrorEvent, Worker, SharedWorker, Database, ProgressEvent, CanvasProxy, ImageBitmap, CanvasRenderingContext2d, DrawingStyle, CanvasGradient, CanvasPattern, Path, TextMetrics\""
+          "message": "assert_equals: these interface objects were missing expected \"\" but got \"ApplicationCache, ErrorEvent, SharedWorker, Database, FileList, ProgressEvent, CanvasProxy, ImageBitmap, CanvasRenderingContext2d, DrawingStyle, CanvasGradient, CanvasPattern, Path, TextMetrics\""
         }
       ],
       "status": "OK",
@@ -2748,11 +2808,11 @@
       "subtests": [
         {
           "name": "creating 3 nested dedicated workers",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -2776,8 +2836,8 @@
           "message": "Test timed out"
         }
       ],
-      "status": "TIMEOUT",
-      "message": null
+      "status": "ERROR",
+      "message": "ReferenceError: SharedWorker is not defined"
     },
     {
       "test": "/workers/semantics/multiple-workers/006.html",
@@ -2788,8 +2848,8 @@
           "message": "Test timed out"
         }
       ],
-      "status": "TIMEOUT",
-      "message": null
+      "status": "ERROR",
+      "message": "ReferenceError: SharedWorker is not defined"
     },
     {
       "test": "/workers/semantics/multiple-workers/007.html",
@@ -2800,8 +2860,8 @@
           "message": "Test timed out"
         }
       ],
-      "status": "TIMEOUT",
-      "message": null
+      "status": "ERROR",
+      "message": "ReferenceError: SharedWorker is not defined"
     },
     {
       "test": "/workers/semantics/multiple-workers/008.html",
@@ -2820,11 +2880,11 @@
       "subtests": [
         {
           "name": "navigating",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -2832,11 +2892,11 @@
       "subtests": [
         {
           "name": "navigating 2",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -2845,7 +2905,7 @@
         {
           "name": "shared worker, not handled",
           "status": "FAIL",
-          "message": "assert_equals: expected \"\" but got \"second argument was http://w3c-test.org/workers/semantics/reporting-errors/001.html, expected http://w3c-test.org/workers/semantics/reporting-errors/001.html#. \""
+          "message": "assert_equals: expected \"\" but got \"second argument was , expected http://128.31.35.206:8000/workers/semantics/reporting-errors/001.html#. fifth argument wasn't the thrown exception. \""
         }
       ],
       "status": "OK",
@@ -2857,7 +2917,7 @@
         {
           "name": "shared worker, addEventListener",
           "status": "FAIL",
-          "message": "assert_equals: expected \"\" but got \"event should be an ErrorEvent. event should be trusted. filename was http://w3c-test.org/workers/semantics/reporting-errors/002.html, expected http://w3c-test.org/workers/semantics/reporting-errors/002.html#. \""
+          "message": "assert_equals: expected \"\" but got \"event should not bubble. filename was , expected http://128.31.35.206:8000/workers/semantics/reporting-errors/002.html#. fifth argument wasn't the thrown exception. \""
         }
       ],
       "status": "OK",
@@ -2868,8 +2928,8 @@
       "subtests": [
         {
           "name": "shared worker, no error event on worker or port",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: error on worker Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -2880,8 +2940,8 @@
       "subtests": [
         {
           "name": "shared worker in two documents and window.onerror",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: (outer) error on worker Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -3133,283 +3193,283 @@
         },
         {
           "name": "Number 9007199254740994",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Number -9007199254740994",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Number objects",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Number objects",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Date 0",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Date -0",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Date -8.64e15",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Date 8.64e15",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Date objects",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Date objects",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp flags and lastIndex",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'y'"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp unicode flag",
           "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'u'"
+          "message": "invalid regular expression flag u"
         },
         {
           "name": "RegExp empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp slash",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp new line",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.source === '\\\\n' Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp flags and lastIndex",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'y'"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp unicode flag",
           "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'u'"
+          "message": "invalid regular expression flag u"
         },
         {
           "name": "Array RegExp object, RegExp empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp slash",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp new line",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.source === '\\\\n' Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp flags and lastIndex",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'y'"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp unicode flag",
           "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'u'"
+          "message": "invalid regular expression flag u"
         },
         {
           "name": "Object RegExp object, RegExp empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp slash",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp new line",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.source === '\\\\n' Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob basic",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob unpaired high surrogate (invalid utf-8)",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob unpaired low surrogate (invalid utf-8)",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob paired surrogates (invalid utf-8)",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob NUL",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob basic",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob unpaired high surrogate (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob unpaired low surrogate (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob paired surrogates (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob NUL",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob basic",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob unpaired high surrogate (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob unpaired low surrogate (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob paired surrogates (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob NUL",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "File basic",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "FileList empty",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "The object could not be cloned."
         },
         {
           "name": "Array FileList object, FileList empty",
           "status": "FAIL",
-          "message": "Failed to execute 'postMessage' on 'Worker': An object could not be cloned."
+          "message": "The object could not be cloned."
         },
         {
           "name": "Object FileList object, FileList empty",
           "status": "FAIL",
-          "message": "Failed to execute 'postMessage' on 'Worker': An object could not be cloned."
+          "message": "The object could not be cloned."
         },
         {
           "name": "ImageData 1x1 transparent black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "ImageData 1x1 non-transparent non-black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array ImageData object, ImageData 1x1 transparent black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array ImageData object, ImageData 1x1 non-transparent non-black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object ImageData object, ImageData 1x1 transparent black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object ImageData object, ImageData 1x1 non-transparent non-black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "ImageBitmap 1x1 transparent black",
@@ -3443,61 +3503,61 @@
         },
         {
           "name": "Array sparse",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.length === 10 Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array with non-index property",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with index property and length",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array with circular reference",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with circular reference",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array with identical property values",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with identical property values",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with property on prototype",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with non-enumerable property",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with non-writable property",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with non-configurable property",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -3705,283 +3765,283 @@
         },
         {
           "name": "Number 9007199254740994",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Number -9007199254740994",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Number objects",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Number objects",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Date 0",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Date -0",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Date -8.64e15",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Date 8.64e15",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Date objects",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Date objects",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp flags and lastIndex",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'y'"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp unicode flag",
           "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'u'"
+          "message": "invalid regular expression flag u"
         },
         {
           "name": "RegExp empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp slash",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp new line",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.source === '\\\\n' Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp flags and lastIndex",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'y'"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp unicode flag",
           "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'u'"
+          "message": "invalid regular expression flag u"
         },
         {
           "name": "Array RegExp object, RegExp empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp slash",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp new line",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.source === '\\\\n' Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp flags and lastIndex",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'y'"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp unicode flag",
           "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor 'u'"
+          "message": "invalid regular expression flag u"
         },
         {
           "name": "Object RegExp object, RegExp empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp slash",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp new line",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.source === '\\\\n' Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob basic",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob unpaired high surrogate (invalid utf-8)",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob unpaired low surrogate (invalid utf-8)",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob paired surrogates (invalid utf-8)",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Blob NUL",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob basic",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob unpaired high surrogate (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob unpaired low surrogate (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob paired surrogates (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array Blob object, Blob NUL",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob basic",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob unpaired high surrogate (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob unpaired low surrogate (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob paired surrogates (invalid utf-8)",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.size === expected.length Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob empty",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object Blob object, Blob NUL",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "File basic",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "FileList empty",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "The object could not be cloned."
         },
         {
           "name": "Array FileList object, FileList empty",
           "status": "FAIL",
-          "message": "Failed to execute 'postMessage' on 'MessagePort': An object could not be cloned."
+          "message": "The object could not be cloned."
         },
         {
           "name": "Object FileList object, FileList empty",
           "status": "FAIL",
-          "message": "Failed to execute 'postMessage' on 'MessagePort': An object could not be cloned."
+          "message": "The object could not be cloned."
         },
         {
           "name": "ImageData 1x1 transparent black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "ImageData 1x1 non-transparent non-black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array ImageData object, ImageData 1x1 transparent black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array ImageData object, ImageData 1x1 non-transparent non-black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object ImageData object, ImageData 1x1 transparent black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object ImageData object, ImageData 1x1 non-transparent non-black",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "ImageBitmap 1x1 transparent black",
@@ -4015,61 +4075,61 @@
         },
         {
           "name": "Array sparse",
-          "status": "FAIL",
-          "message": "assert_unreached: FAIL input.length === 10 Reached unreachable code"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array with non-index property",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with index property and length",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array with circular reference",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with circular reference",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array with identical property values",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with identical property values",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with property on prototype",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with non-enumerable property",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with non-writable property",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object with non-configurable property",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
