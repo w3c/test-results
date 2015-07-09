@@ -116,8 +116,8 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Close WebSocket - Code is undefined",
-          "status": "FAIL",
-          "message": "InvalidAccessError: DOM Exception 15"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -140,8 +140,8 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - wsocket.extensions should be set to '' after connection is established - Connection should be opened",
-          "status": "FAIL",
-          "message": "assert_equals: extensions should be empty expected \"\" but got \"x-webkit-deflate-frame\""
+          "status": "NOTRUN",
+          "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - wsocket.extensions should be set to '' after connection is established - Connection should be closed",
@@ -169,16 +169,16 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL and array of protocol strings - Connection should be opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL and array of protocol strings - Connection should be closed",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -186,39 +186,50 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - wsocket.binaryType should be set to 'blob' after connection is established - Connection should be opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - wsocket.binaryType should be set to 'blob' after connection is established - Connection should be closed",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/websockets/Create-Secure-valid-url-protocol-setCorrectly.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL and protocol string - protocol should be set correctly - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL and protocol string - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Create-Secure-valid-url-protocol-string.htm",
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Check readyState is 1",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL and protocol string - Connection should be closed",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -226,7 +237,7 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL  - Connection should be opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
@@ -422,11 +433,11 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(0) - INVALID_ACCESS_ERR is thrown",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -434,39 +445,50 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000, reason) - Connection should be opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000, reason) - readyState should be in CLOSED state and wasClean is TRUE - Connection should be closed",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/websockets/Secure-Close-1000-verify-code.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000, reason) - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000, reason) - event.code == 1000 and event.reason = 'Clean Close'",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Close-1000.htm",
       "subtests": [
         {
-          "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000, reason) - Connection should be opened",
-          "status": "PASS",
+          "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000) - Connection should be opened",
+          "status": "NOTRUN",
           "message": null
         },
         {
-          "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000, reason) - event.code == 1000 and event.reason = 'Clean Close'",
-          "status": "FAIL",
-          "message": "assert_equals: CloseEvent.reason should be the same as the reason sent in close expected \"Clean Close\" but got \"\""
+          "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000) - readyState should be in CLOSED state and wasClean is TRUE - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -474,34 +496,40 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close() - Connection should be opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close() - return close code is 1005 - Connection should be closed",
-          "status": "FAIL",
-          "message": "assert_equals: CloseEvent.code should be 1005 expected 1005 but got 1000"
+          "status": "NOTRUN",
+          "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/websockets/Secure-Close-1005.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1005) - see '7.1.5.  The WebSocket Connection Close Code' in http://www.ietf.org/rfc/rfc6455.txt",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Close-2999-reason.htm",
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(2999, reason) - INVALID_ACCESS_ERR is thrown",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -509,16 +537,16 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(3000, reason) - Connection should be opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(3000, reason) - readyState should be in CLOSED state and wasClean is TRUE - Connection should be closed",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -526,16 +554,16 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(3000, reason) - Connection should be opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(3000, reason) - verify return code is 3000 - Connection should be closed",
-          "status": "FAIL",
-          "message": "assert_equals: CloseEvent.code should be 3000 expected 3000 but got 1000"
+          "status": "NOTRUN",
+          "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -543,16 +571,16 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(4999, reason) - Connection should be opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(4999, reason) - readyState should be in CLOSED state and wasClean is TRUE - Connection should be closed",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -560,11 +588,11 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create WebSocket - Close the Connection - close(NaN) - INVALID_ACCESS_ERR is thrown",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -572,11 +600,11 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(code, 'reason more than 123 bytes') - SYNTAX_ERR is thrown",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -584,16 +612,16 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(reason with unpaired surrogates) - connection should get opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(reason with unpaired surrogates) - connection should get closed",
-          "status": "FAIL",
-          "message": "assert_equals: reason replaced with replacement character expected \"�\" but got \"\""
+          "status": "NOTRUN",
+          "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -601,11 +629,11 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create WebSocket - Close the Connection - close(null) - INVALID_ACCESS_ERR is thrown",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -613,11 +641,11 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(only reason) - INVALID_ACCESS_ERR is thrown",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -625,38 +653,26 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - Connection should be opened",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - readyState should be in CLOSED state and wasClean is TRUE - Connection should be closed",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/websockets/Secure-Close-readyState-Closing.htm",
-      "subtests": [
-        {
-          "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - readyState should be in CLOSING state just before onclose is called",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/websockets/Secure-Close-server-initiated-close.htm",
       "subtests": [],
       "status": "TIMEOUT",
       "message": ""
     },
     {
-      "test": "/websockets/Secure-Close-string.htm",
+      "test": "/websockets/Secure-Close-server-initiated-close.htm",
       "subtests": [
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Server initiated Close - Client sends back a CLOSE - Connection should be opened",
@@ -665,8 +681,20 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Server initiated Close - Client sends back a CLOSE - readyState should be in CLOSED state and wasClean is TRUE - Connection should be closed",
-          "status": "FAIL",
-          "message": "assert_true: WebSocket connection should be open expected true got false"
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/websockets/Secure-Close-string.htm",
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Create WebSocket - Close the Connection - close(string) - INVALID_ACCESS_ERR is thrown",
+          "status": "NOTRUN",
+          "message": null
         }
       ],
       "status": "TIMEOUT",
@@ -674,9 +702,15 @@
     },
     {
       "test": "/websockets/Secure-Close-undefined.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Close Secure WebSocket - Code is undefined",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-65K-data.htm",
@@ -693,8 +727,8 @@
         },
         {
           "name": "W3C WebSocket API - Send 65K data on a Secure WebSocket - Connection should be closed",
-          "status": "FAIL",
-          "message": "assert_true: WebSocket connection should be open expected true got false"
+          "status": "NOTRUN",
+          "message": null
         }
       ],
       "status": "TIMEOUT",
@@ -702,12 +736,6 @@
     },
     {
       "test": "/websockets/Secure-Send-binary-65K-arraybuffer.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/websockets/Secure-Send-binary-arraybuffer.htm",
       "subtests": [
         {
           "name": "W3C WebSocket API - Send 65K binary data on a Secure WebSocket - ArrayBuffer - Connection should be opened",
@@ -721,8 +749,30 @@
         },
         {
           "name": "W3C WebSocket API - Send 65K binary data on a Secure WebSocket - ArrayBuffer - Connection should be closed",
-          "status": "FAIL",
-          "message": "assert_true: WebSocket connection should be open expected true got false"
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/websockets/Secure-Send-binary-arraybuffer.htm",
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send binary data on a Secure WebSocket - ArrayBuffer - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a Secure WebSocket - ArrayBuffer - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a Secure WebSocket - ArrayBuffer - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
         }
       ],
       "status": "TIMEOUT",
@@ -752,51 +802,179 @@
     },
     {
       "test": "/websockets/Secure-Send-binary-arraybufferview-float64.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Float64Array - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Float64Array - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Float64Array - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-binary-arraybufferview-int32.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Int32Array - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Int32Array - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Int32Array - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-binary-arraybufferview-uint16-offset-length.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint16Array with offset and length - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint16Array with offset and length - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint16Array with offset and length - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-binary-arraybufferview-uint32-offset.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint32Array with offset - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint32Array with offset - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint32Array with offset - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-binary-arraybufferview-uint8-offset-length.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint8Array with offset and length - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint8Array with offset and length - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint8Array with offset and length - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-binary-arraybufferview-uint8-offset.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint8Array with offset - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint8Array with offset - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint8Array with offset - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-binary-blob.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send binary data on a Secure WebSocket - Blob - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a Secure WebSocket - Blob - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send binary data on a Secure WebSocket - Blob - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-data.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send  data on a Secure WebSocket - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send data on a Secure WebSocket - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send data on a Secure WebSocket - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-null.htm",
@@ -813,8 +991,8 @@
         },
         {
           "name": "W3C WebSocket API - Send null data on a Secure WebSocket - Connection should be closed",
-          "status": "FAIL",
-          "message": "assert_true: WebSocket connection should be open expected true got false"
+          "status": "NOTRUN",
+          "message": null
         }
       ],
       "status": "TIMEOUT",
@@ -822,21 +1000,69 @@
     },
     {
       "test": "/websockets/Secure-Send-paired-surrogates.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send paired surrogates data on a Secure WebSocket - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send paired surrogates data on a Secure WebSocket - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send paired surrogates data on a Secure WebSocket - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-unicode-data.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send  unicode data on a Secure WebSocket - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send unicode data on a Secure WebSocket - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send unicode data on a Secure WebSocket - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Send-unpaired-surrogates.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send unpaired surrogates on a Secure WebSocket - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send unpaired surrogates on a Secure WebSocket - Message should be received",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send unpaired surrogates on a Secure WebSocket - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Send-0byte-data.htm",
@@ -865,8 +1091,8 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Send 65K data on a WebSocket -  Connection should be opened",
-          "status": "FAIL",
-          "message": "assert_equals: expected 0 but got 65000"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "W3C WebSocket API - Send 65K data on a WebSocket - Message should be received",
@@ -875,8 +1101,8 @@
         },
         {
           "name": "W3C WebSocket API - Send 65K data on a WebSocket - Connection should be closed",
-          "status": "FAIL",
-          "message": "assert_true: WebSocket connection should be open expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -918,17 +1144,33 @@
     },
     {
       "test": "/websockets/Send-binary-65K-arraybuffer.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send 65K binary data on a WebSocket - ArrayBuffer - Connection should be opened",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send 65K binary data on a WebSocket - ArrayBuffer - Message should be received",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send 65K binary data on a WebSocket - ArrayBuffer - Connection should be closed",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/Send-binary-arraybuffer.htm",
       "subtests": [
         {
           "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBuffer - Connection should be opened",
-          "status": "FAIL",
-          "message": "assert_equals: expected 0 but got 15"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBuffer - Message should be received",
@@ -937,8 +1179,8 @@
         },
         {
           "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBuffer - Connection should be closed",
-          "status": "FAIL",
-          "message": "assert_true: WebSocket connection should be open expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1015,8 +1257,8 @@
       "subtests": [
         {
           "name": "W3C WebSocket API - Send data on a WebSocket - Connection should be opened",
-          "status": "FAIL",
-          "message": "assert_equals: expected 0 but got 15"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "W3C WebSocket API - Send data on a WebSocket - Message should be received",
@@ -1025,8 +1267,8 @@
         },
         {
           "name": "W3C WebSocket API - Send data on a WebSocket - Connection should be closed",
-          "status": "FAIL",
-          "message": "assert_true: WebSocket connection should be open expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1034,12 +1276,6 @@
     },
     {
       "test": "/websockets/Send-null.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/websockets/Send-paired-surrogates.htm",
       "subtests": [
         {
           "name": "W3C WebSocket API - Send null data on a WebSocket - Connection should be opened",
@@ -1061,10 +1297,48 @@
       "message": null
     },
     {
+      "test": "/websockets/Send-paired-surrogates.htm",
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send (paired surrogates) data on a WebSocket - Connection should be opened",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send (paired surrogates) data on a WebSocket - Message should be received",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send (paired surrogates) data on a WebSocket - Connection should be closed",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/websockets/Send-unicode-data.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Send unicode data on a WebSocket - Connection should be opened",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send unicode data on a WebSocket - Message should be received",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Send unicode data on a WebSocket - Connection should be closed",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/binary/001.html",
@@ -1080,21 +1354,44 @@
     },
     {
       "test": "/websockets/binary/005.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: Send/Receive ArrayBuffer, size less than network array buffer",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/binaryType-wrong-value.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Create WebSocket - set binaryType to something other than blob or arraybuffer - SYNTAX_ERR is returned - Connection should be opened",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "W3C WebSocket API - Create WebSocket - set binaryType to something other than blob or arraybuffer - SYNTAX_ERR is returned - Connection should be closed",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/closing-handshake/002.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: server sends closing handshake",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/closing-handshake/003.html",
@@ -1125,8 +1422,8 @@
       "subtests": [
         {
           "name": "Calling the WebSocket constructor with too many arguments should not throw.",
-          "status": "FAIL",
-          "message": "Type error"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1134,9 +1431,15 @@
     },
     {
       "test": "/websockets/constructor/001.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: new WebSocket() with no args",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/constructor/002.html",
@@ -2009,9 +2312,15 @@
     },
     {
       "test": "/websockets/constructor/005.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: return value",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/constructor/006.html",
@@ -2090,9 +2399,15 @@
     },
     {
       "test": "/websockets/constructor/011.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: protocol mismatch",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/constructor/012.html",
@@ -2108,17 +2423,23 @@
     },
     {
       "test": "/websockets/constructor/014.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: serialize establish a connection",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/constructor/016.html",
       "subtests": [
         {
           "name": "WebSockets: non-ascii URL in query, document encoding windows-1252",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"%C3%A5%C3%A4%C3%B6\" but got \"%E5%E4%F6\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2153,15 +2474,27 @@
     },
     {
       "test": "/websockets/constructor/018.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: NULL char in url",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"x%00\" but got \"x\""
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/constructor/019.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: uppercase 'WS:'",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/constructor/020.html",
@@ -2189,9 +2522,15 @@
     },
     {
       "test": "/websockets/constructor/022.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: protocol array",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/cookies/001.html",
@@ -2286,27 +2625,27 @@
         {
           "name": "WebSocket interface: existence and properties of interface object",
           "status": "FAIL",
-          "message": "assert_equals: class string of WebSocket expected \"[object Function]\" but got \"[object WebSocketConstructor]\""
+          "message": "this.array.members[this.base] is undefined"
         },
         {
           "name": "WebSocket interface object length",
-          "status": "FAIL",
-          "message": "assert_true: WebSocket.length is not configurable expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: existence and properties of interface prototype object",
           "status": "FAIL",
-          "message": "assert_false: WebSocket.prototype is enumerable expected false got true"
+          "message": "this.array.members[inherit_interface] is undefined"
         },
         {
           "name": "WebSocket interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "FAIL",
-          "message": "assert_true: WebSocket.prototype.constructor is not writable expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: attribute url",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: constant CONNECTING on interface object",
@@ -2350,38 +2689,38 @@
         },
         {
           "name": "WebSocket interface: attribute readyState",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: attribute bufferedAmount",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: attribute onopen",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: attribute onerror",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: attribute onclose",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: attribute extensions",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: attribute protocol",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: operation close(unsigned short,DOMString)",
@@ -2390,13 +2729,13 @@
         },
         {
           "name": "WebSocket interface: attribute onmessage",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: attribute binaryType",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "WebSocket interface: operation send(DOMString)",
@@ -2426,7 +2765,7 @@
         {
           "name": "Stringification of new WebSocket(\"ws://foo\")",
           "status": "FAIL",
-          "message": "undefined is not an object (evaluating 'this.array.members[this.base].has_stringifier')"
+          "message": "this.array.members[this.base] is undefined"
         },
         {
           "name": "WebSocket interface: new WebSocket(\"ws://foo\") must inherit property \"url\" with the proper type (0)",
@@ -2551,37 +2890,37 @@
         {
           "name": "CloseEvent interface: existence and properties of interface object",
           "status": "FAIL",
-          "message": "assert_equals: class string of CloseEvent expected \"[object Function]\" but got \"[object CloseEventConstructor]\""
+          "message": "this.array.members[this.base] is undefined"
         },
         {
           "name": "CloseEvent interface object length",
-          "status": "FAIL",
-          "message": "assert_true: CloseEvent.length is not configurable expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "CloseEvent interface: existence and properties of interface prototype object",
           "status": "FAIL",
-          "message": "assert_false: CloseEvent.prototype is enumerable expected false got true"
+          "message": "this.array.members[inherit_interface] is undefined"
         },
         {
           "name": "CloseEvent interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "FAIL",
-          "message": "assert_true: CloseEvent.prototype.constructor is not writable expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "CloseEvent interface: attribute wasClean",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "CloseEvent interface: attribute code",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "CloseEvent interface: attribute reason",
-          "status": "FAIL",
-          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2592,8 +2931,8 @@
       "subtests": [
         {
           "name": "WebSockets: wasClean, true",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2621,8 +2960,8 @@
       "subtests": [
         {
           "name": "createEvent(\"CloseEvent\")",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    document.createEvent(\"CloseEvent\");\n  }\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "initCloseEvent",
@@ -2635,17 +2974,23 @@
     },
     {
       "test": "/websockets/interfaces/WebSocket/bufferedAmount/bufferedAmount-arraybuffer.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: bufferedAmount for ArrayBuffer",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/interfaces/WebSocket/bufferedAmount/bufferedAmount-blob.html",
       "subtests": [
         {
           "name": "WebSockets: bufferedAmount for blob",
-          "status": "FAIL",
-          "message": "assert_equals: expected 10 but got 0"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2656,8 +3001,8 @@
       "subtests": [
         {
           "name": "WebSockets: defineProperty getter for bufferedAmount",
-          "status": "FAIL",
-          "message": "Attempting to change the getter of an unconfigurable property."
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2668,8 +3013,8 @@
       "subtests": [
         {
           "name": "WebSockets: defineProperty setter for bufferedAmount",
-          "status": "FAIL",
-          "message": "Attempting to change the setter of an unconfigurable property."
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2677,17 +3022,23 @@
     },
     {
       "test": "/websockets/interfaces/WebSocket/bufferedAmount/bufferedAmount-deleting.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: delete bufferedAmount",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/interfaces/WebSocket/bufferedAmount/bufferedAmount-getting.html",
       "subtests": [
         {
           "name": "WebSockets: bufferedAmount after send()ing",
-          "status": "FAIL",
-          "message": "assert_equals: bufferedAmount after sent \"x\" expected 1 but got 0"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2695,9 +3046,15 @@
     },
     {
       "test": "/websockets/interfaces/WebSocket/bufferedAmount/bufferedAmount-initial.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: getting bufferedAmount",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/interfaces/WebSocket/bufferedAmount/bufferedAmount-readonly.html",
@@ -2713,17 +3070,23 @@
     },
     {
       "test": "/websockets/interfaces/WebSocket/bufferedAmount/bufferedAmount-unicode.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: bufferedAmount for unicode data",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/interfaces/WebSocket/close/close-basic.html",
       "subtests": [
         {
           "name": "WebSockets: close()",
-          "status": "FAIL",
-          "message": "assert_equals: delete CloseEvent.prototype.wasClean expected (undefined) undefined but got (boolean) false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2746,8 +3109,8 @@
       "subtests": [
         {
           "name": "WebSockets: close() in close event handler",
-          "status": "FAIL",
-          "message": "assert_equals: expected 2 but got 3"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2934,9 +3297,30 @@
     },
     {
       "test": "/websockets/interfaces/WebSocket/constants/006.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "defineProperty setter CONNECTING",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "defineProperty setter OPEN",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "defineProperty setter CLOSING",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "defineProperty setter CLOSED",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/interfaces/WebSocket/events/001.html",
@@ -3150,23 +3534,23 @@
       "subtests": [
         {
           "name": "onclose",
-          "status": "FAIL",
-          "message": "assert_unreached: handleEvent was called Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "onopen",
-          "status": "FAIL",
-          "message": "assert_unreached: handleEvent was called Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "onerror",
-          "status": "FAIL",
-          "message": "assert_unreached: handleEvent was called Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "onmessage",
-          "status": "FAIL",
-          "message": "assert_unreached: handleEvent was called Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3201,17 +3585,23 @@
     },
     {
       "test": "/websockets/interfaces/WebSocket/events/015.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: instanceof on events",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/interfaces/WebSocket/events/016.html",
       "subtests": [
         {
-          "name": "WebSockets: instanceof on events",
-          "status": "FAIL",
-          "message": "assert_equals: expected 3 but got 1"
+          "name": "WebSockets: addEventListener",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3231,12 +3621,6 @@
     },
     {
       "test": "/websockets/interfaces/WebSocket/events/018.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/websockets/interfaces/WebSocket/events/019.html",
       "subtests": [
         {
           "name": "open event",
@@ -3263,10 +3647,43 @@
       "message": null
     },
     {
+      "test": "/websockets/interfaces/WebSocket/events/019.html",
+      "subtests": [
+        {
+          "name": "WebSockets: removeEventListener",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WebSockets: removeEventListener 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WebSockets: removeEventListener 2",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WebSockets: removeEventListener 3",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/websockets/interfaces/WebSocket/events/020.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: error events",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/interfaces/WebSocket/extensions/001.html",
@@ -3321,8 +3738,8 @@
       "subtests": [
         {
           "name": "WebSockets: delete readyState",
-          "status": "FAIL",
-          "message": "assert_equals: delete ws.readyState expected 2 but got 3"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3333,8 +3750,8 @@
       "subtests": [
         {
           "name": "WebSockets: defineProperty getter for readyState",
-          "status": "FAIL",
-          "message": "Attempting to change the getter of an unconfigurable property."
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3345,8 +3762,8 @@
       "subtests": [
         {
           "name": "WebSockets: defineProperty setter for readyState",
-          "status": "FAIL",
-          "message": "Attempting to change the setter of an unconfigurable property."
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3555,7 +3972,7 @@
           "message": null
         },
         {
-          "name": "WebSockets: sending non-strings (function () {})",
+          "name": "WebSockets: sending non-strings (function (){})",
           "status": "PASS",
           "message": null
         },
@@ -3582,17 +3999,23 @@
     },
     {
       "test": "/websockets/interfaces/WebSocket/send/012.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: sending null",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/interfaces/WebSocket/url/001.html",
       "subtests": [
         {
           "name": "WebSockets: getting url",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"ws://w3c-test.org:82/\" but got \"ws://w3c-test.org:82\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3612,17 +4035,23 @@
     },
     {
       "test": "/websockets/interfaces/WebSocket/url/003.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: deleting url",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/interfaces/WebSocket/url/004.html",
       "subtests": [
         {
           "name": "WebSockets: 'URL'",
-          "status": "FAIL",
-          "message": "assert_equals: expected (undefined) undefined but got (string) \"ws://w3c-test.org:82/\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3633,8 +4062,8 @@
       "subtests": [
         {
           "name": "WebSockets: defineProperty getter for url",
-          "status": "FAIL",
-          "message": "Attempting to change the getter of an unconfigurable property."
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3645,8 +4074,8 @@
       "subtests": [
         {
           "name": "WebSockets: defineProperty setter for url",
-          "status": "FAIL",
-          "message": "Attempting to change the setter of an unconfigurable property."
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3666,9 +4095,15 @@
     },
     {
       "test": "/websockets/opening-handshake/003.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: origin",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/opening-handshake/005.html",
@@ -3720,12 +4155,6 @@
     },
     {
       "test": "/websockets/unload-a-document/003.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/websockets/binary/002.html",
       "subtests": [
         {
           "name": "WebSockets: navigating nested browsing context",
@@ -3737,16 +4166,10 @@
       "message": null
     },
     {
-      "test": "/websockets/binary/004.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/websockets/constructor/013.html",
+      "test": "/websockets/binary/002.html",
       "subtests": [
         {
-          "name": "WebSockets: multiple WebSocket objects",
+          "name": "WebSockets: Send/Receive blob, blob size greater than network array buffer",
           "status": "PASS",
           "message": null
         }
@@ -3755,10 +4178,34 @@
       "message": null
     },
     {
-      "test": "/websockets/cookies/005.html",
+      "test": "/websockets/binary/004.html",
+      "subtests": [
+        {
+          "name": "WebSockets: Send/Receive ArrayBuffer, size greater than network array buffer",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/websockets/constructor/013.html",
       "subtests": [],
       "status": "TIMEOUT",
       "message": ""
+    },
+    {
+      "test": "/websockets/cookies/005.html",
+      "subtests": [
+        {
+          "name": "WebSockets: setting HttpOnly cookies in ws response, checking ws request",
+          "status": "FAIL",
+          "message": "assert_unreached: error Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/cookies/007.html",
@@ -3774,12 +4221,6 @@
     },
     {
       "test": "/websockets/extended-payload-length.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/websockets/interfaces/WebSocket/bufferedAmount/bufferedAmount-large.html",
       "subtests": [
         {
           "name": "Application data is 125 byte which means any 'Extended payload length' field isn't used at all.",
@@ -3798,6 +4239,18 @@
         },
         {
           "name": "Application data is (0xFFFF + 1) byte which starts to use the 64 bit 'Extended payload length' field",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/websockets/interfaces/WebSocket/bufferedAmount/bufferedAmount-large.html",
+      "subtests": [
+        {
+          "name": "WebSockets: bufferedAmount for 65K data",
           "status": "PASS",
           "message": null
         }
@@ -3827,9 +4280,9 @@
       "test": "/websockets/opening-handshake/002.html",
       "subtests": [
         {
-          "name": "WebSockets: valid handshake",
-          "status": "PASS",
-          "message": null
+          "name": "WebSockets: 20s inactivity after handshake",
+          "status": "FAIL",
+          "message": "assert_unreached: Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -3837,15 +4290,27 @@
     },
     {
       "test": "/websockets/unload-a-document/002.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: navigating top-level browsing context with closed websocket",
+          "status": "FAIL",
+          "message": "assert_unreached: document was discarded Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/unload-a-document/004.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: navigating nested browsing context with closed websocket",
+          "status": "FAIL",
+          "message": "assert_unreached: document was discarded Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/unload-a-document/005.html",
