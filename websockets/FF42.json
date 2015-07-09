@@ -145,8 +145,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - wsocket.extensions should be set to '' after connection is established - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be closed expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -174,8 +174,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL and array of protocol strings - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -191,8 +191,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - wsocket.binaryType should be set to 'blob' after connection is established - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -208,8 +208,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL and protocol string - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -225,8 +225,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL and protocol string - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -242,8 +242,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Pass a valid URL - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -450,8 +450,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000, reason) - readyState should be in CLOSED state and wasClean is TRUE - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -467,8 +467,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000, reason) - event.code == 1000 and event.reason = 'Clean Close'",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -484,8 +484,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(1000) - readyState should be in CLOSED state and wasClean is TRUE - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -576,8 +576,8 @@
         },
         {
           "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - close(4999, reason) - readyState should be in CLOSED state and wasClean is TRUE - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -667,9 +667,15 @@
     },
     {
       "test": "/websockets/Secure-Close-readyState-Closing.htm",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "W3C WebSocket API - Create Secure WebSocket - Close the Connection - readyState should be in CLOSING state just before onclose is called",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/websockets/Secure-Close-server-initiated-close.htm",
@@ -859,8 +865,8 @@
         },
         {
           "name": "W3C WebSocket API - Send binary data on a WebSocket - ArrayBufferView - Uint16Array with offset and length - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -991,8 +997,8 @@
         },
         {
           "name": "W3C WebSocket API - Send null data on a Secure WebSocket - Connection should be closed",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: WebSocket connection should be open expected true got false"
         }
       ],
       "status": "TIMEOUT",
@@ -4191,9 +4197,15 @@
     },
     {
       "test": "/websockets/constructor/013.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "WebSockets: multiple WebSocket objects",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/websockets/cookies/005.html",
