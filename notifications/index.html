@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<title>Web Notifications implementation report</title>
+<link rel='stylesheet' href='bootstrap.min.css'>
+<link rel='stylesheet' href='analysis.css'>
+<div class='container'>
+  <header>
+    <h1>Web Notifications implementation report</h1>
+  </header>
+<p>This is an implementation report for the
+<a href="https://www.w3.org/TR/notifications/">Web Notifications</a>
+specification.
+
+<p>There is a comprehensive
+<a href="https://github.com/w3c/web-platform-tests/tree/master/notifications">test suite</a>
+for testable requirements in the Web Notifications spec, and the
+<a href="https://w3c.github.io/test-results/notifications/all.html">complete set of test results</a>
+document that there are two independent implementations (in Chrome and/or
+Firefox and/or Safari) of all UA requirements in the spec—with the
+exception of the following:
+</p>
+<ol>
+<li>lack of complete conformance to the WebIDL interface definitions in the spec</li>
+<li>a particular corner-case requirement in the spec of handling of invalid
+values of <code>lang</code> property, for which the results are
+<a href="https://w3c.github.io/test-results/notifications/complete-fails.html">complete failures in all implementing UAs</a>.
+</li>
+</ol>
+
+<p>Regarding the lack of complete conformance to the WebIDL interface
+definitions in the spec, that is not an issue unique to this particular
+spec and in fact is a common issue among a number of specs that have
+already been published a Recommendations, so the Director has already
+determined that particular conformance issue need not prevent any spec from
+proceeding to Rec.
+
+<p>Regarding that corner-case requirement in the spec of handling of
+invalid values of <code>lang</code> property, the details about that
+requirement are as follows:
+
+<p>Step 4 at http://www.w3.org/TR/notifications/#dom-notification states a UA
+   requirement with regard to the value of the Notification.lang property,
+   whose purpose is to convey the language of a notification. That step
+   reads, “If options’s <code>lang</code> is a valid BCP 47 language tag,
+or the empty string, set notification’s language to options’s
+<code>lang</code>, or set it to the empty string otherwise.”
+<p>
+   Restated, if a Web application tries to set a <code>lang</code> value
+   that is not a valid BCP 47 language tag, then according to the spec, the
+   UA should set the actual <code>lang</code> property to the empty string.
+<p>
+   The actual behavior in all UAs is that that if you use a valid BCP 47
+   language tag, the UAs behave as you would expect, and set the
+   notification’s language value to the BCP 47 language tag you indicated.
+<p>
+   However, if you use a string that is an <i>invalid</i> BCP 47 language tag,
+   no UA follows the spec requirement to set the notification’s language
+   value to the empty string.
+<p>
+   Instead it’s all just basically “garbage in, garbage out”: If you use
+   the string “Latn-de”, the UAs will set the notification’s lang value to
+   exactly that—without checking whether it’s a valid BCP 47 value.
+<p>
+   So this isn’t really a problem in the normal case, since if Web
+   developers have their Web applications use valid BCP 47 language tags to
+   begin with, everything will work as expected. (And if they set a value
+   that’s not a valid BCP 47 language tag, things aren’t going to work
+   as expected for end users—regardless of what UAs do with it.)
+
+<p>Given that the lang requirement in question emerged originally from
+discussions with the Internationalization Core (i18n-core) WG, the lack of
+implementation support was
+<a href="https://lists.w3.org/Archives/Public/public-i18n-core/2015JulSep/thread.html#msg4">discussed with the i18n-core WG</a>
+and the resolution of the discussion was essentially that the requirement
+could be changed in the next (essentially v2) version of the spec, which is
+already in development (and implicitly that UAs which had already
+implemented the spec could safely continue to this particular requirement
+in the v1 spec, as they are already doing now; and further that since we
+don't expect any further implementations of the v1 spec, that no change
+to the v1 spec was necessary).</p>
+
+<p>A combined record of tests results for the two conformance cases
+described above (the WebIDL conformance issue, and the corner-case
+requirement for handling of invalid values of <code>lang</code>
+property is
+<a
+href="https://w3c.github.io/test-results/notifications/less-than-2.html">also available</a>.
+
+<p>Finally, it should be noted that neither Microsoft IE nor Microsoft Edge
+implement any support at all for this version of the Web Notifications
+spec.
+</div>
+<script src='jquery.min.js'></script>
+<script src='sticky-headers.js'></script>
