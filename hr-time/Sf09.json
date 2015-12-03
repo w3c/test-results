@@ -1,0 +1,129 @@
+{
+    "results": [
+        {
+            "message": null,
+            "status": "OK",
+            "subtests": [
+                {
+                    "message": null,
+                    "name": "window.performance is defined",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "High Resolution Time extension to the Performance interface",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "window.performance.now() function",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "window.performance.now() returns a number",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "High resolution time has approximately the right relative magnitude",
+                    "status": "PASS"
+                }
+            ],
+            "test": "/hr-time/basic.html"
+        },
+        {
+            "message": null,
+            "status": "OK",
+            "subtests": [
+                {
+                    "message": "Can't find variable: performance",
+                    "name": "WorkerGlobalScope.performance.now() is a function",
+                    "status": "FAIL"
+                },
+                {
+                    "message": "Can't find variable: performance",
+                    "name": "WorkerGlobalScope.performance.now() returns a positive number",
+                    "status": "FAIL"
+                },
+                {
+                    "message": "Can't find variable: performance",
+                    "name": "WorkerGlobalScope.performance.now() difference is not negative",
+                    "status": "FAIL"
+                }
+            ],
+            "test": "/hr-time/basic.worker"
+        },
+        {
+            "message": null,
+            "status": "OK",
+            "subtests": [
+                {
+                    "message": null,
+                    "name": "Performance interface: operation now()",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "Performance must be primary interface of window.performance",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "Stringification of window.performance",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "Performance interface: window.performance must inherit property \"now\" with the proper type (0)",
+                    "status": "PASS"
+                }
+            ],
+            "test": "/hr-time/idlharness.html"
+        },
+        {
+            "message": null,
+            "status": "OK",
+            "subtests": [
+                {
+                    "message": null,
+                    "name": "window.performance.now() returns a positive number",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "window.performance.now() difference is not negative",
+                    "status": "PASS"
+                }
+            ],
+            "test": "/hr-time/monotonic-clock.html"
+        },
+        {
+            "message": null,
+            "status": "OK",
+            "subtests": [
+                {
+                    "message": null,
+                    "name": "parent performance.now() > 0",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "child performance.now() > 0",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "Child created at least 1 second after parent",
+                    "status": "PASS"
+                },
+                {
+                    "message": null,
+                    "name": "Child and parent time bases are correct",
+                    "status": "PASS"
+                }
+            ],
+            "test": "/hr-time/test_cross_frame_start.html"
+        }
+    ]
+}
