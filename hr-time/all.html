@@ -2,31 +2,48 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>HR Time: All Results</title>
+    <title>All Results</title>
     <link rel='stylesheet' href='bootstrap.min.css'>
     <link rel='stylesheet' href='analysis.css'>
   </head>
   <body>
     <div class='container'>
       <header>
-        <h1>HR Time: All Results</h1>
+        <h1>All Results</h1>
       </header>
-      <p><strong>Test files</strong>: 4; <strong>Total subtests</strong>: 0</p><h3>Per UA</h3>
-<dl><dt>UC10</dt>
-<dd>0/0 (NaN%)</dd>
-</dl>
+      <p><strong>Test files</strong>: 5; <strong>Total subtests</strong>: 18</p>
       <h3>Test Files</h3>
 <ol class='toc'><li><a href='#test-file-0'>/hr-time/basic.html</a></li>
-<li><a href='#test-file-1'>/hr-time/idlharness.html</a></li>
-<li><a href='#test-file-2'>/hr-time/monotonic-clock.html</a></li>
-<li><a href='#test-file-3'>/hr-time/test_cross_frame_start.html</a></li>
+<li><a href='#test-file-1'>/hr-time/basic.worker</a></li>
+<li><a href='#test-file-2'>/hr-time/idlharness.html</a></li>
+<li><a href='#test-file-3'>/hr-time/monotonic-clock.html</a></li>
+<li><a href='#test-file-4'>/hr-time/test_cross_frame_start.html</a></li>
 </ol>
       <table class='table persist-area'>
-        <thead><tr class='persist-header'><th>Test</th><th>UC10</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/hr-time/basic.html' target='_blank'>/hr-time/basic.html</a></td><td class='OK'>OK</td></tr>
-<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/hr-time/idlharness.html' target='_blank'>/hr-time/idlharness.html</a></td><td class='OK'>OK</td></tr>
-<tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/hr-time/monotonic-clock.html' target='_blank'>/hr-time/monotonic-clock.html</a></td><td class='OK'>OK</td></tr>
-<tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/hr-time/test_cross_frame_start.html' target='_blank'>/hr-time/test_cross_frame_start.html</a></td><td class='OK'>OK</td></tr>
+        <thead><tr class='persist-header'><th>Test</th><th>Ch47</th><th>Ff42</th><th>UC10</th></tr></thead>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/hr-time/basic.html' target='_blank'>/hr-time/basic.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>window.performance is defined</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>High Resolution Time extension to the Performance interface</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>window.performance.now() function</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>window.performance.now() returns a number</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>High resolution time has approximately the right relative magnitude</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
+<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/hr-time/basic.worker' target='_blank'>/hr-time/basic.worker</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='undefined'>-</td></tr>
+<tr class='subtest'><td>WorkerGlobalScope.performance.now() is a function</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
+<tr class='subtest'><td>WorkerGlobalScope.performance.now() returns a positive number</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
+<tr class='subtest'><td>WorkerGlobalScope.performance.now() difference is not negative</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
+<tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/hr-time/idlharness.html' target='_blank'>/hr-time/idlharness.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Performance interface: operation now()</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Performance must be primary interface of window.performance</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Stringification of window.performance</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Performance interface: window.performance must inherit property "now" with the proper type (0)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/hr-time/monotonic-clock.html' target='_blank'>/hr-time/monotonic-clock.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>window.performance.now() returns a positive number</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>window.performance.now() difference is not negative</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/hr-time/test_cross_frame_start.html' target='_blank'>/hr-time/test_cross_frame_start.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>parent performance.now() &gt; 0</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>child performance.now() &gt; 0</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Child created at least 1 second after parent</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Child and parent time bases are correct</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 
       </table>
     </div>
