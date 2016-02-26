@@ -10,8 +10,8 @@
         },
         {
           "name": "Navigator interface: operation getBattery()",
-          "status": "FAIL",
-          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Navigator must be primary interface of navigator",
@@ -45,8 +45,8 @@
         },
         {
           "name": "BatteryManager interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_equals: class string of BatteryManager.prototype expected \"[object BatteryManagerPrototype]\" but got \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "BatteryManager interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -150,8 +150,8 @@
         },
         {
           "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on manager with too few arguments must throw TypeError",
-          "status": "FAIL",
-          "message": "assert_throws: Called with 0 arguments function \"function () {\n            fn.apply(obj, args);\n        }\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "EventTarget interface: manager must inherit property \"removeEventListener\" with the proper type (1)",
@@ -160,8 +160,8 @@
         },
         {
           "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on manager with too few arguments must throw TypeError",
-          "status": "FAIL",
-          "message": "assert_throws: Called with 0 arguments function \"function () {\n            fn.apply(obj, args);\n        }\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "EventTarget interface: manager must inherit property \"dispatchEvent\" with the proper type (2)",
@@ -223,6 +223,60 @@
       "subtests": [
         {
           "name": "Battery Test: battery full, charger plugged in",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/battery-status/battery-plugging-in-manual.html",
+      "subtests": [
+        {
+          "name": "When the device is plugged in and its charging state is updated, must set the charging attribute's value to true and fire a chargingchange event.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "When the device is plugged in and its charging time is updated, must set the chargingTime attribute's value and fire a chargingtimechange event.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "When the device is plugged in and its discharging time is updated, must set the dischargingTime attribute's value to Infinity and fire a dischargingtimechange event.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "When the device is plugged in and the battery level is updated, must set the level attribute's value and fire a levelchange event.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/battery-status/battery-unplugging-manual.html",
+      "subtests": [
+        {
+          "name": "When the device is unplugged in and its charging state is updated, must set the charging attribute's value to false and fire a chargingchange event.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "When the device is unplugged in and its charging time is updated, must set the chargingTime attribute's value to Infinity and fire a chargingtimechange event.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "When the device is unplugged in and its discharging time is updated, must set the dischargingTime attribute's value and fire a dischargingtimechange event.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "When the device is plugged in and the battery level is updated, must set the level attribute's value and fire a levelchange event.",
           "status": "PASS",
           "message": null
         }
