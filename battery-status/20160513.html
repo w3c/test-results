@@ -22,7 +22,7 @@
 <li><a href='#test-file-6'>/battery-status/battery-unplugging-manual.html</a></li>
 </ol>
       <table class='table persist-area'>
-        <thead><tr class='persist-header'><th>Test</th><th>CH49</th><th>FF47</th><th>ZC49</th><th>ZF47</th></tr></thead>
+        <thead><tr class='persist-header'><th>Test</th><th>Chrome Beta 49 for Android</th><th>Firefox Nightly 47 for Android</th><th>Chrome Beta 49 for Windows</th><th>Firefox Night 47 for Windows</th></tr></thead>
 <tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/battery-status/battery-interface-idlharness.html' target='_blank'>/battery-status/battery-interface-idlharness.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>Battery test: IDL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>Navigator interface: operation getBattery()</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
@@ -82,6 +82,25 @@
 <tr class='subtest'><td>When the device is plugged in and the battery level is updated, must set the level attribute's value and fire a levelchange event.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 
       </table>
+      <p><Strong>Failure analysis</strong>:
+<ol>
+  <li>
+    <a href='#test-file-0'>/battery-status/battery-interface-idlharness.html</a>:<br>
+    Chrome has 2 failures which are not specific to Battery Status API:
+    <ol>
+      <li>the first due to throwing instead of rejecting on promise returning methods (in this case, getBattery())</li>
+      <li>the second due to a general bug of Chrome with WebIDL, see <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=239915">chromium issue 239915</a></li>
+    </ol>
+  </li>
+  <li>
+    <a href='#test-file-4'>/battery-status/battery-full-manual.html</a><br>
+    <a href='#test-file-5'>/battery-status/battery-plugging-in-manual.html</a><br>
+    <a href='#test-file-6'>/battery-status/battery-unplugging-manual.html</a>:<br>
+    due to Chrome for Android doesn't support (dis)chargingTime, see
+    <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=401553">chromium issue 401553</a>
+  </li>
+</ol>
+      </p>
     </div>
     <script src='jquery.min.js'></script>
     <script src='sticky-headers.js'></script>

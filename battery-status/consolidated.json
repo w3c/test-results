@@ -406,7 +406,7 @@
         "OK": 4
       },
       "subtests": {
-        "navigator.getBattery() return BatteryManager": {
+        "navigator.getBattery() shall return BatteryManager as a promise": {
           "byUA": {
             "CH49": "PASS",
             "FF47": "PASS",
@@ -418,6 +418,40 @@
           }
         },
         "navigator.getBattery() shall always return the same promise": {
+          "byUA": {
+            "CH49": "PASS",
+            "FF47": "PASS",
+            "ZC49": "PASS",
+            "ZF47": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "iframe has a different Navigator object thus getting another battery promise": {
+          "byUA": {
+            "CH49": "PASS",
+            "FF47": "PASS",
+            "ZC49": "PASS",
+            "ZF47": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "setting iframe's src makes its Navigator object vary thus getting another battery promise": {
+          "byUA": {
+            "CH49": "PASS",
+            "FF47": "FAIL",
+            "ZC49": "PASS",
+            "ZF47": "FAIL"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 2
+          }
+        },
+        "window.open() makes a different Navigator object thus getting another battery promise": {
           "byUA": {
             "CH49": "PASS",
             "FF47": "PASS",
