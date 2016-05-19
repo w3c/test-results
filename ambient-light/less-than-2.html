@@ -2,34 +2,35 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Ambient Light: Less Than 2 Passes</title>
+    <title>Ambient Light Sensor: Less Than 2 Passes</title>
     <link rel='stylesheet' href='bootstrap.min.css'>
     <link rel='stylesheet' href='analysis.css'>
   </head>
   <body>
     <div class='container'>
       <header>
-        <h1>Ambient Light: Less Than 2 Passes</h1>
+        <h1>Ambient Light Sensor: Less Than 2 Passes</h1>
       </header>
-      <p><strong>Test files without 2 passes</strong>: 2; <strong>Subtests without 2 passes: </strong>10; <strong>Failure level</strong>: 10/68 (14.71%)</p>
+      <p><strong>Test files without 2 passes</strong>: 2; <strong>Subtests without 2 passes: </strong>11; <strong>Failure level</strong>: 11/30 (36.67%)</p>
       <h3>Test Files</h3>
-<ol class='toc'><li><a href='#test-file-0'>/ambient-light/AmbientLight_tests.html</a> <small>(7/56, 12.50%, 10.29% of total)</small></li>
-<li><a href='#test-file-1'>/ambient-light/idlharness.html</a> <small>(3/12, 25.00%, 4.41% of total)</small></li>
+<ol class='toc'><li><a href='#test-file-0'>/ambient-light/idlharness.html</a> <small>(10/29, 34.48%, 33.33% of total)</small></li>
+<li><a href='#test-file-1'>/ambient-light/AmbientLightSensor_tests.html</a> <small>(1/1, 100.00%, 3.33% of total)</small></li>
 </ol>
       <table class='table persist-area'>
-        <thead><tr class='persist-header'><th>Test</th><th>FF30</th><th>FF33</th><th>UC10</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/ambient-light/AmbientLight_tests.html' target='_blank'>/ambient-light/AmbientLight_tests.html</a> <small>(7/56, 12.50%, 10.29% of total)</small></td><td class='OK'>OK</td><td class='TIMEOUT'>TIMEOUT</td><td class='ERROR'>ERROR</td></tr>
-<tr class='subtest'><td>value of undefined resolves to NaN</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>expected ondevicelight on window and to be set to function</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>ondevicelight is null</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>treat object as null</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>treat object with non-callable call property as null</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>treat array as null</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>treat non-callable host object as null</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/ambient-light/idlharness.html' target='_blank'>/ambient-light/idlharness.html</a> <small>(3/12, 25.00%, 4.41% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Window interface: attribute ondevicelight</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>Window interface: window must inherit property "ondevicelight" with the proper type (0)</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>DeviceLightEvent interface: existence and properties of interface object</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+        <thead><tr class='persist-header'><th>Test</th><th>CA52</th><th>CH52</th></tr></thead>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/ambient-light/idlharness.html' target='_blank'>/ambient-light/idlharness.html</a> <small>(10/29, 34.48%, 33.33% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>SensorReadingEvent must be primary interface of new SensorReadingEvent({ reading: new AmbientLightSensorReading({ illuminance: 750 }) });</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Stringification of new SensorReadingEvent({ reading: new AmbientLightSensorReading({ illuminance: 750 }) });</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>SensorReadingEvent interface: new SensorReadingEvent({ reading: new AmbientLightSensorReading({ illuminance: 750 }) }); must inherit property "reading" with the proper type (0)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>AmbientLightSensor interface: existence and properties of interface prototype object</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Stringification of new AmbientLightSensor();</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Sensor interface: new AmbientLightSensor(); must inherit property "onchange" with the proper type (4)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Sensor interface: new AmbientLightSensor(); must inherit property "onstatechange" with the proper type (5)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Sensor interface: new AmbientLightSensor(); must inherit property "onerror" with the proper type (6)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>AmbientLightSensorReading interface object length</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>AmbientLightSensorReading interface: existence and properties of interface prototype object</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/ambient-light/AmbientLightSensor_tests.html' target='_blank'>/ambient-light/AmbientLightSensor_tests.html</a> <small>(1/1, 100.00%, 3.33% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Test suite not implemented yet.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 
       </table>
     </div>

@@ -1,792 +1,297 @@
 {
   "ua": [
-    "FF30",
-    "FF33",
-    "UC10"
+    "CA52",
+    "CH52"
   ],
   "results": {
-    "/ambient-light/AmbientLight_tests.html": {
+    "/ambient-light/idlharness.html": {
       "byUA": {
-        "FF30": "OK",
-        "FF33": "TIMEOUT",
-        "UC10": "ERROR"
+        "CA52": "OK",
+        "CH52": "OK"
       },
       "totals": {
-        "OK": 1,
-        "TIMEOUT": 1,
-        "ERROR": 1
+        "OK": 2
       },
       "subtests": {
-        "the event is an instance of DeviceLightEvent": {
+        "SensorReadingEvent must be primary interface of new SensorReadingEvent({ reading: new AmbientLightSensorReading({ illuminance: 750 }) });": {
           "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
+            "CA52": "FAIL",
+            "CH52": "FAIL"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "the event inherits from Event": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "Missing type argument": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "Event type set to undefined": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is null": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is number": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is Number": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is array": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is instance of Array": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is nested array": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is host object": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is boolean (true)": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is instance of Boolean (true)": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is boolean (false)": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is instance of Boolean (false)": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is string": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is instance of String": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is function": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "type argument is complex object, with toString method": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "toString is of type function": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "eventInitDict argument sets to undefined": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "eventInitDict argument is null": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "eventInitDict argument is Date object": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "eventInitDict argument is RegExp object": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "eventInitDict argument is boolean": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "eventInitDict argument is number": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "eventInitDict argument is string": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value is readonly": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value initializes to positive Infinity": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value set to positive Infinity": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value set to negative Infinity": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value set to 0": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value set to 1": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value set to -1": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value set to 0.5": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value set to false": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value set to true": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value of undefined resolves to NaN": {
-          "byUA": {
-            "FF30": "FAIL",
-            "FF33": "FAIL",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "FAIL": 3
-          }
-        },
-        "value of null resolves to 0": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value of empty string must resolve to 0": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value of U+0020 must resolve to 0": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value of multiple U+0020 must resolve to 0": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "converts to 1234": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "converts to 0": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value of {} resolves to NaN": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value resolves to NaN": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "value resolves 123": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "expected ondevicelight on window and to be set to function": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "FAIL",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 1,
             "FAIL": 2
           }
         },
-        "ondevicelight is null": {
+        "Stringification of new SensorReadingEvent({ reading: new AmbientLightSensorReading({ illuminance: 750 }) });": {
           "byUA": {
-            "FF30": "FAIL",
-            "FF33": "PASS",
-            "UC10": "FAIL"
+            "CA52": "FAIL",
+            "CH52": "FAIL"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "FAIL": 2
           }
         },
-        "treat object as null": {
+        "SensorReadingEvent interface: new SensorReadingEvent({ reading: new AmbientLightSensorReading({ illuminance: 750 }) }); must inherit property \"reading\" with the proper type (0)": {
           "byUA": {
-            "FF30": "FAIL",
-            "FF33": "FAIL",
-            "UC10": "FAIL"
+            "CA52": "FAIL",
+            "CH52": "FAIL"
           },
           "totals": {
-            "FAIL": 3
+            "FAIL": 2
           }
         },
-        "treat object with non-callable call property as null": {
+        "AmbientLightSensor interface: existence and properties of interface object": {
           "byUA": {
-            "FF30": "FAIL",
-            "FF33": "FAIL",
-            "UC10": "FAIL"
+            "CA52": "PASS",
+            "CH52": "PASS"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2
           }
         },
-        "treat string as null": {
+        "AmbientLightSensor interface object length": {
           "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
+            "CA52": "PASS",
+            "CH52": "PASS"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 1
+            "PASS": 2
           }
         },
-        "treat number as null": {
+        "AmbientLightSensor interface object name": {
           "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
+            "CA52": "PASS",
+            "CH52": "PASS"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 1
+            "PASS": 2
           }
         },
-        "treat undefined as null": {
+        "AmbientLightSensor interface: existence and properties of interface prototype object": {
           "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
+            "CA52": "FAIL",
+            "CH52": "FAIL"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
-        "treat array as null": {
+        "AmbientLightSensor interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "FF30": "FAIL",
-            "FF33": "FAIL",
-            "UC10": "FAIL"
+            "CA52": "PASS",
+            "CH52": "PASS"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2
           }
         },
-        "treat non-callable host object as null": {
+        "AmbientLightSensor interface: attribute reading": {
           "byUA": {
-            "FF30": "FAIL",
-            "FF33": "FAIL",
-            "UC10": "FAIL"
+            "CA52": "PASS",
+            "CH52": "PASS"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2
           }
         },
-        "test if DeviceLightEvent received": {
+        "AmbientLightSensor must be primary interface of new AmbientLightSensor();": {
           "byUA": {
-            "FF30": "PASS",
-            "FF33": "NOTRUN",
-            "UC10": "NOTRUN"
+            "CA52": "PASS",
+            "CH52": "PASS"
           },
           "totals": {
-            "PASS": 2,
-            "NOTRUN": 3
+            "PASS": 2
           }
         },
-        "test if DeviceLightEvent received (event handler attribute)": {
+        "Stringification of new AmbientLightSensor();": {
           "byUA": {
-            "UC10": "NOTRUN"
+            "CA52": "FAIL",
+            "CH52": "FAIL"
           },
           "totals": {
-            "NOTRUN": 1
+            "FAIL": 2
+          }
+        },
+        "AmbientLightSensor interface: new AmbientLightSensor(); must inherit property \"reading\" with the proper type (0)": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Sensor interface: new AmbientLightSensor(); must inherit property \"state\" with the proper type (0)": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Sensor interface: new AmbientLightSensor(); must inherit property \"reading\" with the proper type (1)": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Sensor interface: new AmbientLightSensor(); must inherit property \"start\" with the proper type (2)": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Sensor interface: new AmbientLightSensor(); must inherit property \"stop\" with the proper type (3)": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Sensor interface: new AmbientLightSensor(); must inherit property \"onchange\" with the proper type (4)": {
+          "byUA": {
+            "CA52": "FAIL",
+            "CH52": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        },
+        "Sensor interface: new AmbientLightSensor(); must inherit property \"onstatechange\" with the proper type (5)": {
+          "byUA": {
+            "CA52": "FAIL",
+            "CH52": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        },
+        "Sensor interface: new AmbientLightSensor(); must inherit property \"onerror\" with the proper type (6)": {
+          "byUA": {
+            "CA52": "FAIL",
+            "CH52": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        },
+        "AmbientLightSensorReading interface: existence and properties of interface object": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "AmbientLightSensorReading interface object length": {
+          "byUA": {
+            "CA52": "FAIL",
+            "CH52": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        },
+        "AmbientLightSensorReading interface object name": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "AmbientLightSensorReading interface: existence and properties of interface prototype object": {
+          "byUA": {
+            "CA52": "FAIL",
+            "CH52": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        },
+        "AmbientLightSensorReading interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "AmbientLightSensorReading interface: attribute illuminance": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "AmbientLightSensorReading must be primary interface of new AmbientLightSensorReading({ illuminance: 750 });": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Stringification of new AmbientLightSensorReading({ illuminance: 750 });": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "AmbientLightSensorReading interface: new AmbientLightSensorReading({ illuminance: 750 }); must inherit property \"illuminance\" with the proper type (0)": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "SensorReading interface: new AmbientLightSensorReading({ illuminance: 750 }); must inherit property \"timeStamp\" with the proper type (0)": {
+          "byUA": {
+            "CA52": "PASS",
+            "CH52": "PASS"
+          },
+          "totals": {
+            "PASS": 2
           }
         }
       }
     },
-    "/ambient-light/idlharness.html": {
+    "/ambient-light/AmbientLightSensor_tests.html": {
       "byUA": {
-        "FF30": "OK",
-        "FF33": "OK",
-        "UC10": "OK"
+        "CA52": "OK",
+        "CH52": "OK"
       },
       "totals": {
-        "OK": 3
+        "OK": 2
       },
       "subtests": {
-        "Window interface: attribute ondevicelight": {
+        "Test suite not implemented yet.": {
           "byUA": {
-            "FF30": "PASS",
-            "FF33": "FAIL",
-            "UC10": "FAIL"
+            "CA52": "FAIL",
+            "CH52": "FAIL"
           },
           "totals": {
-            "PASS": 1,
             "FAIL": 2
-          }
-        },
-        "Window must be primary interface of window": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 3
-          }
-        },
-        "Stringification of window": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "Window interface: window must inherit property \"ondevicelight\" with the proper type (0)": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "FAIL",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 1,
-            "FAIL": 2
-          }
-        },
-        "DeviceLightEvent interface: existence and properties of interface object": {
-          "byUA": {
-            "FF30": "FAIL",
-            "FF33": "FAIL",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "FAIL": 3
-          }
-        },
-        "DeviceLightEvent interface object length": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "DeviceLightEvent interface: existence and properties of interface prototype object": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "DeviceLightEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "DeviceLightEvent interface: attribute value": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "DeviceLightEvent must be primary interface of new DeviceLightEvent(\"foo\")": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "Stringification of new DeviceLightEvent(\"foo\")": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
-          }
-        },
-        "DeviceLightEvent interface: new DeviceLightEvent(\"foo\") must inherit property \"value\" with the proper type (0)": {
-          "byUA": {
-            "FF30": "PASS",
-            "FF33": "PASS",
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 1
           }
         }
       }
