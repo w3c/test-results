@@ -1,0 +1,56 @@
+{
+  "results": [
+    {
+      "test": "/generic-sensor/idlharness.html",
+      "subtests": [
+        {
+          "name": "SensorErrorEvent interface: existence and properties of interface object",
+          "status": "FAIL",
+          "message": "assert_equals: prototype of SensorErrorEvent is not Event expected function \"function Event() { [native code] }\" but got function \"function ErrorEvent() { [native code] }\""
+        },
+        {
+          "name": "SensorErrorEvent interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SensorErrorEvent interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SensorErrorEvent interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_equals: prototype of SensorErrorEvent.prototype is not Event.prototype expected object \"[object Event]\" but got object \"[object ErrorEvent]\""
+        },
+        {
+          "name": "SensorErrorEvent interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SensorErrorEvent interface: attribute error",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"error\" missing"
+        },
+        {
+          "name": "SensorErrorEvent must be primary interface of new SensorErrorEvent({ error: new TypeError(\"Boom!\") });",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Failed to construct 'SensorErrorEvent': 2 argu...\""
+        },
+        {
+          "name": "Stringification of new SensorErrorEvent({ error: new TypeError(\"Boom!\") });",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Failed to construct 'SensorErrorEvent': 2 argu...\""
+        },
+        {
+          "name": "SensorErrorEvent interface: new SensorErrorEvent({ error: new TypeError(\"Boom!\") }); must inherit property \"error\" with the proper type (0)",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"TypeError: Failed to construct 'SensorErrorEvent': 2 argu...\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
