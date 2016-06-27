@@ -1,6 +1,72 @@
 {
   "results": [
     {
+      "test": "/presentation-api/controlling-ua/PresentationRequest_error.html",
+      "subtests": [
+        {
+          "name": "Call PresentationRequest() constructor without presentation URL. TypeError Exception expected.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Call PresentationRequest() constructor with null presentation URL. TypeError Exception expected.",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n            new PresentationRequest(wrong_presentation_url);\n        }\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationRequest_success.html",
+      "subtests": [
+        {
+          "name": "Call PresentationRequest() constructor with valid presentation URL. No Exception expected.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/getAvailability.html",
+      "subtests": [
+        {
+          "name": "The request is an Promise.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The request is an instance of PresentationRequest.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The promise is an instance of PresentationAvailability",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The availability has an boolean value.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "There is an availability.",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        },
+        {
+          "name": "There is no availability for an invalid presentation URL.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/presentation-api/controlling-ua/idlharness.html",
       "subtests": [
         {
@@ -352,6 +418,109 @@
           "name": "PresentationConnectionClosedEvent interface: attribute message",
           "status": "FAIL",
           "message": "assert_own_property: self does not have own property \"PresentationConnectionClosedEvent\" expected property \"PresentationConnectionClosedEvent\" missing"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/startNewPresentation_error.html",
+      "subtests": [
+        {
+          "name": "The presentation could not start, because a user gesture is required.",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"ReferenceError: InvalidAccessError is not defined\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationConnection_onclosed-manual.html",
+      "subtests": [],
+      "status": "FAIL",
+      "message": ""
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationConnection_onconnected-manual.html",
+      "subtests": [],
+      "status": "FAIL",
+      "message": ""
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationConnection_onterminated-manual.html",
+      "subtests": [],
+      "status": "FAIL",
+      "message": ""
+    },
+    {
+      "test": "/presentation-api/controlling-ua/reconnectToPresentation_error-manual.html",
+      "subtests": [
+        {
+          "name": "Check that the promise is rejected by wrong presentation Id",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotFoundError: Error creating route: No matching route\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/reconnectToPresentation_success-manual.html",
+      "subtests": [
+        {
+          "name": "The reconnection was successful.",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotFoundError: Error creating route: No matching route\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/startNewPresentation_error-manual.html",
+      "subtests": [
+        {
+          "name": "The starting process for the presentation has been aborted.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check, if the error code is correct.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check, if the error message is correct.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/startNewPresentation_success-manual.html",
+      "subtests": [
+        {
+          "name": "The presentation was started successfully.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The connection ID is set.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The connection ID is a string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The connection is an instance of PresentationConnection.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
