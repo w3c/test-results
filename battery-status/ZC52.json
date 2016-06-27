@@ -178,17 +178,51 @@
       "message": null
     },
     {
+      "test": "/battery-status/battery-promise-iframe.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "message": null,
+          "name": "iframe has a different Navigator object thus getting another battery promise"
+        },
+        {
+          "status": "FAIL",
+          "message": "assert_equals:navigator objects shall be same expected object \"[object Navigator]\" but got object \"[object Navigator]\"",
+          "name": "setting src of an iframe with initial about:blank makes same Navigator object and battery promise"
+        },
+        {
+          "status": "PASS",
+          "message": null,
+          "name": "setting src of an iframe with initial frame makes its Navigator object vary thus getting another battery promise"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/battery-status/battery-promise-window.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "message": null,
+          "name": "window.open() makes a different Navigator object thus getting another battery promise"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/battery-status/battery-promise.html",
       "subtests": [
         {
-          "name": "navigator.getBattery() return BatteryManager",
           "status": "PASS",
-          "message": null
+          "message": null,
+          "name": "navigator.getBattery() shall return BatteryManager as a promise"
         },
         {
-          "name": "navigator.getBattery() shall always return the same promise",
           "status": "PASS",
-          "message": null
+          "message": null,
+          "name": "navigator.getBattery() shall always return the same promise"
         }
       ],
       "status": "OK",
