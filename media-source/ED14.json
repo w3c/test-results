@@ -1300,8 +1300,8 @@
       "subtests": [
         {
           "name": "Tests mp4 audio-only bitrate changes.",
-          "status": "FAIL",
-          "message": "InvalidStateError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1312,8 +1312,8 @@
       "subtests": [
         {
           "name": "Tests mp4 audio bitrate changes in multiplexed content.",
-          "status": "FAIL",
-          "message": "InvalidStateError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1324,8 +1324,8 @@
       "subtests": [
         {
           "name": "Tests mp4 frame size changes in multiplexed content.",
-          "status": "FAIL",
-          "message": "InvalidStateError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1336,8 +1336,8 @@
       "subtests": [
         {
           "name": "Tests mp4 video bitrate changes in multiplexed content.",
-          "status": "FAIL",
-          "message": "InvalidStateError"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1348,11 +1348,11 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only bitrate changes.",
-          "status": "FAIL",
-          "message": "InvalidStateError"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1360,11 +1360,11 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only frame rate changes.",
-          "status": "FAIL",
-          "message": "InvalidStateError"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1372,11 +1372,11 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only frame size changes.",
-          "status": "FAIL",
-          "message": "InvalidStateError"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1588,34 +1588,14 @@
           "message": null
         },
         {
-          "name": "MediaSource.duration: Truncating the duration does not trigger any SourceBuffer update",
-          "status": "FAIL",
-          "message": "assert_false: No SourceBuffer update when duration is truncated expected false got true"
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration during media playback does not trigger any SourceBuffer update",
-          "status": "FAIL",
-          "message": "assert_false: No SourceBuffer update when duration is truncated expected false got true"
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration triggers a seek if new duration is below currentTime",
-          "status": "FAIL",
-          "message": "assert_true: Seeking after setting truncatedDuration expected true got false"
-        },
-        {
-          "name": "MediaSource.duration: Adding more data after truncating the duration completes the seek triggered by the truncation",
-          "status": "FAIL",
-          "message": "assert_true: Seeking after setting truncatedDuration expected true got false"
-        },
-        {
-          "name": "MediaSource.duration: Calling endOfStream() after truncating the duration completes the seek triggered by the truncation",
-          "status": "FAIL",
-          "message": "assert_true: Seeking after setting truncatedDuration expected true got false"
+          "name": "MediaSource.duration: Increasing the duration during media playback does not trigger any SourceBuffer update",
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaSource.duration: Setting the same duration multiple times does not fire duplicate durationchange events",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "TIMEOUT",
@@ -1663,11 +1643,6 @@
         },
         {
           "name": "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute even after truncation",
           "status": "PASS",
           "message": null
         }

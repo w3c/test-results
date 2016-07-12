@@ -112,63 +112,63 @@
         },
         {
           "name": "AudioTrack interface: attribute sourceBuffer",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"AudioTrack\" expected property \"AudioTrack\" missing"
         },
         {
           "name": "VideoTrack interface: attribute sourceBuffer",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"VideoTrack\" expected property \"VideoTrack\" missing"
         },
         {
           "name": "TextTrack interface: attribute sourceBuffer",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
         },
         {
           "name": "MediaSource interface: existence and properties of interface object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of MediaSource expected \"[object Function]\" but got \"[object MediaSourceConstructor]\""
         },
         {
           "name": "MediaSource interface object length",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: MediaSource.length is not configurable expected true got false"
         },
         {
           "name": "MediaSource interface object name",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"name\" missing"
         },
         {
           "name": "MediaSource interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: MediaSource.prototype is enumerable expected false got true"
         },
         {
           "name": "MediaSource interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: MediaSource.prototype.constructor is not writable expected true got false"
         },
         {
           "name": "MediaSource interface: attribute sourceBuffers",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
         },
         {
           "name": "MediaSource interface: attribute activeSourceBuffers",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
         },
         {
           "name": "MediaSource interface: attribute readyState",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
         },
         {
           "name": "MediaSource interface: attribute duration",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: getting property on prototype object must throw TypeError function \"function () {\n    [native code]\n}\" did not throw"
         },
         {
           "name": "MediaSource interface: attribute onsourceopen",
@@ -682,8 +682,8 @@
         },
         {
           "name": "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"length\" with the proper type (0)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_inherits: property \"length\" found on object expected in prototype chain"
         },
         {
           "name": "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"onaddsourcebuffer\" with the proper type (1)",
@@ -951,13 +951,13 @@
         },
         {
           "name": "Test addSourceBuffer() with empty type",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: addSourceBuffer() threw an exception when passed an empty string. function \"function () { mediaSource.addSourceBuffer(\"\"); }\" threw object \"Error: InvalidAccessError: DOM Exception 15\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test addSourceBuffer() with null",
-          "status": "FAIL",
-          "message": "assert_throws: addSourceBuffer() threw an exception when passed null. function \"function () { mediaSource.addSourceBuffer(null); }\" threw object \"TypeError: Type error\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Test addSourceBuffer() with unsupported type",
@@ -1300,8 +1300,8 @@
       "subtests": [
         {
           "name": "Tests mp4 audio-only bitrate changes.",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1312,8 +1312,8 @@
       "subtests": [
         {
           "name": "Tests mp4 audio bitrate changes in multiplexed content.",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1325,7 +1325,7 @@
         {
           "name": "Tests mp4 frame size changes in multiplexed content.",
           "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "message": "assert_equals: Event types match. expected \"resize\" but got \"ended\""
         }
       ],
       "status": "OK",
@@ -1336,8 +1336,8 @@
       "subtests": [
         {
           "name": "Tests mp4 video bitrate changes in multiplexed content.",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1348,11 +1348,11 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only bitrate changes.",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1360,11 +1360,11 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only frame rate changes.",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1372,11 +1372,11 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only frame size changes.",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1557,13 +1557,13 @@
       "subtests": [
         {
           "name": "MediaSource.duration: Truncating the duration succeeds when new duration is greater than the highest starting time of buffered coded frames",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected event 'error' Reached unreachable code"
         },
         {
           "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time of buffered coded frames",
           "status": "FAIL",
-          "message": "assert_equals: expected 1 but got 2"
+          "message": "assert_unreached: Unexpected event 'error' Reached unreachable code"
         },
         {
           "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time for at least some buffered coded frames",
@@ -1588,34 +1588,14 @@
           "message": null
         },
         {
-          "name": "MediaSource.duration: Truncating the duration does not trigger any SourceBuffer update",
-          "status": "FAIL",
-          "message": "assert_false: No SourceBuffer update when duration is truncated expected false got true"
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration during media playback does not trigger any SourceBuffer update",
-          "status": "FAIL",
-          "message": "assert_false: No SourceBuffer update when duration is truncated expected false got true"
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration triggers a seek if new duration is below currentTime",
-          "status": "FAIL",
-          "message": "assert_false: sourceBuffer.updating expected false got true"
-        },
-        {
-          "name": "MediaSource.duration: Adding more data after truncating the duration completes the seek triggered by the truncation",
-          "status": "FAIL",
-          "message": "assert_false: sourceBuffer.updating expected false got true"
-        },
-        {
-          "name": "MediaSource.duration: Calling endOfStream() after truncating the duration completes the seek triggered by the truncation",
-          "status": "FAIL",
-          "message": "assert_false: sourceBuffer.updating expected false got true"
+          "name": "MediaSource.duration: Increasing the duration during media playback does not trigger any SourceBuffer update",
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaSource.duration: Setting the same duration multiple times does not fire duplicate durationchange events",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1665,11 +1645,6 @@
           "name": "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute even after truncation",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
         }
       ],
       "status": "TIMEOUT",
@@ -1717,13 +1692,13 @@
       "subtests": [
         {
           "name": "Test HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Test the totalFrameDelay attribute of HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2017,8 +1992,8 @@
       "subtests": [
         {
           "name": "Test normal playback case with MediaSource API",
-          "status": "FAIL",
-          "message": "InvalidStateError: DOM Exception 11"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2173,8 +2148,8 @@
         },
         {
           "name": "Test removeSourceBuffer() with null",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: removeSourceBuffer() threw an exception when passed null. function \"function () { mediaSource.removeSourceBuffer(null); }\" threw object \"Error: InvalidAccessError: DOM Exception 15\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test calling removeSourceBuffer() twice with the same object.",
@@ -2262,17 +2237,17 @@
         {
           "name": "Test sequence AppendMode appendBuffer(first media segment)",
           "status": "FAIL",
-          "message": "assert_less_than_equal: sourceBuffer.buffered range ends at or before expected upper bound before EOS expected a number less than or equal to 0.465 but got 0.531"
+          "message": "assert_equals: expectedTimestampOffset expected 0 but got NaN"
         },
         {
           "name": "Test sequence AppendMode appendBuffer(second media segment)",
           "status": "FAIL",
-          "message": "assert_equals: expectedTimestampOffset expected -0.465 but got 0"
+          "message": "assert_equals: expectedTimestampOffset expected -0.465 but got NaN"
         },
         {
           "name": "Test sequence AppendMode appendBuffer(second media segment, then first media segment)",
           "status": "FAIL",
-          "message": "assert_unreached: Unexpected event 'error' Reached unreachable code"
+          "message": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0 but got 0.465"
         }
       ],
       "status": "OK",
