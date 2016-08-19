@@ -17,23 +17,17 @@
       "subtests": [
         {
           "name": " WorkerGlobalScope onerror event handler argument: location ",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/workers/WorkerGlobalScope_ErrorEvent_lineno.htm",
-      "subtests": [
-        {
-          "name": " WorkerGlobalScope onerror event handler argument: line ",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -62,15 +56,9 @@
     },
     {
       "test": "/workers/WorkerGlobalScope_importScripts.htm",
-      "subtests": [
-        {
-          "name": " WorkerGlobalScope API: importScripts() ",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/WorkerGlobalScope_importScripts_NetworkErr.htm",
@@ -170,9 +158,15 @@
     },
     {
       "test": "/workers/WorkerLocation_hostname.htm",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
+    },
+    {
+      "test": "/workers/WorkerLocation_href.htm",
       "subtests": [
         {
-          "name": " WorkerLocation URL decomposition IDL attribute: hostname ",
+          "name": " WorkerLocation href attribute ",
           "status": "PASS",
           "message": null
         }
@@ -181,40 +175,28 @@
       "message": null
     },
     {
-      "test": "/workers/WorkerLocation_href.htm",
+      "test": "/workers/WorkerLocation_pathname.htm",
       "subtests": [],
       "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/workers/WorkerLocation_pathname.htm",
-      "subtests": [
-        {
-          "name": " WorkerLocation URL decomposition IDL attribute: pathname ",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
       "message": null
     },
     {
       "test": "/workers/WorkerLocation_port.htm",
-      "subtests": [
-        {
-          "name": " WorkerLocation URL decomposition IDL attribute: port ",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        }
-      ],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
-      "test": "/workers/WorkerLocation_protocol.htm",
       "subtests": [],
       "status": "TIMEOUT",
       "message": ""
+    },
+    {
+      "test": "/workers/WorkerLocation_protocol.htm",
+      "subtests": [
+        {
+          "name": " WorkerLocation URL decomposition IDL attribute: protocol ",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/WorkerLocation_search.htm",
@@ -227,6 +209,18 @@
       "subtests": [
         {
           "name": " WorkerLocation.search with empty <query> ",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"\" but got \"?\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/WorkerLocation_search_fragment.htm",
+      "subtests": [
+        {
+          "name": " WorkerLocation.search with <fragment> in <query> ",
           "status": "PASS",
           "message": null
         }
@@ -235,21 +229,9 @@
       "message": null
     },
     {
-      "test": "/workers/WorkerLocation_search_fragment.htm",
+      "test": "/workers/WorkerLocation_search_nonexist.htm",
       "subtests": [],
       "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/workers/WorkerLocation_search_nonexist.htm",
-      "subtests": [
-        {
-          "name": " WorkerLocation.search  with no <query> component ",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
       "message": null
     },
     {
@@ -338,14 +320,8 @@
     },
     {
       "test": "/workers/Worker_ErrorEvent_lineno.htm",
-      "subtests": [
-        {
-          "name": " AbstractWorker ErrorEvent.lineno ",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -412,7 +388,7 @@
         {
           "name": " ErrorEvent and Worker.dispatchEvent() ",
           "status": "FAIL",
-          "message": "assert_equals: error expected (object) object \"Error: test\" but got (undefined) undefined"
+          "message": "Function expected"
         },
         {
           "name": "document.createEvent('ErrorEvent')",
@@ -421,8 +397,8 @@
         },
         {
           "name": "initErrorEvent",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "Function expected"
         }
       ],
       "status": "OK",
@@ -478,20 +454,20 @@
     },
     {
       "test": "/workers/baseurl/alpha/worker.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "Base URL in workers: new Worker()",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"gamma\" but got \"beta\""
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/workers/baseurl/alpha/xhr.html",
-      "subtests": [
-        {
-          "name": "Base URL in workers: XHR",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"gamma\\n\" but got \"beta\\n\""
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -500,7 +476,7 @@
         {
           "name": "Create SharedWorker with different URLs but same name",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -512,7 +488,7 @@
         {
           "name": "connect event",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -520,15 +496,9 @@
     },
     {
       "test": "/workers/constructors/SharedWorker/dummy-name.html",
-      "subtests": [
-        {
-          "name": "creating a dummy shared worker with name \"foo\"",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/constructors/SharedWorker/dummy-shared-worker.html",
@@ -536,7 +506,7 @@
         {
           "name": "creating a dummy shared worker",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -548,7 +518,7 @@
         {
           "name": "creating a dummy shared worker with explicit name \"\"",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -556,32 +526,26 @@
     },
     {
       "test": "/workers/constructors/SharedWorker/global-members.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/workers/constructors/SharedWorker/interface-objects.html",
       "subtests": [
         {
-          "name": "members of SharedWorkerGlobalScope",
+          "name": "expected interface objects/constructors",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
       "message": null
     },
     {
-      "test": "/workers/constructors/SharedWorker/interface-objects.html",
+      "test": "/workers/constructors/SharedWorker/name.html",
       "subtests": [],
       "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/workers/constructors/SharedWorker/name.html",
-      "subtests": [
-        {
-          "name": "self.name",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
       "message": null
     },
     {
@@ -590,7 +554,7 @@
         {
           "name": "no arguments",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    var worker = new SharedWorker();\n  }\" threw object \"ReferenceError: Can't find variable: SharedWorker\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: function \"function () {\n    var worker = new SharedWorker();\n  }\" threw object \"ReferenceError: 'SharedWorker' is undefined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
         }
       ],
       "status": "OK",
@@ -600,7 +564,7 @@
       "test": "/workers/constructors/SharedWorker/null-arguments.html",
       "subtests": [],
       "status": "TIMEOUT",
-      "message": ""
+      "message": null
     },
     {
       "test": "/workers/constructors/SharedWorker/number-arguments.html",
@@ -608,7 +572,7 @@
         {
           "name": "1 as arguments",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -616,15 +580,9 @@
     },
     {
       "test": "/workers/constructors/SharedWorker/port-onmessage.html",
-      "subtests": [
-        {
-          "name": "worker.port.onmessage",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/constructors/SharedWorker/port-properties.html",
@@ -632,7 +590,7 @@
         {
           "name": "worker.port",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -644,7 +602,7 @@
         {
           "name": "setting worker.port",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -656,12 +614,12 @@
         {
           "name": "unsupported_scheme",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () { new SharedWorker('unsupported:', ''); }\" threw object \"ReferenceError: Can't find variable: SharedWorker\" that is not a DOMException SecurityError: property \"code\" is equal to undefined, expected 18"
+          "message": "assert_throws: function \"function () { new SharedWorker('unsupported:', ''); }\" threw object \"ReferenceError: 'SharedWorker' is undefined\" that is not a DOMException SecurityError: property \"code\" is equal to undefined, expected 18"
         },
         {
           "name": "data_url",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         },
         {
           "name": "javascript_url",
@@ -704,15 +662,57 @@
     },
     {
       "test": "/workers/constructors/SharedWorker/setting-port-members.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": null
+      "subtests": [
+        {
+          "name": "postMessage",
+          "status": "FAIL",
+          "message": "'worker' is undefined"
+        },
+        {
+          "name": "start",
+          "status": "FAIL",
+          "message": "'worker' is undefined"
+        },
+        {
+          "name": "close",
+          "status": "FAIL",
+          "message": "'worker' is undefined"
+        },
+        {
+          "name": "onmessage",
+          "status": "FAIL",
+          "message": "'worker' is undefined"
+        },
+        {
+          "name": "addEventListener",
+          "status": "FAIL",
+          "message": "'worker' is undefined"
+        },
+        {
+          "name": "removeEventListener",
+          "status": "FAIL",
+          "message": "'worker' is undefined"
+        },
+        {
+          "name": "despatchEvent",
+          "status": "FAIL",
+          "message": "'worker' is undefined"
+        }
+      ],
+      "status": "ERROR",
+      "message": "ReferenceError: 'SharedWorker' is undefined"
     },
     {
       "test": "/workers/constructors/SharedWorker/undefined-arguments.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "undefined as arguments",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/constructors/SharedWorker/unexpected-global-properties.html",
@@ -720,7 +720,7 @@
         {
           "name": "unexpected members/interface objects/constructors",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -728,21 +728,27 @@
     },
     {
       "test": "/workers/constructors/SharedWorker/unresolvable-url.html",
-      "subtests": [
-        {
-          "name": "resolving broken url",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    var worker = new SharedWorker('http://foo bar');\n  }\" threw object \"ReferenceError: Can't find variable: SharedWorker\" that is not a DOMException SyntaxError: property \"code\" is equal to undefined, expected 12"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/constructors/Worker/AbstractWorker.onerror.html",
       "subtests": [
         {
           "name": "AbstractWorker.onerror",
+          "status": "FAIL",
+          "message": "assert_equals: error expected (object) null but got (undefined) undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/constructors/Worker/Blob-url.html",
+      "subtests": [
+        {
+          "name": "Worker supports Blob url",
           "status": "PASS",
           "message": null
         }
@@ -751,15 +757,105 @@
       "message": null
     },
     {
-      "test": "/workers/constructors/Worker/Blob-url.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
       "test": "/workers/constructors/Worker/DedicatedWorkerGlobalScope-members.worker",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "existence of postMessage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of onmessage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of self",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of location",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of close",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of onerror",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of onoffline",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        },
+        {
+          "name": "existence of ononline",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        },
+        {
+          "name": "existence of addEventListener",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of removeEventListener",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of dispatchEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of importScripts",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of navigator",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of setTimeout",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of clearTimeout",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of setInterval",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of clearInterval",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of btoa",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of atob",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -818,15 +914,9 @@
     },
     {
       "test": "/workers/constructors/Worker/resolve-empty-string.html",
-      "subtests": [
-        {
-          "name": "resolve the empty string",
-          "status": "FAIL",
-          "message": "SyntaxError: DOM Exception 12"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/constructors/Worker/same-origin.html",
@@ -839,7 +929,7 @@
         {
           "name": "data_url",
           "status": "FAIL",
-          "message": "SecurityError: DOM Exception 18"
+          "message": "SecurityError"
         },
         {
           "name": "about_blank",
@@ -1189,8 +1279,8 @@
       "subtests": [
         {
           "name": "unresolvable url",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { new Worker('http://invalid url/'); }\" threw object \"SecurityError\" that is not a DOMException SyntaxError: property \"code\" is equal to 18, expected 12"
         }
       ],
       "status": "OK",
@@ -1219,13 +1309,13 @@
       "subtests": [
         {
           "name": "removeEventListener",
-          "status": "FAIL",
-          "message": "Can't find variable: Event"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "target",
           "status": "FAIL",
-          "message": "Can't find variable: Event"
+          "message": "assert_equals: expected object \"[object WorkerGlobalScope]\" but got object \"[object WorkerGlobalScope]\""
         }
       ],
       "status": "OK",
@@ -1242,12 +1332,12 @@
         {
           "name": "Setting onmessage to an object",
           "status": "FAIL",
-          "message": "Can't find variable: Event"
+          "message": "assert_equals: attribute should return the object it was set to. expected object \"[object Object]\" but got null"
         },
         {
           "name": "Setting onmessage to a function",
-          "status": "FAIL",
-          "message": "Can't find variable: Event"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Setting onmessage to 1 (again)",
@@ -1263,36 +1353,30 @@
       "subtests": [
         {
           "name": "e.ports in dedicated worker",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/DedicatedWorkerGlobalScope/postMessage/imagedata-cloned-canvas-in-array.html",
       "subtests": [
         {
           "name": "posting an imagedata (from a cloned canvas) in an array",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/DedicatedWorkerGlobalScope/postMessage/message-event.html",
-      "subtests": [
-        {
-          "name": "Properties of the 'message' event",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/interfaces/DedicatedWorkerGlobalScope/postMessage/return-value.worker",
@@ -1311,11 +1395,11 @@
       "subtests": [
         {
           "name": "Using [null] in postMessage's second argument",
-          "status": "FAIL",
-          "message": "assert_true: expected true got false"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1323,35 +1407,35 @@
       "subtests": [
         {
           "name": "Using null in postMessage's second argument",
-          "status": "FAIL",
-          "message": "assert_true: expected true got 1"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/DedicatedWorkerGlobalScope/postMessage/second-argument-undefined.html",
       "subtests": [
         {
           "name": "Using undefined in postMessage's second argument",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/DedicatedWorkerGlobalScope/postMessage/setting-postMessage.html",
       "subtests": [
         {
           "name": "setting postMessage",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1359,12 +1443,12 @@
       "subtests": [
         {
           "name": "structured clone of ImageData",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/DedicatedWorkerGlobalScope/postMessage/structured-clone-message.html",
@@ -1376,77 +1460,77 @@
         },
         {
           "name": "undefined",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "null",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "false",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "true",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "1",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "NaN",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "Infinity",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "string",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "date",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "regexp",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "self",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "array",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "object",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         },
         {
           "name": "error",
-          "status": "PASS",
+          "status": "NOTRUN",
           "message": null
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/SharedWorkerGlobalScope/name/getting.html",
@@ -1454,17 +1538,17 @@
         {
           "name": "getting name",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         },
         {
           "name": "getting name 1",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         },
         {
           "name": "getting name 2",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -1476,7 +1560,7 @@
         {
           "name": "setting name",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -1488,7 +1572,7 @@
         {
           "name": "onconnect",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -1496,35 +1580,41 @@
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/close/incoming-message.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/workers/interfaces/WorkerGlobalScope/close/sending-messages.html",
       "subtests": [
         {
-          "name": "close() and sending messages",
-          "status": "PASS",
-          "message": null
+          "name": "close() and incoming message",
+          "status": "FAIL",
+          "message": "Error: assert_unreached: Got error Reached unreachable code"
         }
       ],
       "status": "OK",
       "message": null
     },
     {
-      "test": "/workers/interfaces/WorkerGlobalScope/close/setInterval.html",
+      "test": "/workers/interfaces/WorkerGlobalScope/close/sending-messages.html",
       "subtests": [],
       "status": "TIMEOUT",
       "message": ""
+    },
+    {
+      "test": "/workers/interfaces/WorkerGlobalScope/close/setInterval.html",
+      "subtests": [
+        {
+          "name": "close() and setInterval",
+          "status": "FAIL",
+          "message": "Error: assert_unreached: Got error Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/close/setTimeout.html",
       "subtests": [
         {
           "name": "close() and setTimeout",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "Error: assert_unreached: Got error Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -1535,12 +1625,12 @@
       "subtests": [
         {
           "name": "members of WorkerLocation",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/location/redirect.html",
@@ -1556,15 +1646,9 @@
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/location/returns-same-object.html",
-      "subtests": [
-        {
-          "name": "location === location",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/location/setting-members.html",
@@ -1574,8 +1658,14 @@
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/location/worker-separate-file.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "location with a worker in separate file",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -1595,11 +1685,11 @@
       "subtests": [
         {
           "name": "onerror, \"handled\"",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "FAIL",
+          "message": "assert_unreached: Reached unreachable code"
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1616,8 +1706,14 @@
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/onerror/propagate-to-window-onerror.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "onerror, \"not handled\" with only window.onerror defined",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -1625,24 +1721,24 @@
       "subtests": [
         {
           "name": "self",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/WorkerUtils/WindowTimers/001.html",
       "subtests": [
         {
           "name": "setTimeout",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/WorkerUtils/WindowTimers/002.html",
@@ -1661,12 +1757,12 @@
       "subtests": [
         {
           "name": "setInterval",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/WorkerUtils/WindowTimers/004.html",
@@ -1697,8 +1793,8 @@
       "subtests": [
         {
           "name": "Untitled",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    importScripts('data:text/javascript,ran=true','http://foo bar');\n  }\" threw object \"NetworkError\" that is not a DOMException SyntaxError: property \"code\" is equal to 19, expected 12"
         }
       ],
       "status": "OK",
@@ -1709,59 +1805,41 @@
       "subtests": [
         {
           "name": "importScripts running scripts",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/WorkerUtils/importScripts/004.html",
       "subtests": [
         {
           "name": "importScripts broken script",
-          "status": "FAIL",
-          "message": "assert_true: expected SyntaxError expected true got \"Error: Script error.\""
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/workers/interfaces/WorkerUtils/importScripts/005.html",
-      "subtests": [
-        {
-          "name": "importScripts separate scripts",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/workers/interfaces/WorkerUtils/importScripts/006.html",
-      "subtests": [
-        {
-          "name": "importScripts uncaught exception",
           "status": "TIMEOUT",
           "message": "Test timed out"
         }
       ],
       "status": "ERROR",
-      "message": "DataCloneError: DOM Exception 25: An object could not be cloned."
+      "message": "Syntax error"
+    },
+    {
+      "test": "/workers/interfaces/WorkerUtils/importScripts/005.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
+    },
+    {
+      "test": "/workers/interfaces/WorkerUtils/importScripts/006.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": null
     },
     {
       "test": "/workers/interfaces/WorkerUtils/importScripts/007.html",
-      "subtests": [
-        {
-          "name": "postMessage in importScripts",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1769,26 +1847,26 @@
       "subtests": [
         {
           "name": "variables and functions crossing importScripts boundary",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/WorkerUtils/importScripts/009.html",
       "subtests": [],
       "status": "TIMEOUT",
-      "message": null
+      "message": ""
     },
     {
       "test": "/workers/interfaces/WorkerUtils/importScripts/010.html",
       "subtests": [
         {
           "name": "importScripts(undefined)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Syntax error Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -1796,23 +1874,17 @@
     },
     {
       "test": "/workers/interfaces/WorkerUtils/importScripts/011.html",
-      "subtests": [
-        {
-          "name": "importScripts(null)",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/interfaces/WorkerUtils/importScripts/012.html",
       "subtests": [
         {
           "name": "importScripts(1)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Syntax error Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -1822,90 +1894,78 @@
       "test": "/workers/interfaces/WorkerUtils/navigator/002.html",
       "subtests": [],
       "status": "TIMEOUT",
-      "message": null
+      "message": ""
     },
     {
       "test": "/workers/interfaces/WorkerUtils/navigator/003.html",
       "subtests": [
         {
           "name": "navigator.appVersion",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/WorkerUtils/navigator/004.html",
       "subtests": [
         {
           "name": "navigator.platform",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/WorkerUtils/navigator/005.html",
-      "subtests": [
-        {
-          "name": "navigator.userAgent",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/interfaces/WorkerUtils/navigator/006.html",
       "subtests": [
         {
-          "name": "navigator.onLine",
-          "status": "PASS",
-          "message": null
+          "name": "navigator.userAgent",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/interfaces/WorkerUtils/navigator/007.html",
-      "subtests": [
-        {
-          "name": "readonlyness of members of Navigator",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/interfaces/WorkerUtils/navigator/language.html",
       "subtests": [
         {
           "name": "navigator.language",
-          "status": "FAIL",
-          "message": "assert_equals: expected (string) \"en-us\" but got (undefined) undefined"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/nested_worker.worker",
       "subtests": [
         {
           "name": "Nested worker",
-          "status": "FAIL",
-          "message": "Can't find variable: Worker"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1949,8 +2009,8 @@
       "subtests": [
         {
           "name": " postMessage(): MessageEvent properties ",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: lastEventId expected (string) \"\" but got (undefined) undefined"
         }
       ],
       "status": "OK",
@@ -1982,33 +2042,51 @@
     },
     {
       "test": "/workers/semantics/encodings/001.html",
-      "subtests": [
-        {
-          "name": "encoding, dedicated worker",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"Ã¥\" but got \"ÃƒÂ¥\""
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/semantics/encodings/002.html",
       "subtests": [
         {
-          "name": "encoding, shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "name": "encoding, dedicated worker",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/semantics/encodings/003.html",
       "subtests": [
         {
           "name": "URL encoding, dedicated worker",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Syntax error"
+    },
+    {
+      "test": "/workers/semantics/encodings/004.html",
+      "subtests": [
+        {
+          "name": "URL encoding, shared worker",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/semantics/encodings/004.worker",
+      "subtests": [
+        {
+          "name": "Decoding invalid utf-8",
           "status": "PASS",
           "message": null
         }
@@ -2017,28 +2095,206 @@
       "message": null
     },
     {
-      "test": "/workers/semantics/encodings/004.html",
+      "test": "/workers/semantics/interface-objects/001.worker",
       "subtests": [
         {
-          "name": "URL encoding, shared worker",
+          "name": "The WorkerGlobalScope interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The EventTarget interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The DedicatedWorkerGlobalScope interface object should be exposed.",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "assert_own_property: expected property \"DedicatedWorkerGlobalScope\" missing"
+        },
+        {
+          "name": "The ErrorEvent interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Event interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Worker interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The DOMException interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The SharedWorker interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"SharedWorker\" missing"
+        },
+        {
+          "name": "The MessagePort interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The MessageEvent interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The WorkerNavigator interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The MessageChannel interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The WorkerLocation interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The ImageData interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The File interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Blob interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The FileList interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The XMLHttpRequest interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The ProgressEvent interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The FormData interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"FormData\" missing"
+        },
+        {
+          "name": "The ArrayBuffer interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Int8Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Uint8Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Uint8ClampedArray interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Int16Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Uint16Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Int32Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Uint32Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Float32Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Float64Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The DataView interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The CanvasProxy interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"CanvasProxy\" missing"
+        },
+        {
+          "name": "The ImageBitmap interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"ImageBitmap\" missing"
+        },
+        {
+          "name": "The CanvasRenderingContext2D interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"CanvasRenderingContext2D\" missing"
+        },
+        {
+          "name": "The DrawingStyle interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"DrawingStyle\" missing"
+        },
+        {
+          "name": "The CanvasGradient interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"CanvasGradient\" missing"
+        },
+        {
+          "name": "The CanvasPattern interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"CanvasPattern\" missing"
+        },
+        {
+          "name": "The Path interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"Path\" missing"
+        },
+        {
+          "name": "The TextMetrics interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"TextMetrics\" missing"
         }
       ],
       "status": "OK",
       "message": null
-    },
-    {
-      "test": "/workers/semantics/encodings/004.worker",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/workers/semantics/interface-objects/001.worker",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
     },
     {
       "test": "/workers/semantics/interface-objects/002.worker",
@@ -2094,9 +2350,15 @@
     },
     {
       "test": "/workers/semantics/interface-objects/003.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "available interface objects in shared worker",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/semantics/interface-objects/004.html",
@@ -2104,7 +2366,7 @@
         {
           "name": "unavailable interface objects in shared worker",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -2115,29 +2377,29 @@
       "subtests": [
         {
           "name": "dedicated",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "shared",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/semantics/multiple-workers/002.html",
       "subtests": [
         {
           "name": "creating 3 sibling dedicated workers",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Syntax error"
     },
     {
       "test": "/workers/semantics/multiple-workers/003.html",
@@ -2149,13 +2411,13 @@
         }
       ],
       "status": "ERROR",
-      "message": "ReferenceError: Can't find variable: Worker"
+      "message": "Syntax error"
     },
     {
       "test": "/workers/semantics/multiple-workers/004.html",
       "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "status": "ERROR",
+      "message": "'SharedWorker' is undefined"
     },
     {
       "test": "/workers/semantics/multiple-workers/005.html",
@@ -2167,7 +2429,7 @@
         }
       ],
       "status": "ERROR",
-      "message": "ReferenceError: Can't find variable: SharedWorker"
+      "message": "Syntax error"
     },
     {
       "test": "/workers/semantics/multiple-workers/006.html",
@@ -2175,7 +2437,7 @@
         {
           "name": "shared worker in dedicated worker in shared worker",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -2187,7 +2449,7 @@
         {
           "name": "shared worker in dedicated worker in shared worker",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -2195,8 +2457,14 @@
     },
     {
       "test": "/workers/semantics/multiple-workers/008.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "messagechannel in shared worker",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -2207,6 +2475,12 @@
     },
     {
       "test": "/workers/semantics/navigation/002.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
+    },
+    {
+      "test": "/workers/semantics/reporting-errors/001.html",
       "subtests": [
         {
           "name": "navigating 2",
@@ -2218,24 +2492,12 @@
       "message": null
     },
     {
-      "test": "/workers/semantics/reporting-errors/001.html",
-      "subtests": [
-        {
-          "name": "shared worker, not handled",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
       "test": "/workers/semantics/reporting-errors/002.html",
       "subtests": [
         {
           "name": "shared worker, addEventListener",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -2243,32 +2505,26 @@
     },
     {
       "test": "/workers/semantics/reporting-errors/003.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/workers/semantics/reporting-errors/004.html",
       "subtests": [
         {
-          "name": "shared worker in two documents and window.onerror",
+          "name": "shared worker, no error event on worker or port",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
       "message": null
     },
     {
+      "test": "/workers/semantics/reporting-errors/004.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
       "test": "/workers/semantics/run-a-worker/001.html",
-      "subtests": [
-        {
-          "name": "worker global scope, dedicated worker",
-          "status": "FAIL",
-          "message": "assert_true: expected true got false"
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -2277,7 +2533,7 @@
         {
           "name": "worker global scope, shared worker",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -2294,7 +2550,7 @@
         {
           "name": "shared",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "'SharedWorker' is undefined"
         }
       ],
       "status": "OK",
@@ -2302,587 +2558,611 @@
     },
     {
       "test": "/workers/semantics/structured-clone/dedicated.html",
-      "subtests": [
-        {
-          "name": "primitive undefined",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive null",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive true",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive false",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive string, empty string",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive string, lone high surrogate",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive string, lone low surrogate",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive string, NUL",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive string, astral character",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, 0.2",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, 0",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, -0",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, NaN",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, Infinity",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, -Infinity",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, 9007199254740992",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, -9007199254740992",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, 9007199254740994",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "primitive number, -9007199254740994",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array primitives",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object primitives",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Boolean true",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Boolean false",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array Boolean objects",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object Boolean objects",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "String empty string",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "String lone high surrogate",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "String lone low surrogate",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "String NUL",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "String astral character",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array String objects",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object String objects",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number 0.2",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number 0",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number -0",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number NaN",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number Infinity",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number -Infinity",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number 9007199254740992",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number -9007199254740992",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number 9007199254740994",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Number -9007199254740994",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array Number objects",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object Number objects",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Date 0",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Date -0",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Date -8.64e15",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Date 8.64e15",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array Date objects",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object Date objects",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "RegExp flags and lastIndex",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
-        },
-        {
-          "name": "RegExp unicode flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
-        },
-        {
-          "name": "RegExp empty",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "RegExp slash",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "RegExp new line",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array RegExp object, RegExp flags and lastIndex",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array RegExp object, RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
-        },
-        {
-          "name": "Array RegExp object, RegExp unicode flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
-        },
-        {
-          "name": "Array RegExp object, RegExp empty",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array RegExp object, RegExp slash",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array RegExp object, RegExp new line",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object RegExp object, RegExp flags and lastIndex",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object RegExp object, RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
-        },
-        {
-          "name": "Object RegExp object, RegExp unicode flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
-        },
-        {
-          "name": "Object RegExp object, RegExp empty",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object RegExp object, RegExp slash",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object RegExp object, RegExp new line",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Blob basic",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Blob unpaired high surrogate (invalid utf-8)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Blob unpaired low surrogate (invalid utf-8)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Blob paired surrogates (invalid utf-8)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Blob empty",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Blob NUL",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array Blob object, Blob basic",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array Blob object, Blob unpaired high surrogate (invalid utf-8)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array Blob object, Blob unpaired low surrogate (invalid utf-8)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array Blob object, Blob paired surrogates (invalid utf-8)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array Blob object, Blob empty",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array Blob object, Blob NUL",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object Blob object, Blob basic",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object Blob object, Blob unpaired high surrogate (invalid utf-8)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object Blob object, Blob unpaired low surrogate (invalid utf-8)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object Blob object, Blob paired surrogates (invalid utf-8)",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object Blob object, Blob empty",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object Blob object, Blob NUL",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "File basic",
-          "status": "FAIL",
-          "message": "FileConstructor is not a constructor (evaluating 'new File(['foo'], 'bar', {type:'text/x-bar', lastModified:42})')"
-        },
-        {
-          "name": "FileList empty",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array FileList object, FileList empty",
-          "status": "FAIL",
-          "message": "DataCloneError: DOM Exception 25"
-        },
-        {
-          "name": "Object FileList object, FileList empty",
-          "status": "FAIL",
-          "message": "DataCloneError: DOM Exception 25"
-        },
-        {
-          "name": "ImageData 1x1 transparent black",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "ImageData 1x1 non-transparent non-black",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array ImageData object, ImageData 1x1 transparent black",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array ImageData object, ImageData 1x1 non-transparent non-black",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object ImageData object, ImageData 1x1 transparent black",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object ImageData object, ImageData 1x1 non-transparent non-black",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "ImageBitmap 1x1 transparent black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
-        },
-        {
-          "name": "ImageBitmap 1x1 non-transparent non-black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
-        },
-        {
-          "name": "Array ImageBitmap object, ImageBitmap 1x1 transparent black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
-        },
-        {
-          "name": "Array ImageBitmap object, ImageBitmap 1x1 non-transparent non-black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
-        },
-        {
-          "name": "Object ImageBitmap object, ImageBitmap 1x1 transparent black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
-        },
-        {
-          "name": "Object ImageBitmap object, ImageBitmap 1x1 non-transparent non-black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
-        },
-        {
-          "name": "Array sparse",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array with non-index property",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object with index property and length",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array with circular reference",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object with circular reference",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Array with identical property values",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object with identical property values",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object with property on prototype",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object with non-enumerable property",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object with non-writable property",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Object with non-configurable property",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        }
-      ],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
-      "test": "/workers/semantics/structured-clone/shared.html",
       "subtests": [],
       "status": "TIMEOUT",
       "message": null
     },
     {
+      "test": "/workers/semantics/structured-clone/shared.html",
+      "subtests": [
+        {
+          "name": "primitive undefined",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive null",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive true",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive false",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive string, empty string",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive string, lone high surrogate",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive string, lone low surrogate",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive string, NUL",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive string, astral character",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, 0.2",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, 0",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, -0",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, NaN",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, Infinity",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, -Infinity",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, 9007199254740992",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, -9007199254740992",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, 9007199254740994",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "primitive number, -9007199254740994",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array primitives",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object primitives",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Boolean true",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Boolean false",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array Boolean objects",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object Boolean objects",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "String empty string",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "String lone high surrogate",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "String lone low surrogate",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "String NUL",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "String astral character",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array String objects",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object String objects",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number 0.2",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number 0",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number -0",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number NaN",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number Infinity",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number -Infinity",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number 9007199254740992",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number -9007199254740992",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number 9007199254740994",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Number -9007199254740994",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array Number objects",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object Number objects",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Date 0",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Date -0",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Date -8.64e15",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Date 8.64e15",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array Date objects",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object Date objects",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "RegExp flags and lastIndex",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "RegExp sticky flag",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "RegExp unicode flag",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "RegExp empty",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "RegExp slash",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "RegExp new line",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array RegExp object, RegExp flags and lastIndex",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array RegExp object, RegExp sticky flag",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array RegExp object, RegExp unicode flag",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array RegExp object, RegExp empty",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array RegExp object, RegExp slash",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array RegExp object, RegExp new line",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object RegExp object, RegExp flags and lastIndex",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object RegExp object, RegExp sticky flag",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object RegExp object, RegExp unicode flag",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object RegExp object, RegExp empty",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object RegExp object, RegExp slash",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object RegExp object, RegExp new line",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Blob basic",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Blob unpaired high surrogate (invalid utf-8)",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Blob unpaired low surrogate (invalid utf-8)",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Blob paired surrogates (invalid utf-8)",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Blob empty",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Blob NUL",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array Blob object, Blob basic",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array Blob object, Blob unpaired high surrogate (invalid utf-8)",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array Blob object, Blob unpaired low surrogate (invalid utf-8)",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array Blob object, Blob paired surrogates (invalid utf-8)",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array Blob object, Blob empty",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array Blob object, Blob NUL",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object Blob object, Blob basic",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object Blob object, Blob unpaired high surrogate (invalid utf-8)",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object Blob object, Blob unpaired low surrogate (invalid utf-8)",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object Blob object, Blob paired surrogates (invalid utf-8)",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object Blob object, Blob empty",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object Blob object, Blob NUL",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "File basic",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "FileList empty",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array FileList object, FileList empty",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object FileList object, FileList empty",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "ImageData 1x1 transparent black",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "ImageData 1x1 non-transparent non-black",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array ImageData object, ImageData 1x1 transparent black",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array ImageData object, ImageData 1x1 non-transparent non-black",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object ImageData object, ImageData 1x1 transparent black",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object ImageData object, ImageData 1x1 non-transparent non-black",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "ImageBitmap 1x1 transparent black",
+          "status": "FAIL",
+          "message": "'createImageBitmap' is undefined"
+        },
+        {
+          "name": "ImageBitmap 1x1 non-transparent non-black",
+          "status": "FAIL",
+          "message": "'createImageBitmap' is undefined"
+        },
+        {
+          "name": "Array ImageBitmap object, ImageBitmap 1x1 transparent black",
+          "status": "FAIL",
+          "message": "'createImageBitmap' is undefined"
+        },
+        {
+          "name": "Array ImageBitmap object, ImageBitmap 1x1 non-transparent non-black",
+          "status": "FAIL",
+          "message": "'createImageBitmap' is undefined"
+        },
+        {
+          "name": "Object ImageBitmap object, ImageBitmap 1x1 transparent black",
+          "status": "FAIL",
+          "message": "'createImageBitmap' is undefined"
+        },
+        {
+          "name": "Object ImageBitmap object, ImageBitmap 1x1 non-transparent non-black",
+          "status": "FAIL",
+          "message": "'createImageBitmap' is undefined"
+        },
+        {
+          "name": "Array sparse",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array with non-index property",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object with index property and length",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array with circular reference",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object with circular reference",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Array with identical property values",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object with identical property values",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object with property on prototype",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object with non-enumerable property",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object with non-writable property",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        },
+        {
+          "name": "Object with non-configurable property",
+          "status": "FAIL",
+          "message": "'SharedWorker' is undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/workers/semantics/xhr/001.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
+    },
+    {
+      "test": "/workers/semantics/xhr/002.html",
       "subtests": [
         {
           "name": "async XMLHttpRequest in dedicated worker",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "ERROR",
+      "message": "Syntax error"
+    },
+    {
+      "test": "/workers/semantics/xhr/003.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
+    },
+    {
+      "test": "/workers/semantics/xhr/004.html",
+      "subtests": [
+        {
+          "name": "sync XMLHttpRequest in shared worker",
           "status": "NOTRUN",
           "message": null
         }
@@ -2891,64 +3171,16 @@
       "message": null
     },
     {
-      "test": "/workers/semantics/xhr/002.html",
-      "subtests": [
-        {
-          "name": "sync XMLHttpRequest in dedicated worker",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/workers/semantics/xhr/003.html",
-      "subtests": [
-        {
-          "name": "async XMLHttpRequest in shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/workers/semantics/xhr/004.html",
-      "subtests": [
-        {
-          "name": "sync XMLHttpRequest in shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
       "test": "/workers/semantics/xhr/005.html",
-      "subtests": [
-        {
-          "name": "base url, dedicated worker",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/semantics/xhr/006.html",
-      "subtests": [
-        {
-          "name": "base url, shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     }
   ]
 }

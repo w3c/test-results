@@ -14,15 +14,9 @@
     },
     {
       "test": "/workers/WorkerGlobalScope_ErrorEvent_filename.htm",
-      "subtests": [
-        {
-          "name": " WorkerGlobalScope onerror event handler argument: location ",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/WorkerGlobalScope_ErrorEvent_lineno.htm",
@@ -38,15 +32,9 @@
     },
     {
       "test": "/workers/WorkerGlobalScope_ErrorEvent_message.htm",
-      "subtests": [
-        {
-          "name": " WorkerGlobalScope onerror event handler argument: message ",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/WorkerGlobalScope_close.htm",
@@ -77,11 +65,11 @@
       "subtests": [
         {
           "name": " importScripts() with non-existent script file ",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -182,9 +170,15 @@
     },
     {
       "test": "/workers/WorkerLocation_href.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": " WorkerLocation href attribute ",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/WorkerLocation_pathname.htm",
@@ -203,24 +197,36 @@
       "subtests": [
         {
           "name": " WorkerLocation URL decomposition IDL attribute: port ",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
       "test": "/workers/WorkerLocation_protocol.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": " WorkerLocation URL decomposition IDL attribute: protocol ",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/WorkerLocation_search.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": " WorkerLocation URL decomposition IDL attribute: search ",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/WorkerLocation_search_empty.htm",
@@ -236,9 +242,15 @@
     },
     {
       "test": "/workers/WorkerLocation_search_fragment.htm",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": " WorkerLocation.search with <fragment> in <query> ",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/WorkerLocation_search_nonexist.htm",
@@ -396,37 +408,15 @@
     },
     {
       "test": "/workers/Worker_cross_origin_security_err.htm",
-      "subtests": [
-        {
-          "name": " Worker cross-origin URL ",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        }
-      ],
+      "subtests": [],
       "status": "TIMEOUT",
-      "message": null
+      "message": ""
     },
     {
       "test": "/workers/Worker_dispatchEvent_ErrorEvent.htm",
-      "subtests": [
-        {
-          "name": " ErrorEvent and Worker.dispatchEvent() ",
-          "status": "FAIL",
-          "message": "assert_equals: error expected (object) object \"Error: test\" but got (undefined) undefined"
-        },
-        {
-          "name": "document.createEvent('ErrorEvent')",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "initErrorEvent",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/Worker_script_mimetype.htm",
@@ -445,11 +435,11 @@
       "subtests": [
         {
           "name": " AbstractWorker terminate(): clear event queue ",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -478,8 +468,14 @@
     },
     {
       "test": "/workers/baseurl/alpha/worker.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "Base URL in workers: new Worker()",
+          "status": "FAIL",
+          "message": "assert_unreached: Got error event Reached unreachable code"
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -499,8 +495,8 @@
       "subtests": [
         {
           "name": "Create SharedWorker with different URLs but same name",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -508,35 +504,23 @@
     },
     {
       "test": "/workers/constructors/SharedWorker/connect-event.html",
-      "subtests": [
-        {
-          "name": "connect event",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/workers/constructors/SharedWorker/dummy-name.html",
-      "subtests": [
-        {
-          "name": "creating a dummy shared worker with name \"foo\"",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/workers/constructors/SharedWorker/dummy-shared-worker.html",
       "subtests": [
         {
           "name": "creating a dummy shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -547,8 +531,8 @@
       "subtests": [
         {
           "name": "creating a dummy shared worker with explicit name \"\"",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -556,29 +540,29 @@
     },
     {
       "test": "/workers/constructors/SharedWorker/global-members.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
+    },
+    {
+      "test": "/workers/constructors/SharedWorker/interface-objects.html",
       "subtests": [
         {
-          "name": "members of SharedWorkerGlobalScope",
+          "name": "expected interface objects/constructors",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "assert_equals: expected \"\" but got \"These were missing: Worker, SharedWorker, ApplicationCache\""
         }
       ],
       "status": "OK",
       "message": null
     },
     {
-      "test": "/workers/constructors/SharedWorker/interface-objects.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
       "test": "/workers/constructors/SharedWorker/name.html",
       "subtests": [
         {
           "name": "self.name",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -589,8 +573,8 @@
       "subtests": [
         {
           "name": "no arguments",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    var worker = new SharedWorker();\n  }\" threw object \"ReferenceError: Can't find variable: SharedWorker\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -598,17 +582,23 @@
     },
     {
       "test": "/workers/constructors/SharedWorker/null-arguments.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "null as arguments",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/constructors/SharedWorker/number-arguments.html",
       "subtests": [
         {
           "name": "1 as arguments",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -619,8 +609,8 @@
       "subtests": [
         {
           "name": "worker.port.onmessage",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -631,8 +621,8 @@
       "subtests": [
         {
           "name": "worker.port",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -643,8 +633,8 @@
       "subtests": [
         {
           "name": "setting worker.port",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -655,13 +645,13 @@
       "subtests": [
         {
           "name": "unsupported_scheme",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function () { new SharedWorker('unsupported:', ''); }\" threw object \"ReferenceError: Can't find variable: SharedWorker\" that is not a DOMException SecurityError: property \"code\" is equal to undefined, expected 18"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "data_url",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "Failed to construct 'SharedWorker': Script at 'data:,onconnect = function(e) { e.ports[0].postMessage(1); }' cannot be accessed from origin 'http://www.w3c-test.org'."
         },
         {
           "name": "javascript_url",
@@ -704,23 +694,65 @@
     },
     {
       "test": "/workers/constructors/SharedWorker/setting-port-members.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "postMessage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "start",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "close",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onmessage",
+          "status": "FAIL",
+          "message": "assert_equals: {handleEvent:function(){}} expected null but got object \"[object Object]\""
+        },
+        {
+          "name": "addEventListener",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "removeEventListener",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "despatchEvent",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/workers/constructors/SharedWorker/undefined-arguments.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "undefined as arguments",
+          "status": "FAIL",
+          "message": "assert_equals: second arg expected \"undefined\" but got \"\""
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/constructors/SharedWorker/unexpected-global-properties.html",
       "subtests": [
         {
           "name": "unexpected members/interface objects/constructors",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -732,7 +764,7 @@
         {
           "name": "resolving broken url",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () {\n    var worker = new SharedWorker('http://foo bar');\n  }\" threw object \"ReferenceError: Can't find variable: SharedWorker\" that is not a DOMException SyntaxError: property \"code\" is equal to undefined, expected 12"
+          "message": "assert_throws: function \"function () {\n    var worker = new SharedWorker('http://foo bar');\n  }\" threw object \"SecurityError: Failed to construct 'SharedWorker': Script at 'http://foo%20bar/' cannot be accessed from origin 'http://www.w3c-test.org'.\" that is not a DOMException SyntaxError: property \"code\" is equal to 18, expected 12"
         }
       ],
       "status": "OK",
@@ -743,6 +775,18 @@
       "subtests": [
         {
           "name": "AbstractWorker.onerror",
+          "status": "FAIL",
+          "message": "assert_equals: ErrorEvent.filename expected \"http://www.w3c-test.org/workers/constructors/Worker/AbstractWorker.onerror.html#\" but got \"http://www.w3c-test.org/workers/constructors/Worker/AbstractWorker.onerror.html\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/constructors/Worker/Blob-url.html",
+      "subtests": [
+        {
+          "name": "Worker supports Blob url",
           "status": "PASS",
           "message": null
         }
@@ -751,15 +795,105 @@
       "message": null
     },
     {
-      "test": "/workers/constructors/Worker/Blob-url.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
       "test": "/workers/constructors/Worker/DedicatedWorkerGlobalScope-members.worker",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "existence of postMessage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of onmessage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of self",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of location",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of close",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of onerror",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of onoffline",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        },
+        {
+          "name": "existence of ononline",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        },
+        {
+          "name": "existence of addEventListener",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of removeEventListener",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of dispatchEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of importScripts",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of navigator",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of setTimeout",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of clearTimeout",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of setInterval",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of clearInterval",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of btoa",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of atob",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -800,8 +934,39 @@
     },
     {
       "test": "/workers/constructors/Worker/expected-self-properties.worker",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "existence of XMLHttpRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of WebSocket",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of EventSource",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of MessageChannel",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "existence of Worker",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        },
+        {
+          "name": "existence of SharedWorker",
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -821,8 +986,8 @@
       "subtests": [
         {
           "name": "resolve the empty string",
-          "status": "FAIL",
-          "message": "SyntaxError: DOM Exception 12"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -839,7 +1004,7 @@
         {
           "name": "data_url",
           "status": "FAIL",
-          "message": "SecurityError: DOM Exception 18"
+          "message": "Failed to construct 'Worker': Script at 'data:,postMessage(1);' cannot be accessed from origin 'http://www.w3c-test.org'."
         },
         {
           "name": "about_blank",
@@ -1189,8 +1354,8 @@
       "subtests": [
         {
           "name": "unresolvable url",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { new Worker('http://invalid url/'); }\" threw object \"SecurityError: Failed to construct 'Worker': Script at 'http://invalid%20url/' cannot be accessed from origin 'http://www.w3c-test.org'.\" that is not a DOMException SyntaxError: property \"code\" is equal to 18, expected 12"
         }
       ],
       "status": "OK",
@@ -1210,8 +1375,634 @@
     },
     {
       "test": "/workers/interfaces.worker",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "EventTarget interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_equals: class string of EventTarget.prototype expected \"[object EventTargetPrototype]\" but got \"[object EventTarget]\""
+        },
+        {
+          "name": "EventTarget interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: operation addEventListener(DOMString,EventListener,boolean)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: operation removeEventListener(DOMString,EventListener,boolean)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: operation dispatchEvent(Event)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventListener interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_equals: class string of WorkerGlobalScope.prototype expected \"[object WorkerGlobalScopePrototype]\" but got \"[object WorkerGlobalScope]\""
+        },
+        {
+          "name": "WorkerGlobalScope interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: attribute self",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: attribute location",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation close()",
+          "status": "FAIL",
+          "message": "assert_own_property: interface prototype object missing non-static operation expected property \"close\" missing"
+        },
+        {
+          "name": "WorkerGlobalScope interface: attribute onerror",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: attribute onlanguagechange",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onlanguagechange\" expected true got false"
+        },
+        {
+          "name": "WorkerGlobalScope interface: attribute onoffline",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onoffline\" expected true got false"
+        },
+        {
+          "name": "WorkerGlobalScope interface: attribute ononline",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"ononline\" expected true got false"
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation importScripts(DOMString)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: attribute navigator",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation setTimeout(Function,long,any)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation setTimeout(DOMString,long,any)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation clearTimeout(long)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation setInterval(Function,long,any)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation setInterval(DOMString,long,any)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation clearInterval(long)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation btoa(DOMString)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: operation atob(DOMString)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_equals: class string of DedicatedWorkerGlobalScope.prototype expected \"[object DedicatedWorkerGlobalScopePrototype]\" but got \"[object DedicatedWorkerGlobalScope]\""
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface: operation postMessage(any,[object Object])",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface: attribute onmessage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope must be primary interface of self",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of self",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface: self must inherit property \"postMessage\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface: calling postMessage(any,[object Object]) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DedicatedWorkerGlobalScope interface: self must inherit property \"onmessage\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"self\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"location\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"close\" with the proper type (2)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"close\" found on object expected in prototype chain"
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"onerror\" with the proper type (3)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"onlanguagechange\" with the proper type (4)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onlanguagechange\" not found in prototype chain"
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"onoffline\" with the proper type (5)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onoffline\" not found in prototype chain"
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"ononline\" with the proper type (6)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"ononline\" not found in prototype chain"
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"importScripts\" with the proper type (7)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: calling importScripts(DOMString) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"navigator\" with the proper type (8)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"setTimeout\" with the proper type (9)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: calling setTimeout(Function,long,any) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"setTimeout\" with the proper type (10)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: calling setTimeout(DOMString,long,any) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"clearTimeout\" with the proper type (11)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: calling clearTimeout(long) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"setInterval\" with the proper type (12)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: calling setInterval(Function,long,any) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"setInterval\" with the proper type (13)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: calling setInterval(DOMString,long,any) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"clearInterval\" with the proper type (14)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: calling clearInterval(long) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"btoa\" with the proper type (15)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: calling btoa(DOMString) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: self must inherit property \"atob\" with the proper type (16)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerGlobalScope interface: calling atob(DOMString) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: self must inherit property \"addEventListener\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: self must inherit property \"removeEventListener\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: self must inherit property \"dispatchEvent\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling dispatchEvent(Event) on self with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_equals: class string of WorkerNavigator.prototype expected \"[object WorkerNavigatorPrototype]\" but got \"[object WorkerNavigator]\""
+        },
+        {
+          "name": "WorkerNavigator interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: attribute appCodeName",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: attribute appName",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: attribute appVersion",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: attribute platform",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: attribute product",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: attribute userAgent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: attribute language",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"language\" expected true got false"
+        },
+        {
+          "name": "WorkerNavigator interface: attribute languages",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"languages\" expected true got false"
+        },
+        {
+          "name": "WorkerNavigator interface: attribute onLine",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator must be primary interface of self.navigator",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of self.navigator",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: self.navigator must inherit property \"appCodeName\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: self.navigator must inherit property \"appName\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: self.navigator must inherit property \"appVersion\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: self.navigator must inherit property \"platform\" with the proper type (3)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: self.navigator must inherit property \"product\" with the proper type (4)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: self.navigator must inherit property \"userAgent\" with the proper type (5)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerNavigator interface: self.navigator must inherit property \"language\" with the proper type (6)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"language\" not found in prototype chain"
+        },
+        {
+          "name": "WorkerNavigator interface: self.navigator must inherit property \"languages\" with the proper type (7)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"languages\" not found in prototype chain"
+        },
+        {
+          "name": "WorkerNavigator interface: self.navigator must inherit property \"onLine\" with the proper type (8)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_equals: class string of WorkerLocation.prototype expected \"[object WorkerLocationPrototype]\" but got \"[object WorkerLocation]\""
+        },
+        {
+          "name": "WorkerLocation interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: attribute href",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: attribute origin",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: attribute protocol",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: attribute host",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: attribute hostname",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: attribute port",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: attribute pathname",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: attribute search",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: attribute hash",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation must be primary interface of self.location",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of self.location",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: self.location must inherit property \"href\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: self.location must inherit property \"origin\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: self.location must inherit property \"protocol\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: self.location must inherit property \"host\" with the proper type (3)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: self.location must inherit property \"hostname\" with the proper type (4)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: self.location must inherit property \"port\" with the proper type (5)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: self.location must inherit property \"pathname\" with the proper type (6)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: self.location must inherit property \"search\" with the proper type (7)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "WorkerLocation interface: self.location must inherit property \"hash\" with the proper type (8)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -1219,13 +2010,13 @@
       "subtests": [
         {
           "name": "removeEventListener",
-          "status": "FAIL",
-          "message": "Can't find variable: Event"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "target",
           "status": "FAIL",
-          "message": "Can't find variable: Event"
+          "message": "assert_equals: expected object \"[object DedicatedWorkerGlobalScope]\" but got object \"[object DedicatedWorkerGlobalScope]\""
         }
       ],
       "status": "OK",
@@ -1241,13 +2032,13 @@
         },
         {
           "name": "Setting onmessage to an object",
-          "status": "FAIL",
-          "message": "Can't find variable: Event"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Setting onmessage to a function",
-          "status": "FAIL",
-          "message": "Can't find variable: Event"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Setting onmessage to 1 (again)",
@@ -1311,8 +2102,8 @@
       "subtests": [
         {
           "name": "Using [null] in postMessage's second argument",
-          "status": "FAIL",
-          "message": "assert_true: expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1323,8 +2114,8 @@
       "subtests": [
         {
           "name": "Using null in postMessage's second argument",
-          "status": "FAIL",
-          "message": "assert_true: expected true got 1"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1332,14 +2123,8 @@
     },
     {
       "test": "/workers/interfaces/DedicatedWorkerGlobalScope/postMessage/second-argument-undefined.html",
-      "subtests": [
-        {
-          "name": "Using undefined in postMessage's second argument",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1356,96 +2141,14 @@
     },
     {
       "test": "/workers/interfaces/DedicatedWorkerGlobalScope/postMessage/structured-clone-imagedata.html",
-      "subtests": [
-        {
-          "name": "structured clone of ImageData",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/workers/interfaces/DedicatedWorkerGlobalScope/postMessage/structured-clone-message.html",
-      "subtests": [
-        {
-          "name": "structured clone of message",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "undefined",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "null",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "false",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "true",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "1",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "NaN",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Infinity",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "string",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "date",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "regexp",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "self",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "array",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "error",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1453,18 +2156,18 @@
       "subtests": [
         {
           "name": "getting name",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "getting name 1",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "getting name 2",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1475,30 +2178,30 @@
       "subtests": [
         {
           "name": "setting name",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/workers/interfaces/SharedWorkerGlobalScope/onconnect.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
+    },
+    {
+      "test": "/workers/interfaces/WorkerGlobalScope/close/incoming-message.html",
       "subtests": [
         {
-          "name": "onconnect",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "name": "close() and incoming message",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
       "message": null
-    },
-    {
-      "test": "/workers/interfaces/WorkerGlobalScope/close/incoming-message.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/close/sending-messages.html",
@@ -1514,9 +2217,15 @@
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/close/setInterval.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "close() and setInterval",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/close/setTimeout.html",
@@ -1559,6 +2268,18 @@
       "subtests": [
         {
           "name": "location === location",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/workers/interfaces/WorkerGlobalScope/location/setting-members.html",
+      "subtests": [
+        {
+          "name": "setting members of WorkerLocation",
           "status": "PASS",
           "message": null
         }
@@ -1567,15 +2288,15 @@
       "message": null
     },
     {
-      "test": "/workers/interfaces/WorkerGlobalScope/location/setting-members.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
       "test": "/workers/interfaces/WorkerGlobalScope/location/worker-separate-file.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "location with a worker in separate file",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -1583,8 +2304,8 @@
       "subtests": [
         {
           "name": "onerror, \"not handled\" with an error in the onerror function",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: e.filename expected \"http://www.w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/exception-in-onerror.html#\" but got \"http://www.w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/exception-in-onerror.html\""
         }
       ],
       "status": "OK",
@@ -1595,11 +2316,11 @@
       "subtests": [
         {
           "name": "onerror, \"handled\"",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "FAIL",
+          "message": "assert_equals: second argument expected \"http://www.w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/handled.html#\" but got \"http://www.w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/handled.html\""
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1607,8 +2328,8 @@
       "subtests": [
         {
           "name": "onerror, \"not handled\"",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: e.filename expected \"http://www.w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/not-handled.html#\" but got \"http://www.w3c-test.org/workers/interfaces/WorkerGlobalScope/onerror/not-handled.html\""
         }
       ],
       "status": "OK",
@@ -1618,18 +2339,12 @@
       "test": "/workers/interfaces/WorkerGlobalScope/onerror/propagate-to-window-onerror.html",
       "subtests": [],
       "status": "TIMEOUT",
-      "message": null
+      "message": ""
     },
     {
       "test": "/workers/interfaces/WorkerGlobalScope/self.html",
-      "subtests": [
-        {
-          "name": "self",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1658,14 +2373,8 @@
     },
     {
       "test": "/workers/interfaces/WorkerUtils/WindowTimers/003.html",
-      "subtests": [
-        {
-          "name": "setInterval",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1697,8 +2406,8 @@
       "subtests": [
         {
           "name": "Untitled",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () {\n    importScripts('data:text/javascript,ran=true','http://foo bar');\n  }\" threw object \"NetworkError: Failed to execute 'importScripts' on 'WorkerGlobalScope': The script at 'http://foo%20bar/' failed to load.\" that is not a DOMException SyntaxError: property \"code\" is equal to 19, expected 12"
         }
       ],
       "status": "OK",
@@ -1749,8 +2458,8 @@
           "message": "Test timed out"
         }
       ],
-      "status": "ERROR",
-      "message": "DataCloneError: DOM Exception 25: An object could not be cloned."
+      "status": "TIMEOUT",
+      "message": null
     },
     {
       "test": "/workers/interfaces/WorkerUtils/importScripts/007.html",
@@ -1778,8 +2487,14 @@
     },
     {
       "test": "/workers/interfaces/WorkerUtils/importScripts/009.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "variables and functions crossing importScripts boundary, take 2",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -1820,8 +2535,14 @@
     },
     {
       "test": "/workers/interfaces/WorkerUtils/navigator/002.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "navigator.appName",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -1890,7 +2611,7 @@
         {
           "name": "navigator.language",
           "status": "FAIL",
-          "message": "assert_equals: expected (string) \"en-us\" but got (undefined) undefined"
+          "message": "assert_equals: expected (string) \"en-US\" but got (undefined) undefined"
         }
       ],
       "status": "OK",
@@ -1902,7 +2623,7 @@
         {
           "name": "Nested worker",
           "status": "FAIL",
-          "message": "Can't find variable: Worker"
+          "message": "Worker is not defined"
         }
       ],
       "status": "TIMEOUT",
@@ -1986,7 +2707,7 @@
         {
           "name": "encoding, dedicated worker",
           "status": "FAIL",
-          "message": "assert_equals: expected \"Ã¥\" but got \"ÃƒÂ¥\""
+          "message": "assert_equals: expected \"å\" but got \"Ã¥\""
         }
       ],
       "status": "OK",
@@ -1998,7 +2719,7 @@
         {
           "name": "encoding, shared worker",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "assert_equals: expected \"å\" but got \"Ã¥\""
         }
       ],
       "status": "OK",
@@ -2021,8 +2742,8 @@
       "subtests": [
         {
           "name": "URL encoding, shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2030,61 +2751,9 @@
     },
     {
       "test": "/workers/semantics/encodings/004.worker",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/workers/semantics/interface-objects/001.worker",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/workers/semantics/interface-objects/002.worker",
       "subtests": [
         {
-          "name": "The AbstractView interface object should not be exposed.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "The AbstractWorker interface object should not be exposed.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "The ApplicationCache interface object should not be exposed.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "The Location interface object should not be exposed.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "The Navigator interface object should not be exposed.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "The DOMImplementation interface object should not be exposed.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "The Audio interface object should not be exposed.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "The HTMLCanvasElement interface object should not be exposed.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "The MouseEvent interface object should not be exposed.",
+          "name": "Decoding invalid utf-8",
           "status": "PASS",
           "message": null
         }
@@ -2093,18 +2762,232 @@
       "message": null
     },
     {
-      "test": "/workers/semantics/interface-objects/003.html",
+      "test": "/workers/semantics/interface-objects/001.worker",
+      "subtests": [
+        {
+          "name": "The WorkerGlobalScope interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The EventTarget interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The DedicatedWorkerGlobalScope interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The ErrorEvent interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"ErrorEvent\" missing"
+        },
+        {
+          "name": "The Event interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Worker interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"Worker\" missing"
+        },
+        {
+          "name": "The DOMException interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The SharedWorker interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"SharedWorker\" missing"
+        },
+        {
+          "name": "The MessagePort interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The MessageEvent interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The WorkerNavigator interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The MessageChannel interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The WorkerLocation interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The ImageData interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The File interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Blob interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The FileList interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The XMLHttpRequest interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The ProgressEvent interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The FormData interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The ArrayBuffer interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Int8Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Uint8Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Uint8ClampedArray interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Int16Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Uint16Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Int32Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Uint32Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Float32Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The Float64Array interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The DataView interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The CanvasProxy interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"CanvasProxy\" missing"
+        },
+        {
+          "name": "The ImageBitmap interface object should be exposed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The CanvasRenderingContext2D interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"CanvasRenderingContext2D\" missing"
+        },
+        {
+          "name": "The DrawingStyle interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"DrawingStyle\" missing"
+        },
+        {
+          "name": "The CanvasGradient interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"CanvasGradient\" missing"
+        },
+        {
+          "name": "The CanvasPattern interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"CanvasPattern\" missing"
+        },
+        {
+          "name": "The Path interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"Path\" missing"
+        },
+        {
+          "name": "The TextMetrics interface object should be exposed.",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"TextMetrics\" missing"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/workers/semantics/interface-objects/002.worker",
       "subtests": [],
       "status": "TIMEOUT",
       "message": ""
+    },
+    {
+      "test": "/workers/semantics/interface-objects/003.html",
+      "subtests": [
+        {
+          "name": "available interface objects in shared worker",
+          "status": "FAIL",
+          "message": "assert_equals: these interface objects were missing expected \"\" but got \"ApplicationCache, ErrorEvent, Worker, SharedWorker, Database, CanvasProxy, CanvasRenderingContext2d, DrawingStyle, CanvasGradient, CanvasPattern, Path, TextMetrics\""
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/semantics/interface-objects/004.html",
       "subtests": [
         {
           "name": "unavailable interface objects in shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2112,19 +2995,8 @@
     },
     {
       "test": "/workers/semantics/multiple-workers/001.html",
-      "subtests": [
-        {
-          "name": "dedicated",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "shared",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -2148,14 +3020,20 @@
           "message": "Test timed out"
         }
       ],
-      "status": "ERROR",
-      "message": "ReferenceError: Can't find variable: Worker"
+      "status": "TIMEOUT",
+      "message": null
     },
     {
       "test": "/workers/semantics/multiple-workers/004.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "shared worker with multiple documents",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/workers/semantics/multiple-workers/005.html",
@@ -2166,19 +3044,19 @@
           "message": "Test timed out"
         }
       ],
-      "status": "ERROR",
-      "message": "ReferenceError: Can't find variable: SharedWorker"
+      "status": "TIMEOUT",
+      "message": null
     },
     {
       "test": "/workers/semantics/multiple-workers/006.html",
       "subtests": [
         {
           "name": "shared worker in dedicated worker in shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -2186,16 +3064,22 @@
       "subtests": [
         {
           "name": "shared worker in dedicated worker in shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/workers/semantics/multiple-workers/008.html",
-      "subtests": [],
+      "subtests": [
+        {
+          "name": "messagechannel in shared worker",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
       "status": "TIMEOUT",
       "message": null
     },
@@ -2219,14 +3103,8 @@
     },
     {
       "test": "/workers/semantics/reporting-errors/001.html",
-      "subtests": [
-        {
-          "name": "shared worker, not handled",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -2234,26 +3112,32 @@
       "subtests": [
         {
           "name": "shared worker, addEventListener",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/workers/semantics/reporting-errors/003.html",
+      "subtests": [
+        {
+          "name": "shared worker, no error event on worker or port",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
       "message": null
     },
     {
-      "test": "/workers/semantics/reporting-errors/003.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
       "test": "/workers/semantics/reporting-errors/004.html",
       "subtests": [
         {
           "name": "shared worker in two documents and window.onerror",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2264,8 +3148,8 @@
       "subtests": [
         {
           "name": "worker global scope, dedicated worker",
-          "status": "FAIL",
-          "message": "assert_true: expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2276,8 +3160,8 @@
       "subtests": [
         {
           "name": "worker global scope, shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2294,7 +3178,7 @@
         {
           "name": "shared",
           "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "message": "assert_unreached: Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -2560,13 +3444,13 @@
         },
         {
           "name": "RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp unicode flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "RegExp empty",
@@ -2590,13 +3474,13 @@
         },
         {
           "name": "Array RegExp object, RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp unicode flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array RegExp object, RegExp empty",
@@ -2620,13 +3504,13 @@
         },
         {
           "name": "Object RegExp object, RegExp sticky flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp unicode flag",
-          "status": "FAIL",
-          "message": "Invalid flags supplied to RegExp constructor."
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object RegExp object, RegExp empty",
@@ -2735,8 +3619,8 @@
         },
         {
           "name": "File basic",
-          "status": "FAIL",
-          "message": "FileConstructor is not a constructor (evaluating 'new File(['foo'], 'bar', {type:'text/x-bar', lastModified:42})')"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "FileList empty",
@@ -2746,12 +3630,12 @@
         {
           "name": "Array FileList object, FileList empty",
           "status": "FAIL",
-          "message": "DataCloneError: DOM Exception 25"
+          "message": "Failed to execute 'postMessage' on 'Worker': An object could not be cloned."
         },
         {
           "name": "Object FileList object, FileList empty",
           "status": "FAIL",
-          "message": "DataCloneError: DOM Exception 25"
+          "message": "Failed to execute 'postMessage' on 'Worker': An object could not be cloned."
         },
         {
           "name": "ImageData 1x1 transparent black",
@@ -2785,33 +3669,33 @@
         },
         {
           "name": "ImageBitmap 1x1 transparent black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "ImageBitmap 1x1 non-transparent non-black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array ImageBitmap object, ImageBitmap 1x1 transparent black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array ImageBitmap object, ImageBitmap 1x1 non-transparent non-black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object ImageBitmap object, ImageBitmap 1x1 transparent black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Object ImageBitmap object, ImageBitmap 1x1 non-transparent non-black",
-          "status": "FAIL",
-          "message": "Can't find variable: createImageBitmap"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Array sparse",
@@ -2876,18 +3760,18 @@
       "test": "/workers/semantics/structured-clone/shared.html",
       "subtests": [],
       "status": "TIMEOUT",
-      "message": null
+      "message": ""
     },
     {
       "test": "/workers/semantics/xhr/001.html",
       "subtests": [
         {
           "name": "async XMLHttpRequest in dedicated worker",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -2907,8 +3791,8 @@
       "subtests": [
         {
           "name": "async XMLHttpRequest in shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2919,8 +3803,8 @@
       "subtests": [
         {
           "name": "sync XMLHttpRequest in shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2943,8 +3827,8 @@
       "subtests": [
         {
           "name": "base url, shared worker",
-          "status": "FAIL",
-          "message": "Can't find variable: SharedWorker"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
