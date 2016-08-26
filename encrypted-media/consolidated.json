@@ -2119,15 +2119,15 @@
     },
     "/encrypted-media/clearkey-mp4-playback-persistent-license.html": {
       "byUA": {
-        "CH54": "OK",
-        "ED14": "OK",
-        "FF51": "OK"
+        "CH54": "TIMEOUT",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
       },
       "totals": {
-        "OK": 3
+        "TIMEOUT": 3
       },
       "subtests": {
-        "org.w3.clearkey, successful playback, persistent-license, mp4, set src before setMediaKeys": {
+        "/encrypted-media/clearkey-mp4-playback-persistent-license.html": {
           "byUA": {
             "CH54": "TIMEOUT",
             "ED14": "TIMEOUT",
@@ -3230,6 +3230,1395 @@
           },
           "totals": {
             "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-check-initdata-type.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey support for \"webm\".": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "polyfill: org.w3.clearkey support for \"cenc\".": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "polyfill: org.w3.clearkey support for \"keyids\".": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-events.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "TIMEOUT",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 2,
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, events": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "/encrypted-media/polyfill/clearkey-events.html": {
+          "byUA": {
+            "ED14": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-generate-request-disallowed-input.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey: generateRequest() with webm initData longer than 64Kb characters.": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "polyfill: org.w3.clearkey: generateRequest() with cenc initData longer than 64Kb characters.": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "polyfill: org.w3.clearkey: generateRequest() with keyids initData longer than 64Kb characters.": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "polyfill: org.w3.clearkey: generateRequest() with invalid pssh data.": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "polyfill: org.w3.clearkey: generateRequest() with non pssh data.": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "polyfill: org.w3.clearkey: generateRequest() with too short key ID.": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "polyfill: org.w3.clearkey: generateRequest() with too long key ID.": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-keystatuses-multiple-sessions.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 1,
+        "TIMEOUT": 2
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, keystatuses, multiple sessions": {
+          "byUA": {
+            "CH54": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "/encrypted-media/polyfill/clearkey-keystatuses-multiple-sessions.html": {
+          "byUA": {
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-keystatuses.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 1,
+        "TIMEOUT": 2
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, keystatuses": {
+          "byUA": {
+            "CH54": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "/encrypted-media/polyfill/clearkey-keystatuses.html": {
+          "byUA": {
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-license-events.html": {
+      "byUA": {
+        "CH54": "TIMEOUT",
+        "ED14": "OK",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "TIMEOUT": 2,
+        "OK": 1
+      },
+      "subtests": {
+        "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-license-events.html": {
+          "byUA": {
+            "CH54": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 2
+          }
+        },
+        "polyfill: org.w3.clearkey, successful playback, persistent-license, mp4, set src before setMediaKeys, check events": {
+          "byUA": {
+            "ED14": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-license.html": {
+      "byUA": {
+        "CH54": "TIMEOUT",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "TIMEOUT": 3
+      },
+      "subtests": {
+        "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-license.html": {
+          "byUA": {
+            "CH54": "TIMEOUT",
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-usage-record-events.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, persistent-usage-record, playback, mp4, event sequence": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-usage-record.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, successful playback, persistent-usage-record, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-retrieve-persistent-license.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, retrieve persistent-license in new window, mp4": {
+          "byUA": {
+            "CH54": "FAIL",
+            "ED14": "TIMEOUT",
+            "FF51": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-retrieve-persistent-usage-record.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, retrieve persistent-usage-record in new window, mp4": {
+          "byUA": {
+            "CH54": "FAIL",
+            "ED14": "TIMEOUT",
+            "FF51": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-events.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, sucessful playback and events, temporary, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-multikey-sequential.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 2,
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, successful playback, temporary, mp4, multiple keys and sessions, sequential": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 1,
+            "TIMEOUT": 1
+          }
+        },
+        "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-multikey-sequential.html": {
+          "byUA": {
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-multikey.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 2,
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, successful playback, temporary, mp4, multiple keys, single session, audio/video": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 1,
+            "TIMEOUT": 1
+          }
+        },
+        "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-multikey.html": {
+          "byUA": {
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-after-src.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys after setting video.src": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-after-update.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys after updating session": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-immediately.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys first": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-onencrypted.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys in encrypted event": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-two-videos.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "TIMEOUT",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 2,
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-two-videos.html": {
+          "byUA": {
+            "ED14": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-waitingforkey.html": {
+      "byUA": {
+        "CH54": "TIMEOUT",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "TIMEOUT": 3
+      },
+      "subtests": {
+        "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-waitingforkey.html": {
+          "byUA": {
+            "CH54": "TIMEOUT",
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-mp4-playback-temporary.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "TIMEOUT",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/clearkey-not-callable-after-createsession.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: org.w3.clearkey: Update() immediately after CreateSession().": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "FAIL",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "polyfill: org.w3.clearkey: Close() immediately after CreateSession().": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "FAIL",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "polyfill: org.w3.clearkey: Remove() immediately after CreateSession().": {
+          "byUA": {
+            "CH54": "PASS",
+            "ED14": "FAIL",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-check-initdata-type.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha support for \"webm\".": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha support for \"cenc\".": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha support for \"keyids\".": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready support for \"webm\".": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready support for \"cenc\".": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready support for \"keyids\".": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-events.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, events": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, events": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-generate-request-disallowed-input.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha: generateRequest() with webm initData longer than 64Kb characters.": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha: generateRequest() with cenc initData longer than 64Kb characters.": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha: generateRequest() with keyids initData longer than 64Kb characters.": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha: generateRequest() with invalid pssh data.": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha: generateRequest() with non pssh data.": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha: generateRequest() with too short key ID.": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha: generateRequest() with too long key ID.": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready: generateRequest() with webm initData longer than 64Kb characters.": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready: generateRequest() with cenc initData longer than 64Kb characters.": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready: generateRequest() with keyids initData longer than 64Kb characters.": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready: generateRequest() with invalid pssh data.": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready: generateRequest() with non pssh data.": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready: generateRequest() with too short key ID.": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready: generateRequest() with too long key ID.": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-keystatuses-multiple-sessions.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 1,
+        "TIMEOUT": 2
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, keystatuses, multiple sessions": {
+          "byUA": {
+            "CH54": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "/encrypted-media/polyfill/drm-keystatuses-multiple-sessions.html": {
+          "byUA": {
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-keystatuses.html": {
+      "byUA": {
+        "CH54": "TIMEOUT",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "TIMEOUT": 3
+      },
+      "subtests": {
+        "/encrypted-media/polyfill/drm-keystatuses.html": {
+          "byUA": {
+            "CH54": "TIMEOUT",
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-persistent-usage-record-events.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, persistent-usage-record, playback, mp4, event sequence": {
+          "byUA": {
+            "CH54": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, persistent-usage-record, playback, mp4, event sequence": {
+          "byUA": {
+            "ED14": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-persistent-usage-record.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, successful playback, persistent-usage-record, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "CH54": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, successful playback, persistent-usage-record, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "ED14": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-retrieve-persistent-usage-record.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, retrieve persistent-usage-record in new window, mp4": {
+          "byUA": {
+            "CH54": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, retrieve persistent-usage-record in new window, mp4": {
+          "byUA": {
+            "ED14": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary-events.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "TIMEOUT",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 2,
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, sucessful playback and events, temporary, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "CH54": "FAIL",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 1
+          }
+        },
+        "/encrypted-media/polyfill/drm-mp4-playback-temporary-events.html": {
+          "byUA": {
+            "ED14": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey-sequential.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 1,
+        "TIMEOUT": 2
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, successful playback, temporary, mp4, multiple keys and sessions, sequential": {
+          "byUA": {
+            "CH54": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey-sequential.html": {
+          "byUA": {
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 1,
+        "TIMEOUT": 2
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, successful playback, temporary, mp4, multiple keys, single session, audio/video": {
+          "byUA": {
+            "CH54": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey.html": {
+          "byUA": {
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-after-src.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys after setting video.src": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, sucessful playback, temporary, mp4, setMediaKeys after setting video.src": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-after-update.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys after updating session": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, sucessful playback, temporary, mp4, setMediaKeys after updating session": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-immediately.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys first": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, sucessful playback, temporary, mp4, setMediaKeys first": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-onencrypted.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys in encrypted event": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, sucessful playback, temporary, mp4, setMediaKeys in encrypted event": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary-two-videos.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, sucessful playback, temporary, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary-waitingforkey.html": {
+      "byUA": {
+        "CH54": "TIMEOUT",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "TIMEOUT": 3
+      },
+      "subtests": {
+        "/encrypted-media/polyfill/drm-mp4-playback-temporary-waitingforkey.html": {
+          "byUA": {
+            "CH54": "TIMEOUT",
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-mp4-playback-temporary.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready, sucessful playback, temporary, mp4, set src before setMediaKeys": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/drm-not-callable-after-createsession.html": {
+      "byUA": {
+        "CH54": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "polyfill: com.widevine.alpha: Update() immediately after CreateSession().": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha: Close() immediately after CreateSession().": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.widevine.alpha: Remove() immediately after CreateSession().": {
+          "byUA": {
+            "CH54": "PASS",
+            "FF51": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "polyfill: com.microsoft.playready: Update() immediately after CreateSession().": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready: Close() immediately after CreateSession().": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "polyfill: com.microsoft.playready: Remove() immediately after CreateSession().": {
+          "byUA": {
+            "ED14": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/polyfill/idlharness.html": {
+      "byUA": {
+        "CH54": "TIMEOUT",
+        "ED14": "TIMEOUT",
+        "FF51": "TIMEOUT"
+      },
+      "totals": {
+        "TIMEOUT": 3
+      },
+      "subtests": {
+        "/encrypted-media/polyfill/idlharness.html": {
+          "byUA": {
+            "CH54": "TIMEOUT",
+            "ED14": "TIMEOUT",
+            "FF51": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 3
           }
         }
       }
