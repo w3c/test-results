@@ -2,24 +2,24 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Annotation Model: All Results</title>
+    <title>Annotation Model: Less Than 2 Passes</title>
     <link rel='stylesheet' href='bootstrap.min.css'>
     <link rel='stylesheet' href='analysis.css'>
   </head>
   <body>
     <div class='container'>
       <header>
-        <h1>Annotation Model: All Results</h1>
+        <h1>Annotation Model: Less Than 2 Passes</h1>
       </header>
-      <p><strong>Test files</strong>: 3; <strong>Total subtests</strong>: 45</p>
+      <p><strong>Test files without 2 passes</strong>: 3; <strong>Subtests without 2 passes: </strong>33; <strong>Failure level</strong>: 33/45 (73.33%)</p>
       <h3>Test Files</h3>
-<ol class='toc'><li><a href='#test-file-0'>/annotation-model/annotations/annotationAgentOptionals-manual.html</a></li>
-<li><a href='#test-file-1'>/annotation-model/annotations/annotationMusts-manual.html</a></li>
-<li><a href='#test-file-2'>/annotation-model/annotations/annotationOptionals-manual.html</a></li>
+<ol class='toc'><li><a href='#test-file-0'>/annotation-model/annotations/annotationAgentOptionals-manual.html</a> <small>(16/16, 100.00%, 35.56% of total)</small></li>
+<li><a href='#test-file-1'>/annotation-model/annotations/annotationMusts-manual.html</a> <small>(2/14, 14.29%, 4.44% of total)</small></li>
+<li><a href='#test-file-2'>/annotation-model/annotations/annotationOptionals-manual.html</a> <small>(15/15, 100.00%, 33.33% of total)</small></li>
 </ol>
       <table class='table persist-area'>
         <thead><tr class='persist-header'><th>Test <span class='message_toggle'>Show/Hide Messages</span></th><th>EX42</th><th>EX44</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/annotation-model/annotations/annotationAgentOptionals-manual.html' target='_blank'>/annotation-model/annotations/annotationAgentOptionals-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/annotation-model/annotations/annotationAgentOptionals-manual.html' target='_blank'>/annotation-model/annotations/annotationAgentOptionals-manual.html</a> <small>(16/16, 100.00%, 35.56% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>1:1 Implements Annotation-level creator (Agent) <strong><em>id</em> key</strong> with <strong>single value</strong> that is a <strong>string of format uri</strong> - <a href="https://www.w3.org/TR/annotation-model/#agents">model 3.2.2</a></td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>EX42:</td><td> assert_true: WARNING: Id for Annotation Creator (Agent) not found or more than 1 found. Agents should have exactly one id of format uri.; Errors: data should have required property 'creator'; expected true got false</td></tr>
 </table></td></tr>
@@ -74,26 +74,14 @@
 <tr class='subtest'><td>1:16 Implements Annotation-level generator (Agent) <strong><em>homepage</em> key</strong> with one or more values, each of which is a <strong>string of format uri</strong> - <a href="https://www.w3.org/TR/annotation-model/#agents">model 3.2.2</a></td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>EX42:</td><td> assert_true: INFORMATIONAL: Homepage for Annotation Generator (Agent) not found. Agents may have one or more homepage values.; Errors: data should have required property 'generator'; expected true got false</td></tr>
 </table></td></tr>
-<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/annotation-model/annotations/annotationMusts-manual.html' target='_blank'>/annotation-model/annotations/annotationMusts-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>1:1 Annotation has <strong><em>@context</em> key</strong> and '<strong>http://www.w3.org/ns/anno.jsonld</strong>' is <strong>a value of <em>@context</em></strong> - <a href="https://www.w3.org/TR/annotation-model/#annotations">model 3.1</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:2 Annotation has <strong><em>id</em> key</strong> which has a <strong>single value</strong> that is a <strong>string of format uri</strong> - <a href="https://www.w3.org/TR/annotation-model/#annotations">model 3.1</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/annotation-model/annotations/annotationMusts-manual.html' target='_blank'>/annotation-model/annotations/annotationMusts-manual.html</a> <small>(2/14, 14.29%, 4.44% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>1:3 Annotation has <strong><em>type</em> key</strong> and '<strong>Annotation</strong>' is <strong>a value of <em>type</em></strong> - <a href="https://www.w3.org/TR/annotation-model/#annotations">model 3.1</a></td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>EX42:</td><td> assert_true: ERROR: Annotation is missing type key or 'Annotation' is not a value of type.; Errors: data.type should be equal to one of the allowed values, data.type should NOT be valid, data.type should be array, data.type should match exactly one schema in oneOf; expected true got false</td></tr>
 </table></td></tr>
 <tr class='subtest'><td>1:4 Annotation has a <strong><em>target</em> key</strong> - <a href="https://www.w3.org/TR/annotation-model/#annotations">model 3.1</a></td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>EX42:</td><td> assert_true: Error: Annotation is missing target  key.; Errors: data should have required property 'target'; expected true got false</td></tr>
 </table></td></tr>
-<tr class='subtest'><td>1:5 Each <strong><em>target</em></strong> is one of a <strong>string of format uri</strong>, an <strong>External Web Resource</strong>, a <strong>Choice</strong> or <strong>Set</strong>, or a <strong>Specific Resource</strong> - <a href="https://www.w3.org/TR/annotation-model/#bodies-and-targets">model 3.2</a>, <a href="https://www.w3.org/TR/annotation-model/#specific-resources">model 4</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:6 Annotation has a <strong><em>body</em> key</strong>, or a <strong><em>bodyValue</em> key</strong>, or <strong>neither</strong>, but <strong>NEVER both</strong> - <a href="https://www.w3.org/TR/annotation-model/#string-body">model 3.2.5</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:7 If present, each <strong><em>body</em></strong> is one of a <strong>string of format uri</strong>, an <strong>External Web Resource</strong>, an <strong>Embedded Textual Body</strong>, a <strong>Choice</strong> or <strong>Set</strong>, or a <strong>Specific Resource</strong> - <a href="https://www.w3.org/TR/annotation-model/#bodies-and-targets">model 3.2</a>, <a href="https://www.w3.org/TR/annotation-model/#specific-resources">model 4</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:8 If present the <strong><em>bodyValue</em> key</strong> has a <strong>single value</strong> that is a <strong>string</strong> - <a href="https://www.w3.org/TR/annotation-model/#string-body">model 3.2.5</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:9 If present the Annotation-level <strong><em>created</em> key</strong> has a <strong>single value</strong> that is of <strong>format date-time</strong> - <a href="https://www.w3.org/TR/annotation-model/#lifecycle-information">model 3.3.1</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:10 If present the Annotation-level <strong><em>modified</em> key</strong> has a <strong>single value</strong> that is of <strong>format date-time</strong> - <a href="https://www.w3.org/TR/annotation-model/#lifecycle-information">model 3.3.1</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:11 If present the Annotation-level <strong><em>generated</em> key</strong> has a <strong>single value</strong> that is of <strong>format date-time</strong> - <a href="https://www.w3.org/TR/annotation-model/#lifecycle-information">model 3.3.1</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:12 If present the Annotation-level <strong><em>rights</em> key</strong> has values that are all <strong>strings of format uri</strong> - <a href="https://www.w3.org/TR/annotation-model/#rights-information">model 3.3.6</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:13 If present the Annotation-level <strong><em>canonical</em> key</strong> has a <strong>single value</strong> that is a <strong>string of format uri</strong> - <a href="https://www.w3.org/TR/annotation-model/#other-identities">model 3.3.7</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>1:14 If present the Annotation-level <strong><em>via</em> key</strong> has values that are all <strong>strings of format uri</strong> - <a href="https://www.w3.org/TR/annotation-model/#other-identities">model 3.3.7</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/annotation-model/annotations/annotationOptionals-manual.html' target='_blank'>/annotation-model/annotations/annotationOptionals-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/annotation-model/annotations/annotationOptionals-manual.html' target='_blank'>/annotation-model/annotations/annotationOptionals-manual.html</a> <small>(15/15, 100.00%, 33.33% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>1:1 Implements <strong><em>body</em> key</strong> - <a href="https://www.w3.org/TR/annotation-model/#annotations">model 3.1</a></td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>EX42:</td><td> assert_true: WARNING: Annotation Should have a body.; Errors: data should have required property 'body'; expected true got false</td></tr>
 </table></td></tr>
