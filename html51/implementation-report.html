@@ -215,7 +215,7 @@ width="72"></a></p>
 </tr>
 
 <tr>
-<td class="fail">Yandex, Opera</td><td class="pass">Y</td><td class="pass">Y</td><td class="pass">Y</td><td class="fail">N</td><td><a href="https://chaals.github.io/testcases/meta-refresh-no-semi-colon-manual.html">With no semicolon</a>.</td>
+<td class="fail">N</td><td class="pass">Y</td><td class="pass">Y</td><td class="pass">Y</td><td class="fail">N</td><td><a href="https://chaals.github.io/testcases/meta-refresh-no-semi-colon-manual.html">With no semicolon</a>.</td>
 </tr>
 </table>
 
@@ -332,11 +332,6 @@ width="72"></a></p>
 </tr>
 
 <tr>
-<th><a href="https://github.com/whatwg/html/commit/da491d4c62c3efb73a96bce7071a0a0dcbfa95d8">Change <code>.tFoot</code> and <code>.createTFoot</code> to always insert at the end</a></th>
-<td class="fail">N</td><td class="pass">Y</td><td class="fail">N</td><td class="fail">N</td><td class="fail">N</td><td>Related to thead/tfoot ordering issue above, and changed to match what happens there? <a href="http://software.hixie.ch/utilities/js/live-dom-viewer/?saved=3777">test for <code>createTFoot</code></a></td>
-</tr>
-
-<tr>
 <th><a href="https://github.com/whatwg/html/commit/94d55af9cda601ce675d15f6a0e52c9bb9c6afa9">Disallow <code>&lt;tfoot&gt;</code> before <code>&lt;tbody&gt;</code></a></th>
 <td colspan="5">No browser behaviour required</td><td>Not implemented in validator.w3.org</td>
 </tr>
@@ -359,11 +354,6 @@ width="72"></a></p>
 <tr>
 <th><a href="https://github.com/w3c/html/pull/157">Add callout to detach from <code>&lt;media&gt;</code></a></th>
 <td colspan="5"	class="pass">Y</td><td>For MSE</td>
-</tr>
-
-<tr>
-<th><a href="https://github.com/w3c/html/pull/431">Use close blob from File API</a></th>
-<td class="notTested">?</td><td class="notTested">?</td><td class="fail">N</td><td class="fail">N</td><td class="fail">N</td><td>window.createImageBitmap rejects closed Blob source with InvalidStateError.</td>
 </tr>
 
 <tr>
@@ -405,11 +395,6 @@ width="72"></a></p>
 </tr>
 
 <tr>
-<th><a href="https://github.com/whatwg/html/commit/920c9183a7990968ecac1aeedae22391f3438791">Add hooks for inline events and styles</a></th>
-<td class="fail">N</td><td class="fail">N</td><td class="fail">N</td><td class="fail">N</td><td class="fail">N</td><td>script-src 'unsafe-hashed-attributes' (CSP3) applies</td>
-</tr>
-
-<tr>
 <th><a href="https://github.com/whatwg/html/commit/ee3486eb129bc350b5ca684d0c91dff23453ac1a">Add hooks for inline elements</a></th>
 <td class="pass">Y</td><td class="pass">Y</td><td class="fail">Y</td><td class="fail">N</td><td class="pass">Y</td><td>script/style-src 'unsafe-inline' applies to element</td>
 </tr>
@@ -428,16 +413,25 @@ width="72"></a></p>
 <h2>Uncertain implementations</h2>
 
 <h3 id="oneknown">One known implementation</h3>
+<dl>
+ <dt><code>:dir</code> CSS selector matching</dt>
+  <dd>Only in Firefox. This defines how a CSS selector works with HTML when implemented, so the lack of implementation doesn't cause interop problems for browsers. A warning for authors  not to rely on this feature yet @@will be - PR open@@ associated in the specification.</dd>
+ <dt><code>.tFoot</code> and <code>.createTFoot</code> to always insert at the end</a></dt>
+  <dd>Only in Firefox. There is poor interoperability of this in general, so it is unlikely to affect Web Compatibility, but this change matches a similar one in the WHATWG specification. A warning for authors  not to rely on this feature yet @@will be@@ associated in the specification.</dd>
+</dl>
 
-<h4><code>:dir</code> CSS selector matching</h4>
 
-<p>This is only known to be implemented in Firefox</p>
 
 <h3 id="noknown">No known implementations</h3>
 
-<h4><code>probablySupportsContext</code></h4>
-
-<p>This has no known implementation</p>
+<dl>
+ <dt><code>probablySupportsContext</code></dt>
+  <dd>This convenience function for canvas has no known implementation. A warning for authors @@will be@@ associated in the specification.</dd>
+ <dt>Use <code>close()</code> blob from File API</dt>
+  <dd>This method does not appear to have implementation, and may in future be removed from File API. In the HTML specification, it is mentioned in an algorithm, to take account of any implementation, in a way that means partial implementation does not introduce an interoperability problem. A warning for authors not to rely on this feature @@will be@@ associated in the specification.</dd>
+ <dt>CSP hooks for inline events and styles</dt>
+  <dd>This part of CSP does not appear to have implementation, but seems likely to be implemented in the near future. In the HTML specification, it is mentioned in an algorithm, to take account of any implementation, in a way that means partial implementation does not introduce an interoperability problem. A warning for authors  not to rely on this feature yet @@will be@@ associated in the specification.</dd>
+</dl>
 </main>
 </body>
 </html>
