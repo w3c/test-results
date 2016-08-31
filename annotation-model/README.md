@@ -16,11 +16,3 @@ To add new tests results:
 
 If you want to see what the report would look like locally, use the wptreport tool (https://github.com/spec-ops/wptreport) to build a 
 report with a command line like `wptreport -f -m -s "Annotation Model"`
-
-Annotation Vocabulary Test Results
-==================================
-
-Placeholder for annotation-vocabulary test results.  Once some results are available, the
-implementation report will be available at
-
-* http://w3c.github.io/test-results/annotation-model/vocab-results.html
