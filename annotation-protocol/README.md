@@ -1,23 +1,32 @@
-Annotation Protocol Test Results
-=============================
+Annotation Protocol test results
+================================
 
-Placeholder for annotation-protocol test results. Once some results are available, the 
-implementation report will be available at 
+Up-to-date result reports are available at:
 
-* `http://w3c.github.io/test-results/annotation-protocol/all.html`
+* https://w3c.github.io/test-results/annotation-protocol/all.html
+* https://w3c.github.io/test-results/annotation-protocol/less-than-2.html
+* https://w3c.github.io/test-results/annotation-protocol/complete-fails.html
 
-To add new tests results:
-
-1. Select a two letter abbreviation for your implementation under test (e.g., AB)
-2. Produce a JSON test result files using http://w3c-test.org/tools/runner/index.html (or a local copy); naming that file using the two letter abbreviation and a two digit representation of the version number under test.
-3. For the test-results repo if you haven't already (https://github.com/w3c/test-results)
-4. Place your new .json results in the annotation-protocol directory
-5. Create a pull request with your updated file
-6. When it is merged the maintainers will update the overall results report automatically (https://w3c.github.io/test-results/annotation-model/all.html)
-
-
-List of Implementations Tested
-==============================
+Index of implementations tested
+===============================
 
 * RI - Reference Implementation
 * CC - Conquering Corsairs
+
+Adding new results
+==================
+
+To add new tests results:
+
+1. Fork the test-results repo if you haven't already (https://github.com/w3c/test-results)
+2. Select a two letter abbreviation for your implementation under test (e.g., AB) and add it to the list above
+2. Produce a JSON test result files using http://w3c-test.org/tools/runner/index.html?path=/annotation-protocol (or a local copy); naming that file using the two letter abbreviation and a two digit representation of the version number under test.
+  * Use `/annotation-protocol` as the path for which tests to run.
+  * Note that failures in the test results can be caused by the server not using that particular feature, and for the optional tests should not be cause for alarm.
+4. Place your new .json results in the annotation-protocol directory
+5. Create a pull request with your updated file
+6. When it is merged the maintainers will update the overall results reports automatically
+
+If you want to see what the report would look like locally, use the wptreport tool (https://github.com/spec-ops/wptreport) to build a 
+report with a command line like `wptreport -f -m -s "Annotation Procotol"`
+
