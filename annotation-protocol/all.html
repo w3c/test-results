@@ -16,55 +16,62 @@
 <ol class='toc'><li><a href='#test-file-0'>/annotation-protocol/server/server-manual.html</a></li>
 </ol>
       <table class='table persist-area'>
-        <thead><tr class='persist-header'><th>Test <span class='message_toggle'>Show/Hide Messages</span></th><th>RI01</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/annotation-protocol/server/server-manual.html' target='_blank'>/annotation-protocol/server/server-manual.html</a></td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Container MUST end in a "/" character</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST support GET (check Allow on GET)</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST support HEAD (check Allow on GET)</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST support OPTIONS (check Allow on GET)</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST have a Content-Type header with the application/ld+json media type</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST response with the JSON-LD representation (by default)</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST return a description of the container with BasicContainer</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST return a description of the container with AnnotationCollection</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST return a Link header (rfc5988) on all responses</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST have an ETag header</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST have a Vary header with Accept in the value</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST advertise its type by including a link where the rel parameter value is type and the target IRI is the appropriate Container Type</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST advertise that it imposes Annotation protocol specific constraints by including a link where the target IRI is http://www.w3.org/TR/annotation-protocol/, and the rel parameter value is the IRI http://www.w3.org/ns/ldp#constrainedBy</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST support HEAD method</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST support OPTIONS method</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Containers MUST include a Content-Location header with the IRI as its value</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Container's Content-Location and <code>id</code> MUST match</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotation Pages must have a link to the container they are part of, using the partOf property</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotation Pages MUST have a link to the previous page in the sequence, using the prev property (if not the first page)</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotation Pages MUST have a link to the next page in the sequence, using the next property (if not the last page)</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotations MUST support GET (check Allow on GET)</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotations MUST support HEAD (check Allow on GET)</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotations MUST support OPTIONS (check Allow on GET)</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotations MUST have a Content-Type header with the application/ld+json media type</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotations MUST have a Link header entry where the target IRI is http://www.w3.org/ns/ldp#Resource and the rel parameter value is type</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotations MUST have an ETag header</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotations MUST have a Vary header with Accept in the value</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotations MUST support HEAD method</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotations MUST support OPTIONS method</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Created Annotation MUST have an id property</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Created Annotation MUST have an id that starts with the Container IRI</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Created Annotation MUST preserve any canonical IRI</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotation Server MUST respond with a 201 Created code if the creation is successful</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Location header SHOULD match the id of the new Annotation</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotation update must be done with the PUT method</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotation deletion with DELETE method MUST return a 204 status</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Annotation server SHOULD use HTTPS rather than HTTP</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='2'><table><tr class='message'><td class='ua'>RI01:</td><td> assert_equals: Server is not using HTTPS expected "http:" but got "https"</td></tr>
+        <thead><tr class='persist-header'><th>Test <span class='message_toggle'>Show/Hide Messages</span></th><th>CC01</th><th>RI01</th></tr></thead>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/annotation-protocol/server/server-manual.html' target='_blank'>/annotation-protocol/server/server-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Container MUST end in a "/" character</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST support GET (check Allow on GET)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST support HEAD (check Allow on GET)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST support OPTIONS (check Allow on GET)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST have a Content-Type header with the application/ld+json media type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST response with the JSON-LD representation (by default)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST return a description of the container with BasicContainer</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST return a description of the container with AnnotationCollection</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST return a Link header (rfc5988) on all responses</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST have an ETag header</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST have a Vary header with Accept in the value</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST advertise its type by including a link where the rel parameter value is type and the target IRI is the appropriate Container Type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST advertise that it imposes Annotation protocol specific constraints by including a link where the target IRI is http://www.w3.org/TR/annotation-protocol/, and the rel parameter value is the IRI http://www.w3.org/ns/ldp#constrainedBy</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST support HEAD method</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST support OPTIONS method</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Containers MUST include a Content-Location header with the IRI as its value</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Container's Content-Location and <code>id</code> MUST match</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>CC01:</td><td> assert_true: expected true got false</td></tr>
 </table></td></tr>
-<tr class='subtest'><td>SHOULD return the full annotation descriptions</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>SHOULD include the total property with the total number of annotations in the container</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>SHOULD have a link to the first page of its contents using <code>first</code></td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>SHOULD have a link to the last page of its contents using <code>last</code></td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Response contains annotations via <code>items</code> when it SHOULD NOT</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Response contains annotations via <code>ldp:contains</code> when it SHOULD NOT</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>SHOULD include Prefer in the Vary header</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>SHOULD NOT [receive] the Prefer header when requesting the page</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotation Pages must have a link to the container they are part of, using the partOf property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotation Pages MUST have a link to the previous page in the sequence, using the prev property (if not the first page)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotation Pages MUST have a link to the next page in the sequence, using the next property (if not the last page)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotations MUST support GET (check Allow on GET)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotations MUST support HEAD (check Allow on GET)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotations MUST support OPTIONS (check Allow on GET)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotations MUST have a Content-Type header with the application/ld+json media type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotations MUST have a Link header entry where the target IRI is http://www.w3.org/ns/ldp#Resource and the rel parameter value is type</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>CC01:</td><td> assert_equals: <a href="http://www.w3.org/ns/ldp#Resource">http://www.w3.org/ns/ldp#Resource</a>; rel="type" not found in Link expected "<a href="http://www.w3.org/ns/ldp#Resource">http://www.w3.org/ns/ldp#Resource</a>; rel=\"type\"" but got "<a href="http://www.w3.org/ns/ldp#Resource">http://www.w3.org/ns/ldp#Resource</a>;rel=\"type\""</td></tr>
+</table></td></tr>
+<tr class='subtest'><td>Annotations MUST have an ETag header</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotations MUST have a Vary header with Accept in the value</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotations MUST support HEAD method</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotations MUST support OPTIONS method</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Created Annotation MUST have an id property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Created Annotation MUST have an id that starts with the Container IRI</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Created Annotation MUST preserve any canonical IRI</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotation Server MUST respond with a 201 Created code if the creation is successful</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Location header SHOULD match the id of the new Annotation</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotation update must be done with the PUT method</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotation deletion with DELETE method MUST return a 204 status</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Annotation server SHOULD use HTTPS rather than HTTP</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>CC01:</td><td> assert_equals: Server is not using HTTPS expected "http:" but got "https"</td></tr>
+<tr class='message'><td class='ua'>RI01:</td><td> assert_equals: Server is not using HTTPS expected "http:" but got "https"</td></tr>
+</table></td></tr>
+<tr class='subtest'><td>SHOULD return the full annotation descriptions</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>SHOULD include the total property with the total number of annotations in the container</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>SHOULD have a link to the first page of its contents using <code>first</code></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>SHOULD have a link to the last page of its contents using <code>last</code></td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>CC01:</td><td> assert_true: expected true got false</td></tr>
+</table></td></tr>
+<tr class='subtest'><td>Response contains annotations via <code>items</code> when it SHOULD NOT</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Response contains annotations via <code>ldp:contains</code> when it SHOULD NOT</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>SHOULD include Prefer in the Vary header</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>SHOULD NOT [receive] the Prefer header when requesting the page</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 
       </table>
     </div>
