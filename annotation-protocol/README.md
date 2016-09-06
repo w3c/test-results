@@ -15,3 +15,9 @@ To add new tests results:
 5. Create a pull request with your updated file
 6. When it is merged the maintainers will update the overall results report automatically (https://w3c.github.io/test-results/annotation-model/all.html)
 
+
+List of Implementations Tested
+==============================
+
+* RI - Reference Implementation
+* CC - Conquering Corsairs
