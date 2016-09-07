@@ -11,7 +11,7 @@
         {
           "name": "SourceBuffer#abort (video/mp4) : if this object has been removed from the sourceBuffers attribute of the parent media source, then throw an INVALID_STATE_ERR exception and abort these steps.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         }
       ],
       "status": "TIMEOUT",
@@ -57,7 +57,7 @@
         {
           "name": "URL.createObjectURL(null)",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () {\r\n        window.URL.createObjectURL(null);\r\n    }\" threw object \"Error: Cette interface n’est pas prise en charge\r\n\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: function \"function () {\n        window.URL.createObjectURL(null);\n    }\" threw object \"Error: No such interface supported\r\n\" (\"Error\") expected object \"TypeError\" (\"TypeError\")"
         }
       ],
       "status": "OK",
@@ -323,7 +323,7 @@
         {
           "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on mediaSource with too few arguments must throw TypeError",
           "status": "FAIL",
-          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+          "message": "assert_throws: Called with 1 arguments function \"function () {\n            fn.apply(obj, args);\n        }\" did not throw"
         },
         {
           "name": "EventTarget interface: mediaSource must inherit property \"removeEventListener\" with the proper type (1)",
@@ -333,7 +333,7 @@
         {
           "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on mediaSource with too few arguments must throw TypeError",
           "status": "FAIL",
-          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+          "message": "assert_throws: Called with 1 arguments function \"function () {\n            fn.apply(obj, args);\n        }\" did not throw"
         },
         {
           "name": "EventTarget interface: mediaSource must inherit property \"dispatchEvent\" with the proper type (2)",
@@ -608,7 +608,7 @@
         {
           "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on sourceBuffer with too few arguments must throw TypeError",
           "status": "FAIL",
-          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+          "message": "assert_throws: Called with 1 arguments function \"function () {\n            fn.apply(obj, args);\n        }\" did not throw"
         },
         {
           "name": "EventTarget interface: sourceBuffer must inherit property \"removeEventListener\" with the proper type (1)",
@@ -618,7 +618,7 @@
         {
           "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on sourceBuffer with too few arguments must throw TypeError",
           "status": "FAIL",
-          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+          "message": "assert_throws: Called with 1 arguments function \"function () {\n            fn.apply(obj, args);\n        }\" did not throw"
         },
         {
           "name": "EventTarget interface: sourceBuffer must inherit property \"dispatchEvent\" with the proper type (2)",
@@ -703,7 +703,7 @@
         {
           "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
           "status": "FAIL",
-          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+          "message": "assert_throws: Called with 1 arguments function \"function () {\n            fn.apply(obj, args);\n        }\" did not throw"
         },
         {
           "name": "EventTarget interface: mediaSource.sourceBuffers must inherit property \"removeEventListener\" with the proper type (1)",
@@ -713,7 +713,7 @@
         {
           "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
           "status": "FAIL",
-          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+          "message": "assert_throws: Called with 1 arguments function \"function () {\n            fn.apply(obj, args);\n        }\" did not throw"
         },
         {
           "name": "EventTarget interface: mediaSource.sourceBuffers must inherit property \"dispatchEvent\" with the proper type (2)",
@@ -923,9 +923,24 @@
           "message": null
         },
         {
-          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute.",
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, audio media appended first",
           "status": "FAIL",
-          "message": "assert_equals: first active SourceBuffer is the audio one expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
+          "message": "assert_equals: first active SourceBuffer matches first SourceBuffer expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, video media appended first",
+          "status": "FAIL",
+          "message": "assert_equals: first active SourceBuffer matches first SourceBuffer expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: video is first sourceBuffer, audio media appended first",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: video is first sourceBuffer, video media appended first",
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.",
@@ -934,6 +949,23 @@
         },
         {
           "name": "Active SourceBuffers list ignores changes to selected audio/video tracks that do not affect the activation of the SourceBuffer.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-addsourcebuffer-mode.html",
+      "subtests": [
+        {
+          "name": "addSourceBuffer() sets SourceBuffer.mode to 'segments' when the generate timestamps flag is false",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "addSourceBuffer() sets SourceBuffer.mode to 'sequence' when the generate timestamps flag is true",
           "status": "PASS",
           "message": null
         }
@@ -957,7 +989,7 @@
         {
           "name": "Test addSourceBuffer() with null",
           "status": "FAIL",
-          "message": "assert_throws: addSourceBuffer() threw an exception when passed null. function \"function () { mediaSource.addSourceBuffer(null); }\" threw object \"InvalidAccessError\" that is not a DOMException NotSupportedError: property \"code\" is equal to 15, expected 9"
+          "message": "assert_throws: addSourceBuffer() threw an exception when passed null. function \"function () { mediaSource.addSourceBuffer(null); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test addSourceBuffer() with unsupported type",
@@ -1034,7 +1066,7 @@
         {
           "name": "Test MediaSource.removeSourceBuffer() call during a pending appendBuffer().",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         },
         {
           "name": "Test set MediaSource.duration during a pending appendBuffer() for one of its SourceBuffers.",
@@ -1089,7 +1121,7 @@
         {
           "name": "Test abort after removing sourcebuffer.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         },
         {
           "name": "Test abort after readyState is ended following init segment and media segment.",
@@ -1104,12 +1136,12 @@
         {
           "name": "Test appending null.",
           "status": "FAIL",
-          "message": "assert_throws: appendBuffer(null) throws an exception. function \"function () { sourceBuffer.appendBuffer(null); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: appendBuffer(null) throws an exception. function \"function () { sourceBuffer.appendBuffer(null); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
         },
         {
           "name": "Test appending after removeSourceBuffer().",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         }
       ],
       "status": "TIMEOUT",
@@ -1148,7 +1180,7 @@
         {
           "name": "Test appendwindow throw error when mediasource object is not associated with a sourebuffer.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         },
         {
           "name": "Test set appendWindowStart and appendWindowEnd when source buffer updating.",
@@ -1164,6 +1196,18 @@
           "name": "Test read appendWindowStart and appendWindowEnd initial values.",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-attach-stops-delaying-load-event.html",
+      "subtests": [
+        {
+          "name": "MediaSource attachment should immediately stop delaying the load event",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
       "status": "TIMEOUT",
@@ -1207,7 +1251,7 @@
         {
           "name": "Muxed content with different lengths",
           "status": "FAIL",
-          "message": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.000, 2.000) }\" but got \"{ [0.000, 2.043) }\""
+          "message": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.067, 2.043) }\" but got \"{ [0.000, 2.043) }\""
         },
         {
           "name": "Demuxed content with an empty buffered range on one SourceBuffer",
@@ -1232,7 +1276,7 @@
         {
           "name": "Get buffered range after removing sourcebuffer.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         }
       ],
       "status": "TIMEOUT",
@@ -1553,49 +1597,32 @@
       "message": null
     },
     {
-      "test": "/media-source/mediasource-duration-buffered.html",
-      "subtests": [
-        {
-          "name": "MediaSource.duration: Truncating the duration succeeds when new duration is greater than the highest starting time of buffered coded frames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time of buffered coded frames",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function ()\r\n                {\r\n                    mediaSource.duration = newDuration;\r\n                }\" did not throw"
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time for at least some buffered coded frames",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function ()\r\n                    {\r\n                        mediaSource.duration = newDuration;\r\n                    }\" did not throw"
-        }
-      ],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
       "test": "/media-source/mediasource-duration.html",
       "subtests": [
         {
-          "name": "MediaSource.duration: setting the duration does not trigger any SourceBuffer update",
-          "status": "PASS",
-          "message": null
+          "name": "Test seek starts on duration truncation below currentTime",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
         },
         {
-          "name": "MediaSource.duration: Increasing the duration does not trigger any SourceBuffer update",
-          "status": "PASS",
-          "message": null
+          "name": "Test appendBuffer completes previous seek to truncated duration",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
         },
         {
-          "name": "MediaSource.duration: Increasing the duration during media playback does not trigger any SourceBuffer update",
-          "status": "PASS",
-          "message": null
+          "name": "Test endOfStream completes previous seek to truncated duration",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
         },
         {
-          "name": "MediaSource.duration: Setting the same duration multiple times does not fire duplicate durationchange events",
-          "status": "PASS",
-          "message": null
+          "name": "Test setting same duration multiple times does not fire duplicate durationchange",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Test setting the duration to less than the highest starting presentation timestamp will throw",
+          "status": "FAIL",
+          "message": "assert_throws: duration function \"function ()\n                  {\n                      mediaSource.duration = newDuration;\n                  }\" did not throw"
         }
       ],
       "status": "TIMEOUT",
@@ -1637,14 +1664,9 @@
           "message": "Test timed out"
         },
         {
-          "name": "MediaSource.endOfStream(): buffered data not modified when endOfStream is called",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute",
-          "status": "PASS",
-          "message": null
+          "name": "MediaSource.endOfStream(): duration and buffered range end time before and after endOfStream",
+          "status": "FAIL",
+          "message": "assert_equals: expected 6.042 but got 6.076"
         }
       ],
       "status": "TIMEOUT",
@@ -1680,8 +1702,8 @@
         },
         {
           "name": "Signaling 'decode' error via segment parser loop algorithm after initialization segment and partial media segment has been appended.",
-          "status": "FAIL",
-          "message": "assert_equals: Event types match. expected \"loadedmetadata\" but got \"error\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "TIMEOUT",
@@ -1692,8 +1714,8 @@
       "subtests": [
         {
           "name": "Test HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_approx_equals: creationTime roughly equals current time expected 874.369975308642 +/- 100 but got 723.6397037037037"
         },
         {
           "name": "Test the totalFrameDelay attribute of HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
@@ -1763,6 +1785,21 @@
           "message": null
         },
         {
+          "name": "Test invalid MSE MIME media type \"xxx\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MSE MIME media type \"text/html\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MSE MIME media type \"image/jpeg\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "Test invalid mismatch between major type and codec ID \"audio/webm;codecs=\"vp8\"\"",
           "status": "PASS",
           "message": null
@@ -1794,11 +1831,6 @@
         },
         {
           "name": "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vorbis\"\"",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Test invalid mismatch between minor type and codec ID \"video/webm;codecs=\"mp4a.40.2\"\"",
           "status": "PASS",
           "message": null
         },
@@ -1915,14 +1947,14 @@
           "message": "assert_throws: function \"function () { mediaSource.clearLiveSeekableRange(); }\" threw object \"TypeError: Object doesn't support property or method 'clearLiveSeekableRange'\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
         },
         {
-          "name": "setLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating",
+          "name": "setLiveSeekableRange does not restrict to not currently updating",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () { mediaSource.setLiveSeekableRange(0, 1); }\" threw object \"TypeError: Object doesn't support property or method 'setLiveSeekableRange'\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
+          "message": "Object doesn't support property or method 'setLiveSeekableRange'"
         },
         {
-          "name": "clearLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating",
+          "name": "clearLiveSeekableRange does not restrict to not currently updating",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () { mediaSource.clearLiveSeekableRange(); }\" threw object \"TypeError: Object doesn't support property or method 'clearLiveSeekableRange'\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
+          "message": "Object doesn't support property or method 'clearLiveSeekableRange'"
         },
         {
           "name": "setLiveSeekableRange throws a TypeError if start is negative",
@@ -2028,22 +2060,12 @@
           "message": null
         },
         {
-          "name": "error occurs with bogus blob URL (revoked MediaSource object URL) and element preload=none",
-          "status": "PASS",
-          "message": null
-        },
-        {
           "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=auto",
           "status": "PASS",
           "message": null
         },
         {
           "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=metadata",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=none",
           "status": "PASS",
           "message": null
         }
@@ -2057,52 +2079,52 @@
         {
           "name": "Test remove with an negative start.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(-1, 2);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(-1, 2);\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove with non-finite start.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\r\n                  {\r\n                      sourceBuffer.remove(item, 2);\r\n                  }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n                  {\n                      sourceBuffer.remove(item, 2);\n                  }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove with a start beyond the duration.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(11, 12);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(11, 12);\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove with a start larger than the end.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(2, 1);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(2, 1);\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove with a NEGATIVE_INFINITY end.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(0, Number.NEGATIVE_INFINITY);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, Number.NEGATIVE_INFINITY);\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove with a NaN end.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(0, Number.NaN);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, Number.NaN);\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove after SourceBuffer removed from mediaSource.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         },
         {
           "name": "Test remove with a NaN duration.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(0, 0);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, 0);\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Test remove while update pending.",
           "status": "FAIL",
-          "message": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(3, 4);\r\n              }\" did not throw"
+          "message": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(3, 4);\n              }\" did not throw"
         },
         {
           "name": "Test aborting a remove operation.",
           "status": "FAIL",
-          "message": "assert_equals: Event types match. expected \"abort\" but got \"updateend\""
+          "message": "assert_throws: abort function \"function ()\n              {\n                  sourceBuffer.abort();\n              }\" did not throw"
         },
         {
           "name": "Test remove with a start at the duration.",
@@ -2116,23 +2138,23 @@
         },
         {
           "name": "Test removing all appended data.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         },
         {
           "name": "Test removing beginning of appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [3.154, 6.042) }\" but got \"{ [3.019, 6.042) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         },
         {
           "name": "Test removing the middle of appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [0.000, 1.022) [3.154, 6.042) }\" but got \"{ [0.000, 0.998) [3.019, 6.042) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         },
         {
           "name": "Test removing the end of appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [0.000, 1.029) }\" but got \"{ [0.000, 0.998) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         }
       ],
       "status": "TIMEOUT",
@@ -2144,7 +2166,7 @@
         {
           "name": "Test addSourceBuffer(), removeSourceBuffer(), addSourceBuffer() sequence.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         },
         {
           "name": "Test removeSourceBuffer() with null",
@@ -2154,12 +2176,17 @@
         {
           "name": "Test calling removeSourceBuffer() twice with the same object.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
+        },
+        {
+          "name": "Test calling removeSourceBuffer() for a sourceBuffer belonging to a different mediaSource instance.",
+          "status": "FAIL",
+          "message": "Unexpected call to method or property access."
         },
         {
           "name": "Test calling removeSourceBuffer() in ended state.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         },
         {
           "name": "Test removesourcebuffer event on activeSourceBuffers.",
@@ -2169,7 +2196,7 @@
         {
           "name": "Test abort event when removeSourceBuffer() called while SourceBuffer is updating",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         }
       ],
       "status": "TIMEOUT",
@@ -2198,7 +2225,7 @@
         {
           "name": "Test seeking to a new location before transitioning beyond HAVE_METADATA.",
           "status": "FAIL",
-          "message": "assert_true: mediaElement is seeking expected true got false"
+          "message": "assert_true: mediaElement is still seeking expected true got false"
         },
         {
           "name": "Test seeking to a new location during a pending seek.",
@@ -2237,7 +2264,7 @@
         {
           "name": "Test sequence AppendMode appendBuffer(first media segment)",
           "status": "FAIL",
-          "message": "assert_less_than_equal: sourceBuffer.buffered range ends at or before expected upper bound before EOS expected a number less than or equal to 0.465 but got 0.511"
+          "message": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.033 but got 0"
         },
         {
           "name": "Test sequence AppendMode appendBuffer(second media segment)",
@@ -2247,7 +2274,7 @@
         {
           "name": "Test sequence AppendMode appendBuffer(second media segment, then first media segment)",
           "status": "FAIL",
-          "message": "assert_equals: expectedTimestampOffset expected NaN but got 0.253"
+          "message": "assert_equals: expectedTimestampOffset expected 0.348 but got 0.253"
         }
       ],
       "status": "TIMEOUT",
@@ -2257,12 +2284,12 @@
       "test": "/media-source/mediasource-sourcebuffer-mode-timestamps.html",
       "subtests": [
         {
-          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw a TypeError exception and abort these steps.",
           "status": "FAIL",
-          "message": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\r\n                              sourceBuffer.mode = \"segments\";\r\n                          }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"InvalidStateError\")"
+          "message": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\n                              sourceBuffer.mode = \"segments\";\n                          }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
         },
         {
-          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw a TypeError exception and abort these steps.",
           "status": "FAIL",
           "message": "assert_unreached: Browser doesn't support the MIME used in this test: audio/mpeg Reached unreachable code"
         }
@@ -2286,7 +2313,7 @@
         {
           "name": "Test setting a removed SourceBuffer's mode",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         },
         {
           "name": "Test setting SourceBuffer.mode while still updating",
@@ -2350,7 +2377,7 @@
         {
           "name": "Test SourceBufferList event dispatching.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         },
         {
           "name": "Test that only 1 removesourcebuffer event fires on each SourceBufferList when the MediaSource closes.",
@@ -2392,12 +2419,12 @@
         {
           "name": "Test setting SourceBuffer.timestampOffset to NaN.",
           "status": "FAIL",
-          "message": "assert_throws: setting timestampOffset to NaN throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: setting timestampOffset to NaN throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
         },
         {
           "name": "Test setting SourceBuffer.timestampOffset to undefined.",
           "status": "FAIL",
-          "message": "assert_throws: setting timestampOffset to undefined throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: setting timestampOffset to undefined throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
         },
         {
           "name": "Test setting SourceBuffer.timestampOffset to null.",
@@ -2437,7 +2464,7 @@
         {
           "name": "Test setting timestampoffset after removing the sourcebuffer.",
           "status": "FAIL",
-          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          "message": "Unexpected call to method or property access."
         }
       ],
       "status": "TIMEOUT",

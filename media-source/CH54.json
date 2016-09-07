@@ -123,22 +123,54 @@
           "message": null
         },
         {
-          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute.",
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, audio media appended first",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, video media appended first",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: video is first sourceBuffer, audio media appended first",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: video is first sourceBuffer, video media appended first",
           "status": "PASS",
           "message": null
         },
         {
           "name": "Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Active SourceBuffers list ignores changes to selected audio/video tracks that do not affect the activation of the SourceBuffer.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-addsourcebuffer-mode.html",
+      "subtests": [
+        {
+          "name": "addSourceBuffer() sets SourceBuffer.mode to 'segments' when the generate timestamps flag is false",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "addSourceBuffer() sets SourceBuffer.mode to 'sequence' when the generate timestamps flag is true",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"sequence\" but got \"segments\""
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -370,6 +402,18 @@
       "message": null
     },
     {
+      "test": "/media-source/mediasource-attach-stops-delaying-load-event.html",
+      "subtests": [
+        {
+          "name": "MediaSource attachment should immediately stop delaying the load event",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/media-source/mediasource-avtracks.html",
       "subtests": [
         {
@@ -379,8 +423,8 @@
         },
         {
           "name": "Media tracks must be removed when the SourceBuffer is removed from the MediaSource",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: videoTracks.length expected 0 but got 1"
         },
         {
           "name": "Media tracks must be removed when the HTMLMediaElement.src is changed",
@@ -401,13 +445,13 @@
       "subtests": [
         {
           "name": "Demuxed content with different lengths",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: mediaSource.activeSourceBuffers[1] expected \"{ [0.067, 2.067) }\" but got \"{ [0.000, 2.000) }\""
         },
         {
           "name": "Muxed content with different lengths",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.067, 2.043) }\" but got \"{ [0.000, 2.000) }\""
         },
         {
           "name": "Demuxed content with an empty buffered range on one SourceBuffer",
@@ -753,47 +797,30 @@
       "message": null
     },
     {
-      "test": "/media-source/mediasource-duration-buffered.html",
-      "subtests": [
-        {
-          "name": "MediaSource.duration: Truncating the duration succeeds when new duration is greater than the highest starting time of buffered coded frames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time of buffered coded frames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time for at least some buffered coded frames",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
       "test": "/media-source/mediasource-duration.html",
       "subtests": [
         {
-          "name": "MediaSource.duration: setting the duration does not trigger any SourceBuffer update",
+          "name": "Test seek starts on duration truncation below currentTime",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "MediaSource.duration: Increasing the duration does not trigger any SourceBuffer update",
+          "name": "Test appendBuffer completes previous seek to truncated duration",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "MediaSource.duration: Increasing the duration during media playback does not trigger any SourceBuffer update",
+          "name": "Test endOfStream completes previous seek to truncated duration",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "MediaSource.duration: Setting the same duration multiple times does not fire duplicate durationchange events",
+          "name": "Test setting same duration multiple times does not fire duplicate durationchange",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting the duration to less than the highest starting presentation timestamp will throw",
           "status": "PASS",
           "message": null
         }
@@ -837,14 +864,9 @@
           "message": null
         },
         {
-          "name": "MediaSource.endOfStream(): buffered data not modified when endOfStream is called",
+          "name": "MediaSource.endOfStream(): duration and buffered range end time before and after endOfStream",
           "status": "FAIL",
-          "message": "assert_equals: Ending the stream does not affect buffered data expected 6.037187 but got 6.0424"
-        },
-        {
-          "name": "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute",
-          "status": "PASS",
-          "message": null
+          "message": "assert_equals: expected 6.042 but got 6.076"
         }
       ],
       "status": "OK",
@@ -963,6 +985,21 @@
           "message": null
         },
         {
+          "name": "Test invalid MSE MIME media type \"xxx\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MSE MIME media type \"text/html\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MSE MIME media type \"image/jpeg\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "Test invalid mismatch between major type and codec ID \"audio/webm;codecs=\"vp8\"\"",
           "status": "PASS",
           "message": null
@@ -994,11 +1031,6 @@
         },
         {
           "name": "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vorbis\"\"",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Test invalid mismatch between minor type and codec ID \"video/webm;codecs=\"mp4a.40.2\"\"",
           "status": "PASS",
           "message": null
         },
@@ -1115,12 +1147,12 @@
           "message": null
         },
         {
-          "name": "setLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating",
+          "name": "setLiveSeekableRange does not restrict to not currently updating",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "clearLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating",
+          "name": "clearLiveSeekableRange does not restrict to not currently updating",
           "status": "PASS",
           "message": null
         },
@@ -1228,22 +1260,12 @@
           "message": null
         },
         {
-          "name": "error occurs with bogus blob URL (revoked MediaSource object URL) and element preload=none",
-          "status": "PASS",
-          "message": null
-        },
-        {
           "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=auto",
           "status": "PASS",
           "message": null
         },
         {
           "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=metadata",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=none",
           "status": "PASS",
           "message": null
         }
@@ -1301,8 +1323,8 @@
         },
         {
           "name": "Test aborting a remove operation.",
-          "status": "FAIL",
-          "message": "Failed to execute 'abort' on 'SourceBuffer': Aborting asynchronous remove() operation is disallowed."
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Test remove with a start at the duration.",
@@ -1317,22 +1339,22 @@
         {
           "name": "Test removing all appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Initial buffered range. expected \"{ [0.000, NaN) }\" but got \"{ [0.000, 6.042) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         },
         {
           "name": "Test removing beginning of appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Initial buffered range. expected \"{ [0.000, NaN) }\" but got \"{ [0.000, 6.042) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, NaN) }\" but got \"{ [0.000, 6.042) }\""
         },
         {
           "name": "Test removing the middle of appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Initial buffered range. expected \"{ [0.000, NaN) }\" but got \"{ [0.000, 6.042) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         },
         {
           "name": "Test removing the end of appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Initial buffered range. expected \"{ [0.000, NaN) }\" but got \"{ [0.000, 6.042) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         }
       ],
       "status": "OK",
@@ -1353,6 +1375,11 @@
         },
         {
           "name": "Test calling removeSourceBuffer() twice with the same object.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test calling removeSourceBuffer() for a sourceBuffer belonging to a different mediaSource instance.",
           "status": "PASS",
           "message": null
         },
@@ -1380,8 +1407,8 @@
       "subtests": [
         {
           "name": "Test seeking beyond updated media duration.",
-          "status": "FAIL",
-          "message": "Failed to set the 'duration' property on 'MediaSource': Setting duration below highest presentation timestamp of any buffered coded frames is disallowed. Instead, first do asynchronous remove(newDuration, oldDuration) on all sourceBuffers, where newDuration < oldDuration."
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Test seeking beyond media duration.",
@@ -1437,17 +1464,17 @@
         {
           "name": "Test sequence AppendMode appendBuffer(first media segment)",
           "status": "FAIL",
-          "message": "assert_equals: sourceBuffer.buffered after EOS expected \"{ [0.000, NaN) }\" but got \"{ [0.000, 0.511) }\""
+          "message": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.033 but got 0"
         },
         {
           "name": "Test sequence AppendMode appendBuffer(second media segment)",
           "status": "FAIL",
-          "message": "assert_equals: sourceBuffer.buffered after EOS expected \"{ [0.000, NaN) }\" but got \"{ [0.000, 0.348) }\""
+          "message": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.046 but got 0"
         },
         {
           "name": "Test sequence AppendMode appendBuffer(second media segment, then first media segment)",
           "status": "FAIL",
-          "message": "assert_equals: expectedTimestampOffset expected NaN but got 0.348"
+          "message": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.046 but got 0"
         }
       ],
       "status": "OK",
@@ -1457,12 +1484,12 @@
       "test": "/media-source/mediasource-sourcebuffer-mode-timestamps.html",
       "subtests": [
         {
-          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw a TypeError exception and abort these steps.",
           "status": "FAIL",
           "message": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\n                              sourceBuffer.mode = \"segments\";\n                          }\" did not throw"
         },
         {
-          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw a TypeError exception and abort these steps.",
           "status": "FAIL",
           "message": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\n                              sourceBuffer.mode = \"segments\";\n                          }\" did not throw"
         }
