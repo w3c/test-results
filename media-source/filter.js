@@ -11,5 +11,6 @@ exports.excludeCase = function (file, name) {
     if (/VideoPlaybackQuality/i.test(name)) return true;
     // removed from MSE 1
     if (/TrackDefault/i.test(name)) return true;
+    if (/appendStream/i.test(name)) return true;
     return false;
 };
