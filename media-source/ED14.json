@@ -924,8 +924,8 @@
         },
         {
           "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, audio media appended first",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: first active SourceBuffer matches first SourceBuffer expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
         },
         {
           "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, video media appended first",
@@ -1246,7 +1246,7 @@
         {
           "name": "Demuxed content with different lengths",
           "status": "FAIL",
-          "message": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.000, 2.043) }\" but got \"{ [0.000, 2.000) }\""
+          "message": "assert_equals: mediaSource.activeSourceBuffers[1] expected \"{ [0.067, 2.067) }\" but got \"{ [0.000, 2.000) }\""
         },
         {
           "name": "Muxed content with different lengths",
