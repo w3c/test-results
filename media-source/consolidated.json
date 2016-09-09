@@ -13,6 +13,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -25,6 +26,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_unreached: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" Reached unreachable code",
+            "SA09": "assert_unreached: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" Reached unreachable code"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -36,6 +41,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code",
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "FAIL": 2,
@@ -51,6 +60,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -61,6 +71,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_unreached: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" Reached unreachable code",
+            "SA09": "assert_unreached: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" Reached unreachable code"
           },
           "totals": {
             "PASS": 2,
@@ -73,6 +87,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code",
+            "ED14": "InvalidStateError"
           },
           "totals": {
             "FAIL": 2,
@@ -88,6 +106,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -100,6 +119,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" expected true got false",
+            "SA09": "assert_true: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" expected true got false"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -111,6 +134,9 @@
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_true: Browser doesn't support the MIME used in this test: video/mp4 expected true got false"
           },
           "totals": {
             "FAIL": 1,
@@ -126,6 +152,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -136,6 +163,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: function \"function () {\r\n        window.URL.createObjectURL(null);\r\n    }\" threw object \"Error: Cette interface n’est pas prise en charge\r\n\" (\"Error\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: function \"function () {\n        window.URL.createObjectURL(null);\n    }\" did not throw"
           },
           "totals": {
             "PASS": 2,
@@ -149,11 +180,12 @@
         "CH55": "OK",
         "ED14": "TIMEOUT",
         "FF51": "OK",
-        "SA09": "TIMEOUT"
+        "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 2,
-        "TIMEOUT": 2
+        "OK": 3,
+        "TIMEOUT": 1
       },
       "subtests": {
         "Check revoking behavior of URL.revokeObjectURL(url).": {
@@ -161,11 +193,11 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "TIMEOUT"
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3,
-            "TIMEOUT": 1
+            "PASS": 4
           }
         },
         "Check referenced MediaSource can open after URL.revokeObjectURL(url).": {
@@ -173,12 +205,15 @@
             "CH55": "FAIL",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "TIMEOUT"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "CH55": "assert_unreached: Unexpected error. Reached unreachable code",
+            "SA09": "assert_unreached: Unexpected error. Reached unreachable code"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 2,
-            "TIMEOUT": 1
+            "FAIL": 2,
+            "PASS": 2
           }
         },
         "Check auto-revoking behavior with URL.createObjectURL(MediaSource).": {
@@ -187,6 +222,11 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "CH55": "assert_unreached: url should not reference MediaSource. Reached unreachable code",
+            "ED14": "assert_unreached: url should not reference MediaSource. Reached unreachable code",
+            "SA09": "assert_unreached: url should not reference MediaSource. Reached unreachable code"
           },
           "totals": {
             "FAIL": 3,
@@ -202,6 +242,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -213,6 +254,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -226,9 +268,10 @@
         "FF51": "OK",
         "SA09": "TIMEOUT"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 2,
-        "TIMEOUT": 2
+        "TIMEOUT": 3
       },
       "subtests": {
         "URL interface: operation createObjectURL(MediaSource)": {
@@ -238,9 +281,12 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: property has wrong .length expected 1 but got 0"
+          },
           "totals": {
             "PASS": 3,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "AudioTrack interface: attribute sourceBuffer": {
@@ -248,11 +294,14 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "FAIL",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "FF51": "assert_own_property: self does not have own property \"AudioTrack\" expected property \"AudioTrack\" missing"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         },
         "VideoTrack interface: attribute sourceBuffer": {
@@ -260,11 +309,14 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "FAIL",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "FF51": "assert_own_property: self does not have own property \"VideoTrack\" expected property \"VideoTrack\" missing"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         },
         "TextTrack interface: attribute sourceBuffer": {
@@ -272,10 +324,16 @@
             "CH55": "FAIL",
             "ED14": "FAIL",
             "FF51": "FAIL",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_true: The prototype object must have a property \"sourceBuffer\" expected true got false",
+            "ED14": "assert_true: The prototype object must have a property \"sourceBuffer\" expected true got false",
+            "FF51": "assert_true: The prototype object must have a property \"sourceBuffer\" expected true got false"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 4,
+            "PASS": 1
           }
         },
         "MediaSource interface: existence and properties of interface object": {
@@ -283,10 +341,13 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: prototype of MediaSource is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"\nfunction() {\n    [native code]\n}\n\""
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -295,10 +356,13 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_own_property: expected property \"length\" missing"
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -307,11 +371,11 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
+            "PASS": 5
           }
         },
         "MediaSource interface: existence and properties of interface prototype object": {
@@ -319,11 +383,14 @@
             "CH55": "FAIL",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: class string of MediaSource.prototype expected \"[object MediaSourcePrototype]\" but got \"[object MediaSource]\""
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "FAIL": 1,
+            "PASS": 4
           }
         },
         "MediaSource interface: existence and properties of interface prototype object's \"constructor\" property": {
@@ -331,11 +398,11 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
+            "PASS": 5
           }
         },
         "MediaSource interface: attribute sourceBuffers": {
@@ -343,11 +410,11 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
+            "PASS": 5
           }
         },
         "MediaSource interface: attribute activeSourceBuffers": {
@@ -355,11 +422,11 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
+            "PASS": 5
           }
         },
         "MediaSource interface: attribute readyState": {
@@ -367,11 +434,11 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
+            "PASS": 5
           }
         },
         "MediaSource interface: attribute duration": {
@@ -379,10 +446,13 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: setter length must be 1 expected 1 but got 0"
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -393,9 +463,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onsourceopen\" expected true got false",
+            "SA09": "assert_true: The prototype object must have a property \"onsourceopen\" expected true got false"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "MediaSource interface: attribute onsourceended": {
@@ -405,9 +479,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onsourceended\" expected true got false",
+            "SA09": "assert_true: The prototype object must have a property \"onsourceended\" expected true got false"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "MediaSource interface: attribute onsourceclose": {
@@ -417,9 +495,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onsourceclose\" expected true got false",
+            "FF51": "assert_true: The prototype object must have a property \"onsourceclose\" expected true got false",
+            "SA09": "assert_true: The prototype object must have a property \"onsourceclose\" expected true got false"
+          },
           "totals": {
             "PASS": 1,
-            "FAIL": 3
+            "FAIL": 4
           }
         },
         "MediaSource interface: operation addSourceBuffer(DOMString)": {
@@ -429,9 +512,12 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: property has wrong .length expected 1 but got 0"
+          },
           "totals": {
             "PASS": 3,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "MediaSource interface: operation removeSourceBuffer(SourceBuffer)": {
@@ -441,9 +527,12 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: property has wrong .length expected 1 but got 0"
+          },
           "totals": {
             "PASS": 3,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "MediaSource interface: operation endOfStream(EndOfStreamError)": {
@@ -453,8 +542,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: operation setLiveSeekableRange(double,double)": {
@@ -464,9 +554,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_own_property: interface prototype object missing non-static operation expected property \"setLiveSeekableRange\" missing",
+            "SA09": "assert_own_property: interface prototype object missing non-static operation expected property \"setLiveSeekableRange\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "MediaSource interface: operation clearLiveSeekableRange()": {
@@ -476,9 +570,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_own_property: interface prototype object missing non-static operation expected property \"clearLiveSeekableRange\" missing",
+            "SA09": "assert_own_property: interface prototype object missing non-static operation expected property \"clearLiveSeekableRange\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "MediaSource interface: operation isTypeSupported(DOMString)": {
@@ -488,9 +586,12 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: property has wrong .length expected 1 but got 0"
+          },
           "totals": {
             "PASS": 3,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "MediaSource must be primary interface of mediaSource": {
@@ -500,8 +601,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "Stringification of mediaSource": {
@@ -511,8 +613,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"sourceBuffers\" with the proper type (0)": {
@@ -522,8 +625,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"activeSourceBuffers\" with the proper type (1)": {
@@ -533,8 +637,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"readyState\" with the proper type (2)": {
@@ -544,8 +649,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"duration\" with the proper type (3)": {
@@ -555,8 +661,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"onsourceopen\" with the proper type (4)": {
@@ -566,8 +673,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onsourceopen\" not found in prototype chain",
+            "FF51": "Unrecognized type EventHandler",
+            "SA09": "assert_inherits: property \"onsourceopen\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"onsourceended\" with the proper type (5)": {
@@ -577,8 +690,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onsourceended\" not found in prototype chain",
+            "FF51": "Unrecognized type EventHandler",
+            "SA09": "assert_inherits: property \"onsourceended\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"onsourceclose\" with the proper type (6)": {
@@ -588,8 +707,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onsourceclose\" not found in prototype chain",
+            "FF51": "assert_inherits: property \"onsourceclose\" not found in prototype chain",
+            "SA09": "assert_inherits: property \"onsourceclose\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"addSourceBuffer\" with the proper type (7)": {
@@ -599,8 +724,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: calling addSourceBuffer(DOMString) on mediaSource with too few arguments must throw TypeError": {
@@ -610,8 +736,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"removeSourceBuffer\" with the proper type (8)": {
@@ -621,8 +748,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: calling removeSourceBuffer(SourceBuffer) on mediaSource with too few arguments must throw TypeError": {
@@ -632,8 +760,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"endOfStream\" with the proper type (9)": {
@@ -643,8 +772,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: calling endOfStream(EndOfStreamError) on mediaSource with too few arguments must throw TypeError": {
@@ -654,8 +784,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: mediaSource must inherit property \"setLiveSeekableRange\" with the proper type (10)": {
@@ -665,9 +796,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_inherits: property \"setLiveSeekableRange\" not found in prototype chain",
+            "SA09": "assert_inherits: property \"setLiveSeekableRange\" not found in prototype chain"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "MediaSource interface: calling setLiveSeekableRange(double,double) on mediaSource with too few arguments must throw TypeError": {
@@ -677,9 +812,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_inherits: property \"setLiveSeekableRange\" not found in prototype chain",
+            "SA09": "assert_inherits: property \"setLiveSeekableRange\" not found in prototype chain"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "MediaSource interface: mediaSource must inherit property \"clearLiveSeekableRange\" with the proper type (11)": {
@@ -689,9 +828,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_inherits: property \"clearLiveSeekableRange\" not found in prototype chain",
+            "SA09": "assert_inherits: property \"clearLiveSeekableRange\" not found in prototype chain"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "MediaSource interface: mediaSource must inherit property \"isTypeSupported\" with the proper type (12)": {
@@ -701,8 +844,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "MediaSource interface: calling isTypeSupported(DOMString) on mediaSource with too few arguments must throw TypeError": {
@@ -712,8 +856,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: mediaSource must inherit property \"addEventListener\" with the proper type (0)": {
@@ -723,8 +868,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on mediaSource with too few arguments must throw TypeError": {
@@ -732,10 +878,13 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -746,8 +895,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on mediaSource with too few arguments must throw TypeError": {
@@ -755,10 +905,13 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -769,8 +922,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: calling dispatchEvent(Event) on mediaSource with too few arguments must throw TypeError": {
@@ -780,8 +934,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBuffer interface: existence and properties of interface object": {
@@ -791,9 +946,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: prototype of SourceBuffer is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"\nfunction() {\n    [native code]\n}\n\"",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface object length": {
@@ -803,9 +962,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_own_property: expected property \"length\" missing",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface object name": {
@@ -815,8 +978,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -827,9 +993,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "assert_equals: class string of SourceBuffer.prototype expected \"[object SourceBufferPrototype]\" but got \"[object SourceBuffer]\"",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "FAIL": 2,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "SourceBuffer interface: existence and properties of interface prototype object's \"constructor\" property": {
@@ -839,8 +1009,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -851,9 +1024,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: setter length must be 1 expected 1 but got 0",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface: attribute updating": {
@@ -863,8 +1040,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -875,8 +1055,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -887,9 +1070,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: setter length must be 1 expected 1 but got 0",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface: attribute audioTracks": {
@@ -899,8 +1086,12 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "FF51": "assert_true: The prototype object must have a property \"audioTracks\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -911,8 +1102,12 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "FF51": "assert_true: The prototype object must have a property \"videoTracks\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -923,8 +1118,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "assert_true: The prototype object must have a property \"textTracks\" expected true got false",
+            "ED14": "assert_true: The prototype object must have a property \"textTracks\" expected true got false",
+            "FF51": "assert_true: The prototype object must have a property \"textTracks\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "SourceBuffer interface: attribute appendWindowStart": {
@@ -934,9 +1135,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: setter length must be 1 expected 1 but got 0",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface: attribute appendWindowEnd": {
@@ -946,9 +1151,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: setter length must be 1 expected 1 but got 0",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface: attribute onupdatestart": {
@@ -958,9 +1167,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onupdatestart\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface: attribute onupdate": {
@@ -970,9 +1183,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onupdate\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface: attribute onupdateend": {
@@ -982,9 +1199,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onupdateend\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface: attribute onerror": {
@@ -994,9 +1215,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onerror\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface: attribute onabort": {
@@ -1006,33 +1231,29 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onabort\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
-        "SourceBuffer interface: operation appendBuffer(ArrayBuffer)": {
+        "SourceBuffer interface: operation appendBuffer(BufferSource)": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
-          "totals": {
-            "PASS": 2,
-            "FAIL": 2
-          }
-        },
-        "SourceBuffer interface: operation appendBuffer(ArrayBufferView)": {
-          "byUA": {
-            "CH55": "PASS",
-            "ED14": "FAIL",
-            "FF51": "PASS",
-            "SA09": "FAIL"
+          "UAmessage": {
+            "ED14": "assert_equals: property has wrong .length expected 1 but got 0",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer interface: operation abort()": {
@@ -1042,8 +1263,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -1054,9 +1278,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: property has wrong .length expected 2 but got 0",
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBuffer must be primary interface of sourceBuffer": {
@@ -1066,8 +1294,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBuffer\" expected property \"SourceBuffer\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -1078,8 +1309,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"mode\" with the proper type (0)": {
@@ -1089,8 +1321,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"updating\" with the proper type (1)": {
@@ -1100,8 +1333,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"buffered\" with the proper type (2)": {
@@ -1111,8 +1345,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"timestampOffset\" with the proper type (3)": {
@@ -1122,8 +1357,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"audioTracks\" with the proper type (4)": {
@@ -1133,8 +1369,11 @@
             "FF51": "FAIL",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "FF51": "assert_inherits: property \"audioTracks\" not found in prototype chain"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -1145,8 +1384,11 @@
             "FF51": "FAIL",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "FF51": "assert_inherits: property \"videoTracks\" not found in prototype chain"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -1157,8 +1399,13 @@
             "FF51": "FAIL",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "CH55": "assert_inherits: property \"textTracks\" not found in prototype chain",
+            "ED14": "assert_inherits: property \"textTracks\" not found in prototype chain",
+            "FF51": "assert_inherits: property \"textTracks\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 3,
+            "FAIL": 4,
             "PASS": 1
           }
         },
@@ -1169,8 +1416,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"appendWindowEnd\" with the proper type (8)": {
@@ -1180,8 +1428,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"onupdatestart\" with the proper type (9)": {
@@ -1191,8 +1440,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onupdatestart\" not found in prototype chain",
+            "FF51": "Unrecognized type EventHandler",
+            "SA09": "assert_inherits: property \"onupdatestart\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"onupdate\" with the proper type (10)": {
@@ -1202,8 +1457,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onupdate\" not found in prototype chain",
+            "FF51": "Unrecognized type EventHandler",
+            "SA09": "assert_inherits: property \"onupdate\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"onupdateend\" with the proper type (11)": {
@@ -1213,8 +1474,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onupdateend\" not found in prototype chain",
+            "FF51": "Unrecognized type EventHandler",
+            "SA09": "assert_inherits: property \"onupdateend\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"onerror\" with the proper type (12)": {
@@ -1224,8 +1491,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onerror\" not found in prototype chain",
+            "FF51": "Unrecognized type EventHandler",
+            "SA09": "assert_inherits: property \"onerror\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"onabort\" with the proper type (13)": {
@@ -1235,8 +1508,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onabort\" not found in prototype chain",
+            "FF51": "Unrecognized type EventHandler",
+            "SA09": "assert_inherits: property \"onabort\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "SourceBuffer interface: sourceBuffer must inherit property \"appendBuffer\" with the proper type (14)": {
@@ -1246,63 +1525,45 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
-        "SourceBuffer interface: calling appendBuffer(ArrayBuffer) on sourceBuffer with too few arguments must throw TypeError": {
+        "SourceBuffer interface: calling appendBuffer(BufferSource) on sourceBuffer with too few arguments must throw TypeError": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
-        "SourceBuffer interface: sourceBuffer must inherit property \"appendBuffer\" with the proper type (15)": {
+        "SourceBuffer interface: sourceBuffer must inherit property \"abort\" with the proper type (15)": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
-        "SourceBuffer interface: calling appendBuffer(ArrayBufferView) on sourceBuffer with too few arguments must throw TypeError": {
+        "SourceBuffer interface: sourceBuffer must inherit property \"remove\" with the proper type (16)": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
-          }
-        },
-        "SourceBuffer interface: sourceBuffer must inherit property \"abort\" with the proper type (17)": {
-          "byUA": {
-            "CH55": "PASS",
-            "ED14": "PASS",
-            "FF51": "PASS",
-            "SA09": "PASS"
-          },
-          "totals": {
-            "PASS": 4
-          }
-        },
-        "SourceBuffer interface: sourceBuffer must inherit property \"remove\" with the proper type (18)": {
-          "byUA": {
-            "CH55": "PASS",
-            "ED14": "PASS",
-            "FF51": "PASS",
-            "SA09": "PASS"
-          },
-          "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBuffer interface: calling remove(double,unrestricted double) on sourceBuffer with too few arguments must throw TypeError": {
@@ -1312,8 +1573,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: sourceBuffer must inherit property \"addEventListener\" with the proper type (0)": {
@@ -1323,8 +1585,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on sourceBuffer with too few arguments must throw TypeError": {
@@ -1332,10 +1595,13 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -1346,8 +1612,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on sourceBuffer with too few arguments must throw TypeError": {
@@ -1355,10 +1622,13 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -1369,8 +1639,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: calling dispatchEvent(Event) on sourceBuffer with too few arguments must throw TypeError": {
@@ -1380,8 +1651,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBufferList interface: existence and properties of interface object": {
@@ -1391,9 +1663,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: prototype of SourceBufferList is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"\nfunction() {\n    [native code]\n}\n\"",
+            "SA09": "assert_own_property: self does not have own property \"SourceBufferList\" expected property \"SourceBufferList\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBufferList interface object length": {
@@ -1403,9 +1679,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_own_property: expected property \"length\" missing",
+            "SA09": "assert_own_property: self does not have own property \"SourceBufferList\" expected property \"SourceBufferList\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBufferList interface object name": {
@@ -1415,8 +1695,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBufferList\" expected property \"SourceBufferList\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -1427,9 +1710,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "assert_equals: class string of SourceBufferList.prototype expected \"[object SourceBufferListPrototype]\" but got \"[object SourceBufferList]\"",
+            "SA09": "assert_own_property: self does not have own property \"SourceBufferList\" expected property \"SourceBufferList\" missing"
+          },
           "totals": {
             "FAIL": 2,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "SourceBufferList interface: existence and properties of interface prototype object's \"constructor\" property": {
@@ -1439,8 +1726,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBufferList\" expected property \"SourceBufferList\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -1451,8 +1741,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBufferList\" expected property \"SourceBufferList\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -1463,9 +1756,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onaddsourcebuffer\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBufferList\" expected property \"SourceBufferList\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBufferList interface: attribute onremovesourcebuffer": {
@@ -1475,9 +1772,13 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: The prototype object must have a property \"onremovesourcebuffer\" expected true got false",
+            "SA09": "assert_own_property: self does not have own property \"SourceBufferList\" expected property \"SourceBufferList\" missing"
+          },
           "totals": {
             "PASS": 2,
-            "FAIL": 2
+            "FAIL": 3
           }
         },
         "SourceBufferList must be primary interface of mediaSource.sourceBuffers": {
@@ -1487,8 +1788,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_own_property: self does not have own property \"SourceBufferList\" expected property \"SourceBufferList\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 1
           }
         },
@@ -1499,8 +1803,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"length\" with the proper type (0)": {
@@ -1508,11 +1813,11 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
+            "PASS": 5
           }
         },
         "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"onaddsourcebuffer\" with the proper type (1)": {
@@ -1522,8 +1827,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onaddsourcebuffer\" not found in prototype chain",
+            "FF51": "Unrecognized type EventHandler",
+            "SA09": "assert_inherits: property \"onaddsourcebuffer\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"onremovesourcebuffer\" with the proper type (2)": {
@@ -1533,8 +1844,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "Unrecognized type EventHandler",
+            "ED14": "assert_inherits: property \"onremovesourcebuffer\" not found in prototype chain",
+            "FF51": "Unrecognized type EventHandler",
+            "SA09": "assert_inherits: property \"onremovesourcebuffer\" not found in prototype chain"
+          },
           "totals": {
-            "FAIL": 4
+            "FAIL": 5
           }
         },
         "EventTarget interface: mediaSource.sourceBuffers must inherit property \"addEventListener\" with the proper type (0)": {
@@ -1544,8 +1861,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on mediaSource.sourceBuffers with too few arguments must throw TypeError": {
@@ -1553,10 +1871,13 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -1567,8 +1888,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on mediaSource.sourceBuffers with too few arguments must throw TypeError": {
@@ -1576,10 +1898,13 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 2
           }
         },
@@ -1590,8 +1915,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         },
         "EventTarget interface: calling dispatchEvent(Event) on mediaSource.sourceBuffers with too few arguments must throw TypeError": {
@@ -1601,8 +1927,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4
+            "PASS": 5
           }
         }
       }
@@ -1614,6 +1941,7 @@
         "FF51": "OK",
         "SA09": "TIMEOUT"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 2,
         "TIMEOUT": 2
@@ -1626,6 +1954,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1637,6 +1966,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1645,10 +1975,14 @@
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: first active SourceBuffer matches first SourceBuffer expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 1
           }
         },
@@ -1656,10 +1990,14 @@
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: first active SourceBuffer matches first SourceBuffer expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 1
           }
         },
@@ -1667,20 +2005,24 @@
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 4
           }
         },
         "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: video is first sourceBuffer, video media appended first": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 4
           }
         },
         "Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.": {
@@ -1689,6 +2031,10 @@
             "ED14": "PASS",
             "FF51": "FAIL",
             "SA09": "TIMEOUT"
+          },
+          "UAmessage": {
+            "FF51": "object is undefined",
+            "SA09": "Test timed out"
           },
           "totals": {
             "PASS": 2,
@@ -1703,18 +2049,14 @@
             "FF51": "FAIL",
             "SA09": "TIMEOUT"
           },
+          "UAmessage": {
+            "FF51": "object is undefined",
+            "SA09": "Test timed out"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 1,
             "TIMEOUT": 1
-          }
-        },
-        "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute.": {
-          "byUA": {
-            "SA09": "PASS"
-          },
-          "totals": {
-            "PASS": 1
           }
         }
       }
@@ -1723,10 +2065,12 @@
       "byUA": {
         "CH55": "OK",
         "ED14": "TIMEOUT",
-        "FF51": "OK"
+        "FF51": "OK",
+        "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 2,
+        "OK": 3,
         "TIMEOUT": 1
       },
       "subtests": {
@@ -1734,21 +2078,28 @@
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 4
           }
         },
         "addSourceBuffer() sets SourceBuffer.mode to 'sequence' when the generate timestamps flag is true": {
           "byUA": {
             "CH55": "FAIL",
             "ED14": "PASS",
-            "FF51": "FAIL"
+            "FF51": "FAIL",
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: expected \"sequence\" but got \"segments\"",
+            "FF51": "assert_unreached: Browser does not support the audio/aac and audio/mpeg MIME types used in this test Reached unreachable code"
           },
           "totals": {
             "FAIL": 2,
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
@@ -1760,6 +2111,7 @@
         "FF51": "OK",
         "SA09": "TIMEOUT"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 2,
         "TIMEOUT": 2
@@ -1772,20 +2124,24 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
         },
         "Test addSourceBuffer() with empty type": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: addSourceBuffer() threw an exception when passed an empty string. function \"function () { mediaSource.addSourceBuffer(\"\"); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "Test addSourceBuffer() with null": {
@@ -1793,11 +2149,15 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "PASS"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: addSourceBuffer() threw an exception when passed null. function \"function () { mediaSource.addSourceBuffer(null); }\" threw object \"InvalidAccessError\" that is not a DOMException NotSupportedError: property \"code\" is equal to 15, expected 9",
+            "SA09": "assert_throws: addSourceBuffer() threw an exception when passed null. function \"function () { mediaSource.addSourceBuffer(null); }\" threw object \"TypeError: Type error\" that is not a DOMException NotSupportedError: property \"code\" is equal to undefined, expected 9"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Test addSourceBuffer() with unsupported type": {
@@ -1807,6 +2167,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1817,6 +2178,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported expected true got false",
+            "SA09": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -1830,6 +2195,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: video/webm;codecs=\"vp8\" is supported expected true got false",
+            "SA09": "assert_true: video/webm;codecs=\"vp8\" is supported expected true got false"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -1842,6 +2211,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1853,6 +2223,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1864,6 +2235,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1875,6 +2247,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1885,6 +2258,9 @@
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_true: Reached SourceBuffer limit. expected true got false"
           },
           "totals": {
             "PASS": 3,
@@ -1900,6 +2276,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -1912,6 +2289,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1923,6 +2301,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1934,6 +2313,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1945,6 +2325,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1956,6 +2337,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1966,6 +2348,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -1979,6 +2364,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -1990,6 +2376,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2001,6 +2388,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2012,6 +2400,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2023,6 +2412,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2034,6 +2424,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2045,6 +2436,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2055,6 +2447,10 @@
             "ED14": "TIMEOUT",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "SA09": "assert_equals: expected 6.0756 but got 0"
           },
           "totals": {
             "PASS": 2,
@@ -2069,6 +2465,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "SA09": "assert_equals: expected 6.0756 but got 0"
+          },
           "totals": {
             "PASS": 2,
             "TIMEOUT": 1,
@@ -2082,6 +2482,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "Test timed out"
+          },
           "totals": {
             "PASS": 3,
             "TIMEOUT": 1
@@ -2093,6 +2496,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -2106,6 +2512,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2115,10 +2522,14 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "PASS"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "The object is in an invalid state."
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "Test appending null.": {
@@ -2127,6 +2538,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: appendBuffer(null) throws an exception. function \"function () { sourceBuffer.appendBuffer(null); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
           },
           "totals": {
             "PASS": 3,
@@ -2139,6 +2553,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -2154,22 +2571,26 @@
         "FF51": "OK",
         "SA09": "TIMEOUT"
       },
+      "UAmessage": {
+        "SA09": ""
+      },
       "totals": {
-        "OK": 3,
-        "TIMEOUT": 1
+        "OK": 6,
+        "TIMEOUT": 2
       },
       "subtests": {
         "Appending data repeatedly should fill up the buffer and throw a QuotaExceededError when buffer is full.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "PASS",
-            "FF51": "FAIL",
-            "SA09": "TIMEOUT"
+            "FF51": "FAIL"
+          },
+          "UAmessage": {
+            "FF51": "assert_false: unexpected gap in buffered ranges. expected false got true"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1,
-            "TIMEOUT": 1
+            "PASS": 4,
+            "FAIL": 2
           }
         }
       }
@@ -2181,6 +2602,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -2193,20 +2615,25 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
         },
         "Test set wrong values to appendWindowStart and appendWindowEnd.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: set appendWindowStart throws an exception for Number.NEGATIVE_INFINITY. function \"function () { sourceBuffer.appendWindowStart = Number.NEGATIVE_INFINITY; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: set appendWindowStart throws an exception for Number.NEGATIVE_INFINITY. function \"function () { sourceBuffer.appendWindowStart = Number.NEGATIVE_INFINITY; }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Test set correct values to appendWindowStart and appendWindowEnd.": {
@@ -2216,6 +2643,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2226,6 +2654,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -2239,6 +2670,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2250,6 +2682,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2261,6 +2694,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2271,10 +2705,12 @@
       "byUA": {
         "CH55": "OK",
         "ED14": "TIMEOUT",
-        "FF51": "OK"
+        "FF51": "OK",
+        "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 2,
+        "OK": 3,
         "TIMEOUT": 1
       },
       "subtests": {
@@ -2282,11 +2718,17 @@
           "byUA": {
             "CH55": "PASS",
             "ED14": "TIMEOUT",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "SA09": "assert_unreached: unexpected 'stalled' event Reached unreachable code"
           },
           "totals": {
             "PASS": 2,
-            "TIMEOUT": 1
+            "TIMEOUT": 1,
+            "FAIL": 1
           }
         }
       }
@@ -2298,6 +2740,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -2309,6 +2752,11 @@
             "ED14": "FAIL",
             "FF51": "FAIL",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: videoTrack.label expected \"\" but got \"Apple Video Media Handler\"",
+            "ED14": "assert_equals: videoTrack.kind expected \"main\" but got \"\"",
+            "FF51": "object is undefined"
           },
           "totals": {
             "FAIL": 3,
@@ -2322,6 +2770,10 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "FF51": "sourceBuffer.audioTracks is undefined",
+            "SA09": "null is not an object (evaluating 'sourceBuffer.videoTracks.length')"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -2334,6 +2786,11 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_unreached: Unexpected event 'error' Reached unreachable code",
+            "FF51": "sourceBuffer.audioTracks is undefined",
+            "SA09": "assert_unreached: Unexpected event 'error' Reached unreachable code"
+          },
           "totals": {
             "PASS": 1,
             "FAIL": 3
@@ -2345,6 +2802,11 @@
             "ED14": "FAIL",
             "FF51": "FAIL",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_unreached: Unexpected event 'error' Reached unreachable code",
+            "FF51": "sourceBuffer.audioTracks is undefined",
+            "SA09": "assert_unreached: Unexpected event 'error' Reached unreachable code"
           },
           "totals": {
             "PASS": 1,
@@ -2360,6 +2822,7 @@
         "FF51": "OK",
         "SA09": "TIMEOUT"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 2,
         "TIMEOUT": 2
@@ -2371,6 +2834,11 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: mediaSource.activeSourceBuffers[1] expected \"{ [0.067, 2.067) }\" but got \"{ [0.000, 2.000) }\"",
+            "ED14": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.000, 2.043) }\" but got \"{ [0.000, 2.000) }\"",
+            "SA09": "assert_equals: mediaSource.activeSourceBuffers[1] expected \"{ [0.067, 2.067) }\" but got \"{ [0.000, 2.067) }\""
           },
           "totals": {
             "FAIL": 3,
@@ -2384,6 +2852,11 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.067, 2.043) }\" but got \"{ [0.000, 2.000) }\"",
+            "ED14": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.067, 2.043) }\" but got \"{ [0.000, 2.043) }\"",
+            "SA09": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.067, 2.043) }\" but got \"{ [0.000, 2.067) }\""
+          },
           "totals": {
             "FAIL": 3,
             "PASS": 1
@@ -2395,6 +2868,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.000, 2.043) }\" but got \"{ }\""
           },
           "totals": {
             "PASS": 3,
@@ -2408,6 +2884,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2419,6 +2896,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2430,6 +2908,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2440,6 +2919,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -2455,6 +2937,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -2466,6 +2949,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2477,6 +2961,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2488,6 +2973,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2499,6 +2985,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2510,6 +2997,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2521,6 +3009,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2532,6 +3021,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2543,6 +3033,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2554,6 +3045,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2565,6 +3057,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2578,6 +3071,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -2589,6 +3083,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2602,6 +3097,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -2611,10 +3107,14 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "PASS"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_false: updating expected false got true"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3,
+            "FAIL": 1
           }
         }
       }
@@ -2626,6 +3126,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -2636,6 +3137,9 @@
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_false: updating expected false got true"
           },
           "totals": {
             "PASS": 3,
@@ -2651,6 +3155,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -2660,10 +3165,14 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "PASS"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_false: updating expected false got true"
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3,
+            "FAIL": 1
           }
         }
       }
@@ -2673,11 +3182,11 @@
         "CH55": "OK",
         "ED14": "OK",
         "FF51": "OK",
-        "SA09": "TIMEOUT"
+        "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 3,
-        "TIMEOUT": 1
+        "OK": 4
       },
       "subtests": {
         "Tests mp4 video-only bitrate changes.": {
@@ -2685,11 +3194,14 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "TIMEOUT"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_false: updating expected false got true"
           },
           "totals": {
             "PASS": 3,
-            "TIMEOUT": 1
+            "FAIL": 1
           }
         }
       }
@@ -2699,11 +3211,11 @@
         "CH55": "OK",
         "ED14": "OK",
         "FF51": "OK",
-        "SA09": "TIMEOUT"
+        "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 3,
-        "TIMEOUT": 1
+        "OK": 4
       },
       "subtests": {
         "Tests mp4 video-only frame rate changes.": {
@@ -2711,11 +3223,14 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "TIMEOUT"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_false: updating expected false got true"
           },
           "totals": {
             "PASS": 3,
-            "TIMEOUT": 1
+            "FAIL": 1
           }
         }
       }
@@ -2725,11 +3240,11 @@
         "CH55": "OK",
         "ED14": "OK",
         "FF51": "OK",
-        "SA09": "TIMEOUT"
+        "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 3,
-        "TIMEOUT": 1
+        "OK": 4
       },
       "subtests": {
         "Tests mp4 video-only frame size changes.": {
@@ -2737,11 +3252,14 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "TIMEOUT"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_false: updating expected false got true"
           },
           "totals": {
             "PASS": 3,
-            "TIMEOUT": 1
+            "FAIL": 1
           }
         }
       }
@@ -2753,6 +3271,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -2764,6 +3283,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_true: audio/webm;codecs=\"vorbis\" is supported. expected true got false",
+            "SA09": "assert_true: audio/webm;codecs=\"vorbis\" is supported. expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -2779,6 +3302,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -2790,6 +3314,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported. expected true got false",
+            "SA09": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported. expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -2805,6 +3333,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -2816,6 +3345,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported. expected true got false",
+            "SA09": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported. expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -2831,6 +3364,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -2842,6 +3376,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported. expected true got false",
+            "SA09": "assert_true: video/webm;codecs=\"vp8,vorbis\" is supported. expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -2857,6 +3395,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -2868,6 +3407,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_true: video/webm;codecs=\"vp8\" is supported. expected true got false",
+            "SA09": "assert_true: video/webm;codecs=\"vp8\" is supported. expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -2883,6 +3426,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -2894,6 +3438,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_true: video/webm;codecs=\"vp8\" is supported. expected true got false",
+            "SA09": "assert_true: video/webm;codecs=\"vp8\" is supported. expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -2909,6 +3457,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -2920,6 +3469,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_true: video/webm;codecs=\"vp8\" is supported. expected true got false",
+            "SA09": "assert_true: video/webm;codecs=\"vp8\" is supported. expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -2935,6 +3488,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -2945,6 +3499,9 @@
             "ED14": "PASS",
             "FF51": "FAIL",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "FF51": "assert_equals: readyState is \"closed\" expected \"closed\" but got \"open\""
           },
           "totals": {
             "PASS": 3,
@@ -2957,6 +3514,9 @@
             "ED14": "PASS",
             "FF51": "FAIL",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "FF51": "assert_greater_than: media readyState is greater than \"HAVE_NOTHING\" expected a number greater than 0 but got 0"
           },
           "totals": {
             "PASS": 3,
@@ -2972,6 +3532,7 @@
         "FF51": "OK",
         "SA09": "TIMEOUT"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 2,
         "TIMEOUT": 2
@@ -2984,6 +3545,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -2995,6 +3557,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3005,6 +3568,9 @@
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_equals: mediaSource.duration expected 1.7976931348623157e+308 but got Infinity"
           },
           "totals": {
             "PASS": 3,
@@ -3018,6 +3584,9 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_equals: mediaSource.duration expected 5e-324 but got 0"
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -3030,6 +3599,9 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_equals: mediaSource.duration expected 1.7976931348623157e+308 but got Infinity"
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -3037,14 +3609,18 @@
         },
         "Set duration to Number.MIN_VALUE - 1": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: mediaSource.duration assignment throws an exception for -1 function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: mediaSource.duration assignment throws an exception for -1 function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Set duration to Number.POSITIVE_INFINITY": {
@@ -3054,44 +3630,57 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
         },
         "Set duration to Number.NEGATIVE_INFINITY": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: mediaSource.duration assignment throws an exception for -Infinity function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: mediaSource.duration assignment throws an exception for -Infinity function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Set duration to lowest value.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: mediaSource.duration assignment throws an exception for -1.7976931348623157e+308 function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: mediaSource.duration assignment throws an exception for -1.7976931348623157e+308 function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Set duration to a negative double.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: mediaSource.duration assignment throws an exception for -101.9 function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: mediaSource.duration assignment throws an exception for -101.9 function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Set duration to a positive double.": {
@@ -3101,6 +3690,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3112,6 +3702,9 @@
             "FF51": "PASS",
             "SA09": "TIMEOUT"
           },
+          "UAmessage": {
+            "SA09": "Test timed out"
+          },
           "totals": {
             "PASS": 3,
             "TIMEOUT": 1
@@ -3119,14 +3712,18 @@
         },
         "Set duration to NaN": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: mediaSource.duration assignment throws an exception for NaN function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: mediaSource.duration assignment throws an exception for NaN function \"function () { mediaSource.duration = testDurationValue; }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         }
       }
@@ -3138,6 +3735,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -3147,129 +3745,136 @@
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\"",
+            "SA09": "assert_equals: Playback time is truncatedDuration while seeking expected 1.5272 but got 3.0378"
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "Test appendBuffer completes previous seek to truncated duration": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\"",
+            "SA09": "The object is in an invalid state."
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "Test endOfStream completes previous seek to truncated duration": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\"",
+            "SA09": "The object is in an invalid state."
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "Test setting same duration multiple times does not fire duplicate durationchange": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "InvalidStateError",
+            "SA09": "The object is in an invalid state."
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "Test setting the duration to less than the highest starting presentation timestamp will throw": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: duration function \"function ()\r\n                  {\r\n                      mediaSource.duration = newDuration;\r\n                  }\" did not throw",
+            "SA09": "assert_throws: duration function \"function ()\n                  {\n                      mediaSource.duration = newDuration;\n                  }\" did not throw"
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "Truncating the duration throws an InvalidStateError exception when new duration is less than the highest buffered range start time of one of the track buffers": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: function \"function () { mediaSource.duration = newDuration; }\" did not throw",
+            "SA09": "assert_throws: function \"function () { mediaSource.duration = newDuration; }\" did not throw"
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "Truncating the duration throws an InvalidStateError exception when new duration is less than a buffered coded frame presentation time": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: function \"function () { mediaSource.duration = newDuration; }\" did not throw",
+            "SA09": "assert_throws: function \"function () { mediaSource.duration = newDuration; }\" did not throw"
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "Increasing the duration does not trigger any SourceBuffer update": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 4
           }
         },
         "Increasing the duration during media playback does not trigger any SourceBuffer update": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
-            "FF51": "PASS"
-          },
-          "totals": {
-            "PASS": 3
-          }
-        },
-        "MediaSource.duration: setting the duration does not trigger any SourceBuffer update": {
-          "byUA": {
+            "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1
-          }
-        },
-        "MediaSource.duration: Increasing the duration does not trigger any SourceBuffer update": {
-          "byUA": {
-            "SA09": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "MediaSource.duration: Increasing the duration during media playback does not trigger any SourceBuffer update": {
-          "byUA": {
-            "SA09": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "MediaSource.duration: Setting the same duration multiple times does not fire duplicate durationchange events": {
-          "byUA": {
-            "SA09": "PASS"
-          },
-          "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         }
       }
@@ -3281,6 +3886,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -3292,6 +3898,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: endOfStream('garbage') throws TypeError function \"function () { mediaSource.endOfStream('garbage'); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
           },
           "totals": {
             "PASS": 3,
@@ -3305,6 +3914,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: endOfStream('') throws TypeError function \"function () { mediaSource.endOfStream(''); }\" did not throw"
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -3316,6 +3928,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: endOfStream(null) throws TypeError function \"function () { mediaSource.endOfStream(null); }\" did not throw"
           },
           "totals": {
             "PASS": 3,
@@ -3331,6 +3946,7 @@
         "FF51": "TIMEOUT",
         "SA09": "TIMEOUT"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 1,
         "TIMEOUT": 3
@@ -3342,6 +3958,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: expected 0 but got 2",
+            "ED14": "assert_equals: expected 0 but got 2"
           },
           "totals": {
             "FAIL": 2,
@@ -3355,6 +3975,11 @@
             "FF51": "TIMEOUT",
             "SA09": "TIMEOUT"
           },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "FF51": "Test timed out",
+            "SA09": "Test timed out"
+          },
           "totals": {
             "PASS": 1,
             "TIMEOUT": 3
@@ -3364,27 +3989,16 @@
           "byUA": {
             "CH55": "FAIL",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: expected 6.042 but got 6.076",
+            "ED14": "assert_equals: expected 6.042 but got 6.076"
           },
           "totals": {
             "FAIL": 2,
-            "PASS": 1
-          }
-        },
-        "MediaSource.endOfStream(): buffered data not modified when endOfStream is called": {
-          "byUA": {
-            "SA09": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute": {
-          "byUA": {
-            "SA09": "PASS"
-          },
-          "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
@@ -3396,6 +4010,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -3407,6 +4022,11 @@
             "ED14": "TIMEOUT",
             "FF51": "FAIL",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "FF51": "assert_equals: expected 4 but got 3",
+            "SA09": "assert_equals: Event types match. expected \"error\" but got \"updateend\""
           },
           "totals": {
             "PASS": 1,
@@ -3421,6 +4041,10 @@
             "FF51": "FAIL",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "FF51": "assert_equals: expected 4 but got 3"
+          },
           "totals": {
             "PASS": 2,
             "TIMEOUT": 1,
@@ -3433,6 +4057,10 @@
             "ED14": "TIMEOUT",
             "FF51": "FAIL",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "FF51": "assert_equals: expected 4 but got 2"
           },
           "totals": {
             "PASS": 2,
@@ -3447,6 +4075,10 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "FF51": "assert_equals: expected \"ended\" but got \"closed\"",
+            "SA09": "assert_equals: expected \"ended\" but got \"closed\""
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -3459,6 +4091,10 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "FF51": "assert_equals: expected \"ended\" but got \"closed\"",
+            "SA09": "assert_equals: expected \"ended\" but got \"closed\""
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -3466,14 +4102,19 @@
         },
         "Signaling 'decode' error via segment parser loop algorithm after initialization segment and partial media segment has been appended.": {
           "byUA": {
-            "CH55": "PASS",
-            "ED14": "PASS",
+            "CH55": "FAIL",
+            "ED14": "FAIL",
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "assert_equals: Event types match. expected \"loadedmetadata\" but got \"error\"",
+            "ED14": "assert_equals: Event types match. expected \"loadedmetadata\" but got \"error\"",
+            "FF51": "assert_equals: Event types match. expected \"error\" but got \"updateend\"",
+            "SA09": "assert_equals: Event types match. expected \"error\" but got \"updateend\""
+          },
           "totals": {
-            "PASS": 2,
-            "FAIL": 2
+            "FAIL": 4
           }
         }
       }
@@ -3485,6 +4126,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -3497,6 +4139,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -3508,6 +4151,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3519,6 +4163,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3529,6 +4174,9 @@
             "ED14": "PASS",
             "FF51": "FAIL",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "FF51": "assert_equals: supported expected false but got true"
           },
           "totals": {
             "PASS": 3,
@@ -3542,6 +4190,9 @@
             "FF51": "FAIL",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "FF51": "assert_equals: supported expected false but got true"
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -3553,6 +4204,9 @@
             "ED14": "PASS",
             "FF51": "FAIL",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "FF51": "assert_equals: supported expected false but got true"
           },
           "totals": {
             "PASS": 3,
@@ -3566,6 +4220,9 @@
             "FF51": "FAIL",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "FF51": "assert_equals: supported expected false but got true"
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -3577,6 +4234,9 @@
             "ED14": "PASS",
             "FF51": "FAIL",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "FF51": "assert_equals: supported expected false but got true"
           },
           "totals": {
             "PASS": 3,
@@ -3590,6 +4250,9 @@
             "FF51": "FAIL",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "FF51": "assert_equals: supported expected false but got true"
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -3602,6 +4265,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3613,6 +4277,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3624,6 +4289,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3632,30 +4298,36 @@
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 4
           }
         },
         "Test invalid MSE MIME media type \"text/html\"": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 4
           }
         },
         "Test invalid MSE MIME media type \"image/jpeg\"": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "PASS",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 4
           }
         },
         "Test invalid mismatch between major type and codec ID \"audio/webm;codecs=\"vp8\"\"": {
@@ -3665,6 +4337,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3675,6 +4348,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected false but got true",
+            "SA09": "assert_equals: supported expected false but got true"
           },
           "totals": {
             "PASS": 2,
@@ -3688,6 +4365,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3699,6 +4377,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3710,6 +4389,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3721,8 +4401,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 4
           }
         },
         "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vorbis\"\"": {
@@ -3732,6 +4413,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3742,6 +4424,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected false but got true"
           },
           "totals": {
             "PASS": 3,
@@ -3755,6 +4440,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected false but got true",
+            "SA09": "assert_equals: supported expected false but got true"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -3766,6 +4455,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected false but got true",
+            "SA09": "assert_equals: supported expected false but got true"
           },
           "totals": {
             "PASS": 2,
@@ -3779,6 +4472,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected false but got true"
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -3790,6 +4486,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected true but got false",
+            "SA09": "assert_equals: supported expected true but got false"
           },
           "totals": {
             "PASS": 2,
@@ -3803,6 +4503,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected true but got false",
+            "SA09": "assert_equals: supported expected true but got false"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -3814,6 +4518,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected true but got false",
+            "SA09": "assert_equals: supported expected true but got false"
           },
           "totals": {
             "PASS": 2,
@@ -3827,6 +4535,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected true but got false",
+            "SA09": "assert_equals: supported expected true but got false"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -3838,6 +4550,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected true but got false",
+            "SA09": "assert_equals: supported expected true but got false"
           },
           "totals": {
             "PASS": 2,
@@ -3851,6 +4567,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: supported expected true but got false",
+            "SA09": "assert_equals: supported expected true but got false"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -3863,6 +4583,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3874,6 +4595,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3885,6 +4607,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3896,6 +4619,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3907,6 +4631,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3918,6 +4643,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3929,6 +4655,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3940,6 +4667,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3951,6 +4679,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -3964,6 +4693,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -3975,6 +4705,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: function \"function () { mediaSource.setLiveSeekableRange(0, 1); }\" threw object \"TypeError: Object doesn't support property or method 'setLiveSeekableRange'\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11",
+            "SA09": "assert_throws: function \"function () { mediaSource.setLiveSeekableRange(0, 1); }\" threw object \"TypeError: mediaSource.setLiveSeekableRange is not a function. (In 'mediaSource.setLiveSeekableRange(0, 1)', 'mediaSource.setLiveSeekableRange' is undefined)\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
           },
           "totals": {
             "PASS": 2,
@@ -3988,6 +4722,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: function \"function () { mediaSource.clearLiveSeekableRange(); }\" threw object \"TypeError: Object doesn't support property or method 'clearLiveSeekableRange'\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11",
+            "SA09": "assert_throws: function \"function () { mediaSource.clearLiveSeekableRange(); }\" threw object \"TypeError: mediaSource.clearLiveSeekableRange is not a function. (In 'mediaSource.clearLiveSeekableRange()', 'mediaSource.clearLiveSeekableRange' is undefined)\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -3997,22 +4735,32 @@
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'setLiveSeekableRange'",
+            "SA09": "mediaSource.setLiveSeekableRange is not a function. (In 'mediaSource.setLiveSeekableRange(0, 1)', 'mediaSource.setLiveSeekableRange' is undefined)"
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "clearLiveSeekableRange does not restrict to not currently updating": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'clearLiveSeekableRange'",
+            "SA09": "mediaSource.clearLiveSeekableRange is not a function. (In 'mediaSource.clearLiveSeekableRange()', 'mediaSource.clearLiveSeekableRange' is undefined)"
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "setLiveSeekableRange throws a TypeError if start is negative": {
@@ -4022,6 +4770,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4033,6 +4782,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4043,6 +4793,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'setLiveSeekableRange'",
+            "SA09": "mediaSource.setLiveSeekableRange is not a function. (In 'mediaSource.setLiveSeekableRange(0, 1)', 'mediaSource.setLiveSeekableRange' is undefined)"
           },
           "totals": {
             "PASS": 2,
@@ -4056,6 +4810,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'clearLiveSeekableRange'",
+            "SA09": "mediaSource.clearLiveSeekableRange is not a function. (In 'mediaSource.clearLiveSeekableRange()', 'mediaSource.clearLiveSeekableRange' is undefined)"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -4067,6 +4825,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'setLiveSeekableRange'",
+            "SA09": "mediaSource.setLiveSeekableRange is not a function. (In 'mediaSource.setLiveSeekableRange(1, 2)', 'mediaSource.setLiveSeekableRange' is undefined)"
           },
           "totals": {
             "PASS": 2,
@@ -4080,25 +4842,14 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'setLiveSeekableRange'",
+            "FF51": "assert_equals: The buffered attribute contains a single range. expected 1 but got 0",
+            "SA09": "mediaSource.setLiveSeekableRange is not a function. (In 'mediaSource.setLiveSeekableRange(40, 42)', 'mediaSource.setLiveSeekableRange' is undefined)"
+          },
           "totals": {
             "PASS": 1,
             "FAIL": 3
-          }
-        },
-        "setLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating": {
-          "byUA": {
-            "SA09": "FAIL"
-          },
-          "totals": {
-            "FAIL": 1
-          }
-        },
-        "clearLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating": {
-          "byUA": {
-            "SA09": "FAIL"
-          },
-          "totals": {
-            "FAIL": 1
           }
         }
       }
@@ -4110,6 +4861,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4122,6 +4874,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4133,6 +4886,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4146,6 +4900,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -4155,11 +4910,11 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
+            "PASS": 4
           }
         }
       }
@@ -4171,6 +4926,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -4180,10 +4936,14 @@
             "CH55": "PASS",
             "ED14": "PASS",
             "FF51": "PASS",
-            "SA09": "PASS"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "The object is in an invalid state."
           },
           "totals": {
-            "PASS": 4
+            "PASS": 3,
+            "FAIL": 1
           }
         }
       }
@@ -4193,11 +4953,12 @@
         "CH55": "OK",
         "ED14": "TIMEOUT",
         "FF51": "OK",
-        "SA09": "TIMEOUT"
+        "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 2,
-        "TIMEOUT": 2
+        "OK": 3,
+        "TIMEOUT": 1
       },
       "subtests": {
         "sourceopen occurs with element preload=auto": {
@@ -4207,6 +4968,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4218,6 +4980,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4229,6 +4992,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4240,6 +5004,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4251,6 +5016,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4262,6 +5028,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4273,24 +5040,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
-          }
-        },
-        "error occurs with bogus blob URL (revoked MediaSource object URL) and element preload=none": {
-          "byUA": {
-            "SA09": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=none": {
-          "byUA": {
-            "SA09": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
           }
         }
       }
@@ -4302,6 +5054,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4309,14 +5062,18 @@
       "subtests": {
         "Test remove with an negative start.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(-1, 2);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(-1, 2);\n              }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Test remove with non-finite start.": {
@@ -4326,6 +5083,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: remove function \"function ()\r\n                  {\r\n                      sourceBuffer.remove(item, 2);\r\n                  }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: remove function \"function ()\n                  {\n                      sourceBuffer.remove(item, 2);\n                  }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -4333,50 +5094,66 @@
         },
         "Test remove with a start beyond the duration.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(11, 12);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(11, 12);\n              }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Test remove with a start larger than the end.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(2, 1);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(2, 1);\n              }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Test remove with a NEGATIVE_INFINITY end.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(0, Number.NEGATIVE_INFINITY);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, Number.NEGATIVE_INFINITY);\n              }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Test remove with a NaN end.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(0, Number.NaN);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, Number.NaN);\n              }\" did not throw"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Test remove after SourceBuffer removed from mediaSource.": {
@@ -4386,6 +5163,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -4393,14 +5173,18 @@
         },
         "Test remove with a NaN duration.": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(0, 0);\r\n              }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")",
+            "SA09": "assert_throws: remove function \"function ()\n              {\n                  sourceBuffer.remove(0, 0);\n              }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "FAIL": 3,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Test remove while update pending.": {
@@ -4409,6 +5193,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: remove function \"function ()\r\n              {\r\n                  sourceBuffer.remove(3, 4);\r\n              }\" did not throw"
           },
           "totals": {
             "PASS": 3,
@@ -4420,11 +5207,15 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "PASS"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: abort function \"function ()\r\n              {\r\n                  sourceBuffer.abort();\r\n              }\" did not throw",
+            "SA09": "assert_throws: abort function \"function ()\n              {\n                  sourceBuffer.abort();\n              }\" did not throw"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "Test remove with a start at the duration.": {
@@ -4434,6 +5225,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4445,6 +5237,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4455,6 +5248,11 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: Initial buffered range. expected \"{ [0.033, NaN) }\" but got \"{ [0.000, 6.042) }\"",
+            "ED14": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\"",
+            "SA09": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.076) }\" but got \"{ [0.000, 6.076) }\""
           },
           "totals": {
             "FAIL": 3,
@@ -4468,6 +5266,12 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "assert_equals: Initial buffered range. expected \"{ [0.033, NaN) }\" but got \"{ [0.000, 6.042) }\"",
+            "ED14": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\"",
+            "FF51": "assert_equals: Buffered ranges after remove(). expected \"{ [3.187, 6.076) }\" but got \"{ [3.220, 6.076) }\"",
+            "SA09": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.076) }\" but got \"{ [0.000, 6.076) }\""
+          },
           "totals": {
             "FAIL": 4
           }
@@ -4479,6 +5283,12 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "assert_equals: Initial buffered range. expected \"{ [0.033, NaN) }\" but got \"{ [0.000, 6.042) }\"",
+            "ED14": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\"",
+            "FF51": "assert_equals: Buffered ranges after remove(). expected \"{ [0.033, 0.996) [3.187, 6.076) }\" but got \"{ [0.033, 0.996) [3.220, 6.076) }\"",
+            "SA09": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.076) }\" but got \"{ [0.000, 6.076) }\""
+          },
           "totals": {
             "FAIL": 4
           }
@@ -4489,6 +5299,11 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: Initial buffered range. expected \"{ [0.033, NaN) }\" but got \"{ [0.000, 6.042) }\"",
+            "ED14": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\"",
+            "SA09": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.076) }\" but got \"{ [0.000, 6.076) }\""
           },
           "totals": {
             "FAIL": 3,
@@ -4504,6 +5319,7 @@
         "FF51": "OK",
         "SA09": "TIMEOUT"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 2,
         "TIMEOUT": 2
@@ -4516,6 +5332,9 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -4526,11 +5345,14 @@
             "CH55": "PASS",
             "ED14": "FAIL",
             "FF51": "PASS",
-            "SA09": "FAIL"
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: removeSourceBuffer() threw an exception when passed null. function \"function () { mediaSource.removeSourceBuffer(null); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "Test calling removeSourceBuffer() twice with the same object.": {
@@ -4539,6 +5361,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -4549,10 +5374,14 @@
           "byUA": {
             "CH55": "PASS",
             "ED14": "FAIL",
-            "FF51": "PASS"
+            "FF51": "PASS",
+            "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 1
           }
         },
@@ -4562,6 +5391,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -4575,6 +5407,9 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_equals: expected 6.0756 but got 0"
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -4586,6 +5421,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -4601,6 +5439,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4613,6 +5452,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "SA09": "assert_equals: expected 6.0756 but got 2.1248"
+          },
           "totals": {
             "PASS": 2,
             "TIMEOUT": 1,
@@ -4624,11 +5467,16 @@
             "CH55": "PASS",
             "ED14": "TIMEOUT",
             "FF51": "PASS",
-            "SA09": "PASS"
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "SA09": "assert_true: mediaElement seeking. expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "TIMEOUT": 1
+            "PASS": 2,
+            "TIMEOUT": 1,
+            "FAIL": 1
           }
         }
       }
@@ -4640,6 +5488,7 @@
         "FF51": "TIMEOUT",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 2,
         "TIMEOUT": 2
@@ -4652,6 +5501,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_true: mediaElement is still seeking expected true got false",
+            "SA09": "assert_equals: Still in HAVE_METADATA expected 1 but got 4"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -4663,6 +5516,11 @@
             "ED14": "TIMEOUT",
             "FF51": "TIMEOUT",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "Test timed out",
+            "FF51": "Test timed out",
+            "SA09": "assert_true: mediaElement is still seeking expected true got false"
           },
           "totals": {
             "PASS": 1,
@@ -4679,6 +5537,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4690,6 +5549,9 @@
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_equals: mediaElement.seekable expected \"{ }\" but got \"{ [0.000, NaN) }\""
           },
           "totals": {
             "PASS": 3,
@@ -4703,6 +5565,9 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "SA09": "assert_equals: expected 6.0756 but got 0"
+          },
           "totals": {
             "PASS": 3,
             "FAIL": 1
@@ -4714,6 +5579,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "InvalidStateError",
+            "SA09": "assert_equals: mediaElement.seekable expected \"{ }\" but got \"{ [0.000, Infinity) }\""
           },
           "totals": {
             "PASS": 2,
@@ -4729,6 +5598,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4740,6 +5610,11 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.033 but got 0",
+            "ED14": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.033 but got 0",
+            "SA09": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.033 but got 0"
           },
           "totals": {
             "FAIL": 3,
@@ -4753,6 +5628,12 @@
             "FF51": "FAIL",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "CH55": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.046 but got 0",
+            "ED14": "assert_equals: expectedTimestampOffset expected -0.465 but got -0.511",
+            "FF51": "assert_equals: sourceBuffer.buffered has 1 range before EOS expected 1 but got 0",
+            "SA09": "assert_equals: expectedTimestampOffset expected -0.465 but got 0"
+          },
           "totals": {
             "FAIL": 4
           }
@@ -4763,6 +5644,12 @@
             "ED14": "FAIL",
             "FF51": "FAIL",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "CH55": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.046 but got 0",
+            "ED14": "assert_equals: expectedTimestampOffset expected 0.348 but got 0.253",
+            "FF51": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.046 but got 0.381",
+            "SA09": "The object is in an invalid state."
           },
           "totals": {
             "FAIL": 4
@@ -4777,6 +5664,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4786,36 +5674,34 @@
           "byUA": {
             "CH55": "FAIL",
             "ED14": "FAIL",
-            "FF51": "FAIL"
+            "FF51": "FAIL",
+            "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "CH55": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\n                              sourceBuffer.mode = \"segments\";\n                          }\" did not throw",
+            "ED14": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\r\n                              sourceBuffer.mode = \"segments\";\r\n                          }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")",
+            "FF51": "assert_unreached: Browser doesn't support the MIME used in this test: audio/aac Reached unreachable code",
+            "SA09": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\n                              sourceBuffer.mode = \"segments\";\n                          }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
           },
           "totals": {
-            "FAIL": 3
+            "FAIL": 4
           }
         },
         "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw a TypeError exception and abort these steps.": {
           "byUA": {
             "CH55": "FAIL",
             "ED14": "FAIL",
-            "FF51": "FAIL"
-          },
-          "totals": {
-            "FAIL": 3
-          }
-        },
-        "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.": {
-          "byUA": {
+            "FF51": "FAIL",
             "SA09": "FAIL"
           },
-          "totals": {
-            "FAIL": 1
-          }
-        },
-        "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.": {
-          "byUA": {
-            "SA09": "FAIL"
+          "UAmessage": {
+            "CH55": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\n                              sourceBuffer.mode = \"segments\";\n                          }\" did not throw",
+            "ED14": "assert_unreached: Browser doesn't support the MIME used in this test: audio/mpeg Reached unreachable code",
+            "FF51": "assert_unreached: Browser doesn't support the MIME used in this test: audio/mpeg Reached unreachable code",
+            "SA09": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\n                              sourceBuffer.mode = \"segments\";\n                          }\" threw object \"InvalidAccessError (DOM Exception 15): The object does not support the operation or argument.\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 4
           }
         }
       }
@@ -4827,6 +5713,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4839,6 +5726,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4850,6 +5738,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4860,6 +5749,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -4873,6 +5765,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4884,6 +5777,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4894,6 +5788,9 @@
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "SA09": "assert_throws: Setting valid sourceBuffer.mode while still parsing media segment threw InvalidStateError. function \"function () { sourceBuffer.mode = 'segments'; }\" did not throw"
           },
           "totals": {
             "PASS": 3,
@@ -4909,6 +5806,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4922,6 +5820,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4934,6 +5833,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4944,6 +5844,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -4957,6 +5860,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4970,6 +5874,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3,
         "TIMEOUT": 1
@@ -4982,6 +5887,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -4993,6 +5899,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -5004,6 +5911,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -5014,6 +5922,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: setting timestampOffset to positive infinity throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw",
+            "SA09": "assert_throws: setting timestampOffset to positive infinity throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw"
           },
           "totals": {
             "PASS": 2,
@@ -5027,6 +5939,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: setting timestampOffset to negative infinity throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw",
+            "SA09": "assert_throws: setting timestampOffset to negative infinity throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -5038,6 +5954,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_throws: setting timestampOffset to NaN throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")",
+            "SA09": "assert_throws: setting timestampOffset to NaN throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw"
           },
           "totals": {
             "PASS": 2,
@@ -5051,6 +5971,10 @@
             "FF51": "PASS",
             "SA09": "FAIL"
           },
+          "UAmessage": {
+            "ED14": "assert_throws: setting timestampOffset to undefined throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")",
+            "SA09": "assert_throws: setting timestampOffset to undefined throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" did not throw"
+          },
           "totals": {
             "PASS": 2,
             "FAIL": 2
@@ -5063,6 +5987,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -5074,6 +5999,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -5085,6 +6011,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -5096,6 +6023,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -5107,6 +6035,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -5118,6 +6047,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -5129,6 +6059,7 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 4
           }
@@ -5139,6 +6070,9 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "ED14": "Demande d’accès à la méthode ou aux propriétés inattendue."
           },
           "totals": {
             "PASS": 3,
@@ -5154,6 +6088,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -5164,6 +6099,10 @@
             "ED14": "FAIL",
             "FF51": "PASS",
             "SA09": "FAIL"
+          },
+          "UAmessage": {
+            "ED14": "assert_unreached: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" Reached unreachable code",
+            "SA09": "assert_unreached: Browser doesn't support the MIME used in this test: video/webm; codecs=\"vorbis,vp8\" Reached unreachable code"
           },
           "totals": {
             "PASS": 2,
@@ -5176,6 +6115,9 @@
             "ED14": "PASS",
             "FF51": "PASS",
             "SA09": "PASS"
+          },
+          "UAmessage": {
+            "CH55": "assert_unreached: Browser doesn't support the MIME used in this test: video/mp4 Reached unreachable code"
           },
           "totals": {
             "FAIL": 1,
@@ -5191,6 +6133,7 @@
         "FF51": "OK",
         "SA09": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 4
       },
@@ -5202,42 +6145,11 @@
             "FF51": "PASS",
             "SA09": "PASS"
           },
+          "UAmessage": {
+            "ED14": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
+          },
           "totals": {
             "PASS": 3,
-            "FAIL": 1
-          }
-        }
-      }
-    },
-    "/media-source/mediasource-duration-buffered.html": {
-      "byUA": {
-        "SA09": "OK"
-      },
-      "totals": {
-        "OK": 1
-      },
-      "subtests": {
-        "MediaSource.duration: Truncating the duration succeeds when new duration is greater than the highest starting time of buffered coded frames": {
-          "byUA": {
-            "SA09": "FAIL"
-          },
-          "totals": {
-            "FAIL": 1
-          }
-        },
-        "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time of buffered coded frames": {
-          "byUA": {
-            "SA09": "FAIL"
-          },
-          "totals": {
-            "FAIL": 1
-          }
-        },
-        "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time for at least some buffered coded frames": {
-          "byUA": {
-            "SA09": "FAIL"
-          },
-          "totals": {
             "FAIL": 1
           }
         }

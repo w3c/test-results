@@ -106,11 +106,6 @@
           "message": null
         },
         {
-          "name": "HTMLVideoElement interface: operation getVideoPlaybackQuality()",
-          "status": "PASS",
-          "message": null
-        },
-        {
           "name": "AudioTrack interface: attribute sourceBuffer",
           "status": "FAIL",
           "message": "assert_own_property: self does not have own property \"AudioTrack\" expected property \"AudioTrack\" missing"
@@ -441,19 +436,9 @@
           "message": null
         },
         {
-          "name": "SourceBuffer interface: operation appendBuffer(ArrayBuffer)",
+          "name": "SourceBuffer interface: operation appendBuffer(BufferSource)",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "SourceBuffer interface: operation appendBuffer(ArrayBufferView)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "SourceBuffer interface: operation appendStream(ReadableStream,unsigned long long)",
-          "status": "FAIL",
-          "message": "assert_own_property: interface prototype object missing non-static operation expected property \"appendStream\" missing"
         },
         {
           "name": "SourceBuffer interface: operation abort()",
@@ -464,11 +449,6 @@
           "name": "SourceBuffer interface: operation remove(double,unrestricted double)",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "SourceBuffer interface: attribute trackDefaults",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"trackDefaults\" expected true got false"
         },
         {
           "name": "SourceBuffer must be primary interface of sourceBuffer",
@@ -556,37 +536,17 @@
           "message": null
         },
         {
-          "name": "SourceBuffer interface: calling appendBuffer(ArrayBuffer) on sourceBuffer with too few arguments must throw TypeError",
+          "name": "SourceBuffer interface: calling appendBuffer(BufferSource) on sourceBuffer with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendBuffer\" with the proper type (15)",
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"abort\" with the proper type (15)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "SourceBuffer interface: calling appendBuffer(ArrayBufferView) on sourceBuffer with too few arguments must throw TypeError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendStream\" with the proper type (16)",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"appendStream\" not found in prototype chain"
-        },
-        {
-          "name": "SourceBuffer interface: calling appendStream(ReadableStream,unsigned long long) on sourceBuffer with too few arguments must throw TypeError",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"appendStream\" not found in prototype chain"
-        },
-        {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"abort\" with the proper type (17)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"remove\" with the proper type (18)",
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"remove\" with the proper type (16)",
           "status": "PASS",
           "message": null
         },
@@ -594,11 +554,6 @@
           "name": "SourceBuffer interface: calling remove(double,unrestricted double) on sourceBuffer with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"trackDefaults\" with the proper type (19)",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"trackDefaults\" not found in prototype chain"
         },
         {
           "name": "EventTarget interface: sourceBuffer must inherit property \"addEventListener\" with the proper type (0)",
@@ -724,186 +679,6 @@
           "name": "EventTarget interface: calling dispatchEvent(Event) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: existence and properties of interface object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface object length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface object name",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute creationTime",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute totalVideoFrames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute droppedVideoFrames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute corruptedVideoFrames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute totalFrameDelay",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"totalFrameDelay\" expected true got false"
-        },
-        {
-          "name": "VideoPlaybackQuality must be primary interface of video.getVideoPlaybackQuality()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Stringification of video.getVideoPlaybackQuality()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"creationTime\" with the proper type (0)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"totalVideoFrames\" with the proper type (1)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"droppedVideoFrames\" with the proper type (2)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"corruptedVideoFrames\" with the proper type (3)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"totalFrameDelay\" with the proper type (4)",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"totalFrameDelay\" not found in prototype chain"
-        },
-        {
-          "name": "TrackDefault interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface object name",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: attribute type",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: attribute byteStreamTrackID",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: attribute language",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: attribute label",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: operation getKinds()",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface object name",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface: attribute length",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList must be primary interface of sourceBuffer.trackDefaults",
-          "status": "FAIL",
-          "message": "assert_equals: wrong typeof object expected \"object\" but got \"undefined\""
-        },
-        {
-          "name": "Stringification of sourceBuffer.trackDefaults",
-          "status": "FAIL",
-          "message": "assert_equals: wrong typeof object expected \"object\" but got \"undefined\""
-        },
-        {
-          "name": "TrackDefaultList interface: sourceBuffer.trackDefaults must inherit property \"length\" with the proper type (0)",
-          "status": "FAIL",
-          "message": "assert_equals: wrong typeof object expected \"object\" but got \"undefined\""
         }
       ],
       "status": "OK",
@@ -2666,6 +2441,18 @@
           "name": "SourceBuffer#abort() (video/mp4) : If the readyState attribute of the parent media source is not in the \"open\" state then throw an INVALID_STATE_ERR exception and abort these steps.",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-appendbuffer-quota-exceeded.html",
+      "subtests": [
+        {
+          "name": "Appending data repeatedly should fill up the buffer and throw a QuotaExceededError when buffer is full.",
+          "status": "FAIL",
+          "message": "assert_false: unexpected gap in buffered ranges. expected false got true"
         }
       ],
       "status": "OK",
