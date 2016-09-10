@@ -10,10 +10,9 @@ Up-to-date result reports are available at:
 Index of implementations in reports
 ===================================
 
-* EM - ???
 * EB - Emblematica Online (Development Website)
-	**email: mjsarol@illinois.edu
-	**link: http://emblematica.library.illinois.edu/
+  * email: mjsarol@illinois.edu
+  * link: http://emblematica.library.illinois.edu/
 
 
 Adding new results
