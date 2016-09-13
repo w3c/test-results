@@ -502,7 +502,8 @@
       "subtests": [
         {
           "name": "Test Navigator.requestMediaKeySystemAccess() exceptions.",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Test Navigator.requestMediaKeySystemAccess().",
@@ -604,6 +605,94 @@
           "name": "Waiting for a key.",
           "status": "TIMEOUT",
           "message": "timeout. message = wait_for_encrypted_event(), encrypted: 0, waitingforkey: 0, timeupdate: 0"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/clearkey-mp4-playback-destroy-persistent-license.html",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, persistent-license, mp4, playback, destroy and acknowledge",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/clearkey-mp4-playback-persistent-license-events.html",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, persistent-license, mp4, playback, check events",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/clearkey-mp4-playback-persistent-license.html",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, persistent-license, mp4playback",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/clearkey-mp4-playback-retrieve-destroy-persistent-license.html",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, persistent-license, mp4, playback, retrieve, playback and destroy",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/clearkey-mp4-playback-retrieve-persistent-license.html",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, persistent-license, mp4, playback, retrieve and playback",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/drm-mp4-playback-destroy-persistent-license.html",
+      "subtests": [
+        {
+          "name": "drm, persistent-license, mp4, playback, destroy and acknowledge",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/drm-mp4-playback-persistent-license-events.html",
+      "subtests": [
+        {
+          "name": "drm, persistent-license, mp4, playback, check events",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/drm-mp4-playback-persistent-license.html",
+      "subtests": [
+        {
+          "name": "drm, persistent-license, mp4playback",
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -932,7 +1021,7 @@
       "test": "/encrypted-media/clearkey-events.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, events",
+          "name": "org.w3.clearkey, basic events",
           "status": "PASS",
           "message": null
         }
@@ -944,37 +1033,37 @@
       "test": "/encrypted-media/clearkey-generate-request-disallowed-input.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey: generateRequest() with webm initData longer than 64Kb characters.",
+          "name": "org.w3.clearkey, temporary, webm, initData longer than 64Kb characters",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "org.w3.clearkey: generateRequest() with cenc initData longer than 64Kb characters.",
+          "name": "org.w3.clearkey, temporary, cenc, initData longer than 64Kb characters",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "org.w3.clearkey: generateRequest() with keyids initData longer than 64Kb characters.",
+          "name": "org.w3.clearkey, temporary, keyids, initData longer than 64Kb characters",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "org.w3.clearkey: generateRequest() with invalid pssh data.",
+          "name": "org.w3.clearkey, temporary, cenc, invalid initdata (invalid pssh)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "org.w3.clearkey: generateRequest() with non pssh data.",
+          "name": "org.w3.clearkey, temporary, cenc, invalid initdata (not pssh)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "org.w3.clearkey: generateRequest() with too short key ID.",
+          "name": "org.w3.clearkey, temporary, keyids, invalid initdata (too short key ID)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "org.w3.clearkey: generateRequest() with too long key ID.",
+          "name": "org.w3.clearkey, temporary, keyids, invalid initdata (too long key ID)",
           "status": "PASS",
           "message": null
         }
@@ -986,7 +1075,7 @@
       "test": "/encrypted-media/clearkey-keystatuses-multiple-sessions.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, keystatuses, multiple sessions",
+          "name": "org.w3.clearkey, temporary, keystatuses, multiple sessions",
           "status": "PASS",
           "message": null
         }
@@ -998,7 +1087,7 @@
       "test": "/encrypted-media/clearkey-keystatuses.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, keystatuses",
+          "name": "org.w3.clearkey, temporary, keystatuses",
           "status": "FAIL",
           "message": "assert_equals: expected 0 but got 2"
         }
@@ -1007,27 +1096,10 @@
       "message": null
     },
     {
-      "test": "/encrypted-media/clearkey-mp4-playback-persistent-license-events.html",
-      "subtests": [
-        {
-          "name": "org.w3.clearkey, successful playback, persistent-license, mp4, set src before setMediaKeys, check events",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/clearkey-mp4-playback-persistent-license.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
       "test": "/encrypted-media/clearkey-mp4-playback-persistent-usage-record-events.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, persistent-usage-record, playback, mp4, event sequence",
+          "name": "org.w3.clearkey, persistent-usage-record, mp4, playback, check events",
           "status": "TIMEOUT"
         }
       ],
@@ -1038,18 +1110,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-persistent-usage-record.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, successful playback, persistent-usage-record, mp4, set src before setMediaKeys",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/clearkey-mp4-playback-retrieve-persistent-license.html",
-      "subtests": [
-        {
-          "name": "org.w3.clearkey, retrieve persistent-license in new window, mp4",
+          "name": "org.w3.clearkey, persistent-usage-record, mp4playback",
           "status": "TIMEOUT"
         }
       ],
@@ -1060,7 +1121,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-retrieve-persistent-usage-record.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, retrieve persistent-usage-record in new window, mp4",
+          "name": "org.w3.clearkey, persistent-usage-record, mp4, playback, retrieve in new window",
           "status": "TIMEOUT"
         }
       ],
@@ -1071,7 +1132,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-events.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, sucessful playback and events, temporary, mp4, set src before setMediaKeys",
+          "name": "org.w3.clearkey, temporary, mp4, playback, check events",
           "status": "PASS",
           "message": null
         }
@@ -1083,7 +1144,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-multikey-sequential.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, successful playback, temporary, mp4, multiple keys and sessions, sequential",
+          "name": "org.w3.clearkey, temporary, mp4, playback with multiple keys and sessions, sequential",
           "status": "PASS",
           "message": null
         }
@@ -1095,7 +1156,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-multikey.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, single session, audio/video",
+          "name": "org.w3.clearkey, temporary, mp4, playback with multiple keys, single session, audio/video",
           "status": "PASS",
           "message": null
         }
@@ -1107,7 +1168,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-setMediaKeys-after-src.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys after setting video.src",
+          "name": "org.w3.clearkey, temporary, mp4, playback, setMediaKeys after setting video.src",
           "status": "PASS",
           "message": null
         }
@@ -1119,7 +1180,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-setMediaKeys-after-update.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys after updating session",
+          "name": "org.w3.clearkey, temporary, mp4, playback, setMediaKeys after updating session",
           "status": "PASS",
           "message": null
         }
@@ -1131,7 +1192,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-setMediaKeys-immediately.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys first",
+          "name": "org.w3.clearkey, temporary, mp4, playback, setMediaKeys first",
           "status": "PASS",
           "message": null
         }
@@ -1143,7 +1204,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-setMediaKeys-onencrypted.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys in encrypted event",
+          "name": "org.w3.clearkey, temporary, mp4, playback, setMediaKeys in encrypted event",
           "status": "PASS",
           "message": null
         }
@@ -1155,7 +1216,7 @@
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-two-videos.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, sucessful playback, temporary, mp4, set src before setMediaKeys",
+          "name": "org.w3.clearkey, temporary, mp4, playback two videos",
           "status": "PASS",
           "message": null
         }
@@ -1165,15 +1226,21 @@
     },
     {
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-waitingforkey.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, successful playback, temporary, mp4, waitingforkey event, 1 key",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/clearkey-mp4-playback-temporary.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, sucessful playback, temporary, mp4, set src before setMediaKeys",
+          "name": "org.w3.clearkey, temporary, mp4, playback",
           "status": "PASS",
           "message": null
         }
@@ -1185,17 +1252,17 @@
       "test": "/encrypted-media/clearkey-not-callable-after-createsession.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey: Update() immediately after CreateSession().",
+          "name": "org.w3.clearkey, temporary, update() immediately after createSession()",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "org.w3.clearkey: Close() immediately after CreateSession().",
+          "name": "org.w3.clearkey, temporary, close() immediately after createSession()",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "org.w3.clearkey: Remove() immediately after CreateSession().",
+          "name": "org.w3.clearkey, temporary, remove() immediately after createSession()",
           "status": "PASS",
           "message": null
         }
@@ -1207,17 +1274,17 @@
       "test": "/encrypted-media/drm-check-initdata-type.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha support for \"webm\".",
+          "name": "drm support for \"webm\".",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha support for \"cenc\".",
+          "name": "drm support for \"cenc\".",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha support for \"keyids\".",
+          "name": "drm support for \"keyids\".",
           "status": "PASS",
           "message": null
         }
@@ -1227,51 +1294,45 @@
     },
     {
       "test": "/encrypted-media/drm-events.html",
-      "subtests": [
-        {
-          "name": "com.widevine.alpha, events",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/encrypted-media/drm-generate-request-disallowed-input.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha: generateRequest() with webm initData longer than 64Kb characters.",
+          "name": "drm, temporary, webm, initData longer than 64Kb characters",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha: generateRequest() with cenc initData longer than 64Kb characters.",
+          "name": "drm, temporary, cenc, initData longer than 64Kb characters",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha: generateRequest() with keyids initData longer than 64Kb characters.",
+          "name": "drm, temporary, keyids, initData longer than 64Kb characters",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha: generateRequest() with invalid pssh data.",
+          "name": "drm, temporary, cenc, invalid initdata (invalid pssh)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha: generateRequest() with non pssh data.",
+          "name": "drm, temporary, cenc, invalid initdata (not pssh)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha: generateRequest() with too short key ID.",
+          "name": "drm, temporary, keyids, invalid initdata (too short key ID)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha: generateRequest() with too long key ID.",
+          "name": "drm, temporary, keyids, invalid initdata (too long key ID)",
           "status": "PASS",
           "message": null
         }
@@ -1281,33 +1342,21 @@
     },
     {
       "test": "/encrypted-media/drm-keystatuses-multiple-sessions.html",
-      "subtests": [
-        {
-          "name": "com.widevine.alpha, keystatuses, multiple sessions",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/encrypted-media/drm-keystatuses.html",
-      "subtests": [
-        {
-          "name": "com.widevine.alpha, keystatuses",
-          "status": "FAIL",
-          "message": "assert_equals: expected 0 but got 2"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-persistent-usage-record-events.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha, persistent-usage-record, playback, mp4, event sequence",
+          "name": "drm, persistent-usage-record, mp4, playback, check events",
           "status": "TIMEOUT"
         }
       ],
@@ -1318,7 +1367,29 @@
       "test": "/encrypted-media/drm-mp4-playback-persistent-usage-record.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha, successful playback, persistent-usage-record, mp4, set src before setMediaKeys",
+          "name": "drm, persistent-usage-record, mp4playback",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/drm-mp4-playback-retrieve-destroy-persistent-license.html",
+      "subtests": [
+        {
+          "name": "drm, persistent-license, mp4, playback, retrieve, playback and destroy",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/drm-mp4-playback-retrieve-persistent-license.html",
+      "subtests": [
+        {
+          "name": "drm, persistent-license, mp4, playback, retrieve, playback",
           "status": "TIMEOUT"
         }
       ],
@@ -1329,7 +1400,7 @@
       "test": "/encrypted-media/drm-mp4-playback-retrieve-persistent-usage-record.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha, retrieve persistent-usage-record in new window, mp4",
+          "name": "drm, persistent-usage-record, mp4, playback, retrieve in new window",
           "status": "TIMEOUT"
         }
       ],
@@ -1338,47 +1409,28 @@
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-events.html",
-      "subtests": [
-        {
-          "name": "com.widevine.alpha, sucessful playback and events, temporary, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential.html",
-      "subtests": [
-        {
-          "name": "com.widevine.alpha, successful playback, temporary, mp4, multiple keys and sessions, sequential",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-multikey.html",
-      "subtests": [
-        {
-          "name": "com.widevine.alpha, successful playback, temporary, mp4, multiple keys, single session, audio/video",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-setMediaKeys-after-src.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys after setting video.src",
-          "status": "PASS",
-          "message": null
+          "name": "drm, temporary, mp4, playback, setMediaKeys after setting video.src",
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -1388,9 +1440,8 @@
       "test": "/encrypted-media/drm-mp4-playback-temporary-setMediaKeys-after-update.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys after updating session",
-          "status": "PASS",
-          "message": null
+          "name": "drm, temporary, mp4, playback, setMediaKeys after updating session",
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -1400,9 +1451,8 @@
       "test": "/encrypted-media/drm-mp4-playback-temporary-setMediaKeys-immediately.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys first",
-          "status": "PASS",
-          "message": null
+          "name": "drm, temporary, mp4, playback, setMediaKeys first",
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -1412,9 +1462,8 @@
       "test": "/encrypted-media/drm-mp4-playback-temporary-setMediaKeys-onencrypted.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys in encrypted event",
-          "status": "PASS",
-          "message": null
+          "name": "drm, temporary, mp4, playback, setMediaKeys in encrypted event",
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -1422,15 +1471,9 @@
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-two-videos.html",
-      "subtests": [
-        {
-          "name": "com.widevine.alpha, sucessful playback, temporary, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-waitingforkey.html",
@@ -1440,559 +1483,30 @@
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary.html",
-      "subtests": [
-        {
-          "name": "com.widevine.alpha, sucessful playback, temporary, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/encrypted-media/drm-not-callable-after-createsession.html",
       "subtests": [
         {
-          "name": "com.widevine.alpha: Update() immediately after CreateSession().",
+          "name": "drm, temporary, update() immediately after createSession()",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha: Close() immediately after CreateSession().",
+          "name": "drm, temporary, close() immediately after createSession()",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "com.widevine.alpha: Remove() immediately after CreateSession().",
+          "name": "drm, temporary, remove() immediately after createSession()",
           "status": "PASS",
           "message": null
         }
       ],
       "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-check-initdata-type.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey support for \"webm\".",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey support for \"cenc\".",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey support for \"keyids\".",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, events",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-generate-request-disallowed-input.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey: generateRequest() with webm initData longer than 64Kb characters.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey: generateRequest() with cenc initData longer than 64Kb characters.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey: generateRequest() with keyids initData longer than 64Kb characters.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey: generateRequest() with invalid pssh data.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey: generateRequest() with non pssh data.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey: generateRequest() with too short key ID.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey: generateRequest() with too long key ID.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-keystatuses-multiple-sessions.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-keystatuses.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-license-events.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-license.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-usage-record-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, persistent-usage-record, playback, mp4, event sequence",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-usage-record.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, successful playback, persistent-usage-record, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-retrieve-persistent-license.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, retrieve persistent-license in new window, mp4",
-          "status": "FAIL",
-          "message": "win is null"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-retrieve-persistent-usage-record.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, retrieve persistent-usage-record in new window, mp4",
-          "status": "FAIL",
-          "message": "win is null"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, sucessful playback and events, temporary, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-multikey-sequential.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-multikey.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-after-src.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys after setting video.src",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-after-update.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys after updating session",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-immediately.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys first",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-onencrypted.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, setMediaKeys in encrypted event",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-two-videos.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-waitingforkey.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, sucessful playback, temporary, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-not-callable-after-createsession.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey: Update() immediately after CreateSession().",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey: Close() immediately after CreateSession().",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey: Remove() immediately after CreateSession().",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-check-initdata-type.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha support for \"webm\".",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha support for \"cenc\".",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha support for \"keyids\".",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, events",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-generate-request-disallowed-input.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha: generateRequest() with webm initData longer than 64Kb characters.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha: generateRequest() with cenc initData longer than 64Kb characters.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha: generateRequest() with keyids initData longer than 64Kb characters.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha: generateRequest() with invalid pssh data.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha: generateRequest() with non pssh data.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha: generateRequest() with too short key ID.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha: generateRequest() with too long key ID.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-keystatuses-multiple-sessions.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-keystatuses.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-persistent-usage-record-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, persistent-usage-record, playback, mp4, event sequence",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-persistent-usage-record.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, successful playback, persistent-usage-record, mp4, set src before setMediaKeys",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-retrieve-persistent-usage-record.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, retrieve persistent-usage-record in new window, mp4",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, sucessful playback and events, temporary, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey-sequential.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-after-src.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys after setting video.src",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-after-update.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys after updating session",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-immediately.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys first",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-onencrypted.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, setMediaKeys in encrypted event",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-two-videos.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-waitingforkey.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha, sucessful playback, temporary, mp4, set src before setMediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-not-callable-after-createsession.html",
-      "subtests": [
-        {
-          "name": "polyfill: com.widevine.alpha: Update() immediately after CreateSession().",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha: Close() immediately after CreateSession().",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: com.widevine.alpha: Remove() immediately after CreateSession().",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/idlharness.html",
-      "subtests": [],
-      "status": "TIMEOUT",
       "message": null
     }
   ]
