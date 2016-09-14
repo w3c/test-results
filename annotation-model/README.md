@@ -20,6 +20,10 @@ Index of implementations in reports
   * link: http://emblematica.library.illinois.edu/portal_anno/
   * gitHub: not yet
 
+* HY - implementation Name: Hypothesis
+  * email: dev@list.hypothes.is
+  * link: https://hypothes.is
+  * gitHub: https://github.com/hypothesis
 
 Adding new results
 ==================
