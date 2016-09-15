@@ -1,6 +1,7 @@
 {
   "ua": [
     "CH55",
+    "CO53",
     "ED14",
     "FF51"
   ],
@@ -1193,7 +1194,7 @@
             "TIMEOUT": 1
           }
         },
-        "Test MediaKeys create().": {
+        "Test MediaKeySystemAccess createMediaKeys().": {
           "byUA": {
             "CH55": "PASS",
             "ED14": "TIMEOUT",
@@ -1243,18 +1244,6 @@
         },
         "Test MediaKeys createSession().": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "TIMEOUT": 2,
-            "PASS": 1
-          }
-        },
-        "Test MediaKeys generateRequest().": {
-          "byUA": {
             "CH55": "PASS",
             "ED14": "TIMEOUT",
             "FF51": "TIMEOUT"
@@ -1263,6 +1252,18 @@
           "totals": {
             "PASS": 1,
             "TIMEOUT": 2
+          }
+        },
+        "Test MediaKeys generateRequest().": {
+          "byUA": {
+            "CH55": "PASS",
+            "ED14": "TIMEOUT",
+            "FF51": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         },
         "Test MediaKeySession update() exceptions.": {
@@ -1567,23 +1568,28 @@
     "/encrypted-media/drm-mp4-playback-destroy-persistent-license.html": {
       "byUA": {
         "CH55": "OK",
+        "CO53": "TIMEOUT",
         "ED14": "OK",
         "FF51": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 3
+        "OK": 3,
+        "TIMEOUT": 1
       },
       "subtests": {
         "drm, persistent-license, mp4, playback, destroy and acknowledge": {
           "byUA": {
             "CH55": "TIMEOUT",
+            "CO53": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF51": "TIMEOUT"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CO53": "Test timed out"
+          },
           "totals": {
-            "TIMEOUT": 3
+            "TIMEOUT": 4
           }
         }
       }
@@ -1591,23 +1597,28 @@
     "/encrypted-media/drm-mp4-playback-persistent-license-events.html": {
       "byUA": {
         "CH55": "OK",
+        "CO53": "TIMEOUT",
         "ED14": "OK",
         "FF51": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 3
+        "OK": 3,
+        "TIMEOUT": 1
       },
       "subtests": {
         "drm, persistent-license, mp4, playback, check events": {
           "byUA": {
             "CH55": "TIMEOUT",
+            "CO53": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF51": "TIMEOUT"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CO53": "Test timed out"
+          },
           "totals": {
-            "TIMEOUT": 3
+            "TIMEOUT": 4
           }
         }
       }
@@ -1615,23 +1626,26 @@
     "/encrypted-media/drm-mp4-playback-persistent-license.html": {
       "byUA": {
         "CH55": "OK",
+        "CO53": "OK",
         "ED14": "OK",
         "FF51": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 3
+        "OK": 4
       },
       "subtests": {
         "drm, persistent-license, mp4playback": {
           "byUA": {
             "CH55": "TIMEOUT",
+            "CO53": "PASS",
             "ED14": "TIMEOUT",
             "FF51": "TIMEOUT"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "TIMEOUT": 3,
+            "PASS": 1
           }
         }
       }
@@ -3032,28 +3046,24 @@
     },
     "/encrypted-media/drm-events.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
-        "ED14": "TIMEOUT",
-        "FF51": "TIMEOUT"
+        "CH55": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
       },
-      "UAmessage": {
-        "CH55": "",
-        "ED14": "",
-        "FF51": ""
-      },
+      "UAmessage": {},
       "totals": {
-        "TIMEOUT": 3
+        "OK": 3
       },
       "subtests": {
-        "/encrypted-media/drm-events.html": {
+        "drm, basic events": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 3
           }
         }
       }
@@ -3150,28 +3160,27 @@
     },
     "/encrypted-media/drm-keystatuses-multiple-sessions.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
-        "ED14": "TIMEOUT",
-        "FF51": "TIMEOUT"
+        "CH55": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
       },
-      "UAmessage": {
-        "CH55": "",
-        "ED14": "",
-        "FF51": ""
-      },
+      "UAmessage": {},
       "totals": {
-        "TIMEOUT": 3
+        "OK": 3
       },
       "subtests": {
-        "/encrypted-media/drm-keystatuses-multiple-sessions.html": {
+        "drm, temporary, keystatuses, multiple sessions": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "ED14": "FAIL",
+            "FF51": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "assert_true: keystatuses should have the expected keys expected true got false"
+          },
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
@@ -3179,27 +3188,28 @@
     "/encrypted-media/drm-keystatuses.html": {
       "byUA": {
         "CH55": "TIMEOUT",
-        "ED14": "TIMEOUT",
-        "FF51": "TIMEOUT"
+        "ED14": "OK",
+        "FF51": "OK"
       },
       "UAmessage": {
-        "CH55": "",
-        "ED14": "",
-        "FF51": ""
+        "CH55": ""
       },
       "totals": {
-        "TIMEOUT": 3
+        "TIMEOUT": 1,
+        "OK": 2
       },
       "subtests": {
-        "/encrypted-media/drm-keystatuses.html": {
+        "drm, temporary, keystatuses": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "ED14": "FAIL",
+            "FF51": "FAIL"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'Symbol.iterator'",
+            "FF51": "assert_equals: expected 0 but got 2"
+          },
           "totals": {
-            "TIMEOUT": 3
+            "FAIL": 2
           }
         }
       }
@@ -3255,12 +3265,16 @@
     "/encrypted-media/drm-mp4-playback-retrieve-destroy-persistent-license.html": {
       "byUA": {
         "CH55": "OK",
+        "CO53": "TIMEOUT",
         "ED14": "OK",
         "FF51": "OK"
       },
-      "UAmessage": {},
+      "UAmessage": {
+        "CO53": ""
+      },
       "totals": {
-        "OK": 3
+        "OK": 3,
+        "TIMEOUT": 1
       },
       "subtests": {
         "drm, persistent-license, mp4, playback, retrieve, playback and destroy": {
@@ -3279,23 +3293,26 @@
     "/encrypted-media/drm-mp4-playback-retrieve-persistent-license.html": {
       "byUA": {
         "CH55": "OK",
+        "CO53": "OK",
         "ED14": "OK",
         "FF51": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 3
+        "OK": 4
       },
       "subtests": {
         "drm, persistent-license, mp4, playback, retrieve, playback": {
           "byUA": {
             "CH55": "TIMEOUT",
+            "CO53": "PASS",
             "ED14": "TIMEOUT",
             "FF51": "TIMEOUT"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "TIMEOUT": 3,
+            "PASS": 1
           }
         }
       }
@@ -3329,84 +3346,81 @@
     },
     "/encrypted-media/drm-mp4-playback-temporary-events.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
+        "CH55": "OK",
         "ED14": "TIMEOUT",
-        "FF51": "TIMEOUT"
+        "FF51": "OK"
       },
       "UAmessage": {
-        "CH55": "",
-        "ED14": "",
-        "FF51": ""
+        "ED14": ""
       },
       "totals": {
-        "TIMEOUT": 3
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
-        "/encrypted-media/drm-mp4-playback-temporary-events.html": {
+        "drm, temporary, mp4, playback, check events": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "FAIL",
+            "FF51": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH55": "assert_array_equals: Expected events sequence lengths differ, expected 9 got 8"
+          },
           "totals": {
-            "TIMEOUT": 3
+            "FAIL": 1,
+            "PASS": 1
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
+        "CH55": "OK",
         "ED14": "TIMEOUT",
         "FF51": "TIMEOUT"
       },
       "UAmessage": {
-        "CH55": "",
         "ED14": "",
         "FF51": ""
       },
       "totals": {
-        "TIMEOUT": 3
+        "OK": 1,
+        "TIMEOUT": 2
       },
       "subtests": {
-        "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential.html": {
+        "drm, temporary, mp4, playback with multiple keys and sessions, sequential": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 1
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-multikey.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
+        "CH55": "OK",
         "ED14": "TIMEOUT",
-        "FF51": "TIMEOUT"
+        "FF51": "OK"
       },
       "UAmessage": {
-        "CH55": "",
-        "ED14": "",
-        "FF51": ""
+        "ED14": ""
       },
       "totals": {
-        "TIMEOUT": 3
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
-        "/encrypted-media/drm-mp4-playback-temporary-multikey.html": {
+        "drm, temporary, mp4, playback with multiple keys, single session, audio/video": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "FF51": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 2
           }
         }
       }
@@ -3424,13 +3438,13 @@
       "subtests": {
         "drm, temporary, mp4, playback, setMediaKeys after setting video.src": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 3
           }
         }
       }
@@ -3448,13 +3462,13 @@
       "subtests": {
         "drm, temporary, mp4, playback, setMediaKeys after updating session": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 3
           }
         }
       }
@@ -3472,13 +3486,13 @@
       "subtests": {
         "drm, temporary, mp4, playback, setMediaKeys first": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 3
           }
         }
       }
@@ -3496,97 +3510,85 @@
       "subtests": {
         "drm, temporary, mp4, playback, setMediaKeys in encrypted event": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-two-videos.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
-        "ED14": "TIMEOUT",
-        "FF51": "TIMEOUT"
+        "CH55": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
       },
-      "UAmessage": {
-        "CH55": "",
-        "ED14": "",
-        "FF51": ""
-      },
+      "UAmessage": {},
       "totals": {
-        "TIMEOUT": 3
+        "OK": 3
       },
       "subtests": {
-        "/encrypted-media/drm-mp4-playback-temporary-two-videos.html": {
+        "drm, temporary, mp4, playback two videos": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-waitingforkey.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
-        "ED14": "TIMEOUT",
-        "FF51": "TIMEOUT"
+        "CH55": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
       },
-      "UAmessage": {
-        "CH55": "",
-        "ED14": "",
-        "FF51": ""
-      },
+      "UAmessage": {},
       "totals": {
-        "TIMEOUT": 4
+        "OK": 3
       },
       "subtests": {
-        "/encrypted-media/drm-mp4-playback-temporary-waitingforkey.html": {
+        "drm, successful playback, temporary, mp4, waitingforkey event, 1 key": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 4
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
-        "ED14": "TIMEOUT",
-        "FF51": "TIMEOUT"
+        "CH55": "OK",
+        "ED14": "OK",
+        "FF51": "OK"
       },
-      "UAmessage": {
-        "CH55": "",
-        "ED14": "",
-        "FF51": ""
-      },
+      "UAmessage": {},
       "totals": {
-        "TIMEOUT": 3
+        "OK": 3
       },
       "subtests": {
-        "/encrypted-media/drm-mp4-playback-temporary.html": {
+        "drm, temporary, mp4, playback": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF51": "TIMEOUT"
+            "CH55": "PASS",
+            "ED14": "PASS",
+            "FF51": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "PASS": 3
           }
         }
       }

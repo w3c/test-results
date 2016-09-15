@@ -511,7 +511,7 @@
           "message": null
         },
         {
-          "name": "Test MediaKeys create().",
+          "name": "Test MediaKeySystemAccess createMediaKeys().",
           "status": "PASS",
           "message": null
         },
@@ -529,12 +529,12 @@
         },
         {
           "name": "Test MediaKeys createSession().",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT"
         },
         {
           "name": "Test MediaKeys generateRequest().",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Test MediaKeySession update() exceptions.",
@@ -1294,9 +1294,15 @@
     },
     {
       "test": "/encrypted-media/drm-events.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, basic events",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-generate-request-disallowed-input.html",
@@ -1342,15 +1348,27 @@
     },
     {
       "test": "/encrypted-media/drm-keystatuses-multiple-sessions.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, temporary, keystatuses, multiple sessions",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-keystatuses.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, temporary, keystatuses",
+          "status": "FAIL",
+          "message": "assert_equals: expected 0 but got 2"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-persistent-usage-record-events.html",
@@ -1409,9 +1427,15 @@
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-events.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, temporary, mp4, playback, check events",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential.html",
@@ -1421,16 +1445,23 @@
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-multikey.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, temporary, mp4, playback with multiple keys, single session, audio/video",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-setMediaKeys-after-src.html",
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, setMediaKeys after setting video.src",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1441,7 +1472,8 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, setMediaKeys after updating session",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1452,7 +1484,8 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, setMediaKeys first",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1463,7 +1496,8 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, setMediaKeys in encrypted event",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1471,21 +1505,39 @@
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-two-videos.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, temporary, mp4, playback two videos",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-waitingforkey.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, successful playback, temporary, mp4, waitingforkey event, 1 key",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, temporary, mp4, playback",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-not-callable-after-createsession.html",
