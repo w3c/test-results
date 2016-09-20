@@ -905,8 +905,8 @@
         },
         {
           "name": "Test abort after appendBuffer update ends.",
-          "status": "FAIL",
-          "message": "The object is in an invalid state."
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Test appending null.",
@@ -921,12 +921,6 @@
       ],
       "status": "OK",
       "message": null
-    },
-    {
-      "test": "/media-source/mediasource-appendbuffer-quota-exceeded.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
     },
     {
       "test": "/media-source/mediasource-appendwindow.html",
@@ -1173,11 +1167,11 @@
       "subtests": [
         {
           "name": "Tests mp4 video-only frame rate changes.",
-          "status": "FAIL",
-          "message": "assert_false: updating expected false got true"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1371,12 +1365,12 @@
         {
           "name": "Test seek starts on duration truncation below currentTime",
           "status": "FAIL",
-          "message": "assert_equals: Playback time is truncatedDuration while seeking expected 1.5272 but got 3.0378"
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
         },
         {
           "name": "Test appendBuffer completes previous seek to truncated duration",
           "status": "FAIL",
-          "message": "The object is in an invalid state."
+          "message": "assert_equals: Playback time is truncatedDuration while seeking expected 1.5272 but got 3.317897643"
         },
         {
           "name": "Test endOfStream completes previous seek to truncated duration",
