@@ -10,11 +10,6 @@ Up-to-date result reports are available at:
 Index of implementations in reports
 ===================================
 
-* AI - implementation Name: Annotation Illustrations only, not a real implementation
-  * email: t-cole3@illinois.edu
-  * link: none
-  * gitHub: none
-
 * EB - implementation Name: Emblematica Online (Developmental Version)
   * email: mjsarol@illinois.edu
   * link: http://emblematica.library.illinois.edu/portal_anno/
