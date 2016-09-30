@@ -25,6 +25,10 @@ Index of implementations in reports
   * link: https://hypothes.is
   * gitHub: https://github.com/hypothesis
 
+* TK - implementation Name: Takeshi Kanai
+  * email: takeshi.kanai@sony.com
+  
+
 Adding new results
 ==================
 
