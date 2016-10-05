@@ -23,6 +23,18 @@
       "message": null
     },
     {
+      "test": "/encrypted-media/clearkey-events-session-closed-event.html",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey test MediaKeySession closed event.",
+          "status": "FAIL",
+          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/encrypted-media/clearkey-events.html",
       "subtests": [],
       "status": "TIMEOUT",
@@ -257,12 +269,47 @@
       "message": null
     },
     {
+      "test": "/encrypted-media/clearkey-mp4-reset-src-after-setmediakeys.html",
+      "subtests": [
+        {
+          "name": "Reset src after setMediaKeys().",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/encrypted-media/clearkey-mp4-unique-origin.html",
       "subtests": [
         {
           "name": "Unique origin is unable to create MediaKeys",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/clearkey-mp4-update-disallowed-input.html",
+      "subtests": [
+        {
+          "name": "update() with invalid response (longer than 64Kb characters) should fail.",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"InvalidAccessError\" but got \"NotSupportedError\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/clearkey-mp4-waiting-for-a-key.html",
+      "subtests": [
+        {
+          "name": "Waiting for a key.",
+          "status": "FAIL",
+          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -322,6 +369,18 @@
         }
       ],
       "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/drm-events-session-closed-event.html",
+      "subtests": [
+        {
+          "name": "drm test MediaKeySession closed event.",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -463,11 +522,10 @@
       "subtests": [
         {
           "name": "drm, persistent-usage-record, mp4, playback, check events",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -475,8 +533,7 @@
       "subtests": [
         {
           "name": "drm, persistent-usage-record, mp4, playback, retrieve in new window",
-          "status": "FAIL",
-          "message": "Unable to set property 'onload' of undefined or null reference"
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -575,12 +632,11 @@
       "subtests": [
         {
           "name": "drm, successful playback, temporary, mp4, waitingforkey event, 1 key",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "ERROR",
-      "message": "Error: assert_equals: expected 1 but got 0"
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary.html",
@@ -594,6 +650,18 @@
       "message": null
     },
     {
+      "test": "/encrypted-media/drm-mp4-reset-src-after-setmediakeys.html",
+      "subtests": [
+        {
+          "name": "Reset src after setMediaKeys().",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
       "test": "/encrypted-media/drm-mp4-unique-origin.html",
       "subtests": [
         {
@@ -604,6 +672,12 @@
       ],
       "status": "OK",
       "message": null
+    },
+    {
+      "test": "/encrypted-media/drm-mp4-waiting-for-a-key.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/encrypted-media/drm-not-callable-after-createsession.html",
@@ -930,6 +1004,17 @@
           "name": "MediaEncryptedEvent interface: attribute initData",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/clearkey-mp4-playback-temporary-multikey-sequential-readyState.html",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential, readyState",
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -1294,6 +1379,17 @@
       "message": null
     },
     {
+      "test": "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential-readyState.html",
+      "subtests": [
+        {
+          "name": "drm, successful playback, temporary, mp4, multiple keys, sequential, readyState",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential.html",
       "subtests": [
         {
@@ -1599,1317 +1695,6 @@
         }
       ],
       "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-check-initdata-type.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey support for \"webm\".",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey support for \"cenc\".",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey support for \"keyids\".",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-events.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-generate-request-disallowed-input.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-invalid-license.html",
-      "subtests": [
-        {
-          "name": "Update with invalid Clear Key license",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-keystatuses-multiple-sessions.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-keystatuses.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-destroy-persistent-license.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, persistent-license, mp4, playback, destroy and acknowledge",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-license-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, persistent-license, mp4, playback, check events",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-license.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, persistent-license, mp4playback",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-usage-record-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, persistent-usage-record, mp4, playback, check events",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-persistent-usage-record.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, persistent-usage-record, mp4playback",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-retrieve-destroy-persistent-license.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, persistent-license, mp4, playback, retrieve, playback and destroy",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-retrieve-persistent-license.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, persistent-license, mp4, playback, retrieve and playback",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-retrieve-persistent-usage-record.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, persistent-usage-record, mp4, playback, retrieve in new window",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-encrypted-clear-sources.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, encrypted and clear sources",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, check events",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-multikey-sequential.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-multikey.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, multikey audio/video",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-multisession.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback with multiple sessions, multikey video",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-after-src.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, setMediaKeys after setting video.src",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-after-update.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, setMediaKeys after updating session",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-immediately.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, setMediaKeys first",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-setMediaKeys-onencrypted.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, setMediaKeys in encrypted event",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-two-videos.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-waitingforkey.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, successful playback, temporary, mp4, waitingforkey event, 1 key",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, single key",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-requestmediakeysystemaccess.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System () should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unsupported Key System (com.example.unsupported) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Key System ending in \".\" (org.w3.clearkey.) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Capitalized Key System (ORG.W3.CLEARKEY) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Non-ASCII Key System (org.w3.clearkeyʏ) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Root domain of Key System alone (org) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Root domain of Key System, with dot (org.) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Domain of Key System along (org.w3) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Domain of Key System, with dot (org.w3.) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Child of Key System should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Prefixed Key System should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Incomplete Key System name (org.w3.learkey) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Incomplete Key System name (org.w3.clearke) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Leading space in Key System name ( org.w3.clearkey) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Extra space in Key System name (org.w3 .clearkey) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Trailing space in Key System name (org.w3.clearkey ) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Leading dot in Key System name (.org.w3.clearkey) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Trailing dot in Key System name (org.w3..clearkey) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Trailing dot in Key System name (org.w3.clearkey.) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Key System name is case sensitive (ORG.W3.CLEARKEY) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Empty configuration",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Basic supported configuration",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Partially supported configuration",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Supported audio codec",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "ContentType formatting must be preserved",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unsupported audio codec ('audio/webm; codecs=fake') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unsupported video codec () should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=mp4a','audio/webm; codecs=mp4a.40.2') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Video codec specified in audio field ('video/mp4;codecs=\"avc1.4d401e\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Audio codec specified in video field ('audio/mp4;codecs=\"mp4a.40.2\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=avc1','audio/webm; codecs=avc1.42e01e') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/mp4; codecs=vorbis') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Two configurations, one supported",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Two configurations, both supported",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (webm) ('audio/webm; codecs=\"vp8,vorbis\"','audio/webm; codecs=\"vorbis, vp8\"','audio/webm; codecs=\"vp8\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (mp4) ('audio/mp4; codecs=\"avc1\"','audio/mp4; codecs=\"avc1.4d401e\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (webm) ('video/webm; codecs=\"vp8,vorbis\"','video/webm; codecs=\"vorbis, vp8\"','video/webm; codecs=\"vorbis\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (mp4) ('video/mp4; codecs=\"mp4a\"','video/mp4; codecs=\"mp4a.40.2\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: WebM audio does not support AVC1/AAC ('audio/webm; codecs=\"aac\"','audio/webm; codecs=\"avc1\"','audio/webm; codecs=\"vp8,aac\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: WebM video does not support AVC1/AAC ('video/webm; codecs=\"aac\"','video/webm; codecs=\"avc1\"','video/webm; codecs=\"vp8,aac\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Leading space in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Space before ; in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Trailing space in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Space at start of codecs parameter",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Space at end of codecs parameter",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Video/",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Codecs=",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Upper case MIME type",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "CODECS=",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with webm ('video/webm; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with mp4 ('video/mp4; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with codecs ('video/mp4;codecs=\"avc1.4d401e\"; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'fake' should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'audio/fake' should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'video/fake' should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\"AVC1.4D401E\"' should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\",avc1.4d401e\"' should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-mp4-unique-origin.html",
-      "subtests": [
-        {
-          "name": "Unique origin is unable to create MediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-not-callable-after-createsession.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, update() immediately after createSession()",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, close() immediately after createSession()",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "polyfill: org.w3.clearkey, temporary, remove() immediately after createSession()",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/clearkey-update-non-ascii-input.html",
-      "subtests": [
-        {
-          "name": "polyfill: org.w3.clearkey test handling of non-ASCII responses for update()",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-check-initdata-type.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm support for \"webm\".",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm support for \"cenc\".",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm support for \"keyids\".",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, basic events",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-expiration.html",
-      "subtests": [],
-      "status": "ERROR",
-      "message": "Syntax error"
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-generate-request-disallowed-input.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, cenc, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        },
-        {
-          "name": "polyfill: drm, temporary, keyids, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        },
-        {
-          "name": "polyfill: drm, temporary, cenc, invalid initdata (invalid pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        },
-        {
-          "name": "polyfill: drm, temporary, cenc, invalid initdata (not pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        },
-        {
-          "name": "polyfill: drm, temporary, keyids, invalid initdata (too short key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        },
-        {
-          "name": "polyfill: drm, temporary, keyids, invalid initdata (too long key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-invalid-license.html",
-      "subtests": [
-        {
-          "name": "Update with invalid Clear Key license",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        }
-      ],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-keystatuses-multiple-sessions.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, keystatuses, multiple sessions",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        }
-      ],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-keystatuses.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, keystatuses",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-onencrypted.html",
-      "subtests": [
-        {
-          "name": "encrypted fired on encrypted media file.",
-          "status": "FAIL",
-          "message": "assert_true: expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-destroy-persistent-license.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, persistent-license, mp4, playback, destroy and acknowledge",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-persistent-license-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, persistent-license, mp4, playback, check events",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-persistent-license.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, persistent-license, mp4playback",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-persistent-usage-record-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, persistent-usage-record, mp4, playback, check events",
-          "status": "FAIL",
-          "message": "Invalid calling object"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-persistent-usage-record.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, persistent-usage-record, mp4playback",
-          "status": "FAIL",
-          "message": "Invalid calling object"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-retrieve-destroy-persistent-license.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, persistent-license, mp4, playback, retrieve, playback and destroy",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-retrieve-persistent-license.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, persistent-license, mp4, playback, retrieve, playback",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-retrieve-persistent-usage-record.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, persistent-usage-record, mp4, playback, retrieve in new window",
-          "status": "FAIL",
-          "message": "Invalid calling object"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-encrypted-clear-sources.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback, encrypted and clear sources",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-events.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback, check events",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey-sequential.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, successful playback, temporary, mp4, multiple keys, sequential",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback, multikey audio/video",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multisession.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback with multiple sessions, multikey video",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-after-src.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback, setMediaKeys after setting video.src",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-after-update.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback, setMediaKeys after updating session",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-immediately.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback, setMediaKeys first",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-setMediaKeys-onencrypted.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback, setMediaKeys in encrypted event",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-two-videos.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback two videos",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-waitingforkey.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, successful playback, temporary, mp4, waitingforkey event, 1 key",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        }
-      ],
-      "status": "ERROR",
-      "message": "Error: assert_equals: expected 1 but got 0"
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, mp4, playback, single key",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-requestmediakeysystemaccess.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Empty Key System () should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Unsupported Key System (com.example.unsupported) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Key System ending in \".\" (com.microsoft.playready.) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Capitalized Key System (COM.MICROSOFT.PLAYREADY) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Non-ASCII Key System (com.microsoft.playreadyʏ) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Root domain of Key System alone (com) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Root domain of Key System, with dot (com.) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Domain of Key System along (com.microsoft) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Domain of Key System, with dot (com.microsoft.) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Child of Key System should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Prefixed Key System should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Incomplete Key System name (com.micosoft.playready) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Incomplete Key System name (com.microsoft.playread) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Leading space in Key System name ( com.microsoft.playready) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Extra space in Key System name (com.mi crosoft.playready) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Trailing space in Key System name (com.microsoft.playready ) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Leading dot in Key System name (.com.microsoft.playready) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.mi.crosoft.playready) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.microsoft.playready.) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Key System name is case sensitive (COM.MICROSOFT.PLAYREADY) should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Empty configuration",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Basic supported configuration",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Partially supported configuration",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Supported audio codec",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "ContentType formatting must be preserved",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Unsupported audio codec ('audio/webm; codecs=fake') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Unsupported video codec () should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=mp4a','audio/webm; codecs=mp4a.40.2') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Video codec specified in audio field ('video/mp4;codecs=\"avc1.4d401e\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Audio codec specified in video field ('audio/mp4;codecs=\"mp4a.40.2\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=avc1','audio/webm; codecs=avc1.42e01e') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/mp4; codecs=vorbis') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Two configurations, one supported",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Two configurations, both supported",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (webm) ('audio/webm; codecs=\"vp8,vorbis\"','audio/webm; codecs=\"vorbis, vp8\"','audio/webm; codecs=\"vp8\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (mp4) ('audio/mp4; codecs=\"avc1\"','audio/mp4; codecs=\"avc1.4d401e\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (webm) ('video/webm; codecs=\"vp8,vorbis\"','video/webm; codecs=\"vorbis, vp8\"','video/webm; codecs=\"vorbis\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (mp4) ('video/mp4; codecs=\"mp4a\"','video/mp4; codecs=\"mp4a.40.2\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: WebM audio does not support AVC1/AAC ('audio/webm; codecs=\"aac\"','audio/webm; codecs=\"avc1\"','audio/webm; codecs=\"vp8,aac\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: WebM video does not support AVC1/AAC ('video/webm; codecs=\"aac\"','video/webm; codecs=\"avc1\"','video/webm; codecs=\"vp8,aac\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Leading space in contentType",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Space before ; in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
-        },
-        {
-          "name": "Trailing space in contentType",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Space at start of codecs parameter",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Space at end of codecs parameter",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Video/",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Codecs=",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Upper case MIME type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "CODECS=",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Unrecognized foo with webm ('video/webm; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Unrecognized foo with mp4 ('video/mp4; foo=\"bar\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Unrecognized foo with codecs ('video/mp4;codecs=\"avc1.4d401e\"; foo=\"bar\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: contentType: 'fake' should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: contentType: 'audio/fake' should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: contentType: 'video/fake' should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\"AVC1.4D401E\"' should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
-        },
-        {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\",avc1.4d401e\"' should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-mp4-unique-origin.html",
-      "subtests": [
-        {
-          "name": "Unique origin is unable to create MediaKeys",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-not-callable-after-createsession.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, temporary, update() immediately after createSession()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, temporary, close() immediately after createSession()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "polyfill: drm, temporary, remove() immediately after createSession()",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/drm-temporary-license-type.html",
-      "subtests": [
-        {
-          "name": "polyfill: drm, cannot load persistent license into temporary session",
-          "status": "TIMEOUT"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/encrypted-media/polyfill/idlharness.html",
-      "subtests": [],
-      "status": "TIMEOUT",
       "message": null
     }
   ]
