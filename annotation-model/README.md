@@ -22,7 +22,11 @@ Index of implementations in reports
 
 * TK - implementation Name: Takeshi Kanai
   * email: takeshi.kanai@sony.com
-  
+
+* EF - implementation Name: Europeana Foundation (v0.2.4)
+  * email: api@europeana.eu
+  * link: http://labs.europeana.eu/api/annotations
+  * gitHub: https://github.com/europeana/annotation
 
 Adding new results
 ==================
