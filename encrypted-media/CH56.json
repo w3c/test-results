@@ -27,8 +27,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test MediaKeySession closed event.",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -36,14 +36,56 @@
     },
     {
       "test": "/encrypted-media/clearkey-events.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, basic events",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/encrypted-media/clearkey-generate-request-disallowed-input.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, temporary, webm, initData longer than 64Kb characters",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "org.w3.clearkey, temporary, cenc, initData longer than 64Kb characters",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "org.w3.clearkey, temporary, keyids, initData longer than 64Kb characters",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "org.w3.clearkey, temporary, cenc, invalid initdata (invalid pssh)",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "org.w3.clearkey, temporary, cenc, invalid initdata (not pssh)",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "org.w3.clearkey, temporary, keyids, invalid initdata (too short key ID)",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "org.w3.clearkey, temporary, keyids, invalid initdata (too long key ID)",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -51,8 +93,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -60,14 +102,26 @@
     },
     {
       "test": "/encrypted-media/clearkey-keystatuses-multiple-sessions.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, temporary, keystatuses, multiple sessions",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/encrypted-media/clearkey-keystatuses.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, temporary, keystatuses",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -163,18 +217,20 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "TIMEOUT"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
     },
     {
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-encrypted-clear-sources.html",
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, encrypted and clear sources",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -185,18 +241,20 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, single key, encrypted then clear content",
-          "status": "TIMEOUT"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
     },
     {
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-events.html",
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, check events",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -207,7 +265,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, multikey audio/video",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -218,7 +277,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback with multiple sessions, multikey video",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -229,7 +289,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, setMediaKeys after setting video.src",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -240,7 +301,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, setMediaKeys after updating session",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -251,7 +313,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, setMediaKeys first",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -262,7 +325,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, setMediaKeys in encrypted event",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -273,7 +337,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, successful playback, temporary, mp4, waitingforkey event, 1 key",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -284,7 +349,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, single key",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -295,7 +361,8 @@
       "subtests": [
         {
           "name": "Reset src after setMediaKeys().",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -318,7 +385,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, setmediakeys again after resetting src",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -326,22 +394,29 @@
     },
     {
       "test": "/encrypted-media/clearkey-mp4-setmediakeys-at-same-time.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, setmediakeys at same time",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/encrypted-media/clearkey-mp4-setmediakeys-multiple-times-with-different-mediakeys.html",
       "subtests": [],
       "status": "ERROR",
-      "message": "Expected ';'"
+      "message": "Uncaught SyntaxError: Unexpected token )"
     },
     {
       "test": "/encrypted-media/clearkey-mp4-setmediakeys-multiple-times-with-the-same-mediakeys.html",
       "subtests": [
         {
           "name": "org.w3.clearkey, setmediakeys multiple times with the same mediakeys",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -349,14 +424,25 @@
     },
     {
       "test": "/encrypted-media/clearkey-mp4-setmediakeys-to-multiple-video-elements.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, setMediaKeys to multiple video elements",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/encrypted-media/clearkey-mp4-setmediakeys.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, setMediaKeys",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -364,18 +450,18 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test MediaKeys attribute syntax",
-          "status": "FAIL",
-          "message": "assert_true: initDataType should be supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeys setServerCertificate() exceptions.",
           "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate(new Uint8Array(0));\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "org.w3.clearkey test MediaKeys setServerCertificate() syntax with non-empty certificate.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -386,38 +472,38 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test MediaKeySession generateRequest() exceptions.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession load() exceptions.",
           "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "message": "assert_equals: function \"function (mk3) {\r\n                return mk3.createSession('temporary').load('');\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "FAIL",
-          "message": "assert_true: initDataType should be supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession update() exceptions.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession close() exceptions.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession remove() exceptions.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession attribute syntax.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -433,8 +519,8 @@
         },
         {
           "name": "org.w3.clearkey test MediaKeySystemAccess attribute syntax.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -457,8 +543,8 @@
       "subtests": [
         {
           "name": "update() with invalid response (longer than 64Kb characters) should fail.",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"InvalidAccessError\" but got \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -469,8 +555,8 @@
       "subtests": [
         {
           "name": "Waiting for a key.",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -481,18 +567,18 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, update() immediately after createSession()",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, temporary, close() immediately after createSession()",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, temporary, remove() immediately after createSession()",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -503,8 +589,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test handling of non-ASCII responses for update()",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -537,11 +623,11 @@
       "subtests": [
         {
           "name": "drm test MediaKeySession closed event.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -561,8 +647,8 @@
       "subtests": [
         {
           "name": "drm, expiration",
-          "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476128907515 +/- 4000 but got NaN"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -572,12 +658,12 @@
       "test": "/encrypted-media/drm-generate-request-disallowed-input.html",
       "subtests": [
         {
-          "name": "drm, temporary, cenc, initData longer than 64Kb characters",
+          "name": "drm, temporary, webm, initData longer than 64Kb characters",
           "status": "FAIL",
           "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
-          "name": "drm, temporary, keyids, initData longer than 64Kb characters",
+          "name": "drm, temporary, cenc, initData longer than 64Kb characters",
           "status": "FAIL",
           "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
@@ -590,16 +676,6 @@
           "name": "drm, temporary, cenc, invalid initdata (not pssh)",
           "status": "FAIL",
           "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        },
-        {
-          "name": "drm, temporary, keyids, invalid initdata (too short key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        },
-        {
-          "name": "drm, temporary, keyids, invalid initdata (too long key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         }
       ],
       "status": "OK",
@@ -610,11 +686,11 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -622,8 +698,8 @@
       "subtests": [
         {
           "name": "drm, temporary, keystatuses, multiple sessions",
-          "status": "FAIL",
-          "message": "assert_true: keystatuses should have the expected keys expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -634,11 +710,11 @@
       "subtests": [
         {
           "name": "drm, temporary, keystatuses",
-          "status": "FAIL",
-          "message": "Object doesn't support property or method 'Symbol.iterator'"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -646,8 +722,8 @@
       "subtests": [
         {
           "name": "encrypted fired on encrypted media file.",
-          "status": "FAIL",
-          "message": "assert_true: expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -691,8 +767,7 @@
       "subtests": [
         {
           "name": "drm, persistent-usage-record, mp4, playback, check events",
-          "status": "FAIL",
-          "message": "Object doesn't support property or method 'then'"
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -703,8 +778,7 @@
       "subtests": [
         {
           "name": "drm, persistent-usage-record, mp4, playback, retrieve in new window",
-          "status": "FAIL",
-          "message": "Object doesn't support property or method 'then'"
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -715,12 +789,12 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-encrypted-clear-sources.html",
@@ -739,12 +813,12 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-expired.html",
@@ -752,7 +826,7 @@
         {
           "name": "drm, temporary, mp4, expired license",
           "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476128827619 +/- 2000 but got NaN"
+          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476128899338 +/- 2000 but got NaN"
         }
       ],
       "status": "OK",
@@ -847,12 +921,12 @@
       "subtests": [
         {
           "name": "drm, successful playback, temporary, mp4, waitingforkey event, 1 key",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "ERROR",
-      "message": "Error: assert_equals: expected 1 but got 0"
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary.html",
@@ -871,11 +945,11 @@
       "subtests": [
         {
           "name": "Reset src after setMediaKeys().",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -918,7 +992,7 @@
       "test": "/encrypted-media/drm-mp4-setmediakeys-multiple-times-with-different-mediakeys.html",
       "subtests": [],
       "status": "ERROR",
-      "message": "Expected ';'"
+      "message": "Uncaught SyntaxError: Unexpected token )"
     },
     {
       "test": "/encrypted-media/drm-mp4-setmediakeys-multiple-times-with-the-same-mediakeys.html",
@@ -966,7 +1040,7 @@
         {
           "name": "drm test MediaKeys setServerCertificate() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate('');\r\n            }\" expected \"TypeError\" but got \"Error\""
+          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate(new Uint8Array(0));\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "drm test MediaKeys setServerCertificate() syntax with non-empty certificate.",
@@ -982,8 +1056,8 @@
       "subtests": [
         {
           "name": "drm test MediaKeySession generateRequest() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk2, type) {\r\n                return mk2.createSession().generateRequest(type, '');\r\n            }\" expected \"TypeError\" but got \"Error\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeySession load() exceptions.",
@@ -997,8 +1071,8 @@
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (s) {\r\n                return s.update(null);\r\n            }\" expected \"TypeError\" but got \"Error\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeySession close() exceptions.",
@@ -1012,8 +1086,8 @@
         },
         {
           "name": "drm test MediaKeySession attribute syntax.",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"object\" but got \"undefined\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1050,9 +1124,15 @@
     },
     {
       "test": "/encrypted-media/drm-mp4-waiting-for-a-key.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "Waiting for a key.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-not-callable-after-createsession.html",
@@ -1094,7 +1174,7 @@
         {
           "name": "Navigator interface: operation requestMediaKeySystemAccess(DOMString,[object Object])",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 2 but got 0"
+          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
         },
         {
           "name": "HTMLMediaElement interface: attribute mediaKeys",
@@ -1103,18 +1183,18 @@
         },
         {
           "name": "HTMLMediaElement interface: attribute onencrypted",
-          "status": "FAIL",
-          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "HTMLMediaElement interface: attribute onwaitingforkey",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onwaitingforkey\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "HTMLMediaElement interface: operation setMediaKeys(MediaKeys)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
         },
         {
           "name": "MediaKeySystemAccess interface: existence and properties of interface object",
@@ -1123,8 +1203,8 @@
         },
         {
           "name": "MediaKeySystemAccess interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeySystemAccess interface object name",
@@ -1133,8 +1213,8 @@
         },
         {
           "name": "MediaKeySystemAccess interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of MediaKeySystemAccess.prototype expected \"[object MediaKeySystemAccessPrototype]\" but got \"[object MediaKeySystemAccess]\""
         },
         {
           "name": "MediaKeySystemAccess interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1154,7 +1234,7 @@
         {
           "name": "MediaKeySystemAccess interface: operation createMediaKeys()",
           "status": "FAIL",
-          "message": "assert_unreached: Throws \"TypeError: Invalid calling object\" instead of rejecting promise Reached unreachable code"
+          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
         },
         {
           "name": "MediaKeys interface: existence and properties of interface object",
@@ -1163,8 +1243,8 @@
         },
         {
           "name": "MediaKeys interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeys interface object name",
@@ -1173,8 +1253,8 @@
         },
         {
           "name": "MediaKeys interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of MediaKeys.prototype expected \"[object MediaKeysPrototype]\" but got \"[object MediaKeys]\""
         },
         {
           "name": "MediaKeys interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1189,17 +1269,17 @@
         {
           "name": "MediaKeys interface: operation setServerCertificate(BufferSource)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
         },
         {
           "name": "MediaKeySession interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of MediaKeySession is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"function() {\n    [native code]\n}\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeySession interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeySession interface object name",
@@ -1208,8 +1288,8 @@
         },
         {
           "name": "MediaKeySession interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of MediaKeySession.prototype expected \"[object MediaKeySessionPrototype]\" but got \"[object MediaKeySession]\""
         },
         {
           "name": "MediaKeySession interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1238,38 +1318,38 @@
         },
         {
           "name": "MediaKeySession interface: attribute onkeystatuseschange",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onkeystatuseschange\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeySession interface: attribute onmessage",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onmessage\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeySession interface: operation generateRequest(DOMString,BufferSource)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 2 but got 0"
+          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
         },
         {
           "name": "MediaKeySession interface: operation load(DOMString)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
         },
         {
           "name": "MediaKeySession interface: operation update(BufferSource)",
           "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
         },
         {
           "name": "MediaKeySession interface: operation close()",
           "status": "FAIL",
-          "message": "assert_unreached: Throws \"TypeError: Invalid calling object\" instead of rejecting promise Reached unreachable code"
+          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
         },
         {
           "name": "MediaKeySession interface: operation remove()",
           "status": "FAIL",
-          "message": "assert_unreached: Throws \"TypeError: Invalid calling object\" instead of rejecting promise Reached unreachable code"
+          "message": "assert_unreached: Throws \"TypeError: Illegal invocation\" instead of rejecting promise Reached unreachable code"
         },
         {
           "name": "MediaKeyStatusMap interface: existence and properties of interface object",
@@ -1278,8 +1358,8 @@
         },
         {
           "name": "MediaKeyStatusMap interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeyStatusMap interface object name",
@@ -1288,8 +1368,8 @@
         },
         {
           "name": "MediaKeyStatusMap interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of MediaKeyStatusMap.prototype expected \"[object MediaKeyStatusMapPrototype]\" but got \"[object MediaKeyStatusMap]\""
         },
         {
           "name": "MediaKeyStatusMap interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1303,23 +1383,23 @@
         },
         {
           "name": "MediaKeyStatusMap interface: operation has(BufferSource)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeyStatusMap interface: operation get(BufferSource)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeyMessageEvent interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of MediaKeyMessageEvent is not Event expected function \"function Event() { [native code] }\" but got function \"function() {\n    [native code]\n}\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaKeyMessageEvent interface object length",
           "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "message": "assert_equals: wrong value for MediaKeyMessageEvent.length expected 2 but got 1"
         },
         {
           "name": "MediaKeyMessageEvent interface object name",
@@ -1328,8 +1408,8 @@
         },
         {
           "name": "MediaKeyMessageEvent interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of MediaKeyMessageEvent.prototype expected \"[object MediaKeyMessageEventPrototype]\" but got \"[object MediaKeyMessageEvent]\""
         },
         {
           "name": "MediaKeyMessageEvent interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1348,13 +1428,13 @@
         },
         {
           "name": "MediaEncryptedEvent interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of MediaEncryptedEvent is not Event expected function \"function Event() { [native code] }\" but got function \"function() {\n    [native code]\n}\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaEncryptedEvent interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MediaEncryptedEvent interface object name",
@@ -1363,8 +1443,8 @@
         },
         {
           "name": "MediaEncryptedEvent interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: class string of MediaEncryptedEvent.prototype expected \"[object MediaEncryptedEventPrototype]\" but got \"[object MediaEncryptedEvent]\""
         },
         {
           "name": "MediaEncryptedEvent interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1390,7 +1470,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential, readyState",
-          "status": "TIMEOUT"
+          "status": "FAIL",
+          "message": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 4"
         }
       ],
       "status": "OK",
@@ -1401,7 +1482,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential",
-          "status": "TIMEOUT"
+          "status": "FAIL",
+          "message": "assert_false: Should not continue playing whilst waiting for a key expected false got true"
         }
       ],
       "status": "OK",
@@ -1409,9 +1491,15 @@
     },
     {
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-two-videos.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, temporary, mp4, playback two videos",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/clearkey-mp4-requestmediakeysystemaccess.html",
@@ -1523,28 +1611,28 @@
         },
         {
           "name": "Empty configuration",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Basic supported configuration",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Partially supported configuration",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Supported audio codec",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "ContentType formatting must be preserved",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: Unsupported audio codec ('audio/webm; codecs=fake') should result in NotSupportedError",
@@ -1583,13 +1671,13 @@
         },
         {
           "name": "Two configurations, one supported",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Two configurations, both supported",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (webm) ('audio/webm; codecs=\"vp8,vorbis\"','audio/webm; codecs=\"vorbis, vp8\"','audio/webm; codecs=\"vp8\"') should result in NotSupportedError",
@@ -1623,63 +1711,63 @@
         },
         {
           "name": "Leading space in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Space before ; in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Trailing space in contentType",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError: None of the requested configurations were supported.\""
         },
         {
           "name": "Space at start of codecs parameter",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Space at end of codecs parameter",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Video/",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Codecs=",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Upper case MIME type",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "CODECS=",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with webm ('video/webm; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
         },
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with mp4 ('video/mp4; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
         },
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with codecs ('video/mp4;codecs=\"avc1.4d401e\"; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
         },
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'fake' should result in NotSupportedError",
@@ -1715,8 +1803,7 @@
       "subtests": [
         {
           "name": "drm, persistent-usage-record, mp4playback",
-          "status": "FAIL",
-          "message": "Object doesn't support property or method 'then'"
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -1746,21 +1833,39 @@
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-events.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, temporary, mp4, playback, check events",
+          "status": "FAIL",
+          "message": "assert_array_equals: Expected events sequence lengths differ, expected 9 got 8"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential-readyState.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, successful playback, temporary, mp4, multiple keys, sequential, readyState",
+          "status": "FAIL",
+          "message": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 4"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, successful playback, temporary, mp4, multiple keys, sequential",
+          "status": "FAIL",
+          "message": "assert_false: Should not continue playing whilst waiting for a key expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-requestmediakeysystemaccess.html",
@@ -1776,17 +1881,17 @@
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Key System ending in \".\" (com.microsoft.playready.) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Key System ending in \".\" (com.widevine.alpha.) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Capitalized Key System (COM.MICROSOFT.PLAYREADY) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Capitalized Key System (COM.WIDEVINE.ALPHA) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Non-ASCII Key System (com.microsoft.playreadyʏ) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Non-ASCII Key System (com.widevine.alphaʏ) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
@@ -1801,12 +1906,12 @@
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Domain of Key System along (com.microsoft) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Domain of Key System along (com.widevine) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Domain of Key System, with dot (com.microsoft.) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Domain of Key System, with dot (com.widevine.) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
@@ -1821,47 +1926,47 @@
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Incomplete Key System name (com.micosoft.playready) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Incomplete Key System name (com.widvine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Incomplete Key System name (com.microsoft.playread) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Incomplete Key System name (com.widevine.alph) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Leading space in Key System name ( com.microsoft.playready) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Leading space in Key System name ( com.widevine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Extra space in Key System name (com.mi crosoft.playready) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Extra space in Key System name (com.wi devine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Trailing space in Key System name (com.microsoft.playready ) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Trailing space in Key System name (com.widevine.alpha ) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Leading dot in Key System name (.com.microsoft.playready) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Leading dot in Key System name (.com.widevine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.mi.crosoft.playready) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.wi.devine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.microsoft.playready.) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.widevine.alpha.) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Key System name is case sensitive (COM.MICROSOFT.PLAYREADY) should result in NotSupportedError",
+          "name": "drm, requestMediaKeySystemAccess: Key System name is case sensitive (COM.WIDEVINE.ALPHA) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
@@ -1912,13 +2017,13 @@
         },
         {
           "name": "drm, requestMediaKeySystemAccess: Video codec specified in audio field ('video/mp4;codecs=\"avc1.4d401e\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm, requestMediaKeySystemAccess: Audio codec specified in video field ('audio/mp4;codecs=\"mp4a.40.2\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=avc1','audio/webm; codecs=avc1.42e01e') should result in NotSupportedError",
@@ -1957,8 +2062,8 @@
         },
         {
           "name": "drm, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (mp4) ('video/mp4; codecs=\"mp4a\"','video/mp4; codecs=\"mp4a.40.2\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm, requestMediaKeySystemAccess: WebM audio does not support AVC1/AAC ('audio/webm; codecs=\"aac\"','audio/webm; codecs=\"avc1\"','audio/webm; codecs=\"vp8,aac\"') should result in NotSupportedError",
@@ -1977,13 +2082,13 @@
         },
         {
           "name": "Space before ; in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Trailing space in contentType",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError: None of the requested configurations were supported.\""
         },
         {
           "name": "Space at start of codecs parameter",
@@ -2017,8 +2122,8 @@
         },
         {
           "name": "drm, requestMediaKeySystemAccess: Unrecognized foo with webm ('video/webm; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
         },
         {
           "name": "drm, requestMediaKeySystemAccess: Unrecognized foo with mp4 ('video/mp4; foo=\"bar\"') should result in NotSupportedError",
@@ -2047,8 +2152,8 @@
         },
         {
           "name": "drm, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\"AVC1.4D401E\"' should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\",avc1.4d401e\"' should result in NotSupportedError",
@@ -2086,8 +2191,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey test MediaKeySession closed event.",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2095,14 +2200,56 @@
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-events.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "polyfill: org.w3.clearkey, basic events",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-generate-request-disallowed-input.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, webm, initData longer than 64Kb characters",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, cenc, initData longer than 64Kb characters",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, keyids, initData longer than 64Kb characters",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, cenc, invalid initdata (invalid pssh)",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, cenc, invalid initdata (not pssh)",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, keyids, invalid initdata (too short key ID)",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        },
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, keyids, invalid initdata (too long key ID)",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -2110,8 +2257,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2119,14 +2266,26 @@
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-keystatuses-multiple-sessions.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, keystatuses, multiple sessions",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-keystatuses.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, keystatuses",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -2134,7 +2293,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, persistent-license, mp4, playback, destroy and acknowledge",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2145,7 +2305,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, persistent-license, mp4, playback, check events",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2156,7 +2317,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, persistent-license, mp4playback",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2167,7 +2329,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, persistent-usage-record, mp4, playback, check events",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2178,7 +2341,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, persistent-usage-record, mp4playback",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2189,7 +2353,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, persistent-license, mp4, playback, retrieve, playback and destroy",
-          "status": "TIMEOUT"
+          "status": "FAIL",
+          "message": "Cannot set property 'onload' of null"
         }
       ],
       "status": "OK",
@@ -2200,7 +2365,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, persistent-license, mp4, playback, retrieve and playback",
-          "status": "TIMEOUT"
+          "status": "FAIL",
+          "message": "Cannot set property 'onload' of null"
         }
       ],
       "status": "OK",
@@ -2211,7 +2377,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, persistent-usage-record, mp4, playback, retrieve in new window",
-          "status": "TIMEOUT"
+          "status": "FAIL",
+          "message": "Cannot set property 'onload' of null"
         }
       ],
       "status": "OK",
@@ -2222,18 +2389,20 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "TIMEOUT"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-encrypted-clear-sources.html",
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, encrypted and clear sources",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2244,18 +2413,20 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, single key, encrypted then clear content",
-          "status": "TIMEOUT"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-events.html",
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, check events",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2266,7 +2437,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential, readyState",
-          "status": "TIMEOUT"
+          "status": "FAIL",
+          "message": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 4"
         }
       ],
       "status": "OK",
@@ -2277,7 +2449,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential",
-          "status": "TIMEOUT"
+          "status": "FAIL",
+          "message": "assert_equals: Playback should start with a single key / session expected 1 but got 2"
         }
       ],
       "status": "OK",
@@ -2288,7 +2461,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, multikey audio/video",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2299,7 +2473,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback with multiple sessions, multikey video",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2310,7 +2485,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, setMediaKeys after setting video.src",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2321,7 +2497,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, setMediaKeys after updating session",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2332,7 +2509,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, setMediaKeys first",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2343,7 +2521,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, setMediaKeys in encrypted event",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2351,16 +2530,23 @@
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-two-videos.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "polyfill: org.w3.clearkey, temporary, mp4, playback two videos",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-waitingforkey.html",
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, successful playback, temporary, mp4, waitingforkey event, 1 key",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2371,7 +2557,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, single key",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2487,28 +2674,28 @@
         },
         {
           "name": "Empty configuration",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Basic supported configuration",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Partially supported configuration",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Supported audio codec",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "ContentType formatting must be preserved",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unsupported audio codec ('audio/webm; codecs=fake') should result in NotSupportedError",
@@ -2547,13 +2734,13 @@
         },
         {
           "name": "Two configurations, one supported",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Two configurations, both supported",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (webm) ('audio/webm; codecs=\"vp8,vorbis\"','audio/webm; codecs=\"vorbis, vp8\"','audio/webm; codecs=\"vp8\"') should result in NotSupportedError",
@@ -2587,63 +2774,63 @@
         },
         {
           "name": "Leading space in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Space before ; in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Trailing space in contentType",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError: None of the requested configurations were supported.\""
         },
         {
           "name": "Space at start of codecs parameter",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Space at end of codecs parameter",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Video/",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Codecs=",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Upper case MIME type",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "CODECS=",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with webm ('video/webm; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
         },
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with mp4 ('video/mp4; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
         },
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with codecs ('video/mp4;codecs=\"avc1.4d401e\"; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
         },
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'fake' should result in NotSupportedError",
@@ -2679,7 +2866,8 @@
       "subtests": [
         {
           "name": "Reset src after setMediaKeys().",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2702,7 +2890,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, setmediakeys again after resetting src",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2710,22 +2899,29 @@
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-setmediakeys-at-same-time.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, setmediakeys at same time",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-setmediakeys-multiple-times-with-different-mediakeys.html",
       "subtests": [],
       "status": "ERROR",
-      "message": "Expected ';'"
+      "message": "Uncaught SyntaxError: Unexpected token )"
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-setmediakeys-multiple-times-with-the-same-mediakeys.html",
       "subtests": [
         {
           "name": "org.w3.clearkey, setmediakeys multiple times with the same mediakeys",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2733,14 +2929,25 @@
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-setmediakeys-to-multiple-video-elements.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, setMediaKeys to multiple video elements",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-setmediakeys.html",
-      "subtests": [],
-      "status": "TIMEOUT",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, setMediaKeys",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
       "message": null
     },
     {
@@ -2748,18 +2955,18 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test MediaKeys attribute syntax",
-          "status": "FAIL",
-          "message": "assert_true: initDataType should be supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeys setServerCertificate() exceptions.",
           "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate(new Uint8Array(0));\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "org.w3.clearkey test MediaKeys setServerCertificate() syntax with non-empty certificate.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2770,38 +2977,38 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test MediaKeySession generateRequest() exceptions.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession load() exceptions.",
           "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "message": "assert_equals: function \"function (mk3) {\r\n                return mk3.createSession('temporary').load('');\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "FAIL",
-          "message": "assert_true: initDataType should be supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession update() exceptions.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession close() exceptions.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession remove() exceptions.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession attribute syntax.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2813,12 +3020,12 @@
         {
           "name": "org.w3.clearkey test requestMediaKeySystemAccess() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess();\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess(new Uint8Array(0), [{}]);\r\n            }\" expected \"NotSupportedError\" but got \"InvalidAccessError\""
         },
         {
           "name": "org.w3.clearkey test MediaKeySystemAccess attribute syntax.",
-          "status": "FAIL",
-          "message": "assert_true: initDataType not supported expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2841,8 +3048,8 @@
       "subtests": [
         {
           "name": "update() with invalid response (longer than 64Kb characters) should fail.",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"InvalidAccessError\" but got \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2853,8 +3060,8 @@
       "subtests": [
         {
           "name": "Waiting for a key.",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2865,18 +3072,18 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, update() immediately after createSession()",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, temporary, close() immediately after createSession()",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, temporary, remove() immediately after createSession()",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2887,8 +3094,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey test handling of non-ASCII responses for update()",
-          "status": "FAIL",
-          "message": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2921,11 +3128,11 @@
       "subtests": [
         {
           "name": "polyfill: drm test MediaKeySession closed event.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -2944,18 +3151,18 @@
       "test": "/encrypted-media/polyfill/drm-expiration.html",
       "subtests": [],
       "status": "ERROR",
-      "message": "Syntax error"
+      "message": "Uncaught SyntaxError: Unexpected token ,"
     },
     {
       "test": "/encrypted-media/polyfill/drm-generate-request-disallowed-input.html",
       "subtests": [
         {
-          "name": "polyfill: drm, temporary, cenc, initData longer than 64Kb characters",
+          "name": "polyfill: drm, temporary, webm, initData longer than 64Kb characters",
           "status": "FAIL",
           "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
-          "name": "polyfill: drm, temporary, keyids, initData longer than 64Kb characters",
+          "name": "polyfill: drm, temporary, cenc, initData longer than 64Kb characters",
           "status": "FAIL",
           "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
@@ -2968,16 +3175,6 @@
           "name": "polyfill: drm, temporary, cenc, invalid initdata (not pssh)",
           "status": "FAIL",
           "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        },
-        {
-          "name": "polyfill: drm, temporary, keyids, invalid initdata (too short key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-        },
-        {
-          "name": "polyfill: drm, temporary, keyids, invalid initdata (too long key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         }
       ],
       "status": "OK",
@@ -2988,11 +3185,11 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -3000,7 +3197,8 @@
       "subtests": [
         {
           "name": "polyfill: drm, temporary, keystatuses, multiple sessions",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3011,11 +3209,11 @@
       "subtests": [
         {
           "name": "polyfill: drm, temporary, keystatuses",
-          "status": "FAIL",
-          "message": "assert_equals: expected 0 but got 2"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -3023,8 +3221,8 @@
       "subtests": [
         {
           "name": "encrypted fired on encrypted media file.",
-          "status": "FAIL",
-          "message": "assert_true: expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3068,8 +3266,7 @@
       "subtests": [
         {
           "name": "polyfill: drm, persistent-usage-record, mp4, playback, check events",
-          "status": "FAIL",
-          "message": "Invalid calling object"
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -3080,8 +3277,7 @@
       "subtests": [
         {
           "name": "polyfill: drm, persistent-usage-record, mp4playback",
-          "status": "FAIL",
-          "message": "Invalid calling object"
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -3114,8 +3310,7 @@
       "subtests": [
         {
           "name": "polyfill: drm, persistent-usage-record, mp4, playback, retrieve in new window",
-          "status": "FAIL",
-          "message": "Invalid calling object"
+          "status": "TIMEOUT"
         }
       ],
       "status": "OK",
@@ -3126,12 +3321,12 @@
       "subtests": [
         {
           "name": "polyfill: drm, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-encrypted-clear-sources.html",
@@ -3150,12 +3345,12 @@
       "subtests": [
         {
           "name": "polyfill: drm, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-events.html",
@@ -3163,7 +3358,7 @@
         {
           "name": "polyfill: drm, temporary, mp4, playback, check events",
           "status": "FAIL",
-          "message": "assert_array_equals: Expected events sequence property 0, expected \"generaterequest\" but got \"license-request\""
+          "message": "assert_array_equals: Expected events sequence lengths differ, expected 9 got 8"
         }
       ],
       "status": "OK",
@@ -3175,7 +3370,7 @@
         {
           "name": "polyfill: drm, temporary, mp4, expired license",
           "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476129148295 +/- 2000 but got NaN"
+          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476129072315 +/- 2000 but got NaN"
         }
       ],
       "status": "OK",
@@ -3183,15 +3378,27 @@
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey-sequential-readyState.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "polyfill: drm, successful playback, temporary, mp4, multiple keys, sequential, readyState",
+          "status": "FAIL",
+          "message": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 4"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey-sequential.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "polyfill: drm, successful playback, temporary, mp4, multiple keys, sequential",
+          "status": "FAIL",
+          "message": "assert_false: Should not continue playing whilst waiting for a key expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey.html",
@@ -3282,12 +3489,12 @@
       "subtests": [
         {
           "name": "polyfill: drm, successful playback, temporary, mp4, waitingforkey event, 1 key",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "ERROR",
-      "message": "Error: assert_equals: expected 1 but got 0"
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary.html",
@@ -3315,17 +3522,17 @@
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Key System ending in \".\" (com.microsoft.playready.) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Key System ending in \".\" (com.widevine.alpha.) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Capitalized Key System (COM.MICROSOFT.PLAYREADY) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Capitalized Key System (COM.WIDEVINE.ALPHA) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Non-ASCII Key System (com.microsoft.playreadyʏ) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Non-ASCII Key System (com.widevine.alphaʏ) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
@@ -3340,12 +3547,12 @@
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Domain of Key System along (com.microsoft) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Domain of Key System along (com.widevine) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Domain of Key System, with dot (com.microsoft.) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Domain of Key System, with dot (com.widevine.) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
@@ -3360,47 +3567,47 @@
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Incomplete Key System name (com.micosoft.playready) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Incomplete Key System name (com.widvine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Incomplete Key System name (com.microsoft.playread) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Incomplete Key System name (com.widevine.alph) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Leading space in Key System name ( com.microsoft.playready) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Leading space in Key System name ( com.widevine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Extra space in Key System name (com.mi crosoft.playready) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Extra space in Key System name (com.wi devine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Trailing space in Key System name (com.microsoft.playready ) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Trailing space in Key System name (com.widevine.alpha ) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Leading dot in Key System name (.com.microsoft.playready) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Leading dot in Key System name (.com.widevine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.mi.crosoft.playready) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.wi.devine.alpha) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.microsoft.playready.) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.widevine.alpha.) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Key System name is case sensitive (COM.MICROSOFT.PLAYREADY) should result in NotSupportedError",
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Key System name is case sensitive (COM.WIDEVINE.ALPHA) should result in NotSupportedError",
           "status": "PASS",
           "message": null
         },
@@ -3451,13 +3658,13 @@
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Video codec specified in audio field ('video/mp4;codecs=\"avc1.4d401e\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Audio codec specified in video field ('audio/mp4;codecs=\"mp4a.40.2\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=avc1','audio/webm; codecs=avc1.42e01e') should result in NotSupportedError",
@@ -3496,8 +3703,8 @@
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (mp4) ('video/mp4; codecs=\"mp4a\"','video/mp4; codecs=\"mp4a.40.2\"') should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: WebM audio does not support AVC1/AAC ('audio/webm; codecs=\"aac\"','audio/webm; codecs=\"avc1\"','audio/webm; codecs=\"vp8,aac\"') should result in NotSupportedError",
@@ -3516,13 +3723,13 @@
         },
         {
           "name": "Space before ; in contentType",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Trailing space in contentType",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError: None of the requested configurations were supported.\""
         },
         {
           "name": "Space at start of codecs parameter",
@@ -3556,8 +3763,8 @@
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Unrecognized foo with webm ('video/webm; foo=\"bar\"') should result in NotSupportedError",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Unrecognized foo with mp4 ('video/mp4; foo=\"bar\"') should result in NotSupportedError",
@@ -3586,8 +3793,8 @@
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\"AVC1.4D401E\"' should result in NotSupportedError",
-          "status": "FAIL",
-          "message": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\",avc1.4d401e\"' should result in NotSupportedError",
@@ -3603,11 +3810,11 @@
       "subtests": [
         {
           "name": "Reset src after setMediaKeys().",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -3650,7 +3857,7 @@
       "test": "/encrypted-media/polyfill/drm-mp4-setmediakeys-multiple-times-with-different-mediakeys.html",
       "subtests": [],
       "status": "ERROR",
-      "message": "Expected ';'"
+      "message": "Uncaught SyntaxError: Unexpected token )"
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-setmediakeys-multiple-times-with-the-same-mediakeys.html",
@@ -3698,7 +3905,7 @@
         {
           "name": "drm test MediaKeys setServerCertificate() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate('');\r\n            }\" expected \"TypeError\" but got \"Error\""
+          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate(new Uint8Array(0));\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "drm test MediaKeys setServerCertificate() syntax with non-empty certificate.",
@@ -3714,8 +3921,8 @@
       "subtests": [
         {
           "name": "drm test MediaKeySession generateRequest() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk2, type) {\r\n                return mk2.createSession().generateRequest(type, '');\r\n            }\" expected \"TypeError\" but got \"Error\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeySession load() exceptions.",
@@ -3729,8 +3936,8 @@
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (s) {\r\n                return s.update(1);\r\n            }\" expected \"TypeError\" but got \"Error\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeySession close() exceptions.",
@@ -3744,8 +3951,8 @@
         },
         {
           "name": "drm test MediaKeySession attribute syntax.",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"object\" but got \"undefined\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3757,7 +3964,7 @@
         {
           "name": "drm test requestMediaKeySystemAccess() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess();\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess(new Uint8Array(0), [{}]);\r\n            }\" expected \"NotSupportedError\" but got \"InvalidAccessError\""
         },
         {
           "name": "drm test MediaKeySystemAccess attribute syntax.",
@@ -3782,9 +3989,15 @@
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-waiting-for-a-key.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "Waiting for a key.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/drm-not-callable-after-createsession.html",

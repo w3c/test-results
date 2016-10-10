@@ -1,13 +1,13 @@
 {
   "ua": [
-    "CH55",
+    "CH56",
     "ED14",
     "FF52"
   ],
   "results": {
     "/encrypted-media/clearkey-check-initdata-type.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -18,7 +18,7 @@
       "subtests": {
         "org.w3.clearkey support for \"webm\".": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -29,7 +29,7 @@
         },
         "org.w3.clearkey support for \"cenc\".": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -40,7 +40,7 @@
         },
         "org.w3.clearkey support for \"keyids\".": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -53,7 +53,7 @@
     },
     "/encrypted-media/clearkey-events-session-closed-event.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -64,20 +64,23 @@
       "subtests": {
         "org.w3.clearkey test MediaKeySession closed event.": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-events.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "TIMEOUT",
         "FF52": "OK"
       },
@@ -89,7 +92,7 @@
       "subtests": {
         "org.w3.clearkey, basic events": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -101,7 +104,7 @@
     },
     "/encrypted-media/clearkey-generate-request-disallowed-input.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "TIMEOUT",
         "FF52": "OK"
       },
@@ -113,65 +116,100 @@
       "subtests": {
         "org.w3.clearkey, temporary, webm, initData longer than 64Kb characters": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         },
         "org.w3.clearkey, temporary, cenc, initData longer than 64Kb characters": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         },
         "org.w3.clearkey, temporary, keyids, initData longer than 64Kb characters": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         },
         "org.w3.clearkey, temporary, cenc, invalid initdata (invalid pssh)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         },
         "org.w3.clearkey, temporary, cenc, invalid initdata (not pssh)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         },
         "org.w3.clearkey, temporary, keyids, invalid initdata (too short key ID)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         },
         "org.w3.clearkey, temporary, keyids, invalid initdata (too long key ID)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         }
       }
     },
     "/encrypted-media/clearkey-invalid-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -182,7 +220,7 @@
       "subtests": {
         "Update with invalid Clear Key license": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -195,7 +233,7 @@
     },
     "/encrypted-media/clearkey-keystatuses-multiple-sessions.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "TIMEOUT",
         "FF52": "OK"
       },
@@ -207,7 +245,7 @@
       "subtests": {
         "org.w3.clearkey, temporary, keystatuses, multiple sessions": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -219,7 +257,7 @@
     },
     "/encrypted-media/clearkey-keystatuses.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "TIMEOUT",
         "FF52": "OK"
       },
@@ -231,19 +269,19 @@
       "subtests": {
         "org.w3.clearkey, temporary, keystatuses": {
           "byUA": {
-            "CH55": "PASS",
-            "FF52": "FAIL"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-destroy-persistent-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -254,18 +292,21 @@
       "subtests": {
         "org.w3.clearkey, persistent-license, mp4, playback, destroy and acknowledge": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "POLYFILL",
             "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "FF52": "POLYFILL"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "POLYFILL": 2,
+            "TIMEOUT": 1
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-persistent-license-events.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -276,18 +317,21 @@
       "subtests": {
         "org.w3.clearkey, persistent-license, mp4, playback, check events": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "POLYFILL",
             "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "FF52": "POLYFILL"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "POLYFILL": 2,
+            "TIMEOUT": 1
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-persistent-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -298,18 +342,21 @@
       "subtests": {
         "org.w3.clearkey, persistent-license, mp4playback": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "POLYFILL",
             "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "FF52": "POLYFILL"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "POLYFILL": 2,
+            "TIMEOUT": 1
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-persistent-usage-record-events.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -320,18 +367,21 @@
       "subtests": {
         "org.w3.clearkey, persistent-usage-record, mp4, playback, check events": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "POLYFILL",
             "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "FF52": "POLYFILL"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "POLYFILL": 2,
+            "TIMEOUT": 1
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-persistent-usage-record.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -342,18 +392,21 @@
       "subtests": {
         "org.w3.clearkey, persistent-usage-record, mp4playback": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "POLYFILL",
             "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "FF52": "POLYFILL"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "POLYFILL": 2,
+            "TIMEOUT": 1
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-retrieve-destroy-persistent-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -364,18 +417,20 @@
       "subtests": {
         "org.w3.clearkey, persistent-license, mp4, playback, retrieve, playback and destroy": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF52": "TIMEOUT"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "TIMEOUT": 3
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-retrieve-persistent-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -386,18 +441,20 @@
       "subtests": {
         "org.w3.clearkey, persistent-license, mp4, playback, retrieve and playback": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF52": "TIMEOUT"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "TIMEOUT": 3
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-retrieve-persistent-usage-record.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -408,18 +465,50 @@
       "subtests": {
         "org.w3.clearkey, persistent-usage-record, mp4, playback, retrieve in new window": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF52": "TIMEOUT"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "TIMEOUT": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-playback-temporary-clear-encrypted.html": {
+      "byUA": {
+        "CH56": "ERROR",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {
+        "CH56": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      },
+      "totals": {
+        "ERROR": 1,
+        "OK": 2
+      },
+      "subtests": {
+        "org.w3.clearkey, temporary, mp4, playback, single key, clear then encrypted content": {
+          "byUA": {
+            "CH56": "TIMEOUT",
+            "ED14": "TIMEOUT",
+            "FF52": "PASS"
+          },
+          "UAmessage": {
+            "CH56": "Test timed out"
+          },
+          "totals": {
+            "TIMEOUT": 2,
+            "PASS": 1
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-encrypted-clear-sources.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -430,20 +519,51 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, encrypted and clear sources": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-playback-temporary-encrypted-clear.html": {
+      "byUA": {
+        "CH56": "ERROR",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {
+        "CH56": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      },
+      "totals": {
+        "ERROR": 1,
+        "OK": 2
+      },
+      "subtests": {
+        "org.w3.clearkey, temporary, mp4, playback, single key, encrypted then clear content": {
+          "byUA": {
+            "CH56": "TIMEOUT",
+            "ED14": "TIMEOUT",
+            "FF52": "PASS"
+          },
+          "UAmessage": {
+            "CH56": "Test timed out"
+          },
+          "totals": {
+            "TIMEOUT": 2,
+            "PASS": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-events.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -454,20 +574,21 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, check events": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-multikey.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -478,20 +599,21 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, multikey audio/video": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-multisession.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -502,18 +624,21 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback with multiple sessions, multikey video": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "FF52": "PASS"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-setMediaKeys-after-src.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -524,20 +649,21 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, setMediaKeys after setting video.src": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-setMediaKeys-after-update.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -548,20 +674,21 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, setMediaKeys after updating session": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-setMediaKeys-immediately.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -572,20 +699,21 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, setMediaKeys first": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-setMediaKeys-onencrypted.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -596,20 +724,21 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, setMediaKeys in encrypted event": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-waitingforkey.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -620,20 +749,21 @@
       "subtests": {
         "org.w3.clearkey, successful playback, temporary, mp4, waitingforkey event, 1 key": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -644,7 +774,32 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, single key": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
+            "ED14": "TIMEOUT",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-reset-src-after-setmediakeys.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "Reset src after setMediaKeys().": {
+          "byUA": {
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
@@ -655,11 +810,59 @@
         }
       }
     },
-    "/encrypted-media/clearkey-mp4-reset-src-after-setmediakeys.html": {
+    "/encrypted-media/clearkey-mp4-setmediakeys-again-after-playback.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
-        "FF52": "TIMEOUT"
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "org.w3.clearkey, setmediakeys again after playback": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-setmediakeys-again-after-resetting-src.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "org.w3.clearkey, setmediakeys again after resetting src": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "TIMEOUT",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-setmediakeys-at-same-time.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "TIMEOUT",
+        "FF52": "OK"
       },
       "UAmessage": {},
       "totals": {
@@ -667,22 +870,286 @@
         "TIMEOUT": 1
       },
       "subtests": {
-        "Reset src after setMediaKeys().": {
+        "org.w3.clearkey, setmediakeys at same time": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-setmediakeys-multiple-times-with-different-mediakeys.html": {
+      "byUA": {
+        "CH56": "ERROR",
+        "ED14": "ERROR",
+        "FF52": "ERROR"
+      },
+      "UAmessage": {
+        "CH56": "Uncaught SyntaxError: Unexpected token )",
+        "ED14": "Expected ';'",
+        "FF52": "SyntaxError: missing ; before statement"
+      },
+      "totals": {
+        "ERROR": 3
+      },
+      "subtests": {
+        "/encrypted-media/clearkey-mp4-setmediakeys-multiple-times-with-different-mediakeys.html": {
+          "byUA": {
+            "CH56": "ERROR",
+            "ED14": "ERROR",
+            "FF52": "ERROR"
+          },
+          "UAmessage": {},
+          "totals": {
+            "ERROR": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-setmediakeys-multiple-times-with-the-same-mediakeys.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "org.w3.clearkey, setmediakeys multiple times with the same mediakeys": {
+          "byUA": {
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-setmediakeys-to-multiple-video-elements.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "TIMEOUT",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2,
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "org.w3.clearkey, setMediaKeys to multiple video elements": {
+          "byUA": {
+            "CH56": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-setmediakeys.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "TIMEOUT",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2,
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "org.w3.clearkey, setMediaKeys": {
+          "byUA": {
+            "CH56": "TIMEOUT",
             "FF52": "TIMEOUT"
+          },
+          "UAmessage": {},
+          "totals": {}
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-syntax-mediakeys.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "org.w3.clearkey test MediaKeys attribute syntax": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "org.w3.clearkey test MediaKeys setServerCertificate() exceptions.": {
+          "byUA": {
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 1
+          }
+        },
+        "org.w3.clearkey test MediaKeys setServerCertificate() syntax with non-empty certificate.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-syntax-mediakeysession.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "org.w3.clearkey test MediaKeySession generateRequest() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "org.w3.clearkey test MediaKeySession load() exceptions.": {
+          "byUA": {
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {}
+        },
+        "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "org.w3.clearkey test MediaKeySession update() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "org.w3.clearkey test MediaKeySession close() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "org.w3.clearkey test MediaKeySession remove() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "org.w3.clearkey test MediaKeySession attribute syntax.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/clearkey-mp4-syntax-mediakeysystemaccess.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "org.w3.clearkey test requestMediaKeySystemAccess() exceptions.": {
+          "byUA": {
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {}
+        },
+        "org.w3.clearkey test MediaKeySystemAccess attribute syntax.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-unique-origin.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -693,7 +1160,7 @@
       "subtests": {
         "Unique origin is unable to create MediaKeys": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -706,7 +1173,7 @@
     },
     "/encrypted-media/clearkey-mp4-update-disallowed-input.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -717,7 +1184,7 @@
       "subtests": {
         "update() with invalid response (longer than 64Kb characters) should fail.": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "FAIL"
           },
@@ -730,7 +1197,7 @@
     },
     "/encrypted-media/clearkey-mp4-waiting-for-a-key.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -741,7 +1208,7 @@
       "subtests": {
         "Waiting for a key.": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -754,7 +1221,7 @@
     },
     "/encrypted-media/clearkey-not-callable-after-createsession.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -765,42 +1232,51 @@
       "subtests": {
         "org.w3.clearkey, temporary, update() immediately after createSession()": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "org.w3.clearkey, temporary, close() immediately after createSession()": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "org.w3.clearkey, temporary, remove() immediately after createSession()": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-update-non-ascii-input.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -811,20 +1287,23 @@
       "subtests": {
         "org.w3.clearkey test handling of non-ASCII responses for update()": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "assert_unreached: Error: NotSupportedError Reached unreachable code"
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
     },
     "/encrypted-media/drm-check-initdata-type.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -835,7 +1314,7 @@
       "subtests": {
         "drm support for \"webm\".": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -846,7 +1325,7 @@
         },
         "drm support for \"cenc\".": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -857,7 +1336,7 @@
         },
         "drm support for \"keyids\".": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -870,7 +1349,7 @@
     },
     "/encrypted-media/drm-events-session-closed-event.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "TIMEOUT",
         "FF52": "OK"
       },
@@ -882,20 +1361,23 @@
       "subtests": {
         "drm test MediaKeySession closed event.": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "Test timed out"
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/drm-events.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -906,8 +1388,32 @@
       "subtests": {
         "drm, basic events": {
           "byUA": {
-            "CH55": "PASS",
-            "ED14": "TIMEOUT",
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-expiration.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm, expiration": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -917,33 +1423,9 @@
         }
       }
     },
-    "/encrypted-media/drm-expiration.html": {
-      "byUA": {
-        "CH55": "TIMEOUT",
-        "ED14": "TIMEOUT",
-        "FF52": "TIMEOUT"
-      },
-      "UAmessage": {},
-      "totals": {
-        "TIMEOUT": 3
-      },
-      "subtests": {
-        "/encrypted-media/drm-expiration.html": {
-          "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
-          },
-          "UAmessage": {},
-          "totals": {
-            "TIMEOUT": 3
-          }
-        }
-      }
-    },
     "/encrypted-media/drm-generate-request-disallowed-input.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -954,68 +1436,106 @@
       "subtests": {
         "drm, temporary, webm, initData longer than 64Kb characters": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_unreached: generateRequest() succeeded unexpectedly Reached unreachable code"
+          },
+          "totals": {
+            "FAIL": 2
+          }
         },
         "drm, temporary, cenc, initData longer than 64Kb characters": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 3
+          }
         },
         "drm, temporary, cenc, invalid initdata (invalid pssh)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 3
+          }
         },
         "drm, temporary, cenc, invalid initdata (not pssh)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 3
+          }
         },
         "drm, temporary, keyids, initData longer than 64Kb characters": {
           "byUA": {
             "ED14": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         },
         "drm, temporary, keyids, invalid initdata (too short key ID)": {
           "byUA": {
             "ED14": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         },
         "drm, temporary, keyids, invalid initdata (too long key ID)": {
           "byUA": {
             "ED14": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
         }
       }
     },
     "/encrypted-media/drm-invalid-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "TIMEOUT",
         "FF52": "OK"
       },
@@ -1027,7 +1547,7 @@
       "subtests": {
         "Update with invalid Clear Key license": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
@@ -1040,29 +1560,34 @@
     },
     "/encrypted-media/drm-keystatuses-multiple-sessions.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
-        "ED14": "TIMEOUT",
-        "FF52": "TIMEOUT"
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "TIMEOUT": 3
+        "OK": 3
       },
       "subtests": {
         "drm, temporary, keystatuses, multiple sessions": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "PASS"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "ED14": "assert_true: keystatuses should have the expected keys expected true got false"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 1
+          }
         }
       }
     },
     "/encrypted-media/drm-keystatuses.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
+        "CH56": "TIMEOUT",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1074,18 +1599,25 @@
       "subtests": {
         "drm, temporary, keystatuses": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF52": "FAIL"
+            "CH56": "TIMEOUT",
+            "ED14": "FAIL",
+            "FF52": "PASS"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "Test timed out",
+            "ED14": "Object doesn't support property or method 'Symbol.iterator'"
+          },
+          "totals": {
+            "TIMEOUT": 1,
+            "FAIL": 1,
+            "PASS": 1
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-onencrypted.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1096,7 +1628,7 @@
       "subtests": {
         "encrypted fired on encrypted media file.": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1109,7 +1641,7 @@
     },
     "/encrypted-media/drm-mp4-playback-destroy-persistent-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1120,18 +1652,20 @@
       "subtests": {
         "drm, persistent-license, mp4, playback, destroy and acknowledge": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF52": "TIMEOUT"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "TIMEOUT": 3
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-persistent-license-events.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1142,18 +1676,20 @@
       "subtests": {
         "drm, persistent-license, mp4, playback, check events": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF52": "TIMEOUT"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "TIMEOUT": 3
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-persistent-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1164,18 +1700,20 @@
       "subtests": {
         "drm, persistent-license, mp4playback": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF52": "TIMEOUT"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "TIMEOUT": 3
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-persistent-usage-record-events.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1186,18 +1724,23 @@
       "subtests": {
         "drm, persistent-usage-record, mp4, playback, check events": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
+            "CH56": "TIMEOUT",
+            "ED14": "FAIL",
             "FF52": "TIMEOUT"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'then'"
+          },
+          "totals": {
+            "TIMEOUT": 2,
+            "FAIL": 1
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-retrieve-persistent-usage-record.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1208,41 +1751,135 @@
       "subtests": {
         "drm, persistent-usage-record, mp4, playback, retrieve in new window": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
+            "CH56": "TIMEOUT",
+            "ED14": "FAIL",
             "FF52": "TIMEOUT"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'then'"
+          },
+          "totals": {
+            "TIMEOUT": 2,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-playback-temporary-clear-encrypted.html": {
+      "byUA": {
+        "CH56": "ERROR",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {
+        "CH56": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      },
+      "totals": {
+        "ERROR": 1,
+        "OK": 2
+      },
+      "subtests": {
+        "drm, temporary, mp4, playback, single key, clear then encrypted content": {
+          "byUA": {
+            "CH56": "TIMEOUT",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {
+            "CH56": "Test timed out"
+          },
+          "totals": {
+            "TIMEOUT": 1,
+            "PASS": 2
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-encrypted-clear-sources.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
+        "CH56": "OK",
         "ED14": "OK",
-        "FF52": "TIMEOUT"
+        "FF52": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "TIMEOUT": 2,
-        "OK": 1
+        "OK": 3
       },
       "subtests": {
         "drm, temporary, mp4, playback, encrypted and clear sources": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-playback-temporary-encrypted-clear.html": {
+      "byUA": {
+        "CH56": "ERROR",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {
+        "CH56": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      },
+      "totals": {
+        "ERROR": 1,
+        "OK": 2
+      },
+      "subtests": {
+        "drm, temporary, mp4, playback, single key, clear then encrypted content": {
+          "byUA": {
+            "CH56": "TIMEOUT",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {
+            "CH56": "Test timed out"
+          },
+          "totals": {
+            "TIMEOUT": 1,
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-playback-temporary-expired.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm, temporary, mp4, expired license": {
+          "byUA": {
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {
+            "CH56": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476128899338 +/- 2000 but got NaN",
+            "ED14": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476128827619 +/- 2000 but got NaN",
+            "FF52": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476127991263 +/- 2000 but got NaN"
+          },
+          "totals": {
+            "FAIL": 3
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-multikey.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1253,20 +1890,20 @@
       "subtests": {
         "drm, temporary, mp4, playback, multikey audio/video": {
           "byUA": {
-            "CH55": "PASS",
-            "ED14": "TIMEOUT",
+            "CH56": "PASS",
+            "ED14": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-multisession.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1277,20 +1914,20 @@
       "subtests": {
         "drm, temporary, mp4, playback with multiple sessions, multikey video": {
           "byUA": {
-            "CH55": "PASS",
-            "ED14": "TIMEOUT",
+            "CH56": "PASS",
+            "ED14": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-setMediaKeys-after-src.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1301,20 +1938,20 @@
       "subtests": {
         "drm, temporary, mp4, playback, setMediaKeys after setting video.src": {
           "byUA": {
-            "CH55": "PASS",
-            "ED14": "TIMEOUT",
+            "CH56": "PASS",
+            "ED14": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-setMediaKeys-after-update.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1325,70 +1962,68 @@
       "subtests": {
         "drm, temporary, mp4, playback, setMediaKeys after updating session": {
           "byUA": {
-            "CH55": "PASS",
-            "ED14": "TIMEOUT",
+            "CH56": "PASS",
+            "ED14": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-setMediaKeys-immediately.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "TIMEOUT": 1,
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "drm, temporary, mp4, playback, setMediaKeys first": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
+            "CH56": "PASS",
+            "ED14": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 1
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-setMediaKeys-onencrypted.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "TIMEOUT": 1,
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "drm, temporary, mp4, playback, setMediaKeys in encrypted event": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
+            "CH56": "PASS",
+            "ED14": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 1
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-two-videos.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1399,44 +2034,50 @@
       "subtests": {
         "drm, temporary, mp4, playback two videos": {
           "byUA": {
-            "CH55": "PASS",
-            "ED14": "TIMEOUT",
+            "CH56": "PASS",
+            "ED14": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-waitingforkey.html": {
       "byUA": {
-        "CH55": "OK",
-        "ED14": "OK",
+        "CH56": "OK",
+        "ED14": "ERROR",
         "FF52": "OK"
       },
-      "UAmessage": {},
+      "UAmessage": {
+        "ED14": "Error: assert_equals: expected 1 but got 0"
+      },
       "totals": {
-        "OK": 3
+        "OK": 2,
+        "ERROR": 1
       },
       "subtests": {
         "drm, successful playback, temporary, mp4, waitingforkey event, 1 key": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "Test timed out"
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1447,20 +2088,20 @@
       "subtests": {
         "drm, temporary, mp4, playback, single key": {
           "byUA": {
-            "CH55": "PASS",
-            "ED14": "TIMEOUT",
+            "CH56": "PASS",
+            "ED14": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
     },
     "/encrypted-media/drm-mp4-reset-src-after-setmediakeys.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "TIMEOUT",
         "FF52": "OK"
       },
@@ -1472,7 +2113,7 @@
       "subtests": {
         "Reset src after setMediaKeys().": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
@@ -1483,9 +2124,346 @@
         }
       }
     },
+    "/encrypted-media/drm-mp4-setmediakeys-again-after-playback.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm, setmediakeys again after playback": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-setmediakeys-again-after-resetting-src.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm, setmediakeys again after resetting src": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-setmediakeys-at-same-time.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm, setmediakeys at same time": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-setmediakeys-multiple-times-with-different-mediakeys.html": {
+      "byUA": {
+        "CH56": "ERROR",
+        "ED14": "ERROR",
+        "FF52": "ERROR"
+      },
+      "UAmessage": {
+        "CH56": "Uncaught SyntaxError: Unexpected token )",
+        "ED14": "Expected ';'",
+        "FF52": "SyntaxError: missing ; before statement"
+      },
+      "totals": {
+        "ERROR": 3
+      },
+      "subtests": {
+        "/encrypted-media/drm-mp4-setmediakeys-multiple-times-with-different-mediakeys.html": {
+          "byUA": {
+            "CH56": "ERROR",
+            "ED14": "ERROR",
+            "FF52": "ERROR"
+          },
+          "UAmessage": {},
+          "totals": {
+            "ERROR": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-setmediakeys-multiple-times-with-the-same-mediakeys.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm, setmediakeys multiple times with the same mediakeys": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-setmediakeys-to-multiple-video-elements.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm, setMediaKeys to multiple video elements": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-setmediakeys.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm, setMediaKeys": {
+          "byUA": {
+            "CH56": "TIMEOUT",
+            "ED14": "TIMEOUT",
+            "FF52": "TIMEOUT"
+          },
+          "UAmessage": {},
+          "totals": {}
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-syntax-mediakeys.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm test MediaKeys attribute syntax": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "drm test MediaKeys setServerCertificate() exceptions.": {
+          "byUA": {
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "drm test MediaKeys setServerCertificate() syntax with non-empty certificate.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-syntax-mediakeysession.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm test MediaKeySession generateRequest() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "drm test MediaKeySession load() exceptions.": {
+          "byUA": {
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {}
+        },
+        "drm test if MediaKeySession generateRequest() resolves for various sessions": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "drm test MediaKeySession update() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "drm test MediaKeySession close() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "drm test MediaKeySession remove() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "drm test MediaKeySession attribute syntax.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/encrypted-media/drm-mp4-syntax-mediakeysystemaccess.html": {
+      "byUA": {
+        "CH56": "OK",
+        "ED14": "OK",
+        "FF52": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "drm test requestMediaKeySystemAccess() exceptions.": {
+          "byUA": {
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
+          },
+          "UAmessage": {},
+          "totals": {}
+        },
+        "drm test MediaKeySystemAccess attribute syntax.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "PASS",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
     "/encrypted-media/drm-mp4-unique-origin.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1496,7 +2474,7 @@
       "subtests": {
         "Unique origin is unable to create MediaKeys": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1509,7 +2487,7 @@
     },
     "/encrypted-media/drm-mp4-waiting-for-a-key.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "TIMEOUT",
         "FF52": "OK"
       },
@@ -1523,7 +2501,7 @@
       "subtests": {
         "Waiting for a key.": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -1535,7 +2513,7 @@
     },
     "/encrypted-media/drm-not-callable-after-createsession.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1546,7 +2524,7 @@
       "subtests": {
         "drm, temporary, update() immediately after createSession()": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1557,7 +2535,7 @@
         },
         "drm, temporary, close() immediately after createSession()": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1568,7 +2546,7 @@
         },
         "drm, temporary, remove() immediately after createSession()": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1581,7 +2559,7 @@
     },
     "/encrypted-media/drm-temporary-license-type.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1592,18 +2570,24 @@
       "subtests": {
         "drm, cannot load persistent license into temporary session": {
           "byUA": {
-            "CH55": "FAIL",
-            "ED14": "TIMEOUT",
+            "CH56": "FAIL",
+            "ED14": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_unreached: Update with incorrect license type should fail Reached unreachable code",
+            "ED14": "assert_unreached: Update with incorrect license type should fail Reached unreachable code",
+            "FF52": "assert_unreached: Update with incorrect license type should fail Reached unreachable code"
+          },
+          "totals": {
+            "FAIL": 3
+          }
         }
       }
     },
     "/encrypted-media/idlharness.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -1614,7 +2598,7 @@
       "subtests": {
         "Navigator interface: operation requestMediaKeySystemAccess(DOMString,[object Object])": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1625,7 +2609,7 @@
         },
         "HTMLMediaElement interface: attribute mediaKeys": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1636,7 +2620,7 @@
         },
         "HTMLMediaElement interface: attribute onencrypted": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1647,7 +2631,7 @@
         },
         "HTMLMediaElement interface: attribute onwaitingforkey": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1658,7 +2642,7 @@
         },
         "HTMLMediaElement interface: operation setMediaKeys(MediaKeys)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1669,7 +2653,7 @@
         },
         "MediaKeySystemAccess interface: existence and properties of interface object": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1680,7 +2664,7 @@
         },
         "MediaKeySystemAccess interface object length": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1691,7 +2675,7 @@
         },
         "MediaKeySystemAccess interface object name": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1702,7 +2686,7 @@
         },
         "MediaKeySystemAccess interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1713,7 +2697,7 @@
         },
         "MediaKeySystemAccess interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1724,7 +2708,7 @@
         },
         "MediaKeySystemAccess interface: attribute keySystem": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1735,7 +2719,7 @@
         },
         "MediaKeySystemAccess interface: operation getConfiguration()": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1746,7 +2730,7 @@
         },
         "MediaKeySystemAccess interface: operation createMediaKeys()": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1757,7 +2741,7 @@
         },
         "MediaKeys interface: existence and properties of interface object": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1768,7 +2752,7 @@
         },
         "MediaKeys interface object length": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1779,7 +2763,7 @@
         },
         "MediaKeys interface object name": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1790,7 +2774,7 @@
         },
         "MediaKeys interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1801,7 +2785,7 @@
         },
         "MediaKeys interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1812,7 +2796,7 @@
         },
         "MediaKeys interface: operation createSession(MediaKeySessionType)": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1823,7 +2807,7 @@
         },
         "MediaKeys interface: operation setServerCertificate(BufferSource)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1834,7 +2818,7 @@
         },
         "MediaKeySession interface: existence and properties of interface object": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1845,7 +2829,7 @@
         },
         "MediaKeySession interface object length": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1856,7 +2840,7 @@
         },
         "MediaKeySession interface object name": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1867,7 +2851,7 @@
         },
         "MediaKeySession interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1878,7 +2862,7 @@
         },
         "MediaKeySession interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1889,7 +2873,7 @@
         },
         "MediaKeySession interface: attribute sessionId": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1900,7 +2884,7 @@
         },
         "MediaKeySession interface: attribute expiration": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1911,7 +2895,7 @@
         },
         "MediaKeySession interface: attribute closed": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1922,7 +2906,7 @@
         },
         "MediaKeySession interface: attribute keyStatuses": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -1933,7 +2917,7 @@
         },
         "MediaKeySession interface: attribute onkeystatuseschange": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1944,7 +2928,7 @@
         },
         "MediaKeySession interface: attribute onmessage": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1955,7 +2939,7 @@
         },
         "MediaKeySession interface: operation generateRequest(DOMString,BufferSource)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1966,7 +2950,7 @@
         },
         "MediaKeySession interface: operation load(DOMString)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1977,7 +2961,7 @@
         },
         "MediaKeySession interface: operation update(BufferSource)": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1988,7 +2972,7 @@
         },
         "MediaKeySession interface: operation close()": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -1999,7 +2983,7 @@
         },
         "MediaKeySession interface: operation remove()": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2010,7 +2994,7 @@
         },
         "MediaKeyStatusMap interface: existence and properties of interface object": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2021,7 +3005,7 @@
         },
         "MediaKeyStatusMap interface object length": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2032,7 +3016,7 @@
         },
         "MediaKeyStatusMap interface object name": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2043,7 +3027,7 @@
         },
         "MediaKeyStatusMap interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2054,7 +3038,7 @@
         },
         "MediaKeyStatusMap interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2065,7 +3049,7 @@
         },
         "MediaKeyStatusMap interface: attribute size": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2076,7 +3060,7 @@
         },
         "MediaKeyStatusMap interface: operation has(BufferSource)": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2087,7 +3071,7 @@
         },
         "MediaKeyStatusMap interface: operation get(BufferSource)": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2098,7 +3082,7 @@
         },
         "MediaKeyMessageEvent interface: existence and properties of interface object": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2109,7 +3093,7 @@
         },
         "MediaKeyMessageEvent interface object length": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "FAIL"
           },
@@ -2118,7 +3102,7 @@
         },
         "MediaKeyMessageEvent interface object name": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2129,7 +3113,7 @@
         },
         "MediaKeyMessageEvent interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2140,7 +3124,7 @@
         },
         "MediaKeyMessageEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2151,7 +3135,7 @@
         },
         "MediaKeyMessageEvent interface: attribute messageType": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2162,7 +3146,7 @@
         },
         "MediaKeyMessageEvent interface: attribute message": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2173,7 +3157,7 @@
         },
         "MediaEncryptedEvent interface: existence and properties of interface object": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2184,7 +3168,7 @@
         },
         "MediaEncryptedEvent interface object length": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2195,7 +3179,7 @@
         },
         "MediaEncryptedEvent interface object name": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2206,7 +3190,7 @@
         },
         "MediaEncryptedEvent interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2217,7 +3201,7 @@
         },
         "MediaEncryptedEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2228,7 +3212,7 @@
         },
         "MediaEncryptedEvent interface: attribute initDataType": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2239,7 +3223,7 @@
         },
         "MediaEncryptedEvent interface: attribute initData": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2252,7 +3236,7 @@
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-multikey-sequential-readyState.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -2263,18 +3247,24 @@
       "subtests": {
         "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential, readyState": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "TIMEOUT",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 4",
+            "FF52": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 4"
+          },
+          "totals": {
+            "FAIL": 2,
+            "TIMEOUT": 1
+          }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-multikey-sequential.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -2285,20 +3275,24 @@
       "subtests": {
         "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "FAIL",
             "ED14": "TIMEOUT",
-            "FF52": "PASS"
+            "FF52": "FAIL"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH56": "assert_false: Should not continue playing whilst waiting for a key expected false got true",
+            "FF52": "assert_false: Should not continue playing whilst waiting for a key expected false got true"
+          },
           "totals": {
-            "PASS": 2
+            "FAIL": 2,
+            "TIMEOUT": 1
           }
         }
       }
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-two-videos.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "TIMEOUT",
         "FF52": "OK"
       },
@@ -2312,7 +3306,7 @@
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback two videos": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -2324,7 +3318,7 @@
     },
     "/encrypted-media/clearkey-mp4-requestmediakeysystemaccess.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -2335,7 +3329,7 @@
       "subtests": {
         "org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System () should result in InvalidAccessError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2346,7 +3340,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Unsupported Key System (com.example.unsupported) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2357,7 +3351,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Key System ending in \".\" (org.w3.clearkey.) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2368,7 +3362,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Capitalized Key System (ORG.W3.CLEARKEY) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2379,7 +3373,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Non-ASCII Key System (org.w3.clearkeyʏ) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2390,7 +3384,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Root domain of Key System alone (org) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2401,7 +3395,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Root domain of Key System, with dot (org.) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2412,7 +3406,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Domain of Key System along (org.w3) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2423,7 +3417,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Domain of Key System, with dot (org.w3.) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2434,7 +3428,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Child of Key System should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2445,7 +3439,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Prefixed Key System should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2456,7 +3450,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Incomplete Key System name (org.w3.learkey) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2467,7 +3461,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Incomplete Key System name (org.w3.clearke) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2478,7 +3472,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Leading space in Key System name ( org.w3.clearkey) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2489,7 +3483,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Extra space in Key System name (org.w3 .clearkey) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2500,7 +3494,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Trailing space in Key System name (org.w3.clearkey ) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2511,7 +3505,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Leading dot in Key System name (.org.w3.clearkey) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2522,7 +3516,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Trailing dot in Key System name (org.w3..clearkey) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2533,7 +3527,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Trailing dot in Key System name (org.w3.clearkey.) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2544,7 +3538,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Key System name is case sensitive (ORG.W3.CLEARKEY) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2555,7 +3549,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2566,7 +3560,7 @@
         },
         "Empty configuration": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2577,7 +3571,7 @@
         },
         "Basic supported configuration": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2588,7 +3582,7 @@
         },
         "Partially supported configuration": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2599,7 +3593,7 @@
         },
         "Supported audio codec": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2610,7 +3604,7 @@
         },
         "ContentType formatting must be preserved": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2621,7 +3615,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Unsupported audio codec ('audio/webm; codecs=fake') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2632,7 +3626,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Unsupported video codec () should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2643,7 +3637,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=mp4a','audio/webm; codecs=mp4a.40.2') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2654,7 +3648,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Video codec specified in audio field ('video/mp4;codecs=\"avc1.4d401e\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2665,7 +3659,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Audio codec specified in video field ('audio/mp4;codecs=\"mp4a.40.2\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2676,7 +3670,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=avc1','audio/webm; codecs=avc1.42e01e') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2687,7 +3681,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/mp4; codecs=vorbis') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2698,7 +3692,7 @@
         },
         "Two configurations, one supported": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2709,7 +3703,7 @@
         },
         "Two configurations, both supported": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2720,7 +3714,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (webm) ('audio/webm; codecs=\"vp8,vorbis\"','audio/webm; codecs=\"vorbis, vp8\"','audio/webm; codecs=\"vp8\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2731,7 +3725,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (mp4) ('audio/mp4; codecs=\"avc1\"','audio/mp4; codecs=\"avc1.4d401e\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2742,7 +3736,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (webm) ('video/webm; codecs=\"vp8,vorbis\"','video/webm; codecs=\"vorbis, vp8\"','video/webm; codecs=\"vorbis\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2753,7 +3747,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (mp4) ('video/mp4; codecs=\"mp4a\"','video/mp4; codecs=\"mp4a.40.2\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2764,7 +3758,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: WebM audio does not support AVC1/AAC ('audio/webm; codecs=\"aac\"','audio/webm; codecs=\"avc1\"','audio/webm; codecs=\"vp8,aac\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2775,7 +3769,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: WebM video does not support AVC1/AAC ('video/webm; codecs=\"aac\"','video/webm; codecs=\"avc1\"','video/webm; codecs=\"vp8,aac\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2786,7 +3780,7 @@
         },
         "Leading space in contentType": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2797,7 +3791,7 @@
         },
         "Space before ; in contentType": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2808,7 +3802,7 @@
         },
         "Trailing space in contentType": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2819,7 +3813,7 @@
         },
         "Space at start of codecs parameter": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2830,7 +3824,7 @@
         },
         "Space at end of codecs parameter": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2841,7 +3835,7 @@
         },
         "Video/": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2852,7 +3846,7 @@
         },
         "Codecs=": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2863,7 +3857,7 @@
         },
         "Upper case MIME type": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2874,7 +3868,7 @@
         },
         "CODECS=": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -2885,40 +3879,49 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with webm ('video/webm; foo=\"bar\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH56": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
           "totals": {
-            "PASS": 1
+            "FAIL": 1,
+            "PASS": 2
           }
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with mp4 ('video/mp4; foo=\"bar\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH56": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
           "totals": {
-            "PASS": 1
+            "FAIL": 1,
+            "PASS": 2
           }
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Unrecognized foo with codecs ('video/mp4;codecs=\"avc1.4d401e\"; foo=\"bar\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH56": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
           "totals": {
-            "PASS": 1
+            "FAIL": 1,
+            "PASS": 2
           }
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'fake' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2929,7 +3932,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'audio/fake' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2940,7 +3943,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'video/fake' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2951,7 +3954,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\"AVC1.4D401E\"' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2962,7 +3965,7 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\",avc1.4d401e\"' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -2975,7 +3978,7 @@
     },
     "/encrypted-media/drm-mp4-playback-persistent-usage-record.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -2986,18 +3989,23 @@
       "subtests": {
         "drm, persistent-usage-record, mp4playback": {
           "byUA": {
-            "CH55": "TIMEOUT",
-            "ED14": "TIMEOUT",
+            "CH56": "TIMEOUT",
+            "ED14": "FAIL",
             "FF52": "TIMEOUT"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "ED14": "Object doesn't support property or method 'then'"
+          },
+          "totals": {
+            "TIMEOUT": 2,
+            "FAIL": 1
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-retrieve-destroy-persistent-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -3008,18 +4016,20 @@
       "subtests": {
         "drm, persistent-license, mp4, playback, retrieve, playback and destroy": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF52": "TIMEOUT"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "TIMEOUT": 3
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-retrieve-persistent-license.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -3030,86 +4040,107 @@
       "subtests": {
         "drm, persistent-license, mp4, playback, retrieve, playback": {
           "byUA": {
-            "CH55": "TIMEOUT",
+            "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
             "FF52": "TIMEOUT"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "TIMEOUT": 3
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-events.html": {
       "byUA": {
-        "CH55": "OK",
-        "ED14": "OK",
+        "CH56": "OK",
+        "ED14": "TIMEOUT",
         "FF52": "OK"
       },
-      "UAmessage": {},
+      "UAmessage": {
+        "ED14": ""
+      },
       "totals": {
-        "OK": 3
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
         "drm, temporary, mp4, playback, check events": {
           "byUA": {
-            "CH55": "FAIL",
-            "ED14": "TIMEOUT",
-            "FF52": "FAIL"
+            "CH56": "FAIL",
+            "FF52": "PASS"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_array_equals: Expected events sequence lengths differ, expected 9 got 8"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 1
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential-readyState.html": {
       "byUA": {
-        "CH55": "OK",
-        "ED14": "OK",
+        "CH56": "OK",
+        "ED14": "TIMEOUT",
         "FF52": "OK"
       },
-      "UAmessage": {},
+      "UAmessage": {
+        "ED14": ""
+      },
       "totals": {
-        "OK": 3
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
         "drm, successful playback, temporary, mp4, multiple keys, sequential, readyState": {
           "byUA": {
-            "CH55": "FAIL",
-            "ED14": "TIMEOUT",
+            "CH56": "FAIL",
             "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 4",
+            "FF52": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 4"
+          },
+          "totals": {
+            "FAIL": 2
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential.html": {
       "byUA": {
-        "CH55": "TIMEOUT",
-        "ED14": "OK",
-        "FF52": "TIMEOUT"
+        "CH56": "OK",
+        "ED14": "TIMEOUT",
+        "FF52": "OK"
       },
       "UAmessage": {
-        "CH55": "",
-        "FF52": ""
+        "ED14": ""
       },
       "totals": {
-        "TIMEOUT": 2,
-        "OK": 1
+        "OK": 2,
+        "TIMEOUT": 1
       },
       "subtests": {
         "drm, successful playback, temporary, mp4, multiple keys, sequential": {
           "byUA": {
-            "ED14": "TIMEOUT"
+            "CH56": "FAIL",
+            "FF52": "FAIL"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_false: Should not continue playing whilst waiting for a key expected false got true",
+            "FF52": "assert_false: Should not continue playing whilst waiting for a key expected false got true"
+          },
+          "totals": {
+            "FAIL": 2
+          }
         }
       }
     },
     "/encrypted-media/drm-mp4-requestmediakeysystemaccess.html": {
       "byUA": {
-        "CH55": "OK",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
@@ -3120,7 +4151,7 @@
       "subtests": {
         "drm, requestMediaKeySystemAccess: Empty Key System () should result in InvalidAccessError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3131,7 +4162,7 @@
         },
         "drm, requestMediaKeySystemAccess: Unsupported Key System (com.example.unsupported) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3142,7 +4173,7 @@
         },
         "drm, requestMediaKeySystemAccess: Key System ending in \".\" (com.widevine.alpha.) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3152,7 +4183,7 @@
         },
         "drm, requestMediaKeySystemAccess: Capitalized Key System (COM.WIDEVINE.ALPHA) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3162,7 +4193,7 @@
         },
         "drm, requestMediaKeySystemAccess: Non-ASCII Key System (com.widevine.alphaʏ) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3172,7 +4203,7 @@
         },
         "drm, requestMediaKeySystemAccess: Root domain of Key System alone (com) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3183,7 +4214,7 @@
         },
         "drm, requestMediaKeySystemAccess: Root domain of Key System, with dot (com.) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3194,7 +4225,7 @@
         },
         "drm, requestMediaKeySystemAccess: Domain of Key System along (com.widevine) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3204,7 +4235,7 @@
         },
         "drm, requestMediaKeySystemAccess: Domain of Key System, with dot (com.widevine.) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3214,7 +4245,7 @@
         },
         "drm, requestMediaKeySystemAccess: Child of Key System should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3225,7 +4256,7 @@
         },
         "drm, requestMediaKeySystemAccess: Prefixed Key System should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3236,7 +4267,7 @@
         },
         "drm, requestMediaKeySystemAccess: Incomplete Key System name (com.widvine.alpha) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3246,7 +4277,7 @@
         },
         "drm, requestMediaKeySystemAccess: Incomplete Key System name (com.widevine.alph) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3256,7 +4287,7 @@
         },
         "drm, requestMediaKeySystemAccess: Leading space in Key System name ( com.widevine.alpha) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3266,7 +4297,7 @@
         },
         "drm, requestMediaKeySystemAccess: Extra space in Key System name (com.wi devine.alpha) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3276,7 +4307,7 @@
         },
         "drm, requestMediaKeySystemAccess: Trailing space in Key System name (com.widevine.alpha ) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3286,7 +4317,7 @@
         },
         "drm, requestMediaKeySystemAccess: Leading dot in Key System name (.com.widevine.alpha) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3296,7 +4327,7 @@
         },
         "drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.wi.devine.alpha) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3306,7 +4337,7 @@
         },
         "drm, requestMediaKeySystemAccess: Trailing dot in Key System name (com.widevine.alpha.) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3316,7 +4347,7 @@
         },
         "drm, requestMediaKeySystemAccess: Key System name is case sensitive (COM.WIDEVINE.ALPHA) should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
           "UAmessage": {},
@@ -3326,7 +4357,7 @@
         },
         "drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3337,7 +4368,7 @@
         },
         "Empty configuration": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3348,7 +4379,7 @@
         },
         "Basic supported configuration": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3359,7 +4390,7 @@
         },
         "Partially supported configuration": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3370,7 +4401,7 @@
         },
         "Supported audio codec": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3381,7 +4412,7 @@
         },
         "ContentType formatting must be preserved": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3392,7 +4423,7 @@
         },
         "drm, requestMediaKeySystemAccess: Unsupported audio codec ('audio/webm; codecs=fake') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3403,7 +4434,7 @@
         },
         "drm, requestMediaKeySystemAccess: Unsupported video codec () should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3414,7 +4445,7 @@
         },
         "drm, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=mp4a','audio/webm; codecs=mp4a.40.2') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3425,29 +4456,35 @@
         },
         "drm, requestMediaKeySystemAccess: Video codec specified in audio field ('video/mp4;codecs=\"avc1.4d401e\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "drm, requestMediaKeySystemAccess: Audio codec specified in video field ('audio/mp4;codecs=\"mp4a.40.2\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "drm, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/webm; codecs=avc1','audio/webm; codecs=avc1.42e01e') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3458,7 +4495,7 @@
         },
         "drm, requestMediaKeySystemAccess: Mismatched audio container/codec ('audio/mp4; codecs=vorbis') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3469,7 +4506,7 @@
         },
         "Two configurations, one supported": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3480,7 +4517,7 @@
         },
         "Two configurations, both supported": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3491,7 +4528,7 @@
         },
         "drm, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (webm) ('audio/webm; codecs=\"vp8,vorbis\"','audio/webm; codecs=\"vorbis, vp8\"','audio/webm; codecs=\"vp8\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3502,7 +4539,7 @@
         },
         "drm, requestMediaKeySystemAccess: Audio MIME type does not support video codecs (mp4) ('audio/mp4; codecs=\"avc1\"','audio/mp4; codecs=\"avc1.4d401e\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3513,7 +4550,7 @@
         },
         "drm, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (webm) ('video/webm; codecs=\"vp8,vorbis\"','video/webm; codecs=\"vorbis, vp8\"','video/webm; codecs=\"vorbis\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3524,18 +4561,21 @@
         },
         "drm, requestMediaKeySystemAccess: Video MIME type does not support audio codecs (mp4) ('video/mp4; codecs=\"mp4a\"','video/mp4; codecs=\"mp4a.40.2\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "drm, requestMediaKeySystemAccess: WebM audio does not support AVC1/AAC ('audio/webm; codecs=\"aac\"','audio/webm; codecs=\"avc1\"','audio/webm; codecs=\"vp8,aac\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3546,7 +4586,7 @@
         },
         "drm, requestMediaKeySystemAccess: WebM video does not support AVC1/AAC ('video/webm; codecs=\"aac\"','video/webm; codecs=\"avc1\"','video/webm; codecs=\"vp8,aac\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3557,7 +4597,7 @@
         },
         "Leading space in contentType": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3568,7 +4608,7 @@
         },
         "Space before ; in contentType": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
@@ -3579,7 +4619,7 @@
         },
         "Trailing space in contentType": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3590,7 +4630,7 @@
         },
         "Space at start of codecs parameter": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3601,7 +4641,7 @@
         },
         "Space at end of codecs parameter": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3612,7 +4652,7 @@
         },
         "Video/": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3623,7 +4663,7 @@
         },
         "Codecs=": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3634,7 +4674,7 @@
         },
         "Upper case MIME type": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3645,7 +4685,7 @@
         },
         "CODECS=": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3656,36 +4696,51 @@
         },
         "drm, requestMediaKeySystemAccess: Unrecognized foo with webm ('video/webm; foo=\"bar\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "PASS",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH56": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
           "totals": {
-            "PASS": 1
+            "FAIL": 1,
+            "PASS": 2
           }
         },
         "drm, requestMediaKeySystemAccess: Unrecognized foo with mp4 ('video/mp4; foo=\"bar\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code",
+            "ED14": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 1
+          }
         },
         "drm, requestMediaKeySystemAccess: Unrecognized foo with codecs ('video/mp4;codecs=\"avc1.4d401e\"; foo=\"bar\"') should result in NotSupportedError": {
           "byUA": {
-            "CH55": "FAIL",
+            "CH56": "FAIL",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
-          "UAmessage": {},
-          "totals": {}
+          "UAmessage": {
+            "CH56": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code",
+            "ED14": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 1
+          }
         },
         "drm, requestMediaKeySystemAccess: contentType: 'fake' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3696,7 +4751,7 @@
         },
         "drm, requestMediaKeySystemAccess: contentType: 'audio/fake' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3707,7 +4762,7 @@
         },
         "drm, requestMediaKeySystemAccess: contentType: 'video/fake' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
@@ -3718,18 +4773,21 @@
         },
         "drm, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\"AVC1.4D401E\"' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "ED14": "assert_unreached: Unexpected requestMediaKeySystemAccess() success. Reached unreachable code"
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "drm, requestMediaKeySystemAccess: contentType: 'video/mp4;codecs=\",avc1.4d401e\"' should result in NotSupportedError": {
           "byUA": {
-            "CH55": "PASS",
+            "CH56": "PASS",
             "ED14": "PASS",
             "FF52": "PASS"
           },
