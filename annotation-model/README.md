@@ -28,6 +28,13 @@ Index of implementations in reports
   * link: http://labs.europeana.eu/api/annotations
   * gitHub: https://github.com/europeana/annotation
 
+* MM - implementation Name: Mirador plus MangoServer
+  * email: azaroth42@gmail.com
+  * link client: http://projectmirador.org/
+  * gitHub client: https://github.com/ProjectMirador/mirador/
+  * gitHub server: https://github.com/azaroth42/MangoServer/ 
+
+
 Adding new results
 ==================
 
