@@ -217,12 +217,11 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "ERROR",
-      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-encrypted-clear-sources.html",
@@ -241,12 +240,11 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, single key, encrypted then clear content",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "ERROR",
-      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/clearkey-mp4-playback-temporary-events.html",
@@ -445,7 +443,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, setMediaKeys",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -521,7 +520,7 @@
         {
           "name": "org.w3.clearkey test requestMediaKeySystemAccess() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess(new Uint8Array(0), [{}]);\r\n            }\" expected \"NotSupportedError\" but got \"InvalidAccessError\""
+          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess('', [{}]);\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "org.w3.clearkey test MediaKeySystemAccess attribute syntax.",
@@ -716,11 +715,11 @@
       "subtests": [
         {
           "name": "drm, temporary, keystatuses",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -795,12 +794,11 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "ERROR",
-      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-encrypted-clear-sources.html",
@@ -819,12 +817,11 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "ERROR",
-      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-expired.html",
@@ -832,7 +829,7 @@
         {
           "name": "drm, temporary, mp4, expired license",
           "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476208288567 +/- 2000 but got NaN"
+          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307709418 +/- 2000 but got NaN"
         }
       ],
       "status": "OK",
@@ -1035,7 +1032,8 @@
       "subtests": [
         {
           "name": "drm, setMediaKeys",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1111,7 +1109,7 @@
         {
           "name": "drm test requestMediaKeySystemAccess() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess(new Uint8Array(0), [{}]);\r\n            }\" expected \"NotSupportedError\" but got \"InvalidAccessError\""
+          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess('', [{}]);\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "drm test MediaKeySystemAccess attribute syntax.",
@@ -1494,8 +1492,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential",
-          "status": "FAIL",
-          "message": "assert_equals: Playback should start with a single key / session expected 1 but got 2"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1517,9 +1515,9 @@
       "test": "/encrypted-media/clearkey-mp4-requestmediakeysystemaccess.html",
       "subtests": [
         {
-          "name": "org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
+          "name": "org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System should result in TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError",
@@ -1617,9 +1615,9 @@
           "message": null
         },
         {
-          "name": "org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
+          "name": "org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "Empty configuration",
@@ -1848,8 +1846,8 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, check events",
-          "status": "FAIL",
-          "message": "assert_array_equals: Expected events sequence lengths differ, expected 9 got 8"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1883,9 +1881,9 @@
       "test": "/encrypted-media/drm-mp4-requestmediakeysystemaccess.html",
       "subtests": [
         {
-          "name": "drm, requestMediaKeySystemAccess: Empty Key System should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
+          "name": "drm, requestMediaKeySystemAccess: Empty Key System should result in TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "drm, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError",
@@ -1983,9 +1981,9 @@
           "message": null
         },
         {
-          "name": "drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
+          "name": "drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "Empty configuration",
@@ -2401,12 +2399,11 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "ERROR",
-      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-encrypted-clear-sources.html",
@@ -2425,12 +2422,11 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, single key, encrypted then clear content",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "ERROR",
-      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/clearkey-mp4-playback-temporary-events.html",
@@ -2461,8 +2457,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential",
-          "status": "FAIL",
-          "message": "assert_equals: Playback should start with a single key / session expected 1 but got 2"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2580,9 +2576,9 @@
       "test": "/encrypted-media/polyfill/clearkey-mp4-requestmediakeysystemaccess.html",
       "subtests": [
         {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
+          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System should result in TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError",
@@ -2680,9 +2676,9 @@
           "message": null
         },
         {
-          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
+          "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "Empty configuration",
@@ -2962,7 +2958,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, setMediaKeys",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3038,7 +3035,7 @@
         {
           "name": "org.w3.clearkey test requestMediaKeySystemAccess() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess(new Uint8Array(0), [{}]);\r\n            }\" expected \"NotSupportedError\" but got \"InvalidAccessError\""
+          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess('', [{}]);\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "org.w3.clearkey test MediaKeySystemAccess attribute syntax.",
@@ -3227,11 +3224,11 @@
       "subtests": [
         {
           "name": "polyfill: drm, temporary, keystatuses",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -3339,12 +3336,11 @@
       "subtests": [
         {
           "name": "polyfill: drm, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "ERROR",
-      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-encrypted-clear-sources.html",
@@ -3363,20 +3359,19 @@
       "subtests": [
         {
           "name": "polyfill: drm, temporary, mp4, playback, single key, clear then encrypted content",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "TIMEOUT"
         }
       ],
-      "status": "ERROR",
-      "message": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-events.html",
       "subtests": [
         {
           "name": "polyfill: drm, temporary, mp4, playback, check events",
-          "status": "FAIL",
-          "message": "assert_array_equals: Expected events sequence lengths differ, expected 9 got 8"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3388,7 +3383,7 @@
         {
           "name": "polyfill: drm, temporary, mp4, expired license",
           "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476208441694 +/- 2000 but got NaN"
+          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307821444 +/- 2000 but got NaN"
         }
       ],
       "status": "OK",
@@ -3530,9 +3525,9 @@
       "test": "/encrypted-media/polyfill/drm-mp4-requestmediakeysystemaccess.html",
       "subtests": [
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Empty Key System should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Empty Key System should result in TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError",
@@ -3630,9 +3625,9 @@
           "message": null
         },
         {
-          "name": "polyfill: drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError",
-          "status": "PASS",
-          "message": null
+          "name": "polyfill: drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "Empty configuration",
@@ -3912,7 +3907,8 @@
       "subtests": [
         {
           "name": "drm, setMediaKeys",
-          "status": "TIMEOUT"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3988,7 +3984,7 @@
         {
           "name": "drm test requestMediaKeySystemAccess() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess(new Uint8Array(0), [{}]);\r\n            }\" expected \"NotSupportedError\" but got \"InvalidAccessError\""
+          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess('', [{}]);\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
         },
         {
           "name": "drm test MediaKeySystemAccess attribute syntax.",

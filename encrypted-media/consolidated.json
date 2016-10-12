@@ -478,16 +478,13 @@
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-clear-encrypted.html": {
       "byUA": {
-        "CH56": "ERROR",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
-      "UAmessage": {
-        "CH56": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
-      },
+      "UAmessage": {},
       "totals": {
-        "ERROR": 1,
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, single key, clear then encrypted content": {
@@ -496,9 +493,7 @@
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "Test timed out"
-          },
+          "UAmessage": {},
           "totals": {
             "TIMEOUT": 2,
             "PASS": 1
@@ -533,16 +528,13 @@
     },
     "/encrypted-media/clearkey-mp4-playback-temporary-encrypted-clear.html": {
       "byUA": {
-        "CH56": "ERROR",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
-      "UAmessage": {
-        "CH56": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
-      },
+      "UAmessage": {},
       "totals": {
-        "ERROR": 1,
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "org.w3.clearkey, temporary, mp4, playback, single key, encrypted then clear content": {
@@ -551,9 +543,7 @@
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "Test timed out"
-          },
+          "UAmessage": {},
           "totals": {
             "TIMEOUT": 2,
             "PASS": 1
@@ -576,15 +566,12 @@
           "byUA": {
             "CH56": "PASS",
             "ED14": "TIMEOUT",
-            "FF52": "POLYFILL"
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "FF52": "assert_array_equals: Expected events sequence property 3, expected \"updated\" but got \"allkeysusable\""
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "TIMEOUT": 1,
-            "POLYFILL": 1
+            "PASS": 2,
+            "TIMEOUT": 1
           }
         }
       }
@@ -971,11 +958,13 @@
       "subtests": {
         "org.w3.clearkey, setMediaKeys": {
           "byUA": {
-            "CH56": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "PASS": 2
+          }
         }
       }
     },
@@ -1586,30 +1575,27 @@
     },
     "/encrypted-media/drm-keystatuses.html": {
       "byUA": {
-        "CH56": "TIMEOUT",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "TIMEOUT": 1,
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "drm, temporary, keystatuses": {
           "byUA": {
-            "CH56": "TIMEOUT",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
           "UAmessage": {
-            "CH56": "Test timed out",
             "ED14": "Object doesn't support property or method 'Symbol.iterator'"
           },
           "totals": {
-            "TIMEOUT": 1,
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
@@ -1766,16 +1752,13 @@
     },
     "/encrypted-media/drm-mp4-playback-temporary-clear-encrypted.html": {
       "byUA": {
-        "CH56": "ERROR",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
-      "UAmessage": {
-        "CH56": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
-      },
+      "UAmessage": {},
       "totals": {
-        "ERROR": 1,
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "drm, temporary, mp4, playback, single key, clear then encrypted content": {
@@ -1784,9 +1767,7 @@
             "ED14": "PASS",
             "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "Test timed out"
-          },
+          "UAmessage": {},
           "totals": {
             "TIMEOUT": 1,
             "PASS": 2
@@ -1820,16 +1801,13 @@
     },
     "/encrypted-media/drm-mp4-playback-temporary-encrypted-clear.html": {
       "byUA": {
-        "CH56": "ERROR",
+        "CH56": "OK",
         "ED14": "OK",
         "FF52": "OK"
       },
-      "UAmessage": {
-        "CH56": "Uncaught InvalidStateError: Failed to execute 'endOfStream' on 'MediaSource': The MediaSource's readyState is not 'open'."
-      },
+      "UAmessage": {},
       "totals": {
-        "ERROR": 1,
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "drm, temporary, mp4, playback, single key, clear then encrypted content": {
@@ -1838,9 +1816,7 @@
             "ED14": "PASS",
             "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "Test timed out"
-          },
+          "UAmessage": {},
           "totals": {
             "TIMEOUT": 1,
             "PASS": 2
@@ -1866,9 +1842,9 @@
             "FF52": "FAIL"
           },
           "UAmessage": {
-            "CH56": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476208288567 +/- 2000 but got NaN",
-            "ED14": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476226727580 +/- 2000 but got NaN",
-            "FF52": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476208259076 +/- 2000 but got NaN"
+            "CH56": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307709418 +/- 2000 but got NaN",
+            "ED14": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307745752 +/- 2000 but got NaN",
+            "FF52": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307730847 +/- 2000 but got NaN"
           },
           "totals": {
             "FAIL": 3
@@ -1904,26 +1880,22 @@
       "byUA": {
         "CH56": "OK",
         "ED14": "OK",
-        "FF52": "TIMEOUT"
+        "FF52": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 2,
-        "TIMEOUT": 1
+        "OK": 3
       },
       "subtests": {
         "drm, temporary, mp4, playback with multiple sessions, multikey video": {
           "byUA": {
             "CH56": "PASS",
             "ED14": "PASS",
-            "FF52": "TIMEOUT"
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "FF52": "Test timed out"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "TIMEOUT": 1
+            "PASS": 3
           }
         }
       }
@@ -2284,12 +2256,14 @@
       "subtests": {
         "drm, setMediaKeys": {
           "byUA": {
-            "CH56": "TIMEOUT",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "FF52": "PASS"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "PASS": 2
+          }
         }
       }
     },
@@ -3274,16 +3248,13 @@
       "subtests": {
         "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "TIMEOUT",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_equals: Playback should start with a single key / session expected 1 but got 2",
-            "FF52": "assert_false: Should not continue playing whilst waiting for a key expected false got true"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2,
+            "PASS": 2,
             "TIMEOUT": 1
           }
         }
@@ -3326,15 +3297,19 @@
         "OK": 3
       },
       "subtests": {
-        "org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System should result in InvalidAccessError": {
+        "org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System should result in TypeError": {
           "byUA": {
-            "CH56": "PASS",
-            "ED14": "PASS",
-            "FF52": "PASS"
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
           "totals": {
-            "PASS": 3
+            "FAIL": 3
           }
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError": {
@@ -3546,15 +3521,19 @@
             "PASS": 3
           }
         },
-        "org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError": {
+        "org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError": {
           "byUA": {
-            "CH56": "PASS",
-            "ED14": "PASS",
-            "FF52": "PASS"
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
           "totals": {
-            "PASS": 3
+            "FAIL": 3
           }
         },
         "Empty configuration": {
@@ -4066,15 +4045,12 @@
       "subtests": {
         "drm, temporary, mp4, playback, check events": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_array_equals: Expected events sequence lengths differ, expected 9 got 8"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
@@ -4148,15 +4124,19 @@
         "OK": 3
       },
       "subtests": {
-        "drm, requestMediaKeySystemAccess: Empty Key System should result in InvalidAccessError": {
+        "drm, requestMediaKeySystemAccess: Empty Key System should result in TypeError": {
           "byUA": {
-            "CH56": "PASS",
-            "ED14": "PASS",
-            "FF52": "PASS"
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
           "totals": {
-            "PASS": 3
+            "FAIL": 3
           }
         },
         "drm, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError": {
@@ -4368,15 +4348,19 @@
             "PASS": 3
           }
         },
-        "drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in InvalidAccessError": {
+        "drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError": {
           "byUA": {
-            "CH56": "PASS",
-            "ED14": "PASS",
-            "FF52": "PASS"
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "FAIL"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
+            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          },
           "totals": {
-            "PASS": 3
+            "FAIL": 3
           }
         },
         "Empty configuration": {
