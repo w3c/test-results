@@ -51,38 +51,38 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, webm, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, temporary, cenc, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, temporary, keyids, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, temporary, cenc, invalid initdata (invalid pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, temporary, cenc, invalid initdata (not pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, temporary, keyids, invalid initdata (too short key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, temporary, keyids, invalid initdata (too long key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -93,8 +93,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
         }
       ],
       "status": "OK",
@@ -460,8 +460,8 @@
         },
         {
           "name": "org.w3.clearkey test MediaKeys setServerCertificate() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate(new Uint8Array(0));\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeys setServerCertificate() syntax with non-empty certificate.",
@@ -482,13 +482,13 @@
         },
         {
           "name": "org.w3.clearkey test MediaKeySession load() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk3) {\r\n                return mk3.createSession('temporary').load('');\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError: Failed to execute 'createSession' on 'MediaKeys': Unsupported session type.\""
         },
         {
           "name": "org.w3.clearkey test MediaKeySession update() exceptions.",
@@ -519,8 +519,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test requestMediaKeySystemAccess() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess('', [{}]);\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySystemAccess attribute syntax.",
@@ -548,8 +548,8 @@
       "subtests": [
         {
           "name": "update() with invalid response (longer than 64Kb characters) should fail.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
         }
       ],
       "status": "OK",
@@ -594,8 +594,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test handling of non-ASCII responses for update()",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
         }
       ],
       "status": "OK",
@@ -664,23 +664,23 @@
       "subtests": [
         {
           "name": "drm, temporary, webm, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm, temporary, cenc, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm, temporary, cenc, invalid initdata (invalid pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm, temporary, cenc, invalid initdata (not pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -691,8 +691,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
         }
       ],
       "status": "OK",
@@ -829,7 +829,7 @@
         {
           "name": "drm, temporary, mp4, expired license",
           "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307709418 +/- 2000 but got NaN"
+          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476907038674 +/- 2000 but got NaN"
         }
       ],
       "status": "OK",
@@ -1049,8 +1049,8 @@
         },
         {
           "name": "drm test MediaKeys setServerCertificate() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate(new Uint8Array(0));\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeys setServerCertificate() syntax with non-empty certificate.",
@@ -1071,13 +1071,13 @@
         },
         {
           "name": "drm test MediaKeySession load() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk3) {\r\n                return mk3.createSession('temporary').load('');\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError: Failed to execute 'createSession' on 'MediaKeys': Unsupported session type.\""
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
@@ -1108,8 +1108,8 @@
       "subtests": [
         {
           "name": "drm test requestMediaKeySystemAccess() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess('', [{}]);\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeySystemAccess attribute syntax.",
@@ -1516,8 +1516,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System should result in TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError",
@@ -1616,8 +1616,8 @@
         },
         {
           "name": "org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Empty configuration",
@@ -1882,8 +1882,8 @@
       "subtests": [
         {
           "name": "drm, requestMediaKeySystemAccess: Empty Key System should result in TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError",
@@ -1982,8 +1982,8 @@
         },
         {
           "name": "drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Empty configuration",
@@ -2225,38 +2225,38 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, webm, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, temporary, cenc, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, temporary, keyids, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, temporary, cenc, invalid initdata (invalid pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, temporary, cenc, invalid initdata (not pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, temporary, keyids, invalid initdata (too short key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, temporary, keyids, invalid initdata (too long key ID)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2267,8 +2267,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
         }
       ],
       "status": "OK",
@@ -2577,8 +2577,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System should result in TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError",
@@ -2677,8 +2677,8 @@
         },
         {
           "name": "polyfill: org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Empty configuration",
@@ -2975,8 +2975,8 @@
         },
         {
           "name": "org.w3.clearkey test MediaKeys setServerCertificate() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate(new Uint8Array(0));\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeys setServerCertificate() syntax with non-empty certificate.",
@@ -2997,13 +2997,13 @@
         },
         {
           "name": "org.w3.clearkey test MediaKeySession load() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk3) {\r\n                return mk3.createSession('temporary').load('');\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError: Failed to execute 'createSession' on 'MediaKeys': Unsupported session type.\""
         },
         {
           "name": "org.w3.clearkey test MediaKeySession update() exceptions.",
@@ -3034,8 +3034,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test requestMediaKeySystemAccess() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess('', [{}]);\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySystemAccess attribute syntax.",
@@ -3063,8 +3063,8 @@
       "subtests": [
         {
           "name": "update() with invalid response (longer than 64Kb characters) should fail.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
         }
       ],
       "status": "OK",
@@ -3109,8 +3109,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey test handling of non-ASCII responses for update()",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
         }
       ],
       "status": "OK",
@@ -3173,23 +3173,23 @@
       "subtests": [
         {
           "name": "polyfill: drm, temporary, webm, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: drm, temporary, cenc, initData longer than 64Kb characters",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: drm, temporary, cenc, invalid initdata (invalid pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: drm, temporary, cenc, invalid initdata (not pssh)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3200,8 +3200,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
         }
       ],
       "status": "OK",
@@ -3383,7 +3383,7 @@
         {
           "name": "polyfill: drm, temporary, mp4, expired license",
           "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307821444 +/- 2000 but got NaN"
+          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476907146688 +/- 2000 but got NaN"
         }
       ],
       "status": "OK",
@@ -3526,8 +3526,8 @@
       "subtests": [
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Empty Key System should result in TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError",
@@ -3626,8 +3626,8 @@
         },
         {
           "name": "polyfill: drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Empty configuration",
@@ -3924,8 +3924,8 @@
         },
         {
           "name": "drm test MediaKeys setServerCertificate() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk) {\r\n                return mk.setServerCertificate(new Uint8Array(0));\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeys setServerCertificate() syntax with non-empty certificate.",
@@ -3946,13 +3946,13 @@
         },
         {
           "name": "drm test MediaKeySession load() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function (mk3) {\r\n                return mk3.createSession('temporary').load('');\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError: Failed to execute 'createSession' on 'MediaKeys': Unsupported session type.\""
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
@@ -3983,8 +3983,8 @@
       "subtests": [
         {
           "name": "drm test requestMediaKeySystemAccess() exceptions.",
-          "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess('', [{}]);\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeySystemAccess attribute syntax.",

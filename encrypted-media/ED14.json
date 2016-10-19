@@ -568,7 +568,7 @@
         {
           "name": "drm, expiration",
           "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307832187 +/- 4000 but got NaN"
+          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476906579531 +/- 4000 but got NaN"
         }
       ],
       "status": "OK",
@@ -758,7 +758,7 @@
         {
           "name": "drm, temporary, mp4, expired license",
           "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307745752 +/- 2000 but got NaN"
+          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476906503180 +/- 2000 but got NaN"
         }
       ],
       "status": "OK",
@@ -925,8 +925,8 @@
       "subtests": [
         {
           "name": "drm, setmediakeys multiple times with different mediakeys",
-          "status": "FAIL",
-          "message": "'_video2' is undefined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1004,13 +1004,13 @@
         },
         {
           "name": "drm test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function (s) {\r\n                return s.update(undefined);\r\n            }\" expected \"TypeError\" but got \"Error\""
+          "message": "assert_equals: function \"function (s) {\r\n                return s.update(null);\r\n            }\" expected \"TypeError\" but got \"Error\""
         },
         {
           "name": "drm test MediaKeySession close() exceptions.",
@@ -1764,15 +1764,25 @@
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential-readyState.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, successful playback, temporary, mp4, multiple keys, sequential, readyState",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "drm, successful playback, temporary, mp4, multiple keys, sequential",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/drm-mp4-requestmediakeysystemaccess.html",
@@ -3181,7 +3191,7 @@
         {
           "name": "polyfill: drm, temporary, mp4, playback, check events",
           "status": "FAIL",
-          "message": "assert_array_equals: Expected events sequence property 0, expected \"generaterequest\" but got \"license-request\""
+          "message": "assert_array_equals: Expected initial events property 0, expected \"generaterequest\" but got \"license-request\""
         }
       ],
       "status": "OK",
@@ -3193,7 +3203,7 @@
         {
           "name": "polyfill: drm, temporary, mp4, expired license",
           "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476308046447 +/- 2000 but got NaN"
+          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476906767441 +/- 2000 but got NaN"
         }
       ],
       "status": "OK",
@@ -3201,9 +3211,14 @@
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey-sequential-readyState.html",
-      "subtests": [],
-      "status": "TIMEOUT",
-      "message": ""
+      "subtests": [
+        {
+          "name": "polyfill: drm, successful playback, temporary, mp4, multiple keys, sequential, readyState",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/encrypted-media/polyfill/drm-mp4-playback-temporary-multikey-sequential.html",
@@ -3669,8 +3684,8 @@
       "subtests": [
         {
           "name": "drm, setmediakeys multiple times with different mediakeys",
-          "status": "FAIL",
-          "message": "'_video2' is undefined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3748,8 +3763,8 @@
         },
         {
           "name": "drm test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotSupportedError\""
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
@@ -3781,7 +3796,7 @@
         {
           "name": "drm test requestMediaKeySystemAccess() exceptions.",
           "status": "FAIL",
-          "message": "assert_equals: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess();\r\n            }\" expected \"TypeError\" but got \"InvalidAccessError\""
+          "message": "assert_unreached: function \"function () {\r\n                return navigator.requestMediaKeySystemAccess(keysystem, [\"invalid\", \"upsupported\"]);\r\n            }\" Reached unreachable code"
         },
         {
           "name": "drm test MediaKeySystemAccess attribute syntax.",

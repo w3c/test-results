@@ -116,93 +116,72 @@
       "subtests": {
         "org.w3.clearkey, temporary, webm, initData longer than 64Kb characters": {
           "byUA": {
-            "CH56": "FAIL",
-            "FF52": "FAIL"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2
+            "PASS": 2
           }
         },
         "org.w3.clearkey, temporary, cenc, initData longer than 64Kb characters": {
           "byUA": {
-            "CH56": "FAIL",
-            "FF52": "FAIL"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2
+            "PASS": 2
           }
         },
         "org.w3.clearkey, temporary, keyids, initData longer than 64Kb characters": {
           "byUA": {
-            "CH56": "FAIL",
-            "FF52": "FAIL"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2
+            "PASS": 2
           }
         },
         "org.w3.clearkey, temporary, cenc, invalid initdata (invalid pssh)": {
           "byUA": {
-            "CH56": "FAIL",
-            "FF52": "FAIL"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2
+            "PASS": 2
           }
         },
         "org.w3.clearkey, temporary, cenc, invalid initdata (not pssh)": {
           "byUA": {
-            "CH56": "FAIL",
-            "FF52": "FAIL"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2
+            "PASS": 2
           }
         },
         "org.w3.clearkey, temporary, keyids, invalid initdata (too short key ID)": {
           "byUA": {
-            "CH56": "FAIL",
-            "FF52": "FAIL"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2
+            "PASS": 2
           }
         },
         "org.w3.clearkey, temporary, keyids, invalid initdata (too long key ID)": {
           "byUA": {
-            "CH56": "FAIL",
-            "FF52": "FAIL"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2
+            "PASS": 2
           }
         }
       }
@@ -220,13 +199,13 @@
       "subtests": {
         "Update with invalid Clear Key license": {
           "byUA": {
-            "CH56": "PASS",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 1
           }
         }
       }
@@ -419,11 +398,12 @@
           "byUA": {
             "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "FF52": "POLYFILL"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "TIMEOUT": 2,
+            "POLYFILL": 1
           }
         }
       }
@@ -443,11 +423,12 @@
           "byUA": {
             "CH56": "TIMEOUT",
             "ED14": "TIMEOUT",
-            "FF52": "TIMEOUT"
+            "FF52": "POLYFILL"
           },
           "UAmessage": {},
           "totals": {
-            "TIMEOUT": 3
+            "TIMEOUT": 2,
+            "POLYFILL": 1
           }
         }
       }
@@ -887,11 +868,11 @@
           "byUA": {
             "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
@@ -992,13 +973,13 @@
         },
         "org.w3.clearkey test MediaKeys setServerCertificate() exceptions.": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         },
         "org.w3.clearkey test MediaKeys setServerCertificate() syntax with non-empty certificate.": {
@@ -1029,6 +1010,17 @@
           "byUA": {
             "CH56": "PASS",
             "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "org.w3.clearkey test MediaKeySession load() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
             "FF52": "FAIL"
           },
           "UAmessage": {},
@@ -1036,20 +1028,11 @@
             "PASS": 1
           }
         },
-        "org.w3.clearkey test MediaKeySession load() exceptions.": {
+        "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions": {
           "byUA": {
             "CH56": "FAIL",
             "ED14": "FAIL",
-            "FF52": "FAIL"
-          },
-          "UAmessage": {},
-          "totals": {}
-        },
-        "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions": {
-          "byUA": {
-            "CH56": "PASS",
-            "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
@@ -1060,11 +1043,11 @@
           "byUA": {
             "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         },
         "org.w3.clearkey test MediaKeySession close() exceptions.": {
@@ -1115,12 +1098,14 @@
       "subtests": {
         "org.w3.clearkey test requestMediaKeySystemAccess() exceptions.": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "PASS": 2
+          }
         },
         "org.w3.clearkey test MediaKeySystemAccess attribute syntax.": {
           "byUA": {
@@ -1172,9 +1157,9 @@
       "subtests": {
         "update() with invalid response (longer than 64Kb characters) should fail.": {
           "byUA": {
-            "CH56": "PASS",
+            "CH56": "FAIL",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
@@ -1275,16 +1260,17 @@
       "subtests": {
         "org.w3.clearkey test handling of non-ASCII responses for update()": {
           "byUA": {
-            "CH56": "PASS",
+            "CH56": "FAIL",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
           "UAmessage": {
+            "CH56": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\"",
             "ED14": "assert_unreached: Error: NotSupportedError Reached unreachable code"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 1
+            "FAIL": 2,
+            "PASS": 1
           }
         }
       }
@@ -1424,99 +1410,93 @@
       "subtests": {
         "drm, temporary, webm, initData longer than 64Kb characters": {
           "byUA": {
-            "CH56": "FAIL",
-            "FF52": "FAIL"
+            "CH56": "PASS",
+            "FF52": "PASS"
           },
-          "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_unreached: generateRequest() succeeded unexpectedly Reached unreachable code"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2
+            "PASS": 2
           }
         },
         "drm, temporary, cenc, initData longer than 64Kb characters": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "drm, temporary, cenc, invalid initdata (invalid pssh)": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "drm, temporary, cenc, invalid initdata (not pssh)": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "drm, temporary, keyids, initData longer than 64Kb characters": {
           "byUA": {
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "drm, temporary, keyids, invalid initdata (too short key ID)": {
           "byUA": {
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "drm, temporary, keyids, invalid initdata (too long key ID)": {
           "byUA": {
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 1,
+            "PASS": 1
           }
         }
       }
@@ -1535,13 +1515,13 @@
       "subtests": {
         "Update with invalid Clear Key license": {
           "byUA": {
-            "CH56": "PASS",
+            "CH56": "FAIL",
             "ED14": "TIMEOUT",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 1
           }
         }
       }
@@ -1842,9 +1822,9 @@
             "FF52": "FAIL"
           },
           "UAmessage": {
-            "CH56": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307709418 +/- 2000 but got NaN",
-            "ED14": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307745752 +/- 2000 but got NaN",
-            "FF52": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476307730847 +/- 2000 but got NaN"
+            "CH56": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476907038674 +/- 2000 but got NaN",
+            "ED14": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476906503180 +/- 2000 but got NaN",
+            "FF52": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1476907347649 +/- 2000 but got NaN"
           },
           "totals": {
             "FAIL": 3
@@ -2185,12 +2165,12 @@
         "drm, setmediakeys multiple times with different mediakeys": {
           "byUA": {
             "CH56": "PASS",
-            "ED14": "FAIL",
-            "FF52": "FAIL"
+            "ED14": "PASS",
+            "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 1
+            "PASS": 3
           }
         }
       }
@@ -2291,13 +2271,13 @@
         },
         "drm test MediaKeys setServerCertificate() exceptions.": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
             "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         },
         "drm test MediaKeys setServerCertificate() syntax with non-empty certificate.": {
@@ -2328,34 +2308,14 @@
           "byUA": {
             "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "drm test MediaKeySession load() exceptions.": {
-          "byUA": {
-            "CH56": "FAIL",
-            "ED14": "FAIL",
-            "FF52": "FAIL"
-          },
-          "UAmessage": {},
-          "totals": {}
-        },
-        "drm test if MediaKeySession generateRequest() resolves for various sessions": {
-          "byUA": {
-            "CH56": "PASS",
-            "ED14": "PASS",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 2
           }
         },
-        "drm test MediaKeySession update() exceptions.": {
+        "drm test MediaKeySession load() exceptions.": {
           "byUA": {
             "CH56": "PASS",
             "ED14": "FAIL",
@@ -2364,6 +2324,28 @@
           "UAmessage": {},
           "totals": {
             "PASS": 1
+          }
+        },
+        "drm test if MediaKeySession generateRequest() resolves for various sessions": {
+          "byUA": {
+            "CH56": "FAIL",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "drm test MediaKeySession update() exceptions.": {
+          "byUA": {
+            "CH56": "PASS",
+            "ED14": "FAIL",
+            "FF52": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
           }
         },
         "drm test MediaKeySession close() exceptions.": {
@@ -2414,12 +2396,14 @@
       "subtests": {
         "drm test requestMediaKeySystemAccess() exceptions.": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {},
-          "totals": {}
+          "totals": {
+            "PASS": 2
+          }
         },
         "drm test MediaKeySystemAccess attribute syntax.": {
           "byUA": {
@@ -3299,17 +3283,16 @@
       "subtests": {
         "org.w3.clearkey, requestMediaKeySystemAccess: Empty Key System should result in TypeError": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError": {
@@ -3523,17 +3506,16 @@
         },
         "org.w3.clearkey, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Empty configuration": {
@@ -4058,20 +4040,18 @@
     "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential-readyState.html": {
       "byUA": {
         "CH56": "OK",
-        "ED14": "TIMEOUT",
+        "ED14": "OK",
         "FF52": "OK"
       },
-      "UAmessage": {
-        "ED14": ""
-      },
+      "UAmessage": {},
       "totals": {
-        "OK": 2,
-        "TIMEOUT": 1
+        "OK": 3
       },
       "subtests": {
         "drm, successful playback, temporary, mp4, multiple keys, sequential, readyState": {
           "byUA": {
             "CH56": "FAIL",
+            "ED14": "TIMEOUT",
             "FF52": "FAIL"
           },
           "UAmessage": {
@@ -4079,7 +4059,8 @@
             "FF52": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 4"
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 2,
+            "TIMEOUT": 1
           }
         }
       }
@@ -4087,20 +4068,18 @@
     "/encrypted-media/drm-mp4-playback-temporary-multikey-sequential.html": {
       "byUA": {
         "CH56": "OK",
-        "ED14": "TIMEOUT",
+        "ED14": "OK",
         "FF52": "OK"
       },
-      "UAmessage": {
-        "ED14": ""
-      },
+      "UAmessage": {},
       "totals": {
-        "OK": 2,
-        "TIMEOUT": 1
+        "OK": 3
       },
       "subtests": {
         "drm, successful playback, temporary, mp4, multiple keys, sequential": {
           "byUA": {
             "CH56": "FAIL",
+            "ED14": "TIMEOUT",
             "FF52": "FAIL"
           },
           "UAmessage": {
@@ -4126,17 +4105,16 @@
       "subtests": {
         "drm, requestMediaKeySystemAccess: Empty Key System should result in TypeError": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "drm, requestMediaKeySystemAccess: Unsupported Key System should result in NotSupportedError": {
@@ -4350,17 +4328,16 @@
         },
         "drm, requestMediaKeySystemAccess: Empty supportedConfigurations should result in TypeError": {
           "byUA": {
-            "CH56": "FAIL",
+            "CH56": "PASS",
             "ED14": "FAIL",
-            "FF52": "FAIL"
+            "FF52": "PASS"
           },
           "UAmessage": {
-            "CH56": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\"",
-            "FF52": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+            "ED14": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "Empty configuration": {
