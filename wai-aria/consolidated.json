@@ -32,7 +32,7 @@
         "OK": 1
       },
       "subtests": {
-        "aria-busy=\"false\" on a grid ": {
+        "aria-busy=\"false\" on a grid": {
           "byUA": {
             "FL01": "PASS"
           },
@@ -52,7 +52,7 @@
         "OK": 1
       },
       "subtests": {
-        "aria-busy=\"false\" on a listbox ": {
+        "aria-busy=\"false\" on a listbox": {
           "byUA": {
             "FL01": "PASS"
           },
@@ -72,7 +72,7 @@
         "OK": 1
       },
       "subtests": {
-        "aria-busy=\"false\" on a menubar ": {
+        "aria-busy=\"false\" on a menubar": {
           "byUA": {
             "FL01": "FAIL"
           },
@@ -94,7 +94,7 @@
         "OK": 1
       },
       "subtests": {
-        "aria-busy=\"true\" on a grid ": {
+        "aria-busy=\"true\" on a grid": {
           "byUA": {
             "FL01": "PASS"
           },
@@ -136,7 +136,7 @@
         "OK": 1
       },
       "subtests": {
-        "aria-busy=\"true\" on a menubar ": {
+        "aria-busy=\"true\" on a menubar": {
           "byUA": {
             "FL01": "FAIL"
           },
@@ -185,7 +185,29 @@
             "FL01": "FAIL"
           },
           "UAmessage": {
-            "FL01": "assert_true: \"property interfaces contains Window\" failed (Got: Component, EditableText, Hypertext, Hyperlink, Text);  expected true got false"
+            "FL01": "assert_true: \"property role is ROLE_PUSH_BUTTON\" failed (Got: ROLE_SECTION); \"property objectAttributes contains keyshortcuts:\"Shift+Space\" failed (Got: display:block, margin-bottom:0px, margin-top:0px, margin-right:0px, keyshortuts:Shift+Space, tag:div, xml-roles:buttion, id:test, formatting:block, text-indent:0px, text-align:start, margin-left:0px);  expected true got false"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/wai-aria/aria11/aria-level-manual.html": {
+      "byUA": {
+        "FL01": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "aria-level": {
+          "byUA": {
+            "FL01": "FAIL"
+          },
+          "UAmessage": {
+            "FL01": "assert_true: \"property objectAttributes contains level:\"2\" failed (Got: display:block, margin-bottom:0px, margin-top:0px, margin-right:0px, tag:div, xml-roles:heading, id:test, formatting:block, text-indent:0px, text-align:start, margin-left:0px);  expected true got false"
           },
           "totals": {
             "FAIL": 1
@@ -211,26 +233,6 @@
           },
           "totals": {
             "FAIL": 1
-          }
-        }
-      }
-    },
-    "/wai-aria/aria11/aria-valuenow-manual.html": {
-      "byUA": {
-        "FL01": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 1
-      },
-      "subtests": {
-        "aria-valuenow": {
-          "byUA": {
-            "FL01": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 1
           }
         }
       }
@@ -279,7 +281,7 @@
         }
       }
     },
-    "/wai-aria/aria11/checkbox-manual.html": {
+    "/wai-aria/aria11/checkbox_false-manual.html": {
       "byUA": {
         "FL01": "OK"
       },
@@ -288,13 +290,101 @@
         "OK": 1
       },
       "subtests": {
-        "checkbox": {
+        "checkbox false": {
+          "byUA": {
+            "FL01": "FAIL"
+          },
+          "UAmessage": {
+            "FL01": "assert_true: \"propert states doesNotContain STATE_CHECKED\" failed ERROR: ['propert', 'states', 'doesNotContain', 'STATE_CHECKED'] is not a valid assertion;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/wai-aria/aria11/checkbox_true-manual.html": {
+      "byUA": {
+        "FL01": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "checkbox true": {
           "byUA": {
             "FL01": "PASS"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 1
+          }
+        }
+      }
+    },
+    "/wai-aria/aria11/default_values:_role_scrollbar-manual.html": {
+      "byUA": {
+        "FL01": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "default values: role=\"scrollbar\"": {
+          "byUA": {
+            "FL01": "FAIL"
+          },
+          "UAmessage": {
+            "FL01": "assert_true: \"property role is ROLE_SCROLLBAR\" failed (Got: ROLE_SCROLL_BAR); ATTA reported ERROR with message: ERROR: Exception calling get_minimum_value\nERROR: Could not get value for assertion\n(Got: None); \"result Value.atk_value_get_current_value contains 50\" failed (Got: 0.0); \"result Value.atk_value_get_maximum_value contains 100\" failed (Got: 0.0);  expected true got false"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/wai-aria/aria11/default_values:_role_slider-manual.html": {
+      "byUA": {
+        "FL01": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "default values: role=\"slider\"": {
+          "byUA": {
+            "FL01": "FAIL"
+          },
+          "UAmessage": {
+            "FL01": "assert_true: ATTA reported ERROR with message: ERROR: Exception calling get_minimum_value\nERROR: Could not get value for assertion\n(Got: None); \"result Value.atk_value_get_current_value contains 50\" failed (Got: 0.0); \"result Value.atk_value_get_maximum_value contains 100\" failed (Got: 0.0);  expected true got false"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/wai-aria/aria11/default_values:_role_spinbutton-manual.html": {
+      "byUA": {
+        "FL01": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "default values: role=\"spinbutton\"": {
+          "byUA": {
+            "FL01": "FAIL"
+          },
+          "UAmessage": {
+            "FL01": "assert_true: ATTA reported ERROR with message: ERROR: Exception calling get_minimum_value\nERROR: Could not get value for assertion\n(Got: None); \"result Value.atk_value_get_current_value contains 50\" failed (Got: 0.0); \"result Value.atk_value_get_maximum_value contains 100\" failed (Got: 0.0);  expected true got false"
+          },
+          "totals": {
+            "FAIL": 1
           }
         }
       }
