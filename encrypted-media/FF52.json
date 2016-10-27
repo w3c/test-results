@@ -93,8 +93,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         }
       ],
       "status": "OK",
@@ -261,8 +261,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, check events",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"closed-method-promise-resolved\""
         }
       ],
       "status": "OK",
@@ -497,8 +497,8 @@
         },
         {
           "name": "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidAccessError: Session type specified in keyids init data doesn't match session type.\""
         },
         {
           "name": "org.w3.clearkey test MediaKeySession update() exceptions.",
@@ -558,8 +558,8 @@
       "subtests": [
         {
           "name": "update() with invalid response (longer than 64Kb characters) should fail.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         }
       ],
       "status": "OK",
@@ -604,8 +604,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test handling of non-ASCII responses for update()",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         }
       ],
       "status": "OK",
@@ -716,8 +716,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         }
       ],
       "status": "OK",
@@ -860,8 +860,8 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, expired license",
-          "status": "FAIL",
-          "message": "assert_approx_equals: expiration attribute should equal provided expiration time expected 1477342797311 +/- 2000 but got NaN"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1108,8 +1108,8 @@
         },
         {
           "name": "drm test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidModificationError: An attempt was made to modify the type of the underlying objec\""
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
@@ -1512,8 +1512,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential, readyState",
-          "status": "FAIL",
-          "message": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 2"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1524,8 +1524,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, successful playback, temporary, mp4, multiple keys, sequential",
-          "status": "FAIL",
-          "message": "assert_false: Should not continue playing whilst waiting for a key expected false got true"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1881,6 +1881,18 @@
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, check events",
+          "status": "FAIL",
+          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"closed-method-promise-resolved\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/drm-mp4-playback-temporary-expired.html",
+      "subtests": [
+        {
+          "name": "drm, temporary, mp4, expired license",
           "status": "PASS",
           "message": null
         }
@@ -1894,7 +1906,7 @@
         {
           "name": "drm, successful playback, temporary, mp4, multiple keys, sequential, readyState",
           "status": "FAIL",
-          "message": "assert_equals: Video readyState should be HAVE_METADATA on watingforkey event expected 1 but got 2"
+          "message": "assert_equals: Should only receive one timeupdate while waiting for key expected 1 but got 2"
         }
       ],
       "status": "OK",
@@ -1906,7 +1918,7 @@
         {
           "name": "drm, successful playback, temporary, mp4, multiple keys, sequential",
           "status": "FAIL",
-          "message": "assert_false: Should not continue playing whilst waiting for a key expected false got true"
+          "message": "assert_equals: Should only receive one timeupdate while waiting for key expected 1 but got 2"
         }
       ],
       "status": "OK",
@@ -2302,8 +2314,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2470,8 +2482,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, check events",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"closed-method-promise-resolved\""
         }
       ],
       "status": "OK",
@@ -3039,8 +3051,8 @@
         },
         {
           "name": "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidAccessError: Session type specified in keyids init data doesn't match session type.\""
         },
         {
           "name": "org.w3.clearkey test MediaKeySession update() exceptions.",
@@ -3100,8 +3112,8 @@
       "subtests": [
         {
           "name": "update() with invalid response (longer than 64Kb characters) should fail.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
         }
       ],
       "status": "OK",
@@ -3146,8 +3158,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey test handling of non-ASCII responses for update()",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3252,8 +3264,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"InvalidAccessError\" but got \"TypeError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3432,8 +3444,8 @@
       "subtests": [
         {
           "name": "polyfill: drm, temporary, mp4, playback, check events",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"closed-method-promise-resolved\""
         }
       ],
       "status": "OK",
@@ -4013,8 +4025,8 @@
         },
         {
           "name": "drm test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidModificationError: An attempt was made to modify the type of the underlying objec\""
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
