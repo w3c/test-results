@@ -33,6 +33,11 @@ Index of implementations in reports
   * link client: http://projectmirador.org/
   * gitHub client: https://github.com/ProjectMirador/mirador/
   * gitHub server: https://github.com/azaroth42/MangoServer/ 
+  
+* DG - implementation Name: Wellcome Quilt
+  * email: tom.crane@digirati.com
+  * link client: http://ghp.wellcomecollection.org/annotation-viewer/quilt/
+  * gitHub client: https://github.com/wellcometrust/annotation-viewer
 
 
 Adding new results
