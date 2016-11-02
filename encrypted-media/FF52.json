@@ -93,8 +93,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -130,7 +130,7 @@
         {
           "name": "org.w3.clearkey, persistent-license, mp4, playback, destroy and acknowledge",
           "status": "FAIL",
-          "message": "assert_unreached: InvalidAccessError: Session type specified in keyids init data doesn't match session type. Reached unreachable code"
+          "message": "assert_unreached: NotSupportedError: Key system configuration is not supported Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -142,7 +142,7 @@
         {
           "name": "org.w3.clearkey, persistent-license, mp4, playback, check events",
           "status": "FAIL",
-          "message": "assert_unreached: InvalidAccessError: Session type specified in keyids init data doesn't match session type. Reached unreachable code"
+          "message": "assert_unreached: NotSupportedError: Key system configuration is not supported Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -154,7 +154,7 @@
         {
           "name": "org.w3.clearkey, persistent-license, mp4playback",
           "status": "FAIL",
-          "message": "assert_unreached: InvalidAccessError: Session type specified in keyids init data doesn't match session type. Reached unreachable code"
+          "message": "assert_unreached: NotSupportedError: Key system configuration is not supported Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -190,7 +190,7 @@
         {
           "name": "org.w3.clearkey, persistent-license, mp4, playback, retrieve, playback and destroy",
           "status": "FAIL",
-          "message": "assert_unreached: InvalidAccessError: Session type specified in keyids init data doesn't match session type. Reached unreachable code"
+          "message": "assert_unreached: NotSupportedError: Key system configuration is not supported Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -202,7 +202,7 @@
         {
           "name": "org.w3.clearkey, persistent-license, mp4, playback, retrieve and playback",
           "status": "FAIL",
-          "message": "assert_unreached: InvalidAccessError: Session type specified in keyids init data doesn't match session type. Reached unreachable code"
+          "message": "assert_unreached: NotSupportedError: Key system configuration is not supported Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -261,8 +261,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey, temporary, mp4, playback, check events",
-          "status": "FAIL",
-          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"closed-method-promise-resolved\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -497,8 +497,8 @@
         },
         {
           "name": "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"InvalidAccessError: Session type specified in keyids init data doesn't match session type.\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession update() exceptions.",
@@ -546,8 +546,8 @@
       "subtests": [
         {
           "name": "Unique origin is unable to create MediaKeys",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"failed\" but got \"allowed\""
         }
       ],
       "status": "OK",
@@ -558,8 +558,8 @@
       "subtests": [
         {
           "name": "update() with invalid response (longer than 64Kb characters) should fail.",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -604,8 +604,8 @@
       "subtests": [
         {
           "name": "org.w3.clearkey test handling of non-ASCII responses for update()",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -716,8 +716,8 @@
       "subtests": [
         {
           "name": "Update with invalid Clear Key license",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1108,8 +1108,8 @@
         },
         {
           "name": "drm test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"InvalidModificationError: An attempt was made to modify the type of the underlying objec\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
@@ -1157,8 +1157,8 @@
       "subtests": [
         {
           "name": "Unique origin is unable to create MediaKeys",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"failed\" but got \"allowed\""
         }
       ],
       "status": "OK",
@@ -1500,6 +1500,18 @@
         },
         {
           "name": "MediaEncryptedEvent interface: attribute initData",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/encrypted-media/clearkey-mp4-playback-temporary-encrypted-clear-sources.html",
+      "subtests": [
+        {
+          "name": "org.w3.clearkey, temporary, mp4, playback, encrypted and clear sources",
           "status": "PASS",
           "message": null
         }
@@ -1877,12 +1889,24 @@
       "message": null
     },
     {
+      "test": "/encrypted-media/drm-mp4-playback-temporary-encrypted-clear-sources.html",
+      "subtests": [
+        {
+          "name": "drm, temporary, mp4, playback, encrypted and clear sources",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/encrypted-media/drm-mp4-playback-temporary-events.html",
       "subtests": [
         {
           "name": "drm, temporary, mp4, playback, check events",
           "status": "FAIL",
-          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"closed-method-promise-resolved\""
+          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"close-promise-resolved\""
         }
       ],
       "status": "OK",
@@ -1905,8 +1929,8 @@
       "subtests": [
         {
           "name": "drm, successful playback, temporary, mp4, multiple keys, sequential, readyState",
-          "status": "FAIL",
-          "message": "assert_equals: Should only receive one timeupdate while waiting for key expected 1 but got 2"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1917,8 +1941,8 @@
       "subtests": [
         {
           "name": "drm, successful playback, temporary, mp4, multiple keys, sequential",
-          "status": "FAIL",
-          "message": "assert_equals: Should only receive one timeupdate while waiting for key expected 1 but got 2"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2482,8 +2506,8 @@
       "subtests": [
         {
           "name": "polyfill: org.w3.clearkey, temporary, mp4, playback, check events",
-          "status": "FAIL",
-          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"closed-method-promise-resolved\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3051,8 +3075,8 @@
         },
         {
           "name": "org.w3.clearkey test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"InvalidAccessError: Session type specified in keyids init data doesn't match session type.\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "org.w3.clearkey test MediaKeySession update() exceptions.",
@@ -3100,8 +3124,8 @@
       "subtests": [
         {
           "name": "Unique origin is unable to create MediaKeys",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"failed\" but got \"allowed\""
         }
       ],
       "status": "OK",
@@ -3112,8 +3136,8 @@
       "subtests": [
         {
           "name": "update() with invalid response (longer than 64Kb characters) should fail.",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"TypeError\" but got \"InvalidAccessError\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3445,7 +3469,7 @@
         {
           "name": "polyfill: drm, temporary, mp4, playback, check events",
           "status": "FAIL",
-          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"closed-method-promise-resolved\""
+          "message": "assert_equals: Expected 7th event to be 'closed-attribute-resolved' expected \"closed-attribute-resolved\" but got \"close-promise-resolved\""
         }
       ],
       "status": "OK",
@@ -4025,8 +4049,8 @@
         },
         {
           "name": "drm test if MediaKeySession generateRequest() resolves for various sessions",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"InvalidModificationError: An attempt was made to modify the type of the underlying objec\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "drm test MediaKeySession update() exceptions.",
@@ -4074,8 +4098,8 @@
       "subtests": [
         {
           "name": "Unique origin is unable to create MediaKeys",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"failed\" but got \"allowed\""
         }
       ],
       "status": "OK",
