@@ -281,6 +281,11 @@
       "test": "/annotation-model/annotations/annotationOptionals-manual.html",
       "subtests": [
         {
+          "name": "1:1 Implements Annotation-level **_creator_ key** with a **single value** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Annotation SHOULD have a creator key with a single value.; expected true got false"
+        },
+        {
           "name": "1:2 Implements Annotation-level **_created_ key** which has a **single value** that is a **string of format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
           "status": "PASS",
           "message": null
@@ -291,14 +296,49 @@
           "message": null
         },
         {
+          "name": "1:4 Implements **_bodyValue_ key** which has a **single value** that is a **string** [model 3.2.5](https://www.w3.org/TR/annotation-model/#string-body)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: bodyValue key not found. Annotation May have exactly one bodyValue (if no body also included).; expected true got false"
+        },
+        {
+          "name": "1:5 Implements Annotation-level **_generated_ key** which has a **single value** that is a **string of format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Valid Annotation-level generated key not found. Annotation may have zero or exactly one generated key value.; expected true got false"
+        },
+        {
+          "name": "1:6 Implements Annotation-level **_modified_ key** which has a **single value** that is a **string of format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Valid Annotation-level modified key not found. Annotation may have zero or exactly one modified key value.; expected true got false"
+        },
+        {
+          "name": "1:7 Implements **_audience_ key** which has one or more values with each audience instance described using **[schema.org/Audience](http://schema.org/Audience) classes and properties** - [model 3.3.3](https://www.w3.org/TR/annotation-model/#intended-audience)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: audience key not found. An Annotation may have one or more audience values.; expected true got false"
+        },
+        {
           "name": "1:8 Implements **_motivation_ key** which has one or more values, each of which is from the **model's list of Motivations** - [model 3.3.5](https://www.w3.org/TR/annotation-model/#motivation-and-purpose)",
           "status": "PASS",
           "message": null
         },
         {
+          "name": "1:9 Implements Annotation-level **_rights_** key which has one or more values, each of which is a **string of format uri** - [model 3.3.6](https://www.w3.org/TR/annotation-model/#rights-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotatoin-level rights key having string value(s) of format uri not found. Annotation may have zero or more rights key values.; expected true got false"
+        },
+        {
           "name": "1:10 Implements Annotation-level **_canonical_ key** which has a single value that is a **string of format uri** - [model 3.3.7](https://www.w3.org/TR/annotation-model/#other-identities)",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "1:11 Implements Annotation-level **_via_ key** which has one or more values, each of which is a **string of format uri** - [model 3.3.7](https://www.w3.org/TR/annotation-model/#other-identities)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation-level via key with string(s) of format uri as value(s) not found. Annotation may have via key with one or more values.; expected true got false"
+        },
+        {
+          "name": "1:12 Implements **_stylesheet_ key** which has a **single value** that is an **object or string of format uri**. [model 4.4](https://www.w3.org/TR/annotation-model/#styles)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: stylesheet key with exactly one value not found. Annotation may have stylesheet key with exactly one value.; expected true got false"
         },
         {
           "name": "1:13 Implements **_body_ key** - [model 3.1](https://www.w3.org/TR/annotation-model/#annotations)",
@@ -311,9 +351,79 @@
           "message": null
         },
         {
+          "name": "1:15 Implements **body _language_ key** with a **single value** that is a **language code** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a Body should include language key with a single value that is a language code.; expected true got false"
+        },
+        {
+          "name": "1:16 Implements **body _creator_ key** with a **single value**  [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a body should include creator key with a single value.; expected true got false"
+        },
+        {
+          "name": "1:17 Implements **body _created_ key** with a **single value** that is of **format date-time** [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a body should include created key with a single value that is of format date-time.; expected true got false"
+        },
+        {
           "name": "1:18 Implements **body _format_ key** with one or more values each of which is a **media type** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "1:19 Implements **body _language_ key** with one or more values each of which is a **language code** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a body may include language key with one or more values that are each a language code.; expected true got false"
+        },
+        {
+          "name": "1:20 Implements **body _type_ key** with one or more values each of which is drawn from the **model's list of resource classes** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Body may include type key with one or more values that are each drawn from the model's list of resource classes.; expected true got false"
+        },
+        {
+          "name": "1:21 Implements **body _processingLanguage_ key** with a **single value** that is a **language code** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Body may include processingLanguage key with a single value that is a language code.; expected true got false"
+        },
+        {
+          "name": "1:22 Implements **body _textDirection_ key** with a **single value** that is is **one of ltr, rtl, or auto** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Body may include textDirection key with a single value that is one of ltr, rtl, or auto.; expected true got false"
+        },
+        {
+          "name": "1:23 Implements **body _modified_ key** with a **single value** that is of **format date-time** [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a body may include modified key with a single value that is of format date-time.; expected true got false"
+        },
+        {
+          "name": "1:24 Implements **body _audience_ key** which has one or more values with each audience instance described using **[schema.org/Audience](http://schema.org/Audience) classes and properties** - [model 3.3.3](https://www.w3.org/TR/annotation-model/#intended-audience)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a body may include audience key which has one or more values with each audience instance described using schema.org/Audience classes and properties.; expected true got false"
+        },
+        {
+          "name": "1:25 Implements **body _accessibility_ key** which has one or more values - [model 3.3.4](#https://www.w3.org/TR/annotation-model/#accessibility-of-content)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Body may include accessibility key which has one or more values.; expected true got false"
+        },
+        {
+          "name": "1:26 Implements **body _purpose_ key** with one or more values are each drawn from **model's list of Motivations** [model 3.3.5](https://www.w3.org/TR/annotation-model/#motivation-and-purpose)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Body may include purpose key with one or more values that are each drawn from model's list of Motivations.; expected true got false"
+        },
+        {
+          "name": "1:27 Implements **body _rights_ key** which has one or more values, each of which is a **string of format uri** - [model 3.3.6](https://www.w3.org/TR/annotation-model/#rights-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a body may include rights key with one or more values each of format uri.; expected true got false"
+        },
+        {
+          "name": "1:28 Implements **body _canonical_ key** with a **single value** that is of **format uri** [model 3.3.7](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a body rresource may include canonical key with a single value that is of format uri.; expected true got false"
+        },
+        {
+          "name": "1:29 Implements **body _via_ key** which has one or more values, each of which is a **string of format uri** - [model 3.3.7](https://www.w3.org/TR/annotation-model/#other-identities)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a body resource may include via key with one or more values that are each of format uri.; expected true got false"
         },
         {
           "name": "1:30 Implements **External Web Resource** with **_id_ key** as a body of the Annotation  [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
@@ -331,9 +441,149 @@
           "message": null
         },
         {
+          "name": "1:33 Implements **Embedded Textual Body _type_ key** which includes a value of **Text** [model 3.2.4](https://www.w3.org/TR/annotation-model/#embedded-textual-body)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of an Embedded Textual Body should include type key which includes the value of Text.; expected true got false"
+        },
+        {
+          "name": "1:34 Implements **Choice or Set** with type and items key as a body - [model 3.2.7](https://www.w3.org/TR/annotation-model/#choice-of-bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A Body may be a Choice or Set.; expected true got false"
+        },
+        {
+          "name": "1:35 Implements **Choice** with **_type_ and _items_ keys** as a body of the Annotation  [model 3.2.7](https://www.w3.org/TR/annotation-model/#choice-of-bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A Choice resource may be used as an Annotation Body (not found).; expected true got false"
+        },
+        {
+          "name": "1:36 Implements **List** with **_type_ and _items_ keys** as a body of the Annotation  [model 3.2.8](https://www.w3.org/TR/annotation-model/#sets-of-bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A List resource may be used as an Annotation Body (not found).; expected true got false"
+        },
+        {
+          "name": "1:37 Implements **Composite** with **_type_ and _items_ keys** as a body of the Annotation  [model 3.2.8](https://www.w3.org/TR/annotation-model/#sets-of-bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A Composite resource may be used as an Annotation Body (not found).; expected true got false"
+        },
+        {
+          "name": "1:38 Implements **Independents** with **_type_ and _items_ keys** as a body of the Annotation  [model 3.2.8](https://www.w3.org/TR/annotation-model/#sets-of-bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A Independents resource may be used as an Annotation Body (not found).; expected true got false"
+        },
+        {
+          "name": "1:39 Implements **target _format_ key** with a **single value** that is a **media type** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a Target should include format key with a single value that is a media type.; expected true got false"
+        },
+        {
+          "name": "1:40 Implements **target _language_ key** with a **single value** that is a **language code** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a Target should include language key with a single value that is a language code.; expected true got false"
+        },
+        {
+          "name": "1:41 Implements **target _creator_ key** with a **single value**  [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a target should include creator key with a single value.; expected true got false"
+        },
+        {
+          "name": "1:42 Implements **target _created_ key** with a **single value** that is of **format date-time** [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a target should include created key with a single value that is of format date-time.; expected true got false"
+        },
+        {
+          "name": "1:43 Implements **target _format_ key** with one or more values each of which is a **media type** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a target may include format key with one or more values that are each a media type.; expected true got false"
+        },
+        {
+          "name": "1:44 Implements **target _language_ key** with one or more values each of which is a **language code** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a target may include language key with one or more values that are each a language code.; expected true got false"
+        },
+        {
+          "name": "1:45 Implements **target _type_ key** with one or more values each of which is drawn from the **model's list of resource classes** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Target may include type key with one or more values that are each drawn from the model's list of resource classes.; expected true got false"
+        },
+        {
+          "name": "1:46 Implements **target _processingLanguage_ key** with a **single value** that is a **language code** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Target may include processingLanguage key with a single value that is a language code.; expected true got false"
+        },
+        {
+          "name": "1:47 Implements **target _textDirection_ key** with a **single value** that is is **one of ltr, rtl, or auto** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Target may include textDirection key with a single value that is one of ltr, rtl, or auto.; expected true got false"
+        },
+        {
+          "name": "1:48 Implements **target _modified_ key** with a **single value** that is of **format date-time** [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a target may include modified key with a single value that is of format date-time.; expected true got false"
+        },
+        {
+          "name": "1:49 Implements **target _audience_ key** which has one or more values with each audience instance described using **[schema.org/Audience](http://schema.org/Audience) classes and properties** - [model 3.3.3](https://www.w3.org/TR/annotation-model/#intended-audience)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a target may include audience key which has one or more values with each audience instance described using schema.org/Audience classes and properties.; expected true got false"
+        },
+        {
+          "name": "1:50 Implements **target _accessibility_ key** which has one or more values - [model 3.3.4](#https://www.w3.org/TR/annotation-model/#accessibility-of-content)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Target may include accessibility key which has one or more values.; expected true got false"
+        },
+        {
+          "name": "1:51 Implements **target _purpose_ key** with one or more values are each drawn from **model's list of Motivations** [model 3.3.5](https://www.w3.org/TR/annotation-model/#motivation-and-purpose)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Target may include purpose key with one or more values that are each drawn from model's list of Motivations.; expected true got false"
+        },
+        {
+          "name": "1:52 Implements **target _rights_ key** which has one or more values, each of which is a **string of format uri** - [model 3.3.6](https://www.w3.org/TR/annotation-model/#rights-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a target may include rights key with one or more values each of format uri.; expected true got false"
+        },
+        {
+          "name": "1:53 Implements **target _canonical_ key** with a **single value** that is of **format uri** [model 3.3.7](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a target rresource may include canonical key with a single value that is of format uri.; expected true got false"
+        },
+        {
+          "name": "1:54 Implements **target _via_ key** which has one or more values, each of which is a **string of format uri** - [model 3.3.7](https://www.w3.org/TR/annotation-model/#other-identities)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a target resource may include via key with one or more values that are each of format uri.; expected true got false"
+        },
+        {
           "name": "1:55 Implements **External Web Resource** with **_id_ key** as a target of the Annotation  [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "1:56 Implements **Choice or Set** with type and items key as a target - [model 3.2.7](https://www.w3.org/TR/annotation-model/#choice-of-bodies-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A Target may be a Choice or Set.; expected true got false"
+        },
+        {
+          "name": "1:57 Implements **Choice** with **_type_ and _items_ keys** as a target of the Annotation  [model 3.2.7](https://www.w3.org/TR/annotation-model/#choice-of-targets-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A Choice resource may be used as an Annotation Target (not found).; expected true got false"
+        },
+        {
+          "name": "1:58 Implements **List** with **_type_ and _items_ keys** as a target of the Annotation  [model 3.2.8](https://www.w3.org/TR/annotation-model/#sets-of-targets-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A List resource may be used as an Annotation Target (not found).; expected true got false"
+        },
+        {
+          "name": "1:59 Implements **Composite** with **_type_ and _items_ keys** as a target of the Annotation  [model 3.2.8](https://www.w3.org/TR/annotation-model/#sets-of-targets-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A Composite resource may be used as an Annotation Target (not found).; expected true got false"
+        },
+        {
+          "name": "1:60 Implements **Independents** with **_type_ and _items_ keys** as a target of the Annotation  [model 3.2.8](https://www.w3.org/TR/annotation-model/#sets-of-targets-and-targets)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A Independents resource may be used as an Annotation Target (not found).; expected true got false"
+        },
+        {
+          "name": "1:61 Implements **Specific Resource** with **_source_ and at least one of _purpose, selector, state, style, renderedVia, scope_ keys** as a body of the Annotation  [model 4](https://www.w3.org/TR/annotation-model/#specific-resources)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: A Specific Resource may be used as an Annotation Body (not found).; expected true got false"
         },
         {
           "name": "1:62 Implements **Specific Resource** with **_source_ and at least one of _purpose, selector, state, style, renderedVia, scope_ keys** as a target of the Annotation  [model 4](https://www.w3.org/TR/annotation-model/#specific-resources)",
@@ -346,9 +596,19 @@
           "message": null
         },
         {
+          "name": "1:64 Implements **Specific Resource _styleClass_ key** with one or more values on a **Specific Resource** - [model 4.4](https://www.w3.org/TR/annotation-model/#styles)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include styleClass key with one or more values.; expected true got false"
+        },
+        {
+          "name": "1:65 Implements **Specific Resource _renderedVia_ key** with one or more values on a **Specific Resource** - [model 4.5](https://www.w3.org/TR/annotation-model/#rendering-software)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include renderedVia key with one or more values.; expected true got false"
+        },
+        {
           "name": "1:66 Implements **Specific Resource _scope_ key** - [model 4.6](https://www.w3.org/TR/annotation-model/#scope-of-a-resource)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include scope key with one or more values that is of format uri.; expected true got false"
         },
         {
           "name": "1:67 Implements **Specific Resource Selector** - [model 4.2](https://www.w3.org/TR/annotation-model/#selectors)",
@@ -356,14 +616,79 @@
           "message": null
         },
         {
+          "name": "1:68 Implements **Specific Resource Fragment Selector** - [model 4.2.1](https://www.w3.org/TR/annotation-model/#fragment-selector)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include fragmentSelector .; expected true got false"
+        },
+        {
+          "name": "1:69 Implements **Specific Resource _conformsTo_ key** with a **single value** which is of **format uri** on a **Specific Resource FragmentSelector** - [model 4.2.1](https://www.w3.org/TR/annotation-model/#fragment-selector)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a FragmentSelector should include conformsTo key with a single value that is of format uri.; expected true got false"
+        },
+        {
+          "name": "1:70 Implements **Specific Resource CSS Selector** - [model 4.2.2](https://www.w3.org/TR/annotation-model/#css-selector)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include cssSelector .; expected true got false"
+        },
+        {
+          "name": "1:71 Implements **Specific Resource XPath Selector** - [model 4.2.3](https://www.w3.org/TR/annotation-model/#xpath-selector)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include xpathSelector .; expected true got false"
+        },
+        {
+          "name": "1:72 Implements **Specific Resource Text Quote Selector** - [model 4.2.4](https://www.w3.org/TR/annotation-model/#text-quote-selector)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include textQuoteSelector .; expected true got false"
+        },
+        {
+          "name": "1:73 Implements **Specific Resource _prefix_ key** with a **single string value** on a **Specific Resource TextQuoteSelector** - [model 4.2.4](https://www.w3.org/TR/annotation-model/#text-quote-selector)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a TextQuoteSelector should include prefix key with a single value .; expected true got false"
+        },
+        {
+          "name": "1:74 Implements **Specific Resource _suffix_ key** with a **single string value** on a **Specific Resource TextQuoteSelector** - [model 4.2.4](https://www.w3.org/TR/annotation-model/#text-quote-selector)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: The description of a TextQuoteSelector should include suffix key with a single value .; expected true got false"
+        },
+        {
+          "name": "1:75 Implements **Specific Resource Text Position Selector** - [model 4.2.5](https://www.w3.org/TR/annotation-model/#text-position-selector)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include textPositionSelector .; expected true got false"
+        },
+        {
+          "name": "1:76 Implements **Specific Resource Data Position Selector** - [model 4.2.6](https://www.w3.org/TR/annotation-model/#data-position-selector)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include dataPositionSelector .; expected true got false"
+        },
+        {
           "name": "1:77 Implements **Specific Resource SVG Selector** - [model 4.2.7](https://www.w3.org/TR/annotation-model/#svg-selector)",
           "status": "PASS",
           "message": null
         },
         {
+          "name": "1:78 Implements **Specific Resource Range Selector** - [model 4.2.8](https://www.w3.org/TR/annotation-model/#range-selector)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include rangeSelector .; expected true got false"
+        },
+        {
           "name": "1:79 Implements **Specific Resource State** - [model 4.3](https://www.w3.org/TR/annotation-model/#states)",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "1:80 Implements **Specific Resource Time State** - [model 4.3.1](https://www.w3.org/TR/annotation-model/#time-state)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include timeState State .; expected true got false"
+        },
+        {
+          "name": "1:81 Implements **Specific Resource Request Header State** - [model 4.3.2](https://www.w3.org/TR/annotation-model/#request-header-state)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a Specific Resource may include requestHeaderState State .; expected true got false"
+        },
+        {
+          "name": "1:82 Implements **Specific Resource _cached_ key** with one or more values each of **format uri** on a **Specific Resource TimeState** - [model 4.3.1](https://www.w3.org/TR/annotation-model/#time-state)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a TimeState may include cached key with a single value that is of format uri.; expected true got false"
         }
       ],
       "status": "OK",
@@ -373,9 +698,59 @@
       "test": "/annotation-model/annotations/annotationsAgentOptionals-manual.html",
       "subtests": [
         {
+          "name": "1:1 Implements **_creator_ key** which has one or more values, each of which is a **string of format uri** or an **object** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: creator key not found. Annotation may have zero or more creators.; expected true got false"
+        },
+        {
+          "name": "1:2 Implements Annotation-level creator (Agent) **_id_ key** with **single value** that is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Id for Annotation Creator (Agent) not found or more than 1 found. Agents should have exactly one id of format uri.; expected true got false"
+        },
+        {
+          "name": "1:3 Implements Annotation-level creator (Agent) **_type_ key** with one or more values from **model-recommended list (Person, Organization, Software)** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Type (Person, Organization, Software) for Annotation Creator (Agent) not found. Agents should have one or more type values.; expected true got false"
+        },
+        {
+          "name": "1:4 Implements Annotation-level creator (Agent) **_nickname_ key** with a **single value** that is a string - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Nickname for Annotation Creator (Agent) not found. Agents should have exactly one nickname value.; expected true got false"
+        },
+        {
+          "name": "1:5 Implements Annotation-level creator (Agent) **_name_ key** with a **single value** that is a string - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Single name for Annotation Creator (Agent) not found. Agents should have exactly one name value.; expected true got false"
+        },
+        {
+          "name": "1:6 Implements Annotation-level creator (Agent) **_name_ key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Name for Annotation Creator (Agent) not found. Agents may have one or more name values.; expected true got false"
+        },
+        {
+          "name": "1:7 Implements Annotation-level creator (Agent) **_email_ key** with one or more values, each of which is a **mailto: uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email for Annotation Creator (Agent) not found. Agents may have one or more email values.; expected true got false"
+        },
+        {
+          "name": "1:8 Implements Annotation-level creator (Agent) **email_sha1 key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email_sha1 for Annotation Creator (Agent) not found. Agents may have one or more email_sha1 values.; expected true got false"
+        },
+        {
+          "name": "1:9 Implements Annotation-level creator (Agent) **_homepage_ key** with one or more values, each of which is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Homepage for Annotation Creator (Agent) not found. Agents may have one or more homepage values.; expected true got false"
+        },
+        {
           "name": "1:10 Implements **_generator_ key** which has one or more values, each of which is a **string of format uri** or an **object** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information).",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "1:11 Implements Annotation-level generator (Agent) **_id_ key** with **single value** that is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Id for Annotation Generator (Agent) not found or more than 1 found. Agents should have exactly one id of format uri.; expected true got false"
         },
         {
           "name": "1:12 Implements Annotation-level generator (Agent) **_type_ key** with one or more values from **model-recommended list (Person, Organization, Software)** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
@@ -383,9 +758,124 @@
           "message": null
         },
         {
+          "name": "1:13 Implements Annotation-level generator (Agent) **_nickname_ key** with a **single value** that is a string - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Nickname for Annotation Generator (Agent) not found. Agents should have exactly one nickname value.; expected true got false"
+        },
+        {
+          "name": "1:14 Implements Annotation-level generator (Agent) **_name_ key** with a **single value** that is a string - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Single name for Annotation Generator (Agent) not found. Agents should have exactly one name value.; expected true got false"
+        },
+        {
+          "name": "1:15 Implements Annotation-level generator (Agent) **_name_ key** with one or more values. [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Name for Annotation Generator (Agent) not found. Agents may have one or more name values.; expected true got false"
+        },
+        {
+          "name": "1:16 Implements Annotation-level generator (Agent) **_email_ key** with one or more values, each of which is a **mailto: uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email for Annotation Generator (Agent) not found. Agents may have one or more email values.; expected true got false"
+        },
+        {
+          "name": "1:17 Implements Annotation-level generator (Agent) **email_sha1 key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email_sha1 for Annotation Generator (Agent) not found. Agents may have one or more email_sha1 values.; expected true got false"
+        },
+        {
           "name": "1:18 Implements Annotation-level generator (Agent) **_homepage_ key** with one or more values, each of which is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "1:19 Implements **body _creator_ key** with one or more values - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a body may include creator key with one or more values.; expected true got false"
+        },
+        {
+          "name": "1:20 Implements Body-level creator (Agent) **_id_ key** with **single value** that is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Id for Body Creator (Agent) not found or more than 1 found. Agents should have exactly one id of format uri.; expected true got false"
+        },
+        {
+          "name": "1:21 Implements Body-level creator (Agent) **_type_ key** with one or more values from **model-recommended list (Person, Organization, Software)** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Type (Person, Organization, Software) for Body Creator (Agent) not found. Agents should have one or more type values.; expected true got false"
+        },
+        {
+          "name": "1:22 Implements Body-level creator (Agent) **_nickname_ key** with a **single value** that is a string - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Nickname for Body Creator (Agent) not found. Agents should have exactly one nickname value.; expected true got false"
+        },
+        {
+          "name": "1:23 Implements Body-level creator (Agent) **_name_ key** with a **single value** that is a string - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Single name for Body Creator (Agent) not found. Agents should have exactly one name value.; expected true got false"
+        },
+        {
+          "name": "1:24 Implements Body-level creator (Agent) **_name_ key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Name for Body Creator (Agent) not found. Agents may have one or more name values.; expected true got false"
+        },
+        {
+          "name": "1:25 Implements Body-level creator (Agent) **_email_ key** with one or more values, each of which is a **mailto: uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email for Body Creator (Agent) not found. Agents may have one or more email values.; expected true got false"
+        },
+        {
+          "name": "1:26 Implements Body-level creator (Agent) **email_sha1 key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email_sha1 for Body Creator (Agent) not found. Agents may have one or more email_sha1 values.; expected true got false"
+        },
+        {
+          "name": "1:27 Implements Body-level creator (Agent) **_homepage_ key** with one or more values, each of which is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Homepage for Body Creator (Agent) not found. Agents may have one or more homepage values.; expected true got false"
+        },
+        {
+          "name": "1:28 Implements **target _creator_ key** with one or more values - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: The description of a target may include creator key with one or more values.; expected true got false"
+        },
+        {
+          "name": "1:29 Implements Target-level creator (Agent) **_id_ key** with **single value** that is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Id for Target Creator (Agent) not found or more than 1 found. Agents should have exactly one id of format uri.; expected true got false"
+        },
+        {
+          "name": "1:30 Implements Target-level creator (Agent) **_type_ key** with one or more values from **model-recommended list (Person, Organization, Software)** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Type (Person, Organization, Software) for Target Creator (Agent) not found. Agents should have one or more type values.; expected true got false"
+        },
+        {
+          "name": "1:31 Implements Target-level creator (Agent) **_nickname_ key** with a **single value** that is a string - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Nickname for Target Creator (Agent) not found. Agents should have exactly one nickname value.; expected true got false"
+        },
+        {
+          "name": "1:32 Implements Target-level creator (Agent) **_name_ key** with a **single value** that is a string - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Single name for Target Creator (Agent) not found. Agents should have exactly one name value.; expected true got false"
+        },
+        {
+          "name": "1:33 Implements Target-level creator (Agent) **_name_ key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Name for Target Creator (Agent) not found. Agents may have one or more name values.; expected true got false"
+        },
+        {
+          "name": "1:34 Implements Target-level creator (Agent) **_email_ key** with one or more values, each of which is a **mailto: uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email for Target Creator (Agent) not found. Agents may have one or more email values.; expected true got false"
+        },
+        {
+          "name": "1:35 Implements Target-level creator (Agent) **email_sha1 key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email_sha1 for Target Creator (Agent) not found. Agents may have one or more email_sha1 values.; expected true got false"
+        },
+        {
+          "name": "1:36 Implements Target-level creator (Agent) **_homepage_ key** with one or more values, each of which is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Homepage for Target Creator (Agent) not found. Agents may have one or more homepage values.; expected true got false"
         }
       ],
       "status": "OK",
