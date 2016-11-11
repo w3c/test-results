@@ -17,8 +17,8 @@
       "subtests": [
         {
           "name": "aria-busy=\"false\" on a grid",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains Selection\" failed (Got: Action, Component, Hypertext, Table);  expected true got false"
         }
       ],
       "status": "OK",
@@ -42,7 +42,7 @@
         {
           "name": "aria-busy=\"false\" on a menubar",
           "status": "FAIL",
-          "message": "assert_true: \"property interfaces contains Selection\" failed (Got: Component, EditableText, Hypertext, Hyperlink, Text);  expected true got false"
+          "message": "assert_true: \"property interfaces contains Selection\" failed (Got: Action, Component, Hypertext);  expected true got false"
         }
       ],
       "status": "OK",
@@ -53,8 +53,8 @@
       "subtests": [
         {
           "name": "aria-busy=\"true\" on a grid",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_BUSY\" failed (Got: STATE_ENABLED, STATE_MULTISELECTABLE, STATE_SENSITIVE, STATE_VERTICAL);  expected true got false"
         }
       ],
       "status": "OK",
@@ -66,7 +66,7 @@
         {
           "name": "aria-busy=\"true\" on a listbox",
           "status": "FAIL",
-          "message": "assert_true: \"result Selection.select_child(1) is false\" failed (Got: true);  expected true got false"
+          "message": "assert_true: \"property states contains STATE_BUSY\" failed (Got: STATE_ENABLED, STATE_SENSITIVE, STATE_VERTICAL);  expected true got false"
         }
       ],
       "status": "OK",
@@ -78,7 +78,7 @@
         {
           "name": "aria-busy=\"true\" on a menubar",
           "status": "FAIL",
-          "message": "assert_true: \"property interfaces contains Selection\" failed (Got: Component, EditableText, Hypertext, Hyperlink, Text);  expected true got false"
+          "message": "assert_true: \"property interfaces contains Selection\" failed (Got: Action, Component, Hypertext); \"property states contains STATE_BUSY\" failed (Got: STATE_ENABLED, STATE_HORIZONTAL, STATE_SENSITIVE);  expected true got false"
         }
       ],
       "status": "OK",
@@ -101,8 +101,8 @@
       "subtests": [
         {
           "name": "aria-keyshortcuts",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains keyshortcuts:Shift+Space\" failed (Got: computed-role:button, xml-roles:button, html-id:test, tag:div, toolkit:WebKitGtk);  expected true got false"
         }
       ],
       "status": "OK",
@@ -114,7 +114,7 @@
         {
           "name": "aria-level",
           "status": "FAIL",
-          "message": "assert_true: \"property objectAttributes contains level:2\" failed (Got: display:block, margin-bottom:0px, margin-top:0px, margin-right:0px, tag:div, xml-roles:heading, id:test, formatting:block, text-indent:0px, text-align:start, margin-left:0px);  expected true got false"
+          "message": "assert_true: \"property objectAttributes contains level:2\" failed (Got: computed-role:heading, xml-roles:heading, html-id:test, tag:div, toolkit:WebKitGtk);  expected true got false"
         }
       ],
       "status": "OK",
@@ -125,8 +125,8 @@
       "subtests": [
         {
           "name": "aria-placeholder",
-          "status": "FAIL",
-          "message": "assert_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed (Got: display:block, margin-bottom:0px, margin-top:0px, margin-right:0px, tag:div, xml-roles:textbox, id:test, formatting:block, text-indent:0px, text-align:start, placeholder:DD/MM/YYYY, margin-left:0px);  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -137,8 +137,8 @@
       "subtests": [
         {
           "name": "article",
-          "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_ARTICLE\" failed (Got: ROLE_DOCUMENT_FRAME);  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -186,7 +186,7 @@
         {
           "name": "default values: role=\"scrollbar\"",
           "status": "FAIL",
-          "message": "assert_true: \"result Value.atk_value_get_minimum_value contains 0\" failed ERROR: Exception calling get_minimum_value\n(Got: None); \"result Value.atk_value_get_current_value contains 50\" failed (Got: 0.0); \"result Value.atk_value_get_maximum_value contains 100\" failed (Got: 0.0);  expected true got false"
+          "message": "assert_true: \"result Value.atk_value_get_current_value contains 50\" failed (Got: 0.0); \"result Value.atk_value_get_maximum_value contains 100\" failed (Got: 0.0);  expected true got false"
         }
       ],
       "status": "OK",
@@ -198,7 +198,7 @@
         {
           "name": "default values: role=\"slider\"",
           "status": "FAIL",
-          "message": "assert_true: \"result Value.atk_value_get_minimum_value contains 0\" failed ERROR: Exception calling get_minimum_value\n(Got: None); \"result Value.atk_value_get_current_value contains 50\" failed (Got: 0.0); \"result Value.atk_value_get_maximum_value contains 100\" failed (Got: 0.0);  expected true got false"
+          "message": "assert_true: \"result Value.atk_value_get_current_value contains 50\" failed (Got: 0.0); \"result Value.atk_value_get_maximum_value contains 100\" failed (Got: 0.0);  expected true got false"
         }
       ],
       "status": "OK",
@@ -210,7 +210,7 @@
         {
           "name": "default values: role=\"spinbutton\"",
           "status": "FAIL",
-          "message": "assert_true: \"result Value.atk_value_get_minimum_value contains 0\" failed ERROR: Exception calling get_minimum_value\n(Got: None); \"result Value.atk_value_get_current_value contains 50\" failed (Got: 0.0); \"result Value.atk_value_get_maximum_value contains 100\" failed (Got: 0.0);  expected true got false"
+          "message": "assert_true: \"result Value.atk_value_get_current_value contains 50\" failed (Got: 0.0); \"result Value.atk_value_get_maximum_value contains 100\" failed (Got: 0.0);  expected true got false"
         }
       ],
       "status": "OK",
@@ -221,8 +221,8 @@
       "subtests": [
         {
           "name": "grid",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains Selection\" failed (Got: Action, Component, Hypertext, Table);  expected true got false"
         }
       ],
       "status": "OK",
@@ -234,7 +234,7 @@
         {
           "name": "log",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LOG\" failed (Got: ROLE_SECTION);  expected true got false"
+          "message": "assert_true: \"property objectAttributes contains container-live:polite\" failed (Got: computed-role:log, xml-roles:log, html-id:test, tag:div, toolkit:WebKitGtk); \"property objectAttributes contains live:polite\" failed (Got: computed-role:log, xml-roles:log, html-id:test, tag:div, toolkit:WebKitGtk); \"property objectAttributes contains container-live-role:log\" failed (Got: computed-role:log, xml-roles:log, html-id:test, tag:div, toolkit:WebKitGtk);  expected true got false"
         }
       ],
       "status": "OK",
@@ -245,8 +245,8 @@
       "subtests": [
         {
           "name": "main",
-          "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LANDMARK\" failed (Got: ROLE_SECTION);  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -329,8 +329,8 @@
       "subtests": [
         {
           "name": "search",
-          "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LANDMARK\" failed (Got: ROLE_SECTION);  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -341,8 +341,8 @@
       "subtests": [
         {
           "name": "searchbox",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_SINGLE_LINE\" failed (Got: STATE_EDITABLE, STATE_ENABLED, STATE_FOCUSABLE, STATE_HORIZONTAL, STATE_SENSITIVE);  expected true got false"
         }
       ],
       "status": "OK",
@@ -353,8 +353,8 @@
       "subtests": [
         {
           "name": "searchbox-multiline",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_MULTI_LINE\" failed (Got: STATE_EDITABLE, STATE_ENABLED, STATE_FOCUSABLE, STATE_HORIZONTAL, STATE_SENSITIVE);  expected true got false"
         }
       ],
       "status": "OK",
@@ -365,8 +365,8 @@
       "subtests": [
         {
           "name": "status",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains container-live:polite\" failed (Got: computed-role:status, xml-roles:status, html-id:test, tag:div, toolkit:WebKitGtk); \"property objectAttributes contains live:polite\" failed (Got: computed-role:status, xml-roles:status, html-id:test, tag:div, toolkit:WebKitGtk); \"property objectAttributes contains container-live-role:status\" failed (Got: computed-role:status, xml-roles:status, html-id:test, tag:div, toolkit:WebKitGtk);  expected true got false"
         }
       ],
       "status": "OK",
