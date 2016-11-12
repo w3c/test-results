@@ -42,6 +42,9 @@ Index of implementations in reports
 * PN - implementation Name: The Pund.it
   * link: http://thepund.it/
 
+* KM - impelementation Name: KANZAKI Masahide
+  * email: mkanzaki@gmail.com
+  * link: http://www.kanzaki.com/works/2016/pub/image-annotator
 
 Adding new results
 ==================
