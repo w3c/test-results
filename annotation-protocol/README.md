@@ -11,7 +11,8 @@ Index of implementations tested
 ===============================
 
 * RI - Reference Implementation
-* CC - Conquering Corsairs
+* CC - Conquering Corsairs (MangoServer)
+  * Github:  https://github.com/azaroth42/MangoServer
 
 Adding new results
 ==================
