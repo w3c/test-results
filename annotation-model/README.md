@@ -46,6 +46,11 @@ Index of implementations in reports
   * email: mkanzaki@gmail.com
   * link: http://www.kanzaki.com/works/2016/pub/image-annotator
 
+* RI - implementation Name: Reference Implementation
+  * email: shane@spec-ops.io
+  * link: https://github.com/spec-ops/web-platform-tests
+
+
 Adding new results
 ==================
 
