@@ -1,0 +1,327 @@
+{
+  "results": [
+    {
+      "test": "/annotation-model/collections/collectionMusts-manual.html",
+      "subtests": [
+        {
+          "name": "1:1 Implements **_@context_ key** and '**http://www.w3.org/ns/anno.jsonld**' is **a value of _@context_** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:2 Implements **Annotation Collection _id_ key** which has a **single value** that is a **string of format uri** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:3 Implements **Annotation Collection _type_ key** such that '**AnnotationCollection**' is **a value of _type_** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:4 **Annotation Collection _label_ key**, if present, is **a value of type string** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:5 **Annotation Collection _total_ key**, if present, is **a non-negative integer value** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:6 **Annotation Collection has _first_ key**, or no **_total_ key**, or **_total_ key** with value of zero - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:7 **Annotation Collection _last_ key**, if present, is **a single value of format uri** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:8 If present the Annotation Collection-level **_created_ key** has a **single value** that is of **format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:9 If present the Annotation Collection-level **_modified_ key** has a **single value** that is of **format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:10 If present the Annotation Collection Collection-level **_rights_ key** has values that are all **strings of format uri** - [model 3.3.6](https://www.w3.org/TR/annotation-model/#rights-information)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/annotation-model/collections/collectionOptionals-manual.html",
+      "subtests": [
+        {
+          "name": "1:1 Implements **Annotation Collection _label_ key** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:2 Implements **Annotation Collection _last_ key** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:3 Implements **Annotation Collection _total_ key** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:4 Implements **Annotation Collection _first_ key** - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:5 Implements Annotation Collection-level **_modified_ key** which has a **single value** that is a **string of format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Valid Annotation Collection-level modified key not found. Annotation Collection may have zero or exactly one modified key value.; expected true got false"
+        },
+        {
+          "name": "1:6 Implements **Annotation Collection _creator_ key** which has one or more values, each of which is a **string of format uri** or an **object** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation Collection creator key not found. Annotation Collection may have zero or more creators.; expected true got false"
+        },
+        {
+          "name": "1:7 Implements Annotation Collection-level **_created_ key** which has a **single value** that is a **string of format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Valid Annotation Collection-level created key not found. Annotation Collection may have exactly one created key value.; expected true got false"
+        },
+        {
+          "name": "1:8 Implements Annotation Collection-level **_rights_** key which has one or more values, each of which is a **string of format uri** - [model 3.3.6](https://www.w3.org/TR/annotation-model/#rights-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation Collection-level rights key having string value(s) of format uri not found. Annotation Collection may have zero or more rights key values.; expected true got false"
+        },
+        {
+          "name": "1:9 Implements Annotation Collection-level creator (Agent) **email_sha1 key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email_sha1 for Annotation Collection Creator (Agent) not found. Agents may have one or more email_sha1 values.; expected true got false"
+        },
+        {
+          "name": "1:10 Implements Annotation Collection-level creator (Agent) **_email_ key** with one or more values, each of which is a **mailto: uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Email for Annotation Collection Creator (Agent) not found. Agents may have one or more email values.; expected true got false"
+        },
+        {
+          "name": "1:11 Implements Annotation Collection-level creator (Agent) **_homepage_ key** with one or more values, each of which is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Homepage for Annotation Collection Creator (Agent) not found. Agents may have one or more homepage values.; expected true got false"
+        },
+        {
+          "name": "1:12 Implements Annotation Collection-level creator (Agent) **_id_ key** with **single value** that is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Id for Annotation Collection Creator (Agent) not found or more than 1 found. Agents should have exactly one id of format uri.; expected true got false"
+        },
+        {
+          "name": "1:13 Implements Annotation Collection-level creator (Agent) **_name_ key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Name for Annotation Collection Creator (Agent) not found. Agents may have one or more name values.; expected true got false"
+        },
+        {
+          "name": "1:14 Implements Annotation Collection-level creator (Agent) **_nickname_ key** with a **single value** that is a string - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Nickname for Annotation Collection Creator (Agent) not found. Agents should have exactly one nickname value.; expected true got false"
+        },
+        {
+          "name": "1:15 Implements Annotation Collection-level creator (Agent) **_type_ key** with one or more values from **model-recommended list (Person, Organization, Software)** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Type (Person, Organization, Software) for Annotation Collection Creator (Agent) not found. Agents should have one or more type values.; expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/annotation-model/collections/pages/pageMusts-manual.html",
+      "subtests": [
+        {
+          "name": "1:1 Implements **Annotation Page** (or Annotation Collection for embedded Page) **_@context_ key** and '**http://www.w3.org/ns/anno.jsonld**' is **a value of _@context_** - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:2 Implements **Annotation Page _id_ key** which has a **single value** that is a **string of format uri** - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page is missing id key or value of id key is not a single string of format uri.; expected true got false"
+        },
+        {
+          "name": "1:3 Implements **Annotation Page _type_ key** such that '**AnnotationPage**' is **a value of _type_** - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page is missing type key or 'AnnotationPage' is not a value of type.; expected true got false"
+        },
+        {
+          "name": "1:4 Implements **Annotation Page _items_ key** such that value of items key is an array of strings of format uri and/or objects of type Annotation - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page is missing items key or value of items key is not an array of strings of format uri and/or objects of type Annotation.; expected true got false"
+        },
+        {
+          "name": "1:5 True when **Annotation Page has no _startIndex_ key** or has **_startIndex_ key** with valid value of _type_ integer >= 0 - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page has an invalid startIndex value.; expected true got false"
+        },
+        {
+          "name": "1:6 True when **Annotation Page has no _partOf_ key** or has **_partOf_ key** with valid value oof string of format uri - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page has an invalid partOf value.; expected true got false"
+        },
+        {
+          "name": "1:7 True when **Annotation Page has no _next_ key** or has **_next_ key** with valid value of string of format uri - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page has an invalid next value.; expected true got false"
+        },
+        {
+          "name": "1:8 True when **Annotation Page has no _prev_ key** or has **_prev_ key** with valid value of string of format uri - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page has an invalid prev value.; expected true got false"
+        },
+        {
+          "name": "1:9 **Annotation Page _total_ key**, if present (inherited from Collection), is **a non-negative integer value** - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page has total key with non-numeric value, a negative numeric value, or more than one value.; expected true got false"
+        },
+        {
+          "name": "1:10 **Annotation Page _label_ key**, if present (inherited from Collection), is **a value of type string** - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page has label key with non-string value or an array as value containing non-string value.; expected true got false"
+        },
+        {
+          "name": "1:11 **Annotation Page _first_ key** (inherited from Collection), if present, has value of string of format uri - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page has invalid first key.; expected true got false"
+        },
+        {
+          "name": "1:12 **Annotation Page _last_ key** (inherited from Collection), if present, is **a single value of format uri** - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation Page has last key with non-uri value or array as value containing more than one item.; expected true got false"
+        },
+        {
+          "name": "1:13 If present the Annotation page-level **_created_ key** has a **single value** that is of **format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation page has multiple created key values or a single created key value that is not of format date-time.; expected true got false"
+        },
+        {
+          "name": "1:14 If present the Annotation page-level **_modified_ key** has a **single value** that is of **format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation page has multiple modified key values or a single modified key value that is not of format date-time.; expected true got false"
+        },
+        {
+          "name": "1:15 If present the Annotation page page-level **_rights_ key** has values that are all **strings of format uri** - [model 3.3.6](https://www.w3.org/TR/annotation-model/#rights-information)",
+          "status": "FAIL",
+          "message": "assert_true: ERROR: Annotation page page has one or more values for the rights key that are not strings of format uri.; expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/annotation-model/collections/pages/pageOptionals-manual.html",
+      "subtests": [
+        {
+          "name": "1:1 Implements **Annotation Page _partOf_ key** with valid value of string of format uri - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Annotation Page has no partOf key.; expected true got false"
+        },
+        {
+          "name": "1:2 Implements **Annotation Page _startIndex_ key** with valid value of _type_ integer >= 0 - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: WARNING: Annotation Page has has no valid startIndex value.; expected true got false"
+        },
+        {
+          "name": "1:3 Implements **Annotation Page _next_ key** with valid value of string of format uri - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation Page has no next key.; expected true got false"
+        },
+        {
+          "name": "1:4 Implements **Annotation Page _prev_ key** with valid value of string of format uri - [model 5.2](https://www.w3.org/TR/annotation-model/#annotation-page)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation Page has no prev key.; expected true got false"
+        },
+        {
+          "name": "1:5 Implements **Annotation Page _label_ key** (inherited from Collection) with valid value - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation Page has no label key (inherited from Collection).; expected true got false"
+        },
+        {
+          "name": "1:6 Implements **Annotation Page _last_ key** (inherited from Collection) with valid value - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation Page has no last key (inherited from Collection).; expected true got false"
+        },
+        {
+          "name": "1:7 Implements **Annotation Page _total_ key** (inherited from Collection) with valid value - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation Page has no total key (inherited from Collection).; expected true got false"
+        },
+        {
+          "name": "1:8 Implements **Annotation Page _first_ key** (inherited from Collection) with valid value - [model 5.1](https://www.w3.org/TR/annotation-model/#annotation-collection)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation Page has no first key (inherited from Collection).; expected true got false"
+        },
+        {
+          "name": "1:9 Implements Annotation Page-level **_modified_ key** which has a **single value** that is a **string of format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Valid Annotation Page-level modified key not found. Annotation Page may have zero or exactly one modified key value inherited from Collection.; expected true got false"
+        },
+        {
+          "name": "1:10 Implements **Annotation Page-level _creator_ key** which has one or more values, each of which is a **string of format uri** or an **object** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Valid Annotation Page-level creator key not found. Annotation Page may have zero or more creators inherited from Collection.; expected true got false"
+        },
+        {
+          "name": "1:11 Implements Annotation Page-level **_created_ key** which has a **single value** that is a **string of format date-time** - [model 3.3.1](https://www.w3.org/TR/annotation-model/#lifecycle-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Valid Annotation Page-level created key not found. Annotation Page may have exactly one created key value inherited from Collection.; expected true got false"
+        },
+        {
+          "name": "1:12 Implements Annotation Page **_rights_** key (inherited from Collection) which has one or more values, each of which is a **string of format uri** - [model 3.3.6](https://www.w3.org/TR/annotation-model/#rights-information)",
+          "status": "FAIL",
+          "message": "assert_true: INFORMATIONAL: Annotation Page rights key (inherited from Collection) having string value(s) of format uri not found. Annotation Page may may have zero or more rights key values.; expected true got false"
+        },
+        {
+          "name": "1:13 Implements Annotation Page-level creator (Agent), inherited from Collection, **email_sha1 key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:14 Implements Annotation Page-level creator (Agent), inherited from Collection, **_email_ key** with one or more values, each of which is a **mailto: uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:15 Implements Annotation Page-level creator (Agent), inherited from Collection, **_homepage_ key** with one or more values, each of which is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:16 Implements Annotation Page-level creator (Agent), inherited from Collection, **_id_ key** with **single value** that is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:17 Implements Annotation Page-level creator (Agent), inherited from Collection, **_name_ key** with one or more values - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:18 Implements Annotation Page-level creator (Agent), inherited from Collection, **_nickname_ key** with **single value** that is a **string of format uri** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:19 Implements Annotation Page-level creator (Agent), inherited from Collection, **_type_ key** with one or more values from **model-recommended list (Person, Organization, Software)** - [model 3.2.2](https://www.w3.org/TR/annotation-model/#agents)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
