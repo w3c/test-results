@@ -15,6 +15,7 @@
       },
       "subtests": {
         "Container MUST end in a \"/\" character": {
+          "stNum": 0,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -25,6 +26,7 @@
           }
         },
         "Containers MUST support GET (check Allow on GET)": {
+          "stNum": 1,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -35,6 +37,7 @@
           }
         },
         "Containers MUST support HEAD (check Allow on GET)": {
+          "stNum": 2,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -45,6 +48,7 @@
           }
         },
         "Containers MUST support OPTIONS (check Allow on GET)": {
+          "stNum": 3,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -55,6 +59,7 @@
           }
         },
         "Containers MUST have a Content-Type header with the application/ld+json media type": {
+          "stNum": 4,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -65,6 +70,7 @@
           }
         },
         "Containers MUST response with the JSON-LD representation (by default)": {
+          "stNum": 5,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -75,6 +81,7 @@
           }
         },
         "Containers MUST return a description of the container with BasicContainer": {
+          "stNum": 6,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -85,6 +92,7 @@
           }
         },
         "Containers MUST return a description of the container with AnnotationCollection": {
+          "stNum": 7,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -95,6 +103,7 @@
           }
         },
         "Containers MUST return a Link header (rfc5988) on all responses": {
+          "stNum": 8,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -105,6 +114,7 @@
           }
         },
         "Containers MUST have an ETag header": {
+          "stNum": 9,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -115,6 +125,7 @@
           }
         },
         "Containers MUST have a Vary header with Accept in the value": {
+          "stNum": 10,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -125,6 +136,7 @@
           }
         },
         "Containers MUST advertise its type by including a link where the rel parameter value is type and the target IRI is the appropriate Container Type": {
+          "stNum": 11,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -135,6 +147,7 @@
           }
         },
         "Containers MUST advertise that it imposes Annotation protocol specific constraints by including a link where the target IRI is http://www.w3.org/TR/annotation-protocol/, and the rel parameter value is the IRI http://www.w3.org/ns/ldp#constrainedBy": {
+          "stNum": 12,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -145,6 +158,7 @@
           }
         },
         "Containers MUST support HEAD method": {
+          "stNum": 13,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -155,6 +169,7 @@
           }
         },
         "Containers MUST support OPTIONS method": {
+          "stNum": 14,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -165,6 +180,7 @@
           }
         },
         "Containers MUST include a Content-Location header with the IRI as its value": {
+          "stNum": 15,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -175,19 +191,18 @@
           }
         },
         "Container's Content-Location and `id` MUST match": {
+          "stNum": 16,
           "byUA": {
-            "CC01": "FAIL",
+            "CC01": "PASS",
             "RI01": "PASS"
           },
-          "UAmessage": {
-            "CC01": "assert_true: expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "Annotation Pages must have a link to the container they are part of, using the partOf property": {
+          "stNum": 17,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -198,6 +213,7 @@
           }
         },
         "Annotation Pages MUST have a link to the previous page in the sequence, using the prev property (if not the first page)": {
+          "stNum": 18,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -208,6 +224,7 @@
           }
         },
         "Annotation Pages MUST have a link to the next page in the sequence, using the next property (if not the last page)": {
+          "stNum": 19,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -218,6 +235,7 @@
           }
         },
         "Annotations MUST support GET (check Allow on GET)": {
+          "stNum": 20,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -228,6 +246,7 @@
           }
         },
         "Annotations MUST support HEAD (check Allow on GET)": {
+          "stNum": 21,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -238,6 +257,7 @@
           }
         },
         "Annotations MUST support OPTIONS (check Allow on GET)": {
+          "stNum": 22,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -248,6 +268,7 @@
           }
         },
         "Annotations MUST have a Content-Type header with the application/ld+json media type": {
+          "stNum": 23,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -258,19 +279,18 @@
           }
         },
         "Annotations MUST have a Link header entry where the target IRI is http://www.w3.org/ns/ldp#Resource and the rel parameter value is type": {
+          "stNum": 24,
           "byUA": {
-            "CC01": "FAIL",
+            "CC01": "PASS",
             "RI01": "PASS"
           },
-          "UAmessage": {
-            "CC01": "assert_equals: <http://www.w3.org/ns/ldp#Resource>; rel=\"type\" not found in Link expected \"<http://www.w3.org/ns/ldp#Resource>; rel=\\\"type\\\"\" but got \"<http://www.w3.org/ns/ldp#Resource>;rel=\\\"type\\\"\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "Annotations MUST have an ETag header": {
+          "stNum": 25,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -281,6 +301,7 @@
           }
         },
         "Annotations MUST have a Vary header with Accept in the value": {
+          "stNum": 26,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -291,6 +312,7 @@
           }
         },
         "Annotations MUST support HEAD method": {
+          "stNum": 27,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -301,6 +323,7 @@
           }
         },
         "Annotations MUST support OPTIONS method": {
+          "stNum": 28,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -311,6 +334,7 @@
           }
         },
         "Created Annotation MUST have an id property": {
+          "stNum": 29,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -321,6 +345,7 @@
           }
         },
         "Created Annotation MUST have an id that starts with the Container IRI": {
+          "stNum": 30,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -331,6 +356,7 @@
           }
         },
         "Created Annotation MUST preserve any canonical IRI": {
+          "stNum": 31,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -341,6 +367,7 @@
           }
         },
         "Annotation Server MUST respond with a 201 Created code if the creation is successful": {
+          "stNum": 32,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -351,6 +378,7 @@
           }
         },
         "Location header SHOULD match the id of the new Annotation": {
+          "stNum": 33,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -361,6 +389,7 @@
           }
         },
         "Annotation update must be done with the PUT method": {
+          "stNum": 34,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -371,6 +400,7 @@
           }
         },
         "Annotation deletion with DELETE method MUST return a 204 status": {
+          "stNum": 35,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -381,6 +411,7 @@
           }
         },
         "Annotation server SHOULD use HTTPS rather than HTTP": {
+          "stNum": 36,
           "byUA": {
             "CC01": "FAIL",
             "RI01": "FAIL"
@@ -394,6 +425,7 @@
           }
         },
         "SHOULD return the full annotation descriptions": {
+          "stNum": 37,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -404,6 +436,7 @@
           }
         },
         "SHOULD include the total property with the total number of annotations in the container": {
+          "stNum": 38,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -414,6 +447,7 @@
           }
         },
         "SHOULD have a link to the first page of its contents using `first`": {
+          "stNum": 39,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -424,19 +458,18 @@
           }
         },
         "SHOULD have a link to the last page of its contents using `last`": {
+          "stNum": 40,
           "byUA": {
-            "CC01": "FAIL",
+            "CC01": "PASS",
             "RI01": "PASS"
           },
-          "UAmessage": {
-            "CC01": "assert_true: expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "Response contains annotations via `items` when it SHOULD NOT": {
+          "stNum": 41,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -447,6 +480,7 @@
           }
         },
         "Response contains annotations via `ldp:contains` when it SHOULD NOT": {
+          "stNum": 42,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -457,6 +491,7 @@
           }
         },
         "SHOULD include Prefer in the Vary header": {
+          "stNum": 43,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
@@ -467,6 +502,7 @@
           }
         },
         "SHOULD NOT [receive] the Prefer header when requesting the page": {
+          "stNum": 44,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"

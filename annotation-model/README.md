@@ -42,6 +42,17 @@ Index of implementations in reports
 * PN - implementation Name: The Pund.it
   * link: http://thepund.it/
 
+* KM - impelementation Name: KANZAKI Masahide
+  * email: mkanzaki@gmail.com
+  * link: http://www.kanzaki.com/works/2016/pub/image-annotator
+
+* RI - implementation Name: Reference Implementation
+  * email: shane@spec-ops.io
+  * link: https://github.com/spec-ops/web-platform-tests
+
+* PW - implementation Name: Page Notes
+  * email: byoung@bigbluehat.com
+  * link: https://github.com/bigbluehat/page-notes
 
 Adding new results
 ==================

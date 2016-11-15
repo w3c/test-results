@@ -14,25 +14,16 @@
       <p>For an explanation of the implementation codes and other conventions used in this report, see
 the <a href="README.md">README</a> file.</p>
 
-      <p><strong>Test files without 2 passes</strong>: 1; <strong>Subtests without 2 passes: </strong>4; <strong>Failure level</strong>: 4/45 (8.89%)</p>
+      <p><strong>Test files without 2 passes</strong>: 1; <strong>Subtests without 2 passes: </strong>1; <strong>Failure level</strong>: 1/45 (2.22%)</p>
       <h3>Test Files</h3>
-<ol class='toc'><li><a href='#test-file-0'>/annotation-protocol/server/server-manual.html</a> <small>(4/45, 8.89%, 8.89% of total)</small></li>
+<ol class='toc'><li><a href='#test-file-0'>/annotation-protocol/server/server-manual.html</a> <small>(1/45, 2.22%, 2.22% of total)</small></li>
 </ol>
       <table class='table persist-area'>
         <thead><tr class='persist-header'><th>Test <span class='message_toggle'>Show/Hide Messages</span></th><th>CC01</th><th>RI01</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/annotation-protocol/server/server-manual.html' target='_blank'>/annotation-protocol/server/server-manual.html</a> <small>(4/45, 8.89%, 8.89% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Container's Content-Location and <code>id</code> MUST match</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>CC01:</td><td> assert_true: expected true got false</td></tr>
-</table></td></tr>
-<tr class='subtest'><td>Annotations MUST have a Link header entry where the target IRI is http://www.w3.org/ns/ldp#Resource and the rel parameter value is type</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>CC01:</td><td> assert_equals: <a href="http://www.w3.org/ns/ldp#Resource">http://www.w3.org/ns/ldp#Resource</a>; rel="type" not found in Link expected "<a href="http://www.w3.org/ns/ldp#Resource">http://www.w3.org/ns/ldp#Resource</a>; rel=\"type\"" but got "<a href="http://www.w3.org/ns/ldp#Resource">http://www.w3.org/ns/ldp#Resource</a>;rel=\"type\""</td></tr>
-</table></td></tr>
-<tr class='subtest'><td>Annotation server SHOULD use HTTPS rather than HTTP</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/annotation-protocol/server/server-manual.html' target='_blank'>/annotation-protocol/server/server-manual.html</a> <small>(1/45, 2.22%, 2.22% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr id='subtest-0-36' class='subtest'><td>Annotation server SHOULD use HTTPS rather than HTTP</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>CC01:</td><td> assert_equals: Server is not using HTTPS expected "http:" but got "https"</td></tr>
 <tr class='message'><td class='ua'>RI01:</td><td> assert_equals: Server is not using HTTPS expected "http:" but got "https"</td></tr>
-</table></td></tr>
-<tr class='subtest'><td>SHOULD have a link to the last page of its contents using <code>last</code></td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='3'><table><tr class='message'><td class='ua'>CC01:</td><td> assert_true: expected true got false</td></tr>
 </table></td></tr>
 
       </table>
@@ -42,7 +33,8 @@ the <a href="README.md">README</a> file.</p>
     <script type='application/javascript'>
       window.setTimeout(function() { 
  $('.message_toggle').show();
-$('.message_toggle').on('click', function() {
+ $('.messages').toggle(); 
+ $('.message_toggle').on('click', function() {
 $('.messages').toggle();
 });
 }, 1000);
