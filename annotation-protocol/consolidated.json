@@ -355,7 +355,7 @@
             "PASS": 2
           }
         },
-        "Created Annotation MUST preserve any canonical IRI": {
+        "Annotation Server MUST respond with a 201 Created code if the creation is successful": {
           "stNum": 31,
           "byUA": {
             "CC01": "PASS",
@@ -363,10 +363,10 @@
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 4
           }
         },
-        "Annotation Server MUST respond with a 201 Created code if the creation is successful": {
+        "Location header SHOULD match the id of the new Annotation": {
           "stNum": 32,
           "byUA": {
             "CC01": "PASS",
@@ -377,7 +377,7 @@
             "PASS": 2
           }
         },
-        "Location header SHOULD match the id of the new Annotation": {
+        "Annotation update must be done with the PUT method": {
           "stNum": 33,
           "byUA": {
             "CC01": "PASS",
@@ -388,7 +388,7 @@
             "PASS": 2
           }
         },
-        "Annotation update must be done with the PUT method": {
+        "Annotation deletion with DELETE method MUST return a 204 status": {
           "stNum": 34,
           "byUA": {
             "CC01": "PASS",
@@ -399,7 +399,7 @@
             "PASS": 2
           }
         },
-        "Annotation deletion with DELETE method MUST return a 204 status": {
+        "Created Annotation MUST preserve any canonical IRI": {
           "stNum": 35,
           "byUA": {
             "CC01": "PASS",
@@ -411,7 +411,7 @@
           }
         },
         "Annotation server SHOULD use HTTPS rather than HTTP": {
-          "stNum": 36,
+          "stNum": 37,
           "byUA": {
             "CC01": "FAIL",
             "RI01": "FAIL"
@@ -424,18 +424,7 @@
             "FAIL": 2
           }
         },
-        "SHOULD return the full annotation descriptions": {
-          "stNum": 37,
-          "byUA": {
-            "CC01": "PASS",
-            "RI01": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "SHOULD include the total property with the total number of annotations in the container": {
+        "Annotation Protocol Must Tests": {
           "stNum": 38,
           "byUA": {
             "CC01": "PASS",
@@ -446,7 +435,7 @@
             "PASS": 2
           }
         },
-        "SHOULD have a link to the first page of its contents using `first`": {
+        "SHOULD include the total property with the total number of annotations in the container": {
           "stNum": 39,
           "byUA": {
             "CC01": "PASS",
@@ -457,7 +446,7 @@
             "PASS": 2
           }
         },
-        "SHOULD have a link to the last page of its contents using `last`": {
+        "SHOULD have a link to the first page of its contents using `first`": {
           "stNum": 40,
           "byUA": {
             "CC01": "PASS",
@@ -468,7 +457,7 @@
             "PASS": 2
           }
         },
-        "Response contains annotations via `items` when it SHOULD NOT": {
+        "SHOULD have a link to the last page of its contents using `last`": {
           "stNum": 41,
           "byUA": {
             "CC01": "PASS",
@@ -479,7 +468,7 @@
             "PASS": 2
           }
         },
-        "Response contains annotations via `ldp:contains` when it SHOULD NOT": {
+        "Response contains annotations via `items` when it SHOULD NOT": {
           "stNum": 42,
           "byUA": {
             "CC01": "PASS",
@@ -490,7 +479,7 @@
             "PASS": 2
           }
         },
-        "SHOULD include Prefer in the Vary header": {
+        "Response contains annotations via `ldp:contains` when it SHOULD NOT": {
           "stNum": 43,
           "byUA": {
             "CC01": "PASS",
@@ -501,8 +490,19 @@
             "PASS": 2
           }
         },
-        "SHOULD NOT [receive] the Prefer header when requesting the page": {
+        "SHOULD include Prefer in the Vary header": {
           "stNum": 44,
+          "byUA": {
+            "CC01": "PASS",
+            "RI01": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "SHOULD NOT [receive] the Prefer header when requesting the page": {
+          "stNum": 45,
           "byUA": {
             "CC01": "PASS",
             "RI01": "PASS"
