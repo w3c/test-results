@@ -56,8 +56,8 @@ Index of implementations in reports
 
 * RN - implementation Name: Renarrations and SWeeT Web
   * email: dinesh@janastu.org
-  * link client: http://dash.swtr.us
-  * link: Swts2Annos: https://github.com/janastu/swts2annos
+  * link client: http://dash.swtr.us 
+  * link Swts2Annos: https://github.com/janastu/swts2annos
 
 Adding new results
 ==================
