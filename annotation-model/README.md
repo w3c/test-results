@@ -33,6 +33,7 @@ Index of implementations in reports
   * link client: http://projectmirador.org/
   * gitHub client: https://github.com/ProjectMirador/mirador/
   * gitHub server: https://github.com/azaroth42/MangoServer/ 
+  * NOTE: This is both an annotation client AND a protocol server; this it implements the collection and page portions in addition to the individual annotation models.
   
 * DG - implementation Name: Wellcome Quilt
   * email: tom.crane@digirati.com
@@ -49,6 +50,7 @@ Index of implementations in reports
 * RI - implementation Name: Reference Implementation
   * email: shane@spec-ops.io
   * link: https://github.com/spec-ops/web-platform-tests
+  * NOTE: This is a protocol server that implements the collection and page portions of the annotation data model.
 
 * PW - implementation Name: Page Notes
   * email: byoung@bigbluehat.com
