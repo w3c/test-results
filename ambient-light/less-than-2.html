@@ -2,35 +2,34 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Ambient Light Sensor: Less Than 2 Passes</title>
+    <title>ambient-light: Less Than 2 Passes</title>
     <link rel='stylesheet' href='bootstrap.min.css'>
     <link rel='stylesheet' href='analysis.css'>
   </head>
   <body>
     <div class='container'>
       <header>
-        <h1>Ambient Light Sensor: Less Than 2 Passes</h1>
+        <h1>ambient-light: Less Than 2 Passes</h1>
       </header>
-      <p><strong>Test files without 2 passes</strong>: 2; <strong>Subtests without 2 passes: </strong>11; <strong>Failure level</strong>: 11/30 (36.67%)</p>
+      <p><strong>Test files without 2 passes</strong>: 3; <strong>Subtests without 2 passes: </strong>8; <strong>Failure level</strong>: 8/41 (19.51%)</p>
       <h3>Test Files</h3>
-<ol class='toc'><li><a href='#test-file-0'>/ambient-light/idlharness.html</a> <small>(10/29, 34.48%, 33.33% of total)</small></li>
-<li><a href='#test-file-1'>/ambient-light/AmbientLightSensor_tests.html</a> <small>(1/1, 100.00%, 3.33% of total)</small></li>
+<ol class='toc'><li><a href='#test-file-0'>/ambient-light/AmbientLightSensor_onchange.https.html</a> <small>(1/1, 100.00%, 2.44% of total)</small></li>
+<li><a href='#test-file-1'>/ambient-light/AmbientLightSensor_reading.https.html</a> <small>(1/3, 33.33%, 2.44% of total)</small></li>
+<li><a href='#test-file-2'>/ambient-light/idlharness.https.html</a> <small>(6/24, 25.00%, 14.63% of total)</small></li>
 </ol>
       <table class='table persist-area'>
-        <thead><tr class='persist-header'><th>Test</th><th>CA52</th><th>CH52</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/ambient-light/idlharness.html' target='_blank'>/ambient-light/idlharness.html</a> <small>(10/29, 34.48%, 33.33% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>SensorReadingEvent must be primary interface of new SensorReadingEvent({ reading: new AmbientLightSensorReading({ illuminance: 750 }) });</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>Stringification of new SensorReadingEvent({ reading: new AmbientLightSensorReading({ illuminance: 750 }) });</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>SensorReadingEvent interface: new SensorReadingEvent({ reading: new AmbientLightSensorReading({ illuminance: 750 }) }); must inherit property "reading" with the proper type (0)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+        <thead><tr class='persist-header'><th>Test</th><th>CA57</th><th>CD57</th></tr></thead>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/ambient-light/AmbientLightSensor_onchange.https.html' target='_blank'>/ambient-light/AmbientLightSensor_onchange.https.html</a> <small>(1/1, 100.00%, 2.44% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>event change fired</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/ambient-light/AmbientLightSensor_reading.https.html' target='_blank'>/ambient-light/AmbientLightSensor_reading.https.html</a> <small>(1/3, 33.33%, 2.44% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Test that the sensor reading is updated when time passes.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/ambient-light/idlharness.https.html' target='_blank'>/ambient-light/idlharness.https.html</a> <small>(6/24, 25.00%, 14.63% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>AmbientLightSensor interface: existence and properties of interface prototype object</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Stringification of new AmbientLightSensor();</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Sensor interface: new AmbientLightSensor(); must inherit property "onchange" with the proper type (4)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>Sensor interface: new AmbientLightSensor(); must inherit property "onstatechange" with the proper type (5)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Sensor interface: new AmbientLightSensor(); must inherit property "onactivate" with the proper type (5)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>Sensor interface: new AmbientLightSensor(); must inherit property "onerror" with the proper type (6)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='subtest'><td>AmbientLightSensorReading interface object length</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='subtest'><td>AmbientLightSensorReading interface: existence and properties of interface prototype object</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/ambient-light/AmbientLightSensor_tests.html' target='_blank'>/ambient-light/AmbientLightSensor_tests.html</a> <small>(1/1, 100.00%, 3.33% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Test suite not implemented yet.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 
       </table>
     </div>
