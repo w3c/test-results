@@ -76,7 +76,7 @@ To add new tests results:
 3. Select a unique two letter abbreviation for your implementation under test (e.g., AB) and add it to the 'Index of implementations in reports' in the /annotation-model/README.md file in your forked copy. Provide implementation name, contact email, Website (if publicly available), GitHub repository (if you have one). Use the information provided by previous implementations in the list as a model.
 4. Rename your JSON test-results file using the two letter abbreviation you chose and a two digit number value representing annotation number used as input for that test run, for example, _AA00_.json.
 5. Place your newly renamed results files in the annotation-model directory
-6. Place copies of each annotation you tested in a subfolder named by concatenating your two letter abbreviation and the string '-input', e.g., _AA_-input/anno01.json
+6. Place copies of each annotation you tested in a subfolder named by concatenating your two letter abbreviation and the string '-input', e.g., _AA_-input/AA01.anno
   * When naming your individual annotation files, please follow the convention illustrated of including 2 digits in the file name so that it is obvious which annotation goes with which test results file. 
 6. Create a pull request with your updated files
 7. When it is merged the maintainers will update the overall results reports automatically
