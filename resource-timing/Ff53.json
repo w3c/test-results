@@ -10,13 +10,13 @@
         },
         {
           "name": "Performance interface: operation setResourceTimingBufferSize(unsigned long)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Performance interface: attribute onresourcetimingbufferfull",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onresourcetimingbufferfull\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Performance must be primary interface of window.performance",
@@ -70,18 +70,18 @@
         },
         {
           "name": "Performance interface: window.performance must inherit property \"onresourcetimingbufferfull\" with the proper type (5)",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"onresourcetimingbufferfull\" not found in prototype chain"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceResourceTiming interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of PerformanceResourceTiming is not PerformanceEntry expected function \"function PerformanceEntry() { [native code] }\" but got function \"\nfunction() {\n    [native code]\n}\n\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceResourceTiming interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceResourceTiming interface object name",
@@ -140,8 +140,8 @@
         },
         {
           "name": "PerformanceResourceTiming interface: attribute secureConnectionStart",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"secureConnectionStart\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceResourceTiming interface: attribute requestStart",
@@ -306,13 +306,13 @@
         },
         {
           "name": "connectStart and fetchStart should be the same",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: connectStart and fetchStart should be the same expected 187.68229622427805 but got 184.1962729101144"
         },
         {
           "name": "connectEnd and fetchStart should be the same",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: connectEnd and fetchStart should be the same expected 187.68229622427805 but got 184.1962729101144"
         }
       ],
       "status": "OK",
@@ -332,11 +332,6 @@
           "message": null
         },
         {
-          "name": "http://w3c-test.org/resource-timing/resources/inject_resource_test.html is expected to have initiatorType iframe",
-          "status": "FAIL",
-          "message": "assert_equals: http://w3c-test.org/resource-timing/resources/inject_resource_test.html is expected to have initiatorType iframe expected \"iframe\" but got \"subdocument\""
-        },
-        {
           "name": "http://w3c-test.org/resource-timing/resources/resource_timing_test0.css is expected to have initiatorType link",
           "status": "PASS",
           "message": null
@@ -345,6 +340,11 @@
           "name": "http://w3c-test.org/resource-timing/resources/resource_timing_test0.png is expected to have initiatorType img",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "http://w3c-test.org/resource-timing/resources/inject_resource_test.html is expected to be in the Resource Timing buffer",
+          "status": "FAIL",
+          "message": "assert_unreached: Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -360,8 +360,8 @@
         },
         {
           "name": "PerformanceEntry has correct name, initiatorType, startTime, and duration (iframe)",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"iframe\" but got \"subdocument\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceEntry has correct order of timing attributes (iframe)",
@@ -370,13 +370,13 @@
         },
         {
           "name": "PerformanceEntry has correct network transfer attributes (iframe)",
-          "status": "FAIL",
-          "message": "assert_equals: encodedBodySize size expected (number) 215 but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceEntry has correct protocol attribute (iframe)",
-          "status": "FAIL",
-          "message": "assert_equals: expected protocol expected (string) \"http/1.1\" but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "window.performance.getEntriesByName() and window.performance.getEntriesByNameType() return same data (img)",
@@ -395,13 +395,13 @@
         },
         {
           "name": "PerformanceEntry has correct network transfer attributes (img)",
-          "status": "FAIL",
-          "message": "assert_equals: encodedBodySize size expected (number) 249 but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceEntry has correct protocol attribute (img)",
-          "status": "FAIL",
-          "message": "assert_equals: expected protocol expected (string) \"http/1.1\" but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "window.performance.getEntriesByName() and window.performance.getEntriesByNameType() return same data (link)",
@@ -420,13 +420,13 @@
         },
         {
           "name": "PerformanceEntry has correct network transfer attributes (link)",
-          "status": "FAIL",
-          "message": "assert_equals: encodedBodySize size expected (number) 44 but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceEntry has correct protocol attribute (link)",
-          "status": "FAIL",
-          "message": "assert_equals: expected protocol expected (string) \"http/1.1\" but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "window.performance.getEntriesByName() and window.performance.getEntriesByNameType() return same data (script)",
@@ -445,13 +445,13 @@
         },
         {
           "name": "PerformanceEntry has correct network transfer attributes (script)",
-          "status": "FAIL",
-          "message": "assert_equals: encodedBodySize size expected (number) 133 but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceEntry has correct protocol attribute (script)",
-          "status": "FAIL",
-          "message": "assert_equals: expected protocol expected (string) \"http/1.1\" but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "window.performance.getEntriesByName() and window.performance.getEntriesByNameType() return same data (xmlhttprequest)",
@@ -470,13 +470,13 @@
         },
         {
           "name": "PerformanceEntry has correct network transfer attributes (xmlhttprequest)",
-          "status": "FAIL",
-          "message": "assert_equals: encodedBodySize size expected (number) 112 but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PerformanceEntry has correct protocol attribute (xmlhttprequest)",
-          "status": "FAIL",
-          "message": "assert_equals: expected protocol expected (string) \"http/1.1\" but got (undefined) undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "window.performance Resource Timing Entries exist",
