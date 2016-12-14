@@ -10,6 +10,9 @@ Up-to-date result reports are available at:
 Index of implementations in reports
 ===================================
 
+* CC - Conquering Corsairs (MangoServer)
+  * Github:  https://github.com/azaroth42/MangoServer
+
 * EB - implementation Name: Emblematica Online (Developmental Version)
   * email: mjsarol@illinois.edu
   * link: http://emblematica.library.illinois.edu/portal_anno/
