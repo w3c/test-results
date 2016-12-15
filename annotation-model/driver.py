@@ -23,7 +23,7 @@ def runTests(testData):
     driver = webdriver.Chrome()
     driver.implicitly_wait(10)
 
-    driver.get(base_url + "?path=/annotation-model")
+    driver.get(base_url + "?path=/annotation-model/annotations")
     main_window_handle = None
     while not main_window_handle:
         main_window_handle = driver.current_window_handle
