@@ -1,0 +1,700 @@
+{
+    "@context": "http://www.w3.org/ns/anno.jsonld", 
+    "id": "http://localhost:8080/annotations/?page=1", 
+    "items": [
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "type": "TextualBody", 
+                "value": "These pages together provide evidence of the conspiracy"
+            }, 
+            "id": "http://example.org/anno11", 
+            "motivation": "commenting", 
+            "target": {
+                "items": [
+                    "http://example.com/page1", 
+                    "http://example.org/page6", 
+                    "http://example.net/page4"
+                ], 
+                "type": "Composite"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "type": "TextualBody", 
+                "value": "Great resource!"
+            }, 
+            "created": "2015-02-31T12:03:45Z", 
+            "id": "/annotations/anno2.jsonld", 
+            "target": "http://www.w3c.org/", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/comment1", 
+            "id": "http://example.org/anno32", 
+            "target": {
+                "selector": {
+                    "refinedBy": {
+                        "exact": "Selected Text", 
+                        "prefix": "text before the ", 
+                        "suffix": " and text after it", 
+                        "type": "TextQuoteSelector"
+                    }, 
+                    "type": "FragmentSelector", 
+                    "value": "para5"
+                }, 
+                "source": "http://example.org/page1"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/comment1", 
+            "id": "http://example.org/anno39", 
+            "target": {
+                "renderedVia": {
+                    "id": "http://example.com/pdf-to-html-library", 
+                    "schema:softwareVersion": "2.5", 
+                    "type": "Software"
+                }, 
+                "selector": "http://example.org/selectors/html-selector1", 
+                "source": "http://example.edu/article.pdf"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/comment1", 
+            "id": "http://example.org/anno36", 
+            "target": {
+                "source": "http://example.org/ebook1", 
+                "state": {
+                    "refinedBy": {
+                        "refinedBy": {
+                            "conformsTo": "http://tools.ietf.org/rfc/rfc3778", 
+                            "type": "FragmentSelector", 
+                            "value": "page=10"
+                        }, 
+                        "type": "HttpRequestState", 
+                        "value": "Accept: application/pdf"
+                    }, 
+                    "sourceDate": "2016-02-01T12:05:23Z", 
+                    "type": "TimeState"
+                }
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "format": "text/plain", 
+                "type": "TextualBody", 
+                "value": "Comment text"
+            }, 
+            "id": "http://example.org/anno7", 
+            "target": "http://example.org/target1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/note1", 
+            "id": "http://example.org/anno33", 
+            "target": {
+                "source": "http://example.org/page1", 
+                "state": {
+                    "id": "http://example.org/state1"
+                }
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "items": [
+                    {
+                        "id": "http://example.org/note1", 
+                        "language": "en"
+                    }, 
+                    {
+                        "id": "http://example.org/note2", 
+                        "language": "fr"
+                    }
+                ], 
+                "type": "Choice"
+            }, 
+            "id": "http://example.org/anno10", 
+            "target": "http://example.org/website1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": [
+                {
+                    "purpose": "tagging", 
+                    "type": "TextualBody", 
+                    "value": "love"
+                }, 
+                {
+                    "items": [
+                        {
+                            "creator": "http://example.org/user1", 
+                            "format": "text/plain", 
+                            "language": "en", 
+                            "purpose": "describing", 
+                            "type": "TextualBody", 
+                            "value": "I really love this particular bit of text in this XML. No really."
+                        }, 
+                        {
+                            "purpose": "describing", 
+                            "source": {
+                                "creator": {
+                                    "id": "http://example.org/user2", 
+                                    "type": "Person"
+                                }, 
+                                "format": "audio/mpeg", 
+                                "id": "http://example.org/comment1", 
+                                "language": "de", 
+                                "type": "Audio"
+                            }, 
+                            "type": "SpecificResource"
+                        }
+                    ], 
+                    "type": "Choice"
+                }
+            ], 
+            "created": "2015-10-13T13:00:00Z", 
+            "creator": {
+                "id": "http://example.org/user1", 
+                "name": "A. Person", 
+                "nickname": "user1", 
+                "type": "Person"
+            }, 
+            "generated": "2015-10-14T15:13:28Z", 
+            "generator": {
+                "homepage": "http://example.org/homepage1", 
+                "id": "http://example.org/client1", 
+                "name": "Code v2.1", 
+                "type": "Software"
+            }, 
+            "id": "http://example.org/anno41", 
+            "motivation": "commenting", 
+            "stylesheet": {
+                "id": "http://example.org/stylesheet1", 
+                "type": "CssStylesheet"
+            }, 
+            "target": {
+                "selector": {
+                    "refinedBy": {
+                        "end": 27, 
+                        "start": 6, 
+                        "type": "TextPositionSelector"
+                    }, 
+                    "type": "FragmentSelector", 
+                    "value": "xpointer(/doc/body/section[2]/para[1])"
+                }, 
+                "source": "http://example.com/document1", 
+                "state": [
+                    {
+                        "refinedBy": {
+                            "sourceDate": "2015-09-25T12:00:00Z", 
+                            "type": "TimeState"
+                        }, 
+                        "type": "HttpRequestState", 
+                        "value": "Accept: application/xml"
+                    }
+                ], 
+                "styleClass": "mystyle", 
+                "type": "SpecificResource"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.net/comment1", 
+            "id": "http://example.org/anno17", 
+            "motivation": "commenting", 
+            "target": {
+                "accessibility": "captions", 
+                "id": "http://example.com/video1", 
+                "type": "Video"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "audience": {
+                "id": "http://example.edu/roles/teacher", 
+                "schema:educationalRole": "teacher", 
+                "type": "schema:EducationalAudience"
+            }, 
+            "body": "http://example.net/classnotes1", 
+            "id": "http://example.org/anno16", 
+            "target": "http://example.com/textbook1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": [
+                "http://example.org/description1", 
+                {
+                    "type": "TextualBody", 
+                    "value": "tag1"
+                }
+            ], 
+            "id": "http://example.org/anno9", 
+            "target": [
+                "http://example.org/image1", 
+                "http://example.org/image2"
+            ], 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/review1", 
+            "id": "http://example.org/anno27", 
+            "target": {
+                "selector": {
+                    "end": 795, 
+                    "start": 412, 
+                    "type": "TextPositionSelector"
+                }, 
+                "source": "http://example.org/ebook1"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/body1", 
+            "id": "http://example.org/anno38", 
+            "stylesheet": {
+                "type": "CssStylesheet", 
+                "value": ".red { color: red }"
+            }, 
+            "target": {
+                "source": "http://example.org/target1", 
+                "styleClass": "red"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "format": "text/html", 
+                "language": "fr", 
+                "type": "TextualBody", 
+                "value": "<p>j'adore !</p>"
+            }, 
+            "id": "http://example.org/anno5", 
+            "target": "http://example.org/photo1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "purpose": "tagging", 
+                "source": "http://example.org/city1", 
+                "type": "SpecificResource"
+            }, 
+            "id": "http://example.org/anno21", 
+            "target": {
+                "id": "http://example.org/photo1", 
+                "type": "Image"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.net/review1", 
+            "creator": {
+                "email_sha1": "58bad08927902ff9307b621c54716dcc5083e339", 
+                "id": "http://example.org/user1", 
+                "name": "My Pseudonym", 
+                "nickname": "pseudo", 
+                "type": "Person"
+            }, 
+            "generator": {
+                "homepage": "http://example.org/client1/homepage1", 
+                "id": "http://example.org/client1", 
+                "name": "Code v2.1", 
+                "type": "Software"
+            }, 
+            "id": "http://example.org/anno15", 
+            "target": "http://example.com/restaurant1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/comment1", 
+            "id": "http://example.org/anno31", 
+            "target": {
+                "selector": {
+                    "endSelector": {
+                        "type": "XPathSelector", 
+                        "value": "//table[1]/tr[1]/td[4]"
+                    }, 
+                    "startSelector": {
+                        "type": "XPathSelector", 
+                        "value": "//table[1]/tr[1]/td[2]"
+                    }, 
+                    "type": "RangeSelector"
+                }, 
+                "source": "http://example.org/page1.html"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "id": "http://example.org/video1", 
+                "type": "Video"
+            }, 
+            "id": "http://example.org/anno3", 
+            "target": {
+                "id": "http://example.org/website1", 
+                "type": "Text"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/post1", 
+            "id": "http://example.org/anno1", 
+            "target": "http://example.com/page1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/note1", 
+            "id": "http://example.org/anno24", 
+            "target": {
+                "selector": {
+                    "type": "CssSelector", 
+                    "value": "#elemid > .elemclass + p"
+                }, 
+                "source": "http://example.org/page1.html"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/note1", 
+            "id": "http://example.org/anno25", 
+            "target": {
+                "selector": {
+                    "type": "XPathSelector", 
+                    "value": "/html/body/p[2]/table/tr[2]/td[3]/span"
+                }, 
+                "source": "http://example.org/page1.html"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/note1", 
+            "id": "http://example.org/anno28", 
+            "target": {
+                "selector": {
+                    "end": 4104, 
+                    "start": 4096, 
+                    "type": "DataPositionSelector"
+                }, 
+                "source": "http://example.org/diskimg1"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/note1", 
+            "id": "http://example.org/anno40", 
+            "target": {
+                "scope": "http://example.org/page1", 
+                "source": "http://example.org/image1"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "purpose": "describing", 
+                "selector": {
+                    "conformsTo": "http://www.w3.org/TR/media-frags/", 
+                    "type": "FragmentSelector", 
+                    "value": "t=30,60"
+                }, 
+                "source": "http://example.org/video1"
+            }, 
+            "id": "http://example.org/anno23", 
+            "target": "http://example.org/image1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/description1", 
+            "id": "http://example.org/anno35", 
+            "target": {
+                "source": "http://example.org/resource1", 
+                "state": {
+                    "type": "HttpRequestState", 
+                    "value": "Accept: application/pdf"
+                }
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/comment1", 
+            "id": "http://example.org/anno37", 
+            "stylesheet": "http://example.org/style1", 
+            "target": {
+                "source": "http://example.org/document1", 
+                "styleClass": "red"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/road1", 
+            "id": "http://example.org/anno30", 
+            "target": {
+                "selector": {
+                    "type": "SvgSelector", 
+                    "value": "<svg:svg> ... </svg:svg>"
+                }, 
+                "source": "http://example.org/map1"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "selector": "http://example.org/paraselector1", 
+                "source": "http://example.org/page1"
+            }, 
+            "id": "http://example.org/anno22", 
+            "target": {
+                "selector": "http://example.org/dataselector1", 
+                "source": "http://example.com/dataset1"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/comment1", 
+            "id": "http://example.org/anno26", 
+            "target": {
+                "selector": {
+                    "exact": "anotation", 
+                    "prefix": "this is an ", 
+                    "suffix": " that has some", 
+                    "type": "TextQuoteSelector"
+                }, 
+                "source": "http://example.org/page1"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/description1", 
+            "id": "http://example.org/anno4", 
+            "target": {
+                "format": "image/jpeg", 
+                "id": "http://example.com/image1#xywh=100,100,300,300", 
+                "type": "Image"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": [
+                {
+                    "purpose": "tagging", 
+                    "type": "TextualBody", 
+                    "value": "readme"
+                }, 
+                {
+                    "purpose": "describing", 
+                    "type": "TextualBody", 
+                    "value": "A good description of the topic that bears further investigation"
+                }
+            ], 
+            "id": "http://example.org/anno18", 
+            "motivation": "bookmarking", 
+            "target": "http://example.com/page1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "type": "TextualBody", 
+                "value": "important"
+            }, 
+            "id": "http://example.org/anno12", 
+            "motivation": "tagging", 
+            "target": {
+                "items": [
+                    "http://example.com/book/page1", 
+                    "http://example.com/book/page2", 
+                    "http://example.com/book/page3", 
+                    "http://example.com/book/page4"
+                ], 
+                "type": "List"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/vocab/art/portrait", 
+            "id": "http://example.org/anno13", 
+            "motivation": "classifying", 
+            "target": {
+                "items": [
+                    "http://example.com/image1", 
+                    "http://example.net/image2", 
+                    "http://example.com/image4", 
+                    "http://example.org/image9"
+                ], 
+                "type": "Independents"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "format": "audio/mpeg", 
+                "id": "http://example.org/analysis1.mp3", 
+                "language": "fr"
+            }, 
+            "id": "http://example.org/anno2", 
+            "target": {
+                "format": "application/pdf", 
+                "id": "http://example.gov/patent1.pdf", 
+                "language": [
+                    "en", 
+                    "ar"
+                ], 
+                "processingLanguage": "en", 
+                "textDirection": "ltr"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "id": "http://example.net/review1", 
+                "rights": "http://creativecommons.org/licenses/by/4.0/"
+            }, 
+            "canonical": "urn:uuid:dbfb1861-0ecf-41ad-be94-a584e5c4f1df", 
+            "id": "http://example.org/anno20", 
+            "target": "http://example.com/product1", 
+            "type": "Annotation", 
+            "via": "http://other.example.org/anno1"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "created": "2014-06-02T17:00:00Z", 
+                "creator": "http://example.net/user2", 
+                "id": "http://example.net/review1"
+            }, 
+            "created": "2015-01-28T12:00:00Z", 
+            "creator": "http://example.org/user1", 
+            "generated": "2015-02-04T12:00:00Z", 
+            "generator": "http://example.org/client1", 
+            "id": "http://example.org/anno14", 
+            "modified": "2015-01-29T09:00:00Z", 
+            "target": "http://example.com/restaurant1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "id": "http://example.org/anno8", 
+            "target": "http://example.org/ebook1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/road1", 
+            "id": "http://example.org/anno29", 
+            "target": {
+                "selector": {
+                    "id": "http://example.org/svg1", 
+                    "type": "SvgSelector"
+                }, 
+                "source": "http://example.org/map1"
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "http://example.org/note1", 
+            "id": "http://example.org/anno34", 
+            "target": {
+                "source": "http://example.org/page1", 
+                "state": {
+                    "cached": "http://archive.example.org/copy1", 
+                    "sourceDate": "2015-07-20T13:30:00Z", 
+                    "type": "TimeState"
+                }
+            }, 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "id": "http://example.net/review1", 
+                "rights": "http://creativecommons.org/licenses/by-nc/4.0/"
+            }, 
+            "id": "http://example.org/anno19", 
+            "rights": "https://creativecommons.org/publicdomain/zero/1.0/", 
+            "target": "http://example.com/product1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "type": "TextualBody", 
+                "value": "I like this page!"
+            }, 
+            "created": "2015-01-31T12:03:45Z", 
+            "id": "/annotations/anno1.jsonld", 
+            "target": "/index.html", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": "https://en.wikipedia.org/wiki/World_Wide_Web_Consortium", 
+            "id": "/annotations/anno3.jsonld", 
+            "movivation": "describing", 
+            "target": "http://w3c.org/", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "bodyValue": "Comment text", 
+            "id": "http://example.org/anno6", 
+            "target": "http://example.org/target1", 
+            "type": "Annotation"
+        }, 
+        {
+            "@context": "http://www.w3.org/ns/anno.jsonld", 
+            "body": {
+                "type": "TextualBody", 
+                "value": "I like this page!"
+            }, 
+            "canonical": "http://localhost:8080/annotations/temp-7a87cd7b-6ec3-4304-8ffe-f7f4ce2b9a8c", 
+            "id": "http://localhost:8080/annotations/temp-ff8732de-5424-410c-8905-56074b3acf91", 
+            "target": "http://www.example.com/other.html", 
+            "type": "Annotation"
+        }
+    ], 
+    "next": "http://localhost:8080/annotations/?page=2", 
+    "partOf": {
+        "id": "http://localhost:8080/annotations/", 
+        "total": 45
+    }, 
+    "prev": "http://localhost:8080/annotations/?page=0", 
+    "type": "AnnotationPage"
+}

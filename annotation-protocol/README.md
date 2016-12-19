@@ -5,7 +5,7 @@ Up-to-date result reports are available at:
 
 * https://w3c.github.io/test-results/annotation-protocol/all.html
 * https://w3c.github.io/test-results/annotation-protocol/less-than-2.html
-* https://w3c.github.io/test-results/annotation-protocol/complete-fails.html
+BO* https://w3c.github.io/test-results/annotation-protocol/complete-fails.html
 
 Index of implementations tested
 ===============================
@@ -13,6 +13,7 @@ Index of implementations tested
 * RI - Reference Implementation
 * CC - Conquering Corsairs (MangoServer)
   * Github:  https://github.com/azaroth42/MangoServer
+* DI - Digirati.co.uk Implementation 
 
 Adding new results
 ==================

@@ -1,0 +1,265 @@
+{
+  "results": [
+    {
+      "test": "/ambient-light/AmbientLightSensor_browsing_context.https.html",
+      "subtests": [
+        {
+          "name": "throw a 'SecurityError' when firing sensor readings within iframes",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sensor readings can not be fired on the background tab",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor_insecure_context.html",
+      "subtests": [
+        {
+          "name": "throw a 'SecurityError' when construct AmbientLightSensor in an insecure context",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor_onchange.https.html",
+      "subtests": [
+        {
+          "name": "event change fired",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor_onerror-manual.https.html",
+      "subtests": [
+        {
+          "name": "Test that 'onerror' event is fired when sensor is not supported",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor_reading.https.html",
+      "subtests": [
+        {
+          "name": "Test that sensor reading must be immutable.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test that sensor reading is correct.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test that the sensor reading is updated when time passes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor_start.https.html",
+      "subtests": [
+        {
+          "name": "The default sensor.reading is 'null'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The default sensor.state is 'idle'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The sensor.state changes to 'activating' after sensor.start()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "the sensor.start() return undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "throw an InvalidStateError exception when state is neither idle nor errored",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor_stop.https.html",
+      "subtests": [
+        {
+          "name": "The sensor.state changes to 'idle' after sensor.stop()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "the sensor.reading is null after executing stop() method",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "throw an InvalidStateError exception when state is either idle or errored",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "the sensor.stop() returns undefined",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/idlharness.https.html",
+      "subtests": [
+        {
+          "name": "AmbientLightSensor interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_equals: class string of AmbientLightSensor.prototype expected \"[object AmbientLightSensorPrototype]\" but got \"[object AmbientLightSensor]\""
+        },
+        {
+          "name": "AmbientLightSensor interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor must be primary interface of new AmbientLightSensor();",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of new AmbientLightSensor();",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor(); must inherit property \"state\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor(); must inherit property \"reading\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor(); must inherit property \"start\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor(); must inherit property \"stop\" with the proper type (3)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor(); must inherit property \"onchange\" with the proper type (4)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor(); must inherit property \"onactivate\" with the proper type (5)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor(); must inherit property \"onerror\" with the proper type (6)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensorReading interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensorReading interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensorReading interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensorReading interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_equals: class string of AmbientLightSensorReading.prototype expected \"[object AmbientLightSensorReadingPrototype]\" but got \"[object AmbientLightSensorReading]\""
+        },
+        {
+          "name": "AmbientLightSensorReading interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensorReading interface: attribute illuminance",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensorReading must be primary interface of new AmbientLightSensorReading({ illuminance: 750 });",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of new AmbientLightSensorReading({ illuminance: 750 });",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensorReading interface: new AmbientLightSensorReading({ illuminance: 750 }); must inherit property \"illuminance\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SensorReading interface: new AmbientLightSensorReading({ illuminance: 750 }); must inherit property \"timeStamp\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
