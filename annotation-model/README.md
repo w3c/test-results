@@ -23,7 +23,7 @@ Index of implementations in reports
   * link: https://hypothes.is
   * gitHub: https://github.com/hypothesis
 
-* TK - implementation Name: Takeshi Kanai
+* TK - implementation Name: Takeshi Kanai (Digital Paper: Experimental Implementation)
   * email: takeshi.kanai@sony.com
 
 * EF - implementation Name: Europeana Foundation (v0.2.4)
