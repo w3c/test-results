@@ -1,0 +1,354 @@
+{
+  "ua": [
+    "Ch57",
+    "Ff53"
+  ],
+  "results": {
+    "/html/webappapis/idle-callbacks/basic.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "window.requestIdleCallback is defined": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "window.cancelIdleCallback is defined": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "window.requestIdleCallback() returns a number": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "window.cancelIdleCallback() returns undefined": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "requestIdleCallback schedules callbacks": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "cancelIdleCallback cancels callbacks": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/html/webappapis/idle-callbacks/callback-exception.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "requestIdleCallback callback exceptions are reported to error handler": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/html/webappapis/idle-callbacks/callback-idle-periods.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "requestIdleCallback can run multiple different requestIdleCallback callbacks in the same idle period.": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Check that if an idle callback calls requestIdleCallback the new callback doesn't run in the current idle period.": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "FAIL"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/html/webappapis/idle-callbacks/callback-iframe.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Untitled": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/html/webappapis/idle-callbacks/callback-invoked.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "requestIdleCallback callback is invoked at least once before the timeout": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/html/webappapis/idle-callbacks/callback-multiple-calls.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "requestIdleCallback callbacks should be invoked in order (called iteratively)": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "requestIdleCallback callbacks should be invoked in order (called recursively)": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/html/webappapis/idle-callbacks/callback-timeout-with-raf.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "requestIdleCallback not scheduled when event loop is busy.": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "requestIdleCallback scheduled with timeout when event loop is busy.": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "FAIL"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/html/webappapis/idle-callbacks/callback-timeout.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "requestIdleCallback callback should time out": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/html/webappapis/idle-callbacks/cancel-invoked.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "cancelIdleCallback does nothing if there is no callback with the given handle": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "A cancelled callback is never invoked": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/html/webappapis/idle-callbacks/idlharness.html": {
+      "byUA": {
+        "Ch57": "OK",
+        "Ff53": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Window interface: operation requestIdleCallback(IdleRequestCallback,IdleRequestOptions)": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Window interface: operation cancelIdleCallback(unsigned long)": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Window must be primary interface of window": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Stringification of window": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Window interface: window must inherit property \"requestIdleCallback\" with the proper type (0)": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Window interface: calling requestIdleCallback(IdleRequestCallback,IdleRequestOptions) on window with too few arguments must throw TypeError": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Window interface: window must inherit property \"cancelIdleCallback\" with the proper type (1)": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Window interface: calling cancelIdleCallback(unsigned long) on window with too few arguments must throw TypeError": {
+          "byUA": {
+            "Ch57": "PASS",
+            "Ff53": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    }
+  }
+}
