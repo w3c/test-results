@@ -14,6 +14,7 @@ Index of implementations tested
 * CC - Conquering Corsairs (MangoServer)
   * Github:  https://github.com/azaroth42/MangoServer
 * DI - Digirati.co.uk Implementation 
+  * Github: https://github.com/dlcs/elucidate-server
 
 Adding new results
 ==================
