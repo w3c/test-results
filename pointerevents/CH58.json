@@ -10315,6 +10315,34 @@
       ],
       "status": "OK",
       "message": null
+    },
+    {
+      "test": "/pointerevents/pointerevent_pointerId_scope-manual.html",
+      "subtests": [
+        {
+          "name": "pointerId of an active pointer is the same across iframes",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/pointerevents/compat/pointerevent_touch-action_two-finger_interaction-manual.html",
+      "subtests": [{
+          "name": "touch two-finger pan on 'touch-action: pan-x pan-y'",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"pointerdown@black, pointerdown@black, pointerup@black, pointerup@black\" but got \"pointerdown@black, pointerdown@black, pointercancel@black, pointercancel@black\""
+        },
+        {
+          "name": "touch two-finger pan on 'touch-action: pinch-zoom'",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
     }
   ]
 }
