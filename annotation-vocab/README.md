@@ -12,9 +12,8 @@ Index of implementations in reports
 
 * RU - implementation Name: Ruby rdflib parser
   * email: gregg@greggkellogg.com
-  * link: http://github.com/w3c/web-platform-tests/annotation-vocab/tools/ruby-rdf
+  * link: http://github.com/w3c/web-platform-tests/tree/master/annotation-vocab/tools/ruby-rdf
 
 * PY - implementation Name: Python rdflib parser
   * email: azaroth42@gmail.com
-  * link: http://github.com/w3c/web-platform-tests/annotation-vocab/tools/vocab-tester.py
-
+  * link: http://github.com/w3c/web-platform-tests/blob/master/annotation-vocab/tools/vocab_tester.py
