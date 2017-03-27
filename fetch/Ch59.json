@@ -318,7 +318,7 @@
           "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to fetch\""
         },
         {
-          "name": "Fetch http://web-platform.test:64230/fetch/api/resources/top.txt with no-cors mode",
+          "name": "Fetch http://web-platform.test:54706/fetch/api/resources/top.txt with no-cors mode",
           "status": "PASS",
           "message": null
         }
@@ -345,7 +345,7 @@
           "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to fetch\""
         },
         {
-          "name": "Fetch http://web-platform.test:64230/fetch/api/resources/top.txt with no-cors mode",
+          "name": "Fetch http://web-platform.test:54706/fetch/api/resources/top.txt with no-cors mode",
           "status": "PASS",
           "message": null
         }
@@ -992,15 +992,49 @@
       "message": null
     },
     {
-      "test": "/fetch/api/basic/request-referrer.html",
+      "test": "/fetch/api/basic/request-referrer-redirected-worker.html",
       "subtests": [
         {
-          "name": "Fetch: fetch() respects Request referrer value",
+          "name": "about:client referrer",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Fetch: fetch() respects Request referrer value 1",
+          "name": "url referrer",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/api/basic/request-referrer-worker.html",
+      "subtests": [
+        {
+          "name": "about:client referrer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "url referrer",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/api/basic/request-referrer.html",
+      "subtests": [
+        {
+          "name": "about:client referrer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "url referrer",
           "status": "PASS",
           "message": null
         }
@@ -1434,13 +1468,13 @@
         },
         {
           "name": "Fetching data:text/plain;base64,cmVzcG9uc2UncyBib[...] is OK",
-          "status": "FAIL",
-          "message": "assert_equals: Content-Type is text/plain;charset=US-ASCII expected \"text/plain\" but got \"text/plain;charset=US-ASCII\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Fetching data:image/png;base64,cmVzcG9uc2UncyBib2[...] is OK",
-          "status": "FAIL",
-          "message": "assert_equals: Content-Type is image/png;charset=US-ASCII expected \"image/png\" but got \"image/png;charset=US-ASCII\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Fetching [POST] data:,response%27s%20body is OK",
@@ -1481,13 +1515,13 @@
         },
         {
           "name": "Fetching data:text/plain;base64,cmVzcG9uc2UncyBib[...] is OK",
-          "status": "FAIL",
-          "message": "assert_equals: Content-Type is text/plain;charset=US-ASCII expected \"text/plain\" but got \"text/plain;charset=US-ASCII\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Fetching data:image/png;base64,cmVzcG9uc2UncyBib2[...] is OK",
-          "status": "FAIL",
-          "message": "assert_equals: Content-Type is image/png;charset=US-ASCII expected \"image/png\" but got \"image/png;charset=US-ASCII\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Fetching [POST] data:,response%27s%20body is OK",
@@ -2094,6 +2128,40 @@
         },
         {
           "name": "Include mode: remote cookies are not sent with other remote request",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/api/cors/cors-expose-star-worker.html",
+      "subtests": [
+        {
+          "name": "Basic Access-Control-Expose-Headers: * support",
+          "status": "FAIL",
+          "message": "assert_equals: expected (string) \"X\" but got (object) null"
+        },
+        {
+          "name": "Cannot use * for credentialed fetches",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/api/cors/cors-expose-star.html",
+      "subtests": [
+        {
+          "name": "Basic Access-Control-Expose-Headers: * support",
+          "status": "FAIL",
+          "message": "assert_equals: expected (string) \"X\" but got (object) null"
+        },
+        {
+          "name": "Cannot use * for credentialed fetches",
           "status": "PASS",
           "message": null
         }
@@ -2946,6 +3014,100 @@
       "message": null
     },
     {
+      "test": "/fetch/api/cors/cors-preflight-star-worker.html",
+      "subtests": [
+        {
+          "name": "CORS that succeeds with credentials: false; method: GET (allowed: get); header: X-Test,1 (allowed: x-test)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that succeeds with credentials: false; method: SUPER (allowed: *); header: X-Test,1 (allowed: x-test)",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to fetch\""
+        },
+        {
+          "name": "CORS that succeeds with credentials: false; method: OK (allowed: *); header: X-Test,1 (allowed: *)",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to fetch\""
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: OK (allowed: *); header: X-Test,1 (allowed: *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: PUT (allowed: *); header: undefined (allowed: )",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: PUT (allowed: put); header: undefined (allowed: *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: GET (allowed: get); header: X-Test,1 (allowed: *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: GET (allowed: *); header: X-Test,1 (allowed: *)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/api/cors/cors-preflight-star.html",
+      "subtests": [
+        {
+          "name": "CORS that succeeds with credentials: false; method: GET (allowed: get); header: X-Test,1 (allowed: x-test)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that succeeds with credentials: false; method: SUPER (allowed: *); header: X-Test,1 (allowed: x-test)",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to fetch\""
+        },
+        {
+          "name": "CORS that succeeds with credentials: false; method: OK (allowed: *); header: X-Test,1 (allowed: *)",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to fetch\""
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: OK (allowed: *); header: X-Test,1 (allowed: *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: PUT (allowed: *); header: undefined (allowed: )",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: PUT (allowed: put); header: undefined (allowed: *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: GET (allowed: get); header: X-Test,1 (allowed: *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS that fails with credentials: true; method: GET (allowed: *); header: X-Test,1 (allowed: *)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/fetch/api/cors/cors-preflight-status-worker.html",
       "subtests": [
         {
@@ -3301,6 +3463,11 @@
           "name": "CORS [PUT] [several headers], server refuses",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "CORS [PUT] [only safe headers], server allows",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3378,6 +3545,11 @@
           "name": "CORS [PUT] [several headers], server refuses",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "CORS [PUT] [only safe headers], server allows",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -3386,6 +3558,11 @@
     {
       "test": "/fetch/api/cors/cors-redirect-credentials-worker.html",
       "subtests": [
+        {
+          "name": "Redirect 301 from same origin to remote without user and password",
+          "status": "PASS",
+          "message": null
+        },
         {
           "name": "Redirect 301 from same origin to remote with user and password",
           "status": "PASS",
@@ -3443,6 +3620,11 @@
         },
         {
           "name": "Redirect 301 from remote to another remote with password",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Redirect 302 from same origin to remote without user and password",
           "status": "PASS",
           "message": null
         },
@@ -3507,6 +3689,11 @@
           "message": null
         },
         {
+          "name": "Redirect 303 from same origin to remote without user and password",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "Redirect 303 from same origin to remote with user and password",
           "status": "PASS",
           "message": null
@@ -3567,6 +3754,11 @@
           "message": null
         },
         {
+          "name": "Redirect 307 from same origin to remote without user and password",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "Redirect 307 from same origin to remote with user and password",
           "status": "PASS",
           "message": null
@@ -3623,6 +3815,11 @@
         },
         {
           "name": "Redirect 307 from remote to another remote with password",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Redirect 308 from same origin to remote without user and password",
           "status": "PASS",
           "message": null
         },
@@ -3694,6 +3891,11 @@
       "test": "/fetch/api/cors/cors-redirect-credentials.html",
       "subtests": [
         {
+          "name": "Redirect 301 from same origin to remote without user and password",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "Redirect 301 from same origin to remote with user and password",
           "status": "PASS",
           "message": null
@@ -3750,6 +3952,11 @@
         },
         {
           "name": "Redirect 301 from remote to another remote with password",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Redirect 302 from same origin to remote without user and password",
           "status": "PASS",
           "message": null
         },
@@ -3814,6 +4021,11 @@
           "message": null
         },
         {
+          "name": "Redirect 303 from same origin to remote without user and password",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "Redirect 303 from same origin to remote with user and password",
           "status": "PASS",
           "message": null
@@ -3874,6 +4086,11 @@
           "message": null
         },
         {
+          "name": "Redirect 307 from same origin to remote without user and password",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "Redirect 307 from same origin to remote with user and password",
           "status": "PASS",
           "message": null
@@ -3930,6 +4147,11 @@
         },
         {
           "name": "Redirect 307 from remote to another remote with password",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Redirect 308 from same origin to remote without user and password",
           "status": "PASS",
           "message": null
         },
@@ -4574,13 +4796,13 @@
       "subtests": [
         {
           "name": "Include mode: 1 cookie",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Request include cookie(s) expected \"a=1\" but got \"X; a=1\""
         },
         {
           "name": "Include mode: 2 cookies",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Request include cookie(s) expected \"b=2; c=3\" but got \"X; b=2; c=3\""
         },
         {
           "name": "Omit mode: discard cookies",
@@ -4589,8 +4811,8 @@
         },
         {
           "name": "Omit mode: no cookie is stored",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: Request does not have cookie(s) expected false got true"
         },
         {
           "name": "Omit mode: no cookie is sent",
@@ -4599,13 +4821,13 @@
         },
         {
           "name": "Same-origin mode: 1 cookie",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Request include cookie(s) expected \"a=1\" but got \"X; a=1\""
         },
         {
           "name": "Same-origin mode: 2 cookies",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Request include cookie(s) expected \"b=2; c=3\" but got \"X; b=2; c=3\""
         }
       ],
       "status": "OK",
@@ -4616,13 +4838,13 @@
       "subtests": [
         {
           "name": "Include mode: 1 cookie",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Request include cookie(s) expected \"a=1\" but got \"X; a=1\""
         },
         {
           "name": "Include mode: 2 cookies",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Request include cookie(s) expected \"b=2; c=3\" but got \"X; b=2; c=3\""
         },
         {
           "name": "Omit mode: discard cookies",
@@ -4631,8 +4853,8 @@
         },
         {
           "name": "Omit mode: no cookie is stored",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: Request does not have cookie(s) expected false got true"
         },
         {
           "name": "Omit mode: no cookie is sent",
@@ -4641,13 +4863,13 @@
         },
         {
           "name": "Same-origin mode: 1 cookie",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Request include cookie(s) expected \"a=1\" but got \"X; a=1\""
         },
         {
           "name": "Same-origin mode: 2 cookies",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Request include cookie(s) expected \"b=2; c=3\" but got \"X; b=2; c=3\""
         }
       ],
       "status": "OK",
@@ -5151,8 +5373,8 @@
       "subtests": [
         {
           "name": "Create headers using same name for different values",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"doubleValue1, doubleValue2\" but got \"doubleValue1,doubleValue2\""
         },
         {
           "name": "Check delete and has methods when using same name for different values",
@@ -5166,8 +5388,8 @@
         },
         {
           "name": "Check append methods when called with already used name",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"singleValue, newSingleValue\" but got \"singleValue,newSingleValue\""
         }
       ],
       "status": "OK",
@@ -5578,8 +5800,8 @@
       "subtests": [
         {
           "name": "Fetch is blocked by CSP, got a TypeError",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: undefined Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -5592,6 +5814,18 @@
           "name": "Fetch is blocked by CSP, got a TypeError",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/api/policies/referrer-no-referrer-service-worker.https.html",
+      "subtests": [
+        {
+          "name": "Fetch in service worker: referrer with no-referrer policy",
+          "status": "FAIL",
+          "message": "assert_unreached: unregister should not fail: Only secure origins are allowed (see: https://goo.gl/Y0ZkNV). Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -5622,12 +5856,36 @@
       "message": null
     },
     {
+      "test": "/fetch/api/policies/referrer-origin-service-worker.https.html",
+      "subtests": [
+        {
+          "name": "Fetch in service worker: referrer with no-referrer policy",
+          "status": "FAIL",
+          "message": "assert_unreached: unregister should not fail: Only secure origins are allowed (see: https://goo.gl/Y0ZkNV). Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/api/policies/referrer-origin-when-cross-origin-service-worker.https.html",
+      "subtests": [
+        {
+          "name": "Fetch in service worker: referrer with origin-when-cross-origin policy",
+          "status": "FAIL",
+          "message": "assert_unreached: unregister should not fail: Only secure origins are allowed (see: https://goo.gl/Y0ZkNV). Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/fetch/api/policies/referrer-origin-when-cross-origin-worker.html",
       "subtests": [
         {
           "name": "Request's referrer is origin",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to fetch\""
         }
       ],
       "status": "OK",
@@ -5638,8 +5896,8 @@
       "subtests": [
         {
           "name": "Request's referrer is origin",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to fetch\""
         }
       ],
       "status": "OK",
@@ -5656,7 +5914,7 @@
         {
           "name": "Cross-origin referrer is overridden by client origin",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to execute 'fetch' on 'WorkerGlobalScope': The origin of 'http://www.web-platform.test:8000/' should be same as 'http://web-platform.test:8000'\""
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to execute 'fetch' on 'WorkerGlobalScope': The origin of 'https://www.web-platform.test:8443/' should be same as 'http://web-platform.test:8000'\""
         }
       ],
       "status": "OK",
@@ -5673,7 +5931,19 @@
         {
           "name": "Cross-origin referrer is overridden by client origin",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to execute 'fetch' on 'Window': The origin of 'http://www.web-platform.test:8000/' should be same as 'http://web-platform.test:8000'\""
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Failed to execute 'fetch' on 'Window': The origin of 'https://www.web-platform.test:8443/' should be same as 'http://web-platform.test:8000'\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/api/policies/referrer-unsafe-url-service-worker.https.html",
+      "subtests": [
+        {
+          "name": "Fetch in worker: referrer with unsafe-url policy",
+          "status": "FAIL",
+          "message": "assert_unreached: unregister should not fail: Only secure origins are allowed (see: https://goo.gl/Y0ZkNV). Reached unreachable code"
         }
       ],
       "status": "OK",
@@ -7436,7 +7706,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Modified-Since header (following a request without additional headers) is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-Modified-Since header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7446,7 +7716,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Modified-Since header (following a request without additional headers) is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-Modified-Since header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7456,7 +7726,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Modified-Since header is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-Modified-Since header is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7466,7 +7736,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Modified-Since header is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-Modified-Since header is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7476,7 +7746,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-None-Match header (following a request without additional headers) is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-None-Match header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7486,7 +7756,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-None-Match header (following a request without additional headers) is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-None-Match header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7496,7 +7766,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-None-Match header is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-None-Match header is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7506,7 +7776,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-None-Match header is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-None-Match header is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7516,7 +7786,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Unmodified-Since header (following a request without additional headers) is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-Unmodified-Since header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7526,7 +7796,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Unmodified-Since header (following a request without additional headers) is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-Unmodified-Since header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7536,7 +7806,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Unmodified-Since header is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-Unmodified-Since header is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7546,7 +7816,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Unmodified-Since header is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-Unmodified-Since header is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7556,7 +7826,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Match header (following a request without additional headers) is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-Match header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7566,7 +7836,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Match header (following a request without additional headers) is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-Match header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7576,7 +7846,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Match header is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-Match header is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7586,7 +7856,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Match header is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-Match header is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7596,7 +7866,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Range header (following a request without additional headers) is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-Range header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7606,7 +7876,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Range header (following a request without additional headers) is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-Range header (following a request without additional headers) is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7616,7 +7886,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Range header is treated similarly to \"no-store\" with date and stale response",
+          "name": "RequestCache \"default\" mode with an If-Range header is treated similarly to \"no-store\" with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7626,7 +7896,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode with an If-Range header is treated similarly to \"no-store\" with date and fresh response",
+          "name": "RequestCache \"default\" mode with an If-Range header is treated similarly to \"no-store\" with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         }
@@ -7643,7 +7913,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode checks the cache for previously cached content and goes to the network for stale responses with date and stale response",
+          "name": "RequestCache \"default\" mode checks the cache for previously cached content and goes to the network for stale responses with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7653,7 +7923,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"default\" mode checks the cache for previously cached content and avoids going to the network if a fresh response exists with date and fresh response",
+          "name": "RequestCache \"default\" mode checks the cache for previously cached content and avoids going to the network if a fresh response exists with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7663,7 +7933,7 @@
           "message": null
         },
         {
-          "name": "Responses with the \"Cache-Control: no-store\" header are not stored in the cache with date and stale response",
+          "name": "Responses with the \"Cache-Control: no-store\" header are not stored in the cache with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7673,7 +7943,7 @@
           "message": null
         },
         {
-          "name": "Responses with the \"Cache-Control: no-store\" header are not stored in the cache with date and fresh response",
+          "name": "Responses with the \"Cache-Control: no-store\" header are not stored in the cache with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         }
@@ -7690,7 +7960,7 @@
           "message": "assert_equals: expected 1 but got 2"
         },
         {
-          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and avoid revalidation for stale responses with date and stale response",
+          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and avoid revalidation for stale responses with Last-Modified and stale response",
           "status": "FAIL",
           "message": "assert_equals: expected 1 but got 2"
         },
@@ -7700,7 +7970,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and avoid revalidation for fresh responses with date and fresh response",
+          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and avoid revalidation for fresh responses with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7710,7 +7980,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and goes to the network if a cached response is not found with date and stale response",
+          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and goes to the network if a cached response is not found with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7720,7 +7990,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and goes to the network if a cached response is not found with date and fresh response",
+          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and goes to the network if a cached response is not found with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7730,7 +8000,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and goes to the network if a cached response would vary with date and stale response",
+          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and goes to the network if a cached response would vary with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7740,7 +8010,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and goes to the network if a cached response would vary with date and fresh response",
+          "name": "RequestCache \"force-cache\" mode checks the cache for previously cached content and goes to the network if a cached response would vary with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7750,7 +8020,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"force-cache\" stores the response in the cache if it goes to the network with date and stale response",
+          "name": "RequestCache \"force-cache\" stores the response in the cache if it goes to the network with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7760,7 +8030,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"force-cache\" stores the response in the cache if it goes to the network with date and fresh response",
+          "name": "RequestCache \"force-cache\" stores the response in the cache if it goes to the network with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         }
@@ -7777,7 +8047,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"no-cache\" mode revalidates stale responses found in the cache with date and stale response",
+          "name": "RequestCache \"no-cache\" mode revalidates stale responses found in the cache with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7787,7 +8057,7 @@
           "message": "assert_equals: expected 2 but got 1"
         },
         {
-          "name": "RequestCache \"no-cache\" mode revalidates fresh responses found in the cache with date and fresh response",
+          "name": "RequestCache \"no-cache\" mode revalidates fresh responses found in the cache with Last-Modified and fresh response",
           "status": "FAIL",
           "message": "assert_equals: expected 2 but got 1"
         }
@@ -7801,12 +8071,12 @@
         {
           "name": "RequestCache \"no-store\" mode does not check the cache for previously cached content and goes to the network regardless with Etag and stale response",
           "status": "FAIL",
-          "message": "assert_equals: expected (undefined) undefined but got (string) \"\\\"0.9032860236047338\\\"\""
+          "message": "assert_equals: expected (undefined) undefined but got (string) \"\\\"0.9798601925394688\\\"\""
         },
         {
-          "name": "RequestCache \"no-store\" mode does not check the cache for previously cached content and goes to the network regardless with date and stale response",
+          "name": "RequestCache \"no-store\" mode does not check the cache for previously cached content and goes to the network regardless with Last-Modified and stale response",
           "status": "FAIL",
-          "message": "assert_equals: expected (undefined) undefined but got (string) \"Mon, 06 Mar 2017 22:43:22 GMT\""
+          "message": "assert_equals: expected (undefined) undefined but got (string) \"Mon, 27 Mar 2017 01:22:55 GMT\""
         },
         {
           "name": "RequestCache \"no-store\" mode does not check the cache for previously cached content and goes to the network regardless with Etag and fresh response",
@@ -7814,19 +8084,19 @@
           "message": "assert_equals: expected 2 but got 1"
         },
         {
-          "name": "RequestCache \"no-store\" mode does not check the cache for previously cached content and goes to the network regardless with date and fresh response",
+          "name": "RequestCache \"no-store\" mode does not check the cache for previously cached content and goes to the network regardless with Last-Modified and fresh response",
           "status": "FAIL",
           "message": "assert_equals: expected 2 but got 1"
         },
         {
           "name": "RequestCache \"no-store\" mode does not store the response in the cache with Etag and stale response",
           "status": "FAIL",
-          "message": "assert_equals: expected (undefined) undefined but got (string) \"\\\"0.7691601680828748\\\"\""
+          "message": "assert_equals: expected (undefined) undefined but got (string) \"\\\"0.027939778372147783\\\"\""
         },
         {
-          "name": "RequestCache \"no-store\" mode does not store the response in the cache with date and stale response",
+          "name": "RequestCache \"no-store\" mode does not store the response in the cache with Last-Modified and stale response",
           "status": "FAIL",
-          "message": "assert_equals: expected (undefined) undefined but got (string) \"Mon, 06 Mar 2017 22:43:22 GMT\""
+          "message": "assert_equals: expected (undefined) undefined but got (string) \"Mon, 27 Mar 2017 01:22:55 GMT\""
         },
         {
           "name": "RequestCache \"no-store\" mode does not store the response in the cache with Etag and fresh response",
@@ -7834,7 +8104,7 @@
           "message": "assert_equals: expected 2 but got 1"
         },
         {
-          "name": "RequestCache \"no-store\" mode does not store the response in the cache with date and fresh response",
+          "name": "RequestCache \"no-store\" mode does not store the response in the cache with Last-Modified and fresh response",
           "status": "FAIL",
           "message": "assert_equals: expected 2 but got 1"
         }
@@ -7851,7 +8121,7 @@
           "message": "assert_equals: expected 1 but got 2"
         },
         {
-          "name": "RequestCache \"only-if-cached\" mode checks the cache for previously cached content and avoids revalidation for stale responses with date and stale response",
+          "name": "RequestCache \"only-if-cached\" mode checks the cache for previously cached content and avoids revalidation for stale responses with Last-Modified and stale response",
           "status": "FAIL",
           "message": "assert_equals: expected 1 but got 2"
         },
@@ -7861,7 +8131,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"only-if-cached\" mode checks the cache for previously cached content and avoids revalidation for fresh responses with date and fresh response",
+          "name": "RequestCache \"only-if-cached\" mode checks the cache for previously cached content and avoids revalidation for fresh responses with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7871,7 +8141,7 @@
           "message": "assert_true: fetch should have been an error expected true got false"
         },
         {
-          "name": "RequestCache \"only-if-cached\" mode checks the cache for previously cached content and does not go to the network if a cached response is not found with date and fresh response",
+          "name": "RequestCache \"only-if-cached\" mode checks the cache for previously cached content and does not go to the network if a cached response is not found with Last-Modified and fresh response",
           "status": "FAIL",
           "message": "assert_true: fetch should have been an error expected true got false"
         },
@@ -7881,7 +8151,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"only-if-cached\" (with \"same-origin\") uses cached same-origin redirects to same-origin content with date and fresh response",
+          "name": "RequestCache \"only-if-cached\" (with \"same-origin\") uses cached same-origin redirects to same-origin content with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7891,7 +8161,7 @@
           "message": "assert_equals: expected 2 but got 4"
         },
         {
-          "name": "RequestCache \"only-if-cached\" (with \"same-origin\") uses cached same-origin redirects to same-origin content with date and stale response",
+          "name": "RequestCache \"only-if-cached\" (with \"same-origin\") uses cached same-origin redirects to same-origin content with Last-Modified and stale response",
           "status": "FAIL",
           "message": "assert_equals: expected 2 but got 4"
         },
@@ -7901,7 +8171,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"only-if-cached\" (with \"same-origin\") does not follow redirects across origins and rejects with date and fresh response",
+          "name": "RequestCache \"only-if-cached\" (with \"same-origin\") does not follow redirects across origins and rejects with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
@@ -7911,7 +8181,7 @@
           "message": "assert_equals: expected 2 but got 3"
         },
         {
-          "name": "RequestCache \"only-if-cached\" (with \"same-origin\") does not follow redirects across origins and rejects with date and stale response",
+          "name": "RequestCache \"only-if-cached\" (with \"same-origin\") does not follow redirects across origins and rejects with Last-Modified and stale response",
           "status": "FAIL",
           "message": "assert_equals: expected 2 but got 3"
         }
@@ -7925,12 +8195,12 @@
         {
           "name": "RequestCache \"reload\" mode does not check the cache for previously cached content and goes to the network regardless with Etag and stale response",
           "status": "FAIL",
-          "message": "assert_equals: expected (undefined) undefined but got (string) \"\\\"0.4468185601212482\\\"\""
+          "message": "assert_equals: expected (undefined) undefined but got (string) \"\\\"0.692292124443092\\\"\""
         },
         {
-          "name": "RequestCache \"reload\" mode does not check the cache for previously cached content and goes to the network regardless with date and stale response",
+          "name": "RequestCache \"reload\" mode does not check the cache for previously cached content and goes to the network regardless with Last-Modified and stale response",
           "status": "FAIL",
-          "message": "assert_equals: expected (undefined) undefined but got (string) \"Mon, 06 Mar 2017 22:43:22 GMT\""
+          "message": "assert_equals: expected (undefined) undefined but got (string) \"Mon, 27 Mar 2017 01:22:55 GMT\""
         },
         {
           "name": "RequestCache \"reload\" mode does not check the cache for previously cached content and goes to the network regardless with Etag and fresh response",
@@ -7938,7 +8208,7 @@
           "message": "assert_equals: expected 2 but got 1"
         },
         {
-          "name": "RequestCache \"reload\" mode does not check the cache for previously cached content and goes to the network regardless with date and fresh response",
+          "name": "RequestCache \"reload\" mode does not check the cache for previously cached content and goes to the network regardless with Last-Modified and fresh response",
           "status": "FAIL",
           "message": "assert_equals: expected 2 but got 1"
         },
@@ -7948,7 +8218,7 @@
           "message": null
         },
         {
-          "name": "RequestCache \"reload\" mode does store the response in the cache with date and stale response",
+          "name": "RequestCache \"reload\" mode does store the response in the cache with Last-Modified and stale response",
           "status": "PASS",
           "message": null
         },
@@ -7958,19 +8228,19 @@
           "message": null
         },
         {
-          "name": "RequestCache \"reload\" mode does store the response in the cache with date and fresh response",
+          "name": "RequestCache \"reload\" mode does store the response in the cache with Last-Modified and fresh response",
           "status": "PASS",
           "message": null
         },
         {
           "name": "RequestCache \"reload\" mode does store the response in the cache even if a previous response is already stored with Etag and stale response",
           "status": "FAIL",
-          "message": "assert_equals: expected (undefined) undefined but got (string) \"\\\"0.7287841686146426\\\"\""
+          "message": "assert_equals: expected (undefined) undefined but got (string) \"\\\"0.9622037587041985\\\"\""
         },
         {
-          "name": "RequestCache \"reload\" mode does store the response in the cache even if a previous response is already stored with date and stale response",
+          "name": "RequestCache \"reload\" mode does store the response in the cache even if a previous response is already stored with Last-Modified and stale response",
           "status": "FAIL",
-          "message": "assert_equals: expected (undefined) undefined but got (string) \"Mon, 06 Mar 2017 22:43:22 GMT\""
+          "message": "assert_equals: expected (undefined) undefined but got (string) \"Mon, 27 Mar 2017 01:22:55 GMT\""
         },
         {
           "name": "RequestCache \"reload\" mode does store the response in the cache even if a previous response is already stored with Etag and fresh response",
@@ -7978,7 +8248,7 @@
           "message": "assert_equals: expected 2 but got 1"
         },
         {
-          "name": "RequestCache \"reload\" mode does store the response in the cache even if a previous response is already stored with date and fresh response",
+          "name": "RequestCache \"reload\" mode does store the response in the cache even if a previous response is already stored with Last-Modified and fresh response",
           "status": "FAIL",
           "message": "assert_equals: expected 2 but got 1"
         }
@@ -9938,6 +10208,11 @@
           "message": null
         },
         {
+          "name": "Response interface: attribute trailer",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"trailer\" expected true got false"
+        },
+        {
           "name": "Response interface: operation clone()",
           "status": "PASS",
           "message": null
@@ -10033,42 +10308,47 @@
           "message": null
         },
         {
-          "name": "Response interface: new Response() must inherit property \"clone\" with the proper type (8)",
+          "name": "Response interface: new Response() must inherit property \"trailer\" with the proper type (8)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"trailer\" not found in prototype chain"
+        },
+        {
+          "name": "Response interface: new Response() must inherit property \"clone\" with the proper type (9)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Response interface: new Response() must inherit property \"body\" with the proper type (9)",
+          "name": "Response interface: new Response() must inherit property \"body\" with the proper type (10)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Response interface: new Response() must inherit property \"bodyUsed\" with the proper type (10)",
+          "name": "Response interface: new Response() must inherit property \"bodyUsed\" with the proper type (11)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Response interface: new Response() must inherit property \"arrayBuffer\" with the proper type (11)",
+          "name": "Response interface: new Response() must inherit property \"arrayBuffer\" with the proper type (12)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Response interface: new Response() must inherit property \"blob\" with the proper type (12)",
+          "name": "Response interface: new Response() must inherit property \"blob\" with the proper type (13)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Response interface: new Response() must inherit property \"formData\" with the proper type (13)",
+          "name": "Response interface: new Response() must inherit property \"formData\" with the proper type (14)",
           "status": "FAIL",
           "message": "assert_inherits: property \"formData\" not found in prototype chain"
         },
         {
-          "name": "Response interface: new Response() must inherit property \"json\" with the proper type (14)",
+          "name": "Response interface: new Response() must inherit property \"json\" with the proper type (15)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Response interface: new Response() must inherit property \"text\" with the proper type (15)",
+          "name": "Response interface: new Response() must inherit property \"text\" with the proper type (16)",
           "status": "PASS",
           "message": null
         }
@@ -10367,6 +10647,589 @@
         },
         {
           "name": "Getting a body reader after consuming as arrayBuffer",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/api/response/response-trailer.html",
+      "subtests": [
+        {
+          "name": "trailer() test",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Cannot read property 'then' of undefined\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/http-cache/304-update.html",
+      "subtests": [
+        {
+          "name": "HTTP cache updates returned headers from a Last-Modified 304.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache updates stored headers from a Last-Modified 304.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache updates returned headers from a ETag 304.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache updates stored headers from a ETag 304.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/http-cache/cc-request.html",
+      "subtests": [
+        {
+          "name": "HTTP cache doesn't use aged but fresh response when request contains Cache-Control: max-age=0.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache doesn't use aged but fresh response when request contains Cache-Control: max-age=1.",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 2 but got 1"
+        },
+        {
+          "name": "HTTP cache doesn't use fresh response with Age header when request contains Cache-Control: max-age that is greater than remaining freshness.",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 2 but got 1"
+        },
+        {
+          "name": "HTTP cache does use aged stale response when request contains Cache-Control: max-stale that permits its use.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache does reuse stale response with Age header when request contains Cache-Control: max-stale that permits its use.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache doesn't reuse fresh response when request contains Cache-Control: min-fresh that wants it fresher.",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 2 but got 1"
+        },
+        {
+          "name": "HTTP cache doesn't reuse fresh response with Age header when request contains Cache-Control: min-fresh that wants it fresher.",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 2 but got 1"
+        },
+        {
+          "name": "HTTP cache doesn't reuse fresh response when request contains Cache-Control: no-cache.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache validates fresh response with Last-Modified when request contains Cache-Control: no-cache.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache validates fresh response with ETag when request contains Cache-Control: no-cache.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache doesn't reuse fresh response when request contains Cache-Control: no-store.",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 2 but got 1"
+        },
+        {
+          "name": "HTTP cache generates 504 status code when nothing is in cache and request contains Cache-Control: only-if-cached.",
+          "status": "FAIL",
+          "message": "assert_equals: Response status expected 504 but got 200"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/http-cache/freshness.html",
+      "subtests": [
+        {
+          "name": "HTTP cache reuses a response with a future Expires.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not reuse a response with a past Expires.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not reuse a response with a present Expires.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not reuse a response with an invalid Expires.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache reuses a response with positive Cache-Control: max-age.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not reuse a response with Cache-Control: max-age=0.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache reuses a response with positive Cache-Control: max-age and a past Expires.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache reuses a response with positive Cache-Control: max-age and an invalid Expires.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not reuse a response with Cache-Control: max-age=0 and a future Expires.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not prefer Cache-Control: s-maxage over Cache-Control: max-age.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not reuse a response when the Age header is greater than its freshness lifetime.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not store a response with Cache-Control: no-store.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not store a response with Cache-Control: no-store, even with max-age and Expires.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache stores a response with Cache-Control: no-cache, but revalidates upon use.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache stores a response with Cache-Control: no-cache, but revalidates upon use, even with max-age and Expires.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/http-cache/heuristic.html",
+      "subtests": [
+        {
+          "name": "HTTP cache reuses an unknown response with Last-Modified based upon heuristic freshness when Cache-Control: public is present.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache does not reuse an unknown response with Last-Modified based upon heuristic freshness when Cache-Control: public is not present.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache reuses a 200 OK response with Last-Modified based upon heuristic freshness.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache reuses a 203 Non-Authoritative Information response with Last-Modified based upon heuristic freshness.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache reuses a 204 No Content response with Last-Modified based upon heuristic freshness.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache reuses a 404 Not Found response with Last-Modified based upon heuristic freshness.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache reuses a 405 Method Not Allowed response with Last-Modified based upon heuristic freshness.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache reuses a 410 Gone response with Last-Modified based upon heuristic freshness.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache reuses a 414 URI Too Long response with Last-Modified based upon heuristic freshness.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache reuses a 501 Not Implemented response with Last-Modified based upon heuristic freshness.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache does not use a 201 Created response with Last-Modified based upon heuristic freshness.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not use a 202 Accepted response with Last-Modified based upon heuristic freshness.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not use a 403 Forbidden response with Last-Modified based upon heuristic freshness.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not use a 502 Bad Gateway response with Last-Modified based upon heuristic freshness.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not use a 503 Service Unavailable response with Last-Modified based upon heuristic freshness.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not use a 504 Gateway Timeout response with Last-Modified based upon heuristic freshness.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/http-cache/invalidate.html",
+      "subtests": [
+        {
+          "name": "HTTP cache invalidates after a successful response from a POST",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache does not invalidate after a failed response from an unsafe request",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache invalidates after a successful response from a PUT",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache invalidates after a successful response from a DELETE",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache invalidates after a successful response from an unknown method",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 3 but got 1"
+        },
+        {
+          "name": "HTTP cache invalidates Location URL after a successful response from a POST",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 3 but got 1"
+        },
+        {
+          "name": "HTTP cache does not invalidate Location URL after a failed response from an unsafe request",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache invalidates Location URL after a successful response from a PUT",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 3 but got 1"
+        },
+        {
+          "name": "HTTP cache invalidates Location URL after a successful response from a DELETE",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 3 but got 1"
+        },
+        {
+          "name": "HTTP cache invalidates Location URL after a successful response from an unknown method",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 3 but got 1"
+        },
+        {
+          "name": "HTTP cache invalidates Content-Location URL after a successful response from a POST",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 3 but got 1"
+        },
+        {
+          "name": "HTTP cache does not invalidate Content-Location URL after a failed response from an unsafe request",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache invalidates Content-Location URL after a successful response from a PUT",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 3 but got 1"
+        },
+        {
+          "name": "HTTP cache invalidates Content-Location URL after a successful response from a DELETE",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 3 but got 1"
+        },
+        {
+          "name": "HTTP cache invalidates Content-Location URL after a successful response from an unknown method",
+          "status": "FAIL",
+          "message": "assert_equals: Response used expected 3 but got 1"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/http-cache/partial.html",
+      "subtests": [
+        {
+          "name": "HTTP cache stores partial content and reuses it.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache stores complete response and serves smaller ranges from it.",
+          "status": "FAIL",
+          "message": "assert_equals: Response status expected 200 but got 206"
+        },
+        {
+          "name": "HTTP cache stores partial response and serves smaller ranges from it.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 2 but got 2"
+        },
+        {
+          "name": "HTTP cache stores partial content and completes it.",
+          "status": "FAIL",
+          "message": "assert_equals: expected (string) \"bytes=5-\" but got (undefined) undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/http-cache/status.html",
+      "subtests": [
+        {
+          "name": "HTTP cache goes to the network if it has a stale 200 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 200 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 203 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 203 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 204 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 204 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 299 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 299 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 400 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 400 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 404 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 404 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 410 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 410 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 499 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 499 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 500 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 500 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 502 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 502 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 503 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 503 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 504 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 504 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache goes to the network if it has a stale 599 response.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache avoids going to the network if it has a fresh 599 response.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/fetch/http-cache/vary.html",
+      "subtests": [
+        {
+          "name": "HTTP cache reuses Vary response when request matches.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache doesn't use Vary response when request doesn't match.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache doesn't use Vary response when request omits variant header.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache doesn't invalidate existing Vary response.",
+          "status": "FAIL",
+          "message": "assert_less_than: Response used expected a number less than 3 but got 3"
+        },
+        {
+          "name": "HTTP cache doesn't pay attention to headers not listed in Vary.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache reuses two-way Vary response when request matches.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache doesn't use two-way Vary response when request doesn't match.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache doesn't use two-way Vary response when request omits variant header.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache reuses three-way Vary response when request matches.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache doesn't use three-way Vary response when request doesn't match.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTTP cache doesn't use three-way Vary response when request omits variant header.",
           "status": "PASS",
           "message": null
         }
