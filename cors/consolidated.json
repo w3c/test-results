@@ -1,38 +1,533 @@
 {
   "ua": [
+    "Ch59",
+    "FF55",
+    "Sa10",
     "UC10"
   ],
   "results": {
+    "/cors/304.htm": {
+      "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK"
+      },
+      "totals": {
+        "OK": 3
+      },
+      "subtests": {
+        "A 304 response with no CORS headers inherits from the stored response": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "A 304 can expand Access-Control-Expose-Headers": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "A 304 can contract Access-Control-Expose-Headers": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "A 304 can change Access-Control-Allow-Origin": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        }
+      }
+    },
     "/cors/allow-headers.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "Allow origin: *": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Allow origin: _*__": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Allow origin: [tab]*": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
+          }
+        },
+        "Allow origin: http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Allow origin: _http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Allow origin: _http://web-platform.test:8000___[tab]_": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Allow origin: [tab]http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: //web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: ://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: ftp://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http:://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http:/web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http:web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000?": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000 /": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000#": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000%23": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000:80": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000, *": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000\\0": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 2
+          }
+        },
+        "Disallow origin: HTTP://WEB-PLATFORM.TEST:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: HTTP://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: -": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: **": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: \\0*": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 3
+          }
+        },
+        "Disallow origin: *\\0": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 3
+          }
+        },
+        "Disallow origin: '*'": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: \"*\"": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: * *": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: *http://*": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: *http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: * http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: *, http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: \\0http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 2
+          }
+        },
+        "Disallow origin: null http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://example.net": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: ": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000/cors/allow-headers.htm": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000/cors/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000/cors/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         },
         "Allow origin: http://www.w3c-test.org": {
@@ -211,70 +706,6 @@
             "PASS": 1
           }
         },
-        "Disallow origin: -": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: **": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: \\0*": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: *\\0": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: '*'": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: \"*\"": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: * *": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: *http://*": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
         "Disallow origin: *http://www.w3c-test.org": {
           "byUA": {
             "UC10": "PASS"
@@ -308,30 +739,6 @@
           }
         },
         "Disallow origin: null http://www.w3c-test.org": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: http://example.net": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: null": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: ": {
           "byUA": {
             "UC10": "PASS"
           },
@@ -367,54 +774,207 @@
     },
     "/cors/basic.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "Same domain basic usage": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Cross domain basic usage": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Same domain different port": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Cross domain different port": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
+          }
+        },
+        "Cross domain different protocol": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "FAIL",
+            "Sa10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 3
+          }
+        },
+        "Same domain different protocol different port": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "FAIL",
+            "Sa10": "FAIL"
+          },
+          "totals": {
+            "FAIL": 3
           }
         }
       }
     },
     "/cors/credentials-flag.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "TIMEOUT"
       },
       "totals": {
+        "OK": 3,
         "TIMEOUT": 1
       },
       "subtests": {
+        "Setting withCredentials on a sync XHR object should not throw": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Don't send cookie by default": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Don't send cookie part 2": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Don't obey Set-Cookie when withCredentials=false": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Access-Control-Allow-Credentials: TRUE should be disallowed (async)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Access-Control-Allow-Credentials: True should be disallowed (async)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Access-Control-Allow-Credentials: \"true\" should be disallowed (async)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Access-Control-Allow-Credentials: false should be disallowed (async)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Access-Control-Allow-Credentials: 1 should be disallowed (async)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Access-Control-Allow-Credentials: 0 should be disallowed (async)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
         "Setting withCredentials on a sync XHR object should throw": {
           "byUA": {
             "UC10": "FAIL"
@@ -422,137 +982,661 @@
           "totals": {
             "FAIL": 1
           }
-        },
-        "Don't send cookie by default": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Don't send cookie part 2": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Don't obey Set-Cookie when withCredentials=false": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Access-Control-Allow-Credentials: TRUE should be disallowed (async)": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Access-Control-Allow-Credentials: True should be disallowed (async)": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Access-Control-Allow-Credentials: \"true\" should be disallowed (async)": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Access-Control-Allow-Credentials: false should be disallowed (async)": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Access-Control-Allow-Credentials: 1 should be disallowed (async)": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Access-Control-Allow-Credentials: 0 should be disallowed (async)": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
         }
       }
     },
     "/cors/late-upload-events.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "Late listeners: No preflight": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Late listeners: Preflight": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         }
       }
     },
     "/cors/origin.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "Allow origin: *": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Allow origin: _*__": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Allow origin: [tab]*": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
+          }
+        },
+        "Allow origin: http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Allow origin: _http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Allow origin: _http://web-platform.test:8000___[tab]_": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Allow origin: [tab]http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: //web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: ://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: ftp://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http:://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http:/web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http:web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000?": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000 /": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000#": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000%23": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000:80": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000, *": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000\\0": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 2
+          }
+        },
+        "Disallow origin: HTTP://WEB-PLATFORM.TEST:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: HTTP://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: -": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: **": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: \\0*": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 3
+          }
+        },
+        "Disallow origin: *\\0": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 3
+          }
+        },
+        "Disallow origin: '*'": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: \"*\"": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: * *": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: * null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: *http://*": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: *http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: * http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: *, http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: \\0http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 2
+          }
+        },
+        "Disallow origin: null http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://example.net": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: null *": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: ": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000/cors/origin.htm": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000/cors/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000/cors/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: .test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: *.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://*.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow multiple headers (, *)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow multiple headers (*, )": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow multiple headers (*, *)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "Disallow multiple headers (, http://web-platform.test:8000)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow multiple headers (*, http://web-platform.test:8000)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow multiple headers (http://web-platform.test:8000, http://web-platform.test:8000)": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         },
         "Allow origin: http://www.w3c-test.org": {
@@ -731,78 +1815,6 @@
             "PASS": 1
           }
         },
-        "Disallow origin: -": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: **": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: \\0*": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: *\\0": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: '*'": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: \"*\"": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: * *": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: * null": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: *http://*": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
         "Disallow origin: *http://www.w3c-test.org": {
           "byUA": {
             "UC10": "PASS"
@@ -836,38 +1848,6 @@
           }
         },
         "Disallow origin: null http://www.w3c-test.org": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: http://example.net": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: null": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: null *": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow origin: ": {
           "byUA": {
             "UC10": "PASS"
           },
@@ -947,30 +1927,6 @@
             "PASS": 1
           }
         },
-        "Disallow multiple headers (, *)": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow multiple headers (*, )": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "Disallow multiple headers (*, *)": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
         "Disallow multiple headers (, http://www.w3c-test.org)": {
           "byUA": {
             "UC10": "PASS"
@@ -999,62 +1955,913 @@
     },
     "/cors/preflight-cache.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "Test preflight": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "preflight for x-print should be cached": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "FAIL",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         },
         "age = 0, should not be cached": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "age = -1, should not be cached": {
           "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "FAIL": 3,
+            "PASS": 1
           }
         },
         "preflight first request, second from cache, wait, third should preflight again": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
+          }
+        }
+      }
+    },
+    "/cors/preflight-failure.htm": {
+      "byUA": {
+        "Ch59": "OK",
+        "FF55": "TIMEOUT",
+        "Sa10": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 1,
+        "TIMEOUT": 2
+      },
+      "subtests": {
+        "Should throw error if preflight respond with 100": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "TIMEOUT",
+            "Sa10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 1,
+            "TIMEOUT": 2
+          }
+        },
+        "Should throw error if preflight respond with 101": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        },
+        "Should throw error if preflight respond with 200": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 300": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 301": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 302": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 303": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 304": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 305": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 306": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 307": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 308": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 400": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 401": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 402": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 403": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 404": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 405": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 406": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 407": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 408": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 409": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 410": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 411": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 412": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 413": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 414": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 415": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 416": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 417": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 500": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 501": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 502": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 503": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 504": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Should throw error if preflight respond with 505": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         }
       }
     },
     "/cors/redirect-origin.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
+        "local (*) to remote (*), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "local (*) to remote (http://web-platform.test:8000), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "local (*) to remote (null), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "local (*) to remote (none), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "local (http://web-platform.test:8000) to remote (*), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "local (http://web-platform.test:8000) to remote (http://web-platform.test:8000), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "local (http://web-platform.test:8000) to remote (null), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "local (http://web-platform.test:8000) to remote (none), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "local (null) to remote (*), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "local (none) to remote (*), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (*) to local (*), expect origin=null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "remote (*) to local (http://web-platform.test:8000), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (*) to local (null), expect origin=null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "remote (*) to local (none), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (http://web-platform.test:8000) to local (*), expect origin=null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://web-platform.test:8000) to local (http://web-platform.test:8000), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://web-platform.test:8000) to local (null), expect origin=null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://web-platform.test:8000) to local (none), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (null) to local (*), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (none) to local (*), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (*) to remote (*), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (*) to remote (http://web-platform.test:8000), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (*) to remote (null), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (*) to remote (none), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (http://web-platform.test:8000) to remote (*), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://web-platform.test:8000) to remote (http://web-platform.test:8000), expect origin=http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://web-platform.test:8000) to remote (null), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://web-platform.test:8000) to remote (none), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (null) to remote (*), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (none) to remote (*), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (*) to remote2 (*), expect origin=null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "remote (*) to remote2 (http://web-platform.test:8000), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (*) to remote2 (null), expect origin=null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "remote (*) to remote2 (none), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (http://web-platform.test:8000) to remote2 (*), expect origin=null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://web-platform.test:8000) to remote2 (http://web-platform.test:8000), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://web-platform.test:8000) to remote2 (null), expect origin=null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://web-platform.test:8000) to remote2 (none), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (null) to remote2 (*), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (none) to remote2 (*), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "PASS"
+          },
+          "totals": {
+            "PASS": 4
+          }
+        },
+        "remote (*) to remote (http://www1.web-platform.test:8000), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (*) to remote2 (http://www1.web-platform.test:8000), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "remote (http://www1.web-platform.test:8000) to remote (*), expect to fail": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
         "local (*) to remote (*), expect origin=http://www.w3c-test.org": {
           "byUA": {
             "UC10": "FAIL"
@@ -1069,22 +2876,6 @@
           },
           "totals": {
             "FAIL": 1
-          }
-        },
-        "local (*) to remote (null), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "local (*) to remote (none), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
           }
         },
         "local (http://www.w3c-test.org) to remote (*), expect origin=http://www.w3c-test.org": {
@@ -1135,31 +2926,7 @@
             "FAIL": 1
           }
         },
-        "remote (*) to local (*), expect origin=null": {
-          "byUA": {
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "FAIL": 1
-          }
-        },
         "remote (*) to local (http://www.w3c-test.org), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "remote (*) to local (null), expect origin=null": {
-          "byUA": {
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "FAIL": 1
-          }
-        },
-        "remote (*) to local (none), expect to fail": {
           "byUA": {
             "UC10": "PASS"
           },
@@ -1199,22 +2966,6 @@
             "PASS": 1
           }
         },
-        "remote (null) to local (*), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "remote (none) to local (*), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
         "remote (*) to remote (*), expect origin=http://www.w3c-test.org": {
           "byUA": {
             "UC10": "FAIL"
@@ -1229,22 +2980,6 @@
           },
           "totals": {
             "FAIL": 1
-          }
-        },
-        "remote (*) to remote (null), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "remote (*) to remote (none), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
           }
         },
         "remote (http://www.w3c-test.org) to remote (*), expect origin=http://www.w3c-test.org": {
@@ -1279,47 +3014,7 @@
             "PASS": 1
           }
         },
-        "remote (null) to remote (*), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "remote (none) to remote (*), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "remote (*) to remote2 (*), expect origin=null": {
-          "byUA": {
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "FAIL": 1
-          }
-        },
         "remote (*) to remote2 (http://www.w3c-test.org), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "remote (*) to remote2 (null), expect origin=null": {
-          "byUA": {
-            "UC10": "FAIL"
-          },
-          "totals": {
-            "FAIL": 1
-          }
-        },
-        "remote (*) to remote2 (none), expect to fail": {
           "byUA": {
             "UC10": "PASS"
           },
@@ -1359,22 +3054,6 @@
             "PASS": 1
           }
         },
-        "remote (null) to remote2 (*), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
-        "remote (none) to remote2 (*), expect to fail": {
-          "byUA": {
-            "UC10": "PASS"
-          },
-          "totals": {
-            "PASS": 1
-          }
-        },
         "remote (*) to remote (http://www1.www.w3c-test.org), expect to fail": {
           "byUA": {
             "UC10": "PASS"
@@ -1403,25 +3082,35 @@
     },
     "/cors/redirect-preflight-2.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "Same-origin custom-header request, redirect to cross-origin fails after doing a non-successful preflight": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Same-origin custom-header request, redirect to cross-origin succeeds after doing a preflight": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         }
@@ -1429,12 +3118,70 @@
     },
     "/cors/redirect-preflight.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
+        "Should allow redirect 301 after succesful (200) preflight": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "FAIL",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Should allow redirect 302 after succesful (200) preflight": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "FAIL",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Should allow redirect 303 after succesful (200) preflight": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "FAIL",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Should allow redirect 307 after succesful (200) preflight": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "FAIL",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
+        "Should allow redirect 308 after succesful (200) preflight": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "FAIL",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 1
+          }
+        },
         "Redirect 301 on preflight": {
           "byUA": {
             "UC10": "PASS"
@@ -1519,57 +3266,85 @@
     },
     "/cors/redirect-userinfo.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "TIMEOUT"
       },
       "totals": {
+        "OK": 3,
         "TIMEOUT": 1
       },
       "subtests": {
         "Disallow redirect with userinfo (//user:pass@)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "FAIL",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "Disallow redirect with userinfo (//user:@)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "FAIL",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "Disallow redirect with userinfo (//user@)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "FAIL",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "Disallow redirect with userinfo (//:@)": {
           "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "FAIL",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 2
           }
         },
         "Disallow redirect with userinfo (//:pass@)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "FAIL",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "Allow redirect with userinfo (//@)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "TIMEOUT"
           },
           "totals": {
+            "PASS": 3,
             "TIMEOUT": 1
           }
         }
@@ -1577,34 +3352,496 @@
     },
     "/cors/remote-origin.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "TIMEOUT"
       },
       "totals": {
+        "OK": 3,
         "TIMEOUT": 1
       },
       "subtests": {
         "Allow origin: *": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "TIMEOUT"
           },
           "totals": {
+            "PASS": 3,
             "TIMEOUT": 1
           }
         },
         "Allow origin: _*__": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "TIMEOUT"
           },
           "totals": {
+            "PASS": 3,
             "TIMEOUT": 1
           }
         },
         "Allow origin: [tab]*": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "TIMEOUT"
           },
           "totals": {
+            "PASS": 3,
             "TIMEOUT": 1
+          }
+        },
+        "Allow origin: http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Allow origin: _http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Allow origin: _http://www1.web-platform.test:8000___[tab]_": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Allow origin: [tab]http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: //www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: ://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: ftp://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http:://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http:/www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http:www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000?": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000_/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000#": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000%23": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000:80": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000,_*": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000\\0": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 2
+          }
+        },
+        "Disallow origin: HTTP://WWW1.WEB-PLATFORM.TEST:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: HTTP://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://WWW1.WEB-PLATFORM.TEST:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: -": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: **": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: \\0*": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: *\\0": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 2,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: '*'": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: \"*\"": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: *_*": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: *http://*": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: *http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: *_http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: *,_http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: \\0http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "FAIL",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 2
+          }
+        },
+        "Disallow origin: null_http://www1.web-platform.test:8000": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://example.net": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: null": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: ": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
+            "UC10": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000/cors/remote-origin.htm": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://web-platform.test:8000/cors/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
+          }
+        },
+        "Disallow origin: http://www1.web-platform.test:8000/cors/": {
+          "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS"
+          },
+          "totals": {
+            "PASS": 3
           }
         },
         "Allow origin: http://www1.www.w3c-test.org": {
@@ -1791,70 +4028,6 @@
             "TIMEOUT": 1
           }
         },
-        "Disallow origin: -": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Disallow origin: **": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Disallow origin: \\0*": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Disallow origin: *\\0": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Disallow origin: '*'": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Disallow origin: \"*\"": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Disallow origin: *_*": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Disallow origin: *http://*": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
         "Disallow origin: *http://www1.www.w3c-test.org": {
           "byUA": {
             "UC10": "TIMEOUT"
@@ -1895,30 +4068,6 @@
             "TIMEOUT": 1
           }
         },
-        "Disallow origin: http://example.net": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Disallow origin: null": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "Disallow origin: ": {
-          "byUA": {
-            "UC10": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
         "Disallow origin: http://www.w3c-test.org/cors/remote-origin.htm": {
           "byUA": {
             "UC10": "TIMEOUT"
@@ -1947,57 +4096,82 @@
     },
     "/cors/request-headers.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "basic request header": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Simple request headers need not be in allow-headers": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Unspecified request headers are disallowed": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Strange allowheaders (case insensitive)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "INVALID_STATE_ERR on setRequestHeader before open()": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "INVALID_STATE_ERR on setRequestHeader after send()": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         }
@@ -2005,129 +4179,193 @@
     },
     "/cors/response-headers.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "TIMEOUT"
       },
       "totals": {
+        "OK": 3,
         "TIMEOUT": 1
       },
       "subtests": {
         "getResponseHeader: Expose Access-Control-Expose-Headers (x-custom-header-comma)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Expose second Access-Control-Expose-Headers (x-second-expose)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Don't trim whitespace": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: x-custom-header bytes": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Exposed server field readable (Date)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Cache-Control: readable by default": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Content-Language: readable by default": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Expires: readable by default": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Last-Modified: readable by default": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Pragma: readable by default": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Server: unreadable by default": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: X-Powered-By: unreadable by default": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getResponseHeader: Combined testing of cors response headers": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "TIMEOUT"
           },
           "totals": {
+            "PASS": 3,
             "TIMEOUT": 1
           }
         },
         "getResponse: don't expose x-nonexposed": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "getAllResponseHeaders: don't expose x-nonexposed": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         }
@@ -2135,541 +4373,799 @@
     },
     "/cors/simple-requests.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "No preflight GET and {\"Accept\":\"test\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight HEAD and {\"Accept\":\"test\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight POST and {\"Accept\":\"test\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight GET and {\"accept-language\":\"test\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight HEAD and {\"accept-language\":\"test\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight POST and {\"accept-language\":\"test\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight GET and {\"CONTENT-language\":\"test\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight HEAD and {\"CONTENT-language\":\"test\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight POST and {\"CONTENT-language\":\"test\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight GET and {\"Content-Type\":\"application/x-www-form-urlencoded\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight HEAD and {\"Content-Type\":\"application/x-www-form-urlencoded\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight POST and {\"Content-Type\":\"application/x-www-form-urlencoded\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight GET and {\"content-type\":\"multipart/form-data\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight HEAD and {\"content-type\":\"multipart/form-data\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight POST and {\"content-type\":\"multipart/form-data\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight GET and {\"content-type\":\"text/plain\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight HEAD and {\"content-type\":\"text/plain\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight POST and {\"content-type\":\"text/plain\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight GET and {\"accept\":\"test\",\"accept-language\":\"test\",\"content-language\":\"test\",\"content-type\":\"text/plain; parameter=whatever\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight HEAD and {\"accept\":\"test\",\"accept-language\":\"test\",\"content-language\":\"test\",\"content-type\":\"text/plain; parameter=whatever\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight POST and {\"accept\":\"test\",\"accept-language\":\"test\",\"content-language\":\"test\",\"content-type\":\"text/plain; parameter=whatever\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight Get and {\"content-type\":\"text/plain; parameter=extra_bonus\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "No preflight post and {\"content-type\":\"text/plain\"}": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Check simple headers (async)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "FAIL",
             "UC10": "FAIL"
           },
           "totals": {
-            "FAIL": 1
+            "PASS": 2,
+            "FAIL": 2
           }
         }
       }
     },
     "/cors/status-async.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "Status on GET 200": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on GET 201": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on GET 202": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on GET 203": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on GET 204": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on GET 205": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on GET 206": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on GET 209": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on GET 299": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on POST 200": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on HEAD 200": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on PUT 200": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on CHICKEN 200": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on GET 400": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on HEAD 401": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on POST 404": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on POST 500": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Status on PUT 699": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Status on CHICKEN 501": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Status on GET 400 (nonsimple)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Status on HEAD 401 (nonsimple)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Status on POST 404 (nonsimple)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Status on PUT 699 (nonsimple)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "Status on CHICKEN 501 (nonsimple)": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         }
       }
     },
     "/cors/status-preflight.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "CORS - status after preflight on GET 200": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on GET 204": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on GET 400": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on GET 401": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on HEAD 200": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on HEAD 204": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on HEAD 400": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on HEAD 401": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on HEAD 501": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on HEAD 699": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on POST 204": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on POST 400": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on POST 401": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on POST 404": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on PUT 699": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "CORS - status after preflight on CHICKEN 501": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         }
@@ -2677,50 +5173,70 @@
     },
     "/cors/status.htm": {
       "byUA": {
+        "Ch59": "OK",
+        "FF55": "OK",
+        "Sa10": "OK",
         "UC10": "OK"
       },
       "totals": {
-        "OK": 1
+        "OK": 4
       },
       "subtests": {
         "1. CORS disallowed, response status 400.": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "2. CORS disallowed, preflight status 200.": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         },
         "3. CORS allowed, response status 400.": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "4. CORS allowed, preflight status 200, response status 400.": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "FAIL"
           },
           "totals": {
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "5. CORS allowed, preflight status 400.": {
           "byUA": {
+            "Ch59": "PASS",
+            "FF55": "PASS",
+            "Sa10": "PASS",
             "UC10": "PASS"
           },
           "totals": {
-            "PASS": 1
+            "PASS": 4
           }
         }
       }
