@@ -35,8 +35,8 @@
         },
         {
           "name": "1:7 If present, each **_body_** is one of a **string of format uri**, an **External Web Resource**, an **Embedded Textual Body**, a **Choice** or **Set**, or a **Specific Resource** - [model 3.2](https://www.w3.org/TR/annotation-model/#bodies-and-targets), [model 4](https://www.w3.org/TR/annotation-model/#specific-resources)",
-          "status": "FAIL",
-          "message": "assert_true: ERROR: One or more Bodies of the Annotation is not one of a string of format uri, an External Web Resource, a Choice or Set, a Specific Resource.; expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "1:8 If present the **_bodyValue_ key** has a **single value** that is a **string** - [model 3.2.5](https://www.w3.org/TR/annotation-model/#string-body)",
@@ -220,8 +220,8 @@
         },
         {
           "name": "1:44 If present **Specific Resource _selector_ key** has one or more values each of which is of **format uri** or an object having a **_type_ key** with a **single value** which is one of **'FragmentSelector', 'CssSelector', 'XPathSelector', 'TextQuoteSelector', 'TextPositionSelector', 'DataPositionSelector', 'SvgSelector', 'RangeSelector'** - [model 4.2](https://www.w3.org/TR/annotation-model/#selectors)",
-          "status": "FAIL",
-          "message": "assert_true: ERROR: Annotation contains one or more Specific Resources selectors having value(s) which is(are) not of format uri, nor an object having a type key with a single value which is one of 'FragmentSelector', 'CssSelector', 'XPathSelector', 'TextQuoteSelector', 'TextPositionSelector', 'DataPositionSelector', 'SvgSelector', 'RangeSelector'.; expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "1:45 If present **Specific Resource _state_ key** has one or more values each of which is of **format uri** or an object having a **_type_ key** with a **single value** which is one of **'TimeState' or 'HttpRequestState'** - [model 4.3](https://www.w3.org/TR/annotation-model/#states)",
@@ -260,8 +260,8 @@
         },
         {
           "name": "1:52 If present all **Selectors of _type_ RangeSelector** have both a **_startSelector_ key** and an **_endSelector_ key**, each with a **single value** which is a **Selector** - [model 4.2.8](https://www.w3.org/TR/annotation-model/#range-selector)",
-          "status": "FAIL",
-          "message": "assert_true: ERROR: Annotation contains a Range selector that is NOT of format uri and NOT an object having both startSelector and endSelector keys.; expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "1:53 If present all **States of _type_ TimeState** each have either (but not both) a **_souceDate_ key** or paired **_sourceDateStart_ and _sourceDateEnd_ keys,** each of which is a **single value** of **format date-time**- [model 4.3.1](https://www.w3.org/TR/annotation-model/#time-state)",
@@ -301,12 +301,32 @@
           "message": null
         },
         {
+          "name": "1:14 Implements **body _format_ key** with a **single value** that is a **media type** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:18 Implements **body _format_ key** with one or more values each of which is a **media type** [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:26 Implements **body _purpose_ key** with one or more values are each drawn from **model's list of Motivations** [model 3.3.5](https://www.w3.org/TR/annotation-model/#motivation-and-purpose)",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "1:30 Implements **External Web Resource** with **_id_ key** as a body of the Annotation  [model 3.2.1](https://www.w3.org/TR/annotation-model/#bodies-and-targets)",
           "status": "PASS",
           "message": null
         },
         {
           "name": "1:31 Implements **Embedded Textual Body** with **_value_ key** as a body of the Annotation  [model 3.2.4](https://www.w3.org/TR/annotation-model/#embedded-textual-body)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:32 Implements **Embedded Textual Body _type_ key** which includes a value of **TextualBody** [model 3.2.4](https://www.w3.org/TR/annotation-model/#embedded-textual-body)",
           "status": "PASS",
           "message": null
         },
@@ -327,6 +347,11 @@
         },
         {
           "name": "1:59 Implements **Specific Resource Selector** - [model 4.2](https://www.w3.org/TR/annotation-model/#selectors)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "1:63 Implements **Specific Resource XPath Selector** - [model 4.2.3](https://www.w3.org/TR/annotation-model/#xpath-selector)",
           "status": "PASS",
           "message": null
         },

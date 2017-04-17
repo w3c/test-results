@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "test": "/beacon/headers/header-referrer-no-referrer-when-downgrade.https.html",
+      "subtests": [
+        {
+          "name": "Test referer header https://w3c-test.org:443/beacon/resources/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test referer header http://w3c-test.org:80/beacon/resources/",
+          "status": "FAIL",
+          "message": "assert_equals: Correct referrer header result expected \"\" but got \"http://w3c-test.org/beacon/headers/header-referrer-no-referrer-when-downgrade.https.html\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/beacon/headers/header-referrer-no-referrer.html",
+      "subtests": [
+        {
+          "name": "Test referer header /beacon/resources/",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/beacon/headers/header-referrer-origin-when-cross-origin.html",
+      "subtests": [
+        {
+          "name": "Test referer header http://w3c-test.org:80/beacon/resources/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test referer header http://www1.w3c-test.org:80/beacon/resources/",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/beacon/headers/header-referrer-origin.html",
+      "subtests": [
+        {
+          "name": "Test referer header http://www1.w3c-test.org:80/beacon/resources/",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/beacon/headers/header-referrer-same-origin.html",
+      "subtests": [
+        {
+          "name": "Test referer header /beacon/resources/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test referer header http://www1.w3c-test.org:80/beacon/resources/",
+          "status": "FAIL",
+          "message": "assert_equals: Correct referrer header result expected \"\" but got \"http://w3c-test.org/beacon/headers/header-referrer-same-origin.html\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/beacon/headers/header-referrer-strict-origin-when-cross-origin.https.html",
+      "subtests": [
+        {
+          "name": "Test referer header https://w3c-test.org:443/beacon/resources/",
+          "status": "FAIL",
+          "message": "assert_equals: Correct referrer header result expected \"http://w3c-test.org/\" but got \"http://w3c-test.org/beacon/headers/header-referrer-strict-origin-when-cross-origin.https.html\""
+        },
+        {
+          "name": "Test referer header http://w3c-test.org:80/beacon/resources/",
+          "status": "FAIL",
+          "message": "assert_equals: Correct referrer header result expected \"\" but got \"http://w3c-test.org/beacon/headers/header-referrer-strict-origin-when-cross-origin.https.html\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/beacon/headers/header-referrer-strict-origin.https.html",
+      "subtests": [
+        {
+          "name": "Test referer header https://w3c-test.org:443/beacon/resources/",
+          "status": "FAIL",
+          "message": "assert_equals: Correct referrer header result expected \"http://w3c-test.org/\" but got \"http://w3c-test.org/beacon/headers/header-referrer-strict-origin.https.html\""
+        },
+        {
+          "name": "Test referer header http://w3c-test.org:80/beacon/resources/",
+          "status": "FAIL",
+          "message": "assert_equals: Correct referrer header result expected \"\" but got \"http://w3c-test.org/beacon/headers/header-referrer-strict-origin.https.html\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/beacon/headers/header-referrer-unsafe-url.https.html",
+      "subtests": [
+        {
+          "name": "Test referer header http://w3c-test.org:80/beacon/resources/",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

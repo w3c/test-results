@@ -1,0 +1,1917 @@
+{
+  "results": [
+    {
+      "test": "/cors/304.htm",
+      "subtests": [
+        {
+          "name": "A 304 response with no CORS headers inherits from the stored response",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "A 304 can expand Access-Control-Expose-Headers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "A 304 can contract Access-Control-Expose-Headers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "A 304 can change Access-Control-Allow-Origin",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/allow-headers.htm",
+      "subtests": [
+        {
+          "name": "Allow origin: *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: _*__",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: [tab]*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: _http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: _http://web-platform.test:8000___[tab]_",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: [tab]http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: //web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ftp://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:/web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000?",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000 /",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000#",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000%23",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000:80",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000, *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000\\0",
+          "status": "FAIL",
+          "message": "assert_throws: send function \"function () { client.send() }\" did not throw"
+        },
+        {
+          "name": "Disallow origin: HTTP://WEB-PLATFORM.TEST:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: HTTP://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: -",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: **",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0*",
+          "status": "FAIL",
+          "message": "assert_throws: send function \"function () { client.send() }\" did not throw"
+        },
+        {
+          "name": "Disallow origin: *\\0",
+          "status": "FAIL",
+          "message": "assert_throws: send function \"function () { client.send() }\" did not throw"
+        },
+        {
+          "name": "Disallow origin: '*'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \"*\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *, http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0http://web-platform.test:8000",
+          "status": "FAIL",
+          "message": "assert_throws: send function \"function () { client.send() }\" did not throw"
+        },
+        {
+          "name": "Disallow origin: null http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://example.net",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000/cors/allow-headers.htm",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000/cors/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000/cors/",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/basic.htm",
+      "subtests": [
+        {
+          "name": "Same domain basic usage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Cross domain basic usage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Same domain different port",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Cross domain different port",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Cross domain different protocol",
+          "status": "FAIL",
+          "message": "assert_true: Got CORS-allowed response expected true got false"
+        },
+        {
+          "name": "Same domain different protocol different port",
+          "status": "FAIL",
+          "message": "assert_true: Got CORS-allowed response expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/credentials-flag.htm",
+      "subtests": [
+        {
+          "name": "Setting withCredentials on a sync XHR object should not throw",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't send cookie by default",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't send cookie part 2",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't obey Set-Cookie when withCredentials=false",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: TRUE should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: True should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: \"true\" should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: false should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: 1 should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Access-Control-Allow-Credentials: 0 should be disallowed (async)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/late-upload-events.htm",
+      "subtests": [
+        {
+          "name": "Late listeners: No preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Late listeners: Preflight",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/origin.htm",
+      "subtests": [
+        {
+          "name": "Allow origin: *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: _*__",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: [tab]*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: _http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: _http://web-platform.test:8000___[tab]_",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: [tab]http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: //web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ftp://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:/web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000?",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000 /",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000#",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000%23",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000:80",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000, *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000\\0",
+          "status": "FAIL",
+          "message": "assert_throws: send function \"function () { client.send() }\" did not throw"
+        },
+        {
+          "name": "Disallow origin: HTTP://WEB-PLATFORM.TEST:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: HTTP://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: -",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: **",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0*",
+          "status": "FAIL",
+          "message": "assert_throws: send function \"function () { client.send() }\" did not throw"
+        },
+        {
+          "name": "Disallow origin: *\\0",
+          "status": "FAIL",
+          "message": "assert_throws: send function \"function () { client.send() }\" did not throw"
+        },
+        {
+          "name": "Disallow origin: '*'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \"*\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: * http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *, http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0http://web-platform.test:8000",
+          "status": "FAIL",
+          "message": "assert_throws: send function \"function () { client.send() }\" did not throw"
+        },
+        {
+          "name": "Disallow origin: null http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://example.net",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: null *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000/cors/origin.htm",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000/cors/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000/cors/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: .test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://*.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (, *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (*, )",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (*, *)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (, http://web-platform.test:8000)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (*, http://web-platform.test:8000)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow multiple headers (http://web-platform.test:8000, http://web-platform.test:8000)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/preflight-cache.htm",
+      "subtests": [
+        {
+          "name": "Test preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "preflight for x-print should be cached",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "age = 0, should not be cached",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "age = -1, should not be cached",
+          "status": "FAIL",
+          "message": "assert_equals: did preflight expected \"1\" but got \"0\""
+        },
+        {
+          "name": "preflight first request, second from cache, wait, third should preflight again",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/preflight-failure.htm",
+      "subtests": [
+        {
+          "name": "Should throw error if preflight respond with 100",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 101",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 200",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 300",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 301",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 302",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 303",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 304",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 305",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 306",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 307",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 308",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 400",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 401",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 402",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 403",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 404",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 405",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 406",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 407",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 408",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 409",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 410",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 411",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 412",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 413",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 414",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 415",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 416",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 417",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 500",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 501",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 502",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 503",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 504",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should throw error if preflight respond with 505",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/redirect-origin.htm",
+      "subtests": [
+        {
+          "name": "local (*) to remote (*), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (*) to remote (http://web-platform.test:8000), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (*) to remote (null), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (*) to remote (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (http://web-platform.test:8000) to remote (*), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (http://web-platform.test:8000) to remote (http://web-platform.test:8000), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (http://web-platform.test:8000) to remote (null), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (http://web-platform.test:8000) to remote (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (null) to remote (*), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "local (none) to remote (*), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to local (*), expect origin=null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to local (http://web-platform.test:8000), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to local (null), expect origin=null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to local (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to local (*), expect origin=null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to local (http://web-platform.test:8000), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to local (null), expect origin=null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to local (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (null) to local (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (none) to local (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote (*), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote (http://web-platform.test:8000), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote (null), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to remote (*), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to remote (http://web-platform.test:8000), expect origin=http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to remote (null), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to remote (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (null) to remote (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (none) to remote (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote2 (*), expect origin=null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote2 (http://web-platform.test:8000), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote2 (null), expect origin=null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote2 (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to remote2 (*), expect origin=null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to remote2 (http://web-platform.test:8000), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to remote2 (null), expect origin=null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://web-platform.test:8000) to remote2 (none), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (null) to remote2 (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (none) to remote2 (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote (http://www1.web-platform.test:8000), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (*) to remote2 (http://www1.web-platform.test:8000), expect to fail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "remote (http://www1.web-platform.test:8000) to remote (*), expect to fail",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/redirect-preflight-2.htm",
+      "subtests": [
+        {
+          "name": "Same-origin custom-header request, redirect to cross-origin fails after doing a non-successful preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Same-origin custom-header request, redirect to cross-origin succeeds after doing a preflight",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/redirect-preflight.htm",
+      "subtests": [
+        {
+          "name": "Should allow redirect 301 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should allow redirect 302 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should allow redirect 303 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should allow redirect 307 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Should allow redirect 308 after succesful (200) preflight",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/redirect-userinfo.htm",
+      "subtests": [
+        {
+          "name": "Disallow redirect with userinfo (//user:pass@)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect with userinfo (//user:@)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect with userinfo (//user@)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow redirect with userinfo (//:@)",
+          "status": "FAIL",
+          "message": "assert_false: Got response expected false got true"
+        },
+        {
+          "name": "Disallow redirect with userinfo (//:pass@)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow redirect with userinfo (//@)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/remote-origin.htm",
+      "subtests": [
+        {
+          "name": "Allow origin: *",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: _*__",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: [tab]*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: http://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: _http://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: _http://www1.web-platform.test:8000___[tab]_",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Allow origin: [tab]http://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: //www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ftp://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:/www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http:www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000?",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000_/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000#",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000%23",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000:80",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000,_*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000\\0",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"error\" but got \"load\""
+        },
+        {
+          "name": "Disallow origin: HTTP://WWW1.WEB-PLATFORM.TEST:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: HTTP://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://WWW1.WEB-PLATFORM.TEST:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: -",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: **",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0*",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"error\" but got \"load\""
+        },
+        {
+          "name": "Disallow origin: *\\0",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"error\" but got \"load\""
+        },
+        {
+          "name": "Disallow origin: '*'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \"*\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *_*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://*",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *http://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *_http://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: *,_http://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: \\0http://www1.web-platform.test:8000",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"error\" but got \"load\""
+        },
+        {
+          "name": "Disallow origin: null_http://www1.web-platform.test:8000",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://example.net",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: ",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000/cors/remote-origin.htm",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://web-platform.test:8000/cors/",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Disallow origin: http://www1.web-platform.test:8000/cors/",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/request-headers.htm",
+      "subtests": [
+        {
+          "name": "basic request header",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Simple request headers need not be in allow-headers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unspecified request headers are disallowed",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Strange allowheaders (case insensitive)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "INVALID_STATE_ERR on setRequestHeader before open()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "INVALID_STATE_ERR on setRequestHeader after send()",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/response-headers.htm",
+      "subtests": [
+        {
+          "name": "getResponseHeader: Expose Access-Control-Expose-Headers (x-custom-header-comma)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Expose second Access-Control-Expose-Headers (x-second-expose)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Don't trim whitespace",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: x-custom-header bytes",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Exposed server field readable (Date)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Cache-Control: readable by default",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Content-Language: readable by default",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Expires: readable by default",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Last-Modified: readable by default",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Pragma: readable by default",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Server: unreadable by default",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: X-Powered-By: unreadable by default",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponseHeader: Combined testing of cors response headers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getResponse: don't expose x-nonexposed",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "getAllResponseHeaders: don't expose x-nonexposed",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/simple-requests.htm",
+      "subtests": [
+        {
+          "name": "No preflight GET and {\"Accept\":\"test\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight HEAD and {\"Accept\":\"test\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight POST and {\"Accept\":\"test\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight GET and {\"accept-language\":\"test\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight HEAD and {\"accept-language\":\"test\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight POST and {\"accept-language\":\"test\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight GET and {\"CONTENT-language\":\"test\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight HEAD and {\"CONTENT-language\":\"test\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight POST and {\"CONTENT-language\":\"test\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight GET and {\"Content-Type\":\"application/x-www-form-urlencoded\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight HEAD and {\"Content-Type\":\"application/x-www-form-urlencoded\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight POST and {\"Content-Type\":\"application/x-www-form-urlencoded\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight GET and {\"content-type\":\"multipart/form-data\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight HEAD and {\"content-type\":\"multipart/form-data\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight POST and {\"content-type\":\"multipart/form-data\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight GET and {\"content-type\":\"text/plain\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight HEAD and {\"content-type\":\"text/plain\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight POST and {\"content-type\":\"text/plain\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight GET and {\"accept\":\"test\",\"accept-language\":\"test\",\"content-language\":\"test\",\"content-type\":\"text/plain; parameter=whatever\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight HEAD and {\"accept\":\"test\",\"accept-language\":\"test\",\"content-language\":\"test\",\"content-type\":\"text/plain; parameter=whatever\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight POST and {\"accept\":\"test\",\"accept-language\":\"test\",\"content-language\":\"test\",\"content-type\":\"text/plain; parameter=whatever\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight Get and {\"content-type\":\"text/plain; parameter=extra_bonus\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "No preflight post and {\"content-type\":\"text/plain\"}",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check simple headers (async)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/status-async.htm",
+      "subtests": [
+        {
+          "name": "Status on GET 200",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 201",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 202",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 203",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 204",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 205",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 206",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 209",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 299",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on POST 200",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on HEAD 200",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on PUT 200",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on CHICKEN 200",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 400",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on HEAD 401",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on POST 404",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on POST 500",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on PUT 699",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on CHICKEN 501",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on GET 400 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on HEAD 401 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on POST 404 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on PUT 699 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Status on CHICKEN 501 (nonsimple)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/status-preflight.htm",
+      "subtests": [
+        {
+          "name": "CORS - status after preflight on GET 200",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on GET 204",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on GET 400",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on GET 401",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 200",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 204",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 400",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 401",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 501",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on HEAD 699",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on POST 204",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on POST 400",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on POST 401",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on POST 404",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on PUT 699",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "CORS - status after preflight on CHICKEN 501",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/cors/status.htm",
+      "subtests": [
+        {
+          "name": "1. CORS disallowed, response status 400.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "2. CORS disallowed, preflight status 200.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "3. CORS allowed, response status 400.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "4. CORS allowed, preflight status 200, response status 400.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "5. CORS allowed, preflight status 400.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

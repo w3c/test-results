@@ -11,9 +11,11 @@ Index of implementations tested
 ===============================
 
 * RI - Reference Implementation
+  * Github: https://github.com/w3c/web-platform-tests/blob/master/annotation-protocol/tools/protocol-server.py
 * CC - Conquering Corsairs (MangoServer)
   * Github:  https://github.com/azaroth42/MangoServer
 * DI - Digirati.co.uk Implementation 
+  * Github: https://github.com/dlcs/elucidate-server
 
 Adding new results
 ==================
