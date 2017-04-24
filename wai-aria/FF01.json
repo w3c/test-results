@@ -7,6 +7,11 @@
           "name": "alertdialog modal false",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "alertdialog modal false 1",
+          "status": "FAIL",
+          "message": "assert_false: SKIPPED: No assertion for API ATK expected false got true"
         }
       ],
       "status": "OK",
@@ -19,6 +24,11 @@
           "name": "alertdialog modal true",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "alertdialog modal true 1",
+          "status": "FAIL",
+          "message": "assert_false: SKIPPED: No assertion for API ATK expected false got true"
         }
       ],
       "status": "OK",
@@ -29,13 +39,30 @@
       "subtests": [
         {
           "name": "application activedescendant",
-          "status": "FAIL",
-          "message": "assert_true: \"event type is object:state-change:focused\" failed ;  expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "application activedescendant 1",
           "status": "FAIL",
-          "message": "assert_true: \"property states contains STATE_FOCUSED\" failed ; \"property states contains STATE_FOCUSABLE\" failed ; \"event type is object:state-change:focused\" failed ;  expected true got false"
+          "message": "assert_true: \"property states contains STATE_FOCUSABLE\" failed https://bugzil.la/1359045;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/application_activedescendant_value_changes-manual.html",
+      "subtests": [
+        {
+          "name": "application activedescendant value changes",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "application activedescendant value changes 1",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_FOCUSABLE\" failed https://bugzil.la/1359045;  expected true got false"
         }
       ],
       "status": "OK",
@@ -48,6 +75,18 @@
           "name": "aria-current not declared",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/aria-current_with_value_changes-manual.html",
+      "subtests": [
+        {
+          "name": "aria-current with value changes",
+          "status": "FAIL",
+          "message": "assert_true: \"event type is object:state-changed:active\" failed https://bugzil.la/1355921;  expected true got false"
         }
       ],
       "status": "OK",
@@ -143,12 +182,12 @@
         {
           "name": "aria-details pointing to details element",
           "status": "FAIL",
-          "message": "assert_true: \"relation RELATION_DETAILS is details\" failed ;  expected true got false"
+          "message": "assert_true: \"relation RELATION_DETAILS is details\" failed https://bugzilla.gnome.org/show_bug.cgi?id=781591;  expected true got false"
         },
         {
           "name": "aria-details pointing to details element 1",
           "status": "FAIL",
-          "message": "assert_true: \"relation RELATION_DETAILS_FOR is test\" failed ;  expected true got false"
+          "message": "assert_true: \"relation RELATION_DETAILS_FOR is test\" failed https://bugzilla.gnome.org/show_bug.cgi?id=781591;  expected true got false"
         }
       ],
       "status": "OK",
@@ -160,12 +199,12 @@
         {
           "name": "aria-details pointing to div element",
           "status": "FAIL",
-          "message": "assert_true: \"relation RELATION_DETAILS is details\" failed ;  expected true got false"
+          "message": "assert_true: \"relation RELATION_DETAILS is details\" failed https://bugzilla.gnome.org/show_bug.cgi?id=781591;  expected true got false"
         },
         {
           "name": "aria-details pointing to div element 1",
           "status": "FAIL",
-          "message": "assert_true: \"relation RELATION_DETAILS_FOR is test\" failed ;  expected true got false"
+          "message": "assert_true: \"relation RELATION_DETAILS_FOR is test\" failed https://bugzilla.gnome.org/show_bug.cgi?id=781591;  expected true got false"
         }
       ],
       "status": "OK",
@@ -178,6 +217,18 @@
           "name": "article in feed posinset and setsize",
           "status": "FAIL",
           "message": "assert_true: \"property role is ROLE_ARTICLE\" failed https://bugzil.la/1305446;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/article_in_feed_setsize_-1-manual.html",
+      "subtests": [
+        {
+          "name": "article in feed setsize -1",
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_ARTICLE\" failed https://bugzil.la/1305446; \"property objectAttributes contains setsize:-1\" failed https://bugzil.la/1358473;  expected true got false"
         }
       ],
       "status": "OK",
@@ -352,6 +403,23 @@
       "message": null
     },
     {
+      "test": "/wai-aria/aria11/cell-manual.html",
+      "subtests": [
+        {
+          "name": "cell",
+          "status": "FAIL",
+          "message": "assert_true: \"result atk_table_get_n_columns() is 8\" failed https://bugzil.la/1356997;  expected true got false"
+        },
+        {
+          "name": "cell 1",
+          "status": "FAIL",
+          "message": "assert_true: \"result atk_table_cell_get_position() contains column=3\" failed https://bugzil.la/1357188;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/wai-aria/aria11/cell_aria-colspan_2_on_div-manual.html",
       "subtests": [
         {
@@ -368,6 +436,18 @@
       "subtests": [
         {
           "name": "cell aria-colspan 2 on td html colspan 3",
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes doesNotContain colspan:2\" failed https://bugzil.la/1357153;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/cell_aria-colspan_2_on_td_html_colspan_3_with_headers_and_border-manual.html",
+      "subtests": [
+        {
+          "name": "cell aria-colspan 2 on td html colspan 3 with headers and border",
           "status": "FAIL",
           "message": "assert_true: \"property objectAttributes doesNotContain colspan:2\" failed https://bugzil.la/1357153;  expected true got false"
         }
@@ -465,7 +545,7 @@
         {
           "name": "checkbox readonly true",
           "status": "FAIL",
-          "message": "assert_true: \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+          "message": "assert_true: \"property states doesNotContain STATE_CHECKABLE\" failed https://bugzil.la/1356018; \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
         }
       ],
       "status": "OK",
@@ -717,12 +797,36 @@
       "message": null
     },
     {
+      "test": "/wai-aria/aria11/combobox_orientation_horizontal-manual.html",
+      "subtests": [
+        {
+          "name": "combobox orientation horizontal",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/wai-aria/aria11/combobox_orientation_unspecified-manual.html",
       "subtests": [
         {
           "name": "combobox orientation unspecified",
           "status": "FAIL",
           "message": "assert_true: \"property states doesNotContain STATE_VERTICAL\" failed https://bugzil.la/1357042;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/combobox_orientation_vertical-manual.html",
+      "subtests": [
+        {
+          "name": "combobox orientation vertical",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -771,6 +875,11 @@
           "name": "dialog modal false",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "dialog modal false 1",
+          "status": "FAIL",
+          "message": "assert_false: SKIPPED: No assertion for API ATK expected false got true"
         }
       ],
       "status": "OK",
@@ -781,6 +890,40 @@
       "subtests": [
         {
           "name": "dialog modal true",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "dialog modal true 1",
+          "status": "FAIL",
+          "message": "assert_false: SKIPPED: No assertion for API ATK expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/dialog_modal_unspecified-manual.html",
+      "subtests": [
+        {
+          "name": "dialog modal unspecified",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "dialog modal unspecified 1",
+          "status": "FAIL",
+          "message": "assert_false: SKIPPED: No assertion for API ATK expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/div_element_without_role_roledescription_valid-manual.html",
+      "subtests": [
+        {
+          "name": "div element without role roledescription valid",
           "status": "PASS",
           "message": null
         }
@@ -794,12 +937,12 @@
         {
           "name": "errormessage object in invalid state",
           "status": "FAIL",
-          "message": "assert_true: \"relation RELATION_ERROR_MESSAGE exists false\" failed ;  expected true got false"
+          "message": "assert_true: \"relation RELATION_ERROR_MESSAGE exists false\" failed https://bugzilla.gnome.org/show_bug.cgi?id=781587;  expected true got false"
         },
         {
           "name": "errormessage object in invalid state 1",
           "status": "FAIL",
-          "message": "assert_true: \"relation RELATION_ERROR_FOR exists false\" failed ;  expected true got false"
+          "message": "assert_true: \"relation RELATION_ERROR_FOR exists false\" failed https://bugzilla.gnome.org/show_bug.cgi?id=781587;  expected true got false"
         }
       ],
       "status": "OK",
@@ -811,12 +954,12 @@
         {
           "name": "errormessage object in valid state",
           "status": "FAIL",
-          "message": "assert_true: \"relation RELATION_ERROR_MESSAGE is error\" failed ;  expected true got false"
+          "message": "assert_true: \"relation RELATION_ERROR_MESSAGE is error\" failed https://bugzilla.gnome.org/show_bug.cgi?id=781587;  expected true got false"
         },
         {
           "name": "errormessage object in valid state 1",
           "status": "FAIL",
-          "message": "assert_true: \"relation RELATION_ERROR_FOR is test\" failed ;  expected true got false"
+          "message": "assert_true: \"relation RELATION_ERROR_FOR is test\" failed https://bugzilla.gnome.org/show_bug.cgi?id=781587;  expected true got false"
         }
       ],
       "status": "OK",
@@ -847,6 +990,50 @@
       "message": null
     },
     {
+      "test": "/wai-aria/aria11/grid_aria-readonly_false_automatically_propagated-manual.html",
+      "subtests": [
+        {
+          "name": "grid aria-readonly false automatically propagated",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "grid aria-readonly false automatically propagated 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "grid aria-readonly false automatically propagated 2",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/grid_aria-readonly_true_automatically_propagated-manual.html",
+      "subtests": [
+        {
+          "name": "grid aria-readonly true automatically propagated",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+        },
+        {
+          "name": "grid aria-readonly true automatically propagated 1",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+        },
+        {
+          "name": "grid aria-readonly true automatically propagated 2",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/wai-aria/aria11/grid_busy_false-manual.html",
       "subtests": [
         {
@@ -863,6 +1050,18 @@
       "subtests": [
         {
           "name": "grid busy true",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/grid_busy_value_changes-manual.html",
+      "subtests": [
+        {
+          "name": "grid busy value changes",
           "status": "PASS",
           "message": null
         }
@@ -1087,12 +1286,48 @@
       "message": null
     },
     {
+      "test": "/wai-aria/aria11/group_hidden_undefined_element_not_rendered-manual.html",
+      "subtests": [
+        {
+          "name": "group hidden undefined element not rendered",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/group_hidden_undefined_element_rendered-manual.html",
+      "subtests": [
+        {
+          "name": "group hidden undefined element rendered",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/wai-aria/aria11/heading_level_unspecified-manual.html",
       "subtests": [
         {
           "name": "heading level unspecified",
           "status": "FAIL",
           "message": "assert_true: \"property objectAttributes contains level:2\" failed https://bugzil.la/1357100;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/keyshortcuts_multiple_shortcuts-manual.html",
+      "subtests": [
+        {
+          "name": "keyshortcuts multiple shortcuts",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1127,6 +1362,42 @@
       "subtests": [
         {
           "name": "listbox busy true",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/listbox_orientation_horizontal-manual.html",
+      "subtests": [
+        {
+          "name": "listbox orientation horizontal",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/listbox_orientation_unspecified-manual.html",
+      "subtests": [
+        {
+          "name": "listbox orientation unspecified",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/listbox_orientation_vertical-manual.html",
+      "subtests": [
+        {
+          "name": "listbox orientation vertical",
           "status": "PASS",
           "message": null
         }
@@ -1171,10 +1442,34 @@
       "message": null
     },
     {
+      "test": "/wai-aria/aria11/listitem_setsize_-1-manual.html",
+      "subtests": [
+        {
+          "name": "listitem setsize -1",
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains setsize:-1\" failed https://bugzil.la/1358473;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/wai-aria/aria11/menu_orientation_horizontal-manual.html",
       "subtests": [
         {
           "name": "menu orientation horizontal",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/menu_orientation_unspecified-manual.html",
+      "subtests": [
+        {
+          "name": "menu orientation unspecified",
           "status": "PASS",
           "message": null
         }
@@ -1315,6 +1610,18 @@
       "message": null
     },
     {
+      "test": "/wai-aria/aria11/menuitemradio_posinset_and_setsize-manual.html",
+      "subtests": [
+        {
+          "name": "menuitemradio posinset and setsize",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/wai-aria/aria11/menuitemradio_readonly_false-manual.html",
       "subtests": [
         {
@@ -1332,7 +1639,7 @@
         {
           "name": "menuitemradio readonly true",
           "status": "FAIL",
-          "message": "assert_true: \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+          "message": "assert_true: \"property states doesNotContain STATE_CHECKABLE\" failed https://bugzil.la/1356018; \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1403,18 +1710,18 @@
       "subtests": [
         {
           "name": "option selected value changes",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"[object Object]\""
         },
         {
           "name": "option selected value changes 1",
           "status": "FAIL",
-          "message": "assert_false: SKIPPED: No assertion for API ATK expected false got true"
+          "message": "promise_test: Unhandled rejection with value: object \"[object Object]\""
         },
         {
           "name": "option selected value changes 2",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"[object Object]\""
         }
       ],
       "status": "OK",
@@ -1457,12 +1764,60 @@
       "message": null
     },
     {
+      "test": "/wai-aria/aria11/radiogroup_readonly_false-manual.html",
+      "subtests": [
+        {
+          "name": "radiogroup readonly false",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/radiogroup_readonly_true-manual.html",
+      "subtests": [
+        {
+          "name": "radiogroup readonly true",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/radiogroup_readonly_unspecified-manual.html",
+      "subtests": [
+        {
+          "name": "radiogroup readonly unspecified",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/wai-aria/aria11/region_with_name-manual.html",
       "subtests": [
         {
           "name": "region with name",
           "status": "FAIL",
           "message": "assert_true: \"property role is ROLE_LANDMARK\" failed https://bugzil.la/1210630;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/region_without_name-manual.html",
+      "subtests": [
+        {
+          "name": "region without name",
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SECTION\" failed https://bugzil.la/1358462;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1623,6 +1978,40 @@
       "message": null
     },
     {
+      "test": "/wai-aria/aria11/searchbox_activedescendant-manual.html",
+      "subtests": [
+        {
+          "name": "searchbox activedescendant",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "searchbox activedescendant 1",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_FOCUSABLE\" failed https://bugzil.la/1359045;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/searchbox_activedescendant_value_changes-manual.html",
+      "subtests": [
+        {
+          "name": "searchbox activedescendant value changes",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "searchbox activedescendant value changes 1",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_FOCUSABLE\" failed https://bugzil.la/1359045;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/wai-aria/aria11/searchbox_autocomplete_both-manual.html",
       "subtests": [
         {
@@ -1711,6 +2100,90 @@
       "subtests": [
         {
           "name": "searchbox multiline unspecified",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/searchbox_placeholder-manual.html",
+      "subtests": [
+        {
+          "name": "searchbox placeholder",
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed https://bugzil.la/1303429;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/searchbox_readonly_false-manual.html",
+      "subtests": [
+        {
+          "name": "searchbox readonly false",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/searchbox_readonly_true-manual.html",
+      "subtests": [
+        {
+          "name": "searchbox readonly true",
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces doesNotContain EditableText\" failed https://bugzil.la/1356018; \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/searchbox_readonly_unspecified-manual.html",
+      "subtests": [
+        {
+          "name": "searchbox readonly unspecified",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/searchbox_required_false-manual.html",
+      "subtests": [
+        {
+          "name": "searchbox required false",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/searchbox_required_true-manual.html",
+      "subtests": [
+        {
+          "name": "searchbox required true",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/searchbox_required_unspecified-manual.html",
+      "subtests": [
+        {
+          "name": "searchbox required unspecified",
           "status": "PASS",
           "message": null
         }
@@ -1827,6 +2300,42 @@
       "message": null
     },
     {
+      "test": "/wai-aria/aria11/slider_readonly_false-manual.html",
+      "subtests": [
+        {
+          "name": "slider readonly false",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/slider_readonly_true-manual.html",
+      "subtests": [
+        {
+          "name": "slider readonly true",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/slider_readonly_unspecified-manual.html",
+      "subtests": [
+        {
+          "name": "slider readonly unspecified",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/wai-aria/aria11/spinbutton_all_values_unspecified-manual.html",
       "subtests": [
         {
@@ -1851,10 +2360,34 @@
       "message": null
     },
     {
-      "test": "/wai-aria/aria11/status_(no_test_needed)-manual.html",
+      "test": "/wai-aria/aria11/spinbutton_readonly_false-manual.html",
       "subtests": [
         {
-          "name": "status (NO TEST NEEDED)",
+          "name": "spinbutton readonly false",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/spinbutton_readonly_true-manual.html",
+      "subtests": [
+        {
+          "name": "spinbutton readonly true",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/spinbutton_readonly_unspecified-manual.html",
+      "subtests": [
+        {
+          "name": "spinbutton readonly unspecified",
           "status": "PASS",
           "message": null
         }
@@ -1867,6 +2400,90 @@
       "subtests": [
         {
           "name": "switch checked false",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/switch_checked_mixed-manual.html",
+      "subtests": [
+        {
+          "name": "switch checked mixed",
+          "status": "FAIL",
+          "message": "assert_true: \"property states doesNotContain STATE_CHECKED\" failed https://bugzil.la/1358447;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/switch_checked_true-manual.html",
+      "subtests": [
+        {
+          "name": "switch checked true",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/switch_checked_undefined-manual.html",
+      "subtests": [
+        {
+          "name": "switch checked undefined",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/switch_checked_value_changes-manual.html",
+      "subtests": [
+        {
+          "name": "switch checked value changes",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/switch_readonly_false-manual.html",
+      "subtests": [
+        {
+          "name": "switch readonly false",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/switch_readonly_true-manual.html",
+      "subtests": [
+        {
+          "name": "switch readonly true",
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains STATE_READ_ONLY\" failed https://bugzil.la/1356018;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/switch_readonly_unspecified-manual.html",
+      "subtests": [
+        {
+          "name": "switch readonly unspecified",
           "status": "PASS",
           "message": null
         }
@@ -1891,8 +2508,8 @@
       "subtests": [
         {
           "name": "table colcount -1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"result atk_table_get_n_columns() is -1\" failed https://bugzil.la/1356997;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1915,8 +2532,8 @@
       "subtests": [
         {
           "name": "table rowcount -1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"result atk_table_get_n_rows() is -1\" failed https://bugzil.la/1356997;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1965,6 +2582,18 @@
           "name": "tablist orientation vertical",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/wai-aria/aria11/term_role-manual.html",
+      "subtests": [
+        {
+          "name": "term role",
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_DESCRIPTION_TERM\" failed https://bugzil.la/1358417;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2160,8 +2789,8 @@
         },
         {
           "name": "treeitem selected value changes 1",
-          "status": "FAIL",
-          "message": "assert_false: SKIPPED: No assertion for API ATK expected false got true"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "treeitem selected value changes 2",
