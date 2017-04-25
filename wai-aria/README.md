@@ -31,6 +31,14 @@ Index of implementations in reports
   * email: jdiggs@igalia.com
   * link: https://webkitgtk.org
 
+* WK02 - WebKit on OS X using AXAPI
+  * email: jdiggs@igalia.com
+  * link: https://webkit.org
+
+* GC02 - Chrome on OS X using AXAPI
+  * email: jdiggs@igalia.com
+  * line: https://www.google.com/chrome/
+
 Adding new results
 ==================
 
