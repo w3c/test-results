@@ -1,0 +1,356 @@
+{
+  "results": [
+    {
+      "test": "/page-visibility/idlharness.html",
+      "subtests": [
+        {
+          "name": "Document interface: attribute hidden",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Document interface: attribute visibilityState",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Document interface: attribute onvisibilitychange",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onvisibilitychange\" expected true got false"
+        },
+        {
+          "name": "Document must be primary interface of window.document",
+          "status": "FAIL",
+          "message": "assert_equals: window.document's prototype is not Document.prototype expected object \"[object DocumentPrototype]\" but got object \"[object HTMLDocumentPrototype]\""
+        },
+        {
+          "name": "Stringification of window.document",
+          "status": "FAIL",
+          "message": "assert_equals: class string of window.document expected \"[object Document]\" but got \"[object HTMLDocument]\""
+        },
+        {
+          "name": "Document interface: window.document must inherit property \"hidden\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Document interface: window.document must inherit property \"visibilityState\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Document interface: window.document must inherit property \"onvisibilitychange\" with the proper type (2)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onvisibilitychange\" not found in prototype chain"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/prerender_call.html",
+      "subtests": [
+        {
+          "name": "VisibilityState of the target page was set to \"prerender\" when it has been prerendered",
+          "status": "FAIL",
+          "message": "assert_equals: visibilityState of the target page was set to 'prerender' expected (string) \"hit\" but got (object) null"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/test_attributes_exist.html",
+      "subtests": [
+        {
+          "name": "document.hidden is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is defined.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is defined.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/test_child_document.html",
+      "subtests": [
+        {
+          "name": "document.hidden is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Page Visibility API Child Document Test",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is defined for frame with no style attribute.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is defined for frame with no style attribute.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState for frame with no style attribute == visible",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Page Visibility API Child Document Test 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is defined for frame with 'display:none' style.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is defined for frame with 'display:none' style.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState for frame with 'display:none' style == visible",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Page Visibility API Child Document Test 2",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is defined for frame with 'visibility:hidden' style.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is defined for frame with 'visibility:hidden' style.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState for frame with 'visibility:hidden' style == visible",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/test_default_view.html",
+      "subtests": [
+        {
+          "name": "document.hidden is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "windowless subdocument generated for test has a null default view",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is definedwindowless subdocument.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is definedwindowless subdocument.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "hidden == true for windowless subdocuments with a null default view",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "visibilityState == hidden for windowless subdocuments with a null default view",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/test_read_only.html",
+      "subtests": [
+        {
+          "name": "document.hidden is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden is read only.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is read only.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/unload.html",
+      "subtests": [
+        {
+          "name": "visibilitychange fires on unload",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/test_minimize-manual.html",
+      "subtests": [
+        {
+          "name": "document.hidden is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState is defined and not null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Page is visible on load.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "All IFrame child documents are visible on load.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Browser minimization has occurred.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden == true (after browser frame minimization)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState == \"hidden\" (after browser frame minimization)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.getElementById(\"childDocShown\").contentDocument.hidden == true (after browser frame minimization)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.getElementById(\"childDocShown\").contentDocument.visibilityState == \"hidden\" (after browser frame minimization)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.getElementById(\"childDocHidden\").contentDocument.hidden == true (after browser frame minimization)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.getElementById(\"childDocHidden\").contentDocument.visibilityState == \"hidden\" (after browser frame minimization)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.hidden == false (after browser frame maximization / restoration)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.visibilityState == \"visible\" (after browser frame maximization / restoration)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Two registrations (different callbacks) occurred.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Two registrations (same callback) did not occur.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.getElementById(\"childDocShown\").contentDocument.hidden == false (after browser frame maximization / restoration)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.getElementById(\"childDocShown\").contentDocument.visibilityState == \"visible\" (after browser frame maximization / restoration)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.getElementById(\"childDocHidden\").contentDocument.hidden == false (after browser frame maximization / restoration)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "document.getElementById(\"childDocHidden\").contentDocument.visibilityState == \"visible\" (after browser frame maximization / restoration)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/page-visibility/test_tab_state_change-manual.html",
+      "subtests": [],
+      "status": "PASS",
+      "message": ""
+    }
+  ]
+}

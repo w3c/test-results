@@ -2,33 +2,97 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>Page Visibility: All Results</title>
+    <title>All Results</title>
     <link rel='stylesheet' href='bootstrap.min.css'>
     <link rel='stylesheet' href='analysis.css'>
   </head>
   <body>
     <div class='container'>
       <header>
-        <h1>Page Visibility: All Results</h1>
+        <h1>All Results</h1>
       </header>
-      <p><strong>Test files</strong>: 5; <strong>Total subtests</strong>: 0</p><h3>Per UA</h3>
-<dl><dt>UC10</dt>
-<dd>0/0 (NaN%)</dd>
-</dl>
+      <p><strong>Test files</strong>: 9; <strong>Total subtests</strong>: 59</p>
       <h3>Test Files</h3>
 <ol class='toc'><li><a href='#test-file-0'>/page-visibility/idlharness.html</a></li>
-<li><a href='#test-file-1'>/page-visibility/test_attributes_exist.html</a></li>
-<li><a href='#test-file-2'>/page-visibility/test_child_document.html</a></li>
-<li><a href='#test-file-3'>/page-visibility/test_default_view.html</a></li>
-<li><a href='#test-file-4'>/page-visibility/test_read_only.html</a></li>
+<li><a href='#test-file-1'>/page-visibility/prerender_call.html</a></li>
+<li><a href='#test-file-2'>/page-visibility/test_attributes_exist.html</a></li>
+<li><a href='#test-file-3'>/page-visibility/test_child_document.html</a></li>
+<li><a href='#test-file-4'>/page-visibility/test_default_view.html</a></li>
+<li><a href='#test-file-5'>/page-visibility/test_read_only.html</a></li>
+<li><a href='#test-file-6'>/page-visibility/unload.html</a></li>
+<li><a href='#test-file-7'>/page-visibility/test_minimize-manual.html</a></li>
+<li><a href='#test-file-8'>/page-visibility/test_tab_state_change-manual.html</a></li>
 </ol>
       <table class='table persist-area'>
-        <thead><tr class='persist-header'><th>Test</th><th>UC10</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/page-visibility/idlharness.html' target='_blank'>/page-visibility/idlharness.html</a></td><td class='OK'>OK</td></tr>
-<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/page-visibility/test_attributes_exist.html' target='_blank'>/page-visibility/test_attributes_exist.html</a></td><td class='OK'>OK</td></tr>
-<tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/page-visibility/test_child_document.html' target='_blank'>/page-visibility/test_child_document.html</a></td><td class='ERROR'>ERROR</td></tr>
-<tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/page-visibility/test_default_view.html' target='_blank'>/page-visibility/test_default_view.html</a></td><td class='OK'>OK</td></tr>
-<tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/page-visibility/test_read_only.html' target='_blank'>/page-visibility/test_read_only.html</a></td><td class='OK'>OK</td></tr>
+        <thead><tr class='persist-header'><th>Test</th><th>Ch60</th><th>Ff55</th><th>Sf10</th></tr></thead>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/page-visibility/idlharness.html' target='_blank'>/page-visibility/idlharness.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Document interface: attribute hidden</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Document interface: attribute visibilityState</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Document interface: attribute onvisibilitychange</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Document must be primary interface of window.document</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Stringification of window.document</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Document interface: window.document must inherit property "hidden" with the proper type (0)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Document interface: window.document must inherit property "visibilityState" with the proper type (1)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Document interface: window.document must inherit property "onvisibilitychange" with the proper type (2)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/page-visibility/prerender_call.html' target='_blank'>/page-visibility/prerender_call.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>VisibilityState of the target page was set to "prerender" when it has been prerendered</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/page-visibility/test_attributes_exist.html' target='_blank'>/page-visibility/test_attributes_exist.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>document.hidden is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.hidden is defined.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is defined.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/page-visibility/test_child_document.html' target='_blank'>/page-visibility/test_child_document.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>document.hidden is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Page Visibility API Child Document Test</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.hidden is defined for frame with no style attribute.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is defined for frame with no style attribute.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState for frame with no style attribute == visible</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Page Visibility API Child Document Test 1</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.hidden is defined for frame with 'display:none' style.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is defined for frame with 'display:none' style.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState for frame with 'display:none' style == visible</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Page Visibility API Child Document Test 2</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.hidden is defined for frame with 'visibility:hidden' style.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is defined for frame with 'visibility:hidden' style.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState for frame with 'visibility:hidden' style == visible</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/page-visibility/test_default_view.html' target='_blank'>/page-visibility/test_default_view.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>document.hidden is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>windowless subdocument generated for test has a null default view</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.hidden is definedwindowless subdocument.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is definedwindowless subdocument.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>hidden == true for windowless subdocuments with a null default view</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>visibilityState == hidden for windowless subdocuments with a null default view</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-5'><td><a href='http://www.w3c-test.org/page-visibility/test_read_only.html' target='_blank'>/page-visibility/test_read_only.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>document.hidden is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.hidden is read only.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is read only.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-6'><td><a href='http://www.w3c-test.org/page-visibility/unload.html' target='_blank'>/page-visibility/unload.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>visibilitychange fires on unload</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='Timeout'>Timeout</td></tr>
+<tr class='test' id='test-file-7'><td><a href='http://www.w3c-test.org/page-visibility/test_minimize-manual.html' target='_blank'>/page-visibility/test_minimize-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>document.hidden is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState is defined and not null.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Page is visible on load.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>All IFrame child documents are visible on load.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Browser minimization has occurred.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.hidden == true (after browser frame minimization)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState == "hidden" (after browser frame minimization)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.getElementById("childDocShown").contentDocument.hidden == true (after browser frame minimization)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.getElementById("childDocShown").contentDocument.visibilityState == "hidden" (after browser frame minimization)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.getElementById("childDocHidden").contentDocument.hidden == true (after browser frame minimization)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.getElementById("childDocHidden").contentDocument.visibilityState == "hidden" (after browser frame minimization)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.hidden == false (after browser frame maximization / restoration)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.visibilityState == "visible" (after browser frame maximization / restoration)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Two registrations (different callbacks) occurred.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Two registrations (same callback) did not occur.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.getElementById("childDocShown").contentDocument.hidden == false (after browser frame maximization / restoration)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.getElementById("childDocShown").contentDocument.visibilityState == "visible" (after browser frame maximization / restoration)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.getElementById("childDocHidden").contentDocument.hidden == false (after browser frame maximization / restoration)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>document.getElementById("childDocHidden").contentDocument.visibilityState == "visible" (after browser frame maximization / restoration)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-8'><td><a href='http://www.w3c-test.org/page-visibility/test_tab_state_change-manual.html' target='_blank'>/page-visibility/test_tab_state_change-manual.html</a></td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>/page-visibility/test_tab_state_change-manual.html</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 
       </table>
     </div>
