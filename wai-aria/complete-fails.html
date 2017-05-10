@@ -12,7 +12,7 @@
         <h1>WAI ARIA 1.1: Complete Failures</h1>
       </header>
       
-      <p><strong>Completely failed files</strong>: 42; <strong>Completely failed subtests</strong>: 15; <strong>Failure level</strong>: 15/248 (6.05%)</p>
+      <p><strong>Completely failed files</strong>: 40; <strong>Completely failed subtests</strong>: 14; <strong>Failure level</strong>: 14/248 (5.65%)</p>
       <h3>Test Files</h3>
 <ol class='toc'><li><a href='#test-file-0'>/wai-aria/application_activedescendant-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></li>
 <li><a href='#test-file-1'>/wai-aria/application_activedescendant_value_changes-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></li>
@@ -22,143 +22,251 @@
 <li><a href='#test-file-5'>/wai-aria/columnheader_aria-colspan_2_on_th_html_colspan_3-manual.html</a> <small>(1/1, 100.00%, 0.40% of total)</small></li>
 <li><a href='#test-file-6'>/wai-aria/errormessage_object_in_invalid_state-manual.html</a> <small>(2/2, 100.00%, 0.81% of total)</small></li>
 <li><a href='#test-file-7'>/wai-aria/errormessage_object_in_valid_state-manual.html</a> <small>(2/2, 100.00%, 0.81% of total)</small></li>
-<li><a href='#test-file-8'>/wai-aria/region_without_name-manual.html</a> <small>(1/1, 100.00%, 0.40% of total)</small></li>
-<li><a href='#test-file-9'>/wai-aria/searchbox_activedescendant-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></li>
-<li><a href='#test-file-10'>/wai-aria/searchbox_activedescendant_value_changes-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></li>
+<li><a href='#test-file-8'>/wai-aria/searchbox_activedescendant-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></li>
+<li><a href='#test-file-9'>/wai-aria/searchbox_activedescendant_value_changes-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></li>
 </ol>
       <table class='table persist-area'>
         <thead><tr class='persist-header'><th>Test <span class='message_toggle'>Show/Hide Messages</span></th><th>FF01</th><th>GC02</th><th>WK01</th><th>WK02</th></tr></thead>
 <tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/wai-aria/application_activedescendant-manual.html' target='_blank'>/wai-aria/application_activedescendant-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-2-1' class='subtest'><td>application activedescendant 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSABLE" failed Actual value: ['STATE_ENABLED', 'STATE_FOCUSED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT']
-https://bugzil.la/1359045: 1359045 - A container\'s active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed Actual value: false;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed Actual value: ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE']; "property states contains STATE_FOCUSABLE" failed Actual value: ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'];  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed Actual value: false; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed Actual value: false;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
+; "property states contains STATE_FOCUSABLE" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
+<a href="https://bugzil.la/1359045">https://bugzil.la/1359045</a>: [NEW] A container's active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
+<strong>Actual value:</strong> false <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
+; "property states contains STATE_FOCUSABLE" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed <br />
+<strong>Actual value:</strong> false <br />
+; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
+<strong>Actual value:</strong> false <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/wai-aria/application_activedescendant_value_changes-manual.html' target='_blank'>/wai-aria/application_activedescendant_value_changes-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-3-1' class='subtest'><td>application activedescendant value changes 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSABLE" failed Actual value: ['STATE_ENABLED', 'STATE_FOCUSED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT']
-https://bugzil.la/1359045: 1359045 - A container\'s active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed Actual value: false;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed Actual value: ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE']; "property states contains STATE_FOCUSABLE" failed Actual value: ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE']; "event type is object:state-changed:focused" failed ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed Actual value: false; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed Actual value: false; "event type is AXFocusedUIElementChanged" failed ;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
+; "property states contains STATE_FOCUSABLE" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
+<a href="https://bugzil.la/1359045">https://bugzil.la/1359045</a>: [NEW] A container's active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED <br />
+; "event type is object:state-changed:focused" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
+<strong>Actual value:</strong> false <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
+; "property states contains STATE_FOCUSABLE" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
+; "event type is object:state-changed:focused" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed <br />
+<strong>Actual value:</strong> false <br />
+; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
+<strong>Actual value:</strong> false <br />
+; "event type is AXFocusedUIElementChanged" failed <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-13'><td><a href='http://www.w3c-test.org/wai-aria/aria-details_pointing_to_details_element-manual.html' target='_blank'>/wai-aria/aria-details_pointing_to_details_element-manual.html</a> <small>(2/2, 100.00%, 0.81% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-13-0' class='subtest'><td>aria-details pointing to details element</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_DETAILS is details" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property TBD is TBD" failed ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_DETAILS is details" failed Actual value: None
-ERROR: Object not found
-https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property TBD is TBD" failed https://webkit.org/b/165842;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_DETAILS is details" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property TBD is TBD" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_DETAILS is details" failed <br />
+<strong>Actual value:</strong> None <br />
+ERROR: Object not found <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 â€“ Add details and details-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property TBD is TBD" failed <a href="https://webkit.org/b/165842">https://webkit.org/b/165842</a> <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr id='subtest-13-1' class='subtest'><td>aria-details pointing to details element 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_DETAILS_FOR is test" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_DETAILS_FOR is test" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_DETAILS_FOR is test" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_DETAILS_FOR is test" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 â€“ Add details and details-for relation types <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-14'><td><a href='http://www.w3c-test.org/wai-aria/aria-details_pointing_to_div_element-manual.html' target='_blank'>/wai-aria/aria-details_pointing_to_div_element-manual.html</a> <small>(2/2, 100.00%, 0.81% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-14-0' class='subtest'><td>aria-details pointing to div element</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_DETAILS is details" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property TBD is TBD" failed ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_DETAILS is details" failed Actual value: None
-ERROR: Object not found
-https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property TBD is TBD" failed https://webkit.org/b/165842;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_DETAILS is details" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property TBD is TBD" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_DETAILS is details" failed <br />
+<strong>Actual value:</strong> None <br />
+ERROR: Object not found <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 â€“ Add details and details-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property TBD is TBD" failed <a href="https://webkit.org/b/165842">https://webkit.org/b/165842</a> <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr id='subtest-14-1' class='subtest'><td>aria-details pointing to div element 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_DETAILS_FOR is test" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_DETAILS_FOR is test" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_DETAILS_FOR is test" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 – Add details and details-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_DETAILS_FOR is test" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781591: Bug 781591 â€“ Add details and details-for relation types <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-33'><td><a href='http://www.w3c-test.org/wai-aria/cell_aria-colspan_2_on_td_html_colspan_3-manual.html' target='_blank'>/wai-aria/cell_aria-colspan_2_on_td_html_colspan_3-manual.html</a> <small>(1/1, 100.00%, 0.40% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-33-0' class='subtest'><td>cell aria-colspan 2 on td html colspan 3</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes doesNotContain colspan:2" failed Actual value: ['display:table-cell', 'margin-bottom:0px', 'margin-top:0px', 'margin-right:0px', 'table-cell-index:0', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2']
-https://bugzil.la/1357153: 1357153 - Ignore aria-{row,col}span values when host language {row,col}span attribute is present;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXCell" failed Actual value: AXGroup; "property AXColumnIndexRange.length is 3" failed Actual value: None;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>cell<em>get</em>row<em>column</em>span() contains column<em>span=3" failed Actual value: (row=0, column=0, row</em>span=1, column_span=1)
-https://webkit.org/b/171165: 171165 – [ATK] Implement support for aria-rowspan and aria-colspan;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXColumnIndexRange.length is 3" failed Actual value: 1
-https://webkit.org/b/171178: 171178 – AX: Treat cells with ARIA table cell properties as cells;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes doesNotContain colspan:2" failed <br />
+<strong>Actual value:</strong> ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'table-cell-index:0', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2'] <br />
+<a href="https://bugzil.la/1357153">https://bugzil.la/1357153</a>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXCell" failed <br />
+<strong>Actual value:</strong> AXGroup <br />
+; "property AXColumnIndexRange.length is 3" failed <br />
+<strong>Actual value:</strong> None <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>cell<em>get</em>row<em>column</em>span() contains column_span=3" failed <br />
+<strong>Actual value:</strong> (row=0, column=0, row_span=1, column_span=1) <br />
+<a href="https://webkit.org/b/171165">https://webkit.org/b/171165</a>: [NEW] [ATK] atk_table_cell_get_row_column_span() should return values of aria-rowspan and aria-colspan, if present <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXColumnIndexRange.length is 3" failed <br />
+<strong>Actual value:</strong> 1 <br />
+<a href="https://webkit.org/b/171178">https://webkit.org/b/171178</a>: [RESOLVED FIXED] AX: Treat cells with ARIA table cell properties as cells <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-45'><td><a href='http://www.w3c-test.org/wai-aria/columnheader_aria-colspan_2_on_th_html_colspan_3-manual.html' target='_blank'>/wai-aria/columnheader_aria-colspan_2_on_th_html_colspan_3-manual.html</a> <small>(1/1, 100.00%, 0.40% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-45-0' class='subtest'><td>columnheader aria-colspan 2 on th html colspan 3</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes doesNotContain colspan:2" failed Actual value: ['display:table-cell', 'margin-bottom:0px', 'margin-top:0px', 'margin-right:0px', 'table-cell-index:0', 'tag:th', 'xml-roles:columnheader', 'id:test', 'text-indent:0px', 'text-align:center', 'margin-left:0px', 'colspan:2']
-https://bugzil.la/1357153: 1357153 - Ignore aria-{row,col}span values when host language {row,col}span attribute is present;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXColumnIndexRange.length is 3" failed Actual value: None;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>cell<em>get</em>row<em>column</em>span() contains column<em>span=3" failed Actual value: (row=0, column=0, row</em>span=1, column_span=1)
-https://webkit.org/b/171165: 171165 – [ATK] Implement support for aria-rowspan and aria-colspan;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXColumnIndexRange.length is 3" failed Actual value: 1
-https://webkit.org/b/171178: 171178 – AX: Treat cells with ARIA table cell properties as cells;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes doesNotContain colspan:2" failed <br />
+<strong>Actual value:</strong> ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:columnheader', 'table-cell-index:0', 'tag:th', 'id:test', 'text-indent:0px', 'text-align:center', 'margin-left:0px', 'colspan:2'] <br />
+<a href="https://bugzil.la/1357153">https://bugzil.la/1357153</a>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXColumnIndexRange.length is 3" failed <br />
+<strong>Actual value:</strong> None <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>cell<em>get</em>row<em>column</em>span() contains column_span=3" failed <br />
+<strong>Actual value:</strong> (row=0, column=0, row_span=1, column_span=1) <br />
+<a href="https://webkit.org/b/171165">https://webkit.org/b/171165</a>: [NEW] [ATK] atk_table_cell_get_row_column_span() should return values of aria-rowspan and aria-colspan, if present <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXColumnIndexRange.length is 3" failed <br />
+<strong>Actual value:</strong> 1 <br />
+<a href="https://webkit.org/b/171178">https://webkit.org/b/171178</a>: [RESOLVED FIXED] AX: Treat cells with ARIA table cell properties as cells <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-73'><td><a href='http://www.w3c-test.org/wai-aria/errormessage_object_in_invalid_state-manual.html' target='_blank'>/wai-aria/errormessage_object_in_invalid_state-manual.html</a> <small>(2/2, 100.00%, 0.81% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-73-0' class='subtest'><td>errormessage object in invalid state</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_ERROR_MESSAGE exists false" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property TBD is TBD" failed ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_ERROR_MESSAGE exists false" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property TBD is TBD" failed https://webkit.org/b/165190;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_ERROR_MESSAGE exists false" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property TBD is TBD" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_ERROR_MESSAGE exists false" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 â€“ Add error-message and error-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property TBD is TBD" failed <a href="https://webkit.org/b/165190">https://webkit.org/b/165190</a> <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr id='subtest-73-1' class='subtest'><td>errormessage object in invalid state 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_ERROR_FOR exists false" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_ERROR_FOR exists false" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_ERROR_FOR exists false" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_ERROR_FOR exists false" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 â€“ Add error-message and error-for relation types <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-74'><td><a href='http://www.w3c-test.org/wai-aria/errormessage_object_in_valid_state-manual.html' target='_blank'>/wai-aria/errormessage_object_in_valid_state-manual.html</a> <small>(2/2, 100.00%, 0.81% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-74-0' class='subtest'><td>errormessage object in valid state</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_ERROR_MESSAGE is error" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property TBD is TBD" failed ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_ERROR_MESSAGE is error" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property TBD is TBD" failed https://webkit.org/b/165190;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_ERROR_MESSAGE is error" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property TBD is TBD" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_ERROR_MESSAGE is error" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 â€“ Add error-message and error-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property TBD is TBD" failed <a href="https://webkit.org/b/165190">https://webkit.org/b/165190</a> <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr id='subtest-74-1' class='subtest'><td>errormessage object in valid state 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_ERROR_FOR is test" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_ERROR_FOR is test" failed Actual value: []
-https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types;  expected true got false</td></tr>
-</table></td></tr>
-<tr class='test' id='test-file-143'><td><a href='http://www.w3c-test.org/wai-aria/region_without_name-manual.html' target='_blank'>/wai-aria/region_without_name-manual.html</a> <small>(1/1, 100.00%, 0.40% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-143-0' class='subtest'><td>region without name</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property role is ROLE_SECTION" failed Actual value: ROLE_PANEL
-https://bugzil.la/1358462: 1358462 - Elements with role="region" and no accessible name should be mapped according to host language;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXSubrole is <nil>" failed Actual value: AXDocumentRegion; "property AXRoleDescription is group" failed Actual value: region;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property role is ROLE_SECTION" failed Actual value: None
-ERROR: Object not found; "property interfaces contains Text" failed Actual value: None
-ERROR: Object not found
-https://webkit.org/b/171180: 171180 – AX: ARIA "region" role which lacks an accessible name should not be treated as a landmark; "property interfaces contains Hypertext" failed Actual value: None
-ERROR: Object not found;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXRole is AXGroup" failed Actual value: None
-ERROR: Object not found; "property AXRoleDescription is group" failed Actual value: None
-ERROR: Object not found;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "relation RELATION_ERROR_FOR is test" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 – Add error-message and error-for relation types <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "relation RELATION_ERROR_FOR is test" failed <br />
+<strong>Actual value:</strong> [] <br />
+https://bugzilla.gnome.org/show_bug.cgi?id=781587: Bug 781587 â€“ Add error-message and error-for relation types <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-156'><td><a href='http://www.w3c-test.org/wai-aria/searchbox_activedescendant-manual.html' target='_blank'>/wai-aria/searchbox_activedescendant-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-156-1' class='subtest'><td>searchbox activedescendant 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed Actual value: ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT']; "property states contains STATE_FOCUSABLE" failed Actual value: ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT']
-https://bugzil.la/1359045: 1359045 - A container\'s active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED; "event type is object:state-changed:focused" failed ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed Actual value: false;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed Actual value: None
-ERROR: Object not found; "property states contains STATE_FOCUSABLE" failed Actual value: None
-ERROR: Object not found; "event type is object:state-changed:focused" failed ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed Actual value: false; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed Actual value: false; "event type is AXFocusedUIElementChanged" failed ;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
+; "property states contains STATE_FOCUSABLE" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
+<a href="https://bugzil.la/1359045">https://bugzil.la/1359045</a>: [NEW] A container's active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED <br />
+; "event type is object:state-changed:focused" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
+<strong>Actual value:</strong> false <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
+<strong>Actual value:</strong> None <br />
+ERROR: Object not found <br />
+; "property states contains STATE_FOCUSABLE" failed <br />
+<strong>Actual value:</strong> None <br />
+ERROR: Object not found <br />
+; "event type is object:state-changed:focused" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed <br />
+<strong>Actual value:</strong> false <br />
+; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
+<strong>Actual value:</strong> false <br />
+; "event type is AXFocusedUIElementChanged" failed <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-157'><td><a href='http://www.w3c-test.org/wai-aria/searchbox_activedescendant_value_changes-manual.html' target='_blank'>/wai-aria/searchbox_activedescendant_value_changes-manual.html</a> <small>(1/2, 50.00%, 0.40% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-157-1' class='subtest'><td>searchbox activedescendant value changes 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed Actual value: ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT']; "property states contains STATE_FOCUSABLE" failed Actual value: ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT']
-https://bugzil.la/1359045: 1359045 - A container\'s active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED; "event type is object:state-changed:focused" failed ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed Actual value: false;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed Actual value: None
-ERROR: Object not found; "property states contains STATE_FOCUSABLE" failed Actual value: None
-ERROR: Object not found; "event type is object:state-changed:focused" failed ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed Actual value: false; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed Actual value: false; "event type is AXFocusedUIElementChanged" failed ;  expected true got false</td></tr>
+<tr class='messages'><td colspan='5'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
+; "property states contains STATE_FOCUSABLE" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
+<a href="https://bugzil.la/1359045">https://bugzil.la/1359045</a>: [NEW] A container's active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED <br />
+; "event type is object:state-changed:focused" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
+<strong>Actual value:</strong> false <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
+<strong>Actual value:</strong> None <br />
+ERROR: Object not found <br />
+; "property states contains STATE_FOCUSABLE" failed <br />
+<strong>Actual value:</strong> None <br />
+ERROR: Object not found <br />
+; "event type is object:state-changed:focused" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed <br />
+<strong>Actual value:</strong> false <br />
+; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
+<strong>Actual value:</strong> false <br />
+; "event type is AXFocusedUIElementChanged" failed <br />
+;  expected true got false</td></tr>
 </table></td></tr>
 
       </table>
