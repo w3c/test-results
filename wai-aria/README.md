@@ -4,9 +4,9 @@ WAI ARIA 1.1 Test Results
 Placeholder for wai-aria test results.  Once the results are consolidated, they will 
 available in:
 
-* https://w3c.github.io/test-results/wai-aria/all.html
-* https://w3c.github.io/test-results/wai-aria/less-than-2.html
-* https://w3c.github.io/test-results/wai-aria/complete-fails.html
+* <https://w3c.github.io/test-results/wai-aria/all.html>
+* <https://w3c.github.io/test-results/wai-aria/less-than-2.html>
+* <https://w3c.github.io/test-results/wai-aria/complete-fails.html>
 
 List of supported AT APIs
 =========================
@@ -25,19 +25,19 @@ Index of implementations in reports
 
 * FF01 - Firefox on Linux using ATK
   * email: jdiggs@igalia.com
-  * link: http://www.mozilla.org
+  * link: <http://www.mozilla.org>
 
 * WK01 - WebKit on Linux using ATK
   * email: jdiggs@igalia.com
-  * link: https://webkitgtk.org
+  * link: <https://webkitgtk.org>
 
 * WK02 - WebKit on OS X using AXAPI
   * email: jdiggs@igalia.com
-  * link: https://webkit.org
+  * link: <https://webkit.org>
 
 * GC02 - Chrome on OS X using AXAPI
   * email: jdiggs@igalia.com
-  * line: https://www.google.com/chrome/
+  * link: <https://www.google.com/chrome/>
 
 Adding new results
 ==================
