@@ -1149,17 +1149,16 @@
           "byUA": {
             "FF01": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
-            "WK02": "FAIL"
+            "WK01": "PASS",
+            "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'table-cell-index:0', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=0, row\\_span=1, column\\_span=1)  \n<https://webkit.org/b/171165>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should return values of aria-rowspan and aria-colspan, if present  \n;  expected true got false",
-            "WK02": "assert_true: \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** 1  \n<https://webkit.org/b/171178>: [RESOLVED FIXED] AX: Treat cells with ARIA table cell properties as cells  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 2,
+            "PASS": 2
           }
         }
       }
@@ -1190,6 +1189,36 @@
           "totals": {
             "FAIL": 1,
             "PASS": 3
+          }
+        }
+      }
+    },
+    "/wai-aria/cell_aria-colspan_2_on_td_html_colspan_3_with_three_actual_columns-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 4
+      },
+      "subtests": {
+        "cell aria-colspan 2 on td html colspan 3 with three actual columns": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "GC02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
           }
         }
       }
@@ -1272,12 +1301,42 @@
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:cell', 'table-cell-index:0', 'tag:td', 'id:test', 'rowspan:2', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/wai-aria/cell_aria-rowspan_2_on_td_html_rowspan_3_with_three_actual_rows-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 4
+      },
+      "subtests": {
+        "cell aria-rowspan 2 on td html rowspan 3 with three actual rows": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:cell', 'table-cell-index:0', 'tag:td', 'id:test', 'rowspan:2', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n; \"result atk_table_cell_get_row_column_span() contains row_span=3\" failed   \n**Actual value:** (row=0, column=0, row\\_span=1, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
+            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains row_span=3\" failed   \n**Actual value:** (row=1, column=0, row\\_span=1, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRowIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
@@ -1519,18 +1578,46 @@
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
-            "WK02": "FAIL"
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:columnheader', 'table-cell-index:0', 'tag:th', 'id:test', 'text-indent:0px', 'text-align:center', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=0, row\\_span=1, column\\_span=1)  \n<https://webkit.org/b/171165>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should return values of aria-rowspan and aria-colspan, if present  \n;  expected true got false",
-            "WK02": "assert_true: \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** 1  \n<https://webkit.org/b/171178>: [RESOLVED FIXED] AX: Treat cells with ARIA table cell properties as cells  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:columnheader', 'table-cell-index:0', 'tag:th', 'id:test', 'text-indent:0px', 'text-align:center', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4
+            "FAIL": 1,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/wai-aria/columnheader_aria-colspan_2_on_th_html_colspan_3_with_three_actual_columns-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 4
+      },
+      "subtests": {
+        "columnheader aria-colspan 2 on th html colspan 3 with three actual columns": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "GC02": "assert_true: \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
           }
         }
       }
@@ -1613,12 +1700,42 @@
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:columnheader', 'table-cell-index:0', 'tag:th', 'id:test', 'rowspan:2', 'text-indent:0px', 'text-align:center', 'margin-left:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/wai-aria/columnheader_aria-rowspan_2_on_th_html_rowspan_3_with_three_actual_rows-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 4
+      },
+      "subtests": {
+        "columnheader aria-rowspan 2 on th html rowspan 3 with three actual rows": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:columnheader', 'table-cell-index:0', 'tag:th', 'id:test', 'rowspan:2', 'text-indent:0px', 'text-align:center', 'margin-left:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n; \"result atk_table_cell_get_row_column_span() contains row_span=3\" failed   \n**Actual value:** (row=0, column=0, row\\_span=1, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
+            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains row_span=3\" failed   \n**Actual value:** (row=1, column=0, row\\_span=1, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRowIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
