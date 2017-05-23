@@ -44,9 +44,9 @@
 <tr class='subtest'><td>Stringification of [object HTMLInputElement]</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='subtest'><td>HTMLInputElement interface: [object HTMLInputElement] must inherit property "capture" with the proper type (0)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/html-media-capture/capture_audio-manual.html' target='_blank'>/html-media-capture/capture_audio-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>/html-media-capture/capture_audio-manual.html</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>/html-media-capture/capture_audio-manual.html</td><td class='NOTAPPLICABLE'>Not applicable</td><td class='NOTAPPLICABLE'>Not applicable</td></tr>
 <tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/html-media-capture/capture_audio_cancel-manual.html' target='_blank'>/html-media-capture/capture_audio_cancel-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>/html-media-capture/capture_audio_cancel-manual.html</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>/html-media-capture/capture_audio_cancel-manual.html</td><td class='NOTAPPLICABLE'>Not applicable</td><td class='NOTAPPLICABLE'>Not applicable</td></tr>
 <tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/html-media-capture/capture_fallback_file_upload-manual.html' target='_blank'>/html-media-capture/capture_fallback_file_upload-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr class='subtest'><td>/html-media-capture/capture_fallback_file_upload-manual.html</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-5'><td><a href='http://www.w3c-test.org/html-media-capture/capture_image_cancel-manual.html' target='_blank'>/html-media-capture/capture_image_cancel-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -75,14 +75,18 @@
 <p><Strong>Failure analysis</strong>:
 <ol>
   <li>
-    <a href='#test-file-2'>/capture_audio-manual.html</a><br>
-    <a href='#test-file-3'>/capture_audio_cancel-manual.html</a>:<br>
-    Capture of media using the MIME type "audio/*" not implemented
-  </li>
-  <li>
     <a href='#test-file-4'>/capture_fallback_file_upload-manual.html</a>:<br>
     Safari Bug: The browser always launch camera when the capture attribute is set and the accept attribute is set to 'text/plain'<br>
     (Note: bug has been reported to Apple but without open link as it is close source)
+  </li>
+</ol>
+<p><Strong>Not applicable</strong>:
+<ol>
+  <li>
+    <a href='#test-file-2'>/capture_audio-manual.html</a><br>
+    <a href='#test-file-3'>/capture_audio_cancel-manual.html</a>:<br>
+    Audio capture is not a normative requirement.<br>
+    The tests are included for completeness and to help future implementations that may want to implement audio capture.
   </li>
 </ol>
 </p>
