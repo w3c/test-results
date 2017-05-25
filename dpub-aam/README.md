@@ -5,9 +5,9 @@ This document is a place holder until test results are available.
 
 Up-to-date result reports are available at:
 
-* https://w3c.github.io/test-results/dpub-aam/all.html
-* https://w3c.github.io/test-results/dpub-aam/less-than-2.html
-* https://w3c.github.io/test-results/dpub-aam/complete-fails.html
+* <https://w3c.github.io/test-results/dpub-aam/all.html>
+* <https://w3c.github.io/test-results/dpub-aam/less-than-2.html>
+* <https://w3c.github.io/test-results/dpub-aam/complete-fails.html>
 
 List of supported AT APIs
 =========================
@@ -26,19 +26,23 @@ Index of implementations in reports
 
 * FF01 - Firefox on Linux using ATK
   * email: jdiggs@igalia.com
-  * link: http://www.mozilla.org
+  * link: <http://www.mozilla.org>
 
 * WK01 - WebKit on Linux using ATK
   * email: jdiggs@igalia.com
-  * link: https://webkitgtk.org
+  * link: <https://webkitgtk.org>
 
 * WK02 - WebKit on OS X using AXAPI
   * email: jdiggs@igalia.com
-  * link: https://webkit.org
+  * link: <https://webkit.org>
 
 * GC02 - Chrome on OS X using AXAPI
   * email: jdiggs@igalia.com
-  * link: https://www.google.com/chrome/
+  * link: <https://www.google.com/chrome/>
+
+* ME05 - Microsoft Edge using UIA
+  * email: bbrinza@microsoft.com
+  * link: <https://www.microsoft.com/microsoft-edge>
 
 Adding new results
 ==================
