@@ -13,7 +13,7 @@ List of supported AT APIs
 =========================
 
 01. ATK
-02. AXAPI
+02. AX API
 03. IAccessible2
 04. MSAA
 05. UIA
@@ -28,15 +28,23 @@ Index of implementations in reports
   * email: jdiggs@igalia.com
   * link: <http://www.mozilla.org>
 
+* FF02 - Firefox on macOS using AX API
+  * email: jdiggs@igalia.com
+  * link: <http://www.mozilla.org>
+
+* FF03 - Firefox on Windows using IAccessible2
+  * email: jongund@illinois.edu
+  * link: <http://www.mozilla.org>
+
 * WK01 - WebKit on Linux using ATK
   * email: jdiggs@igalia.com
   * link: <https://webkitgtk.org>
 
-* WK02 - WebKit on OS X using AXAPI
+* WK02 - WebKit/Safari on macOS using AX API
   * email: jdiggs@igalia.com
   * link: <https://webkit.org>
 
-* GC02 - Chrome on OS X using AXAPI
+* GC02 - Chrome on macOS using AX API
   * email: jdiggs@igalia.com
   * link: <https://www.google.com/chrome/>
 
