@@ -144,8 +144,8 @@
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_FOCUSED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1359045>: [NEW] A container's active descendant should expose ATK\\_STATE\\_FOCUSABLE in addition to ATK\\_STATE\\_FOCUSED  \n;  expected true got false",
-            "FF02": "assert_true: \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1359045>: [NEW] A container's active descendant should expose ATK\\_STATE\\_FOCUSABLE in addition to ATK\\_STATE\\_FOCUSED  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXFocused is true\" failed   \n**Actual value:** false  \n; \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n;  expected true got false",
             "GC02": "assert_true: \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n;  expected true got false",
             "WK01": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n;  expected true got false",
             "WK02": "assert_true: \"property AXFocused is true\" failed   \n**Actual value:** false  \n; \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n;  expected true got false"
@@ -199,8 +199,8 @@
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_FOCUSED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1359045>: [NEW] A container's active descendant should expose ATK\\_STATE\\_FOCUSABLE in addition to ATK\\_STATE\\_FOCUSED  \n;  expected true got false",
-            "FF02": "assert_true: \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false",
+            "FF01": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1359045>: [NEW] A container's active descendant should expose ATK\\_STATE\\_FOCUSABLE in addition to ATK\\_STATE\\_FOCUSED  \n; \"event type is object:state-changed:focused\" failed   \n;  expected true got false",
+            "FF02": "assert_true: \"property AXFocused is true\" failed   \n**Actual value:** false  \n; \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false",
             "WK01": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n; \"event type is object:state-changed:focused\" failed   \n;  expected true got false",
             "WK02": "assert_true: \"property AXFocused is true\" failed   \n**Actual value:** false  \n; \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false"
@@ -260,20 +260,19 @@
         "aria-current with value changes": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"event type is object:state-changed:active\" failed <https://bugzil.la/1355921>  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIACurrent contains false\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXARIACurrent contains false\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -294,20 +293,19 @@
         "aria-current with value date": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_ACTIVE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SELECTABLE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1355921>: [NEW] Elements with a defined, non-false value for aria-current should expose ATK\\_STATE\\_ACTIVE  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXARIACurrent is date\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXARIACurrent is date\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -328,20 +326,19 @@
         "aria-current with value location": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_ACTIVE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1355921>: [NEW] Elements with a defined, non-false value for aria-current should expose ATK\\_STATE\\_ACTIVE  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIACurrent is location\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXARIACurrent is location\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -362,20 +359,19 @@
         "aria-current with value page": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_ACTIVE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1355921>: [NEW] Elements with a defined, non-false value for aria-current should expose ATK\\_STATE\\_ACTIVE  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIACurrent is page\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXARIACurrent is page\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -396,20 +392,19 @@
         "aria-current with value step": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_ACTIVE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1355921>: [NEW] Elements with a defined, non-false value for aria-current should expose ATK\\_STATE\\_ACTIVE  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIACurrent is step\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXARIACurrent is step\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -430,20 +425,19 @@
         "aria-current with value time": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_ACTIVE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SELECTABLE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1355921>: [NEW] Elements with a defined, non-false value for aria-current should expose ATK\\_STATE\\_ACTIVE  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXARIACurrent is time\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXARIACurrent is time\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -464,20 +458,19 @@
         "aria-current with value true": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_ACTIVE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1355921>: [NEW] Elements with a defined, non-false value for aria-current should expose ATK\\_STATE\\_ACTIVE  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIACurrent is true\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXARIACurrent is true\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -534,32 +527,28 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property TBD is TBD\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"property TBD is TBD\" failed   \n;  expected true got false",
-            "WK01": "assert\\_true: \"relation RELATION\\_DETAILS is [details]\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false",
             "WK02": "assert_true: \"property TBD is TBD\" failed <https://webkit.org/b/165842>  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2,
+            "FAIL": 3
           }
         },
         "aria-details pointing to details element 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert\\_true: \"relation RELATION\\_DETAILS_FOR is [test]\" failed   \n**Actual value:** []  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         }
       }
@@ -583,32 +572,28 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property TBD is TBD\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"property TBD is TBD\" failed   \n;  expected true got false",
-            "WK01": "assert\\_true: \"relation RELATION\\_DETAILS is [details]\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false",
             "WK02": "assert_true: \"property TBD is TBD\" failed <https://webkit.org/b/165842>  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2,
+            "FAIL": 3
           }
         },
         "aria-details pointing to div element 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert\\_true: \"relation RELATION\\_DETAILS_FOR is [test]\" failed   \n**Actual value:** []  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         }
       }
@@ -669,7 +654,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains setsize:-1\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:article', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1358473>: [NEW] Do not calculate setsize when aria-setsize has a value of -1  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains setsize:-1\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:article', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1358473>: [NEW] Do not calculate setsize when aria-setsize has a value of -1  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIASetSize is -1\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXARIASetSize is -1\" failed   \n**Actual value:** 0  \n;  expected true got false"
           },
@@ -736,7 +721,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:dialog\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:dialog\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n;  expected true got false"
           },
@@ -764,20 +749,19 @@
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:false\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
-            "FF02": "assert_true: \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n; \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n; \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:false\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "GC02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
+            "WK02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -799,19 +783,18 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n; \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n; \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "GC02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
+            "WK02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -833,20 +816,19 @@
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:false\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n; \"property states doesNotContain STATE\\_HAS_POPUP\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT', 'STATE\\_HAS\\_POPUP']  \n;  expected true got false",
-            "FF02": "assert_true: \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n; \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n; \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:false\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n; \"property states doesNotContain STATE\\_HAS_POPUP\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT', 'STATE\\_HAS\\_POPUP']  \n;  expected true got false",
+            "GC02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
+            "WK02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -874,7 +856,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:grid\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:grid\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n;  expected true got false"
           },
@@ -908,7 +890,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n;  expected true got false"
           },
@@ -942,7 +924,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n;  expected true got false"
           },
@@ -976,7 +958,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:tree\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:tree\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** button  \n;  expected true got false"
           },
@@ -1010,7 +992,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXMenuButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** menu button  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** []  \n; \"property actions contains AXPress\" failed   \n**Actual value:** []  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXMenuButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** menu button  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** []  \n;  expected true got false"
           },
           "totals": {
             "PASS": 4,
@@ -1036,19 +1018,18 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n; \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n; \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "GC02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
+            "WK02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress,  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -1261,7 +1242,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'table-cell-index:0', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:td', 'table-cell-index:0', 'colspan:2', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n;  expected true got false"
           },
@@ -1295,7 +1276,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'table-cell-index:3', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:td', 'table-cell-index:3', 'colspan:2', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n; \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false"
           },
           "totals": {
             "FAIL": 1,
@@ -1320,19 +1301,20 @@
         "cell aria-colspan 2 on td html colspan 3 with three actual columns": {
           "stNum": 0,
           "byUA": {
-            "FF01": "PASS",
+            "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
+            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -1428,7 +1410,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:cell', 'table-cell-index:0', 'tag:td', 'id:test', 'rowspan:2', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'rowspan:2', 'margin-right:0px', 'tag:td', 'table-cell-index:0', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:cell', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n;  expected true got false"
           },
           "totals": {
@@ -1461,7 +1443,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains row_span=3\" failed   \n**Actual value:** (row=1, column=0, row\\_span=1, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
+            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains row_span=3\" failed   \n**Actual value:** (row=1, column=0, row\\_span=1, column\\_span=3)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRowIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
@@ -1731,7 +1713,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:columnheader', 'table-cell-index:0', 'tag:th', 'id:test', 'text-indent:0px', 'text-align:center', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:th', 'table-cell-index:0', 'colspan:2', 'margin-left:0px', 'text-indent:0px', 'text-align:center', 'xml-roles:columnheader', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
           },
           "totals": {
             "FAIL": 1,
@@ -1756,18 +1738,19 @@
         "columnheader aria-colspan 2 on th html colspan 3 with three actual columns": {
           "stNum": 0,
           "byUA": {
-            "FF01": "PASS",
+            "FF01": "FAIL",
             "FF02": "PASS",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
+            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
             "GC02": "assert_true: \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -1863,7 +1846,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:columnheader', 'table-cell-index:0', 'tag:th', 'id:test', 'rowspan:2', 'text-indent:0px', 'text-align:center', 'margin-left:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'rowspan:2', 'margin-right:0px', 'tag:th', 'table-cell-index:0', 'margin-left:0px', 'text-indent:0px', 'text-align:center', 'xml-roles:columnheader', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
           },
           "totals": {
             "FAIL": 1,
@@ -1895,7 +1878,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains row_span=3\" failed   \n**Actual value:** (row=1, column=0, row\\_span=1, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
+            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains row_span=3\" failed   \n**Actual value:** (row=1, column=0, row\\_span=1, column\\_span=3)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRowIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
@@ -2132,19 +2115,17 @@
           "byUA": {
             "FF01": "FAIL",
             "FF02": "FAIL",
-            "GC02": "FAIL",
+            "GC02": "PASS",
             "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:dialog\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:dialog\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -2173,7 +2154,7 @@
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"property states doesNotContain STATE\\_HAS_POPUP\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_EXPANDABLE', 'STATE\\_EXPANDED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT', 'STATE\\_HAS\\_POPUP']  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions doesNotContain AXPress\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false",
             "WK02": "assert_true: \"property actions doesNotContain AXShowMenu\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
           },
@@ -2202,19 +2183,17 @@
           "byUA": {
             "FF01": "FAIL",
             "FF02": "FAIL",
-            "GC02": "FAIL",
+            "GC02": "PASS",
             "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:grid\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:grid\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -2237,19 +2216,17 @@
           "byUA": {
             "FF01": "FAIL",
             "FF02": "FAIL",
-            "GC02": "FAIL",
+            "GC02": "PASS",
             "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -2272,19 +2249,17 @@
           "byUA": {
             "FF01": "FAIL",
             "FF02": "FAIL",
-            "GC02": "FAIL",
+            "GC02": "PASS",
             "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -2307,19 +2282,17 @@
           "byUA": {
             "FF01": "FAIL",
             "FF02": "FAIL",
-            "GC02": "FAIL",
+            "GC02": "PASS",
             "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:tree\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:tree\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -2342,18 +2315,16 @@
           "byUA": {
             "FF01": "PASS",
             "FF02": "FAIL",
-            "GC02": "FAIL",
+            "GC02": "PASS",
             "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -2376,19 +2347,17 @@
           "byUA": {
             "FF01": "FAIL",
             "FF02": "FAIL",
-            "GC02": "FAIL",
+            "GC02": "PASS",
             "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false",
-            "GC02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n;  expected true got false",
-            "WK02": "assert_true: \"property actions contains AXPress\" failed   \n**Actual value:** (  \n    AXShowMenu,  \n    AXScrollToVisible  \n)  \n<https://github.com/w3c/aria/issues/570>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** (  \n    AXPress  \n)  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -2416,7 +2385,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n;  expected true got false"
           },
           "totals": {
             "PASS": 4,
@@ -2448,7 +2417,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXOrientation is AXUnknownOrientation\" failed   \n**Actual value:** None  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n;  expected true got false",
             "GC02": "assert_true: \"property AXOrientation is AXUnknownOrientation\" failed   \n**Actual value:** AXVerticalOrientation  \n;  expected true got false"
           },
           "totals": {
@@ -2481,7 +2450,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n; \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXRole is AXComboBox\" failed   \n**Actual value:** AXPopUpButton  \n; \"property AXRoleDescription is combo box\" failed   \n**Actual value:** pop up button  \n;  expected true got false"
           },
           "totals": {
             "PASS": 4,
@@ -2743,18 +2712,19 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "PASS",
+            "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
+            "FF02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXApplicationGroup  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRoleDescription is group\" failed   \n**Actual value:** foo  \n;  expected true got false",
             "WK02": "assert_true: \"property AXRoleDescription is group\" failed   \n**Actual value:** foo  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 2,
+            "FAIL": 3
           }
         }
       }
@@ -2778,32 +2748,28 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property TBD is TBD\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"property TBD is TBD\" failed   \n;  expected true got false",
-            "WK01": "assert\\_true: \"relation RELATION\\_ERROR_MESSAGE is [error]\" failed   \n**Actual value:** []  \n;  expected true got false",
             "WK02": "assert_true: \"property TBD is TBD\" failed <https://webkit.org/b/165190>  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2,
+            "FAIL": 3
           }
         },
         "errormessage object in invalid state 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert\\_true: \"relation RELATION\\_ERROR_FOR is [test]\" failed   \n**Actual value:** []  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         }
       }
@@ -2827,32 +2793,32 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "PASS",
+            "WK01": "FAIL",
             "WK02": "FAIL"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"property relations doesNotContain RELATION\\_ERROR_MESSAGE\" failed   \n**Actual value:** ['RELATION\\_LABELLED\\_BY', 'RELATION\\_ERROR\\_MESSAGE']  \n;  expected true got false",
             "FF02": "assert_true: \"property TBD is TBD\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"property TBD is TBD\" failed   \n;  expected true got false",
+            "WK01": "assert\\_true: \"property relations doesNotContain RELATION\\_ERROR_MESSAGE\" failed   \n**Actual value:** ['RELATION\\_LABELLED\\_BY', 'RELATION\\_ERROR\\_MESSAGE']  \n;  expected true got false",
             "WK02": "assert_true: \"property TBD is TBD\" failed <https://webkit.org/b/165190>  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 5
           }
         },
         "errormessage object in valid state 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "FAIL",
-            "WK01": "PASS"
+            "WK01": "FAIL"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property relations doesNotContain RELATION\\_ERROR_FOR\" failed   \n**Actual value:** ['RELATION\\_ERROR\\_FOR']  \n;  expected true got false"
+            "FF01": "assert\\_true: \"property relations doesNotContain RELATION\\_ERROR_FOR\" failed   \n**Actual value:** ['RELATION\\_ERROR\\_FOR']  \n;  expected true got false",
+            "WK01": "assert\\_true: \"property relations doesNotContain RELATION\\_ERROR_FOR\" failed   \n**Actual value:** ['RELATION\\_ERROR\\_FOR']  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "FAIL": 2
           }
         }
       }
@@ -2906,19 +2872,15 @@
         "figure": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
-            "FF02": "FAIL",
+            "FF01": "PASS",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF01": "assert\\_true: \"property role is ROLE_PANEL\" failed   \n**Actual value:** ROLE\\_SECTION  \n<https://bugzil.la/1356049>: [NEW] ARIA figure role should be mapped as ATK\\_ROLE\\_PANEL  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXApplicationGroup  \n; \"property AXRoleDescription is figure\" failed   \n**Actual value:** group  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2,
-            "PASS": 3
+            "PASS": 5
           }
         }
       }
@@ -3837,8 +3799,8 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains level:2\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:heading', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1357100>: [NEW] Implement support for implicit value for aria-level on heading role  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRoleDescription is heading\" failed   \n**Actual value:** AXHeading  \n; \"property AXValue is 2\" failed   \n**Actual value:** 0  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains level:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:heading', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1357100>: [NEW] Implement support for implicit value for aria-level on heading role  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXValue is 2\" failed   \n**Actual value:** 0  \n;  expected true got false",
             "GC02": "assert_true: \"property AXValue is 2\" failed   \n**Actual value:**   \n;  expected true got false"
           },
           "totals": {
@@ -4001,17 +3963,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -4033,17 +3992,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -4065,17 +4021,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -4201,7 +4154,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains setsize:-1\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'posinset:1', 'margin-top:0px', 'xml-roles:listitem', 'tag:div', 'id:test', 'setsize:1', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1358473>: [NEW] Do not calculate setsize when aria-setsize has a value of -1  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains setsize:-1\" failed   \n**Actual value:** ['margin-bottom:0px', 'posinset:1', 'margin-right:0px', 'tag:div', 'id:test', 'formatting:block', 'margin-left:0px', 'setsize:1', 'text-align:start', 'xml-roles:listitem', 'display:block', 'text-indent:0px', 'margin-top:0px']  \n<https://bugzil.la/1358473>: [NEW] Do not calculate setsize when aria-setsize has a value of -1  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIASetSize is -1\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
@@ -4228,17 +4181,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -4260,17 +4210,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -4292,17 +4239,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -4390,17 +4334,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -4422,17 +4363,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -4454,17 +4392,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -4978,17 +4913,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -5010,18 +4942,17 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXUnknownOrientation\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXOrientation is AXUnknownOrientation\" failed   \n**Actual value:**   \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -5043,17 +4974,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -5172,20 +5100,18 @@
         "region with name": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
-            "FF02": "FAIL",
+            "FF01": "PASS",
+            "FF02": "PASS",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** ROLE\\_PANEL  \n<https://bugzil.la/1210630>: [NEW] Section elements with accessible names should be mapped the same as ARIA role region  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXSubrole is AXLandmarkRegion\" failed   \n**Actual value:** AXDocumentRegion  \n;  expected true got false",
             "GC02": "assert_true: \"property AXSubrole is AXLandmarkRegion\" failed   \n**Actual value:** AXDocumentRegion  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -5206,20 +5132,18 @@
         "region without name": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
-            "FF02": "FAIL",
+            "FF01": "PASS",
+            "FF02": "PASS",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property role is ROLE_SECTION\" failed   \n**Actual value:** ROLE\\_PANEL  \n<https://bugzil.la/1358462>: [NEW] Elements with role=\"region\" and no accessible name should be mapped according to host language  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXDocumentRegion  \n; \"property AXRoleDescription is group\" failed   \n**Actual value:** region  \n;  expected true got false",
             "GC02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXDocumentRegion  \n; \"property AXRoleDescription is group\" failed   \n**Actual value:** region  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -5616,17 +5540,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -5706,8 +5627,8 @@
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_FOCUSED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1359045>: [NEW] A container's active descendant should expose ATK\\_STATE\\_FOCUSABLE in addition to ATK\\_STATE\\_FOCUSED  \n;  expected true got false",
-            "FF02": "assert_true: \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false",
+            "FF01": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1359045>: [NEW] A container's active descendant should expose ATK\\_STATE\\_FOCUSABLE in addition to ATK\\_STATE\\_FOCUSED  \n; \"event type is object:state-changed:focused\" failed   \n;  expected true got false",
+            "FF02": "assert_true: \"property AXFocused is true\" failed   \n**Actual value:** false  \n; \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false",
             "WK01": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"event type is object:state-changed:focused\" failed   \n;  expected true got false",
             "WK02": "assert_true: \"property AXFocused is true\" failed   \n**Actual value:** false  \n; \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false"
@@ -5761,8 +5682,8 @@
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_FOCUSED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1359045>: [NEW] A container's active descendant should expose ATK\\_STATE\\_FOCUSABLE in addition to ATK\\_STATE\\_FOCUSED  \n;  expected true got false",
-            "FF02": "assert_true: \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false",
+            "FF01": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT']  \n<https://bugzil.la/1359045>: [NEW] A container's active descendant should expose ATK\\_STATE\\_FOCUSABLE in addition to ATK\\_STATE\\_FOCUSED  \n; \"event type is object:state-changed:focused\" failed   \n;  expected true got false",
+            "FF02": "assert_true: \"property AXFocused is true\" failed   \n**Actual value:** false  \n; \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false",
             "WK01": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"event type is object:state-changed:focused\" failed   \n;  expected true got false",
             "WK02": "assert_true: \"property AXFocused is true\" failed   \n**Actual value:** false  \n; \"result AXUIElementIsAttributeSettable(AXFocused) is true\" failed   \n**Actual value:** false  \n; \"event type is AXFocusedUIElementChanged\" failed   \n;  expected true got false"
@@ -6055,7 +5976,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'placeholder:DD/MM/YYYY', 'margin-top:0px', 'xml-roles:searchbox', 'text-input-type:search', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1303429>: [NEW] expose placeholder object attribute for HTML placeholder  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'text-input-type:search', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'placeholder:DD/MM/YYYY', 'xml-roles:searchbox', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1303429>: [NEW] expose placeholder object attribute for HTML placeholder  \n;  expected true got false",
             "FF02": "assert_true: \"property AXSubrole is AXSearchField\" failed   \n**Actual value:** None  \n; \"property AXRoleDescription is search text field\" failed   \n**Actual value:** text field  \n; \"property AXPlaceholderValue is DD/MM/YYYY\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXTextField\" failed   \n**Actual value:** AXTextArea  \n;  expected true got false"
           },
@@ -6282,8 +6203,8 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property interfaces contains Value\" failed   \n**Actual value:** ['Accessible', 'Collection', 'Component', 'Hyperlink']  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"result atk_value_get_minimum_value() is 0\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"result atk_value_get_current_value() is 50\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"result atk_value_get_maximum_value() is 100\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXContentSeparator  \n; \"property AXRoleDescription is splitter\" failed   \n**Actual value:** separator  \n; \"property AXMinValue is 0\" failed   \n**Actual value:** None  \n; \"property AXValue is 50\" failed   \n**Actual value:**   \n; \"property AXMaxValue is 100\" failed   \n**Actual value:** None  \n;  expected true got false",
+            "FF01": "assert\\_true: \"result atk_value_get_minimum_value() is 0\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [RESOLVED FIXED] Focusable separators should implement the accessible value interface  \n; \"result atk_value_get_current_value() is 50\" failed   \n**Actual value:** 0.0  \n<https://bugzil.la/1355954>: [RESOLVED FIXED] Focusable separators should implement the accessible value interface  \n; \"result atk_value_get_maximum_value() is 100\" failed   \n**Actual value:** 0.0  \n<https://bugzil.la/1355954>: [RESOLVED FIXED] Focusable separators should implement the accessible value interface  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXMinValue is 0\" failed   \n**Actual value:** None  \n; \"property AXValue is 50\" failed   \n**Actual value:**   \n; \"property AXMaxValue is 100\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXValue is 50\" failed   \n**Actual value:** 0.0  \n; \"property AXMaxValue is 100\" failed   \n**Actual value:** 0.0  \n;  expected true got false"
           },
           "totals": {
@@ -6316,8 +6237,8 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property interfaces contains Value\" failed   \n**Actual value:** ['Accessible', 'Collection', 'Component', 'Hyperlink']  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"result atk_value_get_minimum_value() is 0\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"result atk_value_get_current_value() is 50\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"result atk_value_get_maximum_value() is 100\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXContentSeparator  \n; \"property AXRoleDescription is splitter\" failed   \n**Actual value:** separator  \n; \"property AXMinValue is 0\" failed   \n**Actual value:** None  \n; \"property AXValue is 50\" failed   \n**Actual value:**   \n; \"property AXMaxValue is 100\" failed   \n**Actual value:** None  \n;  expected true got false",
+            "FF01": "assert\\_true: \"result atk_value_get_current_value() is 50\" failed   \n**Actual value:** 0.0  \n<https://bugzil.la/1355954>: [RESOLVED FIXED] Focusable separators should implement the accessible value interface  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXMinValue is 0\" failed   \n**Actual value:** None  \n; \"property AXValue is 50\" failed   \n**Actual value:**   \n; \"property AXMaxValue is 100\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXValue is 50\" failed   \n**Actual value:** 0.0  \n;  expected true got false"
           },
           "totals": {
@@ -6350,8 +6271,8 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains valuetext:Bonaire\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:separator', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"property interfaces contains Value\" failed   \n**Actual value:** ['Accessible', 'Collection', 'Component', 'Hyperlink']  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"result atk_value_get_minimum_value() is 0\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"result atk_value_get_current_value() is 50\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n; \"result atk_value_get_maximum_value() is 100\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [NEW] Focusable separators should implement the accessible value interface in IA2 and ATK  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXContentSeparator  \n; \"property AXRoleDescription is splitter\" failed   \n**Actual value:** separator  \n; \"property AXMinValue is 0\" failed   \n**Actual value:** None  \n; \"property AXValue is 50\" failed   \n**Actual value:**   \n; \"property AXMaxValue is 100\" failed   \n**Actual value:** None  \n; \"property AXValueDescription is Bonaire\" failed   \n**Actual value:** None  \n;  expected true got false",
+            "FF01": "assert\\_true: \"result atk_value_get_minimum_value() is 0\" failed   \n**Actual value:** None  \nERROR: atspi\\_error: Get failed (1)  \n<https://bugzil.la/1355954>: [RESOLVED FIXED] Focusable separators should implement the accessible value interface  \n; \"result atk_value_get_current_value() is 50\" failed   \n**Actual value:** 0.0  \n<https://bugzil.la/1355954>: [RESOLVED FIXED] Focusable separators should implement the accessible value interface  \n; \"result atk_value_get_maximum_value() is 100\" failed   \n**Actual value:** 0.0  \n<https://bugzil.la/1355954>: [RESOLVED FIXED] Focusable separators should implement the accessible value interface  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXMinValue is 0\" failed   \n**Actual value:** None  \n; \"property AXValue is 50\" failed   \n**Actual value:** Bonaire  \n; \"property AXMaxValue is 100\" failed   \n**Actual value:** None  \n; \"property AXValueDescription is Bonaire\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXValue is 50\" failed   \n**Actual value:** 0.0  \n; \"property AXMaxValue is 100\" failed   \n**Actual value:** 0.0  \n;  expected true got false"
           },
           "totals": {
@@ -6378,17 +6299,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXContentSeparator  \n; \"property AXRoleDescription is splitter\" failed   \n**Actual value:** separator  \n; \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -6410,17 +6328,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXContentSeparator  \n; \"property AXRoleDescription is splitter\" failed   \n**Actual value:** separator  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -6442,17 +6357,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXSubrole is <nil>\" failed   \n**Actual value:** AXContentSeparator  \n; \"property AXRoleDescription is splitter\" failed   \n**Actual value:** separator  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -6542,17 +6454,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -6863,19 +6772,18 @@
         "switch checked mixed": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property states doesNotContain STATE\\_CHECKED\" failed   \n**Actual value:** ['STATE\\_CHECKED', 'STATE\\_ENABLED', 'STATE\\_FOCUSABLE', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT', 'STATE\\_CHECKABLE']  \n<https://bugzil.la/1358447>: [NEW] Elements which do not support aria-checked=\"mixed\" should not expose \"checked\" accessibility state  \n;  expected true got false",
             "FF02": "assert_true: \"property AXValue is 0\" failed   \n**Actual value:**   \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 3
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -7265,17 +7173,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7297,17 +7202,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7329,17 +7231,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7396,7 +7295,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'placeholder:DD/MM/YYYY', 'margin-top:0px', 'xml-roles:textbox', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1303429>: [NEW] expose placeholder object attribute for HTML placeholder  \n;  expected true got false",
+            "FF01": "assert\\_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'placeholder:DD/MM/YYYY', 'xml-roles:textbox', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1303429>: [NEW] expose placeholder object attribute for HTML placeholder  \n;  expected true got false",
             "FF02": "assert_true: \"property AXPlaceholderValue is DD/MM/YYYY\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXTextField\" failed   \n**Actual value:** AXTextArea  \n; \"property AXRoleDescription is text field\" failed   \n**Actual value:** text entry area  \n;  expected true got false"
           },
@@ -7424,17 +7323,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7456,17 +7352,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7488,17 +7381,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7520,17 +7410,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7552,17 +7439,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7584,17 +7468,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7650,17 +7531,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXHorizontalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
@@ -7711,17 +7589,14 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
+            "FF02": "PASS",
             "GC02": "PASS",
             "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: \"property AXOrientation is AXVerticalOrientation\" failed   \n**Actual value:** None  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         }
       }
