@@ -106,9 +106,591 @@
           "message": "assert_equals: property has wrong .length expected 1 but got 0"
         },
         {
-          "name": "HTMLVideoElement interface: operation getVideoPlaybackQuality()",
+          "name": "AudioTrack interface: attribute sourceBuffer",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "VideoTrack interface: attribute sourceBuffer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "TextTrack interface: attribute sourceBuffer",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"sourceBuffer\" expected true got false"
+        },
+        {
+          "name": "MediaSource interface: existence and properties of interface object",
+          "status": "FAIL",
+          "message": "assert_equals: prototype of MediaSource is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"\nfunction() {\n    [native code]\n}\n\""
+        },
+        {
+          "name": "MediaSource interface object length",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"length\" missing"
+        },
+        {
+          "name": "MediaSource interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute sourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute activeSourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute readyState",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute duration",
+          "status": "FAIL",
+          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+        },
+        {
+          "name": "MediaSource interface: attribute onsourceopen",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onsourceopen\" expected true got false"
+        },
+        {
+          "name": "MediaSource interface: attribute onsourceended",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onsourceended\" expected true got false"
+        },
+        {
+          "name": "MediaSource interface: attribute onsourceclose",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onsourceclose\" expected true got false"
+        },
+        {
+          "name": "MediaSource interface: operation addSourceBuffer(DOMString)",
+          "status": "FAIL",
+          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+        },
+        {
+          "name": "MediaSource interface: operation removeSourceBuffer(SourceBuffer)",
+          "status": "FAIL",
+          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+        },
+        {
+          "name": "MediaSource interface: operation endOfStream(EndOfStreamError)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: operation setLiveSeekableRange(double,double)",
+          "status": "FAIL",
+          "message": "assert_own_property: interface prototype object missing non-static operation expected property \"setLiveSeekableRange\" missing"
+        },
+        {
+          "name": "MediaSource interface: operation clearLiveSeekableRange()",
+          "status": "FAIL",
+          "message": "assert_own_property: interface prototype object missing non-static operation expected property \"clearLiveSeekableRange\" missing"
+        },
+        {
+          "name": "MediaSource interface: operation isTypeSupported(DOMString)",
+          "status": "FAIL",
+          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+        },
+        {
+          "name": "MediaSource must be primary interface of mediaSource",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of mediaSource",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"sourceBuffers\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"activeSourceBuffers\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"readyState\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"duration\" with the proper type (3)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"onsourceopen\" with the proper type (4)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onsourceopen\" not found in prototype chain"
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"onsourceended\" with the proper type (5)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onsourceended\" not found in prototype chain"
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"onsourceclose\" with the proper type (6)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onsourceclose\" not found in prototype chain"
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"addSourceBuffer\" with the proper type (7)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: calling addSourceBuffer(DOMString) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"removeSourceBuffer\" with the proper type (8)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: calling removeSourceBuffer(SourceBuffer) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"endOfStream\" with the proper type (9)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: calling endOfStream(EndOfStreamError) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"setLiveSeekableRange\" with the proper type (10)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"setLiveSeekableRange\" not found in prototype chain"
+        },
+        {
+          "name": "MediaSource interface: calling setLiveSeekableRange(double,double) on mediaSource with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"setLiveSeekableRange\" not found in prototype chain"
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"clearLiveSeekableRange\" with the proper type (11)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"clearLiveSeekableRange\" not found in prototype chain"
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"isTypeSupported\" with the proper type (12)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: calling isTypeSupported(DOMString) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: mediaSource must inherit property \"addEventListener\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on mediaSource with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+        },
+        {
+          "name": "EventTarget interface: mediaSource must inherit property \"removeEventListener\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on mediaSource with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+        },
+        {
+          "name": "EventTarget interface: mediaSource must inherit property \"dispatchEvent\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling dispatchEvent(Event) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: existence and properties of interface object",
+          "status": "FAIL",
+          "message": "assert_equals: prototype of SourceBuffer is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"\nfunction() {\n    [native code]\n}\n\""
+        },
+        {
+          "name": "SourceBuffer interface object length",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"length\" missing"
+        },
+        {
+          "name": "SourceBuffer interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute mode",
+          "status": "FAIL",
+          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+        },
+        {
+          "name": "SourceBuffer interface: attribute updating",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute buffered",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute timestampOffset",
+          "status": "FAIL",
+          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+        },
+        {
+          "name": "SourceBuffer interface: attribute audioTracks",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute videoTracks",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute textTracks",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"textTracks\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer interface: attribute appendWindowStart",
+          "status": "FAIL",
+          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+        },
+        {
+          "name": "SourceBuffer interface: attribute appendWindowEnd",
+          "status": "FAIL",
+          "message": "assert_equals: setter length must be 1 expected 1 but got 0"
+        },
+        {
+          "name": "SourceBuffer interface: attribute onupdatestart",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onupdatestart\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer interface: attribute onupdate",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onupdate\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer interface: attribute onupdateend",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onupdateend\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer interface: attribute onerror",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onerror\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer interface: attribute onabort",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onabort\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer interface: operation appendBuffer(BufferSource)",
+          "status": "FAIL",
+          "message": "assert_equals: property has wrong .length expected 1 but got 0"
+        },
+        {
+          "name": "SourceBuffer interface: operation abort()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: operation remove(double,unrestricted double)",
+          "status": "FAIL",
+          "message": "assert_equals: property has wrong .length expected 2 but got 0"
+        },
+        {
+          "name": "SourceBuffer must be primary interface of sourceBuffer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of sourceBuffer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"mode\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"updating\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"buffered\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"timestampOffset\" with the proper type (3)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"audioTracks\" with the proper type (4)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"videoTracks\" with the proper type (5)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"textTracks\" with the proper type (6)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"textTracks\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendWindowStart\" with the proper type (7)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendWindowEnd\" with the proper type (8)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onupdatestart\" with the proper type (9)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onupdatestart\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onupdate\" with the proper type (10)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onupdate\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onupdateend\" with the proper type (11)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onupdateend\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onerror\" with the proper type (12)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onerror\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onabort\" with the proper type (13)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onabort\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendBuffer\" with the proper type (14)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: calling appendBuffer(BufferSource) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"abort\" with the proper type (15)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"remove\" with the proper type (16)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: calling remove(double,unrestricted double) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: sourceBuffer must inherit property \"addEventListener\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+        },
+        {
+          "name": "EventTarget interface: sourceBuffer must inherit property \"removeEventListener\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+        },
+        {
+          "name": "EventTarget interface: sourceBuffer must inherit property \"dispatchEvent\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling dispatchEvent(Event) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: existence and properties of interface object",
+          "status": "FAIL",
+          "message": "assert_equals: prototype of SourceBufferList is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"\nfunction() {\n    [native code]\n}\n\""
+        },
+        {
+          "name": "SourceBufferList interface object length",
+          "status": "FAIL",
+          "message": "assert_own_property: expected property \"length\" missing"
+        },
+        {
+          "name": "SourceBufferList interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: attribute length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: attribute onaddsourcebuffer",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onaddsourcebuffer\" expected true got false"
+        },
+        {
+          "name": "SourceBufferList interface: attribute onremovesourcebuffer",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onremovesourcebuffer\" expected true got false"
+        },
+        {
+          "name": "SourceBufferList must be primary interface of mediaSource.sourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of mediaSource.sourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"length\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"onaddsourcebuffer\" with the proper type (1)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onaddsourcebuffer\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"onremovesourcebuffer\" with the proper type (2)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onremovesourcebuffer\" not found in prototype chain"
+        },
+        {
+          "name": "EventTarget interface: mediaSource.sourceBuffers must inherit property \"addEventListener\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+        },
+        {
+          "name": "EventTarget interface: mediaSource.sourceBuffers must inherit property \"removeEventListener\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: Called with 1 arguments function \"function () {\r\n            fn.apply(obj, args);\r\n        }\" did not throw"
+        },
+        {
+          "name": "EventTarget interface: mediaSource.sourceBuffers must inherit property \"dispatchEvent\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling dispatchEvent(Event) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/interfaces.html",
+      "subtests": [
+        {
+          "name": "URL interface: operation createObjectURL(MediaSource)",
+          "status": "FAIL",
+          "message": "assert_equals: property has wrong .length expected 1 but got 0"
         },
         {
           "name": "AudioTrack interface: attribute sourceBuffer",
@@ -441,17 +1023,7 @@
           "message": "assert_true: The prototype object must have a property \"onabort\" expected true got false"
         },
         {
-          "name": "SourceBuffer interface: operation appendBuffer(ArrayBuffer)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
-        },
-        {
-          "name": "SourceBuffer interface: operation appendBuffer(ArrayBufferView)",
-          "status": "FAIL",
-          "message": "assert_equals: property has wrong .length expected 1 but got 0"
-        },
-        {
-          "name": "SourceBuffer interface: operation appendStream(ReadableStream,unsigned long long)",
+          "name": "SourceBuffer interface: operation appendBuffer(BufferSource)",
           "status": "FAIL",
           "message": "assert_equals: property has wrong .length expected 1 but got 0"
         },
@@ -464,11 +1036,6 @@
           "name": "SourceBuffer interface: operation remove(double,unrestricted double)",
           "status": "FAIL",
           "message": "assert_equals: property has wrong .length expected 2 but got 0"
-        },
-        {
-          "name": "SourceBuffer interface: attribute trackDefaults",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"trackDefaults\" expected true got false"
         },
         {
           "name": "SourceBuffer must be primary interface of sourceBuffer",
@@ -556,37 +1123,17 @@
           "message": null
         },
         {
-          "name": "SourceBuffer interface: calling appendBuffer(ArrayBuffer) on sourceBuffer with too few arguments must throw TypeError",
+          "name": "SourceBuffer interface: calling appendBuffer(BufferSource) on sourceBuffer with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendBuffer\" with the proper type (15)",
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"abort\" with the proper type (15)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "SourceBuffer interface: calling appendBuffer(ArrayBufferView) on sourceBuffer with too few arguments must throw TypeError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendStream\" with the proper type (16)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "SourceBuffer interface: calling appendStream(ReadableStream,unsigned long long) on sourceBuffer with too few arguments must throw TypeError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"abort\" with the proper type (17)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"remove\" with the proper type (18)",
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"remove\" with the proper type (16)",
           "status": "PASS",
           "message": null
         },
@@ -594,11 +1141,6 @@
           "name": "SourceBuffer interface: calling remove(double,unrestricted double) on sourceBuffer with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "SourceBuffer interface: sourceBuffer must inherit property \"trackDefaults\" with the proper type (19)",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"trackDefaults\" not found in prototype chain"
         },
         {
           "name": "EventTarget interface: sourceBuffer must inherit property \"addEventListener\" with the proper type (0)",
@@ -724,186 +1266,6 @@
           "name": "EventTarget interface: calling dispatchEvent(Event) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: existence and properties of interface object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: expected property \"length\" missing"
-        },
-        {
-          "name": "VideoPlaybackQuality interface object name",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute creationTime",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute totalVideoFrames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute droppedVideoFrames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute corruptedVideoFrames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: attribute totalFrameDelay",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality must be primary interface of video.getVideoPlaybackQuality()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Stringification of video.getVideoPlaybackQuality()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"creationTime\" with the proper type (0)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"totalVideoFrames\" with the proper type (1)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"droppedVideoFrames\" with the proper type (2)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"corruptedVideoFrames\" with the proper type (3)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "VideoPlaybackQuality interface: video.getVideoPlaybackQuality() must inherit property \"totalFrameDelay\" with the proper type (4)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "TrackDefault interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface object name",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: attribute type",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: attribute byteStreamTrackID",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: attribute language",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: attribute label",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefault interface: operation getKinds()",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefault\" expected property \"TrackDefault\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface object name",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList interface: attribute length",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"TrackDefaultList\" expected property \"TrackDefaultList\" missing"
-        },
-        {
-          "name": "TrackDefaultList must be primary interface of sourceBuffer.trackDefaults",
-          "status": "FAIL",
-          "message": "assert_equals: wrong typeof object expected \"object\" but got \"undefined\""
-        },
-        {
-          "name": "Stringification of sourceBuffer.trackDefaults",
-          "status": "FAIL",
-          "message": "assert_equals: wrong typeof object expected \"object\" but got \"undefined\""
-        },
-        {
-          "name": "TrackDefaultList interface: sourceBuffer.trackDefaults must inherit property \"length\" with the proper type (0)",
-          "status": "FAIL",
-          "message": "assert_equals: wrong typeof object expected \"object\" but got \"undefined\""
         }
       ],
       "status": "TIMEOUT",
@@ -923,9 +1285,24 @@
           "message": null
         },
         {
-          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute.",
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, audio media appended first",
           "status": "FAIL",
-          "message": "assert_equals: first active SourceBuffer is the audio one expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
+          "message": "assert_equals: first active SourceBuffer matches first SourceBuffer expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, video media appended first",
+          "status": "FAIL",
+          "message": "assert_equals: first active SourceBuffer matches first SourceBuffer expected object \"[object SourceBuffer]\" but got object \"[object SourceBuffer]\""
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: video is first sourceBuffer, audio media appended first",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: video is first sourceBuffer, video media appended first",
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.",
@@ -934,6 +1311,23 @@
         },
         {
           "name": "Active SourceBuffers list ignores changes to selected audio/video tracks that do not affect the activation of the SourceBuffer.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-addsourcebuffer-mode.html",
+      "subtests": [
+        {
+          "name": "addSourceBuffer() sets SourceBuffer.mode to 'segments' when the generate timestamps flag is false",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "addSourceBuffer() sets SourceBuffer.mode to 'sequence' when the generate timestamps flag is true",
           "status": "PASS",
           "message": null
         }
@@ -1104,7 +1498,7 @@
         {
           "name": "Test appending null.",
           "status": "FAIL",
-          "message": "assert_throws: appendBuffer(null) throws an exception. function \"function () { sourceBuffer.appendBuffer(null); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: appendBuffer(null) throws an exception. function \"function () { sourceBuffer.appendBuffer(null); }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
         },
         {
           "name": "Test appending after removeSourceBuffer().",
@@ -1170,6 +1564,18 @@
       "message": null
     },
     {
+      "test": "/media-source/mediasource-attach-stops-delaying-load-event.html",
+      "subtests": [
+        {
+          "name": "MediaSource attachment should immediately stop delaying the load event",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
       "test": "/media-source/mediasource-avtracks.html",
       "subtests": [
         {
@@ -1207,7 +1613,7 @@
         {
           "name": "Muxed content with different lengths",
           "status": "FAIL",
-          "message": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.000, 2.000) }\" but got \"{ [0.000, 2.043) }\""
+          "message": "assert_equals: mediaSource.activeSourceBuffers[0] expected \"{ [0.067, 2.043) }\" but got \"{ [0.000, 2.043) }\""
         },
         {
           "name": "Demuxed content with an empty buffered range on one SourceBuffer",
@@ -1553,47 +1959,50 @@
       "message": null
     },
     {
-      "test": "/media-source/mediasource-duration-buffered.html",
-      "subtests": [
-        {
-          "name": "MediaSource.duration: Truncating the duration succeeds when new duration is greater than the highest starting time of buffered coded frames",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time of buffered coded frames",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function ()\r\n                {\r\n                    mediaSource.duration = newDuration;\r\n                }\" did not throw"
-        },
-        {
-          "name": "MediaSource.duration: Truncating the duration throws an InvalidStateError exception when new duration is less than the highest starting time for at least some buffered coded frames",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function ()\r\n                    {\r\n                        mediaSource.duration = newDuration;\r\n                    }\" did not throw"
-        }
-      ],
-      "status": "TIMEOUT",
-      "message": null
-    },
-    {
       "test": "/media-source/mediasource-duration.html",
       "subtests": [
         {
-          "name": "MediaSource.duration: setting the duration does not trigger any SourceBuffer update",
+          "name": "Test seek starts on duration truncation below currentTime",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
+        },
+        {
+          "name": "Test appendBuffer completes previous seek to truncated duration",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
+        },
+        {
+          "name": "Test endOfStream completes previous seek to truncated duration",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"seeking\" but got \"timeupdate\""
+        },
+        {
+          "name": "Test setting same duration multiple times does not fire duplicate durationchange",
+          "status": "FAIL",
+          "message": "InvalidStateError"
+        },
+        {
+          "name": "Test setting the duration to less than the highest starting presentation timestamp will throw",
+          "status": "FAIL",
+          "message": "assert_throws: duration function \"function ()\r\n                  {\r\n                      mediaSource.duration = newDuration;\r\n                  }\" did not throw"
+        },
+        {
+          "name": "Truncating the duration throws an InvalidStateError exception when new duration is less than the highest buffered range start time of one of the track buffers",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { mediaSource.duration = newDuration; }\" did not throw"
+        },
+        {
+          "name": "Truncating the duration throws an InvalidStateError exception when new duration is less than a buffered coded frame presentation time",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { mediaSource.duration = newDuration; }\" did not throw"
+        },
+        {
+          "name": "Increasing the duration does not trigger any SourceBuffer update",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "MediaSource.duration: Increasing the duration does not trigger any SourceBuffer update",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MediaSource.duration: Increasing the duration during media playback does not trigger any SourceBuffer update",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MediaSource.duration: Setting the same duration multiple times does not fire duplicate durationchange events",
+          "name": "Increasing the duration during media playback does not trigger any SourceBuffer update",
           "status": "PASS",
           "message": null
         }
@@ -1637,14 +2046,9 @@
           "message": "Test timed out"
         },
         {
-          "name": "MediaSource.endOfStream(): buffered data not modified when endOfStream is called",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MediaSource.endOfStream(): duration set to the highest end time reported by the buffered attribute",
-          "status": "PASS",
-          "message": null
+          "name": "MediaSource.endOfStream(): duration and buffered range end time before and after endOfStream",
+          "status": "FAIL",
+          "message": "assert_equals: expected 6.042 but got 6.076"
         }
       ],
       "status": "TIMEOUT",
@@ -1763,6 +2167,21 @@
           "message": null
         },
         {
+          "name": "Test invalid MSE MIME media type \"xxx\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MSE MIME media type \"text/html\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MSE MIME media type \"image/jpeg\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "Test invalid mismatch between major type and codec ID \"audio/webm;codecs=\"vp8\"\"",
           "status": "PASS",
           "message": null
@@ -1794,11 +2213,6 @@
         },
         {
           "name": "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vorbis\"\"",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Test invalid mismatch between minor type and codec ID \"video/webm;codecs=\"mp4a.40.2\"\"",
           "status": "PASS",
           "message": null
         },
@@ -1915,14 +2329,14 @@
           "message": "assert_throws: function \"function () { mediaSource.clearLiveSeekableRange(); }\" threw object \"TypeError: Object doesn't support property or method 'clearLiveSeekableRange'\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
         },
         {
-          "name": "setLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating",
+          "name": "setLiveSeekableRange does not restrict to not currently updating",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () { mediaSource.setLiveSeekableRange(0, 1); }\" threw object \"TypeError: Object doesn't support property or method 'setLiveSeekableRange'\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
+          "message": "Object doesn't support property or method 'setLiveSeekableRange'"
         },
         {
-          "name": "clearLiveSeekableRange throws an InvalidStateError exception if a SourceBuffer is updating",
+          "name": "clearLiveSeekableRange does not restrict to not currently updating",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () { mediaSource.clearLiveSeekableRange(); }\" threw object \"TypeError: Object doesn't support property or method 'clearLiveSeekableRange'\" that is not a DOMException InvalidStateError: property \"code\" is equal to undefined, expected 11"
+          "message": "Object doesn't support property or method 'clearLiveSeekableRange'"
         },
         {
           "name": "setLiveSeekableRange throws a TypeError if start is negative",
@@ -2028,22 +2442,12 @@
           "message": null
         },
         {
-          "name": "error occurs with bogus blob URL (revoked MediaSource object URL) and element preload=none",
-          "status": "PASS",
-          "message": null
-        },
-        {
           "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=auto",
           "status": "PASS",
           "message": null
         },
         {
           "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=metadata",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=none",
           "status": "PASS",
           "message": null
         }
@@ -2102,7 +2506,7 @@
         {
           "name": "Test aborting a remove operation.",
           "status": "FAIL",
-          "message": "assert_equals: Event types match. expected \"abort\" but got \"updateend\""
+          "message": "assert_throws: abort function \"function ()\r\n              {\r\n                  sourceBuffer.abort();\r\n              }\" did not throw"
         },
         {
           "name": "Test remove with a start at the duration.",
@@ -2116,23 +2520,23 @@
         },
         {
           "name": "Test removing all appended data.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         },
         {
           "name": "Test removing beginning of appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [3.154, 6.042) }\" but got \"{ [3.019, 6.042) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         },
         {
           "name": "Test removing the middle of appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [0.000, 1.022) [3.154, 6.042) }\" but got \"{ [0.000, 0.998) [3.019, 6.042) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         },
         {
           "name": "Test removing the end of appended data.",
           "status": "FAIL",
-          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [0.000, 1.029) }\" but got \"{ [0.000, 0.998) }\""
+          "message": "assert_equals: Initial buffered range. expected \"{ [0.033, 6.042) }\" but got \"{ [0.000, 6.042) }\""
         }
       ],
       "status": "TIMEOUT",
@@ -2153,6 +2557,11 @@
         },
         {
           "name": "Test calling removeSourceBuffer() twice with the same object.",
+          "status": "FAIL",
+          "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
+        },
+        {
+          "name": "Test calling removeSourceBuffer() for a sourceBuffer belonging to a different mediaSource instance.",
           "status": "FAIL",
           "message": "Demande d’accès à la méthode ou aux propriétés inattendue."
         },
@@ -2198,7 +2607,7 @@
         {
           "name": "Test seeking to a new location before transitioning beyond HAVE_METADATA.",
           "status": "FAIL",
-          "message": "assert_true: mediaElement is seeking expected true got false"
+          "message": "assert_true: mediaElement is still seeking expected true got false"
         },
         {
           "name": "Test seeking to a new location during a pending seek.",
@@ -2237,7 +2646,7 @@
         {
           "name": "Test sequence AppendMode appendBuffer(first media segment)",
           "status": "FAIL",
-          "message": "assert_less_than_equal: sourceBuffer.buffered range ends at or before expected upper bound before EOS expected a number less than or equal to 0.465 but got 0.511"
+          "message": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.033 but got 0"
         },
         {
           "name": "Test sequence AppendMode appendBuffer(second media segment)",
@@ -2247,7 +2656,7 @@
         {
           "name": "Test sequence AppendMode appendBuffer(second media segment, then first media segment)",
           "status": "FAIL",
-          "message": "assert_equals: expectedTimestampOffset expected NaN but got 0.253"
+          "message": "assert_equals: expectedTimestampOffset expected 0.348 but got 0.253"
         }
       ],
       "status": "TIMEOUT",
@@ -2257,12 +2666,12 @@
       "test": "/media-source/mediasource-sourcebuffer-mode-timestamps.html",
       "subtests": [
         {
-          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw a TypeError exception and abort these steps.",
           "status": "FAIL",
-          "message": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\r\n                              sourceBuffer.mode = \"segments\";\r\n                          }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"InvalidStateError\")"
+          "message": "assert_throws: SourceBuffer#mode with generate timestamps flag true function \"function () {\r\n                              sourceBuffer.mode = \"segments\";\r\n                          }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
         },
         {
-          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw a TypeError exception and abort these steps.",
           "status": "FAIL",
           "message": "assert_unreached: Browser doesn't support the MIME used in this test: audio/mpeg Reached unreachable code"
         }
@@ -2392,12 +2801,12 @@
         {
           "name": "Test setting SourceBuffer.timestampOffset to NaN.",
           "status": "FAIL",
-          "message": "assert_throws: setting timestampOffset to NaN throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: setting timestampOffset to NaN throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
         },
         {
           "name": "Test setting SourceBuffer.timestampOffset to undefined.",
           "status": "FAIL",
-          "message": "assert_throws: setting timestampOffset to undefined throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: setting timestampOffset to undefined throws an exception. function \"function () { sourceBuffer.timestampOffset = value; }\" threw object \"InvalidAccessError\" (\"InvalidAccessError\") expected object \"[object Object]\" (\"TypeError\")"
         },
         {
           "name": "Test setting SourceBuffer.timestampOffset to null.",
@@ -2617,6 +3026,18 @@
         },
         {
           "name": "SourceBuffer#abort() (video/mp4) : If the readyState attribute of the parent media source is not in the \"open\" state then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-appendbuffer-quota-exceeded.html",
+      "subtests": [
+        {
+          "name": "Appending data repeatedly should fill up the buffer and throw a QuotaExceededError when buffer is full.",
           "status": "PASS",
           "message": null
         }

@@ -1,0 +1,236 @@
+{
+  "results": [
+    {
+      "test": "/annotation-protocol/server/server-manual.html",
+      "subtests": [
+        {
+          "name": "Container MUST end in a \"/\" character",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST support GET (check Allow on GET)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST support HEAD (check Allow on GET)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST support OPTIONS (check Allow on GET)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST have a Content-Type header with the application/ld+json media type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST response with the JSON-LD representation (by default)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST return a description of the container with BasicContainer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST return a description of the container with AnnotationCollection",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST return a Link header (rfc5988) on all responses",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST have an ETag header",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST have a Vary header with Accept in the value",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST advertise its type by including a link where the rel parameter value is type and the target IRI is the appropriate Container Type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST advertise that it imposes Annotation protocol specific constraints by including a link where the target IRI is http://www.w3.org/TR/annotation-protocol/, and the rel parameter value is the IRI http://www.w3.org/ns/ldp#constrainedBy",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST support HEAD method",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST support OPTIONS method",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Containers MUST include a Content-Location header with the IRI as its value",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Container's Content-Location and `id` MUST match",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotation Pages must have a link to the container they are part of, using the partOf property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotation Pages MUST have a link to the previous page in the sequence, using the prev property (if not the first page)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotation Pages MUST have a link to the next page in the sequence, using the next property (if not the last page)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotations MUST support GET (check Allow on GET)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotations MUST support HEAD (check Allow on GET)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotations MUST support OPTIONS (check Allow on GET)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotations MUST have a Content-Type header with the application/ld+json media type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotations MUST have a Link header entry where the target IRI is http://www.w3.org/ns/ldp#Resource and the rel parameter value is type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotations MUST have an ETag header",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotations MUST have a Vary header with Accept in the value",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotations MUST support HEAD method",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotations MUST support OPTIONS method",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Created Annotation MUST have an id property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Created Annotation MUST have an id that starts with the Container IRI",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotation Server MUST respond with a 201 Created code if the creation is successful",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Location header SHOULD match the id of the new Annotation",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotation update must be done with the PUT method",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotation deletion with DELETE method MUST return a 204 status",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Created Annotation MUST preserve any canonical IRI",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotation Server MUST respond with a 201 Created code if the creation is successful",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Annotation server SHOULD use HTTPS rather than HTTP",
+          "status": "FAIL",
+          "message": "assert_equals: Server is not using HTTPS expected \"http:\" but got \"https\""
+        },
+        {
+          "name": "SHOULD include the total property with the total number of annotations in the container",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SHOULD have a link to the first page of its contents using `first`",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SHOULD have a link to the last page of its contents using `last`",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Response contains annotations via `items` when it SHOULD NOT",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Response contains annotations via `ldp:contains` when it SHOULD NOT",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SHOULD include Prefer in the Vary header",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SHOULD NOT [receive] the Prefer header when requesting the page",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

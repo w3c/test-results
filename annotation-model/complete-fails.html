@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Annotation Model: Complete Failures</title>
+    <link rel='stylesheet' href='bootstrap.min.css'>
+    <link rel='stylesheet' href='analysis.css'>
+  </head>
+  <body>
+    <div class='container'>
+      <header>
+        <h1>Annotation Model: Complete Failures</h1>
+      </header>
+      <div>
+    <p>For an explanation of the implementation codes and other conventions used in this report, see
+        the <a href="README.md">README</a> file. Other notes:</p>
+    <ul>
+        <li>The Web Annotation Model details required and optional classes and properties for describing three classes of 
+            entities: Web Annotations, Collections of Web Annotations, and Pages of Web Annotations. 
+            Many applications choose to implement Web Annotations without implementing Collections and Pages. </li>
+        <li>A total of 7 tests files (each consisting of at between 10 and 74 sub-tests) were used for validating implementations against the Web Annotation Data Model.
+            Three of these test files were used to validate annotations. Two test files were used to validate Collections. Two test files were used to validate Pages.</li>
+        <li>During CR, 26 representative annotations from
+            10 annotation-only implementations were submitted for testing. These 26 annotations were checked against test files 1, 2 &amp; 3, the annotation tests, but were not
+            checked against test files 4, 5, 6, &amp; 7, the collection and page tests - hence the 10 empty columns for tests 4-7 in the test result matrix.</li> 
+        <li>Separately 2 collections and 2 pages from 2 additional implementations were submitted for testing. These collections and pages were not tested against test files 1, 2 &amp; 3 - hence, 
+            2 empty columns in the test result matrix for tests 1, 2, &amp; 3. </li> 
+        <li>Several applications implemented multiple kinds of annotations; typically each kind of annotation demonstrated
+            different (albeit overlapping) sets of model features. As mentioned, a total of 26 annotations from 10 implementations were tested. 
+            For each implementation, the automatically-generated test result matrix provided below combines into a single column the demonstrated characteristics of all 
+            that implematation's annotations submitted for testing.</li>
+        <li>As a way to facilitate and encourage application development, extra, granular tests of interest to developers and reporting 
+            on attributes and properties of annotations unrelated to CR Exit Criteria feature implementation were included. The 
+            Table immediately below, titled <em>Candidate Recommendation Exit Criteria</em>, summarizes and abstracts from the complete matrix of test results those pertinent
+            to the demonstration of major model features. </li>
+    </ul>
+    <h3>Candidate Recommendation Exit Criteria</h3>
+    <table class="table persist-area">
+        <thead>
+            <tr class="persist-header"><th style="width: 40%;">Required Feature (Exit Criteria)</th><th style="width: 50%;">Tests</th><th style="width: 10%;">Implementations</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>The Annotation class and required properties.</strong></td>
+                <td>Must pass all of:<ul>
+                    <li><a href="#test-file-0">annotationMusts, subtest 1:1</a> Implements <strong><em>@context</em> key</strong> and '<strong>http://www.w3.org/ns/anno.jsonld</strong>' is <strong>a value of <em>@context</em></strong></li>
+                    <li><a href="#subtest-0-0">annotationMusts, subtest 1:2</a> Implements <strong>Annotation <em>id</em> key</strong> which has a <strong>single value</strong> that is a <strong>string of format uri</strong></li>
+                    <li><a href="#subtest-0-1">annotationMusts, subtest 1:3</a> Implements  <strong>Annotation <em>type</em> key</strong> and '<strong>Annotation</strong>' is <strong>a value of <em>type</em></strong></li>
+                    <li><a href="#subtest-0-2">annotationMusts, subtest 1:4</a> Implements <strong><em>target</em> key</strong></li>
+                    <li><a href="#subtest-0-3">annotationMusts, subtest 1:5</a> Each <strong><em>target</em></strong> is one of a <strong>string of format uri</strong>, an <strong>External Web Resource</strong>, a <strong>Choice</strong> or <strong>Set</strong>, or a <strong>Specific Resource</strong></li>
+                    <li><a href="#subtest-0-4">annotationMusts, subtest 1:6</a> Annotation has a <strong><em>body</em> key</strong>, or a <strong><em>bodyValue</em> key</strong>, or <strong>neither</strong>, but <strong>NEVER both</strong></li></ul></td>
+                <td><strong>DG, EB, EF, HY, KM, MM, PW, RN, TK</strong></td>
+            </tr>
+            <tr>
+                <td><strong>The Agent class and required properties, as related to an Annotation.</strong></td>
+                <td>Must pass one of:<ul>
+                    <li><a href="#test-file-2">annotationsAgentOptionals, subtest 1:1</a> Implements <strong><em>creator</em> key</strong> which has one or more values, each of which is a <strong>string of format uri</strong> or an <strong>object</strong></li>
+                    <li><a href="#subtest-2-8">annotationsAgentOptionals, subtest 1:10</a> Implements <strong><em>generator</em> key</strong> which has one or more values, each of which is a <strong>string of format uri</strong> or an <strong>object</strong></li></ul></td>
+                <td><strong>EB, EF, HY, KM, MM, RN</strong></td>
+            </tr>
+            <tr>
+                <td><strong>The Agent class and required properties, as related to a resource used as the Body of an Annotation.</strong></td>
+                <td>Must pass: <ul>
+                    <li><a href="#subtest-2-17">annotationsAgentOptionals, subtest 1:19</a> Implements <strong>body <em>creator</em> key</strong> with one or more values</li></ul></td>
+                <td><strong>EB, PW</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Embedded TextualBody class and required properties.</strong></td>
+                <td>Must pass all of:<ul>
+                    <li><a href="#subtest-1-29">annotationOptionals, subtest 1:31</a> Implements <strong>Embedded Textual Body</strong> with <strong><em>value</em> key</strong> as a body of the Annotation</li>
+                    <li><a href="#subtest-0-24">annotationMusts, subtest 1:26</a> If an <strong>Embedded Textual Body</strong> is a body, it does NOT have an <strong><em>items</em> key</strong></li>
+                    <li><a href="#subtest-0-25">annotationMusts, subtest 1:27</a> If an <strong>Embedded Textual Body</strong> is a body, it does NOT have a <strong><em>source</em> key</strong></li></ul></td>
+                <td><strong>DG, EB, MM, PW</strong></td>
+            </tr>
+            <tr>
+                <td><strong>External web resources, used as the Body of an Annotation.</strong></td>
+                <td>Must pass all of:<ul>
+                    <li><a href="#subtest-1-25">annotationOptionals, subtest 1:30</a> Implements <strong>External Web Resource</strong> with <strong><em>id</em> key</strong> as a body of the Annotation</li>
+                    <li><a href="#subtest-0-19">annotationMusts, subtest 1:21</a> If an <strong>External Web Resource</strong> is a body, it does NOT have an <strong><em>items</em> key</strong></li>
+                    <li><a href="#subtest-0-20">annotationMusts, subtest 1:22</a> If an <strong>External Web Resource</strong> is a body, it does NOT have an <strong><em>purpose</em> key</strong></li></ul></td>
+                <td><strong>DG, EB, EF, HY, MM, PW, RN, TK</strong></td>
+            </tr>
+            <tr>
+                <td><strong>A Choice of resources, used as the Body of an Annotation.</strong></td>
+                <td>Must pass all of:<ul>
+                    <li><a href="#subtest-1-31">annotationOptionals, subtest 1:34</a> Implements <strong>Choice or Set</strong> with type and items key as a body</li>
+                    <li><a href="#subtest-0-21">annotationMusts, subtest 1:23</a> If a <strong>Choice or Set</strong> is a body, it does NOT have a <strong><em>value</em> key</strong></li> 
+                    <li><a href="#subtest-0-22">annotationMusts, subtest 1:24</a> If a <strong>Choice or Set</strong> is a body, it does NOT have a <strong><em>source</em> key</strong></li> 
+                    <li><a href="#subtest-0-23">annotationMusts, subtest 1:25</a> If a <strong>Choice or Set</strong> is a body, it does NOT have a <strong><em>purpose</em> key</strong></li></ul></td>
+                <td><strong>MM, PW, RN</strong></td>
+            </tr>
+            <tr>
+                <td><strong>The SpecificResource class and required properties, used as the Body of an Annotation.</strong></td>
+                <td>Must pass all of:<ul>
+                    <li><a href="#subtest-1-50">annotationOptionals, subtest 1:53</a> Implements <strong>Specific Resource</strong> with <strong><em>source</em> and at least one of <em>purpose, selector, state, style, renderedVia, scope</em> keys</strong> as a body of the Annotation</li>
+                    <li><a href="#subtest-0-26">annotationMusts, subtest 1:28</a> If a <strong>Specific Resource</strong> is a body, it does NOT have an <strong><em>items</em> key</strong></li>
+                    <li><a href="#subtest-0-27">annotationMusts, subtest 1:29</a> If a <strong>Specific Resource</strong> is a body, it does NOT have a <strong><em>value</em> key</strong></li>
+                    <li><a href="#subtest-0-42">annotationMusts, subtest 1:44</a> If present <strong>Specific Resource <em>selector</em> key</strong> has one or more values each of which is of <strong>format uri</strong> or an object having a <strong><em>type</em> key</strong> with a <strong>single value</strong> which is one of <strong>'FragmentSelector', 'CssSelector', 'XPathSelector', 'TextQuoteSelector', 'TextPositionSelector', 'DataPositionSelector', 'SvgSelector', 'RangeSelector'</strong></li>
+                    <li><a href="#subtest-0-43">annotationMusts, subtest 1:45</a> If present <strong>Specific Resource <em>state</em> key</strong> has one or more values each of which is of <strong>format uri</strong> or an object having a <strong><em>type</em> key</strong> with a <strong>single value</strong> which is one of <strong>'TimeState' or 'HttpRequestState'</strong></li>
+                    <li><a href="#subtest-0-45">annotationMusts, subtest 1:47</a> If any <strong>Specific Resource <em>styleClass</em> keys</strong> are present, a <strong><em>stylesheet</em> key</strong> (a key of Annotation) with a <strong>single value</strong> is also present</li>
+                </ul></td>
+                <td><strong>EB, RN</strong></td>
+            </tr>
+            <tr>
+                <td><strong>External web resources, used as the Target of an Annotation.</strong></td>
+                <td>Must pass all of:<ul>
+                    <li><a href="#subtest-1-40">annotationOptionals, subtest 1:51</a> Implements <strong>External Web Resource</strong> with <strong><em>id</em> key</strong> as a target of the Annotation</li>
+                    <li><a href="#subtest-0-34">annotationMusts, subtest 1:36</a> If an <strong>External Web Resource</strong> is a target, it does NOT have an <strong><em>items</em> key</strong></li>
+                    <li><a href="#subtest-0-35">annotationMusts, subtest 1:37</a> If an <strong>External Web Resource</strong> is a target, it does NOT have an <strong><em>purpose</em> key</strong></li></ul></td>
+                <td><strong>DG, EB, HY, KM, MM, RN, TK</strong></td>
+            </tr>
+            <tr>
+                <td><strong>The SpecificResource class and required properties, used as the Target of an Annotation.</strong></td>
+                <td>Must pass all of:<ul>
+                    <li><a href="#subtest-1-52">annotationOptionals, subtest 1:54</a> Implements <strong>Specific Resource</strong> with <strong><em>source</em> and at least one of <em>purpose, selector, state, style, renderedVia, scope</em> keys</strong> as a target of the Annotation</li>
+                    <li><a href="#subtest-0-39">annotationMusts, subtest 1:41</a> If a <strong>Specific Resource Target</strong> is a target, it does NOT have an <strong><em>items</em> key</strong></li>
+                    <li><a href="#subtest-0-40">annotationMusts, subtest 1:42</a> If a <strong>Specific Resource</strong> is a target, it does NOT have a <strong><em>value</em> key</strong></li>
+                    <li><a href="#subtest-0-42">annotationMusts, subtest 1:44</a> If present <strong>Specific Resource <em>selector</em> key</strong> has one or more values each of which is of <strong>format uri</strong> or an object having a <strong><em>type</em> key</strong> with a <strong>single value</strong> which is one of <strong>'FragmentSelector', 'CssSelector', 'XPathSelector', 'TextQuoteSelector', 'TextPositionSelector', 'DataPositionSelector', 'SvgSelector', 'RangeSelector'</strong></li>
+                    <li><a href="#subtest-0-43">annotationMusts, subtest 1:45</a> If present <strong>Specific Resource <em>state</em> key</strong> has one or more values each of which is of <strong>format uri</strong> or an object having a <strong><em>type</em> key</strong> with a <strong>single value</strong> which is one of <strong>'TimeState' or 'HttpRequestState'</strong></li>
+                    <li><a href="#subtest-0-45">annotationMusts, subtest 1:47</a> If any <strong>Specific Resource <em>styleClass</em> keys</strong> are present, a <strong><em>stylesheet</em> key</strong> (a key of Annotation) with a <strong>single value</strong> is also present</li>
+                </ul></td>
+                <td><strong>DG, EB, KM, MM, RN</strong></td>
+            </tr>
+            <tr>
+                <td><strong>The AnnotationCollection class and required properties.</strong></td>
+                <td>Must pass all of:<ul>
+                    <li><a href="#test-file-3">collectionMusts, subtest 1:1</a> Implements <strong><em>@context</em> key</strong> and '<strong>http://www.w3.org/ns/anno.jsonld</strong>' is <strong>a value of <em>@context</em></strong></li>
+                    <li><a href="#subtest-3-0">collectionMusts, subtest 1:2</a> Implements <strong>Annotation Collection <em>id</em> key</strong> which has a <strong>single value</strong> that is a <strong>string of format uri</strong></li>
+                    <li><a href="#subtest-3-1">collectionMusts, subtest 1:3</a> Implements <strong>Annotation Collection <em>type</em> key</strong> such that '<strong>AnnotationCollection</strong>' is <strong>a value of <em>type</em></strong></li>
+                    <li><a href="#subtest-3-4">collectionMusts, subtest 1:6</a> <strong>Annotation Collection has <em>first</em> key</strong>, or no <strong><em>total</em> key</strong>, or <strong><em>total</em> key</strong> with value of zero</li></ul></td>
+                <td><strong>CC, RI</strong></td>
+            </tr>
+            <tr><td><strong>The AnnotationPage class and required properties.</strong></td>
+                <td>Must pass all of:<ul>
+                    <li><a href="#test-file-5">pageMusts, subtest 1:1</a> Implements <strong>Annotation Page</strong> (or Annotation Collection for embedded Page) <strong><em>@context</em> key</strong> and '<strong>http://www.w3.org/ns/anno.jsonld</strong>' is <strong>a value of <em>@context</em></strong></li>
+                    <li><a href="#subtest-5-0">pageMusts, subtest 1:2</a> Implements <strong>Annotation Page <em>id</em> key</strong> which has a <strong>single value</strong> that is a <strong>string of format uri</strong></li>
+                    <li><a href="#subtest-5-1">pageMusts, subtest 1:3</a> Implements <strong>Annotation Page <em>type</em> key</strong> such that '<strong>AnnotationPage</strong>' is <strong>a value of <em>type</em></strong></li>
+                    <li><a href="#subtest-5-2">pageMusts, subtest 1:4</a> Implements <strong>Annotation Page <em>items</em> key</strong> such that value of items key is an array of strings of format uri and/or objects of type Annotation</li></ul></td>
+                <td><strong>CC, RI</strong></td>
+            </tr>
+        </tbody>
+    </table>        
+</div>
+
+      <p><strong>Completely failed files</strong>: 4; <strong>Completely failed subtests</strong>: 0; <strong>Failure level</strong>: 0/166 (0.00%)</p>
+      <h3>Test Files</h3>
+<ol class='toc'></ol>
+      <table class='table persist-area'>
+        <thead><tr class='persist-header'><th>Test <span class='message_toggle'>Show/Hide Messages</span></th><th>CC</th><th>DG</th><th>EB</th><th>EF</th><th>HY</th><th>KM</th><th>MM</th><th>PN</th><th>PW</th><th>RI</th><th>RN</th><th>TK</th></tr></thead>
+
+      </table>
+    </div>
+    <script src='jquery.min.js'></script>
+    <script src='sticky-headers.js'></script>
+    <script type='application/javascript'>
+      window.setTimeout(function() { 
+ $('.message_toggle').show();
+ $('.messages').toggle(); 
+ $('.message_toggle').on('click', function() {
+$('.messages').toggle();
+});
+}, 1000);
+    </script>
+  </body>
+</html>

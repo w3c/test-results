@@ -1,0 +1,2474 @@
+{
+  "results": [
+    {
+      "test": "/media-source/SourceBuffer-abort-removed.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort (video/webm; codecs=\"vorbis,vp8\") : if this object has been removed from the sourceBuffers attribute of the parent media source, then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer#abort (video/mp4) : if this object has been removed from the sourceBuffers attribute of the parent media source, then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/SourceBuffer-abort-updating.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort() (video/webm; codecs=\"vorbis,vp8\") : Check the algorithm when the updating attribute is true.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer#abort() (video/mp4) : Check the algorithm when the updating attribute is true.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/SourceBuffer-abort.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort() (video/webm; codecs=\"vorbis,vp8\"): Check the values of appendWindowStart and appendWindowEnd.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer#abort() (video/mp4): Check the values of appendWindowStart and appendWindowEnd.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/URL-createObjectURL-null.html",
+      "subtests": [
+        {
+          "name": "URL.createObjectURL(null)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/URL-createObjectURL-revoke.html",
+      "subtests": [
+        {
+          "name": "Check revoking behavior of URL.revokeObjectURL(url).",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check referenced MediaSource can open after URL.revokeObjectURL(url).",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check auto-revoking behavior with URL.createObjectURL(MediaSource).",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/URL-createObjectURL.html",
+      "subtests": [
+        {
+          "name": "URL.createObjectURL(mediaSource) should return a unique Blob URI.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/interfaces.html",
+      "subtests": [
+        {
+          "name": "URL interface: operation createObjectURL(MediaSource)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AudioTrack interface: attribute sourceBuffer",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"AudioTrack\" expected property \"AudioTrack\" missing"
+        },
+        {
+          "name": "VideoTrack interface: attribute sourceBuffer",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"VideoTrack\" expected property \"VideoTrack\" missing"
+        },
+        {
+          "name": "TextTrack interface: attribute sourceBuffer",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"sourceBuffer\" expected true got false"
+        },
+        {
+          "name": "MediaSource interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute sourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute activeSourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute readyState",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute duration",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute onsourceopen",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute onsourceended",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: attribute onsourceclose",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onsourceclose\" expected true got false"
+        },
+        {
+          "name": "MediaSource interface: operation addSourceBuffer(DOMString)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: operation removeSourceBuffer(SourceBuffer)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: operation endOfStream(EndOfStreamError)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: operation setLiveSeekableRange(double,double)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: operation clearLiveSeekableRange()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: operation isTypeSupported(DOMString)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource must be primary interface of mediaSource",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of mediaSource",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"sourceBuffers\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"activeSourceBuffers\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"readyState\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"duration\" with the proper type (3)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"onsourceopen\" with the proper type (4)",
+          "status": "FAIL",
+          "message": "Unrecognized type EventHandler"
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"onsourceended\" with the proper type (5)",
+          "status": "FAIL",
+          "message": "Unrecognized type EventHandler"
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"onsourceclose\" with the proper type (6)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onsourceclose\" not found in prototype chain"
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"addSourceBuffer\" with the proper type (7)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: calling addSourceBuffer(DOMString) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"removeSourceBuffer\" with the proper type (8)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: calling removeSourceBuffer(SourceBuffer) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"endOfStream\" with the proper type (9)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: calling endOfStream(EndOfStreamError) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"setLiveSeekableRange\" with the proper type (10)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: calling setLiveSeekableRange(double,double) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"clearLiveSeekableRange\" with the proper type (11)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: mediaSource must inherit property \"isTypeSupported\" with the proper type (12)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource interface: calling isTypeSupported(DOMString) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: mediaSource must inherit property \"addEventListener\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: mediaSource must inherit property \"removeEventListener\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: mediaSource must inherit property \"dispatchEvent\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling dispatchEvent(Event) on mediaSource with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute mode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute updating",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute buffered",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute timestampOffset",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute audioTracks",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"audioTracks\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer interface: attribute videoTracks",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"videoTracks\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer interface: attribute textTracks",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"textTracks\" expected true got false"
+        },
+        {
+          "name": "SourceBuffer interface: attribute appendWindowStart",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute appendWindowEnd",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute onupdatestart",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute onupdate",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute onupdateend",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute onerror",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: attribute onabort",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: operation appendBuffer(BufferSource)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: operation abort()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: operation remove(double,unrestricted double)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer must be primary interface of sourceBuffer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of sourceBuffer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"mode\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"updating\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"buffered\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"timestampOffset\" with the proper type (3)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"audioTracks\" with the proper type (4)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"audioTracks\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"videoTracks\" with the proper type (5)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"videoTracks\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"textTracks\" with the proper type (6)",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"textTracks\" not found in prototype chain"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendWindowStart\" with the proper type (7)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendWindowEnd\" with the proper type (8)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onupdatestart\" with the proper type (9)",
+          "status": "FAIL",
+          "message": "Unrecognized type EventHandler"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onupdate\" with the proper type (10)",
+          "status": "FAIL",
+          "message": "Unrecognized type EventHandler"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onupdateend\" with the proper type (11)",
+          "status": "FAIL",
+          "message": "Unrecognized type EventHandler"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onerror\" with the proper type (12)",
+          "status": "FAIL",
+          "message": "Unrecognized type EventHandler"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"onabort\" with the proper type (13)",
+          "status": "FAIL",
+          "message": "Unrecognized type EventHandler"
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"appendBuffer\" with the proper type (14)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: calling appendBuffer(BufferSource) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"abort\" with the proper type (15)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: sourceBuffer must inherit property \"remove\" with the proper type (16)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer interface: calling remove(double,unrestricted double) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: sourceBuffer must inherit property \"addEventListener\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: sourceBuffer must inherit property \"removeEventListener\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: sourceBuffer must inherit property \"dispatchEvent\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling dispatchEvent(Event) on sourceBuffer with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: attribute length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: attribute onaddsourcebuffer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: attribute onremovesourcebuffer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList must be primary interface of mediaSource.sourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of mediaSource.sourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"length\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"onaddsourcebuffer\" with the proper type (1)",
+          "status": "FAIL",
+          "message": "Unrecognized type EventHandler"
+        },
+        {
+          "name": "SourceBufferList interface: mediaSource.sourceBuffers must inherit property \"onremovesourcebuffer\" with the proper type (2)",
+          "status": "FAIL",
+          "message": "Unrecognized type EventHandler"
+        },
+        {
+          "name": "EventTarget interface: mediaSource.sourceBuffers must inherit property \"addEventListener\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling addEventListener(DOMString,EventListener,boolean) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: mediaSource.sourceBuffers must inherit property \"removeEventListener\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling removeEventListener(DOMString,EventListener,boolean) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: mediaSource.sourceBuffers must inherit property \"dispatchEvent\" with the proper type (2)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "EventTarget interface: calling dispatchEvent(Event) on mediaSource.sourceBuffers with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-activesourcebuffers.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer added to activeSourceBuffers list when its only audio track gets loaded (and thus becomes enabled).",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer added to activeSourceBuffers list when its only video track gets loaded (and thus becomes selected).",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, audio media appended first",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: audio is first sourceBuffer, video media appended first",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: video is first sourceBuffer, audio media appended first",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers must appear in the same order as they appear in the sourceBuffers attribute: video is first sourceBuffer, video media appended first",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Active SourceBuffers list reflects changes to selected audio/video tracks associated with separate SourceBuffers.",
+          "status": "FAIL",
+          "message": "object is undefined"
+        },
+        {
+          "name": "Active SourceBuffers list ignores changes to selected audio/video tracks that do not affect the activation of the SourceBuffer.",
+          "status": "FAIL",
+          "message": "object is undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-addsourcebuffer-mode.html",
+      "subtests": [
+        {
+          "name": "addSourceBuffer() sets SourceBuffer.mode to 'segments' when the generate timestamps flag is false",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "addSourceBuffer() sets SourceBuffer.mode to 'sequence' when the generate timestamps flag is true",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser does not support the audio/aac and audio/mpeg MIME types used in this test Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-addsourcebuffer.html",
+      "subtests": [
+        {
+          "name": "Test addSourceBuffer() in 'ended' state.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with empty type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with unsupported type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with Vorbis and VP8",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with Vorbis and VP8 in separate SourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() video only",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() audio only",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with AAC and H.264",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() with AAC and H.264 in separate SourceBuffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() QuotaExceededError.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-append-buffer.html",
+      "subtests": [
+        {
+          "name": "Test SourceBuffer.appendBuffer() event dispatching.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test SourceBuffer.appendBuffer() call during a pending appendBuffer().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test SourceBuffer.abort() call during a pending appendBuffer().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test SourceBuffer.appendBuffer() triggering an 'ended' to 'open' transition.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test zero byte SourceBuffer.appendBuffer() call triggering an 'ended' to 'open' transition.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.removeSourceBuffer() call during a pending appendBuffer().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set MediaSource.duration during a pending appendBuffer() for one of its SourceBuffers.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.endOfStream() during a pending appendBuffer() for one of its SourceBuffers.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set SourceBuffer.timestampOffset during a pending appendBuffer().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending an empty ArrayBufferView.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending a neutered ArrayBufferView.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending an empty ArrayBuffer.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending a neutered ArrayBuffer.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appendBuffer with partial init segments.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appendBuffer with partial media segments.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test abort in the middle of an initialization segment.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test abort after removing sourcebuffer.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test abort after readyState is ended following init segment and media segment.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test abort after appendBuffer update ends.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appending after removeSourceBuffer().",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-appendbuffer-quota-exceeded.html",
+      "subtests": [
+        {
+          "name": "Appending data repeatedly should fill up the buffer and throw a QuotaExceededError when buffer is full.",
+          "status": "FAIL",
+          "message": "assert_false: unexpected gap in buffered ranges. expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-appendwindow.html",
+      "subtests": [
+        {
+          "name": "Test correctly reset appendWindowStart and appendWindowEnd values",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set wrong values to appendWindowStart and appendWindowEnd.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set correct values to appendWindowStart and appendWindowEnd.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appendwindow throw error when mediasource object is not associated with a sourebuffer.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test set appendWindowStart and appendWindowEnd when source buffer updating.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appendWindowStart and appendWindowEnd value after a sourceBuffer.abort().",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test read appendWindowStart and appendWindowEnd initial values.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-attach-stops-delaying-load-event.html",
+      "subtests": [
+        {
+          "name": "MediaSource attachment should immediately stop delaying the load event",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-avtracks.html",
+      "subtests": [
+        {
+          "name": "Check that media tracks and their properties are populated properly",
+          "status": "FAIL",
+          "message": "object is undefined"
+        },
+        {
+          "name": "Media tracks must be removed when the SourceBuffer is removed from the MediaSource",
+          "status": "FAIL",
+          "message": "sourceBuffer.audioTracks is undefined"
+        },
+        {
+          "name": "Media tracks must be removed when the HTMLMediaElement.src is changed",
+          "status": "FAIL",
+          "message": "sourceBuffer.audioTracks is undefined"
+        },
+        {
+          "name": "Media tracks must be removed when HTMLMediaElement.load() is called",
+          "status": "FAIL",
+          "message": "sourceBuffer.audioTracks is undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-buffered.html",
+      "subtests": [
+        {
+          "name": "Demuxed content with different lengths",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Muxed content with different lengths",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Demuxed content with an empty buffered range on one SourceBuffer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Muxed content empty buffered ranges.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get buffered range when sourcebuffer is empty.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get buffered range when only init segment is appended.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get buffered range after removing sourcebuffer.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-closed.html",
+      "subtests": [
+        {
+          "name": "Test attribute values on a closed MediaSource object.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test addSourceBuffer() while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removeSourceBuffer() while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test endOfStream() while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test endOfStream(decode) while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test endOfStream(network) while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting duration while closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting duration while open->closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test getting duration while open->closed.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test sourcebuffer.abort when closed.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-a-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 audio-only bitrate changes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-av-audio-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 audio bitrate changes in multiplexed content.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-av-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 frame size changes in multiplexed content.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-av-video-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video bitrate changes in multiplexed content.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-v-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video-only bitrate changes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-v-framerate.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video-only frame rate changes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-mp4-v-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests mp4 video-only frame size changes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-a-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm audio-only bitrate changes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-av-audio-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm audio bitrate changes in multiplexed content.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-av-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests webm frame size changes in multiplexed content.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-av-video-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm video bitrate changes in multiplexed content.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-v-bitrate.html",
+      "subtests": [
+        {
+          "name": "Tests webm video-only bitrate changes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-v-framerate.html",
+      "subtests": [
+        {
+          "name": "Tests webm video-only frame rate changes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-config-change-webm-v-framesize.html",
+      "subtests": [
+        {
+          "name": "Tests webm video-only frame size changes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-detach.html",
+      "subtests": [
+        {
+          "name": "Test media.load() before appending data will trigger MediaSource detaching from a media element.",
+          "status": "FAIL",
+          "message": "assert_equals: readyState is \"closed\" expected \"closed\" but got \"open\""
+        },
+        {
+          "name": "Test media.load() after appending data will trigger MediaSource detaching from a media element.",
+          "status": "FAIL",
+          "message": "assert_greater_than: media readyState is greater than \"HAVE_NOTHING\" expected a number greater than 0 but got 0"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-duration-boundaryconditions.html",
+      "subtests": [
+        {
+          "name": "Set duration to 2^31 - 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to Number.MAX_VALUE",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to Number.MIN_VALUE",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to Number.MAX_VALUE - 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to Number.MIN_VALUE - 1",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to Number.POSITIVE_INFINITY",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to Number.NEGATIVE_INFINITY",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to lowest value.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to a negative double.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to a positive double.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to zero",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Set duration to NaN",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-duration.html",
+      "subtests": [
+        {
+          "name": "Test seek starts on duration truncation below currentTime",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test appendBuffer completes previous seek to truncated duration",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test endOfStream completes previous seek to truncated duration",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting same duration multiple times does not fire duplicate durationchange",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting the duration to less than the highest starting presentation timestamp will throw",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Truncating the duration throws an InvalidStateError exception when new duration is less than the highest buffered range start time of one of the track buffers",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Truncating the duration throws an InvalidStateError exception when new duration is less than a buffered coded frame presentation time",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Increasing the duration does not trigger any SourceBuffer update",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Increasing the duration during media playback does not trigger any SourceBuffer update",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-endofstream-invaliderror.html",
+      "subtests": [
+        {
+          "name": "Test MediaSource.endOfStream() with invalid non-empty error string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.endOfStream() with invalid empty error string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test MediaSource.endOfStream() with invalid null error parameter.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-endofstream.html",
+      "subtests": [
+        {
+          "name": "MediaSource.endOfStream(): duration truncated to 0 when there are no buffered coded frames",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "MediaSource.endOfStream(): media element notified that it now has all of the media data",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "MediaSource.endOfStream(): duration and buffered range end time before and after endOfStream",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-errors.html",
+      "subtests": [
+        {
+          "name": "Appending media segment before the first initialization segment.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 4 but got 3"
+        },
+        {
+          "name": "Signaling 'decode' error via endOfStream() before initialization segment has been appended.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 4 but got 3"
+        },
+        {
+          "name": "Signaling 'network' error via endOfStream() before initialization segment has been appended.",
+          "status": "FAIL",
+          "message": "assert_equals: expected 4 but got 2"
+        },
+        {
+          "name": "Signaling 'decode' error via endOfStream() after initialization segment has been appended and the HTMLMediaElement has reached HAVE_METADATA.",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"ended\" but got \"closed\""
+        },
+        {
+          "name": "Signaling 'network' error via endOfStream() after initialization segment has been appended and the HTMLMediaElement has reached HAVE_METADATA.",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"ended\" but got \"closed\""
+        },
+        {
+          "name": "Signaling 'decode' error via segment parser loop algorithm after initialization segment and partial media segment has been appended.",
+          "status": "FAIL",
+          "message": "assert_equals: Event types match. expected \"error\" but got \"updateend\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-getvideoplaybackquality.html",
+      "subtests": [
+        {
+          "name": "Test HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test the totalFrameDelay attribute of HTMLVideoElement.getVideoPlaybackQuality() with MediaSource API",
+          "status": "FAIL",
+          "message": "assert_greater_than_equal: totalFrameDelay >= 0 expected a number but got a \"undefined\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-is-type-supported.html",
+      "subtests": [
+        {
+          "name": "Test invalid MIME format \"video\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\"\"\"",
+          "status": "FAIL",
+          "message": "assert_equals: supported expected false but got true"
+        },
+        {
+          "name": "Test invalid MIME format \"video/webm;codecs=\",\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MIME format \"null\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MSE MIME media type \"xxx\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MSE MIME media type \"text/html\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid MSE MIME media type \"image/jpeg\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between major type and codec ID \"audio/webm;codecs=\"vp8\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between major type and codec ID \"audio/mp4;codecs=\"avc1.4d001e\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"audio/mp4;codecs=\"vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"audio/webm;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vp8\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/webm;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid mismatch between minor type and codec ID \"video/mp4;codecs=\"vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a.40\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a.40.\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test invalid codec ID \"audio/mp4;codecs=\"mp4a.67.3\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vp8\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vp8,vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"video/webm;codecs=\"vorbis, vp8\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"audio/webm;codecs=\"vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid WebM type \"AUDIO/WEBM;CODECS=\"vorbis\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.4d001e\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.42001e\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"audio/mp4;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"audio/mp4;codecs=\"mp4a.40.5\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"audio/mp4;codecs=\"mp4a.67\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.4d001e,mp4a.40.2\"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"mp4a.40.2 , avc1.4d001e \"\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test valid MP4 type \"video/mp4;codecs=\"avc1.4d001e,mp4a.40.5\"\"",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-liveseekable.html",
+      "subtests": [
+        {
+          "name": "setLiveSeekableRange throws an InvalidStateError exception if the readyState attribute is not 'open'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "clearLiveSeekableRange throws an InvalidStateError exception if the readyState attribute is not 'open'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "setLiveSeekableRange does not restrict to not currently updating",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "clearLiveSeekableRange does not restrict to not currently updating",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "setLiveSeekableRange throws a TypeError if start is negative",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "setLiveSeekableRange throws a TypeError if start is greater than end",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "setLiveSeekableRange returns with no error when conditions are correct",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "clearLiveSeekableRange returns with no error when conditions are correct",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTMLMediaElement.seekable returns the live seekable range or an empty range if that range was cleared when nothing is buffered",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "HTMLMediaElement.seekable returns the union of the buffered range and the live seekable range, when set",
+          "status": "FAIL",
+          "message": "assert_equals: The buffered attribute contains a single range. expected 1 but got 0"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-multiple-attach.html",
+      "subtests": [
+        {
+          "name": "Test exactly one succeeds when two MediaElements attach to same MediaSource",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test that MediaSource can reattach if closed first",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-play-then-seek-back.html",
+      "subtests": [
+        {
+          "name": "Test playing then seeking back.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-play.html",
+      "subtests": [
+        {
+          "name": "Test normal playback case with MediaSource API",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-preload.html",
+      "subtests": [
+        {
+          "name": "sourceopen occurs with element preload=auto",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sourceopen occurs with element preload=metadata",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "sourceopen occurs with element preload=none",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "error occurs with bogus blob URL (revoked MediaSource object URL) and element preload=auto",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "error occurs with bogus blob URL (revoked MediaSource object URL) and element preload=metadata",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=auto",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "error occurs with bogus blob URL (corrupted MediaSource object URL) and element preload=metadata",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-remove.html",
+      "subtests": [
+        {
+          "name": "Test remove with an negative start.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with non-finite start.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a start beyond the duration.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a start larger than the end.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a NEGATIVE_INFINITY end.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a NaN end.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove after SourceBuffer removed from mediaSource.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a NaN duration.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove while update pending.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test aborting a remove operation.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove with a start at the duration.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test remove transitioning readyState from 'ended' to 'open'.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removing all appended data.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removing beginning of appended data.",
+          "status": "FAIL",
+          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [3.187, 6.076) }\" but got \"{ [3.220, 6.076) }\""
+        },
+        {
+          "name": "Test removing the middle of appended data.",
+          "status": "FAIL",
+          "message": "assert_equals: Buffered ranges after remove(). expected \"{ [0.033, 0.996) [3.187, 6.076) }\" but got \"{ [0.033, 0.996) [3.220, 6.076) }\""
+        },
+        {
+          "name": "Test removing the end of appended data.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-removesourcebuffer.html",
+      "subtests": [
+        {
+          "name": "Test addSourceBuffer(), removeSourceBuffer(), addSourceBuffer() sequence.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removeSourceBuffer() with null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test calling removeSourceBuffer() twice with the same object.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test calling removeSourceBuffer() for a sourceBuffer belonging to a different mediaSource instance.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test calling removeSourceBuffer() in ended state.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test removesourcebuffer event on activeSourceBuffers.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test abort event when removeSourceBuffer() called while SourceBuffer is updating",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-seek-beyond-duration.html",
+      "subtests": [
+        {
+          "name": "Test seeking beyond updated media duration.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test seeking beyond media duration.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-seek-during-pending-seek.html",
+      "subtests": [
+        {
+          "name": "Test seeking to a new location before transitioning beyond HAVE_METADATA.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test seeking to a new location during a pending seek.",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-seekable.html",
+      "subtests": [
+        {
+          "name": "Get seekable time ranges when the sourcebuffer is empty.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get seekable time ranges after init segment received.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Get seekable time ranges on an infinite stream.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sequencemode-append-buffer.html",
+      "subtests": [
+        {
+          "name": "Test sequence AppendMode appendBuffer(first media segment)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test sequence AppendMode appendBuffer(second media segment)",
+          "status": "FAIL",
+          "message": "assert_equals: sourceBuffer.buffered has 1 range before EOS expected 1 but got 0"
+        },
+        {
+          "name": "Test sequence AppendMode appendBuffer(second media segment, then first media segment)",
+          "status": "FAIL",
+          "message": "assert_equals: sourceBuffer.buffered range begins where expected before EOS expected 0.046 but got 0.381"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebuffer-mode-timestamps.html",
+      "subtests": [
+        {
+          "name": "audio/aac : If generate timestamps flag equals true and new mode equals \"segments\", then throw a TypeError exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: audio/aac Reached unreachable code"
+        },
+        {
+          "name": "audio/mpeg : If generate timestamps flag equals true and new mode equals \"segments\", then throw a TypeError exception and abort these steps.",
+          "status": "FAIL",
+          "message": "assert_unreached: Browser doesn't support the MIME used in this test: audio/mpeg Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebuffer-mode.html",
+      "subtests": [
+        {
+          "name": "Test initial value of SourceBuffer.mode is \"segments\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting a removed SourceBuffer's mode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode while still updating",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode triggers parent MediaSource 'ended' to 'open' transition.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.mode and SourceBuffer.timestampOffset while parsing media segment.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebuffer-trackdefaults.html",
+      "subtests": [
+        {
+          "name": "Test round-trip of empty SourceBuffer.trackDefaults",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        },
+        {
+          "name": "Test round-trip of non-empty SourceBuffer.trackDefaults",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        },
+        {
+          "name": "Test setting trackDefaults on an already-removed SourceBuffer",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        },
+        {
+          "name": "Test setting trackDefaults on a SourceBuffer that is updating",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        },
+        {
+          "name": "Test setting null SourceBuffer.trackDefaults",
+          "status": "FAIL",
+          "message": "actual is undefined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-sourcebufferlist.html",
+      "subtests": [
+        {
+          "name": "Test SourceBufferList getter method",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test SourceBufferList event dispatching.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test that only 1 removesourcebuffer event fires on each SourceBufferList when the MediaSource closes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-timestamp-offset.html",
+      "subtests": [
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to a positive number.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to a negative number.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to zero.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to positive infinity.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to negative infinity.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to NaN.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to undefined.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to false.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to true.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to a number string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting SourceBuffer.timestampOffset to an empty string.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting timestampOffset in 'ended' state causes a transition to 'open'.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test getting the initial value of timestampOffset.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test setting timestampoffset after removing the sourcebuffer.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-trackdefault.html",
+      "subtests": [
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'alternative', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'descriptions', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'main', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'main-desc', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'translation', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind 'commentary', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid audio kinds: type 'audio', language 'en-US', label 'audio label', kind '', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'alternative', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'captions', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'main', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'sign', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'subtitles', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind 'commentary', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid video kinds: type 'video', language 'en-US', label 'video label', kind '', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'subtitles', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'captions', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'descriptions', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'chapters', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test valid text kinds: type 'text', language 'en-US', label 'text label', kind 'metadata', byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test mixed valid and invalid audio kinds: type 'audio', language 'en-US', label 'audio label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test mixed valid and invalid video kinds: type 'video', language 'en-US', label 'video label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test mixed valid and invalid text kinds: type 'text', language 'en-US', label 'text label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test invalid 'type' parameter type passed to TrackDefault constructor: type 'invalid type', language 'en-US', label 'label', multiple kinds, byteStreamTrackID '1'",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test invalid 'kinds' parameter type passed to TrackDefault constructor",
+          "status": "FAIL",
+          "message": "assert_throws: TrackDefault construction threw an exception function \"function () { new TrackDefault(type, language, label, kinds, byteStreamTrackID); }\" threw object \"ReferenceError: TrackDefault is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Test updating the retval of TrackDefault.kinds does not modify TrackDefault.kinds",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-trackdefaultlist.html",
+      "subtests": [
+        {
+          "name": "Test track default list construction, length, and indexed property getter",
+          "status": "FAIL",
+          "message": "TrackDefault is not defined"
+        },
+        {
+          "name": "Test empty track default list construction with and without optional trackDefaults parameter",
+          "status": "FAIL",
+          "message": "TrackDefaultList is not defined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/SourceBuffer-abort-readyState.html",
+      "subtests": [
+        {
+          "name": "SourceBuffer#abort() (video/webm; codecs=\"vorbis,vp8\") : If the readyState attribute of the parent media source is not in the \"open\" state then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "SourceBuffer#abort() (video/mp4) : If the readyState attribute of the parent media source is not in the \"open\" state then throw an INVALID_STATE_ERR exception and abort these steps.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-appendbuffer-quota-exceeded.html",
+      "subtests": [
+        {
+          "name": "Appending data repeatedly should fill up the buffer and throw a QuotaExceededError when buffer is full.",
+          "status": "FAIL",
+          "message": "assert_false: unexpected gap in buffered ranges. expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/media-source/mediasource-redundant-seek.html",
+      "subtests": [
+        {
+          "name": "Test redundant fully prebuffered seek",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

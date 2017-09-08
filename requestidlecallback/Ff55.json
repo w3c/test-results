@@ -1,0 +1,204 @@
+{
+  "results": [
+    {
+      "test": "/html/webappapis/idle-callbacks/basic.html",
+      "subtests": [
+        {
+          "name": "window.requestIdleCallback is defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "window.cancelIdleCallback is defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "window.requestIdleCallback() returns a number",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "window.cancelIdleCallback() returns undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "requestIdleCallback schedules callbacks",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "cancelIdleCallback cancels callbacks",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html/webappapis/idle-callbacks/callback-exception.html",
+      "subtests": [
+        {
+          "name": "requestIdleCallback callback exceptions are reported to error handler",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html/webappapis/idle-callbacks/callback-idle-periods.html",
+      "subtests": [
+        {
+          "name": "requestIdleCallback can run multiple different requestIdleCallback callbacks in the same idle period.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check that if an idle callback calls requestIdleCallback the new callback doesn't run in the current idle period.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html/webappapis/idle-callbacks/callback-iframe.html",
+      "subtests": [
+        {
+          "name": "Untitled",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html/webappapis/idle-callbacks/callback-invoked.html",
+      "subtests": [
+        {
+          "name": "requestIdleCallback callback is invoked at least once before the timeout",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html/webappapis/idle-callbacks/callback-multiple-calls.html",
+      "subtests": [
+        {
+          "name": "requestIdleCallback callbacks should be invoked in order (called iteratively)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "requestIdleCallback callbacks should be invoked in order (called recursively)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html/webappapis/idle-callbacks/callback-timeout-with-raf.html",
+      "subtests": [
+        {
+          "name": "requestIdleCallback not scheduled when event loop is busy.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "requestIdleCallback scheduled with timeout when event loop is busy.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html/webappapis/idle-callbacks/callback-timeout.html",
+      "subtests": [
+        {
+          "name": "requestIdleCallback callback should time out",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html/webappapis/idle-callbacks/cancel-invoked.html",
+      "subtests": [
+        {
+          "name": "cancelIdleCallback does nothing if there is no callback with the given handle",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "A cancelled callback is never invoked",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/html/webappapis/idle-callbacks/idlharness.html",
+      "subtests": [
+        {
+          "name": "Window interface: operation requestIdleCallback(IdleRequestCallback,IdleRequestOptions)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Window interface: operation cancelIdleCallback(unsigned long)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Window must be primary interface of window",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of window",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Window interface: window must inherit property \"requestIdleCallback\" with the proper type (0)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Window interface: calling requestIdleCallback(IdleRequestCallback,IdleRequestOptions) on window with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Window interface: window must inherit property \"cancelIdleCallback\" with the proper type (1)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Window interface: calling cancelIdleCallback(unsigned long) on window with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

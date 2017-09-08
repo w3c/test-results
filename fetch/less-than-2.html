@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Less Than 2 Passes</title>
+    <link rel='stylesheet' href='bootstrap.min.css'>
+    <link rel='stylesheet' href='analysis.css'>
+  </head>
+  <body>
+    <div class='container'>
+      <header>
+        <h1>Less Than 2 Passes</h1>
+      </header>
+      <p><strong>Test files without 2 passes</strong>: 68; <strong>Subtests without 2 passes: </strong>305; <strong>Failure level</strong>: 305/2062 (14.79%)</p>
+      <h3>Test Files</h3>
+<ol class='toc'><li><a href='#test-file-0'>/fetch/api/basic/mode-no-cors-worker.html</a> <small>(1/4, 25.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-1'>/fetch/api/basic/mode-no-cors.html</a> <small>(1/4, 25.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-2'>/fetch/api/basic/request-headers-worker.html</a> <small>(1/24, 4.17%, 0.05% of total)</small></li>
+<li><a href='#test-file-3'>/fetch/api/basic/request-headers.html</a> <small>(1/24, 4.17%, 0.05% of total)</small></li>
+<li><a href='#test-file-4'>/fetch/api/basic/request-upload-worker.html</a> <small>(6/17, 35.29%, 0.29% of total)</small></li>
+<li><a href='#test-file-5'>/fetch/api/basic/request-upload.html</a> <small>(6/17, 35.29%, 0.29% of total)</small></li>
+<li><a href='#test-file-6'>/fetch/api/basic/scheme-about-worker.html</a> <small>(3/6, 50.00%, 0.15% of total)</small></li>
+<li><a href='#test-file-7'>/fetch/api/basic/scheme-about.html</a> <small>(3/6, 50.00%, 0.15% of total)</small></li>
+<li><a href='#test-file-8'>/fetch/api/cors/cors-basic-worker.html</a> <small>(4/15, 26.67%, 0.19% of total)</small></li>
+<li><a href='#test-file-9'>/fetch/api/cors/cors-basic.html</a> <small>(4/15, 26.67%, 0.19% of total)</small></li>
+<li><a href='#test-file-10'>/fetch/api/cors/cors-expose-star-worker.html</a> <small>(1/2, 50.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-11'>/fetch/api/cors/cors-expose-star.html</a> <small>(1/2, 50.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-12'>/fetch/api/cors/cors-multiple-origins-worker.html</a> <small>(5/6, 83.33%, 0.24% of total)</small></li>
+<li><a href='#test-file-13'>/fetch/api/cors/cors-multiple-origins.html</a> <small>(5/6, 83.33%, 0.24% of total)</small></li>
+<li><a href='#test-file-14'>/fetch/api/cors/cors-no-preflight-worker.html</a> <small>(2/15, 13.33%, 0.10% of total)</small></li>
+<li><a href='#test-file-15'>/fetch/api/cors/cors-no-preflight.html</a> <small>(2/15, 13.33%, 0.10% of total)</small></li>
+<li><a href='#test-file-16'>/fetch/api/cors/cors-origin-worker.html</a> <small>(2/17, 11.76%, 0.10% of total)</small></li>
+<li><a href='#test-file-17'>/fetch/api/cors/cors-origin.html</a> <small>(2/17, 11.76%, 0.10% of total)</small></li>
+<li><a href='#test-file-18'>/fetch/api/cors/cors-preflight-redirect-worker.html</a> <small>(10/10, 100.00%, 0.48% of total)</small></li>
+<li><a href='#test-file-19'>/fetch/api/cors/cors-preflight-redirect.html</a> <small>(10/10, 100.00%, 0.48% of total)</small></li>
+<li><a href='#test-file-20'>/fetch/api/cors/cors-preflight-referrer-worker.html</a> <small>(8/10, 80.00%, 0.39% of total)</small></li>
+<li><a href='#test-file-21'>/fetch/api/cors/cors-preflight-referrer.html</a> <small>(6/10, 60.00%, 0.29% of total)</small></li>
+<li><a href='#test-file-22'>/fetch/api/cors/cors-preflight-star-worker.html</a> <small>(2/8, 25.00%, 0.10% of total)</small></li>
+<li><a href='#test-file-23'>/fetch/api/cors/cors-preflight-star.html</a> <small>(2/8, 25.00%, 0.10% of total)</small></li>
+<li><a href='#test-file-24'>/fetch/api/cors/cors-preflight-status-worker.html</a> <small>(27/27, 100.00%, 1.31% of total)</small></li>
+<li><a href='#test-file-25'>/fetch/api/cors/cors-preflight-status.html</a> <small>(27/27, 100.00%, 1.31% of total)</small></li>
+<li><a href='#test-file-26'>/fetch/api/credentials/cookies-worker.html</a> <small>(5/7, 71.43%, 0.24% of total)</small></li>
+<li><a href='#test-file-27'>/fetch/api/credentials/cookies.html</a> <small>(5/7, 71.43%, 0.24% of total)</small></li>
+<li><a href='#test-file-28'>/fetch/api/headers/header-values-normalize.html</a> <small>(2/62, 3.23%, 0.10% of total)</small></li>
+<li><a href='#test-file-29'>/fetch/api/headers/headers-basic.html</a> <small>(4/19, 21.05%, 0.19% of total)</small></li>
+<li><a href='#test-file-30'>/fetch/api/headers/headers-combine.html</a> <small>(2/4, 50.00%, 0.10% of total)</small></li>
+<li><a href='#test-file-31'>/fetch/api/headers/headers-idl.html</a> <small>(2/33, 6.06%, 0.10% of total)</small></li>
+<li><a href='#test-file-32'>/fetch/api/headers/headers-normalize.html</a> <small>(3/3, 100.00%, 0.15% of total)</small></li>
+<li><a href='#test-file-33'>/fetch/api/headers/headers-record.html</a> <small>(8/11, 72.73%, 0.39% of total)</small></li>
+<li><a href='#test-file-34'>/fetch/api/policies/referrer-no-referrer-service-worker.https.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-35'>/fetch/api/policies/referrer-origin-service-worker.https.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-36'>/fetch/api/policies/referrer-origin-when-cross-origin-service-worker.https.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-37'>/fetch/api/policies/referrer-origin-when-cross-origin-worker.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-38'>/fetch/api/policies/referrer-origin-when-cross-origin.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-39'>/fetch/api/policies/referrer-origin-worker.html</a> <small>(1/2, 50.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-40'>/fetch/api/policies/referrer-origin.html</a> <small>(1/2, 50.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-41'>/fetch/api/policies/referrer-unsafe-url-service-worker.https.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-42'>/fetch/api/redirect/redirect-referrer-worker.html</a> <small>(9/32, 28.13%, 0.44% of total)</small></li>
+<li><a href='#test-file-43'>/fetch/api/redirect/redirect-referrer.html</a> <small>(9/32, 28.13%, 0.44% of total)</small></li>
+<li><a href='#test-file-44'>/fetch/api/request/request-cache-no-store.html</a> <small>(4/8, 50.00%, 0.19% of total)</small></li>
+<li><a href='#test-file-45'>/fetch/api/request/request-consume-empty.html</a> <small>(2/12, 16.67%, 0.10% of total)</small></li>
+<li><a href='#test-file-46'>/fetch/api/request/request-consume.html</a> <small>(1/38, 2.63%, 0.05% of total)</small></li>
+<li><a href='#test-file-47'>/fetch/api/request/request-disturbed.html</a> <small>(3/8, 37.50%, 0.15% of total)</small></li>
+<li><a href='#test-file-48'>/fetch/api/request/request-error.html</a> <small>(1/21, 4.76%, 0.05% of total)</small></li>
+<li><a href='#test-file-49'>/fetch/api/request/request-idl.html</a> <small>(8/47, 17.02%, 0.39% of total)</small></li>
+<li><a href='#test-file-50'>/fetch/api/request/request-init-001.sub.html</a> <small>(5/35, 14.29%, 0.24% of total)</small></li>
+<li><a href='#test-file-51'>/fetch/api/request/request-init-003.sub.html</a> <small>(1/4, 25.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-52'>/fetch/api/request/request-keepalive-quota.html</a> <small>(2/6, 33.33%, 0.10% of total)</small></li>
+<li><a href='#test-file-53'>/fetch/api/request/request-structure.html</a> <small>(3/19, 15.79%, 0.15% of total)</small></li>
+<li><a href='#test-file-54'>/fetch/api/response/response-clone.html</a> <small>(11/18, 61.11%, 0.53% of total)</small></li>
+<li><a href='#test-file-55'>/fetch/api/response/response-consume-empty.html</a> <small>(2/12, 16.67%, 0.10% of total)</small></li>
+<li><a href='#test-file-56'>/fetch/api/response/response-consume-stream.html</a> <small>(2/9, 22.22%, 0.10% of total)</small></li>
+<li><a href='#test-file-57'>/fetch/api/response/response-consume.html</a> <small>(19/39, 48.72%, 0.92% of total)</small></li>
+<li><a href='#test-file-58'>/fetch/api/response/response-idl.html</a> <small>(2/42, 4.76%, 0.10% of total)</small></li>
+<li><a href='#test-file-59'>/fetch/api/response/response-trailer.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></li>
+<li><a href='#test-file-60'>/fetch/http-cache/cc-request.html</a> <small>(6/12, 50.00%, 0.29% of total)</small></li>
+<li><a href='#test-file-61'>/fetch/http-cache/heuristic.html</a> <small>(6/16, 37.50%, 0.29% of total)</small></li>
+<li><a href='#test-file-62'>/fetch/http-cache/invalidate.html</a> <small>(9/15, 60.00%, 0.44% of total)</small></li>
+<li><a href='#test-file-63'>/fetch/http-cache/partial.html</a> <small>(4/4, 100.00%, 0.19% of total)</small></li>
+<li><a href='#test-file-64'>/fetch/http-cache/status.html</a> <small>(8/26, 30.77%, 0.39% of total)</small></li>
+<li><a href='#test-file-65'>/fetch/http-cache/vary.html</a> <small>(1/11, 9.09%, 0.05% of total)</small></li>
+<li><a href='#test-file-66'>/fetch/nosniff/parsing-nosniff.html</a> <small>(1/6, 16.67%, 0.05% of total)</small></li>
+<li><a href='#test-file-67'>/fetch/nosniff/stylesheet.html</a> <small>(4/6, 66.67%, 0.19% of total)</small></li>
+</ol>
+      <table class='table persist-area'>
+        <thead><tr class='persist-header'><th>Test</th><th>Ch59</th><th>FF55</th><th>Sa10</th></tr></thead>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/fetch/api/basic/mode-no-cors-worker.html' target='_blank'>/fetch/api/basic/mode-no-cors-worker.html</a> <small>(1/4, 25.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch https://web-platform.test:8443/fetch/api/resources/top.txt with no-cors mode</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/fetch/api/basic/mode-no-cors.html' target='_blank'>/fetch/api/basic/mode-no-cors.html</a> <small>(1/4, 25.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch https://web-platform.test:8443/fetch/api/resources/top.txt with no-cors mode</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/fetch/api/basic/request-headers-worker.html' target='_blank'>/fetch/api/basic/request-headers-worker.html</a> <small>(1/24, 4.17%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch with HEAD</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/fetch/api/basic/request-headers.html' target='_blank'>/fetch/api/basic/request-headers.html</a> <small>(1/24, 4.17%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch with HEAD</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/fetch/api/basic/request-upload-worker.html' target='_blank'>/fetch/api/basic/request-upload-worker.html</a> <small>(6/17, 35.29%, 0.29% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing String</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing null</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing number</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing ArrayBuffer</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing Blob</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-5'><td><a href='http://www.w3c-test.org/fetch/api/basic/request-upload.html' target='_blank'>/fetch/api/basic/request-upload.html</a> <small>(6/17, 35.29%, 0.29% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing String</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing null</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing number</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing ArrayBuffer</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetch with POST with ReadableStream containing Blob</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-6'><td><a href='http://www.w3c-test.org/fetch/api/basic/scheme-about-worker.html' target='_blank'>/fetch/api/basic/scheme-about-worker.html</a> <small>(3/6, 50.00%, 0.15% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetching about:blank (GET) is OK</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetching about:blank (PUT) is OK</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetching about:blank (POST) is OK</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-7'><td><a href='http://www.w3c-test.org/fetch/api/basic/scheme-about.html' target='_blank'>/fetch/api/basic/scheme-about.html</a> <small>(3/6, 50.00%, 0.15% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetching about:blank (GET) is OK</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetching about:blank (PUT) is OK</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Fetching about:blank (POST) is OK</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-8'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-basic-worker.html' target='_blank'>/fetch/api/cors/cors-basic-worker.html</a> <small>(4/15, 26.67%, 0.19% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Same domain different protocol different port [no-cors mode]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same domain different protocol different port [cors mode]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross domain different protocol [no-cors mode]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross domain different protocol [cors mode]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-9'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-basic.html' target='_blank'>/fetch/api/cors/cors-basic.html</a> <small>(4/15, 26.67%, 0.19% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Same domain different protocol different port [no-cors mode]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same domain different protocol different port [cors mode]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross domain different protocol [no-cors mode]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross domain different protocol [cors mode]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-10'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-expose-star-worker.html' target='_blank'>/fetch/api/cors/cors-expose-star-worker.html</a> <small>(1/2, 50.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Basic Access-Control-Expose-Headers: * support</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-11'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-expose-star.html' target='_blank'>/fetch/api/cors/cors-expose-star.html</a> <small>(1/2, 50.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Basic Access-Control-Expose-Headers: * support</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-12'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-multiple-origins-worker.html' target='_blank'>/fetch/api/cors/cors-multiple-origins-worker.html</a> <small>(5/6, 83.33%, 0.24% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>3 origins allowed, match the 3rd (http://web-platform.test:8000)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>3 origins allowed, match the 3rd ("*")</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>3 origins allowed, match twice (http://web-platform.test:8000)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>3 origins allowed, match twice ("*")</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>3 origins allowed, match twice ("*" and http://web-platform.test:8000)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-13'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-multiple-origins.html' target='_blank'>/fetch/api/cors/cors-multiple-origins.html</a> <small>(5/6, 83.33%, 0.24% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>3 origins allowed, match the 3rd (http://web-platform.test:8000)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>3 origins allowed, match the 3rd ("*")</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>3 origins allowed, match twice (http://web-platform.test:8000)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>3 origins allowed, match twice ("*")</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>3 origins allowed, match twice ("*" and http://web-platform.test:8000)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-14'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-no-preflight-worker.html' target='_blank'>/fetch/api/cors/cors-no-preflight-worker.html</a> <small>(2/15, 13.33%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Cross domain different protocol [GET]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same domain different protocol different port [GET]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-15'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-no-preflight.html' target='_blank'>/fetch/api/cors/cors-no-preflight.html</a> <small>(2/15, 13.33%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Cross domain different protocol [GET]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same domain different protocol different port [GET]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-16'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-origin-worker.html' target='_blank'>/fetch/api/cors/cors-origin-worker.html</a> <small>(2/17, 11.76%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Cross domain different protocol [origin OK]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same domain different protocol different port [origin OK]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-17'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-origin.html' target='_blank'>/fetch/api/cors/cors-origin.html</a> <small>(2/17, 11.76%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Cross domain different protocol [origin OK]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same domain different protocol different port [origin OK]</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-18'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-preflight-redirect-worker.html' target='_blank'>/fetch/api/cors/cors-preflight-redirect-worker.html</a> <small>(10/10, 100.00%, 0.48% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Redirection 301 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 301 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 302 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 302 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 303 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 303 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 307 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 307 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 308 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 308 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-19'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-preflight-redirect.html' target='_blank'>/fetch/api/cors/cors-preflight-redirect.html</a> <small>(10/10, 100.00%, 0.48% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Redirection 301 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 301 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 302 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 302 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 303 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 303 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 307 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 307 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 308 on preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Redirection 308 after preflight failed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-20'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-preflight-referrer-worker.html' target='_blank'>/fetch/api/cors/cors-preflight-referrer-worker.html</a> <small>(8/10, 80.00%, 0.39% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Referrer policy: "" and referrer: default</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: "" and referrer: 'myreferrer'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: origin and referrer: default</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: origin and referrer: 'myreferrer'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: origin-when-cross-origin and referrer: default</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: origin-when-cross-origin and referrer: 'myreferrer'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: unsafe-url and referrer: default</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: unsafe-url and referrer: 'myreferrer'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-21'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-preflight-referrer.html' target='_blank'>/fetch/api/cors/cors-preflight-referrer.html</a> <small>(6/10, 60.00%, 0.29% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Referrer policy: "" and referrer: 'myreferrer'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: origin and referrer: default</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: origin and referrer: 'myreferrer'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: origin-when-cross-origin and referrer: default</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: origin-when-cross-origin and referrer: 'myreferrer'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Referrer policy: unsafe-url and referrer: 'myreferrer'</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-22'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-preflight-star-worker.html' target='_blank'>/fetch/api/cors/cors-preflight-star-worker.html</a> <small>(2/8, 25.00%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>CORS that succeeds with credentials: false; method: SUPER (allowed: *); header: X-Test,1 (allowed: x-test)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>CORS that succeeds with credentials: false; method: OK (allowed: *); header: X-Test,1 (allowed: *)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-23'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-preflight-star.html' target='_blank'>/fetch/api/cors/cors-preflight-star.html</a> <small>(2/8, 25.00%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>CORS that succeeds with credentials: false; method: SUPER (allowed: *); header: X-Test,1 (allowed: x-test)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>CORS that succeeds with credentials: false; method: OK (allowed: *); header: X-Test,1 (allowed: *)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-24'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-preflight-status-worker.html' target='_blank'>/fetch/api/cors/cors-preflight-status-worker.html</a> <small>(27/27, 100.00%, 1.31% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Preflight answered with status 200</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 201</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 202</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 203</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 204</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 205</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 206</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 300</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 301</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 302</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 303</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 304</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 305</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 306</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 307</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 308</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 400</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 401</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 402</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 403</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 404</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 405</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 501</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 502</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 503</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 504</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 505</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-25'><td><a href='http://www.w3c-test.org/fetch/api/cors/cors-preflight-status.html' target='_blank'>/fetch/api/cors/cors-preflight-status.html</a> <small>(27/27, 100.00%, 1.31% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Preflight answered with status 200</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 201</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 202</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 203</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 204</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 205</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 206</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 300</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 301</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 302</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 303</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 304</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 305</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 306</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 307</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 308</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 400</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 401</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 402</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 403</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 404</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 405</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 501</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 502</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 503</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 504</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Preflight answered with status 505</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-26'><td><a href='http://www.w3c-test.org/fetch/api/credentials/cookies-worker.html' target='_blank'>/fetch/api/credentials/cookies-worker.html</a> <small>(5/7, 71.43%, 0.24% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Include mode: 1 cookie</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Include mode: 2 cookies</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Omit mode: no cookie is stored</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Same-origin mode: 1 cookie</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Same-origin mode: 2 cookies</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-27'><td><a href='http://www.w3c-test.org/fetch/api/credentials/cookies.html' target='_blank'>/fetch/api/credentials/cookies.html</a> <small>(5/7, 71.43%, 0.24% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Include mode: 1 cookie</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Include mode: 2 cookies</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Omit mode: no cookie is stored</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Same-origin mode: 1 cookie</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Same-origin mode: 2 cookies</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-28'><td><a href='http://www.w3c-test.org/fetch/api/headers/header-values-normalize.html' target='_blank'>/fetch/api/headers/header-values-normalize.html</a> <small>(2/62, 3.23%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>fetch() with value %0A</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>fetch() with value %0D</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-29'><td><a href='http://www.w3c-test.org/fetch/api/headers/headers-basic.html' target='_blank'>/fetch/api/headers/headers-basic.html</a> <small>(4/19, 21.05%, 0.19% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Create headers with existing headers with custom iterator</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Check keys method</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check values method</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check entries method</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-30'><td><a href='http://www.w3c-test.org/fetch/api/headers/headers-combine.html' target='_blank'>/fetch/api/headers/headers-combine.html</a> <small>(2/4, 50.00%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Create headers using same name for different values</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check append methods when called with already used name</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-31'><td><a href='http://www.w3c-test.org/fetch/api/headers/headers-idl.html' target='_blank'>/fetch/api/headers/headers-idl.html</a> <small>(2/33, 6.06%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Testing Symbol.iterator property of iterable interface Headers</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Testing pair iterable interface Headers</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-32'><td><a href='http://www.w3c-test.org/fetch/api/headers/headers-normalize.html' target='_blank'>/fetch/api/headers/headers-normalize.html</a> <small>(3/3, 100.00%, 0.15% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Create headers with not normalized values</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check append method with not normalized values</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check set method with not normalized values</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-33'><td><a href='http://www.w3c-test.org/fetch/api/headers/headers-record.html' target='_blank'>/fetch/api/headers/headers-record.html</a> <small>(8/11, 72.73%, 0.39% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Basic operation with one property</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Basic operation with one property and a proto</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Correct operation ordering with two properties</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Correct operation ordering with two properties one of which has an invalid name</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Correct operation ordering with two properties one of which has an invalid value</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Correct operation ordering with non-enumerable properties</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Correct operation ordering with undefined descriptors</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Correct operation ordering with repeated keys</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-34'><td><a href='http://www.w3c-test.org/fetch/api/policies/referrer-no-referrer-service-worker.https.html' target='_blank'>/fetch/api/policies/referrer-no-referrer-service-worker.https.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch in service worker: referrer with no-referrer policy</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-35'><td><a href='http://www.w3c-test.org/fetch/api/policies/referrer-origin-service-worker.https.html' target='_blank'>/fetch/api/policies/referrer-origin-service-worker.https.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch in service worker: referrer with no-referrer policy</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-36'><td><a href='http://www.w3c-test.org/fetch/api/policies/referrer-origin-when-cross-origin-service-worker.https.html' target='_blank'>/fetch/api/policies/referrer-origin-when-cross-origin-service-worker.https.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch in service worker: referrer with origin-when-cross-origin policy</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-37'><td><a href='http://www.w3c-test.org/fetch/api/policies/referrer-origin-when-cross-origin-worker.html' target='_blank'>/fetch/api/policies/referrer-origin-when-cross-origin-worker.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Request's referrer is origin</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-38'><td><a href='http://www.w3c-test.org/fetch/api/policies/referrer-origin-when-cross-origin.html' target='_blank'>/fetch/api/policies/referrer-origin-when-cross-origin.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Request's referrer is origin</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-39'><td><a href='http://www.w3c-test.org/fetch/api/policies/referrer-origin-worker.html' target='_blank'>/fetch/api/policies/referrer-origin-worker.html</a> <small>(1/2, 50.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Cross-origin referrer is overridden by client origin</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-40'><td><a href='http://www.w3c-test.org/fetch/api/policies/referrer-origin.html' target='_blank'>/fetch/api/policies/referrer-origin.html</a> <small>(1/2, 50.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Cross-origin referrer is overridden by client origin</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-41'><td><a href='http://www.w3c-test.org/fetch/api/policies/referrer-unsafe-url-service-worker.https.html' target='_blank'>/fetch/api/policies/referrer-unsafe-url-service-worker.https.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Fetch in worker: referrer with unsafe-url policy</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-42'><td><a href='http://www.w3c-test.org/fetch/api/redirect/redirect-referrer-worker.html' target='_blank'>/fetch/api/redirect/redirect-referrer-worker.html</a> <small>(9/32, 28.13%, 0.44% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Same origin redirection, empty init, strict-origin redirect header </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same origin redirection, empty redirect header, same-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same origin redirection, empty redirect header, strict-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same origin redirection, empty redirect header, strict-origin-when-cross-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty init, strict-origin redirect header </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty init, strict-origin-when-cross-origin redirect header </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty redirect header, same-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty redirect header, strict-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty redirect header, strict-origin-when-cross-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-43'><td><a href='http://www.w3c-test.org/fetch/api/redirect/redirect-referrer.html' target='_blank'>/fetch/api/redirect/redirect-referrer.html</a> <small>(9/32, 28.13%, 0.44% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Same origin redirection, empty init, strict-origin redirect header </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same origin redirection, empty redirect header, same-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same origin redirection, empty redirect header, strict-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Same origin redirection, empty redirect header, strict-origin-when-cross-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty init, strict-origin redirect header </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty init, strict-origin-when-cross-origin redirect header </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty redirect header, same-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty redirect header, strict-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Cross origin redirection, empty redirect header, strict-origin-when-cross-origin init </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-44'><td><a href='http://www.w3c-test.org/fetch/api/request/request-cache-no-store.html' target='_blank'>/fetch/api/request/request-cache-no-store.html</a> <small>(4/8, 50.00%, 0.19% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>RequestCache "no-store" mode does not store the response in the cache with Etag and stale response</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>RequestCache "no-store" mode does not store the response in the cache with Last-Modified and stale response</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>RequestCache "no-store" mode does not store the response in the cache with Etag and fresh response</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>RequestCache "no-store" mode does not store the response in the cache with Last-Modified and fresh response</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-45'><td><a href='http://www.w3c-test.org/fetch/api/request/request-consume-empty.html' target='_blank'>/fetch/api/request/request-consume-empty.html</a> <small>(2/12, 16.67%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Consume request's body as formData</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume empty FormData request body as text</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-46'><td><a href='http://www.w3c-test.org/fetch/api/request/request-consume.html' target='_blank'>/fetch/api/request/request-consume.html</a> <small>(1/38, 2.63%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Consume FormData request's body as FormData</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-47'><td><a href='http://www.w3c-test.org/fetch/api/request/request-disturbed.html' target='_blank'>/fetch/api/request/request-disturbed.html</a> <small>(3/8, 37.50%, 0.15% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Request's body: initial state</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Input request used for creating new request became disturbed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Input request used for creating new request became disturbed even if body is not used</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-48'><td><a href='http://www.w3c-test.org/fetch/api/request/request-error.html' target='_blank'>/fetch/api/request/request-error.html</a> <small>(1/21, 4.76%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>RequestInit's window is not null</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-49'><td><a href='http://www.w3c-test.org/fetch/api/request/request-idl.html' target='_blank'>/fetch/api/request/request-idl.html</a> <small>(8/47, 17.02%, 0.39% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Request interface: attribute type</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Request interface: attribute destination</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Request interface: attribute body</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Request interface: operation formData()</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Request interface: new Request("") must inherit property "type" with the proper type (3)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Request interface: new Request("") must inherit property "destination" with the proper type (4)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Request interface: new Request("") must inherit property "body" with the proper type (13)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Request interface: new Request("") must inherit property "formData" with the proper type (17)</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-50'><td><a href='http://www.w3c-test.org/fetch/api/request/request-init-001.sub.html' target='_blank'>/fetch/api/request/request-init-001.sub.html</a> <small>(5/35, 14.29%, 0.24% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Check referrer init value of http://test.url and associated getter</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Check referrerPolicy init value of same-origin and associated getter</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Check referrerPolicy init value of strict-origin and associated getter</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Check referrerPolicy init value of strict-origin-when-cross-origin and associated getter</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Check mode init value of navigate and associated getter</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-51'><td><a href='http://www.w3c-test.org/fetch/api/request/request-init-003.sub.html' target='_blank'>/fetch/api/request/request-init-003.sub.html</a> <small>(1/4, 25.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Check request values when initialized from url string</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-52'><td><a href='http://www.w3c-test.org/fetch/api/request/request-keepalive-quota.html' target='_blank'>/fetch/api/request/request-keepalive-quota.html</a> <small>(2/6, 33.33%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>A Keep-Alive fetch() with a body over the Quota Limit should reject.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>A Keep-Alive fetch() should not be allowed if the Quota is used up.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-53'><td><a href='http://www.w3c-test.org/fetch/api/request/request-structure.html' target='_blank'>/fetch/api/request/request-structure.html</a> <small>(3/19, 15.79%, 0.15% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Request has formData method</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Check type attribute</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check destination attribute</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-54'><td><a href='http://www.w3c-test.org/fetch/api/response/response-clone.html' target='_blank'>/fetch/api/response/response-clone.html</a> <small>(11/18, 61.11%, 0.53% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (Int8Arraychunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (Int16Arraychunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (Int32Arraychunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (ArrayBufferchunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (Uint8Arraychunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (Uint8ClampedArraychunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (Uint16Arraychunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (Uint32Arraychunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (Float32Arraychunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (Float64Arraychunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>Check response clone use structureClone for teed ReadableStreams (DataViewchunk)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-55'><td><a href='http://www.w3c-test.org/fetch/api/response/response-consume-empty.html' target='_blank'>/fetch/api/response/response-consume-empty.html</a> <small>(2/12, 16.67%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Consume response's body as formData</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume empty FormData response body as text</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-56'><td><a href='http://www.w3c-test.org/fetch/api/response/response-consume-stream.html' target='_blank'>/fetch/api/response/response-consume-stream.html</a> <small>(2/9, 22.22%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Read form data response's body as readableStream</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Getting a redirect Response stream</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-57'><td><a href='http://www.w3c-test.org/fetch/api/response/response-consume.html' target='_blank'>/fetch/api/response/response-consume.html</a> <small>(19/39, 48.72%, 0.92% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Consume response's body: from text with correct multipart type to formData</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from text without correct multipart type to formData (error case)</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from text with correct urlencoded type to formData</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from text without correct urlencoded type to formData (error case)</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from blob with correct multipart type to formData</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from blob without correct multipart type to formData (error case)</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from blob with correct urlencoded type to formData</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from blob without correct urlencoded type to formData (error case)</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from FormData to formData</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from FormData without correct type to formData (error case)</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from URLSearchParams to formData</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from URLSearchParams without correct type to formData (error case)</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from stream to blob</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from stream with correct multipart type to formData</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from stream without correct multipart type to formData (error case)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from stream with correct urlencoded type to formData</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from stream without correct urlencoded type to formData (error case)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from fetch without correct type to formData (error case)</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Consume response's body: from multipart form data blob to formData</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-58'><td><a href='http://www.w3c-test.org/fetch/api/response/response-idl.html' target='_blank'>/fetch/api/response/response-idl.html</a> <small>(2/42, 4.76%, 0.10% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>Response interface: attribute trailer</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>Response interface: new Response() must inherit property "trailer" with the proper type (8)</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-59'><td><a href='http://www.w3c-test.org/fetch/api/response/response-trailer.html' target='_blank'>/fetch/api/response/response-trailer.html</a> <small>(1/1, 100.00%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>trailer() test</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-60'><td><a href='http://www.w3c-test.org/fetch/http-cache/cc-request.html' target='_blank'>/fetch/http-cache/cc-request.html</a> <small>(6/12, 50.00%, 0.29% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>HTTP cache doesn't use aged but fresh response when request contains Cache-Control: max-age=1.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache doesn't use fresh response with Age header when request contains Cache-Control: max-age that is greater than remaining freshness.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache doesn't reuse fresh response when request contains Cache-Control: min-fresh that wants it fresher.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache doesn't reuse fresh response with Age header when request contains Cache-Control: min-fresh that wants it fresher.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache doesn't reuse fresh response when request contains Cache-Control: no-store.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache generates 504 status code when nothing is in cache and request contains Cache-Control: only-if-cached.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-61'><td><a href='http://www.w3c-test.org/fetch/http-cache/heuristic.html' target='_blank'>/fetch/http-cache/heuristic.html</a> <small>(6/16, 37.50%, 0.29% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>HTTP cache reuses an unknown response with Last-Modified based upon heuristic freshness when Cache-Control: public is present.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache reuses a 204 No Content response with Last-Modified based upon heuristic freshness.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>HTTP cache reuses a 404 Not Found response with Last-Modified based upon heuristic freshness.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>HTTP cache reuses a 405 Method Not Allowed response with Last-Modified based upon heuristic freshness.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>HTTP cache reuses a 414 URI Too Long response with Last-Modified based upon heuristic freshness.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='subtest'><td>HTTP cache reuses a 501 Not Implemented response with Last-Modified based upon heuristic freshness.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-62'><td><a href='http://www.w3c-test.org/fetch/http-cache/invalidate.html' target='_blank'>/fetch/http-cache/invalidate.html</a> <small>(9/15, 60.00%, 0.44% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>HTTP cache does not invalidate after a failed response from an unsafe request</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache invalidates Location URL after a successful response from a POST</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache invalidates Location URL after a successful response from a PUT</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache invalidates Location URL after a successful response from a DELETE</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache invalidates Location URL after a successful response from an unknown method</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache invalidates Content-Location URL after a successful response from a POST</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache invalidates Content-Location URL after a successful response from a PUT</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache invalidates Content-Location URL after a successful response from a DELETE</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache invalidates Content-Location URL after a successful response from an unknown method</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-63'><td><a href='http://www.w3c-test.org/fetch/http-cache/partial.html' target='_blank'>/fetch/http-cache/partial.html</a> <small>(4/4, 100.00%, 0.19% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>HTTP cache stores partial content and reuses it.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache stores complete response and serves smaller ranges from it.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache stores partial response and serves smaller ranges from it.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache stores partial content and completes it.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-64'><td><a href='http://www.w3c-test.org/fetch/http-cache/status.html' target='_blank'>/fetch/http-cache/status.html</a> <small>(8/26, 30.77%, 0.39% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>HTTP cache avoids going to the network if it has a fresh 299 response.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache avoids going to the network if it has a fresh 400 response.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache avoids going to the network if it has a fresh 499 response.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache avoids going to the network if it has a fresh 500 response.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache avoids going to the network if it has a fresh 502 response.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache avoids going to the network if it has a fresh 503 response.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache avoids going to the network if it has a fresh 504 response.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>HTTP cache avoids going to the network if it has a fresh 599 response.</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-65'><td><a href='http://www.w3c-test.org/fetch/http-cache/vary.html' target='_blank'>/fetch/http-cache/vary.html</a> <small>(1/11, 9.09%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>HTTP cache doesn't invalidate existing Vary response.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-66'><td><a href='http://www.w3c-test.org/fetch/nosniff/parsing-nosniff.html' target='_blank'>/fetch/nosniff/parsing-nosniff.html</a> <small>(1/6, 16.67%, 0.05% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>URL query: first</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='test' id='test-file-67'><td><a href='http://www.w3c-test.org/fetch/nosniff/stylesheet.html' target='_blank'>/fetch/nosniff/stylesheet.html</a> <small>(4/6, 66.67%, 0.19% of total)</small></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr class='subtest'><td>URL query: </td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>URL query: ?type=</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>URL query: ?type=x</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='subtest'><td>URL query: ?type=x/x</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+
+      </table>
+    </div>
+    <script src='jquery.min.js'></script>
+    <script src='sticky-headers.js'></script>
+  </body>
+</html>
