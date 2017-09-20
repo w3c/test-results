@@ -1,0 +1,730 @@
+{
+  "results": [
+    {
+      "test": "/presentation-api/controlling-ua/PresentationRequest_error.https.html",
+      "subtests": [
+        {
+          "name": "Call PresentationRequest() constructor without presentation URL. TypeError Exception expected.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Call PresentationRequest constructor with an empty sequence. NotSupportedError Exception expected.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Call PresentationRequest constructor with an invalid URL. SyntaxError Exception expected.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Call PresentationRequest constructor with a sequence of URLs, one of them invalid. SyntaxError Exception expected.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationRequest_mixedcontent.https.html",
+      "subtests": [
+        {
+          "name": "Creating a PresentationRequest with an a priori unauthenticated URL in an HTTPS context throws a SecurityError exception.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationRequest_mixedcontent_multiple.https.html",
+      "subtests": [
+        {
+          "name": "Creating a PresentationRequest with a set of URLs containing an a priori unauthenticated URL in an HTTPS context throws a SecurityError exception.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationRequest_sandboxing_error.https.html",
+      "subtests": [
+        {
+          "name": "Sandboxing: Creating a PresentationRequest from a nested context fails when allow-presentation is not set",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationRequest_sandboxing_success.https.html",
+      "subtests": [
+        {
+          "name": "Sandboxing: Creating a PresentationRequest from a nested context succeeds when allow-presentation is set",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationRequest_success.https.html",
+      "subtests": [
+        {
+          "name": "Constructing a PresentationRequest",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/defaultRequest.https.html",
+      "subtests": [
+        {
+          "name": "Setting a default presentation request",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/getAvailability.https.html",
+      "subtests": [
+        {
+          "name": "Getting the presentation displays availability information.",
+          "status": "FAIL",
+          "message": "assert_not_equals: If the Promise from a previous call to getAvailability has already been settled, getAvailability returns a new Promise. got disallowed value object \"[object Promise]\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/getAvailability_sandboxing_success.https.html",
+      "subtests": [
+        {
+          "name": "Sandboxing: Retrieving display availability from a nested context succeeds when allow-presentation is set",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/idlharness.https.html",
+      "subtests": [
+        {
+          "name": "Navigator interface: attribute presentation",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Presentation interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Presentation interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Presentation interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Presentation interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Presentation interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Presentation interface: attribute defaultRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Presentation must be primary interface of navigator.presentation",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of navigator.presentation",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Presentation interface: navigator.presentation must inherit property \"defaultRequest\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: operation start()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: operation reconnect(USVString)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: operation getAvailability()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: attribute onconnectionavailable",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest must be primary interface of navigator.presentation.defaultRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of navigator.presentation.defaultRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"start()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"reconnect(USVString)\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: calling reconnect(USVString) on navigator.presentation.defaultRequest with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"getAvailability()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"onconnectionavailable\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest must be primary interface of presentation_request",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of presentation_request",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: presentation_request must inherit property \"start()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: presentation_request must inherit property \"reconnect(USVString)\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: calling reconnect(USVString) on presentation_request with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: presentation_request must inherit property \"getAvailability()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: presentation_request must inherit property \"onconnectionavailable\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest must be primary interface of presentation_request_urls",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of presentation_request_urls",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: presentation_request_urls must inherit property \"start()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: presentation_request_urls must inherit property \"reconnect(USVString)\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: calling reconnect(USVString) on presentation_request_urls with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: presentation_request_urls must inherit property \"getAvailability()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationRequest interface: presentation_request_urls must inherit property \"onconnectionavailable\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationAvailability interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationAvailability interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationAvailability interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationAvailability interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationAvailability interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationAvailability interface: attribute value",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationAvailability interface: attribute onchange",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionAvailableEvent interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionAvailableEvent interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionAvailableEvent interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionAvailableEvent interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionAvailableEvent interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionAvailableEvent interface: attribute connection",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: attribute id",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: attribute url",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: attribute state",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: operation close()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: operation terminate()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: attribute onconnect",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: attribute onclose",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: attribute onterminate",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: attribute binaryType",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: attribute onmessage",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: operation send(DOMString)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: operation send(Blob)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: operation send(ArrayBuffer)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnection interface: operation send(ArrayBufferView)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionCloseEvent interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionCloseEvent interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionCloseEvent interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionCloseEvent interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionCloseEvent interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionCloseEvent interface: attribute reason",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PresentationConnectionCloseEvent interface: attribute message",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/reconnectToPresentation_notfound_error.https.html",
+      "subtests": [
+        {
+          "name": "Calling \"reconnect\" with an unknown presentation ID fails with a NotFoundError exception",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/reconnectToPresentation_sandboxing_success.https.html",
+      "subtests": [
+        {
+          "name": "Sandboxing: Reconnecting a presentation from a nested context succeeds when allow-presentation is set",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/startNewPresentation_error.https.html",
+      "subtests": [
+        {
+          "name": "The presentation could not start, because a user gesture is required.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationAvailability_onchange-manual.https.html",
+      "subtests": [
+        {
+          "name": "Monitoring the list of available presentation displays.",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationConnection_onclose-manual.https.html",
+      "subtests": [
+        {
+          "name": "Closing a PresentationConnection",
+          "status": "FAIL",
+          "message": "assert_equals: Expected close event, but got connect event instead expected \"close\" but got \"connect\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationConnection_onconnect-manual.https.html",
+      "subtests": [
+        {
+          "name": "Establishing a presentation connection",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationConnection_onmessage-manual.https.html",
+      "subtests": [
+        {
+          "name": "Receiving a message through PresentationConnection",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationConnection_onterminate-manual.https.html",
+      "subtests": [
+        {
+          "name": "Terminating a presentation in a controlling browsing context",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: \"The presentation is not terminated successfully when the presentation connection in \\\"connecting\\\" state.\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationConnection_send-manual.https.html",
+      "subtests": [
+        {
+          "name": "Sending a message through PresentationConnection",
+          "status": "TIMEOUT"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/PresentationRequest_onconnectionavailable-manual.https.html",
+      "subtests": [
+        {
+          "name": "Firing a connectionavailable event at a controlling user agent",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/defaultRequest_success-manual.https.html",
+      "subtests": [
+        {
+          "name": "[Optional] Starting a presentation from the browser using a default presentation request.",
+          "status": "FAIL",
+          "message": "assert_unreached: This browser does not support defaultRequest. Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/reconnectToPresentation_success-manual.https.html",
+      "subtests": [
+        {
+          "name": "Reconnect to presentation success manual test",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotFoundError: Route not found.\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/startNewPresentation_displaynotallowed-manual.https.html",
+      "subtests": [
+        {
+          "name": "Calling \"start\" when the user denied permission to use the display returns a Promise rejected with a NotAllowedError exception.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/startNewPresentation_displaynotfound-manual.https.html",
+      "subtests": [
+        {
+          "name": "Calling \"start\" when there is no available presentation display returns a Promise rejected with a NotFoundError exception.",
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { throw e }\" threw object \"NotAllowedError: Dialog closed.\" that is not a DOMException NotFoundError: property \"code\" is equal to 0, expected 8"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/startNewPresentation_sandboxing_success-manual.https.html",
+      "subtests": [
+        {
+          "name": "Sandboxing: starting a presentation from a nested context succeeds when allow-presentation is set",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/startNewPresentation_success-manual.https.html",
+      "subtests": [
+        {
+          "name": "Checking the chain of events when starting a new presentation",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/presentation-api/controlling-ua/startNewPresentation_unsettledpromise-manual.https.html",
+      "subtests": [
+        {
+          "name": "Calling \"start\" when there is already an unsettled Promise returns a Promise rejected with an OperationError exception.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}

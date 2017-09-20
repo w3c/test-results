@@ -11,7 +11,8 @@
       <header>
         <h1>Presentation API - Controlling UA: All Results</h1>
       </header>
-      <p><strong>Test files</strong>: 27; <strong>Total subtests</strong>: 106</p>
+      
+      <p><strong>Test files</strong>: 27; <strong>Total subtests</strong>: 108</p>
       <h3>Test Files</h3>
 <ol class='toc'><li><a href='#test-file-0'>/presentation-api/controlling-ua/PresentationRequest_error.https.html</a></li>
 <li><a href='#test-file-1'>/presentation-api/controlling-ua/PresentationRequest_mixedcontent.https.html</a></li>
@@ -42,144 +43,149 @@
 <li><a href='#test-file-26'>/presentation-api/controlling-ua/startNewPresentation_unsettledpromise-manual.https.html</a></li>
 </ol>
       <table class='table persist-area'>
-        <thead><tr class='persist-header'><th>Test</th><th>CA61</th><th>CD59</th><th>FA56</th></tr></thead>
+        <thead><tr class='persist-header'><th>Test <span class='message_toggle'>Show/Hide Messages</span></th><th>CA63</th><th>CD63</th><th>FA57</th></tr></thead>
 <tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationRequest_error.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationRequest_error.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Call PresentationRequest() constructor without presentation URL. TypeError Exception expected.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Call PresentationRequest constructor with an empty sequence. NotSupportedError Exception expected.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Call PresentationRequest constructor with an invalid URL. SyntaxError Exception expected.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Call PresentationRequest constructor with a sequence of URLs, one of them invalid. SyntaxError Exception expected.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-0-3' class='subtest'><td>Call PresentationRequest constructor with a sequence of URLs, one of them invalid. SyntaxError Exception expected.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-0-1' class='subtest'><td>Call PresentationRequest constructor with an empty sequence. NotSupportedError Exception expected.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-0-2' class='subtest'><td>Call PresentationRequest constructor with an invalid URL. SyntaxError Exception expected.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-0-0' class='subtest'><td>Call PresentationRequest() constructor without presentation URL. TypeError Exception expected.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationRequest_mixedcontent.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationRequest_mixedcontent.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Creating a PresentationRequest with an a priori unauthenticated URL in an HTTPS context throws a SecurityError exception.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-1-0' class='subtest'><td>Creating a PresentationRequest with an a priori unauthenticated URL in an HTTPS context throws a SecurityError exception.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationRequest_mixedcontent_multiple.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationRequest_mixedcontent_multiple.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Creating a PresentationRequest with a set of URLs containing an a priori unauthenticated URL in an HTTPS context throws a SecurityError exception.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-2-0' class='subtest'><td>Creating a PresentationRequest with a set of URLs containing an a priori unauthenticated URL in an HTTPS context throws a SecurityError exception.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationRequest_sandboxing_error.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationRequest_sandboxing_error.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Sandboxing: Creating a PresentationRequest from a nested context fails when allow-presentation is not set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-3-0' class='subtest'><td>Sandboxing: Creating a PresentationRequest from a nested context fails when allow-presentation is not set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationRequest_sandboxing_success.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationRequest_sandboxing_success.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Sandboxing: Creating a PresentationRequest from a nested context succeeds when allow-presentation is set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-4-0' class='subtest'><td>Sandboxing: Creating a PresentationRequest from a nested context succeeds when allow-presentation is set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-5'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationRequest_success.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationRequest_success.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Constructing a PresentationRequest</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-5-0' class='subtest'><td>Constructing a PresentationRequest</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-6'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/defaultRequest.https.html' target='_blank'>/presentation-api/controlling-ua/defaultRequest.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Setting a default presentation request</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-6-0' class='subtest'><td>Setting a default presentation request</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-7'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/getAvailability.https.html' target='_blank'>/presentation-api/controlling-ua/getAvailability.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Getting the presentation displays availability information.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-7-0' class='subtest'><td>Getting the presentation displays availability information.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-8'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/getAvailability_sandboxing_success.https.html' target='_blank'>/presentation-api/controlling-ua/getAvailability_sandboxing_success.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Sandboxing: Retrieving display availability from a nested context succeeds when allow-presentation is set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-8-0' class='subtest'><td>Sandboxing: Retrieving display availability from a nested context succeeds when allow-presentation is set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-9'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/idlharness.https.html' target='_blank'>/presentation-api/controlling-ua/idlharness.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Navigator interface: attribute presentation</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Presentation interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Presentation interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Presentation interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Presentation interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Presentation interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Presentation interface: attribute defaultRequest</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Presentation must be primary interface of navigator.presentation</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Stringification of navigator.presentation</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Presentation interface: navigator.presentation must inherit property "defaultRequest" with the proper type (0)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: operation start()</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: operation reconnect(USVString)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: operation getAvailability()</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: attribute onconnectionavailable</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest must be primary interface of navigator.presentation.defaultRequest</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Stringification of navigator.presentation.defaultRequest</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: navigator.presentation.defaultRequest must inherit property "start" with the proper type (0)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: navigator.presentation.defaultRequest must inherit property "reconnect" with the proper type (1)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: calling reconnect(USVString) on navigator.presentation.defaultRequest with too few arguments must throw TypeError</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: navigator.presentation.defaultRequest must inherit property "getAvailability" with the proper type (2)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: navigator.presentation.defaultRequest must inherit property "onconnectionavailable" with the proper type (3)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest must be primary interface of presentation_request</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Stringification of presentation_request</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: presentation_request must inherit property "start" with the proper type (0)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: presentation_request must inherit property "reconnect" with the proper type (1)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: calling reconnect(USVString) on presentation_request with too few arguments must throw TypeError</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: presentation_request must inherit property "getAvailability" with the proper type (2)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: presentation_request must inherit property "onconnectionavailable" with the proper type (3)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest must be primary interface of presentation_request_urls</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>Stringification of presentation_request_urls</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: presentation_request_urls must inherit property "start" with the proper type (0)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: presentation_request_urls must inherit property "reconnect" with the proper type (1)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: calling reconnect(USVString) on presentation_request_urls with too few arguments must throw TypeError</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: presentation_request_urls must inherit property "getAvailability" with the proper type (2)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationRequest interface: presentation_request_urls must inherit property "onconnectionavailable" with the proper type (3)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationAvailability interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationAvailability interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationAvailability interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationAvailability interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationAvailability interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationAvailability interface: attribute value</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationAvailability interface: attribute onchange</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionAvailableEvent interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionAvailableEvent interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionAvailableEvent interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionAvailableEvent interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionAvailableEvent interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionAvailableEvent interface: attribute connection</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: attribute id</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: attribute url</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: attribute state</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: operation close()</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: operation terminate()</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: attribute onconnect</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: attribute onclose</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: attribute onterminate</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: attribute binaryType</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: attribute onmessage</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: operation send(DOMString)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: operation send(Blob)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: operation send(ArrayBuffer)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnection interface: operation send(ArrayBufferView)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionCloseEvent interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionCloseEvent interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionCloseEvent interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionCloseEvent interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionCloseEvent interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionCloseEvent interface: attribute reason</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='subtest'><td>PresentationConnectionCloseEvent interface: attribute message</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-0' class='subtest'><td>Navigator interface: attribute presentation</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-2' class='subtest'><td>Presentation interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-3' class='subtest'><td>Presentation interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-6' class='subtest'><td>Presentation interface: attribute defaultRequest</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-1' class='subtest'><td>Presentation interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-4' class='subtest'><td>Presentation interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-5' class='subtest'><td>Presentation interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-9' class='subtest'><td>Presentation interface: navigator.presentation must inherit property "defaultRequest" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-7' class='subtest'><td>Presentation must be primary interface of navigator.presentation</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-41' class='subtest'><td>PresentationAvailability interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-42' class='subtest'><td>PresentationAvailability interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-46' class='subtest'><td>PresentationAvailability interface: attribute onchange</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-45' class='subtest'><td>PresentationAvailability interface: attribute value</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-40' class='subtest'><td>PresentationAvailability interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-43' class='subtest'><td>PresentationAvailability interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-44' class='subtest'><td>PresentationAvailability interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-54' class='subtest'><td>PresentationConnection interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-55' class='subtest'><td>PresentationConnection interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-66' class='subtest'><td>PresentationConnection interface: attribute binaryType</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-58' class='subtest'><td>PresentationConnection interface: attribute id</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-64' class='subtest'><td>PresentationConnection interface: attribute onclose</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-63' class='subtest'><td>PresentationConnection interface: attribute onconnect</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-67' class='subtest'><td>PresentationConnection interface: attribute onmessage</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-65' class='subtest'><td>PresentationConnection interface: attribute onterminate</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-60' class='subtest'><td>PresentationConnection interface: attribute state</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-59' class='subtest'><td>PresentationConnection interface: attribute url</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-53' class='subtest'><td>PresentationConnection interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-56' class='subtest'><td>PresentationConnection interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-57' class='subtest'><td>PresentationConnection interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-61' class='subtest'><td>PresentationConnection interface: operation close()</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-70' class='subtest'><td>PresentationConnection interface: operation send(ArrayBuffer)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-71' class='subtest'><td>PresentationConnection interface: operation send(ArrayBufferView)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-69' class='subtest'><td>PresentationConnection interface: operation send(Blob)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-68' class='subtest'><td>PresentationConnection interface: operation send(DOMString)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-62' class='subtest'><td>PresentationConnection interface: operation terminate()</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-48' class='subtest'><td>PresentationConnectionAvailableEvent interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-49' class='subtest'><td>PresentationConnectionAvailableEvent interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-52' class='subtest'><td>PresentationConnectionAvailableEvent interface: attribute connection</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-47' class='subtest'><td>PresentationConnectionAvailableEvent interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-50' class='subtest'><td>PresentationConnectionAvailableEvent interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-51' class='subtest'><td>PresentationConnectionAvailableEvent interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-73' class='subtest'><td>PresentationConnectionCloseEvent interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-74' class='subtest'><td>PresentationConnectionCloseEvent interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-78' class='subtest'><td>PresentationConnectionCloseEvent interface: attribute message</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-77' class='subtest'><td>PresentationConnectionCloseEvent interface: attribute reason</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-72' class='subtest'><td>PresentationConnectionCloseEvent interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-75' class='subtest'><td>PresentationConnectionCloseEvent interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-76' class='subtest'><td>PresentationConnectionCloseEvent interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-11' class='subtest'><td>PresentationRequest interface object length</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-12' class='subtest'><td>PresentationRequest interface object name</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-18' class='subtest'><td>PresentationRequest interface: attribute onconnectionavailable</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-23' class='subtest'><td>PresentationRequest interface: calling reconnect(USVString) on navigator.presentation.defaultRequest with too few arguments must throw TypeError</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-30' class='subtest'><td>PresentationRequest interface: calling reconnect(USVString) on presentation_request with too few arguments must throw TypeError</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-37' class='subtest'><td>PresentationRequest interface: calling reconnect(USVString) on presentation_request_urls with too few arguments must throw TypeError</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-10' class='subtest'><td>PresentationRequest interface: existence and properties of interface object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-13' class='subtest'><td>PresentationRequest interface: existence and properties of interface prototype object</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-14' class='subtest'><td>PresentationRequest interface: existence and properties of interface prototype object's "constructor" property</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-24' class='subtest'><td>PresentationRequest interface: navigator.presentation.defaultRequest must inherit property "getAvailability()" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-25' class='subtest'><td>PresentationRequest interface: navigator.presentation.defaultRequest must inherit property "onconnectionavailable" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-22' class='subtest'><td>PresentationRequest interface: navigator.presentation.defaultRequest must inherit property "reconnect(USVString)" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-21' class='subtest'><td>PresentationRequest interface: navigator.presentation.defaultRequest must inherit property "start()" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-17' class='subtest'><td>PresentationRequest interface: operation getAvailability()</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-16' class='subtest'><td>PresentationRequest interface: operation reconnect(USVString)</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-15' class='subtest'><td>PresentationRequest interface: operation start()</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-31' class='subtest'><td>PresentationRequest interface: presentation_request must inherit property "getAvailability()" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-32' class='subtest'><td>PresentationRequest interface: presentation_request must inherit property "onconnectionavailable" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-29' class='subtest'><td>PresentationRequest interface: presentation_request must inherit property "reconnect(USVString)" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-28' class='subtest'><td>PresentationRequest interface: presentation_request must inherit property "start()" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-38' class='subtest'><td>PresentationRequest interface: presentation_request_urls must inherit property "getAvailability()" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-39' class='subtest'><td>PresentationRequest interface: presentation_request_urls must inherit property "onconnectionavailable" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-36' class='subtest'><td>PresentationRequest interface: presentation_request_urls must inherit property "reconnect(USVString)" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-35' class='subtest'><td>PresentationRequest interface: presentation_request_urls must inherit property "start()" with the proper type</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-19' class='subtest'><td>PresentationRequest must be primary interface of navigator.presentation.defaultRequest</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-26' class='subtest'><td>PresentationRequest must be primary interface of presentation_request</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-33' class='subtest'><td>PresentationRequest must be primary interface of presentation_request_urls</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-8' class='subtest'><td>Stringification of navigator.presentation</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-20' class='subtest'><td>Stringification of navigator.presentation.defaultRequest</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-27' class='subtest'><td>Stringification of presentation_request</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-34' class='subtest'><td>Stringification of presentation_request_urls</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-10'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/reconnectToPresentation_notfound_error.https.html' target='_blank'>/presentation-api/controlling-ua/reconnectToPresentation_notfound_error.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Calling "reconnect" with an unknown presentation ID fails with a NotFoundError exception</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-10-0' class='subtest'><td>Calling "reconnect" with an unknown presentation ID fails with a NotFoundError exception</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-11'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/reconnectToPresentation_sandboxing_success.https.html' target='_blank'>/presentation-api/controlling-ua/reconnectToPresentation_sandboxing_success.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Sandboxing: Reconnecting a presentation from a nested context succeeds when allow-presentation is set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-11-0' class='subtest'><td>Sandboxing: Reconnecting a presentation from a nested context succeeds when allow-presentation is set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-12'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/startNewPresentation_error.https.html' target='_blank'>/presentation-api/controlling-ua/startNewPresentation_error.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>The presentation could not start, because a user gesture is required.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-12-0' class='subtest'><td>The presentation could not start, because a user gesture is required.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-13'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationAvailability_onchange-manual.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationAvailability_onchange-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr id='subtest-13-0' class='subtest'><td>Monitoring the list of available presentation displays.</td><td class='TIMEOUT'>TIMEOUT</td><td class='TIMEOUT'>TIMEOUT</td><td class='TIMEOUT'>TIMEOUT</td></tr>
 <tr class='test' id='test-file-14'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationConnection_onclose-manual.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationConnection_onclose-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Closing a PresentationConnection</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-14-0' class='subtest'><td>Closing a PresentationConnection</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-15'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationConnection_onconnect-manual.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationConnection_onconnect-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Establishing a presentation connection</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-15-0' class='subtest'><td>Establishing a presentation connection</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-16'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationConnection_onmessage-manual.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationConnection_onmessage-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Receiving a message through PresentationConnection</td><td class='FAIL'>FAIL</td><td class='TIMEOUT'>TIMEOUT</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-16-0' class='subtest'><td>Receiving a message through PresentationConnection</td><td class='TIMEOUT'>TIMEOUT</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-17'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationConnection_onterminate-manual.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationConnection_onterminate-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Terminating a presentation in a controlling browsing context</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-17-0' class='subtest'><td>Terminating a presentation in a controlling browsing context</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-18'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationConnection_send-manual.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationConnection_send-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Sending a message through PresentationConnection</td><td class='FAIL'>FAIL</td><td class='TIMEOUT'>TIMEOUT</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-18-0' class='subtest'><td>Sending a message through PresentationConnection</td><td class='TIMEOUT'>TIMEOUT</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-19'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/PresentationRequest_onconnectionavailable-manual.https.html' target='_blank'>/presentation-api/controlling-ua/PresentationRequest_onconnectionavailable-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Firing a connectionavailable event at a controlling user agent</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-19-0' class='subtest'><td>Firing a connectionavailable event at a controlling user agent</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-20'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/defaultRequest_success-manual.https.html' target='_blank'>/presentation-api/controlling-ua/defaultRequest_success-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>[Optional] Starting a presentation from the browser using a default presentation request.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-20-0' class='subtest'><td>[Optional] Starting a presentation from the browser using a default presentation request.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-21'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/reconnectToPresentation_success-manual.https.html' target='_blank'>/presentation-api/controlling-ua/reconnectToPresentation_success-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr id='subtest-21-0' class='subtest'><td>Reconnect to presentation success manual test</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-22'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/startNewPresentation_displaynotallowed-manual.https.html' target='_blank'>/presentation-api/controlling-ua/startNewPresentation_displaynotallowed-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Calling "start" when the user denied permission to use the display returns a Promise rejected with a NotAllowedError exception.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-22-0' class='subtest'><td>Calling "start" when the user denied permission to use the display returns a Promise rejected with a NotAllowedError exception.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-23'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/startNewPresentation_displaynotfound-manual.https.html' target='_blank'>/presentation-api/controlling-ua/startNewPresentation_displaynotfound-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Calling "start" when there is no available presentation display returns a Promise rejected with a NotFoundError exception.</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-23-0' class='subtest'><td>Calling "start" when there is no available presentation display returns a Promise rejected with a NotFoundError exception.</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='test' id='test-file-24'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/startNewPresentation_sandboxing_success-manual.https.html' target='_blank'>/presentation-api/controlling-ua/startNewPresentation_sandboxing_success-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Sandboxing: starting a presentation from a nested context succeeds when allow-presentation is set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-24-0' class='subtest'><td>Sandboxing: starting a presentation from a nested context succeeds when allow-presentation is set</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-25'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/startNewPresentation_success-manual.https.html' target='_blank'>/presentation-api/controlling-ua/startNewPresentation_success-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Checking the chain of events when starting a new presentation</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-25-0' class='subtest'><td>Checking the chain of events when starting a new presentation</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-26'><td><a href='http://www.w3c-test.org/presentation-api/controlling-ua/startNewPresentation_unsettledpromise-manual.https.html' target='_blank'>/presentation-api/controlling-ua/startNewPresentation_unsettledpromise-manual.https.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr class='subtest'><td>Calling "start" when there is already an unsettled Promise returns a Promise rejected with an OperationError exception.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-26-0' class='subtest'><td>Calling "start" when there is already an unsettled Promise returns a Promise rejected with an OperationError exception.</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 
       </table>
     </div>
     <script src='jquery.min.js'></script>
     <script src='sticky-headers.js'></script>
+    <script type='application/javascript'>
+      
+    </script>
   </body>
 </html>
