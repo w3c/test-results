@@ -1,56 +1,65 @@
 {
   "ua": [
-    "CA61",
-    "CD59",
-    "FA56"
+    "CA63",
+    "CD63",
+    "FA57"
   ],
   "results": {
     "/presentation-api/controlling-ua/PresentationRequest_error.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Call PresentationRequest() constructor without presentation URL. TypeError Exception expected.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Call PresentationRequest constructor with an empty sequence. NotSupportedError Exception expected.": {
+          "stNum": 1,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Call PresentationRequest constructor with an invalid URL. SyntaxError Exception expected.": {
+          "stNum": 2,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Call PresentationRequest constructor with a sequence of URLs, one of them invalid. SyntaxError Exception expected.": {
+          "stNum": 3,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -59,63 +68,80 @@
     },
     "/presentation-api/controlling-ua/PresentationRequest_mixedcontent.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Creating a PresentationRequest with an a priori unauthenticated URL in an HTTPS context throws a SecurityError exception.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "FAIL",
-            "FA56": "FAIL"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "FA57": "assert_throws: function \"function createPresentation() {\n        var request = new PresentationRequest('http://example.org/presentation.html');\n    }\" did not throw"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
     },
     "/presentation-api/controlling-ua/PresentationRequest_mixedcontent_multiple.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Creating a PresentationRequest with a set of URLs containing an a priori unauthenticated URL in an HTTPS context throws a SecurityError exception.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "FAIL",
-            "FA56": "FAIL"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "FA57": "assert_throws: function \"function createPresentation() {\n        var request = new PresentationRequest([\n          'presentation.html',\n          'http://example.org/presentation.html'\n        ]);\n    }\" did not throw"
           },
           "totals": {
-            "FAIL": 3
+            "PASS": 2,
+            "FAIL": 1
           }
         }
       }
     },
     "/presentation-api/controlling-ua/PresentationRequest_sandboxing_error.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Sandboxing: Creating a PresentationRequest from a nested context fails when allow-presentation is not set": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "FAIL"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "FA57": "assert_equals: Presentation sandboxing did not work as expected. expected \"SecurityError\" but got \"success\""
           },
           "totals": {
             "PASS": 2,
@@ -126,20 +152,23 @@
     },
     "/presentation-api/controlling-ua/PresentationRequest_sandboxing_success.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Sandboxing: Creating a PresentationRequest from a nested context succeeds when allow-presentation is set": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -148,20 +177,23 @@
     },
     "/presentation-api/controlling-ua/PresentationRequest_success.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Constructing a PresentationRequest": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -170,20 +202,23 @@
     },
     "/presentation-api/controlling-ua/defaultRequest.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Setting a default presentation request": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -192,19 +227,26 @@
     },
     "/presentation-api/controlling-ua/getAvailability.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Getting the presentation displays availability information.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "FAIL",
-            "FA56": "FAIL"
+            "CA63": "FAIL",
+            "CD63": "FAIL",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "CA63": "assert_not_equals: If the Promise from a previous call to getAvailability has already been settled, getAvailability returns a new Promise. got disallowed value object \"[object Promise]\"",
+            "CD63": "assert_not_equals: If the Promise from a previous call to getAvailability has already been settled, getAvailability returns a new Promise. got disallowed value object \"[object Promise]\"",
+            "FA57": "assert_equals: If the PresentationRequest object has an unsettled Promise, getAvailability returns that Promise. expected object \"[object Promise]\" but got object \"[object Promise]\""
           },
           "totals": {
             "FAIL": 3
@@ -214,20 +256,23 @@
     },
     "/presentation-api/controlling-ua/getAvailability_sandboxing_success.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Sandboxing: Retrieving display availability from a nested context succeeds when allow-presentation is set": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -236,800 +281,959 @@
     },
     "/presentation-api/controlling-ua/idlharness.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Navigator interface: attribute presentation": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Presentation interface: existence and properties of interface object": {
+          "stNum": 1,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Presentation interface object length": {
+          "stNum": 2,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Presentation interface object name": {
+          "stNum": 3,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Presentation interface: existence and properties of interface prototype object": {
+          "stNum": 4,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Presentation interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 5,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Presentation interface: attribute defaultRequest": {
+          "stNum": 6,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Presentation must be primary interface of navigator.presentation": {
+          "stNum": 7,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Stringification of navigator.presentation": {
+          "stNum": 8,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "Presentation interface: navigator.presentation must inherit property \"defaultRequest\" with the proper type (0)": {
+        "Presentation interface: navigator.presentation must inherit property \"defaultRequest\" with the proper type": {
+          "stNum": 9,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: existence and properties of interface object": {
+          "stNum": 10,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface object length": {
+          "stNum": 11,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface object name": {
+          "stNum": 12,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: existence and properties of interface prototype object": {
+          "stNum": 13,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 14,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: operation start()": {
+          "stNum": 15,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: operation reconnect(USVString)": {
+          "stNum": 16,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: operation getAvailability()": {
+          "stNum": 17,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: attribute onconnectionavailable": {
+          "stNum": 18,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest must be primary interface of navigator.presentation.defaultRequest": {
+          "stNum": 19,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Stringification of navigator.presentation.defaultRequest": {
+          "stNum": 20,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"start\" with the proper type (0)": {
+        "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"start()\" with the proper type": {
+          "stNum": 21,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"reconnect\" with the proper type (1)": {
+        "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"reconnect(USVString)\" with the proper type": {
+          "stNum": 22,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: calling reconnect(USVString) on navigator.presentation.defaultRequest with too few arguments must throw TypeError": {
+          "stNum": 23,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"getAvailability\" with the proper type (2)": {
+        "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"getAvailability()\" with the proper type": {
+          "stNum": 24,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"onconnectionavailable\" with the proper type (3)": {
+        "PresentationRequest interface: navigator.presentation.defaultRequest must inherit property \"onconnectionavailable\" with the proper type": {
+          "stNum": 25,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest must be primary interface of presentation_request": {
+          "stNum": 26,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Stringification of presentation_request": {
+          "stNum": 27,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: presentation_request must inherit property \"start\" with the proper type (0)": {
+        "PresentationRequest interface: presentation_request must inherit property \"start()\" with the proper type": {
+          "stNum": 28,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: presentation_request must inherit property \"reconnect\" with the proper type (1)": {
+        "PresentationRequest interface: presentation_request must inherit property \"reconnect(USVString)\" with the proper type": {
+          "stNum": 29,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: calling reconnect(USVString) on presentation_request with too few arguments must throw TypeError": {
+          "stNum": 30,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: presentation_request must inherit property \"getAvailability\" with the proper type (2)": {
+        "PresentationRequest interface: presentation_request must inherit property \"getAvailability()\" with the proper type": {
+          "stNum": 31,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: presentation_request must inherit property \"onconnectionavailable\" with the proper type (3)": {
+        "PresentationRequest interface: presentation_request must inherit property \"onconnectionavailable\" with the proper type": {
+          "stNum": 32,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest must be primary interface of presentation_request_urls": {
+          "stNum": 33,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "Stringification of presentation_request_urls": {
+          "stNum": 34,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: presentation_request_urls must inherit property \"start\" with the proper type (0)": {
+        "PresentationRequest interface: presentation_request_urls must inherit property \"start()\" with the proper type": {
+          "stNum": 35,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: presentation_request_urls must inherit property \"reconnect\" with the proper type (1)": {
+        "PresentationRequest interface: presentation_request_urls must inherit property \"reconnect(USVString)\" with the proper type": {
+          "stNum": 36,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationRequest interface: calling reconnect(USVString) on presentation_request_urls with too few arguments must throw TypeError": {
+          "stNum": 37,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: presentation_request_urls must inherit property \"getAvailability\" with the proper type (2)": {
+        "PresentationRequest interface: presentation_request_urls must inherit property \"getAvailability()\" with the proper type": {
+          "stNum": 38,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
-        "PresentationRequest interface: presentation_request_urls must inherit property \"onconnectionavailable\" with the proper type (3)": {
+        "PresentationRequest interface: presentation_request_urls must inherit property \"onconnectionavailable\" with the proper type": {
+          "stNum": 39,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationAvailability interface: existence and properties of interface object": {
+          "stNum": 40,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationAvailability interface object length": {
+          "stNum": 41,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationAvailability interface object name": {
+          "stNum": 42,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationAvailability interface: existence and properties of interface prototype object": {
+          "stNum": 43,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationAvailability interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 44,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationAvailability interface: attribute value": {
+          "stNum": 45,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationAvailability interface: attribute onchange": {
+          "stNum": 46,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionAvailableEvent interface: existence and properties of interface object": {
+          "stNum": 47,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionAvailableEvent interface object length": {
+          "stNum": 48,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionAvailableEvent interface object name": {
+          "stNum": 49,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionAvailableEvent interface: existence and properties of interface prototype object": {
+          "stNum": 50,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionAvailableEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 51,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionAvailableEvent interface: attribute connection": {
+          "stNum": 52,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: existence and properties of interface object": {
+          "stNum": 53,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface object length": {
+          "stNum": 54,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface object name": {
+          "stNum": 55,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: existence and properties of interface prototype object": {
+          "stNum": 56,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 57,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: attribute id": {
+          "stNum": 58,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: attribute url": {
+          "stNum": 59,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: attribute state": {
+          "stNum": 60,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: operation close()": {
+          "stNum": 61,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: operation terminate()": {
+          "stNum": 62,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: attribute onconnect": {
+          "stNum": 63,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: attribute onclose": {
+          "stNum": 64,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: attribute onterminate": {
+          "stNum": 65,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: attribute binaryType": {
+          "stNum": 66,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: attribute onmessage": {
+          "stNum": 67,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: operation send(DOMString)": {
+          "stNum": 68,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: operation send(Blob)": {
+          "stNum": 69,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: operation send(ArrayBuffer)": {
+          "stNum": 70,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnection interface: operation send(ArrayBufferView)": {
+          "stNum": 71,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionCloseEvent interface: existence and properties of interface object": {
+          "stNum": 72,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionCloseEvent interface object length": {
+          "stNum": 73,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionCloseEvent interface object name": {
+          "stNum": 74,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionCloseEvent interface: existence and properties of interface prototype object": {
+          "stNum": 75,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionCloseEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 76,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionCloseEvent interface: attribute reason": {
+          "stNum": 77,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
         },
         "PresentationConnectionCloseEvent interface: attribute message": {
+          "stNum": 78,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -1038,20 +1242,23 @@
     },
     "/presentation-api/controlling-ua/reconnectToPresentation_notfound_error.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Calling \"reconnect\" with an unknown presentation ID fails with a NotFoundError exception": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -1060,20 +1267,23 @@
     },
     "/presentation-api/controlling-ua/reconnectToPresentation_sandboxing_success.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Sandboxing: Reconnecting a presentation from a nested context succeeds when allow-presentation is set": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -1082,19 +1292,24 @@
     },
     "/presentation-api/controlling-ua/startNewPresentation_error.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "The presentation could not start, because a user gesture is required.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "FAIL"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "FA57": "assert_unreached: Should have rejected: undefined Reached unreachable code"
           },
           "totals": {
             "PASS": 2,
@@ -1105,42 +1320,51 @@
     },
     "/presentation-api/controlling-ua/PresentationAvailability_onchange-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Monitoring the list of available presentation displays.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "TIMEOUT",
-            "FA56": "TIMEOUT"
+            "CA63": "TIMEOUT",
+            "CD63": "TIMEOUT",
+            "FA57": "TIMEOUT"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "TIMEOUT": 2
+            "TIMEOUT": 3
           }
         }
       }
     },
     "/presentation-api/controlling-ua/PresentationConnection_onclose-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Closing a PresentationConnection": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "FAIL",
-            "FA56": "FAIL"
+            "CA63": "FAIL",
+            "CD63": "FAIL",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "CA63": "assert_equals: Expected close event, but got connect event instead expected \"close\" but got \"connect\"",
+            "CD63": "promise_test: Unhandled rejection with value: \"The presentation connection in \\\"connecting\\\" state was not closed successfully.\"",
+            "FA57": "promise_test: Unhandled rejection with value: object \"OperationError: The operation failed for an operation-specific reason\""
           },
           "totals": {
             "FAIL": 3
@@ -1150,20 +1374,23 @@
     },
     "/presentation-api/controlling-ua/PresentationConnection_onconnect-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Establishing a presentation connection": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -1172,42 +1399,55 @@
     },
     "/presentation-api/controlling-ua/PresentationConnection_onmessage-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Receiving a message through PresentationConnection": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "TIMEOUT",
-            "FA56": "FAIL"
+            "CA63": "TIMEOUT",
+            "CD63": "PASS",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "FA57": "assert_equals: receive a string correctly expected \"1st\" but got \"1st2nd\""
           },
           "totals": {
-            "FAIL": 2,
-            "TIMEOUT": 1
+            "TIMEOUT": 1,
+            "PASS": 1,
+            "FAIL": 1
           }
         }
       }
     },
     "/presentation-api/controlling-ua/PresentationConnection_onterminate-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Terminating a presentation in a controlling browsing context": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "FAIL",
-            "FA56": "FAIL"
+            "CA63": "FAIL",
+            "CD63": "FAIL",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "CA63": "promise_test: Unhandled rejection with value: \"The presentation is not terminated successfully when the presentation connection in \\\"connecting\\\" state.\"",
+            "CD63": "promise_test: Unhandled rejection with value: \"The presentation is not terminated successfully when the presentation connection in \\\"connecting\\\" state.\"",
+            "FA57": "promise_test: Unhandled rejection with value: \"The presentation is not terminated successfully when the presentation connection in \\\"connecting\\\" state.\""
           },
           "totals": {
             "FAIL": 3
@@ -1217,65 +1457,79 @@
     },
     "/presentation-api/controlling-ua/PresentationConnection_send-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Sending a message through PresentationConnection": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "TIMEOUT",
-            "FA56": "FAIL"
+            "CA63": "TIMEOUT",
+            "CD63": "FAIL",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "CD63": "assert_equals: Expected connect event, but got close event instead expected \"connect\" but got \"close\"",
+            "FA57": "assert_true: Not expecting event, but got close event expected true got false"
           },
           "totals": {
-            "FAIL": 2,
-            "TIMEOUT": 1
+            "TIMEOUT": 1,
+            "FAIL": 2
           }
         }
       }
     },
     "/presentation-api/controlling-ua/PresentationRequest_onconnectionavailable-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Firing a connectionavailable event at a controlling user agent": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "FAIL",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "FAIL": 1
+            "PASS": 3
           }
         }
       }
     },
     "/presentation-api/controlling-ua/defaultRequest_success-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "[Optional] Starting a presentation from the browser using a default presentation request.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "PASS",
-            "FA56": "FAIL"
+            "CA63": "FAIL",
+            "CD63": "PASS",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "CA63": "assert_unreached: This browser does not support defaultRequest. Reached unreachable code",
+            "FA57": "assert_unreached: This browser does not support defaultRequest. Reached unreachable code"
           },
           "totals": {
             "FAIL": 2,
@@ -1286,89 +1540,106 @@
     },
     "/presentation-api/controlling-ua/reconnectToPresentation_success-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Reconnect to presentation success manual test": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "TIMEOUT",
-            "CD59": "TIMEOUT",
-            "FA56": "FAIL"
+            "CA63": "FAIL",
+            "CD63": "FAIL",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "CA63": "promise_test: Unhandled rejection with value: object \"NotFoundError: Route not found.\"",
+            "CD63": "assert_equals: Expected connect event, but got close event instead expected \"connect\" but got \"close\"",
+            "FA57": "promise_test: Unhandled rejection with value: object \"OperationError: The operation failed for an operation-specific reason\""
           },
           "totals": {
-            "TIMEOUT": 2,
-            "FAIL": 1
+            "FAIL": 3
           }
         }
       }
     },
     "/presentation-api/controlling-ua/startNewPresentation_displaynotallowed-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Calling \"start\" when the user denied permission to use the display returns a Promise rejected with a NotAllowedError exception.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "FAIL",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "PASS": 3
           }
         }
       }
     },
     "/presentation-api/controlling-ua/startNewPresentation_displaynotfound-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Calling \"start\" when there is no available presentation display returns a Promise rejected with a NotFoundError exception.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "FAIL",
-            "CD59": "PASS",
-            "FA56": "FAIL"
+            "CA63": "FAIL",
+            "CD63": "FAIL",
+            "FA57": "FAIL"
+          },
+          "UAmessage": {
+            "CA63": "assert_throws: function \"function () { throw e }\" threw object \"NotAllowedError: Dialog closed.\" that is not a DOMException NotFoundError: property \"code\" is equal to 0, expected 8",
+            "CD63": "assert_throws: function \"function () { throw e }\" threw object \"NotAllowedError: Dialog closed.\" that is not a DOMException NotFoundError: property \"code\" is equal to 0, expected 8",
+            "FA57": "assert_throws: function \"function() { throw e }\" threw object \"NotAllowedError: The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.\" that is not a DOMException NotFoundError: property \"code\" is equal to 0, expected 8"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 1
+            "FAIL": 3
           }
         }
       }
     },
     "/presentation-api/controlling-ua/startNewPresentation_sandboxing_success-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Sandboxing: starting a presentation from a nested context succeeds when allow-presentation is set": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -1377,20 +1648,23 @@
     },
     "/presentation-api/controlling-ua/startNewPresentation_success-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Checking the chain of events when starting a new presentation": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
@@ -1399,20 +1673,23 @@
     },
     "/presentation-api/controlling-ua/startNewPresentation_unsettledpromise-manual.https.html": {
       "byUA": {
-        "CA61": "OK",
-        "CD59": "OK",
-        "FA56": "OK"
+        "CA63": "OK",
+        "CD63": "OK",
+        "FA57": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 3
       },
       "subtests": {
         "Calling \"start\" when there is already an unsettled Promise returns a Promise rejected with an OperationError exception.": {
+          "stNum": 0,
           "byUA": {
-            "CA61": "PASS",
-            "CD59": "PASS",
-            "FA56": "PASS"
+            "CA63": "PASS",
+            "CD63": "PASS",
+            "FA57": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 3
           }
