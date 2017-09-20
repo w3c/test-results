@@ -294,14 +294,8 @@
 <strong>Actual value:</strong> true <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
-<tr id='subtest-2-1' class='subtest'><td>application activedescendant 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
-<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
-; "property states contains STATE_FOCUSABLE" failed <br />
-<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
-<a href="https://bugzil.la/1359045">https://bugzil.la/1359045</a>: [NEW] A container's active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXFocused is true" failed <br />
+<tr id='subtest-2-1' class='subtest'><td>application activedescendant 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXFocused is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
 <strong>Actual value:</strong> false <br />
@@ -328,31 +322,21 @@
 <strong>Actual value:</strong> group <br />
 ; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
 <strong>Actual value:</strong> false <br />
-; "event type is AXSelectedChildrenChanged" failed <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXSubrole is AXWebApplication" failed <br />
 <strong>Actual value:</strong> AXLandmarkApplication <br />
 ; "property AXRoleDescription is web application" failed <br />
 <strong>Actual value:</strong> application <br />
-; "event type is AXSelectedChildrenChanged" failed <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states doesNotContain STATE_FOCUSED" failed <br />
 <strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_FOCUSABLE', 'STATE_FOCUSED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is false" failed <br />
 <strong>Actual value:</strong> true <br />
-; "event type is AXSelectedChildrenChanged" failed <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
-<tr id='subtest-3-1' class='subtest'><td>application activedescendant value changes 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
-<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
-; "property states contains STATE_FOCUSABLE" failed <br />
-<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
-<a href="https://bugzil.la/1359045">https://bugzil.la/1359045</a>: [NEW] A container's active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED <br />
-; "event type is object:state-changed:focused" failed <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXFocused is true" failed <br />
+<tr id='subtest-3-1' class='subtest'><td>application activedescendant value changes 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXFocused is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
 <strong>Actual value:</strong> false <br />
@@ -360,7 +344,6 @@
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
 <strong>Actual value:</strong> false <br />
-; "event type is AXFocusedUIElementChanged" failed <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
 <strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
@@ -520,24 +503,13 @@
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-18'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_dialog-manual.html' target='_blank'>/wai-aria/button_haspopup_dialog-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-18-0' class='subtest'><td>button haspopup dialog</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:dialog" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
+<tr id='subtest-18-0' class='subtest'><td>button haspopup dialog</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
 <strong>Actual value:</strong> AXButton <br />
 ; "property AXRoleDescription is pop up button" failed <br />
 <strong>Actual value:</strong> button <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
-<strong>Actual value:</strong> AXButton <br />
-; "property AXRoleDescription is pop up button" failed <br />
-<strong>Actual value:</strong> button <br />
+<strong>Actual value:</strong> ['AXPress'] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-19'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_emptystring-manual.html' target='_blank'>/wai-aria/button_haspopup_emptystring-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -547,39 +519,23 @@
 <a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress, <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<strong>Actual value:</strong> ['AXPress', 'AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress, <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<strong>Actual value:</strong> ['AXPress', 'AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-20'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_false-manual.html' target='_blank'>/wai-aria/button_haspopup_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-20-0' class='subtest'><td>button haspopup false</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress, <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<strong>Actual value:</strong> ['AXPress', 'AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress, <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<strong>Actual value:</strong> ['AXPress', 'AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-21'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_foo-manual.html' target='_blank'>/wai-aria/button_haspopup_foo-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -590,105 +546,59 @@
 ; "property states doesNotContain STATE_HAS_POPUP" failed <br />
 <strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT', 'STATE_HAS_POPUP'] <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress, <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXButton" failed <br />
+<strong>Actual value:</strong> AXPopUpButton <br />
+<a href="https://github.com/w3c/aria/issues/539">https://github.com/w3c/aria/issues/539</a>: [CLOSED] [Core AAM] AXAPI exposure of buttons with a popup is not specified <br />
+; "property AXRoleDescription is button" failed <br />
+<strong>Actual value:</strong> pop up button <br />
+<a href="https://github.com/w3c/aria/issues/539">https://github.com/w3c/aria/issues/539</a>: [CLOSED] [Core AAM] AXAPI exposure of buttons with a popup is not specified <br />
+; "property actions doesNotContain AXShowMenu" failed <br />
+<strong>Actual value:</strong> ['AXPress', 'AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress, <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<strong>Actual value:</strong> ['AXPress', 'AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-22'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_grid-manual.html' target='_blank'>/wai-aria/button_haspopup_grid-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-22-0' class='subtest'><td>button haspopup grid</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:grid" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
+<tr id='subtest-22-0' class='subtest'><td>button haspopup grid</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
 <strong>Actual value:</strong> AXButton <br />
 ; "property AXRoleDescription is pop up button" failed <br />
 <strong>Actual value:</strong> button <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
-<strong>Actual value:</strong> AXButton <br />
-; "property AXRoleDescription is pop up button" failed <br />
-<strong>Actual value:</strong> button <br />
+<strong>Actual value:</strong> ['AXPress'] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-23'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_listbox-manual.html' target='_blank'>/wai-aria/button_haspopup_listbox-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-23-0' class='subtest'><td>button haspopup listbox</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:listbox" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
+<tr id='subtest-23-0' class='subtest'><td>button haspopup listbox</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
 <strong>Actual value:</strong> AXButton <br />
 ; "property AXRoleDescription is pop up button" failed <br />
 <strong>Actual value:</strong> button <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
-<strong>Actual value:</strong> AXButton <br />
-; "property AXRoleDescription is pop up button" failed <br />
-<strong>Actual value:</strong> button <br />
+<strong>Actual value:</strong> ['AXPress'] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-24'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_menu-manual.html' target='_blank'>/wai-aria/button_haspopup_menu-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-24-0' class='subtest'><td>button haspopup menu</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:menu" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
+<tr id='subtest-24-0' class='subtest'><td>button haspopup menu</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
 <strong>Actual value:</strong> AXButton <br />
 ; "property AXRoleDescription is pop up button" failed <br />
 <strong>Actual value:</strong> button <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
-<strong>Actual value:</strong> AXButton <br />
-; "property AXRoleDescription is pop up button" failed <br />
-<strong>Actual value:</strong> button <br />
+<strong>Actual value:</strong> ['AXPress'] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-25'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_tree-manual.html' target='_blank'>/wai-aria/button_haspopup_tree-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-25-0' class='subtest'><td>button haspopup tree</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:tree" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
+<tr id='subtest-25-0' class='subtest'><td>button haspopup tree</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
 <strong>Actual value:</strong> AXButton <br />
 ; "property AXRoleDescription is pop up button" failed <br />
 <strong>Actual value:</strong> button <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXPopUpButton" failed <br />
-<strong>Actual value:</strong> AXButton <br />
-; "property AXRoleDescription is pop up button" failed <br />
-<strong>Actual value:</strong> button <br />
+<strong>Actual value:</strong> ['AXPress'] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-26'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_true-manual.html' target='_blank'>/wai-aria/button_haspopup_true-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -704,20 +614,12 @@
 <tr class='test' id='test-file-27'><td><a href='http://www.w3c-test.org/wai-aria/button_haspopup_unspecified-manual.html' target='_blank'>/wai-aria/button_haspopup_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-27-0' class='subtest'><td>button haspopup unspecified</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress, <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<strong>Actual value:</strong> ['AXPress', 'AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress, <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<strong>Actual value:</strong> ['AXPress', 'AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-28'><td><a href='http://www.w3c-test.org/wai-aria/button_roledescription_empty-manual.html' target='_blank'>/wai-aria/button_roledescription_empty-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -739,7 +641,7 @@
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-31'><td><a href='http://www.w3c-test.org/wai-aria/cell-manual.html' target='_blank'>/wai-aria/cell-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-31-0' class='subtest'><td>cell</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-31-0' class='subtest'><td>cell</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is 8" failed <br />
 <strong>Actual value:</strong> 1 <br />
 <a href="https://bugzil.la/1356997">https://bugzil.la/1356997</a>: [NEW] atk_table_get_n_{columns,rows} should report the values of aria-{col,row}count <br />
@@ -749,10 +651,6 @@
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXARIAColumnCount is 8" failed <br />
 <strong>Actual value:</strong> None <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is 8" failed <br />
-<strong>Actual value:</strong> 1 <br />
-<a href="https://webkit.org/b/171172">https://webkit.org/b/171172</a>: [NEW] [ATK] atk_table_get_n_rows() and atk_table_get_n_columns() should return values of aria-rowcount and aria-colcount, if present <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr id='subtest-31-1' class='subtest'><td>cell 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
@@ -1099,21 +997,11 @@
 <tr id='subtest-58-0' class='subtest'><td>combobox controls an invalid ID</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr id='subtest-58-1' class='subtest'><td>combobox controls an invalid ID 1</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
 <tr class='test' id='test-file-59'><td><a href='http://www.w3c-test.org/wai-aria/combobox_haspopup_dialog-manual.html' target='_blank'>/wai-aria/combobox_haspopup_dialog-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-59-0' class='subtest'><td>combobox haspopup dialog</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:dialog" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "property AXExpanded is true" failed <br />
+<tr id='subtest-59-0' class='subtest'><td>combobox haspopup dialog</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXExpanded is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
+<strong>Actual value:</strong> [] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-60'><td><a href='http://www.w3c-test.org/wai-aria/combobox_haspopup_false-manual.html' target='_blank'>/wai-aria/combobox_haspopup_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1121,112 +1009,56 @@
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states doesNotContain STATE_HAS_POPUP" failed <br />
 <strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_EXPANDABLE', 'STATE_EXPANDED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT', 'STATE_HAS_POPUP'] <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "property AXExpanded is true" failed <br />
+<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXExpanded is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<strong>Actual value:</strong> ['AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property actions doesNotContain AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXShowMenu, <br />
-    AXScrollToVisible <br />
-) <br />
-<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [OPEN] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
+<strong>Actual value:</strong> ['AXShowMenu', 'AXScrollToVisible'] <br />
+<a href="https://github.com/w3c/aria/issues/570">https://github.com/w3c/aria/issues/570</a>: [CLOSED] Core-AAM: AXPress and AXShowMenu on aria-haspopup is potentially misleading/confusing <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-61'><td><a href='http://www.w3c-test.org/wai-aria/combobox_haspopup_grid-manual.html' target='_blank'>/wai-aria/combobox_haspopup_grid-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-61-0' class='subtest'><td>combobox haspopup grid</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:grid" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "property AXExpanded is true" failed <br />
+<tr id='subtest-61-0' class='subtest'><td>combobox haspopup grid</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXExpanded is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
+<strong>Actual value:</strong> [] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-62'><td><a href='http://www.w3c-test.org/wai-aria/combobox_haspopup_listbox-manual.html' target='_blank'>/wai-aria/combobox_haspopup_listbox-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-62-0' class='subtest'><td>combobox haspopup listbox</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:listbox" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "property AXExpanded is true" failed <br />
+<tr id='subtest-62-0' class='subtest'><td>combobox haspopup listbox</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXExpanded is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
+<strong>Actual value:</strong> [] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-63'><td><a href='http://www.w3c-test.org/wai-aria/combobox_haspopup_menu-manual.html' target='_blank'>/wai-aria/combobox_haspopup_menu-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-63-0' class='subtest'><td>combobox haspopup menu</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:menu" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "property AXExpanded is true" failed <br />
+<tr id='subtest-63-0' class='subtest'><td>combobox haspopup menu</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXExpanded is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
+<strong>Actual value:</strong> [] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-64'><td><a href='http://www.w3c-test.org/wai-aria/combobox_haspopup_tree-manual.html' target='_blank'>/wai-aria/combobox_haspopup_tree-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-64-0' class='subtest'><td>combobox haspopup tree</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property objectAttributes contains haspopup:tree" failed <br />
-<strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px'] <br />
-<a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "property AXExpanded is true" failed <br />
+<tr id='subtest-64-0' class='subtest'><td>combobox haspopup tree</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXExpanded is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
+<strong>Actual value:</strong> [] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-65'><td><a href='http://www.w3c-test.org/wai-aria/combobox_haspopup_true-manual.html' target='_blank'>/wai-aria/combobox_haspopup_true-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-65-0' class='subtest'><td>combobox haspopup true</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "property AXExpanded is true" failed <br />
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXExpanded is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
+<strong>Actual value:</strong> [] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-66'><td><a href='http://www.w3c-test.org/wai-aria/combobox_haspopup_unspecified-manual.html' target='_blank'>/wai-aria/combobox_haspopup_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1235,74 +1067,38 @@
 <strong>Actual value:</strong> ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px'] <br />
 <a href="https://bugzil.la/1355449">https://bugzil.la/1355449</a>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "property AXExpanded is true" failed <br />
+<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXExpanded is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property actions contains AXShowMenu" failed <br />
-<strong>Actual value:</strong> ( <br />
-    AXPress <br />
-) <br />
+<strong>Actual value:</strong> [] <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-67'><td><a href='http://www.w3c-test.org/wai-aria/combobox_orientation_horizontal-manual.html' target='_blank'>/wai-aria/combobox_orientation_horizontal-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-67-0' class='subtest'><td>combobox orientation horizontal</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-;  expected true got false</td></tr>
-</table></td></tr>
+<tr id='subtest-67-0' class='subtest'><td>combobox orientation horizontal</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-68'><td><a href='http://www.w3c-test.org/wai-aria/combobox_orientation_unspecified-manual.html' target='_blank'>/wai-aria/combobox_orientation_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-68-0' class='subtest'><td>combobox orientation unspecified</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXOrientation is AXUnknownOrientation" failed <br />
+<tr id='subtest-68-0' class='subtest'><td>combobox orientation unspecified</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXOrientation is AXUnknownOrientation" failed <br />
 <strong>Actual value:</strong> AXVerticalOrientation <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-69'><td><a href='http://www.w3c-test.org/wai-aria/combobox_orientation_vertical-manual.html' target='_blank'>/wai-aria/combobox_orientation_vertical-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-69-0' class='subtest'><td>combobox orientation vertical</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-;  expected true got false</td></tr>
-</table></td></tr>
+<tr id='subtest-69-0' class='subtest'><td>combobox orientation vertical</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-70'><td><a href='http://www.w3c-test.org/wai-aria/combobox_readonly_false-manual.html' target='_blank'>/wai-aria/combobox_readonly_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-70-0' class='subtest'><td>combobox readonly false</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "result AXUIElementIsAttributeSettable(AXValue) is true" failed <br />
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXValue) is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-71'><td><a href='http://www.w3c-test.org/wai-aria/combobox_readonly_true-manual.html' target='_blank'>/wai-aria/combobox_readonly_true-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-71-0' class='subtest'><td>combobox readonly true</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-71-0' class='subtest'><td>combobox readonly true</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_READ_ONLY" failed <br />
 <strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_EXPANDABLE', 'STATE_EXPANDED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT', 'STATE_HAS_POPUP'] <br />
 <a href="https://bugzil.la/1356018">https://bugzil.la/1356018</a>: [NEW] Elements with aria-readonly="true" should expose ATK_STATE_READ_ONLY <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-72'><td><a href='http://www.w3c-test.org/wai-aria/combobox_readonly_unspecified-manual.html' target='_blank'>/wai-aria/combobox_readonly_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-72-0' class='subtest'><td>combobox readonly unspecified</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRole is AXComboBox" failed <br />
-<strong>Actual value:</strong> AXPopUpButton <br />
-; "property AXRoleDescription is combo box" failed <br />
-<strong>Actual value:</strong> pop up button <br />
-; "result AXUIElementIsAttributeSettable(AXValue) is true" failed <br />
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXValue) is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
@@ -1468,11 +1264,7 @@ ERROR: Object not found <br />
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXElementBusy is false" failed <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXTable" failed <br />
-<strong>Actual value:</strong> AXGrid <br />
-; "property AXRoleDescription is table" failed <br />
-<strong>Actual value:</strong> grid <br />
-; "property AXElementBusy is false" failed <br />
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXElementBusy is false" failed <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
@@ -1481,11 +1273,7 @@ ERROR: Object not found <br />
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXElementBusy is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXTable" failed <br />
-<strong>Actual value:</strong> AXGrid <br />
-; "property AXRoleDescription is table" failed <br />
-<strong>Actual value:</strong> grid <br />
-; "property AXElementBusy is true" failed <br />
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXElementBusy is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
@@ -1495,30 +1283,19 @@ ERROR: Object not found <br />
 <strong>Actual value:</strong> None <br />
 ; "property AXElementBusy is true" failed <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "event type is AXElementBusyChanged" failed <br />
-<strong>Actual value:</strong> AXGrid <br />
-; "property AXSubrole is <nil>" failed <br />
-<strong>Actual value:</strong> grid <br />
-; "property AXRoleDescription is table" failed <br />
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRoleDescription is table" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property AXElementBusy is true" failed <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-86'><td><a href='http://www.w3c-test.org/wai-aria/grid_colcount_8-manual.html' target='_blank'>/wai-aria/grid_colcount_8-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-86-0' class='subtest'><td>grid colcount 8</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-86-0' class='subtest'><td>grid colcount 8</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is 8" failed <br />
 <strong>Actual value:</strong> 1 <br />
 <a href="https://bugzil.la/1356997">https://bugzil.la/1356997</a>: [NEW] atk_table_get_n_{columns,rows} should report the values of aria-{col,row}count <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXARIAColumnCount is 8" failed <br />
 <strong>Actual value:</strong> None <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXTable" failed <br />
-<strong>Actual value:</strong> AXGrid <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is 8" failed <br />
-<strong>Actual value:</strong> 1 <br />
-<a href="https://webkit.org/b/171172">https://webkit.org/b/171172</a>: [NEW] [ATK] atk_table_get_n_rows() and atk_table_get_n_columns() should return values of aria-rowcount and aria-colcount, if present <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-87'><td><a href='http://www.w3c-test.org/wai-aria/grid_columnheader_readonly_false-manual.html' target='_blank'>/wai-aria/grid_columnheader_readonly_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1565,20 +1342,13 @@ ERROR: Object not found <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-93'><td><a href='http://www.w3c-test.org/wai-aria/grid_rowcount_3-manual.html' target='_blank'>/wai-aria/grid_rowcount_3-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-93-0' class='subtest'><td>grid rowcount 3</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-93-0' class='subtest'><td>grid rowcount 3</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>rows() is 3" failed <br />
 <strong>Actual value:</strong> 1 <br />
 <a href="https://bugzil.la/1356997">https://bugzil.la/1356997</a>: [NEW] atk_table_get_n_{columns,rows} should report the values of aria-{col,row}count <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXARIARowCount is 3" failed <br />
 <strong>Actual value:</strong> None <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXRole is AXTable" failed <br />
-<strong>Actual value:</strong> AXGrid <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>rows() is 3" failed <br />
-<strong>Actual value:</strong> 1 <br />
-<a href="https://webkit.org/b/171172">https://webkit.org/b/171172</a>: [NEW] [ATK] atk_table_get_n_rows() and atk_table_get_n_columns() should return values of aria-rowcount and aria-colcount, if present <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-94'><td><a href='http://www.w3c-test.org/wai-aria/grid_rowheader_readonly_false-manual.html' target='_blank'>/wai-aria/grid_rowheader_readonly_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1781,11 +1551,8 @@ ERROR: 'NoneType' object is not callable <br />
 <tr class='test' id='test-file-113'><td><a href='http://www.w3c-test.org/wai-aria/listbox_orientation_vertical-manual.html' target='_blank'>/wai-aria/listbox_orientation_vertical-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-113-0' class='subtest'><td>listbox orientation vertical</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-114'><td><a href='http://www.w3c-test.org/wai-aria/listbox_readonly_false-manual.html' target='_blank'>/wai-aria/listbox_readonly_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-114-0' class='subtest'><td>listbox readonly false</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-114-0' class='subtest'><td>listbox readonly false</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXValue) is true" failed <br />
-<strong>Actual value:</strong> false <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXValue) is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
@@ -1797,11 +1564,8 @@ ERROR: 'NoneType' object is not callable <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-116'><td><a href='http://www.w3c-test.org/wai-aria/listbox_readonly_unspecified-manual.html' target='_blank'>/wai-aria/listbox_readonly_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-116-0' class='subtest'><td>listbox readonly unspecified</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-116-0' class='subtest'><td>listbox readonly unspecified</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXValue) is true" failed <br />
-<strong>Actual value:</strong> false <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXValue) is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
@@ -1854,18 +1618,13 @@ ERROR: 'NoneType' object is not callable <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-127'><td><a href='http://www.w3c-test.org/wai-aria/menuitemcheckbox_posinset_and_setsize-manual.html' target='_blank'>/wai-aria/menuitemcheckbox_posinset_and_setsize-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-127-0' class='subtest'><td>menuitemcheckbox posinset and setsize</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-127-0' class='subtest'><td>menuitemcheckbox posinset and setsize</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXValue is 1" failed <br />
 <strong>Actual value:</strong> <br />
 ; "property AXARIAPosInSet is 4" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property AXARIASetSize is 8" failed <br />
 <strong>Actual value:</strong> None <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXARIAPosInSet is 4" failed <br />
-<strong>Actual value:</strong> 0 <br />
-; "property AXARIASetSize is 8" failed <br />
-<strong>Actual value:</strong> 0 <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-128'><td><a href='http://www.w3c-test.org/wai-aria/menuitemcheckbox_readonly_false-manual.html' target='_blank'>/wai-aria/menuitemcheckbox_readonly_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1894,18 +1653,13 @@ ERROR: 'NoneType' object is not callable <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-131'><td><a href='http://www.w3c-test.org/wai-aria/menuitemradio_posinset_and_setsize-manual.html' target='_blank'>/wai-aria/menuitemradio_posinset_and_setsize-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-131-0' class='subtest'><td>menuitemradio posinset and setsize</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-131-0' class='subtest'><td>menuitemradio posinset and setsize</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXValue is 0" failed <br />
 <strong>Actual value:</strong> <br />
 ; "property AXARIAPosInSet is 4" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property AXARIASetSize is 8" failed <br />
 <strong>Actual value:</strong> None <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXARIAPosInSet is 4" failed <br />
-<strong>Actual value:</strong> 0 <br />
-; "property AXARIASetSize is 8" failed <br />
-<strong>Actual value:</strong> 0 <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-132'><td><a href='http://www.w3c-test.org/wai-aria/menuitemradio_readonly_false-manual.html' target='_blank'>/wai-aria/menuitemradio_readonly_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1972,26 +1726,22 @@ ERROR: 'NoneType' object is not callable <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-139'><td><a href='http://www.w3c-test.org/wai-aria/option_selected_value_changes-manual.html' target='_blank'>/wai-aria/option_selected_value_changes-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-139-0' class='subtest'><td>option selected value changes</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "event type is AXSelectedChildrenChanged" failed <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "event type is AXSelectedChildrenChanged" failed <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:state-changed:selected" failed <a href="https://webkit.org/b/171186">https://webkit.org/b/171186</a> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "event type is AXSelectedChildrenChanged" failed <br />
-;  expected true got false</td></tr>
-</table></td></tr>
-<tr id='subtest-139-1' class='subtest'><td>option selected value changes 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: ERROR: No results reported from ATTA;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: ERROR: No results reported from ATTA;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:selection-changed" failed <a href="https://webkit.org/b/171186">https://webkit.org/b/171186</a> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: ERROR: No results reported from ATTA;  expected true got false</td></tr>
-</table></td></tr>
-<tr id='subtest-139-2' class='subtest'><td>option selected value changes 2</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
+<tr id='subtest-139-0' class='subtest'><td>option selected value changes</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:state-changed:selected" failed <a href="https://webkit.org/b/171186">https://webkit.org/b/171186</a> <br />
 ;  expected true got false</td></tr>
+</table></td></tr>
+<tr id='subtest-139-1' class='subtest'><td>option selected value changes 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "event type is AXSelectedChildrenChanged" failed <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:selection-changed" failed <a href="https://webkit.org/b/171186">https://webkit.org/b/171186</a> <br />
+;  expected true got false</td></tr>
+</table></td></tr>
+<tr id='subtest-139-2' class='subtest'><td>option selected value changes 2</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: ERROR: No results reported from ATTA;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: ERROR: No results reported from ATTA;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:state-changed:selected" failed <a href="https://webkit.org/b/171186">https://webkit.org/b/171186</a> <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: ERROR: No results reported from ATTA;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-140'><td><a href='http://www.w3c-test.org/wai-aria/radiogroup_orientation_horizontal-manual.html' target='_blank'>/wai-aria/radiogroup_orientation_horizontal-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-140-0' class='subtest'><td>radiogroup orientation horizontal</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -2192,9 +1942,7 @@ ERROR: atspi_error: Get failed (1) <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 50" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
-; "property AXMaxValue is 100" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
+<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-157'><td><a href='http://www.w3c-test.org/wai-aria/scrollbar_only_valuenow_unspecified-manual.html' target='_blank'>/wai-aria/scrollbar_only_valuenow_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2211,7 +1959,7 @@ ERROR: atspi_error: Get failed (1) <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 20" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
+<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-158'><td><a href='http://www.w3c-test.org/wai-aria/scrollbar_orientation_unspecified-manual.html' target='_blank'>/wai-aria/scrollbar_orientation_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2241,68 +1989,41 @@ ERROR: atspi_error: Get failed (1) <br />
 <strong>Actual value:</strong> true <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
-<tr id='subtest-160-1' class='subtest'><td>searchbox activedescendant 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
-<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
-; "property states contains STATE_FOCUSABLE" failed <br />
-<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
-<a href="https://bugzil.la/1359045">https://bugzil.la/1359045</a>: [NEW] A container's active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED <br />
-; "event type is object:state-changed:focused" failed <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXFocused is true" failed <br />
+<tr id='subtest-160-1' class='subtest'><td>searchbox activedescendant 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXFocused is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
 <strong>Actual value:</strong> false <br />
-; "event type is AXFocusedUIElementChanged" failed <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
-<strong>Actual value:</strong> false <br />
-; "event type is AXFocusedUIElementChanged" failed <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
-<strong>Actual value:</strong> None <br />
-ERROR: Object not found <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
 ; "property states contains STATE_FOCUSABLE" failed <br />
-<strong>Actual value:</strong> None <br />
-ERROR: Object not found <br />
-; "event type is object:state-changed:focused" failed <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
 <strong>Actual value:</strong> false <br />
-; "event type is AXFocusedUIElementChanged" failed <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-161'><td><a href='http://www.w3c-test.org/wai-aria/searchbox_activedescendant_value_changes-manual.html' target='_blank'>/wai-aria/searchbox_activedescendant_value_changes-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-161-0' class='subtest'><td>searchbox activedescendant value changes</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-161-0' class='subtest'><td>searchbox activedescendant value changes</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXSubrole is AXSearchField" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property AXRoleDescription is search text field" failed <br />
 <strong>Actual value:</strong> text field <br />
-; "event type is AXSelectedChildrenChanged" failed <br />
+; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
 <strong>Actual value:</strong> false <br />
-; "result array isNot true" failed <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result array isNot true" failed <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states doesNotContain STATE_FOCUSED" failed <br />
 <strong>Actual value:</strong> ['STATE_EDITABLE', 'STATE_ENABLED', 'STATE_FOCUSABLE', 'STATE_FOCUSED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_SINGLE_LINE', 'STATE_VISIBLE'] <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is false" failed <br />
 <strong>Actual value:</strong> true <br />
-; "result array isNot true" failed <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
-<tr id='subtest-161-1' class='subtest'><td>searchbox activedescendant value changes 1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
-<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
-; "property states contains STATE_FOCUSABLE" failed <br />
-<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT'] <br />
-<a href="https://bugzil.la/1359045">https://bugzil.la/1359045</a>: [NEW] A container's active descendant should expose ATK_STATE_FOCUSABLE in addition to ATK_STATE_FOCUSED <br />
-; "event type is object:state-changed:focused" failed <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXFocused is true" failed <br />
+<tr id='subtest-161-1' class='subtest'><td>searchbox activedescendant value changes 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXFocused is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ; "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
 <strong>Actual value:</strong> false <br />
@@ -2310,14 +2031,11 @@ ERROR: Object not found <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "result AXUIElementIsAttributeSettable(AXFocused) is true" failed <br />
 <strong>Actual value:</strong> false <br />
-; "event type is AXFocusedUIElementChanged" failed <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property states contains STATE_FOCUSED" failed <br />
-<strong>Actual value:</strong> None <br />
-ERROR: Object not found <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
 ; "property states contains STATE_FOCUSABLE" failed <br />
-<strong>Actual value:</strong> None <br />
-ERROR: Object not found <br />
+<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE'] <br />
 ; "event type is object:state-changed:focused" failed <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXFocused is true" failed <br />
@@ -2493,9 +2211,7 @@ ERROR: atspi_error: Get failed (1) <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 50" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
-; "property AXMaxValue is 100" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
+<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-178'><td><a href='http://www.w3c-test.org/wai-aria/separator_focusable_only_valuenow_unspecified-manual.html' target='_blank'>/wai-aria/separator_focusable_only_valuenow_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2512,7 +2228,7 @@ ERROR: atspi_error: Get failed (1) <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 50" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
+<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-179'><td><a href='http://www.w3c-test.org/wai-aria/separator_focusable_valuetext-manual.html' target='_blank'>/wai-aria/separator_focusable_valuetext-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2538,9 +2254,7 @@ ERROR: atspi_error: Get failed (1) <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 50" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
-; "property AXMaxValue is 100" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
+<strong>Actual value:</strong> Bonaire <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-180'><td><a href='http://www.w3c-test.org/wai-aria/separator_orientation_unspecified-manual.html' target='_blank'>/wai-aria/separator_orientation_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2570,9 +2284,7 @@ ERROR: atspi_error: Get failed (1) <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 50" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
-; "property AXMaxValue is 100" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
+<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-184'><td><a href='http://www.w3c-test.org/wai-aria/slider_only_valuenow_unspecified-manual.html' target='_blank'>/wai-aria/slider_only_valuenow_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2589,7 +2301,7 @@ ERROR: atspi_error: Get failed (1) <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 20" failed <br />
-<strong>Actual value:</strong> 0.0 <br />
+<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-185'><td><a href='http://www.w3c-test.org/wai-aria/slider_orientation_unspecified-manual.html' target='_blank'>/wai-aria/slider_orientation_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2632,18 +2344,23 @@ ERROR: atspi_error: Get failed (1) <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXMinValue isLTE -9007199254740992" failed <br />
 <strong>Actual value:</strong> 0.0 <br />
+; "property AXValue is 0" failed <br />
+<strong>Actual value:</strong> Go Fish <br />
 ; "property AXMaxValue isGTE 9007199254740992" failed <br />
 <strong>Actual value:</strong> 0.0 <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-190'><td><a href='http://www.w3c-test.org/wai-aria/spinbutton_only_aria-valuenow_unspecified-manual.html' target='_blank'>/wai-aria/spinbutton_only_aria-valuenow_unspecified-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-190-0' class='subtest'><td>spinbutton only aria-valuenow unspecified</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-190-0' class='subtest'><td>spinbutton only aria-valuenow unspecified</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXMinValue is 0" failed <br />
 <strong>Actual value:</strong> None <br />
 ; "property AXValue is 0" failed <br />
 <strong>Actual value:</strong> <br />
 ; "property AXMaxValue is 100" failed <br />
 <strong>Actual value:</strong> None <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 0" failed <br />
+<strong>Actual value:</strong> Go Fish <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-191'><td><a href='http://www.w3c-test.org/wai-aria/spinbutton_readonly_false-manual.html' target='_blank'>/wai-aria/spinbutton_readonly_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2672,9 +2389,12 @@ ERROR: atspi_error: Get failed (1) <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-195'><td><a href='http://www.w3c-test.org/wai-aria/switch_checked_mixed-manual.html' target='_blank'>/wai-aria/switch_checked_mixed-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-195-0' class='subtest'><td>switch checked mixed</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-195-0' class='subtest'><td>switch checked mixed</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXValue is 0" failed <br />
 <strong>Actual value:</strong> <br />
+;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 0" failed <br />
+<strong>Actual value:</strong> 1 <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-196'><td><a href='http://www.w3c-test.org/wai-aria/switch_checked_true-manual.html' target='_blank'>/wai-aria/switch_checked_true-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2690,12 +2410,10 @@ ERROR: atspi_error: Get failed (1) <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-198'><td><a href='http://www.w3c-test.org/wai-aria/switch_checked_value_changes-manual.html' target='_blank'>/wai-aria/switch_checked_value_changes-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-198-0' class='subtest'><td>switch checked value changes</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-198-0' class='subtest'><td>switch checked value changes</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXRoleDescription is switch" failed <br />
 <strong>Actual value:</strong> <br />
 ; "property AXValue is 1" failed <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXValue is 1" failed <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-199'><td><a href='http://www.w3c-test.org/wai-aria/switch_readonly_false-manual.html' target='_blank'>/wai-aria/switch_readonly_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2732,16 +2450,12 @@ ERROR: atspi_error: Get failed (1) <br />
 ; "property AXSelected is true" failed <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXARIAPosInSet is 3" failed <br />
-<strong>Actual value:</strong> 0 <br />
-; "property AXARIASetSize is 7" failed <br />
-<strong>Actual value:</strong> 0 <br />
-; "property AXSelected is true" failed <br />
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXSelected is true" failed <br />
 <strong>Actual value:</strong> false <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-203'><td><a href='http://www.w3c-test.org/wai-aria/table_colcount_-1-manual.html' target='_blank'>/wai-aria/table_colcount_-1-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-203-0' class='subtest'><td>table colcount -1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-203-0' class='subtest'><td>table colcount -1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is -1" failed <br />
 <strong>Actual value:</strong> 1 <br />
 <a href="https://bugzil.la/1356997">https://bugzil.la/1356997</a>: [NEW] atk_table_get_n_{columns,rows} should report the values of aria-{col,row}count <br />
@@ -2752,13 +2466,9 @@ ERROR: atspi_error: Get failed (1) <br />
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXARIAColumnCount is -1" failed <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is -1" failed <br />
-<strong>Actual value:</strong> 1 <br />
-<a href="https://webkit.org/b/171172">https://webkit.org/b/171172</a>: [NEW] [ATK] atk_table_get_n_rows() and atk_table_get_n_columns() should return values of aria-rowcount and aria-colcount, if present <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-204'><td><a href='http://www.w3c-test.org/wai-aria/table_colcount_8-manual.html' target='_blank'>/wai-aria/table_colcount_8-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-204-0' class='subtest'><td>table colcount 8</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-204-0' class='subtest'><td>table colcount 8</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is 8" failed <br />
 <strong>Actual value:</strong> 1 <br />
 <a href="https://bugzil.la/1356997">https://bugzil.la/1356997</a>: [NEW] atk_table_get_n_{columns,rows} should report the values of aria-{col,row}count <br />
@@ -2769,13 +2479,9 @@ ERROR: atspi_error: Get failed (1) <br />
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXARIAColumnCount is 8" failed <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is 8" failed <br />
-<strong>Actual value:</strong> 1 <br />
-<a href="https://webkit.org/b/171172">https://webkit.org/b/171172</a>: [NEW] [ATK] atk_table_get_n_rows() and atk_table_get_n_columns() should return values of aria-rowcount and aria-colcount, if present <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-205'><td><a href='http://www.w3c-test.org/wai-aria/table_rowcount_-1-manual.html' target='_blank'>/wai-aria/table_rowcount_-1-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-205-0' class='subtest'><td>table rowcount -1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-205-0' class='subtest'><td>table rowcount -1</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>rows() is -1" failed <br />
 <strong>Actual value:</strong> 1 <br />
 <a href="https://bugzil.la/1356997">https://bugzil.la/1356997</a>: [NEW] atk_table_get_n_{columns,rows} should report the values of aria-{col,row}count <br />
@@ -2786,13 +2492,9 @@ ERROR: atspi_error: Get failed (1) <br />
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXARIARowCount contains -1" failed <br />
 <strong>Actual value:</strong> None <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>rows() is -1" failed <br />
-<strong>Actual value:</strong> 1 <br />
-<a href="https://webkit.org/b/171172">https://webkit.org/b/171172</a>: [NEW] [ATK] atk_table_get_n_rows() and atk_table_get_n_columns() should return values of aria-rowcount and aria-colcount, if present <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-206'><td><a href='http://www.w3c-test.org/wai-aria/table_rowcount_3-manual.html' target='_blank'>/wai-aria/table_rowcount_3-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-206-0' class='subtest'><td>table rowcount 3</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-206-0' class='subtest'><td>table rowcount 3</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>rows() is 3" failed <br />
 <strong>Actual value:</strong> 1 <br />
 <a href="https://bugzil.la/1356997">https://bugzil.la/1356997</a>: [NEW] atk_table_get_n_{columns,rows} should report the values of aria-{col,row}count <br />
@@ -2802,10 +2504,6 @@ ERROR: atspi_error: Get failed (1) <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXARIARowCount is 3" failed <br />
 <strong>Actual value:</strong> None <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>rows() is 3" failed <br />
-<strong>Actual value:</strong> 1 <br />
-<a href="https://webkit.org/b/171172">https://webkit.org/b/171172</a>: [NEW] [ATK] atk_table_get_n_rows() and atk_table_get_n_columns() should return values of aria-rowcount and aria-colcount, if present <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-207'><td><a href='http://www.w3c-test.org/wai-aria/tablist_orientation_horizontal-manual.html' target='_blank'>/wai-aria/tablist_orientation_horizontal-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2844,17 +2542,13 @@ ERROR: atspi_error: Get failed (1) <br />
 <tr class='test' id='test-file-217'><td><a href='http://www.w3c-test.org/wai-aria/tree_orientation_vertical-manual.html' target='_blank'>/wai-aria/tree_orientation_vertical-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-217-0' class='subtest'><td>tree orientation vertical</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-218'><td><a href='http://www.w3c-test.org/wai-aria/treegrid_colcount_8-manual.html' target='_blank'>/wai-aria/treegrid_colcount_8-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-218-0' class='subtest'><td>treegrid colcount 8</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-218-0' class='subtest'><td>treegrid colcount 8</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is 8" failed <br />
 <strong>Actual value:</strong> 1 <br />
 <a href="https://bugzil.la/1356997">https://bugzil.la/1356997</a>: [NEW] atk_table_get_n_{columns,rows} should report the values of aria-{col,row}count <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXARIAColumnCount is 8" failed <br />
 <strong>Actual value:</strong> None <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>columns() is 8" failed <br />
-<strong>Actual value:</strong> 1 <br />
-<a href="https://webkit.org/b/171172">https://webkit.org/b/171172</a>: [NEW] [ATK] atk_table_get_n_rows() and atk_table_get_n_columns() should return values of aria-rowcount and aria-colcount, if present <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-219'><td><a href='http://www.w3c-test.org/wai-aria/treegrid_orientation_horizontal-manual.html' target='_blank'>/wai-aria/treegrid_orientation_horizontal-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2864,17 +2558,13 @@ ERROR: atspi_error: Get failed (1) <br />
 <tr class='test' id='test-file-221'><td><a href='http://www.w3c-test.org/wai-aria/treegrid_orientation_vertical-manual.html' target='_blank'>/wai-aria/treegrid_orientation_vertical-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-221-0' class='subtest'><td>treegrid orientation vertical</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-222'><td><a href='http://www.w3c-test.org/wai-aria/treegrid_rowcount_3-manual.html' target='_blank'>/wai-aria/treegrid_rowcount_3-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-222-0' class='subtest'><td>treegrid rowcount 3</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-222-0' class='subtest'><td>treegrid rowcount 3</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>rows() is 3" failed <br />
 <strong>Actual value:</strong> 1 <br />
 <a href="https://bugzil.la/1356997">https://bugzil.la/1356997</a>: [NEW] atk_table_get_n_{columns,rows} should report the values of aria-{col,row}count <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXARIARowCount is 3" failed <br />
 <strong>Actual value:</strong> None <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "result atk<em>table</em>get<em>n</em>rows() is 3" failed <br />
-<strong>Actual value:</strong> 1 <br />
-<a href="https://webkit.org/b/171172">https://webkit.org/b/171172</a>: [NEW] [ATK] atk_table_get_n_rows() and atk_table_get_n_columns() should return values of aria-rowcount and aria-colcount, if present <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-223'><td><a href='http://www.w3c-test.org/wai-aria/treeitem_selected_false-manual.html' target='_blank'>/wai-aria/treeitem_selected_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -2907,26 +2597,24 @@ ERROR: atspi_error: Get failed (1) <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-226'><td><a href='http://www.w3c-test.org/wai-aria/treeitem_selected_value_changes-manual.html' target='_blank'>/wai-aria/treeitem_selected_value_changes-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-226-0' class='subtest'><td>treeitem selected value changes</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-226-0' class='subtest'><td>treeitem selected value changes</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:state-changed:selected" failed <a href="https://webkit.org/b/171185">https://webkit.org/b/171185</a> <br />
+;  expected true got false</td></tr>
+</table></td></tr>
+<tr id='subtest-226-1' class='subtest'><td>treeitem selected value changes 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "event type is AXSelectedChildrenChanged" failed <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "event type is AXSelectedChildrenChanged" failed <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:state-changed:selected" failed <a href="https://webkit.org/b/171185">https://webkit.org/b/171185</a> <br />
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:selection-changed" failed <a href="https://webkit.org/b/171185">https://webkit.org/b/171185</a> <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "event type is AXSelectedChildrenChanged" failed <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
-<tr id='subtest-226-1' class='subtest'><td>treeitem selected value changes 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-226-2' class='subtest'><td>treeitem selected value changes 2</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: ERROR: No results reported from ATTA;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: ERROR: No results reported from ATTA;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:selection-changed" failed <a href="https://webkit.org/b/171185">https://webkit.org/b/171185</a> <br />
+<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:state-changed:selected" failed <a href="https://webkit.org/b/171185">https://webkit.org/b/171185</a> <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: ERROR: No results reported from ATTA;  expected true got false</td></tr>
-</table></td></tr>
-<tr id='subtest-226-2' class='subtest'><td>treeitem selected value changes 2</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:state-changed:selected" failed <a href="https://webkit.org/b/171185">https://webkit.org/b/171185</a> <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 
       </table>
