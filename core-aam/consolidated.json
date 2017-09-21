@@ -188,7 +188,7 @@
         }
       }
     },
-    "/core-aam/aria-autocomplete_both_new-manual.html": {
+    "/core-aam/aria-autocomplete_both-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "NOTRUN",
@@ -206,7 +206,7 @@
         "NOTRUN": 3
       },
       "subtests": {
-        "aria-autocomplete=both NEW": {
+        "aria-autocomplete=both": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
@@ -219,7 +219,7 @@
         }
       }
     },
-    "/core-aam/aria-autocomplete_inline_new-manual.html": {
+    "/core-aam/aria-autocomplete_inline-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "NOTRUN",
@@ -237,7 +237,7 @@
         "NOTRUN": 3
       },
       "subtests": {
-        "aria-autocomplete=inline NEW": {
+        "aria-autocomplete=inline": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
@@ -250,7 +250,7 @@
         }
       }
     },
-    "/core-aam/aria-autocomplete_list_new-manual.html": {
+    "/core-aam/aria-autocomplete_list-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "NOTRUN",
@@ -268,7 +268,7 @@
         "NOTRUN": 3
       },
       "subtests": {
-        "aria-autocomplete=list NEW": {
+        "aria-autocomplete=list": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
@@ -339,6 +339,57 @@
           "UAmessage": {
             "FF02": "assert_true: \"property AXElementBusy is YES\" failed   \n**Actual value:** None  \n;  expected true got false",
             "GC02": "assert_true: \"property AXElementBusy is YES\" failed   \n**Actual value:** None  \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        }
+      }
+    },
+    "/core-aam/aria-busy_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "aria-busy value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF02": "assert_true: \"event type is AXElementBusyChanged\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXElementBusyChanged\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "aria-busy value changes 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF02": "assert_true: \"event type is AXElementBusyChanged\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXElementBusyChanged\" failed   \n;  expected true got false"
           },
           "totals": {
             "PASS": 3,
@@ -505,6 +556,56 @@
         }
       }
     },
+    "/core-aam/aria-checked_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "aria-checked value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "FAIL",
+            "GC02": "PASS",
+            "WK01": "FAIL",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:state-changed:checked\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "aria-checked value changes 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
     "/core-aam/aria-colcount_new-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -524,18 +625,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert_true: \"result atk_table_get_n_columns() is 3\" failed   \n**Actual value:** 1  \n<https://bugzil.la/1356997>: [NEW] atk\\_table\\_get\\_n\\_{columns,rows} should report the values of aria-{col,row}count  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIAColumnCount is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIAColumnCount is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"result atk_table_get_n_columns() is 3\" failed   \n**Actual value:** 1  \n<https://webkit.org/b/171172>: [NEW] [ATK] atk\\_table\\_get\\_n\\_rows() and atk\\_table\\_get\\_n\\_columns() should return values of aria-rowcount and aria-colcount, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIAColumnCount is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         },
         "aria-colcount NEW 1": {
@@ -673,6 +773,48 @@
           "totals": {
             "PASS": 2,
             "FAIL": 3
+          }
+        }
+      }
+    },
+    "/core-aam/aria-current_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "NOTRUN",
+        "GC02": "NOTRUN",
+        "WK01": "OK",
+        "WK02": "NOTRUN"
+      },
+      "UAmessage": {
+        "FF02": "No steps for AT API AXAPI",
+        "GC02": "No steps for AT API AXAPI",
+        "WK02": "No steps for AT API AXAPI"
+      },
+      "totals": {
+        "OK": 2,
+        "NOTRUN": 3
+      },
+      "subtests": {
+        "aria-current value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "WK01": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "aria-current value changes 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "PASS",
+            "WK01": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
           }
         }
       }
@@ -908,6 +1050,40 @@
         }
       }
     },
+    "/core-aam/aria-disabled_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "NOTRUN",
+        "GC02": "NOTRUN",
+        "WK01": "OK",
+        "WK02": "NOTRUN"
+      },
+      "UAmessage": {
+        "FF02": "No steps for AT API AXAPI",
+        "GC02": "No steps for AT API AXAPI",
+        "WK02": "No steps for AT API AXAPI"
+      },
+      "totals": {
+        "OK": 2,
+        "NOTRUN": 3
+      },
+      "subtests": {
+        "aria-disabled value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "WK01": "FAIL"
+          },
+          "UAmessage": {
+            "WK01": "assert_true: \"event type is object:state-changed:enabled\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        }
+      }
+    },
     "/core-aam/aria-dropeffect_copy-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -1112,6 +1288,40 @@
         }
       }
     },
+    "/core-aam/aria-dropeffect_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "NOTRUN",
+        "GC02": "NOTRUN",
+        "WK01": "OK",
+        "WK02": "NOTRUN"
+      },
+      "UAmessage": {
+        "FF02": "No steps for AT API AXAPI",
+        "GC02": "No steps for AT API AXAPI",
+        "WK02": "No steps for AT API AXAPI"
+      },
+      "totals": {
+        "OK": 2,
+        "NOTRUN": 3
+      },
+      "subtests": {
+        "aria-dropeffect value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "WK01": "FAIL"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"event type is object:property-change\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:property-change\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        }
+      }
+    },
     "/core-aam/aria-errormessage-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -1229,6 +1439,61 @@
         }
       }
     },
+    "/core-aam/aria-expanded_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "aria-expanded value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "FAIL",
+            "WK02": "FAIL"
+          },
+          "UAmessage": {
+            "FF02": "assert_true: \"event type is AXRowExpanded\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXRowExpanded\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:state-changed:expanded\" failed   \n;  expected true got false",
+            "WK02": "assert_true: \"event type is AXRowExpanded\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 4
+          }
+        },
+        "aria-expanded value changes 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "FAIL",
+            "WK02": "FAIL"
+          },
+          "UAmessage": {
+            "FF02": "assert_true: \"event type is AXRowCollapsed\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXRowCollapsed\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:state-changed:expanded\" failed   \n;  expected true got false",
+            "WK02": "assert_true: \"event type is AXRowCollapsed\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 4
+          }
+        }
+      }
+    },
     "/core-aam/aria-flowto-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -1341,6 +1606,40 @@
           },
           "totals": {
             "PASS": 3,
+            "FAIL": 2
+          }
+        }
+      }
+    },
+    "/core-aam/aria-grabbed_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "NOTRUN",
+        "GC02": "NOTRUN",
+        "WK01": "OK",
+        "WK02": "NOTRUN"
+      },
+      "UAmessage": {
+        "FF02": "No steps for AT API AXAPI",
+        "GC02": "No steps for AT API AXAPI",
+        "WK02": "No steps for AT API AXAPI"
+      },
+      "totals": {
+        "OK": 2,
+        "NOTRUN": 3
+      },
+      "subtests": {
+        "aria-grabbed value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "WK01": "FAIL"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"event type is object:property-change\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:property-change\" failed   \n;  expected true got false"
+          },
+          "totals": {
             "FAIL": 2
           }
         }
@@ -1574,6 +1873,95 @@
         }
       }
     },
+    "/core-aam/aria-hidden_true_when_element_is_focused_or_fires_event_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "aria-hidden=true when element is focused or fires event NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "FAIL",
+            "WK01": "FAIL",
+            "WK02": "FAIL"
+          },
+          "UAmessage": {
+            "GC02": "assert_true: \"property accessible is true\" failed   \n**Actual value:** false  \n;  expected true got false",
+            "WK01": "assert_true: \"property accessible is true\" failed   \n**Actual value:** false  \n; \"property objectAttributes contains hidden:true\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false",
+            "WK02": "assert_true: \"property accessible is true\" failed   \n**Actual value:** false  \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 3
+          }
+        }
+      }
+    },
+    "/core-aam/aria-hidden_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "aria-hidden value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "FAIL",
+            "WK02": "FAIL"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"event type is object:property-change\" failed   \n;  expected true got false",
+            "FF02": "assert_true: \"event type is AXUIElementDestroyed\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXUIElementDestroyed\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:property-change\" failed   \n;  expected true got false",
+            "WK02": "assert_true: \"event type is AXUIElementDestroyed\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 5
+          }
+        },
+        "aria-hidden value changes 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "FAIL",
+            "WK02": "FAIL"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"event type is object:property-change\" failed   \n;  expected true got false",
+            "FF02": "assert_true: \"event type is AXUIElementCreated\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXUIElementCreated\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:property-change\" failed   \n;  expected true got false",
+            "WK02": "assert_true: \"event type is AXUIElementCreated\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 5
+          }
+        }
+      }
+    },
     "/core-aam/aria-invalid_false-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -1702,7 +2090,7 @@
         }
       }
     },
-    "/core-aam/aria-invalid_with_unrecognized_value-manual.html": {
+    "/core-aam/aria-invalid_value_changes-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -1715,7 +2103,56 @@
         "OK": 5
       },
       "subtests": {
-        "aria-invalid with unrecognized value": {
+        "aria-invalid value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF02": "assert_true: \"event type is AXInvalidStatusChanged\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "aria-invalid value changes 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF02": "assert_true: \"event type is AXInvalidStatusChanged\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/core-aam/aria-invalid_with_unrecognized_value_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "aria-invalid with unrecognized value NEW": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
@@ -1854,7 +2291,7 @@
         }
       }
     },
-    "/core-aam/aria-level_on_heading_new-manual.html": {
+    "/core-aam/aria-level_on_heading-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -1867,7 +2304,7 @@
         "OK": 5
       },
       "subtests": {
-        "aria-level on heading NEW": {
+        "aria-level on heading": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
@@ -2407,18 +2844,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert_true: \"relation RELATION_NODE_PARENT_OF is [owned1,owned2]\" failed   \n**Actual value:** []  \n;  expected true got false",
             "FF02": "assert_true: \"property AXOwns is [owned1,owned2]\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXOwns is [owned1,owned2]\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"relation RELATION_NODE_PARENT_OF is [owned1,owned2]\" failed   \n**Actual value:** [owned1 owned2]  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXOwns is [owned1,owned2]\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         },
         "aria-owns may need manual verification 1": {
@@ -2619,6 +3055,54 @@
         }
       }
     },
+    "/core-aam/aria-pressed_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "NOTRUN",
+        "GC02": "NOTRUN",
+        "WK01": "OK",
+        "WK02": "NOTRUN"
+      },
+      "UAmessage": {
+        "FF02": "No steps for AT API AXAPI",
+        "GC02": "No steps for AT API AXAPI",
+        "WK02": "No steps for AT API AXAPI"
+      },
+      "totals": {
+        "OK": 2,
+        "NOTRUN": 3
+      },
+      "subtests": {
+        "aria-pressed value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "WK01": "FAIL"
+          },
+          "UAmessage": {
+            "WK01": "assert_true: \"event type is object:state-changed:pressed\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        },
+        "aria-pressed value changes 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "PASS",
+            "WK01": "FAIL"
+          },
+          "UAmessage": {
+            "WK01": "assert_true: \"event type is object:state-changed:pressed\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        }
+      }
+    },
     "/core-aam/aria-readonly_false-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -2801,6 +3285,54 @@
         }
       }
     },
+    "/core-aam/aria-readonly_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "NOTRUN",
+        "GC02": "NOTRUN",
+        "WK01": "OK",
+        "WK02": "NOTRUN"
+      },
+      "UAmessage": {
+        "FF02": "No steps for AT API AXAPI",
+        "GC02": "No steps for AT API AXAPI",
+        "WK02": "No steps for AT API AXAPI"
+      },
+      "totals": {
+        "OK": 2,
+        "NOTRUN": 3
+      },
+      "subtests": {
+        "aria-readonly value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "WK01": "FAIL"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        },
+        "aria-readonly value changes 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "FAIL",
+            "WK01": "FAIL"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        }
+      }
+    },
     "/core-aam/aria-relevant-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -2883,6 +3415,54 @@
           },
           "totals": {
             "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/core-aam/aria-required_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "NOTRUN",
+        "GC02": "NOTRUN",
+        "WK01": "OK",
+        "WK02": "NOTRUN"
+      },
+      "UAmessage": {
+        "FF02": "No steps for AT API AXAPI",
+        "GC02": "No steps for AT API AXAPI",
+        "WK02": "No steps for AT API AXAPI"
+      },
+      "totals": {
+        "OK": 2,
+        "NOTRUN": 3
+      },
+      "subtests": {
+        "aria-required value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "WK01": "FAIL"
+          },
+          "UAmessage": {
+            "WK01": "assert_true: \"event type is object:state-changed:required\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        },
+        "aria-required value changes 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "PASS",
+            "WK01": "FAIL"
+          },
+          "UAmessage": {
+            "WK01": "assert_true: \"event type is object:state-changed:required\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 1,
             "FAIL": 1
           }
         }
@@ -2973,18 +3553,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert_true: \"result atk_table_get_n_rows() is 3\" failed   \n**Actual value:** 1  \n<https://bugzil.la/1356997>: [NEW] atk\\_table\\_get\\_n\\_{columns,rows} should report the values of aria-{col,row}count  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIARowCount is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIARowCount is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"result atk_table_get_n_rows() is 3\" failed   \n**Actual value:** 1  \n<https://webkit.org/b/171172>: [NEW] [ATK] atk\\_table\\_get\\_n\\_rows() and atk\\_table\\_get\\_n\\_columns() should return values of aria-rowcount and aria-colcount, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIARowCount is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         },
         "aria-rowcount NEW 1": {
@@ -3155,7 +3734,7 @@
         }
       }
     },
-    "/core-aam/aria-setsize_-1-manual.html": {
+    "/core-aam/aria-setsize_-1_new-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -3168,7 +3747,7 @@
         "OK": 5
       },
       "subtests": {
-        "aria-setsize=-1": {
+        "aria-setsize=-1 NEW": {
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
@@ -3444,6 +4023,40 @@
         }
       }
     },
+    "/core-aam/aria-valuenow_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "aria-valuenow value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "FAIL",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:property-change:accessible-value\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 2,
+            "FAIL": 3
+          }
+        }
+      }
+    },
     "/core-aam/aria-valuetext-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -3472,6 +4085,41 @@
           "totals": {
             "PASS": 4,
             "FAIL": 1
+          }
+        }
+      }
+    },
+    "/core-aam/aria-valuetext_value_changes-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "aria-valuetext value changes": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "FAIL",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"event type is object:property-change:accessible-value\" failed   \n;  expected true got false",
+            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
+            "WK01": "assert_true: \"event type is object:property-change:accessible-value\" failed   \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 4,
+            "PASS": 1
           }
         }
       }
@@ -3505,7 +4153,7 @@
         }
       }
     },
-    "/core-aam/banner_new-manual.html": {
+    "/core-aam/banner-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -3518,23 +4166,22 @@
         "OK": 5
       },
       "subtests": {
-        "banner NEW": {
+        "banner": {
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** ROLE\\_SECTION  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXSubrole is AXLandmarkBanner\" failed   \n**Actual value:** AXApplicationGroup  \n; \"property AXRoleDescription is banner\" failed   \n**Actual value:** group  \n;  expected true got false",
-            "WK01": "assert_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property objectAttributes contains xml-roles:banner\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXSubrole is AXLandmarkBanner\" failed   \n**Actual value:** AXApplicationGroup  \n; \"property AXRoleDescription is banner\" failed   \n**Actual value:** group  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -3571,7 +4218,7 @@
         }
       }
     },
-    "/core-aam/button_with_aria-haspopup_true_new-manual.html": {
+    "/core-aam/button_with_aria-haspopup_true-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -3584,7 +4231,7 @@
         "OK": 5
       },
       "subtests": {
-        "button with aria-haspopup=\"true\" NEW": {
+        "button with aria-haspopup=\"true\"": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
@@ -3781,7 +4428,7 @@
         }
       }
     },
-    "/core-aam/complementary_new-manual.html": {
+    "/core-aam/complementary-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -3794,7 +4441,7 @@
         "OK": 5
       },
       "subtests": {
-        "complementary NEW": {
+        "complementary": {
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
@@ -3814,7 +4461,7 @@
         }
       }
     },
-    "/core-aam/contentinfo_new-manual.html": {
+    "/core-aam/contentinfo-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -3827,7 +4474,7 @@
         "OK": 5
       },
       "subtests": {
-        "contentinfo NEW": {
+        "contentinfo": {
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
@@ -4041,7 +4688,7 @@
         }
       }
     },
-    "/core-aam/form_new-manual.html": {
+    "/core-aam/form-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -4054,7 +4701,7 @@
         "OK": 5
       },
       "subtests": {
-        "form NEW": {
+        "form": {
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
@@ -4417,7 +5064,7 @@
         }
       }
     },
-    "/core-aam/main_new-manual.html": {
+    "/core-aam/main-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -4430,7 +5077,7 @@
         "OK": 5
       },
       "subtests": {
-        "main NEW": {
+        "main": {
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
@@ -4531,6 +5178,38 @@
       },
       "subtests": {
         "menu": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property interfaces contains Selection\" failed   \n**Actual value:** ['Accessible', 'Collection', 'Component', 'EditableText', 'Hypertext', 'Hyperlink', 'Text']  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 4
+          }
+        }
+      }
+    },
+    "/core-aam/menu_child_of_menu_item-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "menu child of menu item": {
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
@@ -4702,7 +5381,7 @@
         }
       }
     },
-    "/core-aam/navigation_new-manual.html": {
+    "/core-aam/navigation-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -4715,7 +5394,7 @@
         "OK": 5
       },
       "subtests": {
-        "navigation NEW": {
+        "navigation": {
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
@@ -4760,6 +5439,71 @@
           "UAmessage": {},
           "totals": {
             "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/none_used_on_table_element_with_td_children_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "none used on table element with td children NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "GC02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property AXRoleDescription is group\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/core-aam/none_used_on_ul_element_with_li_children_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "none used on ul element with li children NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "FAIL"
+          },
+          "UAmessage": {
+            "GC02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property AXRoleDescription is group\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false",
+            "WK02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property AXRoleDescription is group\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -4880,6 +5624,71 @@
           "UAmessage": {},
           "totals": {
             "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/presentation_used_on_table_element_with_td_children_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "presentation used on table element with td children NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "GC02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property AXRoleDescription is group\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/core-aam/presentation_used_on_ul_element_with_li_children_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "presentation used on ul element with li children NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "FAIL"
+          },
+          "UAmessage": {
+            "GC02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property AXRoleDescription is group\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false",
+            "WK02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property AXRoleDescription is group\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -5187,7 +5996,7 @@
         }
       }
     },
-    "/core-aam/search_new-manual.html": {
+    "/core-aam/search-manual.html": {
       "byUA": {
         "FF01": "OK",
         "FF02": "OK",
@@ -5200,7 +6009,7 @@
         "OK": 5
       },
       "subtests": {
-        "search NEW": {
+        "search": {
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
