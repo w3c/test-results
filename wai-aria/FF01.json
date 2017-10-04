@@ -347,8 +347,8 @@
       "subtests": [
         {
           "name": "button haspopup true",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -449,7 +449,7 @@
         {
           "name": "cell aria-colspan 2 on td html colspan 3 with headers and border",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:td', 'table-cell-index:3', 'colspan:2', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n; \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false"
+          "message": "assert_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'table-cell-index:3', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -460,8 +460,8 @@
       "subtests": [
         {
           "name": "cell aria-colspan 2 on td html colspan 3 with three actual columns",
-          "status": "FAIL",
-          "message": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -616,8 +616,8 @@
       "subtests": [
         {
           "name": "columnheader aria-colspan 2 on th html colspan 3 with three actual columns",
-          "status": "FAIL",
-          "message": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -838,7 +838,7 @@
         {
           "name": "combobox haspopup unspecified",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false"
+          "message": "assert_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false"
         }
       ],
       "status": "OK",
