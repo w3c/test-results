@@ -152,38 +152,30 @@
           "byUA": {
             "FF01": "PASS",
             "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXARIAAtomic is YES\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIAAtomic is YES\" failed   \n**Actual value:** false  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains atomic:true\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains container-atomic:true\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXARIAAtomic is YES\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 4,
+            "FAIL": 1
           }
         },
         "aria-atomic=true 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
-            "WK02": "FAIL"
+            "WK01": "FAIL"
           },
           "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains container-atomic:true\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:child', 'tag:div', 'toolkit:WebKitGtk']  \n; \"relation RELATION_MEMBER_OF is [test]\" failed   \n**Actual value:** []  \n;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
+            "WK01": "assert_true: \"relation RELATION_MEMBER_OF is [test]\" failed   \n**Actual value:** []  \n;  expected true got false"
           },
           "totals": {
             "PASS": 1,
-            "FAIL": 4
+            "FAIL": 1
           }
         }
       }
@@ -575,16 +567,15 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
-            "WK01": "assert_true: \"event type is object:state-changed:checked\" failed   \n;  expected true got false"
+            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         },
         "aria-checked value changes 1": {
@@ -637,22 +628,6 @@
             "FAIL": 3,
             "PASS": 2
           }
-        },
-        "aria-colcount NEW 1": {
-          "stNum": 1,
-          "byUA": {
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK02": "FAIL"
-          },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
-          "totals": {
-            "FAIL": 3
-          }
         }
       }
     },
@@ -675,18 +650,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert_true: \"result atk_table_cell_get_position() contains column=2\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIAColumnIndex is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIAColumnIndex is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"result atk_table_cell_get_position() contains column=2\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIAColumnIndex is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -760,19 +734,11 @@
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 2
           }
         }
       }
@@ -917,19 +883,11 @@
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 2
           }
         }
       }
@@ -1031,22 +989,6 @@
           "totals": {
             "PASS": 5
           }
-        },
-        "aria-disabled=true 1": {
-          "stNum": 1,
-          "byUA": {
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK02": "FAIL"
-          },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
-          "totals": {
-            "FAIL": 3
-          }
         }
       }
     },
@@ -1072,14 +1014,11 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert_true: \"event type is object:state-changed:enabled\" failed   \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         }
       }
@@ -1103,17 +1042,16 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property AXDropEffects is [copy]\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXDropEffects is [copy]\" failed   \n**Actual value:** copy  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains dropeffect:copy\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXDropEffects is [copy]\" failed   \n**Actual value:** copy  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -1137,17 +1075,16 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property AXDropEffects is [execute]\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXDropEffects is [execute]\" failed   \n**Actual value:** execute  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains dropeffect:execute\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXDropEffects is [execute]\" failed   \n**Actual value:** execute  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -1171,17 +1108,16 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property AXDropEffects is [link]\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXDropEffects is [link]\" failed   \n**Actual value:** link  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains dropeffect:link\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXDropEffects is [link]\" failed   \n**Actual value:** link  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -1205,17 +1141,16 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property AXDropEffects is [move]\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXDropEffects is [move]\" failed   \n**Actual value:** move  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains dropeffect:move\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXDropEffects is [move]\" failed   \n**Actual value:** move  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -1242,14 +1177,11 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert_true: \"property objectAttributes contains dropeffect:none\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         }
       }
@@ -1273,17 +1205,16 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property AXDropEffects is [popup]\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXDropEffects is [popup]\" failed   \n**Actual value:** popup  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains dropeffect:popup\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXDropEffects is [popup]\" failed   \n**Actual value:** popup  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -1358,19 +1289,11 @@
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 2
           }
         }
       }
@@ -1458,18 +1381,17 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
             "FF02": "assert_true: \"event type is AXRowExpanded\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"event type is AXRowExpanded\" failed   \n;  expected true got false",
-            "WK01": "assert_true: \"event type is object:state-changed:expanded\" failed   \n;  expected true got false",
             "WK02": "assert_true: \"event type is AXRowExpanded\" failed   \n;  expected true got false"
           },
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2,
+            "FAIL": 3
           }
         },
         "aria-expanded value changes 1": {
@@ -1478,18 +1400,17 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "FAIL"
           },
           "UAmessage": {
             "FF02": "assert_true: \"event type is AXRowCollapsed\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"event type is AXRowCollapsed\" failed   \n;  expected true got false",
-            "WK01": "assert_true: \"event type is object:state-changed:expanded\" failed   \n;  expected true got false",
             "WK02": "assert_true: \"event type is AXRowCollapsed\" failed   \n;  expected true got false"
           },
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2,
+            "FAIL": 3
           }
         }
       }
@@ -1528,19 +1449,11 @@
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 2
           }
         }
       }
@@ -1564,16 +1477,15 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXGrabbed is NO\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains grabbed:false\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXGrabbed is NO\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -1597,16 +1509,15 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXGrabbed is YES\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains grabbed:true\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXGrabbed is YES\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -2274,19 +2185,11 @@
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 2
           }
         }
       }
@@ -2342,16 +2245,15 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXDisclosureLevel is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains level:5\" failed   \n**Actual value:** ['computed-role:treeitem', 'xml-roles:treeitem', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXDisclosureLevel is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -2375,36 +2277,26 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXARIALive is assertive\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains live:assertive\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains container-live:assertive\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXARIALive is assertive\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         },
         "aria-live=assertive 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains container-live:assertive\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:child', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2
           }
         }
       }
@@ -2428,37 +2320,27 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property AXARIALive is off\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIALive is off\" failed   \n**Actual value:**   \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains live:off\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains container-live:off\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIALive is off\" failed   \n**Actual value:**   \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "aria-live=off 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains container-live:off\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:child', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2
           }
         }
       }
@@ -2482,36 +2364,26 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXARIALive is polite\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains live:polite\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains container-live:polite\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXARIALive is polite\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         },
         "aria-live=polite 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains container-live:polite\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:child', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2
           }
         }
       }
@@ -2543,18 +2415,12 @@
         "aria-modal=false NEW 1": {
           "stNum": 1,
           "byUA": {
-            "FF01": "FAIL",
             "FF02": "PASS",
             "GC02": "PASS",
-            "WK01": "FAIL",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF01": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK01": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 2,
             "PASS": 3
           }
         }
@@ -2587,20 +2453,16 @@
         "aria-modal=true NEW 1": {
           "stNum": 1,
           "byUA": {
-            "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
             "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
-            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
-            "WK01": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
+            "FAIL": 2,
             "PASS": 1
           }
         }
@@ -2690,14 +2552,11 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert_true: \"property states doesNotContain STATE_MULTISELECTABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_MULTISELECTABLE', 'STATE\\_SENSITIVE']  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         }
       }
@@ -2861,19 +2720,13 @@
           "stNum": 1,
           "byUA": {
             "FF01": "FAIL",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "PASS",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"relation RELATION_NODE_CHILD_OF is [test]\" failed   \n**Actual value:** []  \n;  expected true got false",
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
+            "FF01": "assert_true: \"relation RELATION_NODE_CHILD_OF is [test]\" failed   \n**Actual value:** []  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
+            "FAIL": 1,
             "PASS": 1
           }
         },
@@ -3009,16 +2862,15 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXValue is 2\" failed   \n**Actual value:**   \n;  expected true got false",
-            "WK01": "assert_true: \"property states contains STATE_INDETERMINATE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE']  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXValue is 2\" failed   \n**Actual value:**   \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -3091,14 +2943,11 @@
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert_true: \"event type is object:state-changed:pressed\" failed   \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         }
       }
@@ -3234,20 +3083,14 @@
           "stNum": 1,
           "byUA": {
             "FF01": "FAIL",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
-            "WK02": "FAIL"
+            "WK01": "FAIL"
           },
           "UAmessage": {
             "FF01": "assert_true: \"property states doesNotContain STATE_CHECKABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT', 'STATE\\_CHECKABLE']  \n<https://bugzil.la/1356018>: [NEW] Elements with aria-readonly=\"true\" should expose ATK\\_STATE\\_READ\\_ONLY  \n;  expected true got false",
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK01": "assert_true: \"property states doesNotContain STATE_CHECKABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SELECTABLE', 'STATE\\_SENSITIVE', 'STATE\\_CHECKABLE']  \n;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
+            "WK01": "assert_true: \"property states doesNotContain STATE_CHECKABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SELECTABLE', 'STATE\\_SENSITIVE', 'STATE\\_CHECKABLE']  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 5
+            "FAIL": 2
           }
         }
       }
@@ -3307,28 +3150,28 @@
           "stNum": 0,
           "byUA": {
             "FF01": "FAIL",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false",
-            "WK01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false"
+            "FF01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 1,
+            "PASS": 1
           }
         },
         "aria-readonly value changes 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "FAIL",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false",
-            "WK01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false"
+            "FF01": "assert_true: \"event type is object:state-changed:read-only\" failed   \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 1,
+            "PASS": 1
           }
         }
       }
@@ -3351,39 +3194,28 @@
           "byUA": {
             "FF01": "FAIL",
             "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"property objectAttributes contains relevant:additions\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:group', 'tag:div', 'id:test', 'container-relevant:additions', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXARIARelevant is additions\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIARelevant is additions\" failed   \n**Actual value:**   \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains relevant:additions\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains container-relevant:additions\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF01": "assert_true: \"property objectAttributes contains relevant:additions\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'container-live-role:group', 'xml-roles:group', 'tag:div', 'container-live:polite', 'id:test', 'container-relevant:additions', 'live:polite', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXARIARelevant is additions\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 2,
+            "PASS": 3
           }
         },
         "aria-relevant 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
-            "WK02": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains container-relevant:additions\" failed   \n**Actual value:** ['computed-role:group', 'xml-roles:group', 'html-id:child', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2
           }
         }
       }
@@ -3442,28 +3274,22 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert_true: \"event type is object:state-changed:required\" failed   \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         },
         "aria-required value changes 1": {
           "stNum": 1,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert_true: \"event type is object:state-changed:required\" failed   \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         }
       }
@@ -3565,22 +3391,6 @@
             "FAIL": 3,
             "PASS": 2
           }
-        },
-        "aria-rowcount NEW 1": {
-          "stNum": 1,
-          "byUA": {
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK02": "FAIL"
-          },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
-          "totals": {
-            "FAIL": 3
-          }
         }
       }
     },
@@ -3603,34 +3413,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert_true: \"result atk_table_cell_get_position() contains row=2\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIARowIndex is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIARowIndex is 3\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert_true: \"result atk_table_cell_get_position() contains row=2\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIARowIndex is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
-          }
-        },
-        "aria-rowindex NEW 1": {
-          "stNum": 1,
-          "byUA": {
-            "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK02": "FAIL"
-          },
-          "UAmessage": {
-            "FF02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "GC02": "assert_true: ERROR: No results reported from ATTA;  expected true got false",
-            "WK02": "assert_true: ERROR: No results reported from ATTA;  expected true got false"
-          },
-          "totals": {
-            "FAIL": 3
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -4039,20 +3832,21 @@
         "aria-valuenow value changes": {
           "stNum": 0,
           "byUA": {
-            "FF01": "PASS",
+            "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "FAIL",
             "WK02": "PASS"
           },
           "UAmessage": {
+            "FF01": "assert_true: \"event type is object:property-change:accessible-value\" failed   \n;  expected true got false",
             "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
             "GC02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
             "WK01": "assert_true: \"event type is object:property-change:accessible-value\" failed   \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "FAIL": 4,
+            "PASS": 1
           }
         }
       }
@@ -4626,6 +4420,561 @@
         }
       }
     },
+    "/core-aam/exclude_element_hidden_with_css_display_none-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude element hidden with CSS display:none": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_element_hidden_with_css_visibility_hidden-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude element hidden with CSS visibility:hidden": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_element_hidden_with_html5_hidden-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude element hidden with HTML5 hidden": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_button-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of button": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "PASS",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_checkbox_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of checkbox NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "PASS",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_img-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of img": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_math-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of math": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 3,
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_menuitemcheckbox_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of menuitemcheckbox NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 3,
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_menuitemradio_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of menuitemradio NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 3,
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_option_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of option NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 3,
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_progressbar-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of progressbar": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_radio_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of radio NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 3,
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_scrollbar-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of scrollbar": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_separator-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of separator": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_slider-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of slider": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 3
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_switch_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of switch NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "FF02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 3,
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/core-aam/exclude_presentational_children_of_tab_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Exclude presentational children of tab NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "PASS",
+            "GC02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false",
+            "GC02": "assert_true: \"property accessible is false\" failed   \n**Actual value:** true  \n;  expected true got false"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 3
+          }
+        }
+      }
+    },
     "/core-aam/feed_new-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -4880,6 +5229,267 @@
         }
       }
     },
+    "/core-aam/include_element_referenced_by_global_aria-controls-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Include element referenced by global aria-controls": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/include_element_referenced_by_global_aria-describedby-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Include element referenced by global aria-describedby": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/include_element_referenced_by_global_aria-details_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Include element referenced by global aria-details NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/include_element_referenced_by_global_aria-errormessage_new-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Include element referenced by global aria-errormessage NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/include_element_referenced_by_global_aria-flowto-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Include element referenced by global aria-flowto": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/include_element_referenced_by_global_aria-labelledby-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Include element referenced by global aria-labelledby": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/include_element_referenced_by_global_aria-owns-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Include element referenced by global aria-owns": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/include_element_that_is_focusable-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Include element that is focusable": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/include_element_with_id_inside_element_with_aria-activedescendant-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Include element with ID inside element with aria-activedescendant": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
     "/core-aam/link-manual.html": {
       "byUA": {
         "FF01": "OK",
@@ -5050,16 +5660,15 @@
             "FF01": "FAIL",
             "FF02": "PASS",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"property role is ROLE_LOG\" failed   \n**Actual value:** ROLE\\_SECTION  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains container-live:polite\" failed   \n**Actual value:** ['computed-role:log', 'xml-roles:log', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains live:polite\" failed   \n**Actual value:** ['computed-role:log', 'xml-roles:log', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains container-live-role:log\" failed   \n**Actual value:** ['computed-role:log', 'xml-roles:log', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF01": "assert_true: \"property role is ROLE_LOG\" failed   \n**Actual value:** ROLE\\_SECTION  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 3
+            "FAIL": 1,
+            "PASS": 4
           }
         }
       }
@@ -5116,17 +5725,16 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert_true: \"property role is ROLE_MARQUEE\" failed   \n**Actual value:** ROLE\\_ANIMATION  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** AXUnknown  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains container-live:off\" failed   \n**Actual value:** ['computed-role:marquee', 'xml-roles:marquee', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains live:off\" failed   \n**Actual value:** ['computed-role:marquee', 'xml-roles:marquee', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** AXUnknown  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -5308,17 +5916,16 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property AXRole is AXMenuButton\" failed   \n**Actual value:** AXMenuItem  \n; \"property AXRoleDescription is menu button\" failed   \n**Actual value:** menu item  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXRole is AXMenuButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is menu button\" failed   \n**Actual value:** button  \n;  expected true got false",
-            "WK01": "assert_true: \"property role is ROLE_MENU_ITEM\" failed   \n**Actual value:** ROLE\\_UNKNOWN  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXRole is AXMenuButton\" failed   \n**Actual value:** AXButton  \n; \"property AXRoleDescription is menu button\" failed   \n**Actual value:** button  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -5428,6 +6035,35 @@
       },
       "subtests": {
         "none NEW": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/none_used_on_element_that_is_focused_or_fires_event-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "none used on element that is focused or fires event": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
@@ -5553,19 +6189,18 @@
         "option inside combobox": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
-            "FF02": "PASS",
+            "FF01": "PASS",
+            "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"property role is ROLE_MENU_ITEM\" failed   \n**Actual value:** ROLE\\_LIST\\_ITEM  \n;  expected true got false",
-            "WK01": "assert_true: \"property role is ROLE_MENU_ITEM\" failed   \n**Actual value:** ROLE\\_LIST\\_ITEM  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXRole is AXStaticText\" failed   \n**Actual value:** AXMenuItem  \n; \"property AXRoleDescription is text\" failed   \n**Actual value:** menu item  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 3
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -5613,6 +6248,35 @@
       },
       "subtests": {
         "presentation": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "PASS",
+            "FF02": "PASS",
+            "GC02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/core-aam/presentation_used_on_element_that_is_focused_or_fires_event-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "GC02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "presentation used on element that is focused or fires event": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
@@ -6197,17 +6861,16 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** AXUnknown  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXRoleDescription is application status\" failed   \n**Actual value:** status  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains container-live:polite\" failed   \n**Actual value:** ['computed-role:status', 'xml-roles:status', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n<https://webkit.org/b/171174>: [NEW] [ATK] Object attributes are missing for ARIA \"status\" role  \n; \"property objectAttributes contains live:polite\" failed   \n**Actual value:** ['computed-role:status', 'xml-roles:status', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n<https://webkit.org/b/171174>: [NEW] [ATK] Object attributes are missing for ARIA \"status\" role  \n; \"property objectAttributes contains container-live-role:status\" failed   \n**Actual value:** ['computed-role:status', 'xml-roles:status', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n<https://webkit.org/b/171174>: [NEW] [ATK] Object attributes are missing for ARIA \"status\" role  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXRoleDescription is application status\" failed   \n**Actual value:** status  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 2,
-            "FAIL": 3
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -6351,16 +7014,15 @@
             "FF01": "PASS",
             "FF02": "PASS",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "GC02": "assert_true: \"property AXRoleDescription is tab panel\" failed   \n**Actual value:** tabpanel  \n;  expected true got false",
-            "WK01": "assert_true: \"property role is ROLE_SCROLL_PANE\" failed   \n**Actual value:** ROLE\\_PANEL  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXRoleDescription is tab panel\" failed   \n**Actual value:** tabpanel  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -6477,16 +7139,15 @@
             "FF01": "FAIL",
             "FF02": "PASS",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"property role is ROLE_TIMER\" failed   \n**Actual value:** ROLE\\_SECTION  \n;  expected true got false",
-            "WK01": "assert_true: \"property objectAttributes contains container-live:off\" failed   \n**Actual value:** ['computed-role:timer', 'xml-roles:timer', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains live:off\" failed   \n**Actual value:** ['computed-role:timer', 'xml-roles:timer', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n; \"property objectAttributes contains container-live-role:timer\" failed   \n**Actual value:** ['computed-role:timer', 'xml-roles:timer', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+            "FF01": "assert_true: \"property role is ROLE_TIMER\" failed   \n**Actual value:** ROLE\\_SECTION  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 3
+            "FAIL": 1,
+            "PASS": 4
           }
         }
       }

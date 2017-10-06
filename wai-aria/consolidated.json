@@ -975,18 +975,20 @@
         "button haspopup true": {
           "stNum": 0,
           "byUA": {
-            "FF01": "PASS",
+            "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "PASS",
+            "WK01": "FAIL",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXMenuButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** menu button  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** []  \n;  expected true got false"
+            "FF01": "assert_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF02": "assert_true: \"property AXRole is AXPopUpButton\" failed   \n**Actual value:** AXMenuButton  \n; \"property AXRoleDescription is pop up button\" failed   \n**Actual value:** menu button  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** []  \n;  expected true got false",
+            "WK01": "assert\\_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['computed-role:button', 'xml-roles:button', 'haspopup:true', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -1158,18 +1160,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -1265,7 +1266,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:td', 'table-cell-index:3', 'colspan:2', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n; \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false"
+            "FF01": "assert_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'table-cell-index:3', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
           },
           "totals": {
             "FAIL": 1,
@@ -1290,20 +1291,19 @@
         "cell aria-colspan 2 on td html colspan 3 with three actual columns": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
             "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n;  expected true got false",
             "GC02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -1496,18 +1496,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -1531,18 +1530,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -1727,19 +1725,18 @@
         "columnheader aria-colspan 2 on th html colspan 3 with three actual columns": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "PASS",
             "GC02": "FAIL",
             "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false",
             "GC02": "assert_true: \"property AXColumnIndexRange.length is 3\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 3
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -1930,18 +1927,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -1965,18 +1961,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -2336,7 +2331,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert\\_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:combobox', 'explicit-name:true', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
+            "FF01": "assert_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false",
             "FF02": "assert_true: \"property AXExpanded is true\" failed   \n**Actual value:** None  \n; \"property actions contains AXShowMenu\" failed   \n**Actual value:** []  \n;  expected true got false"
           },
           "totals": {
@@ -3637,17 +3632,16 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -3671,17 +3665,16 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
-            "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXRole is AXCell\" failed   \n**Actual value:** AXGroup  \n; \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "FAIL": 2,
+            "PASS": 3
           }
         }
       }
@@ -4425,15 +4418,16 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "PASS",
-            "WK01": "PASS",
+            "WK01": "FAIL",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"property AXValue is 1\" failed   \n**Actual value:**   \n; \"property AXARIAPosInSet is 4\" failed   \n**Actual value:** None  \n; \"property AXARIASetSize is 8\" failed   \n**Actual value:** None  \n;  expected true got false"
+            "FF02": "assert_true: \"property AXValue is 1\" failed   \n**Actual value:**   \n; \"property AXARIAPosInSet is 4\" failed   \n**Actual value:** None  \n; \"property AXARIASetSize is 8\" failed   \n**Actual value:** None  \n;  expected true got false",
+            "WK01": "assert\\_true: \"property role is ROLE_CHECK_MENU_ITEM\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property states contains STATE\\_CHECKABLE\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property states contains STATE\\_CHECKED\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property objectAttributes contains posinset:4\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property objectAttributes contains setsize:8\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
@@ -4457,16 +4451,17 @@
             "FF01": "PASS",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "PASS",
+            "WK01": "FAIL",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF02": "assert_true: \"result AXUIElementIsAttributeSettable(AXValue) is true\" failed   \n**Actual value:** false  \n;  expected true got false",
-            "GC02": "assert_true: \"result AXUIElementIsAttributeSettable(AXValue) is true\" failed   \n**Actual value:** false  \n;  expected true got false"
+            "GC02": "assert_true: \"result AXUIElementIsAttributeSettable(AXValue) is true\" failed   \n**Actual value:** false  \n;  expected true got false",
+            "WK01": "assert\\_true: \"property role is ROLE_CHECK_MENU_ITEM\" failed   \n**Actual value:** None  \nERROR: Object not found  \n; \"property states contains STATE\\_CHECKABLE\" failed   \n**Actual value:** None  \nERROR: Object not found  \n;  expected true got false"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 2,
+            "FAIL": 3
           }
         }
       }
@@ -5137,7 +5132,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "WK01": "assert\\_true: \"property objectAttributes contains colindex:4\" failed   \n**Actual value:** ['computed-role:row', 'xml-roles:row', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "WK01": "assert\\_true: \"property objectAttributes contains colindex:4\" failed   \n**Actual value:** ['computed-role:row', 'xml-roles:row', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
           },
           "totals": {
             "PASS": 4,
@@ -5150,18 +5145,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -5185,15 +5179,12 @@
             "FF01": "PASS",
             "FF02": "PASS",
             "GC02": "PASS",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert\\_true: \"property objectAttributes contains rowindex:4\" failed   \n**Actual value:** ['computed-role:row', 'xml-roles:row', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 5
           }
         },
         "row rowindex 4 1": {
@@ -5202,18 +5193,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -5305,18 +5295,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains column=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIAColumnIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
@@ -5340,18 +5329,17 @@
             "FF01": "FAIL",
             "FF02": "FAIL",
             "GC02": "FAIL",
-            "WK01": "FAIL",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
             "FF01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://bugzil.la/1357188>: [NEW] atk\\_table\\_cell\\_get\\_position() should report the values of aria-rowindex and aria-colindex  \n;  expected true got false",
             "FF02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "GC02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false",
-            "WK01": "assert\\_true: \"result atk_table_cell_get_position() contains row=3\" failed   \n**Actual value:** (1, row=0, column=0)  \n<https://webkit.org/b/171176>: [NEW] [ATK] atk\\_table\\_cell\\_get\\_position() should return values of aria-rowindex and aria-colindex, if present  \n;  expected true got false"
+            "GC02": "assert_true: \"property AXARIARowIndex is 4\" failed   \n**Actual value:** None  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 3,
+            "PASS": 2
           }
         }
       }
