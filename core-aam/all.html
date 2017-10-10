@@ -525,18 +525,24 @@
 <tr class='test' id='test-file-39'><td><a href='http://www.w3c-test.org/core-aam/aria-expanded_value_changes-manual.html' target='_blank'>/core-aam/aria-expanded_value_changes-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-39-0' class='subtest'><td>aria-expanded value changes</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "event type is AXRowExpanded" failed<br />
+; "event type is AXRowCountChanged" failed<br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "event type is AXRowExpanded" failed<br />
+; "event type is AXRowCountChanged" failed<br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "event type is AXRowExpanded" failed<br />
+; "event type is AXRowCountChanged" failed<br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr id='subtest-39-1' class='subtest'><td>aria-expanded value changes 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "event type is AXRowCollapsed" failed<br />
+; "event type is AXRowCountChanged" failed<br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "event type is AXRowCollapsed" failed<br />
+; "event type is AXRowCountChanged" failed<br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "event type is AXRowCollapsed" failed<br />
+; "event type is AXRowCountChanged" failed<br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-40'><td><a href='http://www.w3c-test.org/core-aam/aria-flowto-manual.html' target='_blank'>/core-aam/aria-flowto-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -885,13 +891,10 @@ ERROR: Object not found<br />
 <a href="https://bugzil.la/1356018">https://bugzil.la/1356018</a>: [NEW] Elements with aria-readonly="true" should expose ATK_STATE_READ_ONLY<br />
 ;  expected true got false</td></tr>
 </table></td></tr>
-<tr id='subtest-86-1' class='subtest'><td>aria-readonly=true on radiogroup 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
+<tr id='subtest-86-1' class='subtest'><td>aria-readonly=true on radiogroup 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert<em>true: "property states doesNotContain STATE</em>CHECKABLE" failed<br />
 <strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_OPAQUE', 'STATE_SENSITIVE', 'STATE_SHOWING', 'STATE_VISIBLE', 'STATE_SELECTABLE_TEXT', 'STATE_CHECKABLE']<br />
 <a href="https://bugzil.la/1356018">https://bugzil.la/1356018</a>: [NEW] Elements with aria-readonly="true" should expose ATK_STATE_READ_ONLY<br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert<em>true: "property states doesNotContain STATE</em>CHECKABLE" failed<br />
-<strong>Actual value:</strong> ['STATE_ENABLED', 'STATE_HORIZONTAL', 'STATE_SELECTABLE', 'STATE_SENSITIVE', 'STATE_CHECKABLE']<br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-87'><td><a href='http://www.w3c-test.org/core-aam/aria-readonly_true_on_textbox-manual.html' target='_blank'>/core-aam/aria-readonly_true_on_textbox-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1031,11 +1034,7 @@ ERROR: Object not found<br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-103'><td><a href='http://www.w3c-test.org/core-aam/aria-sort_none-manual.html' target='_blank'>/core-aam/aria-sort_none-manual.html</a></td><td class='OK'>OK</td><td class='NOTRUN'>NOTRUN</td><td class='NOTRUN'>NOTRUN</td><td class='OK'>OK</td><td class='NOTRUN'>NOTRUN</td></tr>
-<tr id='subtest-103-0' class='subtest'><td>aria-sort=none</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property objectAttributes contains sort:none" failed<br />
-<strong>Actual value:</strong> ['computed-role:columnheader', 'xml-roles:columnheader', 'readonly:false', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']<br />
-;  expected true got false</td></tr>
-</table></td></tr>
+<tr id='subtest-103-0' class='subtest'><td>aria-sort=none</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
 <tr class='test' id='test-file-104'><td><a href='http://www.w3c-test.org/core-aam/aria-sort_other-manual.html' target='_blank'>/core-aam/aria-sort_other-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-104-0' class='subtest'><td>aria-sort=other</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXSortDirection is AXUnknownSortDirection" failed<br />
@@ -1057,14 +1056,8 @@ ERROR: Object not found<br />
 <tr class='test' id='test-file-107'><td><a href='http://www.w3c-test.org/core-aam/aria-valuenow-manual.html' target='_blank'>/core-aam/aria-valuenow-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-107-0' class='subtest'><td>aria-valuenow</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-108'><td><a href='http://www.w3c-test.org/core-aam/aria-valuenow_value_changes-manual.html' target='_blank'>/core-aam/aria-valuenow_value_changes-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-108-0' class='subtest'><td>aria-valuenow value changes</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "event type is object:property-change:accessible-value" failed<br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "event type is AXValueChanged" failed<br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "event type is AXValueChanged" failed<br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:property-change:accessible-value" failed<br />
+<tr id='subtest-108-0' class='subtest'><td>aria-valuenow value changes</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "event type is AXValueChanged" failed<br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-109'><td><a href='http://www.w3c-test.org/core-aam/aria-valuetext-manual.html' target='_blank'>/core-aam/aria-valuetext-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1074,14 +1067,8 @@ ERROR: Object not found<br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-110'><td><a href='http://www.w3c-test.org/core-aam/aria-valuetext_value_changes-manual.html' target='_blank'>/core-aam/aria-valuetext_value_changes-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-110-0' class='subtest'><td>aria-valuetext value changes</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "event type is object:property-change:accessible-value" failed<br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> assert_true: "event type is AXValueChanged" failed<br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "event type is AXValueChanged" failed<br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "event type is object:property-change:accessible-value" failed<br />
+<tr id='subtest-110-0' class='subtest'><td>aria-valuetext value changes</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='6'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "event type is AXValueChanged" failed<br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-111'><td><a href='http://www.w3c-test.org/core-aam/article-manual.html' target='_blank'>/core-aam/article-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>

@@ -1385,9 +1385,9 @@
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"event type is AXRowExpanded\" failed   \n;  expected true got false",
-            "GC02": "assert_true: \"event type is AXRowExpanded\" failed   \n;  expected true got false",
-            "WK02": "assert_true: \"event type is AXRowExpanded\" failed   \n;  expected true got false"
+            "FF02": "assert_true: \"event type is AXRowExpanded\" failed   \n; \"event type is AXRowCountChanged\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXRowExpanded\" failed   \n; \"event type is AXRowCountChanged\" failed   \n;  expected true got false",
+            "WK02": "assert_true: \"event type is AXRowExpanded\" failed   \n; \"event type is AXRowCountChanged\" failed   \n;  expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -1404,9 +1404,9 @@
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "FF02": "assert_true: \"event type is AXRowCollapsed\" failed   \n;  expected true got false",
-            "GC02": "assert_true: \"event type is AXRowCollapsed\" failed   \n;  expected true got false",
-            "WK02": "assert_true: \"event type is AXRowCollapsed\" failed   \n;  expected true got false"
+            "FF02": "assert_true: \"event type is AXRowCollapsed\" failed   \n; \"event type is AXRowCountChanged\" failed   \n;  expected true got false",
+            "GC02": "assert_true: \"event type is AXRowCollapsed\" failed   \n; \"event type is AXRowCountChanged\" failed   \n;  expected true got false",
+            "WK02": "assert_true: \"event type is AXRowCollapsed\" failed   \n; \"event type is AXRowCountChanged\" failed   \n;  expected true got false"
           },
           "totals": {
             "PASS": 2,
@@ -3083,14 +3083,14 @@
           "stNum": 1,
           "byUA": {
             "FF01": "FAIL",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"property states doesNotContain STATE_CHECKABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT', 'STATE\\_CHECKABLE']  \n<https://bugzil.la/1356018>: [NEW] Elements with aria-readonly=\"true\" should expose ATK\\_STATE\\_READ\\_ONLY  \n;  expected true got false",
-            "WK01": "assert_true: \"property states doesNotContain STATE_CHECKABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SELECTABLE', 'STATE\\_SENSITIVE', 'STATE\\_CHECKABLE']  \n;  expected true got false"
+            "FF01": "assert_true: \"property states doesNotContain STATE_CHECKABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT', 'STATE\\_CHECKABLE']  \n<https://bugzil.la/1356018>: [NEW] Elements with aria-readonly=\"true\" should expose ATK\\_STATE\\_READ\\_ONLY  \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 2
+            "FAIL": 1,
+            "PASS": 1
           }
         }
       }
@@ -3679,14 +3679,11 @@
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "FAIL"
+            "WK01": "PASS"
           },
-          "UAmessage": {
-            "WK01": "assert_true: \"property objectAttributes contains sort:none\" failed   \n**Actual value:** ['computed-role:columnheader', 'xml-roles:columnheader', 'readonly:false', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
           }
         }
       }
@@ -3832,21 +3829,18 @@
         "aria-valuenow value changes": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"event type is object:property-change:accessible-value\" failed   \n;  expected true got false",
-            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
-            "GC02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
-            "WK01": "assert_true: \"event type is object:property-change:accessible-value\" failed   \n;  expected true got false"
+            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
@@ -3899,21 +3893,18 @@
         "aria-valuetext value changes": {
           "stNum": 0,
           "byUA": {
-            "FF01": "FAIL",
+            "FF01": "PASS",
             "FF02": "FAIL",
-            "GC02": "FAIL",
-            "WK01": "FAIL",
+            "GC02": "PASS",
+            "WK01": "PASS",
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF01": "assert_true: \"event type is object:property-change:accessible-value\" failed   \n;  expected true got false",
-            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
-            "GC02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false",
-            "WK01": "assert_true: \"event type is object:property-change:accessible-value\" failed   \n;  expected true got false"
+            "FF02": "assert_true: \"event type is AXValueChanged\" failed   \n;  expected true got false"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
