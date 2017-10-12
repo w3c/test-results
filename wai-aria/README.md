@@ -31,6 +31,14 @@ Index of implementations in reports
   * email: jdiggs@igalia.com
   * link: <http://www.mozilla.org>
 
+* FF03 - Firefox on Windows using IAccessible2
+  * email: jongund@illinois.edu
+  * link: <http://www.mozilla.org>
+
+* FF04 - Firefox on Windows using MSAA
+  * email: jongund@illinois.edu
+  * link: <http://www.mozilla.org>
+
 * WK01 - WebKit on Linux using ATK
   * email: jdiggs@igalia.com
   * link: <https://webkitgtk.org>
@@ -41,6 +49,14 @@ Index of implementations in reports
 
 * GC02 - Chrome on macOS using AX API
   * email: jdiggs@igalia.com
+  * link: <https://www.google.com/chrome/>
+
+* GC03 - Chrome on Windows using IAccessible2
+  * email: jongund@illinois.edu
+  * link: <https://www.google.com/chrome/>
+
+* GC04 - Chrome on Windows using MSAA
+  * email: jongund@illinois.edu
   * link: <https://www.google.com/chrome/>
 
 Adding new results
