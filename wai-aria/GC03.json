@@ -11,7 +11,7 @@
         {
           "name": "alertdialog modal false 1",
           "status": "FAIL",
-          "message": "assert_false: NOTRUN: No assertion for API ATK expected false got true"
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -28,7 +28,7 @@
         {
           "name": "alertdialog modal true 1",
           "status": "FAIL",
-          "message": "assert_false: NOTRUN: No assertion for API ATK expected false got true"
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -36,33 +36,22 @@
     },
     {
       "test": "/wai-aria/application_activedescendant-manual.html",
-      "subtests": [
-        {
-          "name": "application activedescendant",
-          "status": "FAIL",
-          "message": "assert\\_true: \"property states doesNotContain STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_FOCUSABLE', 'STATE\\_FOCUSED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n;  expected true got false"
-        },
-        {
-          "name": "application activedescendant 1",
-          "status": "FAIL",
-          "message": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n;  expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/application_activedescendant_value_changes-manual.html",
       "subtests": [
         {
           "name": "application activedescendant value changes",
-          "status": "FAIL",
-          "message": "assert\\_true: \"property states doesNotContain STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_FOCUSABLE', 'STATE\\_FOCUSED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n;  expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "application activedescendant value changes 1",
           "status": "FAIL",
-          "message": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n; \"event type is object:state-changed:focused\" failed   \n;  expected true got false"
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -85,8 +74,8 @@
       "subtests": [
         {
           "name": "aria-current with value changes",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains current:false\" failed ; \"event type is IA2_EVENT_OBJECT_ATTRIBUTE_CHANGED\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -121,8 +110,8 @@
       "subtests": [
         {
           "name": "aria-current with value page",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAccessibleHypertext\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -133,8 +122,8 @@
       "subtests": [
         {
           "name": "aria-current with value step",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAccessibleHypertext\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -215,8 +204,8 @@
       "subtests": [
         {
           "name": "article in feed posinset and setsize",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains posinset:4\" failed ; \"property objectAttributes contains setsize:8\" failed ; \"property groupPosition contains similarItemsInGroup:8\" failed ; \"property groupPosition contains positionInGroup:4\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -227,8 +216,8 @@
       "subtests": [
         {
           "name": "article in feed setsize -1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains setsize:-1\" failed ; \"property groupPosition contains similarItemsInGroup:-1\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -239,8 +228,8 @@
       "subtests": [
         {
           "name": "article not in feed posinset and setsize",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains posinset:4\" failed ; \"property objectAttributes contains setsize:8\" failed ; \"property groupPosition contains similarItemsInGroup:8\" failed ; \"property groupPosition contains positionInGroup:4\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -251,8 +240,8 @@
       "subtests": [
         {
           "name": "button haspopup dialog",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SYSTEM_PUSHBUTTON\" failed ; \"property objectAttributes contains haspopup:dialog\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -263,8 +252,8 @@
       "subtests": [
         {
           "name": "button haspopup emptystring",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:false\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -275,8 +264,8 @@
       "subtests": [
         {
           "name": "button haspopup false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:false\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -287,8 +276,8 @@
       "subtests": [
         {
           "name": "button haspopup foo",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SYSTEM_PUSHBUTTON\" failed ; \"property objectAttributes contains haspopup:false\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -299,8 +288,8 @@
       "subtests": [
         {
           "name": "button haspopup grid",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SYSTEM_PUSHBUTTON\" failed ; \"property objectAttributes contains haspopup:grid\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -311,8 +300,8 @@
       "subtests": [
         {
           "name": "button haspopup listbox",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SYSTEM_PUSHBUTTON\" failed ; \"property objectAttributes contains haspopup:listbox\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -323,8 +312,8 @@
       "subtests": [
         {
           "name": "button haspopup menu",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SYSTEM_PUSHBUTTON\" failed ; \"property objectAttributes contains haspopup:menu\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -335,8 +324,8 @@
       "subtests": [
         {
           "name": "button haspopup tree",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SYSTEM_PUSHBUTTON\" failed ; \"property objectAttributes contains haspopup:tree\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -348,7 +337,7 @@
         {
           "name": "button haspopup true",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['computed-role:button', 'xml-roles:button', 'haspopup:true', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE_SYSTEM_PUSHBUTTON\" failed ; \"property objectAttributes contains haspopup:menu\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -359,8 +348,8 @@
       "subtests": [
         {
           "name": "button haspopup unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:false\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -395,8 +384,8 @@
       "subtests": [
         {
           "name": "button roledescription whitespace only",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property localizedExtendedRole is null\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -407,13 +396,13 @@
       "subtests": [
         {
           "name": "cell",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         },
         {
           "name": "cell 1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains colindex:4\" failed ; \"property objectAttributes contains colcount:8\" failed ; \"property groupPosition contains similarItemsInGroup:8\" failed ; \"property groupPosition contains positionInGroup:4\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -436,8 +425,8 @@
       "subtests": [
         {
           "name": "cell aria-colspan 2 on td html colspan 3",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SYSTEM_CELL\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -448,8 +437,8 @@
       "subtests": [
         {
           "name": "cell aria-colspan 2 on td html colspan 3 with headers and border",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes doesNotContain colspan:2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -460,8 +449,8 @@
       "subtests": [
         {
           "name": "cell aria-colspan 2 on td html colspan 3 with three actual columns",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SYSTEM_CELL\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -472,8 +461,8 @@
       "subtests": [
         {
           "name": "cell aria-colspan 2 on td with html colspan not specified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE_SYSTEM_CELL\" failed ; \"property objectAttributes contains colspan:2\" failed ; \"property interfaces contains IAccessibleTableCell\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -496,8 +485,8 @@
       "subtests": [
         {
           "name": "cell aria-rowspan 2 on td html rowspan 3",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes doesNotContain rowspan:2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -508,8 +497,8 @@
       "subtests": [
         {
           "name": "cell aria-rowspan 2 on td html rowspan 3 with three actual rows",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes doesNotContain rowspan:2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -532,8 +521,8 @@
       "subtests": [
         {
           "name": "cell colindex 4",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains colindex:4\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -544,8 +533,8 @@
       "subtests": [
         {
           "name": "cell rowindex 4",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains rowindex:4\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -556,8 +545,8 @@
       "subtests": [
         {
           "name": "checkbox readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -580,8 +569,8 @@
       "subtests": [
         {
           "name": "checkbox readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -604,8 +593,8 @@
       "subtests": [
         {
           "name": "columnheader aria-colspan 2 on th html colspan 3",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes doesNotContain colspan:2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -616,8 +605,8 @@
       "subtests": [
         {
           "name": "columnheader aria-colspan 2 on th html colspan 3 with three actual columns",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes doesNotContain colspan:2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -652,8 +641,8 @@
       "subtests": [
         {
           "name": "columnheader aria-rowspan 2 on th html rowspan 3",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes doesNotContain rowspan:2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -664,8 +653,8 @@
       "subtests": [
         {
           "name": "columnheader aria-rowspan 2 on th html rowspan 3 with three actual rows",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes doesNotContain rowspan:2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -688,8 +677,8 @@
       "subtests": [
         {
           "name": "columnheader colindex 4",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains colindex:4\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -700,8 +689,8 @@
       "subtests": [
         {
           "name": "columnheader rowindex 4",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains rowindex:4\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -709,27 +698,15 @@
     },
     {
       "test": "/wai-aria/columnheader_selected_false_not_automatically_propagated-manual.html",
-      "subtests": [
-        {
-          "name": "columnheader selected false not automatically propagated",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/columnheader_selected_true_not_automatically_propagated-manual.html",
-      "subtests": [
-        {
-          "name": "columnheader selected true not automatically propagated",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/combobox_controls_an_invalid_id-manual.html",
@@ -753,8 +730,8 @@
       "subtests": [
         {
           "name": "combobox haspopup dialog",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:dialog\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -765,8 +742,8 @@
       "subtests": [
         {
           "name": "combobox haspopup false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:false\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -777,8 +754,8 @@
       "subtests": [
         {
           "name": "combobox haspopup grid",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:grid\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -789,8 +766,8 @@
       "subtests": [
         {
           "name": "combobox haspopup listbox",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:listbox\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -801,8 +778,8 @@
       "subtests": [
         {
           "name": "combobox haspopup menu",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:menu\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -813,8 +790,8 @@
       "subtests": [
         {
           "name": "combobox haspopup tree",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:tree\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -825,8 +802,8 @@
       "subtests": [
         {
           "name": "combobox haspopup true",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:true\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -837,8 +814,8 @@
       "subtests": [
         {
           "name": "combobox haspopup unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:listbox\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -861,8 +838,8 @@
       "subtests": [
         {
           "name": "combobox orientation unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states doesNotContain IA2_STATE_VERTICAL\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -885,8 +862,8 @@
       "subtests": [
         {
           "name": "combobox readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:listbox\" failed ; \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -897,8 +874,8 @@
       "subtests": [
         {
           "name": "combobox readonly true",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:listbox\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -909,8 +886,8 @@
       "subtests": [
         {
           "name": "combobox readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains haspopup:listbox\" failed ; \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -927,7 +904,7 @@
         {
           "name": "dialog modal false 1",
           "status": "FAIL",
-          "message": "assert_false: NOTRUN: No assertion for API ATK expected false got true"
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -944,7 +921,7 @@
         {
           "name": "dialog modal true 1",
           "status": "FAIL",
-          "message": "assert_false: NOTRUN: No assertion for API ATK expected false got true"
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -961,7 +938,7 @@
         {
           "name": "dialog modal unspecified 1",
           "status": "FAIL",
-          "message": "assert_false: NOTRUN: No assertion for API ATK expected false got true"
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -972,8 +949,8 @@
       "subtests": [
         {
           "name": "div element without role roledescription valid",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property localizedExtendedRole is null\" failed ; \"property interfaces contains IAccessibleText2\" failed ; \"property interfaces contains IAccessibleHypertext2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -984,13 +961,13 @@
       "subtests": [
         {
           "name": "errormessage object in invalid state",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"properties relations contains IA2_RELATION_ERROR_MESSAGE\" failed ERROR: [u'properties', u'relations', u'contains', u'IA2_RELATION_ERROR_MESSAGE'] is not a valid assertion;  expected true got false"
         },
         {
           "name": "errormessage object in invalid state 1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property relations contains IA2_RELATION_ERROR_FOR\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1002,12 +979,12 @@
         {
           "name": "errormessage object in valid state",
           "status": "FAIL",
-          "message": "assert\\_true: \"property relations doesNotContain RELATION\\_ERROR_MESSAGE\" failed   \n**Actual value:** ['RELATION\\_LABELLED\\_BY', 'RELATION\\_ERROR\\_MESSAGE']  \n;  expected true got false"
+          "message": "assert_true: \"property relations doesNotContain IA2_RELATION_ERROR_MESSAGE\" failed ;  expected true got false"
         },
         {
           "name": "errormessage object in valid state 1",
-          "status": "FAIL",
-          "message": "assert\\_true: \"property relations doesNotContain RELATION\\_ERROR_FOR\" failed   \n**Actual value:** ['RELATION\\_ERROR\\_FOR']  \n;  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1047,13 +1024,13 @@
         },
         {
           "name": "grid aria-readonly false automatically propagated 1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         },
         {
           "name": "grid aria-readonly false automatically propagated 2",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -1069,13 +1046,13 @@
         },
         {
           "name": "grid aria-readonly true automatically propagated 1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         },
         {
           "name": "grid aria-readonly true automatically propagated 2",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -1134,8 +1111,8 @@
       "subtests": [
         {
           "name": "grid columnheader readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1155,15 +1132,9 @@
     },
     {
       "test": "/wai-aria/grid_columnheader_readonly_unspecified-manual.html",
-      "subtests": [
-        {
-          "name": "grid columnheader readonly unspecified",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/grid_columnheader_required_false-manual.html",
@@ -1215,39 +1186,21 @@
     },
     {
       "test": "/wai-aria/grid_rowheader_readonly_false-manual.html",
-      "subtests": [
-        {
-          "name": "grid rowheader readonly false",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/grid_rowheader_readonly_true-manual.html",
-      "subtests": [
-        {
-          "name": "grid rowheader readonly true",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/grid_rowheader_readonly_unspecified-manual.html",
-      "subtests": [
-        {
-          "name": "grid rowheader readonly unspecified",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/grid_rowheader_required_false-manual.html",
@@ -1338,8 +1291,8 @@
       "subtests": [
         {
           "name": "group hidden undefined element not rendered",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: ATTA returned ERROR with message:  expected true got false"
         }
       ],
       "status": "OK",
@@ -1371,51 +1324,27 @@
     },
     {
       "test": "/wai-aria/keyshortcuts_multiple_shortcuts-manual.html",
-      "subtests": [
-        {
-          "name": "keyshortcuts multiple shortcuts",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/keyshortcuts_one_shortcut-manual.html",
-      "subtests": [
-        {
-          "name": "keyshortcuts one shortcut",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/listbox_busy_false-manual.html",
-      "subtests": [
-        {
-          "name": "listbox busy false",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/listbox_busy_true-manual.html",
-      "subtests": [
-        {
-          "name": "listbox busy true",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/listbox_orientation_horizontal-manual.html",
@@ -1458,8 +1387,8 @@
       "subtests": [
         {
           "name": "listbox readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1482,8 +1411,8 @@
       "subtests": [
         {
           "name": "listbox readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1626,8 +1555,8 @@
       "subtests": [
         {
           "name": "menuitemcheckbox readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1638,8 +1567,8 @@
       "subtests": [
         {
           "name": "menuitemcheckbox readonly true",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1650,8 +1579,8 @@
       "subtests": [
         {
           "name": "menuitemcheckbox readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1674,8 +1603,8 @@
       "subtests": [
         {
           "name": "menuitemradio readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1698,8 +1627,8 @@
       "subtests": [
         {
           "name": "menuitemradio readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1710,8 +1639,8 @@
       "subtests": [
         {
           "name": "none",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: ATTA returned ERROR with message:  expected true got false"
         }
       ],
       "status": "OK",
@@ -1719,61 +1648,27 @@
     },
     {
       "test": "/wai-aria/option_selected_false-manual.html",
-      "subtests": [
-        {
-          "name": "option selected false",
-          "status": "FAIL",
-          "message": "assert\\_true: \"property states contains STATE\\_SELECTABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE']  \n<https://webkit.org/b/171186>: [NEW] [ATK] Options in an ARIA listbox should have STATE\\_SELECTABLE and emit selection-related events  \n;  expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/option_selected_true-manual.html",
-      "subtests": [
-        {
-          "name": "option selected true",
-          "status": "FAIL",
-          "message": "assert\\_true: \"property states contains STATE\\_SELECTABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_FOCUSED', 'STATE\\_HORIZONTAL', 'STATE\\_SELECTED', 'STATE\\_SENSITIVE']  \n<https://webkit.org/b/171186>: [NEW] [ATK] Options in an ARIA listbox should have STATE\\_SELECTABLE and emit selection-related events  \n;  expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/option_selected_undefined-manual.html",
-      "subtests": [
-        {
-          "name": "option selected undefined",
-          "status": "FAIL",
-          "message": "assert\\_true: \"property states contains STATE\\_SELECTABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE']  \n<https://webkit.org/b/171186>: [NEW] [ATK] Options in an ARIA listbox should have STATE\\_SELECTABLE and emit selection-related events  \n;  expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/option_selected_value_changes-manual.html",
-      "subtests": [
-        {
-          "name": "option selected value changes",
-          "status": "FAIL",
-          "message": "assert\\_true: \"event type is object:state-changed:selected\" failed <https://webkit.org/b/171186>  \n;  expected true got false"
-        },
-        {
-          "name": "option selected value changes 1",
-          "status": "FAIL",
-          "message": "assert\\_true: \"event type is object:selection-changed\" failed <https://webkit.org/b/171186>  \n;  expected true got false"
-        },
-        {
-          "name": "option selected value changes 2",
-          "status": "FAIL",
-          "message": "assert\\_true: \"event type is object:state-changed:selected\" failed <https://webkit.org/b/171186>  \n;  expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/radiogroup_orientation_horizontal-manual.html",
@@ -1816,8 +1711,8 @@
       "subtests": [
         {
           "name": "radiogroup readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1840,8 +1735,8 @@
       "subtests": [
         {
           "name": "radiogroup readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1852,8 +1747,8 @@
       "subtests": [
         {
           "name": "region with name",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property role is IA2_ROLE_LANDMARK\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1864,8 +1759,8 @@
       "subtests": [
         {
           "name": "region without name",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAccessibleText2\" failed ; \"property interfaces contains IAccessibleHypertext2\" failed ; \"property role is IA2_ROLE_SECTION\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1877,12 +1772,12 @@
         {
           "name": "row colindex 4",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains colindex:4\" failed   \n**Actual value:** ['computed-role:row', 'xml-roles:row', 'html-id:test', 'tag:div', 'toolkit:WebKitGtk']  \n;  expected true got false"
+          "message": "assert_true: \"property objectAttributes contains colindex:4\" failed ;  expected true got false"
         },
         {
           "name": "row colindex 4 1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -1893,13 +1788,13 @@
       "subtests": [
         {
           "name": "row rowindex 4",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains rowindex:4\" failed ;  expected true got false"
         },
         {
           "name": "row rowindex 4 1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -1934,8 +1829,8 @@
       "subtests": [
         {
           "name": "rowheader colindex 4",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains colindex:4\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1946,8 +1841,8 @@
       "subtests": [
         {
           "name": "rowheader rowindex 4",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains rowindex:4\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1955,35 +1850,23 @@
     },
     {
       "test": "/wai-aria/rowheader_selected_false_not_automatically_propagated-manual.html",
-      "subtests": [
-        {
-          "name": "rowheader selected false not automatically propagated",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/rowheader_selected_true_not_automatically_propagated-manual.html",
-      "subtests": [
-        {
-          "name": "rowheader selected true not automatically propagated",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/scrollbar_all_values_unspecified-manual.html",
       "subtests": [
         {
           "name": "scrollbar all values unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains AccessibleValue\" failed ; \"property minimumValue is 0\" failed ; \"property currentValue is 50\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1994,8 +1877,8 @@
       "subtests": [
         {
           "name": "scrollbar only valuenow unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains AccessibleValue\" failed ; \"property currentValue is 20\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2018,8 +1901,8 @@
       "subtests": [
         {
           "name": "searchbox",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2031,12 +1914,12 @@
         {
           "name": "searchbox activedescendant",
           "status": "FAIL",
-          "message": "assert\\_true: \"property states doesNotContain STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_EDITABLE', 'STATE\\_ENABLED', 'STATE\\_FOCUSABLE', 'STATE\\_FOCUSED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_SINGLE\\_LINE', 'STATE\\_VISIBLE']  \n;  expected true got false"
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         },
         {
           "name": "searchbox activedescendant 1",
           "status": "FAIL",
-          "message": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n;  expected true got false"
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -2048,12 +1931,12 @@
         {
           "name": "searchbox activedescendant value changes",
           "status": "FAIL",
-          "message": "assert\\_true: \"property states doesNotContain STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_EDITABLE', 'STATE\\_ENABLED', 'STATE\\_FOCUSABLE', 'STATE\\_FOCUSED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_SINGLE\\_LINE', 'STATE\\_VISIBLE']  \n;  expected true got false"
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         },
         {
           "name": "searchbox activedescendant value changes 1",
           "status": "FAIL",
-          "message": "assert\\_true: \"property states contains STATE\\_FOCUSED\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n; \"property states contains STATE\\_FOCUSABLE\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_HORIZONTAL', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE']  \n; \"event type is object:state-changed:focused\" failed   \n;  expected true got false"
+          "message": "assert_false: NOTRUN: No assertion for API IAccessible2 expected false got true"
         }
       ],
       "status": "OK",
@@ -2064,8 +1947,8 @@
       "subtests": [
         {
           "name": "searchbox autocomplete both",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2076,8 +1959,8 @@
       "subtests": [
         {
           "name": "searchbox autocomplete inline",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2088,8 +1971,8 @@
       "subtests": [
         {
           "name": "searchbox autocomplete list",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2100,8 +1983,8 @@
       "subtests": [
         {
           "name": "searchbox autocomplete none",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ; \"property objectAttributes contains autocomplete:none\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2112,8 +1995,8 @@
       "subtests": [
         {
           "name": "searchbox autocomplete unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ; \"property objectAttributes contains autocomplete:none\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2124,8 +2007,8 @@
       "subtests": [
         {
           "name": "searchbox multiline false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_SINGLE_LINE\" failed ; \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2136,8 +2019,8 @@
       "subtests": [
         {
           "name": "searchbox multiline true",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_MULTI_LINE\" failed ; \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2148,8 +2031,8 @@
       "subtests": [
         {
           "name": "searchbox multiline unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains xml-roles:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2160,8 +2043,8 @@
       "subtests": [
         {
           "name": "searchbox placeholder",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states doesNotContain IA2_STATE_SINGLE_LINE\" failed ; \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed ; \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2172,8 +2055,8 @@
       "subtests": [
         {
           "name": "searchbox readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ; \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2184,8 +2067,8 @@
       "subtests": [
         {
           "name": "searchbox readonly true",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2196,8 +2079,8 @@
       "subtests": [
         {
           "name": "searchbox readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ; \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2208,8 +2091,8 @@
       "subtests": [
         {
           "name": "searchbox required false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2220,8 +2103,8 @@
       "subtests": [
         {
           "name": "searchbox required true",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2232,8 +2115,8 @@
       "subtests": [
         {
           "name": "searchbox required unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains text-input-type:search\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2244,8 +2127,8 @@
       "subtests": [
         {
           "name": "separator focusable all values unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains AccessibleValue\" failed ; \"property minimumValue is 0\" failed ; \"property currentValue is 50\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2256,8 +2139,8 @@
       "subtests": [
         {
           "name": "separator focusable only valuenow unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains AccessibleValue\" failed ; \"property currentValue is 50\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2268,8 +2151,8 @@
       "subtests": [
         {
           "name": "separator focusable valuetext",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains AccessibleValue\" failed ; \"property minimumValue is 0\" failed ; \"property currentValue is 50\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2289,15 +2172,9 @@
     },
     {
       "test": "/wai-aria/separator_unfocusable_all_values_unspecified-manual.html",
-      "subtests": [
-        {
-          "name": "separator unfocusable all values unspecified",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/separator_unfocusable_valuetext-manual.html",
@@ -2316,8 +2193,8 @@
       "subtests": [
         {
           "name": "slider all values unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains AccessibleValue\" failed ; \"property minimumValue is 0\" failed ; \"property currentValue is 50\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2328,8 +2205,8 @@
       "subtests": [
         {
           "name": "slider only valuenow unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains AccessibleValue\" failed ; \"property currentValue is 20\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2352,8 +2229,8 @@
       "subtests": [
         {
           "name": "slider readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAcesssibleValue\" failed ; \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2364,8 +2241,8 @@
       "subtests": [
         {
           "name": "slider readonly true",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAcesssibleValue\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2376,8 +2253,8 @@
       "subtests": [
         {
           "name": "slider readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAcesssibleValue\" failed ; \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2388,8 +2265,8 @@
       "subtests": [
         {
           "name": "spinbutton all values unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains AccessibleValue\" failed ; \"property minimumValue isLTE -9007199254740992\" failed ; \"property currentValue is 0\" failed ; \"property maximumValue isGTE 9007199254740992\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2400,8 +2277,8 @@
       "subtests": [
         {
           "name": "spinbutton only aria-valuenow unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains AccessibleValue\" failed ; \"property currentValue is 0\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2412,8 +2289,8 @@
       "subtests": [
         {
           "name": "spinbutton readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAcesssibleValue\" failed ; \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2424,8 +2301,8 @@
       "subtests": [
         {
           "name": "spinbutton readonly true",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAcesssibleValue\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2436,8 +2313,8 @@
       "subtests": [
         {
           "name": "spinbutton readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAcesssibleValue\" failed ; \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2508,8 +2385,8 @@
       "subtests": [
         {
           "name": "switch readonly false",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2532,8 +2409,8 @@
       "subtests": [
         {
           "name": "switch readonly unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states contains IA2_STATE_EDITABLE\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2556,8 +2433,8 @@
       "subtests": [
         {
           "name": "table colcount -1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains colcount:-1\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2568,8 +2445,8 @@
       "subtests": [
         {
           "name": "table colcount 8",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains colcount:8\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2580,8 +2457,8 @@
       "subtests": [
         {
           "name": "table rowcount -1",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains rowcount:-1\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2592,8 +2469,8 @@
       "subtests": [
         {
           "name": "table rowcount 3",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property objectAttributes contains rowcount:3\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2637,23 +2514,17 @@
     },
     {
       "test": "/wai-aria/term_role-manual.html",
-      "subtests": [
-        {
-          "name": "term role",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/textbox_placeholder-manual.html",
       "subtests": [
         {
           "name": "textbox placeholder",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property states doesNotContain IA2_STATE_SINGLE_LINE\" failed ; \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2736,8 +2607,8 @@
       "subtests": [
         {
           "name": "treegrid colcount 8",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAccessibleTable2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2748,8 +2619,8 @@
       "subtests": [
         {
           "name": "treegrid orientation horizontal",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAccessibleTable2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2760,8 +2631,8 @@
       "subtests": [
         {
           "name": "treegrid orientation unspecified",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAccessibleTable2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2772,8 +2643,8 @@
       "subtests": [
         {
           "name": "treegrid orientation vertical",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAccessibleTable2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2784,8 +2655,8 @@
       "subtests": [
         {
           "name": "treegrid rowcount 3",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property interfaces contains IAccessibleTable2\" failed ;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2793,61 +2664,27 @@
     },
     {
       "test": "/wai-aria/treeitem_selected_false-manual.html",
-      "subtests": [
-        {
-          "name": "treeitem selected false",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/treeitem_selected_true-manual.html",
-      "subtests": [
-        {
-          "name": "treeitem selected true",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/treeitem_selected_undefined-manual.html",
-      "subtests": [
-        {
-          "name": "treeitem selected undefined",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     },
     {
       "test": "/wai-aria/treeitem_selected_value_changes-manual.html",
-      "subtests": [
-        {
-          "name": "treeitem selected value changes",
-          "status": "FAIL",
-          "message": "assert\\_true: \"event type is object:state-changed:selected\" failed <https://webkit.org/b/171185>  \n;  expected true got false"
-        },
-        {
-          "name": "treeitem selected value changes 1",
-          "status": "FAIL",
-          "message": "assert\\_true: \"event type is object:selection-changed\" failed <https://webkit.org/b/171185>  \n;  expected true got false"
-        },
-        {
-          "name": "treeitem selected value changes 2",
-          "status": "FAIL",
-          "message": "assert\\_true: \"event type is object:state-changed:selected\" failed <https://webkit.org/b/171185>  \n;  expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "NOTRUN",
+      "message": "No steps for AT API IAccessible2"
     }
   ]
 }
