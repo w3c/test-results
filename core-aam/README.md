@@ -29,7 +29,7 @@ API Mappings specification:
 These two-digit designators are appended to a two-character identifier for the
 user agent to identify the implementation being tested.
 
-Index of Implementations 
+Index of Implementations
 ------------------------
 
 * FF01 - Firefox on Linux using ATK
@@ -38,6 +38,14 @@ Index of Implementations
 
 * FF02 - Firefox on macOS using AX API
   * email: jdiggs@igalia.com
+  * link: <http://www.mozilla.org>
+
+* FF03 - Firefox on Windows using IAccessible2
+  * email: jongund@illinois.edu
+  * link: <http://www.mozilla.org>
+
+* FF04 - Firefox on Windows using MSAA
+  * email: jongund@illinois.edu
   * link: <http://www.mozilla.org>
 
 * WK01 - WebKit on Linux using ATK
@@ -51,3 +59,15 @@ Index of Implementations
 * GC02 - Chrome on macOS using AX API
   * email: jdiggs@igalia.com
   * link: <https://www.google.com/chrome/>
+
+* GC03 - Chrome on Windows using IAccessible2
+  * email: jongund@illinois.edu
+  * link: <https://www.google.com/chrome/>
+
+* GC04 - Chrome on Windows using MSAA
+  * email: jongund@illinois.edu
+  * link: <https://www.google.com/chrome/>
+
+* ME05 - Microsoft Edge using UIA
+  * email: bbrinza@microsoft.com
+  * link: <https://www.microsoft.com/microsoft-edge>
