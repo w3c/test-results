@@ -1,74 +1,70 @@
-Digital Publishing Accessibility API Mappings test results
-==========================================================
+Digital Publishing Accessibility API Mappings 1.0: Test Results
+===============================================================
 
-This document is a place holder until test results are available.
+Candidate Recommendation Exit Criteria
+--------------------------------------
 
-Up-to-date result reports are available at:
+The Accessible Rich Internet Applications Working Group intends to exit the
+Candidate Recommendation stage and submit the Digital Publishing Accessibility
+API Mappings 1.1 specification for consideration as a W3C Proposed Recommendation
+after documenting implementation of each feature.
 
-* <https://w3c.github.io/test-results/dpub-aam/all.html>
-* <https://w3c.github.io/test-results/dpub-aam/less-than-2.html>
-* <https://w3c.github.io/test-results/dpub-aam/complete-fails.html>
+The requirement is that each role is successfully mapped in at least two implementations
+and each implementation maps at least 75% of the roles.
 
-List of supported AT APIs
-=========================
+Supported Platform Accessibility APIs
+-------------------------------------
 
-01. ATK
-02. AX API
-03. IAccessible2
-04. MSAA
-05. UIA
+The following platform accessibility APIs are included in the Digital Publishing
+Accessibility API Mappings specification:
 
-Use these two digit designators to distinguish which AT API the test was run using (e.g., FF01 would be FireFox via ATK).
+* 01: ATK (GNU/Linux): [Summary of results](atk/all.html)
+* 02: AX API (macOS): [Summary of results](axapi/all.html)
+* 03: MSAA + IAccessible2 (Windows): [Summary of results](ia2/all.html)
+* 04: UIA (Windows): See note below
 
+These two-digit designators are appended to a two-character identifier for the
+user agent to identify the implementation being tested.
 
-Index of implementations in reports
-===================================
+Index of Implementations
+------------------------
 
-* FF01 - Firefox on Linux using ATK
-  * email: jdiggs@igalia.com
-  * link: <http://www.mozilla.org>
-
-* FF02 - Firefox on macOS using AX API
-  * email: jdiggs@igalia.com
-  * link: <http://www.mozilla.org>
-
-* FF03 - Firefox on Windows using IAccessible2
-  * email: jongund@illinois.edu
-  * link: <http://www.mozilla.org>
-
-* WK01 - WebKit on Linux using ATK
+* WK01 - WebKit on Linux using ATK - DEMONSTRATES IMPLEMENTABILITY
   * email: jdiggs@igalia.com
   * link: <https://webkitgtk.org>
+  * status: 100% of mappings successfully implemented (39/39)
 
-* WK02 - WebKit/Safari on macOS using AX API
+* FF01 - Firefox on Linux using ATK - DEMONSTRATES IMPLEMENTABILITY
+  * email: jdiggs@igalia.com
+  * link: <http://www.mozilla.org>
+  * status: 100% of mappings successfully implemented (39/39)
+
+* WK02 - WebKit/Safari on macOS using AX API - DEMONSTRATES IMPLEMENTABILITY
   * email: jdiggs@igalia.com
   * link: <https://webkit.org>
+  * status: 100% of mappings successfully implemented (39/39)
 
-* GC02 - Chrome on macOS using AX API
+* FF02 - Firefox on macOS using AX API - DEMONSTRATES IMPLEMENTABILITY
   * email: jdiggs@igalia.com
-  * link: <https://www.google.com/chrome/>
+  * link: <http://www.mozilla.org>
+  * status: 100% of mappings successfully implemented (39/39)
 
-* ME05 - Microsoft Edge using UIA
-  * email: bbrinza@microsoft.com
-  * link: <https://www.microsoft.com/microsoft-edge>
+* FF03 - Firefox on Windows using IAccessible2 + MSAA - DEMONSTRATES IMPLEMENTABILITY
+  * email: jongund@illinois.edu
+  * link: <http://www.mozilla.org>
+  * status: 90% of mappings successfully implemented (35/39)
 
-Adding new results
-==================
+Notes
+-----
 
-To add new tests results:
+* While Microsoft has provided the Working Group with the mappings through which
+  Digital Publishing ARIA roles should be exposed via UIAutomation, [implementation
+  in Edge remains "under consideration"](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/digitalpublishingaccessibilityapimappings/).
+  There are currently no other accessible user agents which implement UIA support
+  for W3C specifications.
 
-1. Run the dpub-aam tests on your platform 
-  * Be sure to have the ATTA for your platform under test running on your test machine.
-  * Be sure to specify `/dpub-aam/` as the path for which tests to run.
-  * Click start to run the automated tests.
-  * After the tests complete, be sure to click the `Download JSON results` button to retrieve and save your JSON test results file.
-2. Fork the w3c/test-results repo if you haven't already (https://github.com/w3c/test-results)
-3. Select a unique two letter abbreviation for your implementation under test (e.g., FF for Firefox) and add it to the 'Index of implementations in reports' in the /annotation-model/README.md file in your forked copy. Provide implementation name, contact email, Website (if publicly available), GitHub repository (if you have one). Use the information provided by previous implementations in the list as a model.
-4. Rename your JSON test-results file using the two letter abbreviation you chose and a two digit number value representing the AT API as
-   defined above.
-5. Place your newly renamed results files in the dpub-aam directory
-6. Create a pull request with your updated files
-7. When it is merged the maintainers will update the overall results reports automatically
+* Google has stated that they anticipate implementing support for the Digital Publishing
+  ARIA roles in the future. This implementation is expected to include exposure via
+  IAccessible2 + MSAA and AX API.
 
-If you want to see what your implementation test results reports would look like locally, use the wptreport tool (https://github.com/spec-ops/wptreport) to build a report with a command line like `wptreport -f -m -s "DPUB AAM 1.0"`
 
