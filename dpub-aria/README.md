@@ -1,25 +1,30 @@
-Digital Publishing WAI-ARIA Module test results
-===============================================
+Digital Publishing WAI-ARIA Module 1.0: Test Results
+====================================================
 
-This document is a place holder until test results are available.
+Candidate Recommendation Exit Criteria
+--------------------------------------
 
-Up-to-date result reports are available at:
+The Accessible Rich Internet Applications Working Group intends to exit the
+Candidate Recommendation stage and submit the Digital Publishing WAI-ARIA
+Module 1.0 specification for consideration as a W3C Proposed Recommendation
+after documenting implementation of each feature.
 
-* https://w3c.github.io/test-results/dpub-aria/all.html
-* https://w3c.github.io/test-results/dpub-aria/less-than-2.html
-* https://w3c.github.io/test-results/dpub-aria/complete-fails.html
+For this specification to be advanced to Proposed Recommendation, it has to be
+proven that roles defined in this specification have sufficient usage by the
+target communities. More specifically, it has to be documented that each Digital
+Publishing Role is used (at least in preliminary prototypes, not necessarily in
+full production yet) by two, independent document authors/publishers as a means
+to structure documents, where “usage” means:
 
-Index of implementations in reports
-===================================
+* the role attribute value is used, as defined in this specification; or, as a
+  fallback
+* the epub:type attribute, defined for the purpose of Semantic Inflection in
+  the EPUB Content Documents specification, is used with the related value (when
+  specified in the detailed specification of the role) in the EPUB Structural
+  Semantic Vocabulary.
 
-* RI - implementation Name: Reference Implementation
-  * email: shane@spec-ops.io
-  * link: https://github.com/spec-ops/web-platform-tests
-  * NOTE: This is just an example file that uses all roles to provide a baseline
-
-
-Publisher implementations
-=========================
+Publisher Implementations
+-------------------------
 
 The following table provides a list of publishers who have stated that they are currently using the vocabulary in production or who are in the process of rolling out their implementations.
 
@@ -360,14 +365,14 @@ Note that all respondents indicated they are already using the Digital Publishin
     </tfoot>
 </table>
 
-Authoring tool implementations
-==============================
+Authoring Tool Implementations
+------------------------------
 
 The [BlueGriffon](http://bluegriffon.org/) editor includes the ability to author roles from the Digital Publishing vocabulary in both EPUB publications and (X)HTML pages.
 
 
-Reading system implementations
-==============================
+Reading System Implementations
+------------------------------
 
 As EPUB 3 reading systems are built on browser cores, they will inherit traditional support for the Digital Publishing roles as their mappings are implemented.
 
