@@ -1,9 +1,6 @@
 WAI ARIA 1.1 Test Results
 =========================
 
-Placeholder for wai-aria test results.  Once the results are consolidated, they will 
-available in:
-
 * <https://w3c.github.io/test-results/wai-aria/all.html>
 * <https://w3c.github.io/test-results/wai-aria/less-than-2.html>
 * <https://w3c.github.io/test-results/wai-aria/complete-fails.html>
