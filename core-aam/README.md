@@ -24,7 +24,7 @@ API Mappings specification:
 * 02: AX API (macOS): [Summary of results](axapi/all.html)
 * 03: IAccessible2 (Windows): [Summary of results](ia2/all.html)
 * 04: MSAA (Windows): [Summary of results](msaa/all.html)
-* 05: UIA (Windows): Results pending
+* 05: UIA (Windows): [Summary of results](uia/all.html)
 
 These two-digit designators are appended to a two-character identifier for the
 user agent to identify the implementation being tested.
@@ -77,6 +77,7 @@ Index of Implementations
   * link: <https://www.google.com/chrome/>
   * status: 72% of mappings successfully implemented (94/130)
 
-* ME05 - Microsoft Edge using UIA
-  * email: bbrinza@microsoft.com
+* ME05 - Edge on Windows using UIA - DEMONSTRATES IMPLEMENTABILITY
+  * email: John.Jansen@microsoft.com
   * link: <https://www.microsoft.com/microsoft-edge>
+  * status: 89% of mappings successfully implemented (187/210)
