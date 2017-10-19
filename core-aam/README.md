@@ -40,7 +40,7 @@ Index of Implementations
 * FF01 - Firefox on Linux using ATK - DEMONSTRATES IMPLEMENTABILITY
   * email: jdiggs@igalia.com
   * link: <http://www.mozilla.org>
-  * status: 78% of mappings successfully implemented (185/237)
+  * status: 79% of mappings successfully implemented (188/237)
 
 * WK02 - WebKit/Safari on macOS using AX API - DEMONSTRATES IMPLEMENTABILITY
   * email: jdiggs@igalia.com
@@ -60,7 +60,7 @@ Index of Implementations
 * FF03 - Firefox on Windows using IAccessible2 - NEEDS EVALUATION
   * email: jongund@illinois.edu
   * link: <http://www.mozilla.org>
-  * status: 103 PASS, 44 FAIL, 12 "Unhandled rejection" ERROR
+  * status: 106 PASS, 41 FAIL, 9 "Unhandled rejection" ERROR
 
 * GC03 - Chrome on Windows using IAccessible2 - NEEDS EVALUATION
   * email: jongund@illinois.edu
