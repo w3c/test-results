@@ -56,6 +56,10 @@ Index of implementations in reports
   * email: jongund@illinois.edu
   * link: <https://www.google.com/chrome/>
 
+* ME05 - Edge on Windows using UIA
+  * email: John.Jansen@microsoft.com
+  * link: <https://www.microsoft.com/microsoft-edge>
+
 Adding new results
 ==================
 
