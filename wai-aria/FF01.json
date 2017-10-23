@@ -228,7 +228,7 @@
         {
           "name": "article in feed setsize -1",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains setsize:-1\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:article', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1358473>: [NEW] Do not calculate setsize when aria-setsize has a value of -1  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes contains setsize:-1\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:article', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1358473>: [ASSIGNED] Do not calculate setsize when aria-setsize has a value of -1  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -264,7 +264,7 @@
         {
           "name": "button haspopup emptystring",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains haspopup:false\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes contains haspopup:false\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -288,7 +288,7 @@
         {
           "name": "button haspopup foo",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains haspopup:false\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'haspopup:true', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:button', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1355449>: [NEW] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n; \"property states doesNotContain STATE\\_HAS_POPUP\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT', 'STATE\\_HAS\\_POPUP']  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes contains haspopup:false\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:foo', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n; \"property states doesNotContain STATE\\_HAS_POPUP\" failed   \n**Actual value:** ['STATE\\_ENABLED', 'STATE\\_OPAQUE', 'STATE\\_SENSITIVE', 'STATE\\_SHOWING', 'STATE\\_VISIBLE', 'STATE\\_SELECTABLE\\_TEXT', 'STATE\\_HAS\\_POPUP']  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -348,7 +348,7 @@
         {
           "name": "button haspopup true",
           "status": "FAIL",
-          "message": "assert_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes contains haspopup:menu\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:button', 'tag:div', 'id:test', 'text-indent:0px', 'haspopup:true', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -437,7 +437,7 @@
         {
           "name": "cell aria-colspan 2 on td html colspan 3",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:td', 'table-cell-index:0', 'colspan:2', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'table-cell-index:0', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -449,7 +449,7 @@
         {
           "name": "cell aria-colspan 2 on td html colspan 3 with headers and border",
           "status": "FAIL",
-          "message": "assert_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'table-cell-index:3', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'table-cell-index:3', 'tag:td', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n; \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -460,8 +460,8 @@
       "subtests": [
         {
           "name": "cell aria-colspan 2 on td html colspan 3 with three actual columns",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -497,7 +497,7 @@
         {
           "name": "cell aria-rowspan 2 on td html rowspan 3",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'rowspan:2', 'margin-right:0px', 'tag:td', 'table-cell-index:0', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:cell', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:cell', 'table-cell-index:0', 'tag:td', 'id:test', 'rowspan:2', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -605,7 +605,7 @@
         {
           "name": "columnheader aria-colspan 2 on th html colspan 3",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:th', 'table-cell-index:0', 'colspan:2', 'margin-left:0px', 'text-indent:0px', 'text-align:center', 'xml-roles:columnheader', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes doesNotContain colspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:columnheader', 'table-cell-index:0', 'tag:th', 'id:test', 'text-indent:0px', 'text-align:center', 'margin-left:0px', 'colspan:2']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -616,8 +616,8 @@
       "subtests": [
         {
           "name": "columnheader aria-colspan 2 on th html colspan 3 with three actual columns",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert\\_true: \"result atk_table_cell_get_row_column_span() contains column_span=3\" failed   \n**Actual value:** (row=0, column=1, row\\_span=3, column\\_span=1)  \n<https://bugzil.la/1357013>: [NEW] atk\\_table\\_cell\\_get\\_row\\_column\\_span() should report the values of aria-rowspan and aria-colspan  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -653,7 +653,7 @@
         {
           "name": "columnheader aria-rowspan 2 on th html rowspan 3",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'rowspan:2', 'margin-right:0px', 'tag:th', 'table-cell-index:0', 'margin-left:0px', 'text-indent:0px', 'text-align:center', 'xml-roles:columnheader', 'display:table-cell', 'margin-top:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes doesNotContain rowspan:2\" failed   \n**Actual value:** ['display:table-cell', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:columnheader', 'table-cell-index:0', 'tag:th', 'id:test', 'rowspan:2', 'text-indent:0px', 'text-align:center', 'margin-left:0px']  \n<https://bugzil.la/1357153>: [NEW] Ignore aria-{row,col}span values when host language {row,col}span attribute is present  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -838,7 +838,7 @@
         {
           "name": "combobox haspopup unspecified",
           "status": "FAIL",
-          "message": "assert_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes contains haspopup:listbox\" failed   \n**Actual value:** ['formatting:block', 'explicit-name:true', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:combobox', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1355449>: [RESOLVED DUPLICATE] Elements having aria-haspopup with a value other than false should expose that value as an object attribute  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1363,7 +1363,7 @@
         {
           "name": "heading level unspecified",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains level:2\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'xml-roles:heading', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1357100>: [NEW] Implement support for implicit value for aria-level on heading role  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes contains level:2\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'margin-top:0px', 'xml-roles:heading', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1357100>: [NEW] Implement support for implicit value for aria-level on heading role  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1495,7 +1495,7 @@
         {
           "name": "listitem setsize -1",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains setsize:-1\" failed   \n**Actual value:** ['margin-bottom:0px', 'posinset:1', 'margin-right:0px', 'tag:div', 'id:test', 'formatting:block', 'margin-left:0px', 'setsize:1', 'text-align:start', 'xml-roles:listitem', 'display:block', 'text-indent:0px', 'margin-top:0px']  \n<https://bugzil.la/1358473>: [NEW] Do not calculate setsize when aria-setsize has a value of -1  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes contains setsize:-1\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'posinset:1', 'margin-top:0px', 'xml-roles:listitem', 'tag:div', 'id:test', 'setsize:1', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1358473>: [ASSIGNED] Do not calculate setsize when aria-setsize has a value of -1  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2156,7 +2156,7 @@
         {
           "name": "searchbox placeholder",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'text-input-type:search', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'placeholder:DD/MM/YYYY', 'xml-roles:searchbox', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1303429>: [NEW] expose placeholder object attribute for HTML placeholder  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'placeholder:DD/MM/YYYY', 'margin-top:0px', 'xml-roles:searchbox', 'text-input-type:search', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1303429>: [NEW] expose placeholder object attribute for HTML placeholder  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2648,7 +2648,7 @@
         {
           "name": "textbox placeholder",
           "status": "FAIL",
-          "message": "assert\\_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed   \n**Actual value:** ['margin-bottom:0px', 'id:test', 'margin-right:0px', 'tag:div', 'formatting:block', 'margin-left:0px', 'text-indent:0px', 'text-align:start', 'placeholder:DD/MM/YYYY', 'xml-roles:textbox', 'display:block', 'margin-top:0px']  \n<https://bugzil.la/1303429>: [NEW] expose placeholder object attribute for HTML placeholder  \n;  expected true got false"
+          "message": "assert\\_true: \"property objectAttributes contains placeholder-text:DD/MM/YYYY\" failed   \n**Actual value:** ['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'placeholder:DD/MM/YYYY', 'margin-top:0px', 'xml-roles:textbox', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']  \n<https://bugzil.la/1303429>: [NEW] expose placeholder object attribute for HTML placeholder  \n;  expected true got false"
         }
       ],
       "status": "OK",
