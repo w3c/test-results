@@ -60,7 +60,7 @@ Index of Implementations
 * FF03 - Firefox on Windows using IAccessible2 - NEEDS EVALUATION
   * email: jongund@illinois.edu
   * link: <http://www.mozilla.org>
-  * status: 106 PASS, 41 FAIL, 9 "Unhandled rejection" ERROR
+  * status: 107 PASS, 40 FAIL, 9 "Unhandled rejection" ERROR
 
 * GC03 - Chrome on Windows using IAccessible2 - NEEDS EVALUATION
   * email: jongund@illinois.edu
