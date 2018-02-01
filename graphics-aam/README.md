@@ -45,6 +45,11 @@ Index of Implementations
   * status: 67% of mappings successfully implemented (4/6)
   * bugs: [1433891](https://bugzilla.mozilla.org/show_bug.cgi?id=1433891 "ARIA document roles should be exposed as AXGroup; not AXWebArea")
 
+* FF03 - Firefox on Windows using MSAA + IAccessible2
+  * email: jongund@illinois.edu
+  * link: <http://www.mozilla.org>
+  * status: 100% of mappings successfully implemented (6/6)
+
 Adding new results
 ------------------
 
