@@ -39,16 +39,26 @@ Index of Implementations
   * link: <https://webkit.org>
   * status: 100% of mappings successfully implemented (6/6)
 
+* GC02 - Chrome on macOS using AX API
+  * email: jdiggs@igalia.com
+  * link: <https://www.google.com/chrome/>
+  * status: 0% of mappings successfully implemented (0/6)
+  * bugs: [812243](https://bugs.chromium.org/p/chromium/issues/detail?id=812243 "Implement support for Graphics ARIA roles")
+
 * FF02 - Firefox on macOS using AX API
   * email: jdiggs@igalia.com
   * link: <http://www.mozilla.org>
-  * status: 67% of mappings successfully implemented (4/6)
-  * bugs: [1433891](https://bugzilla.mozilla.org/show_bug.cgi?id=1433891 "ARIA document roles should be exposed as AXGroup; not AXWebArea")
+  * status: 100% of mappings successfully implemented (6/6)
 
 * FF03 - Firefox on Windows using MSAA + IAccessible2
   * email: jongund@illinois.edu
   * link: <http://www.mozilla.org>
   * status: 100% of mappings successfully implemented (6/6)
+
+* ME04 - Edge on Windows using UIA
+  * email: bbrinza@microsoft.com
+  * link: <https://www.microsoft.com/microsoft-edge>
+  * status: 0% of mappings successfully implemented (0/6)
 
 Adding new results
 ------------------
