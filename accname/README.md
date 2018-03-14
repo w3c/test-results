@@ -44,6 +44,14 @@ Index of Implementations
   * email: jdiggs@igalia.com
   * link: <http://www.mozilla.org>
 
+* FF03 - Firefox on Windows using IAccessible2 + MSAA
+  * email: jongund@illinois.edu
+  * link: <http://www.mozilla.org>
+
+* GC03 - Chrome on Windows using IAccessible2 + MSAA
+  * email: jongund@illinois.edu
+  * link: <https://www.google.com/chrome/>
+
 Notes
 -----
 
