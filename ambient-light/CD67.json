@@ -1,0 +1,422 @@
+{
+  "results": [
+    {
+      "test": "/ambient-light/AmbientLightSensor-disabled-by-feature-policy.https.html",
+      "subtests": [
+        {
+          "name": "AmbientLightSensor: Feature-Policy header ambient-light-sensor 'none' disallows the top-level document.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Feature-Policy header ambient-light-sensor 'none' disallows same-origin iframes.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Feature-Policy header ambient-light-sensor 'none' disallows cross-origin iframes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor-enabled-by-feature-policy-attribute-redirect-on-load.https.html",
+      "subtests": [
+        {
+          "name": "AmbientLightSensor: Feature-Policy allow='ambient-light-sensor' attribute allows same-origin relocation",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Feature-Policy allow='ambient-light-sensor' attribute disallows cross-origin relocation",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor-enabled-by-feature-policy-attribute.https.html",
+      "subtests": [
+        {
+          "name": "AmbientLightSensor: Feature-Policy allow='ambient-light-sensor' attribute allows same-origin iframe",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Feature-Policy allow='ambient-light-sensor' attribute allows cross-origin iframe",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor-enabled-by-feature-policy.https.html",
+      "subtests": [
+        {
+          "name": "AmbientLightSensor: Feature-Policy header ambient-light-sensor * allows the top-level document.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Feature-Policy header ambient-light-sensor * allows same-origin iframes.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Feature-Policy header ambient-light-sensor * allows cross-origin iframes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor-enabled-on-self-origin-by-feature-policy.https.html",
+      "subtests": [
+        {
+          "name": "AmbientLightSensor: Feature-Policy header ambient-light-sensor 'self' allows the top-level document.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Feature-Policy header ambient-light-sensor 'self' allows same-origin iframes.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Feature-Policy header ambient-light-sensor 'self' disallows cross-origin iframes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor.https.html",
+      "subtests": [
+        {
+          "name": "AmbientLightSensor: Test that 'onreading' is called and sensor reading is valid",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: sensor reading is correct",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: sensor timestamp is updated when time passes",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Test that sensor can be successfully created and its states are correct.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: sensor.start() returns undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: no exception is thrown when calling start() on already started sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: sensor.stop() returns undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: no exception is thrown when calling stop() on already stopped sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: Test that fresh reading is fetched on start()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: sensor readings can not be fired on the background tab",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: frequency hint works",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: sensor receives suspend / resume notifications when  cross-origin subframe is focused",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor: throw 'NotSupportedError' for an unsupported sensor option",
+          "status": "FAIL",
+          "message": "assert_throws: function \"() => { new sensorType({invalid: 1}) }\" did not throw"
+        },
+        {
+          "name": "AmbientLightSensor: throw 'TypeError' if frequency is invalid",
+          "status": "FAIL",
+          "message": "assert_throws: when freq is undefined function \"() => { new sensorType({frequency: freq}) }\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor_insecure_context.html",
+      "subtests": [
+        {
+          "name": "AmbientLightSensor is not exposed in an insecure context",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/idlharness.https.html",
+      "subtests": [
+        {
+          "name": "Test IDL implementation of Ambient Light Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute activated",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for activated property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute hasReading",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for hasReading property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute timestamp",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for timestamp property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: operation start()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for start() on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: operation stop()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for stop() on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute onreading",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for onreading property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute onactivate",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for onactivate property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute onerror",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for onerror property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface: attribute illuminance",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for illuminance property on AmbientLightSensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor must be primary interface of new AmbientLightSensor()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of new AmbientLightSensor()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AmbientLightSensor interface: new AmbientLightSensor() must inherit property \"illuminance\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor() must inherit property \"activated\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor() must inherit property \"hasReading\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor() must inherit property \"timestamp\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor() must inherit property \"start()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor() must inherit property \"stop()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor() must inherit property \"onreading\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor() must inherit property \"onactivate\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new AmbientLightSensor() must inherit property \"onerror\" with the proper type",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/ambient-light/AmbientLightSensor_onerror-manual.https.html",
+      "subtests": [
+        {
+          "name": "AmbientLightSensor: 'onerror' event is fired when sensor is not supported",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
