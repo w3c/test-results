@@ -1,0 +1,637 @@
+{
+  "results": [
+    {
+      "test": "/magnetometer/Magnetometer-disabled-by-feature-policy.https.html",
+      "subtests": [
+        {
+          "name": "Magnetometer: Feature-Policy header magnetometer 'none' disallows the top-level document.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Feature-Policy header magnetometer 'none' disallows same-origin iframes.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Feature-Policy header magnetometer 'none' disallows cross-origin iframes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": "Uncaught ReferenceError: UncalibratedMagnetometer is not defined"
+    },
+    {
+      "test": "/magnetometer/Magnetometer-enabled-by-feature-policy-attribute-redirect-on-load.https.html",
+      "subtests": [
+        {
+          "name": "Magnetometer: Feature-Policy allow='magnetometer' attribute allows same-origin relocation",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Feature-Policy allow='magnetometer' attribute disallows cross-origin relocation",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": "Uncaught ReferenceError: UncalibratedMagnetometer is not defined"
+    },
+    {
+      "test": "/magnetometer/Magnetometer-enabled-by-feature-policy-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Magnetometer: Feature-Policy allow='magnetometer' attribute allows same-origin iframe",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Feature-Policy allow='magnetometer' attribute allows cross-origin iframe",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": "Uncaught ReferenceError: UncalibratedMagnetometer is not defined"
+    },
+    {
+      "test": "/magnetometer/Magnetometer-enabled-by-feature-policy.https.html",
+      "subtests": [
+        {
+          "name": "Magnetometer: Feature-Policy header magnetometer * allows the top-level document.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Feature-Policy header magnetometer * allows same-origin iframes.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Feature-Policy header magnetometer * allows cross-origin iframes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": "Uncaught ReferenceError: UncalibratedMagnetometer is not defined"
+    },
+    {
+      "test": "/magnetometer/Magnetometer-enabled-on-self-origin-by-feature-policy.https.html",
+      "subtests": [
+        {
+          "name": "Magnetometer: Feature-Policy header magnetometer 'self' allows the top-level document.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Feature-Policy header magnetometer 'self' allows same-origin iframes.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Feature-Policy header magnetometer 'self' disallows cross-origin iframes.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": "Uncaught ReferenceError: UncalibratedMagnetometer is not defined"
+    },
+    {
+      "test": "/magnetometer/Magnetometer.https.html",
+      "subtests": [
+        {
+          "name": "Magnetometer: Test that 'onreading' is called and sensor reading is valid",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: sensor reading is correct",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: sensor timestamp is updated when time passes",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Test that sensor can be successfully created and its states are correct.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: sensor.start() returns undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: no exception is thrown when calling start() on already started sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: sensor.stop() returns undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: no exception is thrown when calling stop() on already stopped sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: Test that fresh reading is fetched on start()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: sensor readings can not be fired on the background tab",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: frequency hint works",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: sensor receives suspend / resume notifications when  cross-origin subframe is focused",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: throw 'NotSupportedError' for an unsupported sensor option",
+          "status": "FAIL",
+          "message": "assert_throws: function \"() => { new sensorType({invalid: 1}) }\" did not throw"
+        },
+        {
+          "name": "Magnetometer: throw 'TypeError' if frequency is invalid",
+          "status": "FAIL",
+          "message": "assert_throws: when freq is undefined function \"() => { new sensorType({frequency: freq}) }\" did not throw"
+        },
+        {
+          "name": "Magnetometer: sensor reading is correct when options.referenceFrame is 'screen'",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer: throw 'TypeError' if referenceFrame is not one of enumeration values",
+          "status": "FAIL",
+          "message": "assert_throws: when refFrame is invalid function \"() => { new sensorType({referenceFrame: refFrame}) }\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": "Uncaught ReferenceError: UncalibratedMagnetometer is not defined"
+    },
+    {
+      "test": "/magnetometer/Magnetometer_insecure_context.html",
+      "subtests": [
+        {
+          "name": "Magnetometer is not exposed in an insecure context",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "UncalibratedMagnetometer is not exposed in an insecure context",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/magnetometer/idlharness.https.html",
+      "subtests": [
+        {
+          "name": "Test IDL implementation of Magnetometer Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute activated",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for activated property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute hasReading",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for hasReading property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute timestamp",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for timestamp property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: operation start()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for start() on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: operation stop()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for stop() on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute onreading",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for onreading property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute onactivate",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for onactivate property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: attribute onerror",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for onerror property on Sensor",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: attribute x",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for x property on Magnetometer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: attribute y",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for y property on Magnetometer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: attribute z",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for z property on Magnetometer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer must be primary interface of new Magnetometer();",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of new Magnetometer();",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: new Magnetometer(); must inherit property \"x\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: new Magnetometer(); must inherit property \"y\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Magnetometer interface: new Magnetometer(); must inherit property \"z\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new Magnetometer(); must inherit property \"activated\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new Magnetometer(); must inherit property \"hasReading\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new Magnetometer(); must inherit property \"timestamp\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new Magnetometer(); must inherit property \"start()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new Magnetometer(); must inherit property \"stop()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new Magnetometer(); must inherit property \"onreading\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new Magnetometer(); must inherit property \"onactivate\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Sensor interface: new Magnetometer(); must inherit property \"onerror\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: existence and properties of interface object",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "UncalibratedMagnetometer interface object length",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "UncalibratedMagnetometer interface object name",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: attribute x",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "Unscopable handled correctly for x property on UncalibratedMagnetometer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: attribute y",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "Unscopable handled correctly for y property on UncalibratedMagnetometer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: attribute z",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "Unscopable handled correctly for z property on UncalibratedMagnetometer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: attribute xBias",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "Unscopable handled correctly for xBias property on UncalibratedMagnetometer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: attribute yBias",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "Unscopable handled correctly for yBias property on UncalibratedMagnetometer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: attribute zBias",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"UncalibratedMagnetometer\" expected property \"UncalibratedMagnetometer\" missing"
+        },
+        {
+          "name": "Unscopable handled correctly for zBias property on UncalibratedMagnetometer",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "UncalibratedMagnetometer must be primary interface of new UncalibratedMagnetometer();",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "Stringification of new UncalibratedMagnetometer();",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: new UncalibratedMagnetometer(); must inherit property \"x\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: new UncalibratedMagnetometer(); must inherit property \"y\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: new UncalibratedMagnetometer(); must inherit property \"z\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: new UncalibratedMagnetometer(); must inherit property \"xBias\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: new UncalibratedMagnetometer(); must inherit property \"yBias\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "UncalibratedMagnetometer interface: new UncalibratedMagnetometer(); must inherit property \"zBias\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "Sensor interface: new UncalibratedMagnetometer(); must inherit property \"activated\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "Sensor interface: new UncalibratedMagnetometer(); must inherit property \"hasReading\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "Sensor interface: new UncalibratedMagnetometer(); must inherit property \"timestamp\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "Sensor interface: new UncalibratedMagnetometer(); must inherit property \"start()\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "Sensor interface: new UncalibratedMagnetometer(); must inherit property \"stop()\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "Sensor interface: new UncalibratedMagnetometer(); must inherit property \"onreading\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "Sensor interface: new UncalibratedMagnetometer(); must inherit property \"onactivate\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        },
+        {
+          "name": "Sensor interface: new UncalibratedMagnetometer(); must inherit property \"onerror\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: UncalibratedMagnetometer is not defined\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/magnetometer/Magnetometer_onerror-manual.https.html",
+      "subtests": [
+        {
+          "name": "Magnetometer: 'onerror' event is fired when sensor is not supported",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": "Uncaught ReferenceError: UncalibratedMagnetometer is not defined"
+    }
+  ]
+}
