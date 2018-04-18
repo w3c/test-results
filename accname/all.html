@@ -178,11 +178,12 @@
 </ol>
       <table class='table persist-area'>
         <thead><tr class='persist-header'><th>Test <span class='message_toggle'>Show/Hide Messages</span></th><th>FF01</th><th>FF02</th><th>FF03</th><th>GC02</th><th>GC03</th><th>WK01</th><th>WK02</th></tr></thead>
-<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/accname/description_1.0_combobox-focusable-manual.html' target='_blank'>/accname/description_1.0_combobox-focusable-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='undefined'>-</td><td class='OK'>OK</td><td class='undefined'>-</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-0-0' class='subtest'><td>Description 1.0 combobox-focusable</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='test' id='test-file-0'><td><a href='http://www.w3c-test.org/accname/description_1.0_combobox-focusable-manual.html' target='_blank'>/accname/description_1.0_combobox-focusable-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
+<tr id='subtest-0-0' class='subtest'><td>Description 1.0 combobox-focusable</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXHelp is " failed <br />
 <strong>Actual value:</strong> 'Choose your language.' <br />
 ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accDescription is " failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/accname/description_from_content_of_describedby_element-manual.html' target='_blank'>/accname/description_from_content_of_describedby_element-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-1-0' class='subtest'><td>Description from content of describedby element</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
@@ -192,13 +193,11 @@
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXHelp is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'Hello, My name is Eli the weird. ( QED )' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXHelp is My name is Garaventa the weird. (QED) Where are my marbles?" failed <br />
-<strong>Actual value:</strong> Hello, My name is Eli the weird. ( QED ) and don't you forget it. <br />
-;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXHelp is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Garaventa the weird. (QED) ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accDescription is My name is Garaventa the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accDescription is My name is Eli the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property description is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Eli the weird. ( Q E D ) Where in are my marbles?' <br />
 ;  expected true got false</td></tr>
@@ -214,13 +213,11 @@
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXHelp is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'Hello, My name is Zambino the weird. (QED) and don't you forget it. Where in the world are my marbles?' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXHelp is My name is Garaventa the weird. (QED) Where are my marbles?" failed <br />
-<strong>Actual value:</strong> Hello, My name is Eli the weird. ( QED ) and don't you forget it. <br />
-;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accDescription is My name is Eli the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXHelp is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> ' My name is Garaventa the weird. ( Q E D ) Where are my marbles? ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accDescription is My name is Garaventa the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accDescription is My name is Eli the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property description is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> ' <br />
        Hello, <br />
@@ -279,11 +276,15 @@
 <tr class='test' id='test-file-8'><td><a href='http://www.w3c-test.org/accname/description_test_case_772-manual.html' target='_blank'>/accname/description_test_case_772-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-8-0' class='subtest'><td>Description test case 772</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-9'><td><a href='http://www.w3c-test.org/accname/description_test_case_773-manual.html' target='_blank'>/accname/description_test_case_773-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-9-0' class='subtest'><td>Description test case 773</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-9-0' class='subtest'><td>Description test case 773</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
+</table></td></tr>
 <tr class='test' id='test-file-10'><td><a href='http://www.w3c-test.org/accname/description_test_case_774-manual.html' target='_blank'>/accname/description_test_case_774-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-10-0' class='subtest'><td>Description test case 774</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-11'><td><a href='http://www.w3c-test.org/accname/description_test_case_838-manual.html' target='_blank'>/accname/description_test_case_838-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-11-0' class='subtest'><td>Description test case 838</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-11-0' class='subtest'><td>Description test case 838</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
+</table></td></tr>
 <tr class='test' id='test-file-12'><td><a href='http://www.w3c-test.org/accname/description_test_case_broken_reference-manual.html' target='_blank'>/accname/description_test_case_broken_reference-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-12-0' class='subtest'><td>Description test case broken reference</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accDescription is " failed ;  expected true got false</td></tr>
@@ -291,18 +292,18 @@
 <tr class='test' id='test-file-13'><td><a href='http://www.w3c-test.org/accname/description_test_case_one_valid_reference-manual.html' target='_blank'>/accname/description_test_case_one_valid_reference-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-13-0' class='subtest'><td>Description test case one valid reference</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-14'><td><a href='http://www.w3c-test.org/accname/description_title-same-element-manual.html' target='_blank'>/accname/description_title-same-element-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-14-0' class='subtest'><td>Description title-same-element</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-14-0' class='subtest'><td>Description title-same-element</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
+</table></td></tr>
 <tr class='test' id='test-file-15'><td><a href='http://www.w3c-test.org/accname/name_1.0_combobox-focusable-alternative-manual.html' target='_blank'>/accname/name_1.0_combobox-focusable-alternative-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-15-0' class='subtest'><td>Name 1.0 combobox-focusable-alternative</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-16'><td><a href='http://www.w3c-test.org/accname/name_1.0_combobox-focusable-manual.html' target='_blank'>/accname/name_1.0_combobox-focusable-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-16-0' class='subtest'><td>Name 1.0 combobox-focusable</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is Choose your language. English" failed <br />
-<strong>Actual value:</strong> Choose your language. <br />
-;  expected true got false</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Choose your language." failed <br />
 <strong>Actual value:</strong> 'English' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is Choose your language. English" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is Choose your language." failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-17'><td><a href='http://www.w3c-test.org/accname/name_checkbox-label-embedded-combobox-manual.html' target='_blank'>/accname/name_checkbox-label-embedded-combobox-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-17-0' class='subtest'><td>Name checkbox-label-embedded-combobox</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
@@ -327,9 +328,7 @@
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
 <strong>Actual value:</strong> 'Flash the screen times.' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
-<strong>Actual value:</strong> Flash the screen times. <br />
-;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is Flash the screen 1 times." failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
 <strong>Actual value:</strong> 'Flash the screen times.' <br />
 ;  expected true got false</td></tr>
@@ -369,17 +368,14 @@
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-24'><td><a href='http://www.w3c-test.org/accname/name_checkbox-label-multiple-label-alternative-manual.html' target='_blank'>/accname/name_checkbox-label-multiple-label-alternative-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-24-0' class='subtest'><td>Name checkbox-label-multiple-label-alternative</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-24-0' class='subtest'><td>Name checkbox-label-multiple-label-alternative</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property name is a test This is" failed <br />
 <strong>Actual value:</strong> 'a testThis is' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is a test This is" failed <br />
 <strong>Actual value:</strong> 'a testThis is' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is a test This is" failed <br />
-<strong>Actual value:</strong> a testThis is <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is a test" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is a test This is" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is a test This is" failed <br />
 <strong>Actual value:</strong> 'a test' <br />
 ;  expected true got false</td></tr>
@@ -388,17 +384,14 @@
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-25'><td><a href='http://www.w3c-test.org/accname/name_checkbox-label-multiple-label-manual.html' target='_blank'>/accname/name_checkbox-label-multiple-label-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-25-0' class='subtest'><td>Name checkbox-label-multiple-label</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-25-0' class='subtest'><td>Name checkbox-label-multiple-label</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property name is This is a test" failed <br />
 <strong>Actual value:</strong> 'a testThis is' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is This is a test" failed <br />
 <strong>Actual value:</strong> 'a testThis is' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is This is a test" failed <br />
-<strong>Actual value:</strong> a testThis is <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is a test" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is This is a test" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is This is a test" failed <br />
 <strong>Actual value:</strong> 'a test' <br />
 ;  expected true got false</td></tr>
@@ -438,28 +431,29 @@
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-30'><td><a href='http://www.w3c-test.org/accname/name_file-label-embedded-slider-manual.html' target='_blank'>/accname/name_file-label-embedded-slider-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-30-0' class='subtest'><td>Name file-label-embedded-slider</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
+<tr id='subtest-30-0' class='subtest'><td>Name file-label-embedded-slider</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
 <strong>Actual value:</strong> 'no file selected' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-31'><td><a href='http://www.w3c-test.org/accname/name_file-label-embedded-spinbutton-manual.html' target='_blank'>/accname/name_file-label-embedded-spinbutton-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-31-0' class='subtest'><td>Name file-label-embedded-spinbutton</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
+<tr id='subtest-31-0' class='subtest'><td>Name file-label-embedded-spinbutton</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
 <strong>Actual value:</strong> 'no file selected' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-32'><td><a href='http://www.w3c-test.org/accname/name_file-label-inline-block-elements-manual.html' target='_blank'>/accname/name_file-label-inline-block-elements-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-32-0' class='subtest'><td>Name file-label-inline-block-elements</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-32-0' class='subtest'><td>Name file-label-inline-block-elements</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> assert_true: "property name is What is your name?" failed <br />
 <strong>Actual value:</strong> 'What is your name ?' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is What is your name?" failed <br />
 <strong>Actual value:</strong> 'What is your name ?' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is What is your name?" failed <br />
-<strong>Actual value:</strong> What is your name ? <br />
-;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is What is your name?" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is What is your name?" failed <br />
 <strong>Actual value:</strong> 'W h a t <br />
 is your name ?' <br />
@@ -469,12 +463,9 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-33'><td><a href='http://www.w3c-test.org/accname/name_file-label-inline-block-styles-manual.html' target='_blank'>/accname/name_file-label-inline-block-styles-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-33-0' class='subtest'><td>Name file-label-inline-block-styles</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-33-0' class='subtest'><td>Name file-label-inline-block-styles</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is This is a test." failed <br />
 <strong>Actual value:</strong> 'is a test' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is This is a test." failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is This is a test." failed <br />
 <strong>Actual value:</strong> 'This is a test .' <br />
@@ -491,10 +482,8 @@ is your name ?' <br />
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is 2 4 6 8 10" failed <br />
 <strong>Actual value:</strong> '2 4 6 78 10' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is 246810" failed <br />
-<strong>Actual value:</strong> 2 4 6 78 10 <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is 246810" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is 2 4 6 8 10" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is 2 4 6 8 10" failed <br />
 <strong>Actual value:</strong> '2 3 4 6 8 10' <br />
 ;  expected true got false</td></tr>
@@ -549,13 +538,11 @@ is your name ?' <br />
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'Hello, My name is Eli the weird. ( QED )' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is My name is Garaventa the weird. (QED) Where are my marbles?" failed <br />
-<strong>Actual value:</strong> Hello, My name is Eli the weird. ( QED ) and don't you forget it. <br />
-;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is My name is Eli the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Garaventa the weird. (QED) ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is My name is Garaventa the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is My name is Eli the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Eli the weird. ( Q E D ) Where in are my marbles?' <br />
 ;  expected true got false</td></tr>
@@ -571,13 +558,11 @@ is your name ?' <br />
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Eli the weird. ( Q E D )' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is My name is Garaventa the weird. (QED) Where are my marbles?" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Garaventa the weird. (QED) ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is My name is Garaventa the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is My name is Eli the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Eli the weird. ( Q E D ) Where in are my marbles?' <br />
 ;  expected true got false</td></tr>
@@ -593,13 +578,11 @@ is your name ?' <br />
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Eli the weird. ( Q E D )' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is My name is Garaventa the weird. (QED) Where are my marbles?" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is My name is Eli the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Garaventa the weird. (QED) ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is My name is Garaventa the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is My name is Eli the weird. (QED) Where are my marbles?" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is My name is Eli the weird. (QED) Where are my marbles?" failed <br />
 <strong>Actual value:</strong> 'My name is Eli the weird. ( Q E D ) Where in are my marbles?' <br />
 ;  expected true got false</td></tr>
@@ -608,18 +591,14 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-41'><td><a href='http://www.w3c-test.org/accname/name_from_content_of_labelledby_elements_one_of_which_is_hidden-manual.html' target='_blank'>/accname/name_from_content_of_labelledby_elements_one_of_which_is_hidden-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-41-0' class='subtest'><td>Name from content of labelledby elements one of which is hidden</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-41-0' class='subtest'><td>Name from content of labelledby elements one of which is hidden</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is Important stuff" failed <br />
 <strong>Actual value:</strong> 'Important' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is Important stuff" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-42'><td><a href='http://www.w3c-test.org/accname/name_heading-combobox-focusable-alternative-manual.html' target='_blank'>/accname/name_heading-combobox-focusable-alternative-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-42-0' class='subtest'><td>Name  heading-combobox-focusable-alternative</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-42-0' class='subtest'><td>Name  heading-combobox-focusable-alternative</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Unknown error running test.</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Unknown error running test.</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-43'><td><a href='http://www.w3c-test.org/accname/name_image-title-manual.html' target='_blank'>/accname/name_image-title-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-43-0' class='subtest'><td>Name image-title</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -636,13 +615,11 @@ is your name ?' <br />
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is My name is Eli the weird. (QED)" failed <br />
 <strong>Actual value:</strong> 'Hello, My name is Eli the weird. ( QED )' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is My name is Garaventa the weird. (QED)" failed <br />
-<strong>Actual value:</strong> Hello, My name is Eli the weird. ( QED ) and don't you forget it. <br />
-;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> assert_true: ATTA returned ERROR with message:  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is My name is Eli the weird. (QED)" failed <br />
 <strong>Actual value:</strong> 'My name is Garaventa the weird. (QED)' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is My name is Garaventa the weird. (QED)" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is My name is Eli the weird. (QED)" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is My name is Eli the weird. (QED)" failed <br />
 <strong>Actual value:</strong> 'My name is Eli the weird. ( Q E D )' <br />
 ;  expected true got false</td></tr>
@@ -653,11 +630,8 @@ is your name ?' <br />
 <tr class='test' id='test-file-45'><td><a href='http://www.w3c-test.org/accname/name_link-with-label-manual.html' target='_blank'>/accname/name_link-with-label-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-45-0' class='subtest'><td>Name link-with-label</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-46'><td><a href='http://www.w3c-test.org/accname/name_password-label-embedded-combobox-manual.html' target='_blank'>/accname/name_password-label-embedded-combobox-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-46-0' class='subtest'><td>Name password-label-embedded-combobox</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
+<tr id='subtest-46-0' class='subtest'><td>Name password-label-embedded-combobox</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
 <strong>Actual value:</strong> 'Flash the screen times.' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is Flash the screen 1 times." failed ;  expected true got false</td></tr>
@@ -671,46 +645,30 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-47'><td><a href='http://www.w3c-test.org/accname/name_password-label-embedded-menu-manual.html' target='_blank'>/accname/name_password-label-embedded-menu-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-47-0' class='subtest'><td>Name password-label-embedded-menu</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is Flash the screen times." failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-</table></td></tr>
+<tr id='subtest-47-0' class='subtest'><td>Name password-label-embedded-menu</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-48'><td><a href='http://www.w3c-test.org/accname/name_password-label-embedded-select-manual.html' target='_blank'>/accname/name_password-label-embedded-select-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-48-0' class='subtest'><td>Name password-label-embedded-select</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
+<tr id='subtest-48-0' class='subtest'><td>Name password-label-embedded-select</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
 <strong>Actual value:</strong> 'Flash the screen times.' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is Flash the screen 1 times." failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-49'><td><a href='http://www.w3c-test.org/accname/name_password-label-embedded-slider-manual.html' target='_blank'>/accname/name_password-label-embedded-slider-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-49-0' class='subtest'><td>Name password-label-embedded-slider</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
+<tr id='subtest-49-0' class='subtest'><td>Name password-label-embedded-slider</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
 <strong>Actual value:</strong> 'foo 5.0 baz' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-50'><td><a href='http://www.w3c-test.org/accname/name_password-label-embedded-spinbutton-manual.html' target='_blank'>/accname/name_password-label-embedded-spinbutton-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-50-0' class='subtest'><td>Name password-label-embedded-spinbutton</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
+<tr id='subtest-50-0' class='subtest'><td>Name password-label-embedded-spinbutton</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
 <strong>Actual value:</strong> 'foo 5.0 baz' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-51'><td><a href='http://www.w3c-test.org/accname/name_password-title-manual.html' target='_blank'>/accname/name_password-title-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-51-0' class='subtest'><td>Name password-title</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-51-0' class='subtest'><td>Name password-title</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is foo" failed <br />
 <strong>Actual value:</strong> '' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-52'><td><a href='http://www.w3c-test.org/accname/name_radio-label-embedded-combobox-manual.html' target='_blank'>/accname/name_radio-label-embedded-combobox-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -764,52 +722,36 @@ is your name ?' <br />
 <tr class='test' id='test-file-63'><td><a href='http://www.w3c-test.org/accname/name_test_case_545-manual.html' target='_blank'>/accname/name_test_case_545-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-63-0' class='subtest'><td>Name test case 545</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-64'><td><a href='http://www.w3c-test.org/accname/name_test_case_546-manual.html' target='_blank'>/accname/name_test_case_546-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-64-0' class='subtest'><td>Name test case 546</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is States:" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-</table></td></tr>
+<tr id='subtest-64-0' class='subtest'><td>Name test case 546</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-65'><td><a href='http://www.w3c-test.org/accname/name_test_case_547-manual.html' target='_blank'>/accname/name_test_case_547-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-65-0' class='subtest'><td>Name test case 547</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo David" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo David" failed <br />
+<tr id='subtest-65-0' class='subtest'><td>Name test case 547</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo David" failed <br />
 <strong>Actual value:</strong> 'foo David ' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is foo David" failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-66'><td><a href='http://www.w3c-test.org/accname/name_test_case_548-manual.html' target='_blank'>/accname/name_test_case_548-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-66-0' class='subtest'><td>Name test case 548</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-66-0' class='subtest'><td>Name test case 548</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy clown' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is crazy" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy clown" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy clown' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-67'><td><a href='http://www.w3c-test.org/accname/name_test_case_549-manual.html' target='_blank'>/accname/name_test_case_549-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-67-0' class='subtest'><td>Name test case 549</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is crazy Monday" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy Monday" failed <br />
+<tr id='subtest-67-0' class='subtest'><td>Name test case 549</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy Monday" failed <br />
 <strong>Actual value:</strong> 'crazy 4.0' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-68'><td><a href='http://www.w3c-test.org/accname/name_test_case_550-manual.html' target='_blank'>/accname/name_test_case_550-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-68-0' class='subtest'><td>Name test case 550</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is crazy 4" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is crazy 4" failed <br />
+<tr id='subtest-68-0' class='subtest'><td>Name test case 550</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is crazy 4" failed <br />
 <strong>Actual value:</strong> 'crazy' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy 4" failed <br />
@@ -817,30 +759,21 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-69'><td><a href='http://www.w3c-test.org/accname/name_test_case_551-manual.html' target='_blank'>/accname/name_test_case_551-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-69-0' class='subtest'><td>Name test case 551</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-69-0' class='subtest'><td>Name test case 551</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> '' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is crazy" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-70'><td><a href='http://www.w3c-test.org/accname/name_test_case_552-manual.html' target='_blank'>/accname/name_test_case_552-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-70-0' class='subtest'><td>Name test case 552</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-70-0' class='subtest'><td>Name test case 552</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is fancy fruit" failed <br />
 <strong>Actual value:</strong> 'fruit' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is fancy fruit" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-71'><td><a href='http://www.w3c-test.org/accname/name_test_case_553-manual.html' target='_blank'>/accname/name_test_case_553-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-71-0' class='subtest'><td>Name test case 553</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-71-0' class='subtest'><td>Name test case 553</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is test content" failed <br />
 <strong>Actual value:</strong> '' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is test content" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-72'><td><a href='http://www.w3c-test.org/accname/name_test_case_556-manual.html' target='_blank'>/accname/name_test_case_556-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -848,19 +781,22 @@ is your name ?' <br />
 <tr class='test' id='test-file-73'><td><a href='http://www.w3c-test.org/accname/name_test_case_557-manual.html' target='_blank'>/accname/name_test_case_557-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-73-0' class='subtest'><td>Name test case 557</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-74'><td><a href='http://www.w3c-test.org/accname/name_test_case_558-manual.html' target='_blank'>/accname/name_test_case_558-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-74-0' class='subtest'><td>Name test case 558</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is peanuts" failed ;  expected true got false</td></tr>
+<tr id='subtest-74-0' class='subtest'><td>Name test case 558</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is " failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is " failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-75'><td><a href='http://www.w3c-test.org/accname/name_test_case_559-manual.html' target='_blank'>/accname/name_test_case_559-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-75-0' class='subtest'><td>Name test case 559</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is " failed <br />
+<tr id='subtest-75-0' class='subtest'><td>Name test case 559</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is " failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is " failed <br />
 <strong>Actual value:</strong> '/foo.jpg' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is " failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-76'><td><a href='http://www.w3c-test.org/accname/name_test_case_560-manual.html' target='_blank'>/accname/name_test_case_560-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-76-0' class='subtest'><td>Name test case 560</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is peanuts" failed ;  expected true got false</td></tr>
+<tr id='subtest-76-0' class='subtest'><td>Name test case 560</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is " failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is " failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-77'><td><a href='http://www.w3c-test.org/accname/name_test_case_561-manual.html' target='_blank'>/accname/name_test_case_561-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-77-0' class='subtest'><td>Name test case 561</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -888,8 +824,9 @@ is your name ?' <br />
 <tr class='test' id='test-file-86'><td><a href='http://www.w3c-test.org/accname/name_test_case_599-manual.html' target='_blank'>/accname/name_test_case_599-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-86-0' class='subtest'><td>Name test case 599</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-87'><td><a href='http://www.w3c-test.org/accname/name_test_case_600-manual.html' target='_blank'>/accname/name_test_case_600-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-87-0' class='subtest'><td>Name test case 600</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is " failed ;  expected true got false</td></tr>
+<tr id='subtest-87-0' class='subtest'><td>Name test case 600</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property accName is " failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is " failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-88'><td><a href='http://www.w3c-test.org/accname/name_test_case_601-manual.html' target='_blank'>/accname/name_test_case_601-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-88-0' class='subtest'><td>Name test case 601</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -908,35 +845,21 @@ is your name ?' <br />
 <tr class='test' id='test-file-95'><td><a href='http://www.w3c-test.org/accname/name_test_case_608-manual.html' target='_blank'>/accname/name_test_case_608-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-95-0' class='subtest'><td>Name test case 608</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-96'><td><a href='http://www.w3c-test.org/accname/name_test_case_609-manual.html' target='_blank'>/accname/name_test_case_609-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-96-0' class='subtest'><td>Name test case 609</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-96-0' class='subtest'><td>Name test case 609</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
 <strong>Actual value:</strong> 'foo' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-97'><td><a href='http://www.w3c-test.org/accname/name_test_case_610-manual.html' target='_blank'>/accname/name_test_case_610-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-97-0' class='subtest'><td>Name test case 610</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-97-0' class='subtest'><td>Name test case 610</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is foo bar" failed <br />
 <strong>Actual value:</strong> 'foo' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo bar" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-98'><td><a href='http://www.w3c-test.org/accname/name_test_case_611-manual.html' target='_blank'>/accname/name_test_case_611-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-98-0' class='subtest'><td>Name test case 611</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-</table></td></tr>
+<tr id='subtest-98-0' class='subtest'><td>Name test case 611</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-99'><td><a href='http://www.w3c-test.org/accname/name_test_case_612-manual.html' target='_blank'>/accname/name_test_case_612-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-99-0' class='subtest'><td>Name test case 612</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-</table></td></tr>
+<tr id='subtest-99-0' class='subtest'><td>Name test case 612</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-100'><td><a href='http://www.w3c-test.org/accname/name_test_case_613-manual.html' target='_blank'>/accname/name_test_case_613-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-100-0' class='subtest'><td>Name test case 613</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-101'><td><a href='http://www.w3c-test.org/accname/name_test_case_614-manual.html' target='_blank'>/accname/name_test_case_614-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -961,21 +884,15 @@ is your name ?' <br />
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is foo bar baz" failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-105'><td><a href='http://www.w3c-test.org/accname/name_test_case_618-manual.html' target='_blank'>/accname/name_test_case_618-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-105-0' class='subtest'><td>Name test case 618</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
+<tr id='subtest-105-0' class='subtest'><td>Name test case 618</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
 <strong>Actual value:</strong> 'foobarbaz' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is foo bar baz" failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-106'><td><a href='http://www.w3c-test.org/accname/name_test_case_619-manual.html' target='_blank'>/accname/name_test_case_619-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-106-0' class='subtest'><td>Name test case 619</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
+<tr id='subtest-106-0' class='subtest'><td>Name test case 619</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
 <strong>Actual value:</strong> 'foobarbaz' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is foo bar baz" failed ;  expected true got false</td></tr>
@@ -994,12 +911,9 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-109'><td><a href='http://www.w3c-test.org/accname/name_test_case_659-manual.html' target='_blank'>/accname/name_test_case_659-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-109-0' class='subtest'><td>Name test case 659</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-109-0' class='subtest'><td>Name test case 659</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
 <strong>Actual value:</strong> '' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
 <strong>Actual value:</strong> 'foo baz' <br />
@@ -1013,12 +927,9 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-110'><td><a href='http://www.w3c-test.org/accname/name_test_case_660-manual.html' target='_blank'>/accname/name_test_case_660-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-110-0' class='subtest'><td>Name test case 660</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-110-0' class='subtest'><td>Name test case 660</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
 <strong>Actual value:</strong> '' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
 <strong>Actual value:</strong> 'foo baz' <br />
@@ -1065,9 +976,7 @@ is your name ?' <br />
 <tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
 <strong>Actual value:</strong> 'fooBrowse… No file selected. bar baz' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
-<strong>Actual value:</strong> fooBrowse… No file selected. bar baz <br />
-;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> promise_test: Unhandled rejection with value: object "[object Object]"</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo bar baz" failed <br />
 <strong>Actual value:</strong> 'foobaz' <br />
 ;  expected true got false</td></tr>
@@ -1093,11 +1002,7 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-115'><td><a href='http://www.w3c-test.org/accname/name_test_case_721-manual.html' target='_blank'>/accname/name_test_case_721-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-115-0' class='subtest'><td>Name test case 721</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is States:" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-</table></td></tr>
+<tr id='subtest-115-0' class='subtest'><td>Name test case 721</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-116'><td><a href='http://www.w3c-test.org/accname/name_test_case_723-manual.html' target='_blank'>/accname/name_test_case_723-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-116-0' class='subtest'><td>Name test case 723</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-117'><td><a href='http://www.w3c-test.org/accname/name_test_case_724-manual.html' target='_blank'>/accname/name_test_case_724-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1115,11 +1020,8 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-120'><td><a href='http://www.w3c-test.org/accname/name_test_case_727-manual.html' target='_blank'>/accname/name_test_case_727-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-120-0' class='subtest'><td>Name test case 727</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo David" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo David" failed <br />
+<tr id='subtest-120-0' class='subtest'><td>Name test case 727</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is foo David" failed <br />
 <strong>Actual value:</strong> 'foo David ' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is foo David" failed ;  expected true got false</td></tr>
@@ -1155,17 +1057,14 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-125'><td><a href='http://www.w3c-test.org/accname/name_test_case_733-manual.html' target='_blank'>/accname/name_test_case_733-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-125-0' class='subtest'><td>Name test case 733</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-125-0' class='subtest'><td>Name test case 733</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy clown' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is crazy" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy clown" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy clown' <br />
 ;  expected true got false</td></tr>
@@ -1175,7 +1074,7 @@ is your name ?' <br />
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy clown" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy clown' <br />
 ;  expected true got false</td></tr>
@@ -1185,7 +1084,7 @@ is your name ?' <br />
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy clown" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy clown' <br />
 ;  expected true got false</td></tr>
@@ -1195,7 +1094,7 @@ is your name ?' <br />
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy clown" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'no file selected' <br />
 ;  expected true got false</td></tr>
@@ -1205,17 +1104,14 @@ is your name ?' <br />
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'crazy ' <br />
 ;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy clown" failed ;  expected true got false</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy" failed ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> 'Submit' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-130'><td><a href='http://www.w3c-test.org/accname/name_test_case_738-manual.html' target='_blank'>/accname/name_test_case_738-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-130-0' class='subtest'><td>Name test case 738</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is crazy Monday" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy Monday" failed <br />
+<tr id='subtest-130-0' class='subtest'><td>Name test case 738</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy Monday" failed <br />
 <strong>Actual value:</strong> 'crazy 4.0' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
@@ -1244,11 +1140,8 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-135'><td><a href='http://www.w3c-test.org/accname/name_test_case_743-manual.html' target='_blank'>/accname/name_test_case_743-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-135-0' class='subtest'><td>Name test case 743</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is crazy 4" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is crazy 4" failed <br />
+<tr id='subtest-135-0' class='subtest'><td>Name test case 743</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK01:</td><td> assert_true: "property name is crazy 4" failed <br />
 <strong>Actual value:</strong> 'crazy' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is crazy 4" failed <br />
@@ -1292,12 +1185,9 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-140'><td><a href='http://www.w3c-test.org/accname/name_test_case_748-manual.html' target='_blank'>/accname/name_test_case_748-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-140-0' class='subtest'><td>Name test case 748</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-140-0' class='subtest'><td>Name test case 748</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is crazy" failed <br />
 <strong>Actual value:</strong> '' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is crazy" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-141'><td><a href='http://www.w3c-test.org/accname/name_test_case_749-manual.html' target='_blank'>/accname/name_test_case_749-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1325,12 +1215,9 @@ is your name ?' <br />
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is crazy" failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-145'><td><a href='http://www.w3c-test.org/accname/name_test_case_753-manual.html' target='_blank'>/accname/name_test_case_753-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-145-0' class='subtest'><td>Name test case 753</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-145-0' class='subtest'><td>Name test case 753</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is fancy fruit" failed <br />
 <strong>Actual value:</strong> 'fruit' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is fancy fruit" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-146'><td><a href='http://www.w3c-test.org/accname/name_test_case_754-manual.html' target='_blank'>/accname/name_test_case_754-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1350,12 +1237,9 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-150'><td><a href='http://www.w3c-test.org/accname/name_test_case_758-manual.html' target='_blank'>/accname/name_test_case_758-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-150-0' class='subtest'><td>Name test case 758</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-150-0' class='subtest'><td>Name test case 758</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is fancy fruit" failed <br />
 <strong>Actual value:</strong> 'fancy' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is fancy fruit" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-151'><td><a href='http://www.w3c-test.org/accname/name_test_case_759-manual.html' target='_blank'>/accname/name_test_case_759-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
@@ -1375,11 +1259,8 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-155'><td><a href='http://www.w3c-test.org/accname/name_text-label-embedded-combobox-manual.html' target='_blank'>/accname/name_text-label-embedded-combobox-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-155-0' class='subtest'><td>Name text-label-embedded-combobox</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
+<tr id='subtest-155-0' class='subtest'><td>Name text-label-embedded-combobox</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
 <strong>Actual value:</strong> 'Flash the screen times.' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is Flash the screen 1 times." failed ;  expected true got false</td></tr>
@@ -1393,46 +1274,30 @@ is your name ?' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-156'><td><a href='http://www.w3c-test.org/accname/name_text-label-embedded-menu-manual.html' target='_blank'>/accname/name_text-label-embedded-menu-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-156-0' class='subtest'><td>Name text-label-embedded-menu</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is Flash the screen times." failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-</table></td></tr>
+<tr id='subtest-156-0' class='subtest'><td>Name text-label-embedded-menu</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-157'><td><a href='http://www.w3c-test.org/accname/name_text-label-embedded-select-manual.html' target='_blank'>/accname/name_text-label-embedded-select-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-157-0' class='subtest'><td>Name text-label-embedded-select</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
+<tr id='subtest-157-0' class='subtest'><td>Name text-label-embedded-select</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC02:</td><td> assert_true: "property AXDescription is Flash the screen 1 times." failed <br />
 <strong>Actual value:</strong> 'Flash the screen times.' <br />
 ;  expected true got false</td></tr>
 <tr class='message'><td class='ua'>GC03:</td><td> assert_true: "property accName is Flash the screen 1 times." failed ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-158'><td><a href='http://www.w3c-test.org/accname/name_text-label-embedded-slider-manual.html' target='_blank'>/accname/name_text-label-embedded-slider-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-158-0' class='subtest'><td>Name text-label-embedded-slider</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
+<tr id='subtest-158-0' class='subtest'><td>Name text-label-embedded-slider</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
 <strong>Actual value:</strong> 'foo 5.0 baz' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-159'><td><a href='http://www.w3c-test.org/accname/name_text-label-embedded-spinbutton-manual.html' target='_blank'>/accname/name_text-label-embedded-spinbutton-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-159-0' class='subtest'><td>Name text-label-embedded-spinbutton</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
-<strong>Actual value:</strong> <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
+<tr id='subtest-159-0' class='subtest'><td>Name text-label-embedded-spinbutton</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> assert_true: "property AXDescription is foo 5 baz" failed <br />
 <strong>Actual value:</strong> 'foo 5.0 baz' <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-160'><td><a href='http://www.w3c-test.org/accname/name_text-title-manual.html' target='_blank'>/accname/name_text-title-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-160-0' class='subtest'><td>Name text-title</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-160-0' class='subtest'><td>Name text-title</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> assert_true: "property AXDescription is foo" failed <br />
 <strong>Actual value:</strong> '' <br />
-;  expected true got false</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> assert_true: "property AXDescription is foo" failed <br />
-<strong>Actual value:</strong> <br />
 ;  expected true got false</td></tr>
 </table></td></tr>
 
