@@ -52,6 +52,10 @@ Index of Implementations
   * email: jongund@illinois.edu
   * link: <https://www.google.com/chrome/>
 
+* ME04 - Edge on Windows using UIA
+  * email: Melanie.Richards@microsoft.com
+  * link: <https://www.microsoft.com/microsoft-edge>
+
 Notes
 -----
 
