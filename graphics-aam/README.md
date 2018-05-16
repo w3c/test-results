@@ -56,9 +56,9 @@ Index of Implementations
   * status: 100% of mappings successfully implemented (6/6)
 
 * ME04 - Edge on Windows using UIA
-  * email: bbrinza@microsoft.com
+  * email: Melanie.Richards@microsoft.com
   * link: <https://www.microsoft.com/microsoft-edge>
-  * status: 0% of mappings successfully implemented (0/6)
+  * status: 100% of mappings successfully implemented (6/6)
 
 Adding new results
 ------------------
