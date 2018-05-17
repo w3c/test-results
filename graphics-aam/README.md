@@ -39,11 +39,11 @@ Index of Implementations
   * link: <https://webkit.org>
   * status: 100% of mappings successfully implemented (6/6)
 
-* GC02 - Chrome on macOS using AX API
+* GC02 - Chromium on macOS using AX API
   * email: jdiggs@igalia.com
   * link: <https://www.google.com/chrome/>
-  * status: 0% of mappings successfully implemented (0/6)
-  * bugs: [812243](https://bugs.chromium.org/p/chromium/issues/detail?id=812243 "Implement support for Graphics ARIA roles")
+  * status: 33% of mappings successfully implemented (2/6)
+  * note: The only failures are related to the AXRoleDescription. The AXRole and AXSubrole are 100% correctly implemented.
 
 * FF02 - Firefox on macOS using AX API
   * email: jdiggs@igalia.com
