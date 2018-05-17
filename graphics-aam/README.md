@@ -1,6 +1,8 @@
 Graphics ARIA Accessibility API Mappings 1.0: Test Results
 ==========================================================
 
+These results demonstrate implementability of the Graphics ARIA roles as well as their accessibility API mappings. The reason these tests can be used for both specifications is that there are no normative "MUST" statements in Graphics ARIA for user agents beyond implementation of the roles. And implementation of the Graphics ARIA roles can be fully tested by the presence of the mappings specified in the Graphics AAM.
+
 Implementation Report
 ---------------------
 * [all](all.html)
