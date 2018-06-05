@@ -1,28 +1,34 @@
 {
   "ua": [
     "FF01",
-    "WK01"
+    "FF02",
+    "WK01",
+    "WK02"
   ],
   "results": {
     "/core-aam/blockquote-manual.html": {
       "byUA": {
         "FF01": "OK",
-        "WK01": "OK"
+        "FF02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 2
+        "OK": 4
       },
       "subtests": {
         "blockquote": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "PASS"
+            "FF02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 4
           }
         }
       }
@@ -30,22 +36,29 @@
     "/core-aam/caption-manual.html": {
       "byUA": {
         "FF01": "OK",
-        "WK01": "OK"
+        "FF02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 2
+        "OK": 4
       },
       "subtests": {
         "caption": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "PASS"
+            "FF02": "FAIL",
+            "WK01": "PASS",
+            "WK02": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "FF02": "assert_true: \"property AXRole is AXGroup\" failed   \n**Actual value:** 'AXStaticText'  \n; \"property AXRoleDescription is group\" failed   \n**Actual value:** 'text'  \n;  expected true got false"
+          },
           "totals": {
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         }
       }
@@ -53,22 +66,26 @@
     "/core-aam/paragraph-manual.html": {
       "byUA": {
         "FF01": "OK",
-        "WK01": "OK"
+        "FF02": "OK",
+        "WK01": "OK",
+        "WK02": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 2
+        "OK": 4
       },
       "subtests": {
         "paragraph": {
           "stNum": 0,
           "byUA": {
             "FF01": "PASS",
-            "WK01": "PASS"
+            "FF02": "PASS",
+            "WK01": "PASS",
+            "WK02": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 4
           }
         }
       }
