@@ -2,6 +2,10 @@
 
 exports.excludeFile = function (file) {
     if (/extension/.test(file)) return true;
+    // The pointerevent_movementxy-manual.html is failing due to inconsistency in pointerlock spec.
+    if (/pointerevent_movementxy/.test(file)) return true;
+    // The solution to this test is postposted to V3: https://github.com/w3c/pointerevents/issues/75
+    if (/pointerevent_click_during_capture/.test(file)) return true;
     return false;
 };
 
