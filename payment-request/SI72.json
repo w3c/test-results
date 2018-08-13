@@ -1,0 +1,1552 @@
+{
+  "results": [
+    {
+      "test": "/payment-request/PaymentItem/type_member.https.html",
+      "subtests": [
+        {
+          "name": "Smoke test",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "An invalid enum value for PaymentDetailsInit.total's type throws TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: function \"() => {\n    new PaymentRequest(validMethods, invalidDetails);\n  }\" did not throw"
+        },
+        {
+          "name": "Invalid enum value for PaymentItem.type member throws a TypeError",
+          "status": "FAIL",
+          "message": "assert_throws: function \"() => {\n    new PaymentRequest(validMethods, invalidDetails);\n  }\" did not throw"
+        },
+        {
+          "name": "Valid enum values for PaymentItem.type member does not throw",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/PaymentMethodChangeEvent/methodDetails-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value",
+          "status": "FAIL",
+          "message": "PaymentMethodChangeEvent is not defined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/PaymentMethodChangeEvent/methodName-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value",
+          "status": "FAIL",
+          "message": "PaymentMethodChangeEvent is not defined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/PaymentRequestUpdateEvent/constructor.http.html",
+      "subtests": [
+        {
+          "name": "PaymentRequestUpdateEvent constructor must not be exposed in insecure context",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/PaymentRequestUpdateEvent/constructor.https.html",
+      "subtests": [
+        {
+          "name": "PaymentRequestUpdateEvent can be constructed in secure-context",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted",
+          "status": "FAIL",
+          "message": "assert_false: constructed in script, so not be trusted expected false got undefined"
+        },
+        {
+          "name": "PaymentRequestUpdateEvent can be dispatched, even if not trusted",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/PaymentRequestUpdateEvent/updatewith-method.https.html",
+      "subtests": [
+        {
+          "name": "Let target be the request which is dispatching the event.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\"",
+          "status": "FAIL",
+          "message": "assert_throws: untrusted event of type \"just a test\" must throw \"InvalidStateError\" function \"() => {\n        ev.updateWith(Promise.resolve());\n      }\" did not throw"
+        },
+        {
+          "name": "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\"",
+          "status": "FAIL",
+          "message": "assert_throws: untrusted event of type \"just a test\" must throw \"InvalidStateError\" function \"() => {\n        ev.updateWith(Promise.resolve())\n      }\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/active-document-cross-origin.https.sub.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest <iframe allowpaymentrequest> in non-active document (cross-origin)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/active-document-same-origin.https.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest <iframe allowpaymentrequest> in non-active document (same-origin)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-cross-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "name": "iframe",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "frame",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-same-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "name": "iframe",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "frame",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Success\" but got \"Exception\""
+        },
+        {
+          "name": "object",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Success\" but got \"Exception\""
+        },
+        {
+          "name": "embed",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Success\" but got \"Exception\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/basic.https.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest <iframe allowpaymentrequest> basic",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/no-attribute-cross-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "name": "iframe",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "frame",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/no-attribute-same-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "name": "iframe",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Success\" but got \"Exception\""
+        },
+        {
+          "name": "frame",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Success\" but got \"Exception\""
+        },
+        {
+          "name": "object",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Success\" but got \"Exception\""
+        },
+        {
+          "name": "embed",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Success\" but got \"Exception\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/removing-allowpaymentrequest.https.sub.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest removing allowpaymentrequest after load and then navigating",
+          "status": "FAIL",
+          "message": "assert_equals: before navigation expected \"Success\" but got \"Exception\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/setting-allowpaymentrequest-timing.https.sub.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest setting allowpaymentrequest after document creation, before response",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Exception\" but got \"Success\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/setting-allowpaymentrequest.https.sub.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest setting allowpaymentrequest after load and then navigating",
+          "status": "FAIL",
+          "message": "assert_equals: before navigation expected \"Exception\" but got \"Success\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/historical.https.html",
+      "subtests": [
+        {
+          "name": "paymentRequestID in PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "paymentRequestID in PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "careOf in PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "totalAmount in PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "paymentRequestId in PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "paymentRequestId in PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "supportedMethods must not support sequence<DOMString>",
+          "status": "FAIL",
+          "message": "assert_throws: function \"() => {\n    new PaymentRequest([{supportedMethods: methods}], {total: {label: 'bar', amount: {currency: 'BAZ', value: '0'}}});\n  }\" threw object \"[object Object]\" (\"sequence<DOMString> conversion is not allowed\") expected object \"[object Object]\" (\"toString should be called\")"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/idlharness.https.window.html",
+      "subtests": [
+        {
+          "name": "Setup for Payment Request API IDL tests.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: operation show([object Object])",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for show([object Object]) on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: operation abort()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for abort() on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: operation canMakePayment()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for canMakePayment() on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: attribute id",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for id property on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: attribute shippingAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for shippingAddress property on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: attribute shippingOption",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for shippingOption property on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: attribute shippingType",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for shippingType property on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: attribute onshippingaddresschange",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for onshippingaddresschange property on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: attribute onshippingoptionchange",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for onshippingoptionchange property on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: attribute onpaymentmethodchange",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onpaymentmethodchange\" expected true got false"
+        },
+        {
+          "name": "Unscopable handled correctly for onpaymentmethodchange property on PaymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest must be primary interface of paymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of paymentRequest",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"show([object Object])\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: calling show([object Object]) on paymentRequest with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"abort()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"canMakePayment()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"id\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingAddress\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingOption\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingType\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"onshippingaddresschange\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"onshippingoptionchange\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"onpaymentmethodchange\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_inherits: property \"onpaymentmethodchange\" not found in prototype chain"
+        },
+        {
+          "name": "PaymentAddress interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: operation toJSON()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for toJSON() on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute city",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for city property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute country",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for country property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute dependentLocality",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for dependentLocality property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute languageCode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for languageCode property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute organization",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for organization property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute phone",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for phone property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute postalCode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for postalCode property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute recipient",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for recipient property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute region",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for region property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute regionCode",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"regionCode\" expected true got false"
+        },
+        {
+          "name": "Unscopable handled correctly for regionCode property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute sortingCode",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for sortingCode property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentAddress interface: attribute addressLine",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for addressLine property on PaymentAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: existence and properties of interface object",
+          "status": "FAIL",
+          "message": "assert_equals: prototype of PaymentResponse is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"function () { [native code] }\""
+        },
+        {
+          "name": "PaymentResponse interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_equals: prototype of PaymentResponse.prototype is not EventTarget.prototype expected object \"[object EventTarget]\" but got object \"[object Object]\""
+        },
+        {
+          "name": "PaymentResponse interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: operation toJSON()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for toJSON() on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: attribute requestId",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for requestId property on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: attribute methodName",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for methodName property on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: attribute details",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for details property on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: attribute shippingAddress",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for shippingAddress property on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: attribute shippingOption",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for shippingOption property on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: attribute payerName",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for payerName property on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: attribute payerEmail",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for payerEmail property on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: attribute payerPhone",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for payerPhone property on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: operation complete(PaymentComplete)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for complete(PaymentComplete) on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: operation retry(PaymentValidationErrors)",
+          "status": "FAIL",
+          "message": "assert_own_property: interface prototype object missing non-static operation expected property \"retry\" missing"
+        },
+        {
+          "name": "Unscopable handled correctly for retry(PaymentValidationErrors) on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentResponse interface: attribute onpayerdetailchange",
+          "status": "FAIL",
+          "message": "assert_true: The prototype object must have a property \"onpayerdetailchange\" expected true got false"
+        },
+        {
+          "name": "Unscopable handled correctly for onpayerdetailchange property on PaymentResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface: existence and properties of interface object",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface object length",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface object name",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface: attribute methodName",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+        },
+        {
+          "name": "Unscopable handled correctly for methodName property on PaymentMethodChangeEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface: attribute methodDetails",
+          "status": "FAIL",
+          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+        },
+        {
+          "name": "Unscopable handled correctly for methodDetails property on PaymentMethodChangeEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentMethodChangeEvent must be primary interface of new PaymentMethodChangeEvent(\"paymentmethodchange\")",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+        },
+        {
+          "name": "Stringification of new PaymentMethodChangeEvent(\"paymentmethodchange\")",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodName\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+        },
+        {
+          "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodDetails\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith([object Object])\" with the proper type",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError",
+          "status": "FAIL",
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface: operation updateWith([object Object])",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Unscopable handled correctly for updateWith([object Object]) on PaymentRequestUpdateEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent must be primary interface of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface: new PaymentRequestUpdateEvent(\"paymentrequestupdate\") must inherit property \"updateWith([object Object])\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentRequestUpdateEvent(\"paymentrequestupdate\") with too few arguments must throw TypeError",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/onpaymentmenthodchange-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a onpaymentmethodchange IDL attribute",
+          "status": "FAIL",
+          "message": "assert_idl_attribute: property \"onpaymentmethodchange\" not found in prototype chain"
+        },
+        {
+          "name": "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\"",
+          "status": "FAIL",
+          "message": "assert_true: event did not fire expected true got false"
+        },
+        {
+          "name": "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent",
+          "status": "FAIL",
+          "message": "PaymentMethodChangeEvent is not defined"
+        },
+        {
+          "name": "onpaymentmethodchange attribute and listeners both work",
+          "status": "FAIL",
+          "message": "PaymentMethodChangeEvent is not defined"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-abort-method.https.html",
+      "subtests": [
+        {
+          "name": "Throws if the promise [[state]] is not \"interactive\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Test for PaymentRequest.abort() method",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+        },
+        {
+          "name": "Test for PaymentRequest.abort() method 1",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-constructor-crash.https.html",
+      "subtests": [
+        {
+          "name": "Don't crash if there is an abusive number of payment methods in the methodData sequence",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't crash if PaymentMethodData.supportedMethods is an abusive length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't crash if the request id has an abusive length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't crash if PaymentDetailsInit.total.label is an abusive length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't crash if total.amount.value is an abusive length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't crash if details.displayItems has an abusive number of items",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't crash if details.shippingOptions has an abusive number of items",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't crash if PaymentShippingOptions.label is an abusive length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't crash if the PaymentShippingOptions.amount.value is an abusive length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Don't crash if PaymentItem.label is an abusive length",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-constructor.https.html",
+      "subtests": [
+        {
+          "name": "If details.id is missing, assign an identifier",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If details.id is missing, assign a unique identifier",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If the same id is provided, then use it",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Use ids even if they are strange",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Use provided request ID",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If the length of the methodData sequence is zero, then throw a TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Modifier method data must be JSON-serializable object",
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected error parsing stringifiable JSON: []: Failed to construct 'PaymentRequest': Data should be a JSON-serializable object Reached unreachable code"
+        },
+        {
+          "name": "Rethrow any exceptions of JSON-serializing paymentMethod.data into a string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If details.total.amount.value is not a valid decimal monetary value, then throw a TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentDetailsBase members can be 0 length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If the first character of details.total.amount.value is U+002D HYPHEN-MINUS, then throw a TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "For each item in details.displayItems: if item.amount.value is not a valid decimal monetary value, then throw a TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Negative values are allowed for displayItems.amount.value, irrespective of total amount",
+          "status": "FAIL",
+          "message": "assert_unreached: shouldn't throw when given a negative value: Failed to construct 'PaymentRequest': Item label required Reached unreachable code"
+        },
+        {
+          "name": "it handles high precision currency values without throwing",
+          "status": "FAIL",
+          "message": "assert_unreached: shouldn't throw when given absurd monetary values: Failed to construct 'PaymentRequest': Item label required Reached unreachable code"
+        },
+        {
+          "name": "For each option in details.shippingOptions: if option.amount.value is not a valid decimal monetary value, then throw a TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If there is no selected shipping option, then PaymentRequest.shippingOption remains null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If there is a selected shipping option, and requestShipping is set, then that option becomes synchronously selected",
+          "status": "FAIL",
+          "message": "Failed to construct 'PaymentRequest': Item label required"
+        },
+        {
+          "name": "If requestShipping is set, and if there is a multiple selected shipping options, only the last is selected.",
+          "status": "FAIL",
+          "message": "Failed to construct 'PaymentRequest': Item label required"
+        },
+        {
+          "name": "If there are any duplicate shipping option ids, and shipping is requested, then throw a TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Throw when there are duplicate shippingOption ids, even if other values are different",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Throw TypeError if modifier.total.amount.value is not a valid decimal monetary value",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If amount.value of additionalDisplayItems is not a valid decimal monetary value, then throw a TypeError",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Modifier data must be JSON-serializable object (an Array in this case)",
+          "status": "FAIL",
+          "message": "assert_unreached: Unexpected exception thrown when given a list: Failed to construct 'PaymentRequest': Data should be a JSON-serializable object Reached unreachable code"
+        },
+        {
+          "name": "Modifier data must be JSON-serializable object (an Object in this case)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Rethrow any exceptions of JSON-serializing modifier.data",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Shipping type should be valid",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest.shippingAddress must initially be null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If options.requestShipping is not set, then request.shippingType attribute is null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If options.requestShipping is true, request.shippingType will be options.shippingType.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-ctor-currency-code-checks.https.html",
+      "subtests": [
+        {
+          "name": "Check and canonicalize valid details.total.amount",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        },
+        {
+          "name": "Check and canonicalize invalid details.total.amount and rethrow any exceptions.",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        },
+        {
+          "name": "Check and canonicalize valid details.displayItems amount",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        },
+        {
+          "name": "Check and canonicalize invalid details.displayItems amount and rethrow RangeError.",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        },
+        {
+          "name": "Check and canonicalize valid details.shippingOptions amount.",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        },
+        {
+          "name": "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError.",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        },
+        {
+          "name": "Check and canonicalize valid modifiers[n].total amount.",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        },
+        {
+          "name": "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError.",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        },
+        {
+          "name": "Check and canonicalize valid modifiers[n].additionaDisplayItem amount.",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        },
+        {
+          "name": "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError.",
+          "status": "FAIL",
+          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" threw object \"TypeError: Failed to construct 'PaymentRequest': '¡INVALID!' is not a valid ISO 4217 currency code, should be 3 upper case letters [A-Z]\" (\"TypeError\") expected object \"RangeError\" (\"RangeError\")"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-ctor-pmi-handling.https.html",
+      "subtests": [
+        {
+          "name": "Must support valid standard URL PMIs",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Must not throw on syntactically valid standardized payment method identifiers, even if they are not supported",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Must throw on syntactically invalid standardized payment method identifiers",
+          "status": "FAIL",
+          "message": "assert_throws: expected RangeError processing invalid standardized PMI \"basic-💳\" function \"() => {\n        const methods = [{ supportedMethods: invalidMethod }];\n        new PaymentRequest(methods, defaultDetails);\n      }\" did not throw"
+        },
+        {
+          "name": "Constructor MUST throw if given an invalid URL-based payment method identifier",
+          "status": "FAIL",
+          "message": "assert_throws: expected RangeError processing invalid URL PMI \"https://username@example.com/pay\" function \"() => {\n        const methods = [{ supportedMethods: invalidMethod }];\n        new PaymentRequest(methods, defaultDetails);\n      }\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-id-attribute.https.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-insecure.http.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest constructor must not be exposed in insecure context",
+          "status": "FAIL",
+          "message": "assert_false: expected false got true"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-not-exposed.https.worker.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest constructor must not be exposed in worker global scope",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-onshippingaddresschange-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a onshippingaddresschange IDL attribute",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingaddresschange attribute and listeners both work",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-onshippingoptionchange-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a onshippingoptionchange IDL attribute",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingoptionchange attribute and listeners both work",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-shippingAddress-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a .shippingAddress IDL attribute.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": ".shippingAddress attribute must default to null.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-shippingOption-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a .shippingOption IDL attribute.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": ".shippingOption attribute must default to null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If there is a single shipping option, but selected is false, then .shippingOption must be null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Given multiple shipping options, it must use the selected shipping option for .shippingOption value.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-shippingType-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a shippingType IDL attribute",
+          "status": "FAIL",
+          "message": "Failed to construct 'PaymentRequest': Item label required"
+        },
+        {
+          "name": "If options.requestShipping is false, then request.shippingType attribute is null.",
+          "status": "FAIL",
+          "message": "Failed to construct 'PaymentRequest': Item label required"
+        },
+        {
+          "name": "If options.requestShipping is true, request.shippingType will be options.shippingType.",
+          "status": "FAIL",
+          "message": "Failed to construct 'PaymentRequest': Item label required"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-show-method.https.html",
+      "subtests": [
+        {
+          "name": "Calling show() without being triggered by user interaction throws",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Throws if the promise [[state]] is not 'created'.",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/payment-request/rejects_if_not_active.https.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest.show() aborts if the document is not active",
+          "status": "FAIL",
+          "message": "assert_throws: Inactive document, so must throw AbortError function \"function () { throw e }\" threw object \"InvalidStateError: Already called show() once\" that is not a DOMException AbortError: property \"code\" is equal to 11, expected 20"
+        },
+        {
+          "name": "PaymentRequest.show() aborts if the document is active, but not fully active",
+          "status": "FAIL",
+          "message": "assert_throws: Active, but not fully active, so must throw AbortError function \"function () { throw e }\" threw object \"InvalidStateError: Already called show() once\" that is not a DOMException AbortError: property \"code\" is equal to 11, expected 20"
+        },
+        {
+          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
