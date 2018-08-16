@@ -32,6 +32,10 @@ Index of Implementations
   * email: jdiggs@igalia.com
   * link: <http://www.mozilla.org>
 
+* GC01 -  Chromium on Linux using ATK
+  * email: jdiggs@igalia.com
+  * link: <https://www.chromium.org/Home>
+
 * WK02 - WebKit/Safari on macOS using AX API
   * email: jdiggs@igalia.com
   * link: <https://webkit.org>
@@ -55,19 +59,6 @@ Index of Implementations
 * ME04 - Edge on Windows using UIA
   * email: Melanie.Richards@microsoft.com
   * link: <https://www.microsoft.com/microsoft-edge>
-
-Notes
------
-
-macOS has multiple properties through which an accessible name can be exposed
-to platform assistive technologies (e.g. AXDescription and AXTitle). Because
-what is being tested here is the calculation of the name rather than the
-specific property through which that value is exposed, these alternatives are
-being taken into account when determining if a test result is a PASS or FAIL.
-Taking the AXTitleUIElement into account as part of testing remains to be done.
-
-These issues will be resolved, or more clearly identified, prior to releasing
-the final implementation report.
 
 Adding new results
 ------------------
@@ -93,4 +84,3 @@ To add new tests results:
 If you want to see what your implementation test results reports would look like locally, use
 the [wptreport tool](https://github.com/w3c/wptreport) to build a report with a command line like
 `wptreport -f -m -s "Accessible Name and Description Computation 1.1"`.
-
