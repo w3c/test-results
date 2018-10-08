@@ -1,86 +1,101 @@
-Accessible Name and Description Computation 1.1: Test Results
-=============================================================
+# Accessible Name and Description Computation 1.1: Test Results
 
-Implementation Report
----------------------
-* [all](all.html)
-* [less than two](less-than-2.html)
-* [complete failures](complete-fails.html)
+## Exit Criteria
 
-Supported Platform Accessibility APIs
--------------------------------------
+As stated in the specification's [Candidate Recommendation exit criteria](https://www.w3.org/TR/accname/#exit-criteria):
 
-The following platform accessibility APIs are included in the Accessible Name
-and Description Computation specification:
+> For each aspect of the name and description computation, at least two
+> implementations will demonstrate implementability of that feature.
+> Implementations consist of web browsers which expose the computed accessible
+> name or description to accessibility APIs in a manner appropriate to the
+> platform. Specific accessibility API mappings are not in scope of this
+> specification; they are used only to evaluate the computed name and description.
 
-* 01: ATK (GNU/Linux)
-* 02: AX API (macOS)
-* 03: MSAA + IAccessible2 (Windows)
-* 04: UIA (Windows)
+Because the implementation of the name and description calculation is, for the
+most part, platform agnostic, "implementation" and "browser" were treated in a
+platform-agnostic manner. Thus a test which passes in Firefox for ATK (Linux),
+Firefox for IAccessible2 (Windows), and Firefox for AXAPI (macOS) is treated as
+one passing implementation; not three. The same is true for Chrome/Chromium on
+each of the aforementioned platforms. WebKitGtk and Safari were similarly treated
+as one implementation rather than two.
 
-These two-digit designators are appended to a two-character identifier for the
-user agent to identify the implementation being tested.
+Detailed results for each browser + API combination tested and a platform-agnostic
+summary have each been provided below.
 
-Index of Implementations
-------------------------
+## Implementation Report Details
 
-* WK01 - WebKit on Linux using ATK
+* [all](all.html) - 153 / 153
+* [less than two passes](less-than-2.html) - 0 / 153
+* [complete failures](complete-fails.html) - 0 / 153
+
+### Results for Browsers
+
+* Passing for Firefox for at least one API: 148 / 153 (97%)
+* Passing for Chrome/Chromium for at least one API: 148 / 153 (97%)
+* Passing for Safari/WebKit for at least one API: 142 (93%)
+* Passing for Edge (only implements UIA): 85 (56%)
+
+Of the 153 tests:
+* 78 passed on Chrome/Chromium, Edge, Firefox, and Safari/WebKitGtk
+* 61 passed on three of the four:
+  * 57 on Chrome/Chromium, Firefox, and Safari/WebKitGtk
+  * 2 on Chrome/Chromium, Edge, and Firefox
+  * 2 on Edge, Firefox, and Safari/WebKitGtk
+* 14 passed on two of the four:
+  * 6 on Chrome/Chromium and Firefox
+  * 4 on Chrome/Chromium and Safari/WebKitGtk
+  * 2 on Edge and Firefox
+  * 1 on Firefox and Safari/WebKitGtk
+  * 1 on Chrome/Chromium and Edge
+
+## Results for Each Browser + API Combination Tested
+
+* WK01 - WebKitGtk on Linux using ATK - 142 / 153 (93%)
   * email: jdiggs@igalia.com
   * link: <https://webkitgtk.org>
 
-* FF01 - Firefox on Linux using ATK
+* FF01 - Firefox on Linux using ATK - 148 / 153 (97%)
   * email: jdiggs@igalia.com
   * link: <http://www.mozilla.org>
 
-* GC01 -  Chromium on Linux using ATK
+* GC01 -  Chromium on Linux using ATK - 148 / 153 (97%)
   * email: jdiggs@igalia.com
   * link: <https://www.chromium.org/Home>
 
-* WK02 - WebKit/Safari on macOS using AX API
+* WK02 - Safari on macOS using AX API - 120 / 153 (78%)
   * email: jdiggs@igalia.com
   * link: <https://webkit.org>
 
-* GC02 - Chrome on macOS using AX API
+* GC02 - Chromium on macOS using AXAPI - 147 / 153 (96%)
   * email: jdiggs@igalia.com
-  * link: <https://www.google.com/chrome/>
+  * link: <https://www.chromium.org/Home>
 
-* FF02 - Firefox on macOS using AX API
+* FF02 - Firefox on macOS using AX API - 139 / 153 (91%)
   * email: jdiggs@igalia.com
   * link: <http://www.mozilla.org>
 
-* FF03 - Firefox on Windows using IAccessible2 + MSAA
+* FF03 - Firefox on Windows using IAccessible2 + MSAA - 148 / 153 (97%)
   * email: jongund@illinois.edu
   * link: <http://www.mozilla.org>
 
-* GC03 - Chrome on Windows using IAccessible2 + MSAA
+* GC03 - Chrome on Windows using IAccessible2 + MSAA - 148 / 153 (97%)
   * email: jongund@illinois.edu
   * link: <https://www.google.com/chrome/>
 
-* ME04 - Edge on Windows using UIA
+* ME04 - Edge on Windows using UIA - 85 / 153 (56%)
   * email: Melanie.Richards@microsoft.com
   * link: <https://www.microsoft.com/microsoft-edge>
 
-Adding new results
-------------------
+## Regarding Name Sources for AXAPI
 
-To add new tests results:
+Unlike other platforms, macOS's AXAPI has three different possibilities for
+exposure of the result of the calculated name:
 
-1. Run the accname tests on your platform 
-  * Be sure to have the ATTA for your platform under test running on your test machine.
-  * Be sure to specify `/accname/` as the path for which tests to run.
-  * Click start to run the automated tests.
-  * After the tests complete, be sure to click the `Download JSON results` button to retrieve and
-    save your JSON test results file.
-2. Fork the [w3c/test-results](https://github.com/w3c/test-results) repo if you haven't already.
-3. Select a unique two-letter abbreviation for your implementation under test (e.g., FF for Firefox)
-   and add it to the 'Index of implementations in reports' in the README.md file in your forked copy.
-   Use the information provided by previous implementations in the list as a model.
-4. Rename your JSON test-results file using the two letter abbreviation you chose and a two digit
-   number value representing the Accessibility API as defined above.
-5. Place your newly renamed results files in the accname directory.
-6. Create a pull request with your updated files.
-7. When it is merged the maintainers will update the overall results reports automatically
+* AXDescription
+* AXTitle
+* AXTitleUIElement
 
-If you want to see what your implementation test results reports would look like locally, use
-the [wptreport tool](https://github.com/w3c/wptreport) to build a report with a command line like
-`wptreport -f -m -s "Accessible Name and Description Computation 1.1"`.
+When verifying that user agents on macOS calculated the name correctly, each
+of the above sources was taken into consideration in the order listed above.
+If the AXDescription had no result, the AXTitle was examined. If the AXTitle
+also had no result, the name was taken from the children of the AXTitleUIElement.
