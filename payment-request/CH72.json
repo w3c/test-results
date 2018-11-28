@@ -188,11 +188,11 @@
       "subtests": [
         {
           "name": "PaymentRequest <iframe allowpaymentrequest> in non-active document (same-origin)",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -224,29 +224,8 @@
     },
     {
       "test": "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-same-origin-bc-containers.https.html",
-      "subtests": [
-        {
-          "name": "iframe",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "frame",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "embed",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -385,6 +364,11 @@
           "message": null
         },
         {
+          "name": "languageCode in PaymentAddress",
+          "status": "FAIL",
+          "message": "assert_false: expected false got true"
+        },
+        {
           "name": "supportedMethods must not support sequence<DOMString>",
           "status": "PASS",
           "message": null
@@ -395,549 +379,8 @@
     },
     {
       "test": "/payment-request/idlharness.https.window.html",
-      "subtests": [
-        {
-          "name": "idl_test setup",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: existence and properties of interface object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface object length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface object name",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: existence and properties of interface prototype object's @@unscopables property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: operation show([object Object])",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: operation abort()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: operation canMakePayment()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: attribute id",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: attribute shippingAddress",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: attribute shippingOption",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: attribute shippingType",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: attribute onmerchantvalidation",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onmerchantvalidation\" expected true got false"
-        },
-        {
-          "name": "PaymentRequest interface: attribute onshippingaddresschange",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: attribute onshippingoptionchange",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: attribute onpaymentmethodchange",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onpaymentmethodchange\" expected true got false"
-        },
-        {
-          "name": "PaymentRequest must be primary interface of paymentRequest",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Stringification of paymentRequest",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"show([object Object])\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: calling show([object Object]) on paymentRequest with too few arguments must throw TypeError",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"abort()\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"canMakePayment()\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"id\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingAddress\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingOption\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingType\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"onmerchantvalidation\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"onmerchantvalidation\" not found in prototype chain"
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"onshippingaddresschange\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"onshippingoptionchange\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"onpaymentmethodchange\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"onpaymentmethodchange\" not found in prototype chain"
-        },
-        {
-          "name": "PaymentAddress interface: existence and properties of interface object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface object length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface object name",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: existence and properties of interface prototype object's @@unscopables property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: operation toJSON()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute city",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute country",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute dependentLocality",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute organization",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute phone",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute postalCode",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute recipient",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute region",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute regionCode",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"regionCode\" expected true got false"
-        },
-        {
-          "name": "PaymentAddress interface: attribute sortingCode",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentAddress interface: attribute addressLine",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: existence and properties of interface object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface object length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface object name",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: existence and properties of interface prototype object's @@unscopables property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: operation toJSON()",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: attribute requestId",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: attribute methodName",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: attribute details",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: attribute shippingAddress",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: attribute shippingOption",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: attribute payerName",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: attribute payerEmail",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: attribute payerPhone",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: operation complete(PaymentComplete)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: operation retry(PaymentValidationErrors)",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse interface: attribute onpayerdetailchange",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "MerchantValidationEvent interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-        },
-        {
-          "name": "MerchantValidationEvent interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-        },
-        {
-          "name": "MerchantValidationEvent interface object name",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-        },
-        {
-          "name": "MerchantValidationEvent interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-        },
-        {
-          "name": "MerchantValidationEvent interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-        },
-        {
-          "name": "MerchantValidationEvent interface: existence and properties of interface prototype object's @@unscopables property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-        },
-        {
-          "name": "MerchantValidationEvent interface: attribute methodName",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-        },
-        {
-          "name": "MerchantValidationEvent interface: attribute validationURL",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-        },
-        {
-          "name": "MerchantValidationEvent interface: operation complete([object Object])",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-        },
-        {
-          "name": "MerchantValidationEvent must be primary interface of new MerchantValidationEvent(\"merchantvalidation\")",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-        },
-        {
-          "name": "Stringification of new MerchantValidationEvent(\"merchantvalidation\")",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-        },
-        {
-          "name": "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"methodName\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-        },
-        {
-          "name": "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"validationURL\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-        },
-        {
-          "name": "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"complete([object Object])\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-        },
-        {
-          "name": "MerchantValidationEvent interface: calling complete([object Object]) on new MerchantValidationEvent(\"merchantvalidation\") with too few arguments must throw TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface object name",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's @@unscopables property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface: attribute methodName",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface: attribute methodDetails",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
-        },
-        {
-          "name": "PaymentMethodChangeEvent must be primary interface of new PaymentMethodChangeEvent(\"paymentmethodchange\")",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
-        },
-        {
-          "name": "Stringification of new PaymentMethodChangeEvent(\"paymentmethodchange\")",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodName\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
-        },
-        {
-          "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodDetails\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith([object Object])\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface object length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface object name",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's @@unscopables property",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface: operation updateWith([object Object])",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequestUpdateEvent must be primary interface of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Stringification of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface: new PaymentRequestUpdateEvent(\"paymentrequestupdate\") must inherit property \"updateWith([object Object])\" with the proper type",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentRequestUpdateEvent(\"paymentrequestupdate\") with too few arguments must throw TypeError",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
+      "subtests": [],
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1003,14 +446,14 @@
           "message": null
         },
         {
-          "name": "Test for PaymentRequest.abort() method",
+          "name": "The same request cannot be shown multiple times.",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "message": "assert_unreached: Unexpected promise rejection: No show() or retry() in progress, so nothing to abort Reached unreachable code"
         },
         {
-          "name": "Test for PaymentRequest.abort() method 1",
+          "name": "Aborting a request before it is shown doesn't prevent it from being shown later.",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "message": "assert_unreached: Unexpected promise rejection: No show() or retry() in progress, so nothing to abort Reached unreachable code"
         },
         {
           "name": "Calling abort() multiple times is always a new object.",
@@ -1022,46 +465,53 @@
       "message": null
     },
     {
+      "test": "/payment-request/payment-request-canmakepayment-method-protection.https.html",
+      "subtests": [
+        {
+          "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/payment-request/payment-request-canmakepayment-method.https.html",
       "subtests": [
+        {
+          "name": "If payment method identifier are supported, resolve promise with true.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: undefined Reached unreachable code"
+        },
+        {
+          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: No show() or retry() in progress, so nothing to abort\""
+        },
         {
           "name": "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "If payment method identifier and serialized parts are supported, resolve promise with true.",
-          "status": "PASS",
-          "message": null
+          "name": "All methods are unsupported",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotAllowedError: Not allowed to check whether can make payment\""
         },
         {
-          "name": "If payment method identifier is unknown, resolve promise with false.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Calling canMakePayment() multiple times is always a new object.",
-          "status": "PASS",
-          "message": null
+          "name": "Mix of supported and unsupported methods, at least one method is supported.",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotAllowedError: Not allowed to check whether can make payment\""
         }
       ],
       "status": "ERROR",
-      "message": "Cannot query payment request"
+      "message": "unimplemented"
     },
     {
       "test": "/payment-request/payment-request-constructor-crash.https.html",
@@ -1532,31 +982,31 @@
       "subtests": [
         {
           "name": "Calling show() without being triggered by user interaction throws",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() { throw e }\" threw object \"AbortError: Request cancelled\" that is not a DOMException SecurityError: property \"code\" is equal to 20, expected 18"
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Throws if the promise [[state]] is not 'created'.",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "status": "NOTRUN",
+          "message": null
         },
         {
           "name": "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "status": "NOTRUN",
+          "message": null
         },
         {
           "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "status": "NOTRUN",
+          "message": null
         },
         {
           "name": "Calling show() multiple times is always a new object.",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "status": "NOTRUN",
+          "message": null
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1569,8 +1019,8 @@
         },
         {
           "name": "PaymentResponse has an onpayerdetailchange in the prototype chain",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: expected true got false"
         }
       ],
       "status": "OK",
@@ -1582,17 +1032,17 @@
         {
           "name": "PaymentRequest.show() aborts if the document is not active",
           "status": "FAIL",
-          "message": "assert_throws: Inactive document, so must throw AbortError function \"function() { throw e }\" threw object \"InvalidStateError: Already called show() once\" that is not a DOMException AbortError: property \"code\" is equal to 11, expected 20"
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         },
         {
           "name": "PaymentRequest.show() aborts if the document is active, but not fully active",
           "status": "FAIL",
-          "message": "assert_throws: Active, but not fully active, so must throw AbortError function \"function() { throw e }\" threw object \"InvalidStateError: Already called show() once\" that is not a DOMException AbortError: property \"code\" is equal to 11, expected 20"
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         },
         {
           "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         }
       ],
       "status": "OK",
