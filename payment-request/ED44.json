@@ -352,6 +352,28 @@
       "message": null
     },
     {
+      "test": "/payment-request/constructor_convert_method_data.https.html",
+      "subtests": [
+        {
+          "name": "Smoke test.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Tries to convert data member during Payment Request construction, irrespective of PMI.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.",
+          "status": "FAIL",
+          "message": "assert_throws: PaymentMethodData.data is invalid. function \"() => {\n          const badMethod = Object.assign(\n            {},\n            method,\n            /* This is invalid in both Apple Pay and Basic Card */\n            { data: { supportedNetworks: \"this will throw\" } }\n          );\n          new PaymentRequest([badMethod], details);\n        }\" did not throw"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/payment-request/historical.https.html",
       "subtests": [
         {
@@ -383,6 +405,11 @@
           "name": "paymentRequestId in PaymentResponse",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "languageCode in PaymentAddress",
+          "status": "FAIL",
+          "message": "assert_false: expected false got true"
         },
         {
           "name": "supportedMethods must not support sequence<DOMString>",
@@ -1003,14 +1030,14 @@
           "message": null
         },
         {
-          "name": "Test for PaymentRequest.abort() method",
+          "name": "The same request cannot be shown multiple times.",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "message": "assert_unreached: Unexpected promise rejection: InvalidStateError Reached unreachable code"
         },
         {
-          "name": "Test for PaymentRequest.abort() method 1",
+          "name": "Aborting a request before it is shown doesn't prevent it from being shown later.",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "message": "assert_unreached: Unexpected promise rejection: InvalidStateError Reached unreachable code"
         },
         {
           "name": "Calling abort() multiple times is always a new object.",
@@ -1022,45 +1049,52 @@
       "message": null
     },
     {
+      "test": "/payment-request/payment-request-canmakepayment-method-protection.https.html",
+      "subtests": [
+        {
+          "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
       "test": "/payment-request/payment-request-canmakepayment-method.https.html",
       "subtests": [
         {
-          "name": "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "If payment method identifier and serialized parts are supported, resolve promise with true.",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "If payment method identifier is unknown, resolve promise with false.",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
-          "status": "NOTRUN",
+          "name": "If payment method identifier are supported, resolve promise with true.",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: undefined Reached unreachable code"
         },
         {
           "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "NOTRUN",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError\""
+        },
+        {
+          "name": "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.",
+          "status": "PASS",
           "message": null
         },
         {
-          "name": "Calling canMakePayment() multiple times is always a new object.",
+          "name": "All methods are unsupported",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Mix of supported and unsupported methods, at least one method is supported.",
           "status": "PASS",
           "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1532,31 +1566,31 @@
       "subtests": [
         {
           "name": "Calling show() without being triggered by user interaction throws",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "FAIL",
+          "message": "assert_throws: function \"function () { throw e }\" threw object \"AbortError\" that is not a DOMException SecurityError: property \"code\" is equal to 20, expected 18"
         },
         {
           "name": "Throws if the promise [[state]] is not 'created'.",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         },
         {
           "name": "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         },
         {
           "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         },
         {
           "name": "Calling show() multiple times is always a new object.",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1582,17 +1616,17 @@
         {
           "name": "PaymentRequest.show() aborts if the document is not active",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Permission denied\""
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         },
         {
           "name": "PaymentRequest.show() aborts if the document is active, but not fully active",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"TypeError: Permission denied\""
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         },
         {
           "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: Can't execute code from a freed script\""
+          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
         }
       ],
       "status": "OK",
