@@ -1,0 +1,1290 @@
+{
+  "results": [
+    {
+      "test": "/webauthn/createcredential-badargs-attestation.https.html",
+      "subtests": [
+        {
+          "name": "Bad attestation parameter: attestation is empty object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad attestation parameter: attestation is empty array",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad attestation parameter: attestation is null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad attestation parameter: attestation is \"noneofyourbusiness\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad attestation parameter: attestation is empty string",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webauthn/createcredential-badargs-authnrselection.https.html",
+      "subtests": [
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is empty array",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is null",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is empty string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection attachment is empty string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection attachment is empty object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection attachment is null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection attachment platform",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection residentKey true",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection residentKey is string",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection userVerification empty string",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection userVerification empty object",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection userVerification bad value",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection userVerification null",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection userVerification required",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/webauthn/createcredential-badargs-challenge.https.html",
+      "subtests": [
+        {
+          "name": "Bad challenge: challenge missing",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad challenge: challenge is string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad challenge: challenge is null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad challenge: challenge is empty object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad challenge: challenge is empty Array",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad challenge: challenge is empty ArrayBuffer",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webauthn/createcredential-badargs-rp.https.html",
+      "subtests": [
+        {
+          "name": "Bad rp: rp missing",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rp: rp is string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rp: rp is empty object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rp: id is object",
+          "status": "FAIL",
+          "message": "assert_throws: Expected bad parameters to fail function \"function() { throw e }\" threw object \"SecurityError: The relying party ID '[object Object]' is not a registrable domain suffix of, nor equal to 'https://web-platform.test:8443'.\" (\"SecurityError\") expected object \"TypeError\" (\"TypeError\")"
+        },
+        {
+          "name": "Bad rp: id is null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rp: id is empty String",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rp: id is invalid domain (has space)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rp: id is invalid domain (starts with dash)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rp: id is invalid domain (starts with number)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "rp missing name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rp: name is object",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad rp: name is null",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad rp: name is empty String",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad rp: icon is object",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad rp: icon is null",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Bad rp: icon is empty String",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/webauthn/createcredential-badargs-user.https.html",
+      "subtests": [
+        {
+          "name": "Bad user: user missing",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad user: user is string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad user: user is empty object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad user: id is undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad user: id is object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad user: id is null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad user: id is empty String",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad user: id is empty Array",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad user: id is empty ArrayBuffer",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad user: ArrayBuffer id is too long (65 bytes)",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad user: Int16Array id is too long (66 bytes)",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad user: Int32Array id is too long (68 bytes)",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad user: Float32Array id is too long (68 bytes)",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad user: Float64Array id is too long (72 bytes)",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad user: id is too long (65 bytes)",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "user missing name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad user: name is object",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad user: name is null",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Bad user: name is empty String",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad user: icon is object",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad user: icon is null",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad user: icon is empty String",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad user: displayName is undefined",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad user: displayName is object",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad user: displayName is null",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad user: displayName is empty String",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/webauthn/createcredential-excludecredentials.https.html",
+      "subtests": [
+        {
+          "name": "Bad excludeCredentials: string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad excludeCredentials: empty object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "excludeCredentials missing",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "excludeCredentials empty array",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "exclude existing credential",
+          "status": "FAIL",
+          "message": "assert_throws: expected to fail on excluded credenetial function \"function() { throw e }\" threw object \"InvalidStateError: The user attempted to register an authenticator that contains one of the credentials already registered with the relying party.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 11, expected 0"
+        },
+        {
+          "name": "exclude random (non-existing) credential",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/webauthn/createcredential-extensions.https.html",
+      "subtests": [
+        {
+          "name": "Bad extensions: extensions is string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad extensions: extensions is null",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: extensions is empty Array",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: extensions is empty ArrayBuffer",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: malformatted JSON",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: JavaScript object",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: extension ID too long",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "extensions is a nonsensical JSON string",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "empty appid in create request",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "null appid in create request",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "appid in create request",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/webauthn/createcredential-passing.https.html",
+      "subtests": [
+        {
+          "name": "passing credentials.create() with default arguments",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "passing credentials.create() with rpId (host and port)",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"SecurityError: The relying party ID 'web-platform.test:8443' is not a registrable domain suffix of, nor equal to 'https://web-platform.test:8443'.\""
+        },
+        {
+          "name": "passing credentials.create() with rpId (hostname)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "passing credentials.create() without rp.icon",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "very short user id",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "max length user id",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Uint8Array user id",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Int8Array user id",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Int16Array user id",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Int32Array user id",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Float32Array user id",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "DataView user id",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "passing credentials.create() without user.icon",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Int16Array challenge",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Int32Array challenge",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Float32Array challenge",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Float64Array challenge",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "DataView challenge",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Absurdly large challenge",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "Bad pubKeyCredParams: pubKeyCredParams is empty Array",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "EC256 pubKeyCredParams",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "SelectEC256 pubKeyCredParams from a list",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "passing credentials.create() with no timeout",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection is undefined",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection is empty object",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection default values",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection attachment undefined",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection residentKey undefined",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection residentKey false",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection userVerification undefined",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection userVerification discouraged",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "attestation parameter: attestation is \"none\"",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "attestation parameter: attestation is \"indirect\"",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "attestation parameter: attestation is \"direct\"",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "attestation parameter: attestation is undefined",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "extensions undefined",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "extensions are empty object",
+          "status": "NOTRUN",
+          "message": null
+        },
+        {
+          "name": "extensions are dict of empty strings",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/webauthn/createcredential-pubkeycredparams.https.html",
+      "subtests": [
+        {
+          "name": "Bad pubKeyCredParams: pubKeyCredParams is undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad pubKeyCredParams: pubKeyCredParams is string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad pubKeyCredParams: pubKeyCredParams is null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad pubKeyCredParams: first param has bad type (\"something-else\")",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad pubKeyCredParams: first param has bad type (\"\")",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad pubKeyCredParams: first param has bad type (null)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad pubKeyCredParams: first param has bad type (empty object)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad pubKeyCredParams: first param has bad alg (42)",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        },
+        {
+          "name": "Bad pubKeyCredParams: first param has bad alg (0)",
+          "status": "NOTRUN",
+          "message": null
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/webauthn/createcredential-timeout.https.html",
+      "subtests": [
+        {
+          "name": "ensure create credential times out",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webauthn/getcredential-badargs-rpid.https.html",
+      "subtests": [
+        {
+          "name": "Bad rpId: empty string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rpId: null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rpId: invalid domain (has space)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rpId: invalid domain (starts with dash)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad rpId: invalid domain (starts with number)",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webauthn/getcredential-badargs-userverification.https.html",
+      "subtests": [
+        {
+          "name": "Bad userVerification: empty string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad userVerification: empty object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad userVerification: bad value",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad userVerification: null",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad userVerification: \"required\"",
+          "status": "TIMEOUT",
+          "message": "Test timed out"
+        }
+      ],
+      "status": "TIMEOUT",
+      "message": null
+    },
+    {
+      "test": "/webauthn/getcredential-extensions.https.html",
+      "subtests": [
+        {
+          "name": "Bad extensions: extensions is string",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Bad extensions: extensions is null",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: extensions is empty Array",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: extensions is empty ArrayBuffer",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: malformatted JSON",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: JavaScript object",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "Bad extensions: extension ID too long",
+          "status": "FAIL",
+          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
+        },
+        {
+          "name": "extensions is a nonsensical JSON string",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webauthn/getcredential-passing.https.html",
+      "subtests": [
+        {
+          "name": "passing credentials.get() with default args",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "passing credentials.create() with no timeout",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "rpId undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "passing credentials.get() with rpId (host and port)",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"SecurityError: The relying party ID 'web-platform.test:8443' is not a registrable domain suffix of, nor equal to 'https://web-platform.test:8443'.\""
+        },
+        {
+          "name": "passing credentials.get() with rpId (hostname)",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "no credential specified",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"Error: Attempting list without defining credential to test\""
+        },
+        {
+          "name": "authenticatorSelection userVerification undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection userVerification preferred",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "authenticatorSelection userVerification discouraged",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "extensions undefined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "extensions are empty object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "extensions are dict of empty strings",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webauthn/getcredential-timeout.https.html",
+      "subtests": [
+        {
+          "name": "ensure create credential times out",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webauthn/idlharness.https.window.html",
+      "subtests": [
+        {
+          "name": "idlharness",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "idl_test setup",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary CredentialCreationOptions: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary CredentialRequestOptions: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial interface PublicKeyCredential: original interface defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientInputs: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientOutputs: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientInputs[2]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientOutputs[2]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientInputs[3]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientOutputs[3]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientInputs[4]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientOutputs[4]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientInputs[5]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientOutputs[5]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientInputs[6]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientOutputs[6]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientInputs[7]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientOutputs[7]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientInputs[8]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Partial dictionary AuthenticationExtensionsClientOutputs[8]: original dictionary defined",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: attribute rawId",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: attribute response",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: operation getClientExtensionResults()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: operation isUserVerifyingPlatformAuthenticatorAvailable()",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential must be primary interface of cred",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of cred",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: cred must inherit property \"rawId\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: cred must inherit property \"response\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: cred must inherit property \"getClientExtensionResults()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PublicKeyCredential interface: cred must inherit property \"isUserVerifyingPlatformAuthenticatorAvailable()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorResponse interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorResponse interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorResponse interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorResponse interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorResponse interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorResponse interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorResponse interface: attribute clientDataJSON",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAttestationResponse interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAttestationResponse interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAttestationResponse interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAttestationResponse interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAttestationResponse interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAttestationResponse interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAttestationResponse interface: attribute attestationObject",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: existence and properties of interface object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface object length",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface object name",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: existence and properties of interface prototype object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: existence and properties of interface prototype object's \"constructor\" property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: existence and properties of interface prototype object's @@unscopables property",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: attribute authenticatorData",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: attribute signature",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: attribute userHandle",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse must be primary interface of assertionResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Stringification of assertionResponse",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: assertionResponse must inherit property \"authenticatorData\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: assertionResponse must inherit property \"signature\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorAssertionResponse interface: assertionResponse must inherit property \"userHandle\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "AuthenticatorResponse interface: assertionResponse must inherit property \"clientDataJSON\" with the proper type",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webauthn/securecontext.http.html",
+      "subtests": [
+        {
+          "name": "no navigator.credentials.create in non-secure context",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/webauthn/securecontext.https.html",
+      "subtests": [
+        {
+          "name": "navigator.credentials.create exists in secure context",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    }
+  ]
+}
