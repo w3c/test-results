@@ -36,16 +36,6 @@
       "test": "/webauthn/createcredential-badargs-authnrselection.https.html",
       "subtests": [
         {
-          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is empty array",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is null",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
           "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is empty string",
           "status": "PASS",
           "message": null
@@ -77,11 +67,6 @@
         },
         {
           "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection residentKey true",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection residentKey is string",
           "status": "NOTRUN",
           "message": null
         },
@@ -165,11 +150,6 @@
           "message": null
         },
         {
-          "name": "Bad rp: id is object",
-          "status": "FAIL",
-          "message": "assert_throws: Expected bad parameters to fail function \"function () { throw e }\" threw object \"SecurityError: The origin of the document is not a registrable domain suffix of the provided RP ID.\" (\"SecurityError\") expected object \"TypeError\" (\"TypeError\")"
-        },
-        {
           "name": "Bad rp: id is null",
           "status": "PASS",
           "message": null
@@ -198,21 +178,6 @@
           "name": "rp missing name",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "Bad rp: name is object",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad rp: name is null",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad rp: name is empty String",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
         },
         {
           "name": "Bad rp: icon is object",
@@ -277,11 +242,6 @@
           "message": null
         },
         {
-          "name": "Bad user: id is empty ArrayBuffer",
-          "status": "TIMEOUT",
-          "message": "Test time out"
-        },
-        {
           "name": "Bad user: ArrayBuffer id is too long (65 bytes)",
           "status": "NOTRUN",
           "message": null
@@ -317,21 +277,6 @@
           "message": null
         },
         {
-          "name": "Bad user: name is object",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Bad user: name is null",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Bad user: name is empty String",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
           "name": "Bad user: icon is object",
           "status": "NOTRUN",
           "message": null
@@ -348,16 +293,6 @@
         },
         {
           "name": "Bad user: displayName is undefined",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Bad user: displayName is object",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Bad user: displayName is null",
           "status": "NOTRUN",
           "message": null
         },
@@ -395,8 +330,8 @@
         },
         {
           "name": "exclude existing credential",
-          "status": "TIMEOUT",
-          "message": "Test time out"
+          "status": "?",
+          "message": null
         },
         {
           "name": "exclude random (non-existing) credential",
@@ -412,31 +347,6 @@
       "subtests": [
         {
           "name": "Bad extensions: extensions is string",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: extensions is null",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: extensions is empty Array",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: extensions is empty ArrayBuffer",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: malformatted JSON",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: JavaScript object",
           "status": "FAIL",
           "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
         },
@@ -476,11 +386,6 @@
           "name": "passing credentials.create() with default arguments",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "passing credentials.create() with rpId (host and port)",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"SecurityError: The origin of the document is not a registrable domain suffix of the provided RP ID.\" promiseReactionJob@[native code]"
         },
         {
           "name": "passing credentials.create() with rpId (hostname)",
@@ -703,16 +608,6 @@
           "name": "Bad pubKeyCredParams: first param has bad type (empty object)",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "Bad pubKeyCredParams: first param has bad alg (42)",
-          "status": "FAIL",
-          "message": "assert_throws: Expected bad parameters to fail function \"function () { throw e }\" threw object \"NotAllowedError: A request is pending.\" that is not a DOMException NotSupportedError: property \"code\" is equal to 0, expected 9 promiseReactionJob@[native code]"
-        },
-        {
-          "name": "Bad pubKeyCredParams: first param has bad alg (0)",
-          "status": "FAIL",
-          "message": "assert_throws: Expected bad parameters to fail function \"function () { throw e }\" threw object \"NotAllowedError: A request is pending.\" that is not a DOMException NotSupportedError: property \"code\" is equal to 0, expected 9 promiseReactionJob@[native code]"
         }
       ],
       "status": "OK",
@@ -868,11 +763,6 @@
           "name": "passing credentials.get() with rpId (hostname)",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "no credential specified",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: Attempting list without defining credential to test\" promiseReactionJob@[native code]"
         },
         {
           "name": "authenticatorSelection userVerification undefined",

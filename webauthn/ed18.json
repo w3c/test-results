@@ -36,16 +36,6 @@
       "test": "/webauthn/createcredential-badargs-authnrselection.https.html",
       "subtests": [
         {
-          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is empty array",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is null",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
           "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection is empty string",
           "status": "FAIL",
           "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
@@ -77,11 +67,6 @@
         },
         {
           "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection residentKey true",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad AuthenticatorSelectionCriteria: authenticatorSelection residentKey is string",
           "status": "FAIL",
           "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
         },
@@ -165,11 +150,6 @@
           "message": null
         },
         {
-          "name": "Bad rp: id is object",
-          "status": "FAIL",
-          "message": "assert_throws: Expected bad parameters to fail function \"function() { throw e }\" threw object \"SecurityError: The relying party ID '[object Object]' is not a registrable domain suffix of, nor equal to 'https://web-platform.test:8443'.\" (\"SecurityError\") expected object \"TypeError\" (\"TypeError\")"
-        },
-        {
           "name": "Bad rp: id is null",
           "status": "PASS",
           "message": null
@@ -196,21 +176,6 @@
         },
         {
           "name": "rp missing name",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Bad rp: name is object",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad rp: name is null",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad rp: name is empty String",
           "status": "PASS",
           "message": null
         },
@@ -267,17 +232,12 @@
           "message": null
         },
         {
-          "name": "Bad user: id is empty String",
-          "status": "PASS",
-          "message": null
-        },
-        {
           "name": "Bad user: id is empty Array",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Bad user: id is empty ArrayBuffer",
+          "name": "Bad user: id is empty String",
           "status": "PASS",
           "message": null
         },
@@ -317,21 +277,6 @@
           "message": null
         },
         {
-          "name": "Bad user: name is object",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad user: name is null",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad user: name is empty String",
-          "status": "PASS",
-          "message": null
-        },
-        {
           "name": "Bad user: icon is object",
           "status": "FAIL",
           "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
@@ -350,16 +295,6 @@
           "name": "Bad user: displayName is undefined",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "Bad user: displayName is object",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad user: displayName is null",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
         },
         {
           "name": "Bad user: displayName is empty String",
@@ -395,8 +330,8 @@
         },
         {
           "name": "exclude existing credential",
-          "status": "FAIL",
-          "message": "assert_throws: expected to fail on excluded credenetial function \"function() { throw e }\" threw object \"InvalidStateError: The user attempted to register an authenticator that contains one of the credentials already registered with the relying party.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 11, expected 0"
+          "status": "?",
+          "message": null
         },
         {
           "name": "exclude random (non-existing) credential",
@@ -412,31 +347,6 @@
       "subtests": [
         {
           "name": "Bad extensions: extensions is string",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: extensions is null",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: extensions is empty Array",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: extensions is empty ArrayBuffer",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: malformatted JSON",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
-        },
-        {
-          "name": "Bad extensions: JavaScript object",
           "status": "FAIL",
           "message": "assert_unreached: Should have rejected: Expected bad parameters to fail Reached unreachable code"
         },
@@ -476,11 +386,6 @@
           "name": "passing credentials.create() with default arguments",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "passing credentials.create() with rpId (host and port)",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"SecurityError\""
         },
         {
           "name": "passing credentials.create() with rpId (hostname)",
@@ -703,16 +608,6 @@
           "name": "Bad pubKeyCredParams: first param has bad type (empty object)",
           "status": "FAIL",
           "message": "assert_throws: Expected bad parameters to fail function \"function () { throw e }\" threw object \"NotSupportedError\" (\"NotSupportedError\") expected object \"TypeError\" (\"TypeError\")"
-        },
-        {
-          "name": "Bad pubKeyCredParams: first param has bad alg (42)",
-          "status": "FAIL",
-          "message": "assert_throws: Expected bad parameters to fail function \"function () { throw e }\" threw object \"NotAllowedError\" that is not a DOMException NotSupportedError: property \"code\" is equal to 0, expected 9"
-        },
-        {
-          "name": "Bad pubKeyCredParams: first param has bad alg (0)",
-          "status": "FAIL",
-          "message": "assert_throws: Expected bad parameters to fail function \"function () { throw e }\" threw object \"NotAllowedError\" that is not a DOMException NotSupportedError: property \"code\" is equal to 0, expected 9"
         }
       ],
       "status": "OK",
@@ -868,11 +763,6 @@
           "name": "passing credentials.get() with rpId (hostname)",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "no credential specified",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: Attempting list without defining credential to test\""
         },
         {
           "name": "authenticatorSelection userVerification undefined",
