@@ -1,599 +1,33 @@
 {
   "ua": [
-    "CH72",
+    "CH75",
     "ED44",
     "FF65",
     "SF12",
     "SI74"
   ],
   "results": {
-    "/payment-request/MerchantValidationEvent/complete-method.https.html": {
+    "/payment-request/payment-request-hasenrolledinstrument-method-protection.tentative.https.html": {
       "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK"
+        "CH75": "OK"
       },
       "totals": {
-        "OK": 4
+        "OK": 1
       },
       "subtests": {
-        "If event's isTrusted attribute is false, then then throw an InvalidStateError DOMException.": {
+        "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
           "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
+            "CH75": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/MerchantValidationEvent/constructor.http.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK"
-      },
-      "totals": {
-        "OK": 4
-      },
-      "subtests": {
-        "MerchantValidationEvent constructor must not be exposed in insecure context": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "PASS": 4
-          }
-        }
-      }
-    },
-    "/payment-request/MerchantValidationEvent/constructor.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK"
-      },
-      "totals": {
-        "OK": 4
-      },
-      "subtests": {
-        "MerchantValidationEvent can be constructed in secure-context.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "MerchantValidationEvent can be constructed with an EventInitDict, even if not trusted.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "MerchantValidationEvent can be dispatched, even if not trusted.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "Must have a validationURL IDL attribute, which is initialized with to the validationURL dictionary value.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "Must throw TypeError if initialized with an invalid URL.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "Relative validationURLs use the document as the base.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "When no methodName is passed, methodName attribute defaults to the empty string": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "MerchantValidationEvent can be constructed with valid PMIs": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "MerchantValidationEvent can't be constructed with invalid PMIs": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/PaymentMethodChangeEvent/methodDetails-attribute.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 3,
-            "PASS": 2
-          }
-        },
-        "The methodDetails member defaults to null": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/PaymentMethodChangeEvent/methodName-attribute.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 3,
-            "PASS": 2
-          }
-        },
-        "When no dictionary is passed, the methodName member defaults to the empty string": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/PaymentRequestUpdateEvent/constructor.http.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "PaymentRequestUpdateEvent constructor must not be exposed in insecure context": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/PaymentRequestUpdateEvent/constructor.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "PaymentRequestUpdateEvent can be constructed in secure-context": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "PaymentRequestUpdateEvent can be dispatched, even if not trusted": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/PaymentRequestUpdateEvent/updatewith-method.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Let target be the request which is dispatching the event.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\"": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        },
-        "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\"": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/active-document-cross-origin.https.sub.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "PaymentRequest <iframe allowpaymentrequest> in non-active document (cross-origin)": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/active-document-same-origin.https.html": {
-      "byUA": {
-        "CH72": "TIMEOUT",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "TIMEOUT": 1,
-        "OK": 4
-      },
-      "subtests": {
-        "PaymentRequest <iframe allowpaymentrequest> in non-active document (same-origin)": {
-          "byUA": {
-            "CH72": "TIMEOUT",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "FAIL": 1,
-            "PASS": 3
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-cross-origin-bc-containers.https.html": {
-      "byUA": {
-        "CH72": "TIMEOUT",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "TIMEOUT": 1,
-        "OK": 4
-      },
-      "subtests": {
-        "iframe": {
-          "byUA": {
-            "CH72": "TIMEOUT",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "FAIL",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "PASS": 3,
-            "FAIL": 1
-          }
-        },
-        "frame": {
-          "byUA": {
-            "CH72": "TIMEOUT",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "PASS": 4
-          }
-        },
-        "object": {
-          "byUA": {
-            "CH72": "TIMEOUT",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "FAIL": 1,
-            "PASS": 3
-          }
-        },
-        "embed": {
-          "byUA": {
-            "CH72": "TIMEOUT",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "FAIL": 1,
-            "PASS": 3
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-same-origin-bc-containers.https.html": {
-      "byUA": {
-        "CH72": "TIMEOUT",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "TIMEOUT": 1,
-        "OK": 4
-      },
-      "subtests": {
-        "iframe": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "frame": {
-          "byUA": {
-            "CH72": "TIMEOUT",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "PASS": 3,
-            "FAIL": 1
-          }
-        },
-        "object": {
-          "byUA": {
-            "CH72": "TIMEOUT",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "embed": {
-          "byUA": {
-            "CH72": "TIMEOUT",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 1
           }
         }
       }
     },
     "/payment-request/allowpaymentrequest/basic.https.html": {
       "byUA": {
-        "CH72": "OK",
+        "CH75": "OK",
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
@@ -605,7 +39,7 @@
       "subtests": {
         "PaymentRequest <iframe allowpaymentrequest> basic": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "FAIL",
@@ -618,9 +52,9 @@
         }
       }
     },
-    "/payment-request/allowpaymentrequest/no-attribute-cross-origin-bc-containers.https.html": {
+    "/payment-request/payment-request-ctor-pmi-handling.https.html": {
       "byUA": {
-        "CH72": "OK",
+        "CH75": "OK",
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
@@ -630,9 +64,9 @@
         "OK": 5
       },
       "subtests": {
-        "iframe": {
+        "Must support valid standard URL PMIs": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -642,9 +76,9 @@
             "PASS": 5
           }
         },
-        "frame": {
+        "Must not throw on syntactically valid standardized payment method identifiers, even if they are not supported": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -654,333 +88,200 @@
             "PASS": 5
           }
         },
-        "object": {
+        "Must throw on syntactically invalid standardized payment method identifiers": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
-            "SI74": "PASS"
+            "SI74": "FAIL"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 3,
+            "FAIL": 2
           }
         },
-        "embed": {
+        "Constructor MUST throw if given an invalid URL-based payment method identifier": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
-            "SI74": "PASS"
+            "SI74": "FAIL"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
     },
-    "/payment-request/allowpaymentrequest/no-attribute-same-origin-bc-containers.https.html": {
+    "/payment-request/MerchantValidationEvent/constructor.http.html": {
       "byUA": {
-        "CH72": "TIMEOUT",
+        "CH75": "OK",
         "ED44": "OK",
         "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
+        "SF12": "OK"
       },
       "totals": {
-        "TIMEOUT": 1,
         "OK": 4
       },
       "subtests": {
-        "/payment-request/allowpaymentrequest/no-attribute-same-origin-bc-containers.https.html": {
+        "MerchantValidationEvent constructor must not be exposed in insecure context": {
           "byUA": {
-            "CH72": "TIMEOUT"
-          },
-          "totals": {
-            "TIMEOUT": 1
-          }
-        },
-        "iframe": {
-          "byUA": {
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
+            "SF12": "PASS"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 1
-          }
-        },
-        "frame": {
-          "byUA": {
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 1
-          }
-        },
-        "object": {
-          "byUA": {
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "embed": {
-          "byUA": {
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 4
           }
         }
       }
     },
-    "/payment-request/allowpaymentrequest/removing-allowpaymentrequest.https.sub.html": {
+    "/payment-request/payment-request-canmakepayment-method.https.html": {
       "byUA": {
-        "CH72": "OK",
+        "CH75": "OK",
         "ED44": "OK",
         "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
+        "SF12": "OK"
       },
       "totals": {
-        "OK": 5
+        "OK": 4
       },
       "subtests": {
-        "PaymentRequest removing allowpaymentrequest after load and then navigating": {
+        "If payment method identifier are supported, resolve promise with true.": {
           "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "FAIL",
-            "SF12": "FAIL",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 5
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/setting-allowpaymentrequest-timing.https.sub.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "PaymentRequest setting allowpaymentrequest after document creation, before response": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "FAIL",
-            "SF12": "FAIL",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 5
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/setting-allowpaymentrequest.https.sub.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "PaymentRequest setting allowpaymentrequest after load and then navigating": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "FAIL",
-            "SF12": "FAIL",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 5
-          }
-        }
-      }
-    },
-    "/payment-request/constructor_convert_method_data.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK"
-      },
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Smoke test.": {
-          "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS"
           },
           "totals": {
             "PASS": 2
           }
         },
-        "Tries to convert data member during Payment Request construction, irrespective of PMI.": {
+        "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "All methods are unsupported": {
+          "byUA": {
+            "CH75": "PASS",
             "ED44": "PASS"
           },
           "totals": {
             "PASS": 2
           }
         },
-        "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.": {
+        "Mix of supported and unsupported methods, at least one method is supported.": {
           "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL"
+            "CH75": "PASS",
+            "ED44": "PASS"
           },
           "totals": {
-            "FAIL": 2
+            "PASS": 2
+          }
+        },
+        "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "FAIL",
+            "SF12": "FAIL"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 3
+          }
+        },
+        "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "FAIL",
+            "SF12": "FAIL"
+          },
+          "totals": {
+            "FAIL": 4
+          }
+        },
+        "If payment method identifier and serialized parts are supported, resolve promise with true.": {
+          "byUA": {
+            "FF65": "PASS",
+            "SF12": "FAIL"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        },
+        "If payment method identifier is unknown, resolve promise with false.": {
+          "byUA": {
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
+          "byUA": {
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Calling canMakePayment() multiple times is always a new object.": {
+          "byUA": {
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 2
           }
         }
       }
     },
-    "/payment-request/historical.https.html": {
+    "/payment-request/allowpaymentrequest/active-document-cross-origin.https.sub.html": {
       "byUA": {
-        "CH72": "OK",
-        "ED44": "ERROR",
+        "CH75": "OK",
+        "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
         "SI74": "OK"
       },
       "totals": {
-        "OK": 4,
-        "ERROR": 1
+        "OK": 5
       },
       "subtests": {
-        "paymentRequestID in PaymentRequest": {
+        "PaymentRequest <iframe allowpaymentrequest> in non-active document (cross-origin)": {
           "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "paymentRequestID in PaymentResponse": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "careOf in PaymentAddress": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "totalAmount in PaymentResponse": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "paymentRequestId in PaymentRequest": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "paymentRequestId in PaymentResponse": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "languageCode in PaymentAddress": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL"
-          },
-          "totals": {
-            "FAIL": 2
-          }
-        },
-        "supportedMethods must not support sequence<DOMString>": {
-          "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
-            "SI74": "FAIL"
+            "SI74": "PASS"
           },
           "totals": {
-            "PASS": 3,
-            "FAIL": 2
+            "PASS": 4,
+            "FAIL": 1
           }
         }
       }
     },
     "/payment-request/idlharness.https.window.html": {
       "byUA": {
-        "CH72": "OK",
+        "CH75": "OK",
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
@@ -992,7 +293,7 @@
       "subtests": {
         "idl_test setup": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS"
@@ -1003,7 +304,7 @@
         },
         "PaymentRequest interface: existence and properties of interface object": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1016,7 +317,7 @@
         },
         "PaymentRequest interface object length": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1028,7 +329,7 @@
         },
         "PaymentRequest interface object name": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1040,7 +341,7 @@
         },
         "PaymentRequest interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1052,7 +353,7 @@
         },
         "PaymentRequest interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1064,7 +365,7 @@
         },
         "PaymentRequest interface: existence and properties of interface prototype object's @@unscopables property": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1076,7 +377,7 @@
         },
         "PaymentRequest interface: operation show([object Object])": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1088,7 +389,7 @@
         },
         "PaymentRequest interface: operation abort()": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1100,7 +401,7 @@
         },
         "PaymentRequest interface: operation canMakePayment()": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1112,7 +413,7 @@
         },
         "PaymentRequest interface: attribute id": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1125,7 +426,7 @@
         },
         "PaymentRequest interface: attribute shippingAddress": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1138,7 +439,7 @@
         },
         "PaymentRequest interface: attribute shippingOption": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1151,7 +452,7 @@
         },
         "PaymentRequest interface: attribute shippingType": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1164,7 +465,7 @@
         },
         "PaymentRequest interface: attribute onmerchantvalidation": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "FAIL",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
@@ -1176,7 +477,7 @@
         },
         "PaymentRequest interface: attribute onshippingaddresschange": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1189,7 +490,7 @@
         },
         "PaymentRequest interface: attribute onshippingoptionchange": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1202,20 +503,20 @@
         },
         "PaymentRequest interface: attribute onpaymentmethodchange": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentRequest must be primary interface of paymentRequest": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1227,7 +528,7 @@
         },
         "Stringification of paymentRequest": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1239,7 +540,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"show([object Object])\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1251,7 +552,7 @@
         },
         "PaymentRequest interface: calling show([object Object]) on paymentRequest with too few arguments must throw TypeError": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1263,7 +564,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"abort()\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1275,7 +576,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"canMakePayment()\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1287,7 +588,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"id\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1299,7 +600,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"shippingAddress\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1311,7 +612,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"shippingOption\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1323,7 +624,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"shippingType\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1335,7 +636,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onmerchantvalidation\" with the proper type": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "FAIL",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
@@ -1347,7 +648,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onshippingaddresschange\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1359,7 +660,7 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onshippingoptionchange\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1371,20 +672,20 @@
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onpaymentmethodchange\" with the proper type": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentAddress interface: existence and properties of interface object": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1396,7 +697,7 @@
         },
         "PaymentAddress interface object length": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1408,7 +709,7 @@
         },
         "PaymentAddress interface object name": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1420,7 +721,7 @@
         },
         "PaymentAddress interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1432,7 +733,7 @@
         },
         "PaymentAddress interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1444,7 +745,7 @@
         },
         "PaymentAddress interface: existence and properties of interface prototype object's @@unscopables property": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1456,7 +757,7 @@
         },
         "PaymentAddress interface: operation toJSON()": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1468,7 +769,7 @@
         },
         "PaymentAddress interface: attribute city": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1481,7 +782,7 @@
         },
         "PaymentAddress interface: attribute country": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1494,7 +795,7 @@
         },
         "PaymentAddress interface: attribute dependentLocality": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1507,7 +808,7 @@
         },
         "PaymentAddress interface: attribute organization": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1520,7 +821,7 @@
         },
         "PaymentAddress interface: attribute phone": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1533,7 +834,7 @@
         },
         "PaymentAddress interface: attribute postalCode": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1546,7 +847,7 @@
         },
         "PaymentAddress interface: attribute recipient": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1559,7 +860,7 @@
         },
         "PaymentAddress interface: attribute region": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1570,22 +871,9 @@
             "FAIL": 1
           }
         },
-        "PaymentAddress interface: attribute regionCode": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "FAIL",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 4,
-            "PASS": 1
-          }
-        },
         "PaymentAddress interface: attribute sortingCode": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1598,7 +886,7 @@
         },
         "PaymentAddress interface: attribute addressLine": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1611,7 +899,7 @@
         },
         "PaymentResponse interface: existence and properties of interface object": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1624,7 +912,7 @@
         },
         "PaymentResponse interface object length": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1636,7 +924,7 @@
         },
         "PaymentResponse interface object name": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1648,7 +936,7 @@
         },
         "PaymentResponse interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1661,7 +949,7 @@
         },
         "PaymentResponse interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1673,7 +961,7 @@
         },
         "PaymentResponse interface: existence and properties of interface prototype object's @@unscopables property": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1685,7 +973,7 @@
         },
         "PaymentResponse interface: operation toJSON()": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1697,7 +985,7 @@
         },
         "PaymentResponse interface: attribute requestId": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1710,7 +998,7 @@
         },
         "PaymentResponse interface: attribute methodName": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1723,7 +1011,7 @@
         },
         "PaymentResponse interface: attribute details": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1736,7 +1024,7 @@
         },
         "PaymentResponse interface: attribute shippingAddress": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1749,7 +1037,7 @@
         },
         "PaymentResponse interface: attribute shippingOption": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1762,7 +1050,7 @@
         },
         "PaymentResponse interface: attribute payerName": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1775,7 +1063,7 @@
         },
         "PaymentResponse interface: attribute payerEmail": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1788,7 +1076,7 @@
         },
         "PaymentResponse interface: attribute payerPhone": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1801,7 +1089,7 @@
         },
         "PaymentResponse interface: operation complete(PaymentComplete)": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -1813,395 +1101,395 @@
         },
         "PaymentResponse interface: operation retry(PaymentValidationErrors)": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "FAIL",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "PASS": 2,
+            "FAIL": 3
           }
         },
         "PaymentResponse interface: attribute onpayerdetailchange": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: existence and properties of interface object": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface object length": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface object name": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: existence and properties of interface prototype object's @@unscopables property": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: attribute methodName": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: attribute validationURL": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: operation complete([object Object])": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent must be primary interface of new MerchantValidationEvent(\"merchantvalidation\")": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "Stringification of new MerchantValidationEvent(\"merchantvalidation\")": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"methodName\" with the proper type": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"validationURL\" with the proper type": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"complete([object Object])\" with the proper type": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "MerchantValidationEvent interface: calling complete([object Object]) on new MerchantValidationEvent(\"merchantvalidation\") with too few arguments must throw TypeError": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface object": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface object length": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface object name": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's @@unscopables property": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: attribute methodName": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: attribute methodDetails": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent must be primary interface of new PaymentMethodChangeEvent(\"paymentmethodchange\")": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "Stringification of new PaymentMethodChangeEvent(\"paymentmethodchange\")": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodName\" with the proper type": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodDetails\" with the proper type": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith([object Object])\" with the proper type": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
             "SI74": "FAIL"
           },
           "totals": {
-            "FAIL": 3,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 2
           }
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface object": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2214,7 +1502,7 @@
         },
         "PaymentRequestUpdateEvent interface object length": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2226,7 +1514,7 @@
         },
         "PaymentRequestUpdateEvent interface object name": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2238,7 +1526,7 @@
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2250,7 +1538,7 @@
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2262,7 +1550,7 @@
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's @@unscopables property": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2274,7 +1562,7 @@
         },
         "PaymentRequestUpdateEvent interface: operation updateWith([object Object])": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2286,7 +1574,7 @@
         },
         "PaymentRequestUpdateEvent must be primary interface of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2298,7 +1586,7 @@
         },
         "Stringification of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2310,7 +1598,7 @@
         },
         "PaymentRequestUpdateEvent interface: new PaymentRequestUpdateEvent(\"paymentrequestupdate\") must inherit property \"updateWith([object Object])\" with the proper type": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2322,7 +1610,7 @@
         },
         "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentRequestUpdateEvent(\"paymentrequestupdate\") with too few arguments must throw TypeError": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2330,6 +1618,18 @@
           },
           "totals": {
             "PASS": 5
+          }
+        },
+        "PaymentAddress interface: attribute regionCode": {
+          "byUA": {
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "FAIL",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "FAIL": 3,
+            "PASS": 1
           }
         },
         "Setup for Payment Request API IDL tests.": {
@@ -2638,9 +1938,326 @@
         }
       }
     },
-    "/payment-request/onmerchantvalidation-attribute.https.html": {
+    "/payment-request/payment-request-shippingType-attribute.https.html": {
       "byUA": {
-        "CH72": "OK",
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Must have a shippingType IDL attribute": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "If options.requestShipping is false, then request.shippingType attribute is null.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "If options.requestShipping is true, request.shippingType will be options.shippingType.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/constructor_convert_method_data.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK"
+      },
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Smoke test.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Tries to convert data member during Payment Request construction, irrespective of PMI.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS"
+          },
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-shippingOption-attribute.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Must have a .shippingOption IDL attribute.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        ".shippingOption attribute must default to null.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If there is a single shipping option, but selected is false, then .shippingOption must be null.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Given multiple shipping options, it must use the selected shipping option for .shippingOption value.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/rejects_if_not_active_manual.https.html": {
+      "byUA": {
+        "CH75": "TIMEOUT"
+      },
+      "totals": {
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "/payment-request/rejects_if_not_active_manual.https.html": {
+          "byUA": {
+            "CH75": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-show-method.https.html": {
+      "byUA": {
+        "CH75": "ERROR",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "ERROR": 1,
+        "OK": 4
+      },
+      "subtests": {
+        "Calling show() without being triggered by user interaction throws": {
+          "byUA": {
+            "CH75": "TIMEOUT",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "TIMEOUT": 1,
+            "FAIL": 2,
+            "PASS": 2
+          }
+        },
+        "Throws if the promise [[state]] is not 'created'.": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "FAIL",
+            "SF12": "FAIL",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "FAIL": 5
+          }
+        },
+        "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "FAIL",
+            "SF12": "FAIL",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "FAIL": 5
+          }
+        },
+        "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "FAIL",
+            "SF12": "FAIL",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 4
+          }
+        },
+        "Calling show() multiple times always returns a new promise.": {
+          "byUA": {
+            "CH75": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        },
+        "Calling show() multiple times is always a new object.": {
+          "byUA": {
+            "ED44": "FAIL",
+            "FF65": "FAIL",
+            "SF12": "FAIL"
+          },
+          "totals": {
+            "FAIL": 3
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-id-attribute.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/payment-response/onpayerdetailchange-attribute.https.html": {
+      "byUA": {
+        "CH75": "OK",
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK"
@@ -2649,59 +2266,554 @@
         "OK": 4
       },
       "subtests": {
-        "Must have a onmerchantvalidation IDL attribute": {
+        "PaymentResponse inherits from EventTarget": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
-        "onmerchantvalidation attribute is a generic handler for \"merchantvalidation\"": {
+        "PaymentResponse has an onpayerdetailchange in the prototype chain": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/MerchantValidationEvent/constructor.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK"
+      },
+      "totals": {
+        "OK": 4
+      },
+      "subtests": {
+        "MerchantValidationEvent can be constructed in secure-context.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
           }
         },
-        "onmerchantvalidation attribute is a handler for MerchantValidationEvent": {
+        "MerchantValidationEvent can be constructed with an EventInitDict, even if not trusted.": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
-        "onmerchantvalidation attribute and listeners both work": {
+        "MerchantValidationEvent can be dispatched, even if not trusted.": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "Must have a validationURL IDL attribute, which is initialized with to the validationURL dictionary value.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "Must throw TypeError if initialized with an invalid URL.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "Relative validationURLs use the document as the base.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "When no methodName is passed, methodName attribute defaults to the empty string": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "MerchantValidationEvent can be constructed with valid PMIs": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        },
+        "MerchantValidationEvent can't be constructed with invalid PMIs": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/PaymentMethodChangeEvent/methodName-attribute.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "When no dictionary is passed, the methodName member defaults to the empty string": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/allowpaymentrequest/no-attribute-same-origin-bc-containers.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "iframe": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "frame": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "object": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "embed": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-canmakepayment-method-protection.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "TIMEOUT"
+      },
+      "totals": {
+        "OK": 1,
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "TIMEOUT"
+          },
+          "totals": {
+            "PASS": 1,
+            "TIMEOUT": 1
+          }
+        }
+      }
+    },
+    "/payment-request/PaymentRequestUpdateEvent/constructor.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "PaymentRequestUpdateEvent can be constructed in secure-context": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "PaymentRequestUpdateEvent can be dispatched, even if not trusted": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/allowpaymentrequest/no-attribute-cross-origin-bc-containers.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "iframe": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "frame": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "object": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "embed": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-ctor-currency-code-checks.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Check and canonicalize valid details.total.amount": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "Check and canonicalize invalid details.total.amount and rethrow any exceptions.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "Check and canonicalize valid details.displayItems amount": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "Check and canonicalize invalid details.displayItems amount and rethrow RangeError.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "Check and canonicalize valid details.shippingOptions amount.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "Check and canonicalize valid modifiers[n].total amount.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "Check and canonicalize valid modifiers[n].additionaDisplayItem amount.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
           }
         }
       }
     },
     "/payment-request/onpaymentmenthodchange-attribute.https.html": {
       "byUA": {
-        "CH72": "OK",
+        "CH75": "OK",
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
@@ -2714,50 +2826,50 @@
       "subtests": {
         "Must have a onpaymentmethodchange IDL attribute": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\"": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "onpaymentmethodchange attribute and listeners both work": {
           "byUA": {
-            "CH72": "FAIL",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
-            "FAIL": 2,
-            "PASS": 2
+            "PASS": 3,
+            "FAIL": 1
           }
         },
         "/payment-request/onpaymentmenthodchange-attribute.https.html": {
@@ -2770,9 +2882,1428 @@
         }
       }
     },
+    "/payment-request/PaymentRequestUpdateEvent/constructor.http.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "PaymentRequestUpdateEvent constructor must not be exposed in insecure context": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/allowpaymentrequest/removing-allowpaymentrequest.https.sub.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "PaymentRequest removing allowpaymentrequest after load and then navigating": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "FAIL",
+            "SF12": "FAIL",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "FAIL": 5
+          }
+        }
+      }
+    },
+    "/payment-request/payment-is-showing.https.html": {
+      "byUA": {
+        "CH75": "TIMEOUT"
+      },
+      "totals": {
+        "TIMEOUT": 1
+      },
+      "subtests": {
+        "The top browsing context can only show one payment sheet at a time.": {
+          "byUA": {
+            "CH75": "TIMEOUT"
+          },
+          "totals": {
+            "TIMEOUT": 1
+          }
+        },
+        "If an iframe shows a payment request, the top-level browsing context can't also show one.": {
+          "byUA": {
+            "CH75": "NOTRUN"
+          },
+          "totals": {
+            "NOTRUN": 1
+          }
+        },
+        "An iframe cannot show a payment request if the top-level window is already showing one.": {
+          "byUA": {
+            "CH75": "NOTRUN"
+          },
+          "totals": {
+            "NOTRUN": 1
+          }
+        },
+        "Using a popup window prevents the top-browsing context from showing a payment request": {
+          "byUA": {
+            "CH75": "NOTRUN"
+          },
+          "totals": {
+            "NOTRUN": 1
+          }
+        },
+        "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.": {
+          "byUA": {
+            "CH75": "NOTRUN"
+          },
+          "totals": {
+            "NOTRUN": 1
+          }
+        },
+        "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.": {
+          "byUA": {
+            "CH75": "NOTRUN"
+          },
+          "totals": {
+            "NOTRUN": 1
+          }
+        },
+        "Given multiple nested browsing contexts, and an iframe calls show() first, other nested browsing contexts can't show a request.": {
+          "byUA": {
+            "CH75": "NOTRUN"
+          },
+          "totals": {
+            "NOTRUN": 1
+          }
+        },
+        "Navigating an iframe as a nested browsing context sets 'payment request is showing boolean' to false.": {
+          "byUA": {
+            "CH75": "NOTRUN"
+          },
+          "totals": {
+            "NOTRUN": 1
+          }
+        },
+        "Navigating a popup as a nested browsing context sets 'payment request is showing boolean' to false.": {
+          "byUA": {
+            "CH75": "NOTRUN"
+          },
+          "totals": {
+            "NOTRUN": 1
+          }
+        }
+      }
+    },
+    "/payment-request/rejects_if_not_active.https.html": {
+      "byUA": {
+        "CH75": "TIMEOUT",
+        "ED44": "OK",
+        "FF65": "TIMEOUT",
+        "SF12": "ERROR",
+        "SI74": "OK"
+      },
+      "totals": {
+        "TIMEOUT": 2,
+        "OK": 2,
+        "ERROR": 1
+      },
+      "subtests": {
+        "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.": {
+          "byUA": {
+            "CH75": "TIMEOUT",
+            "ED44": "FAIL",
+            "FF65": "NOTRUN",
+            "SF12": "FAIL",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "TIMEOUT": 1,
+            "FAIL": 2,
+            "NOTRUN": 1,
+            "PASS": 1
+          }
+        },
+        "PaymentRequest.show() aborts if the document is not active": {
+          "byUA": {
+            "ED44": "FAIL",
+            "FF65": "TIMEOUT",
+            "SF12": "FAIL",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "FAIL": 3,
+            "TIMEOUT": 1
+          }
+        },
+        "PaymentRequest.show() aborts if the document is active, but not fully active": {
+          "byUA": {
+            "ED44": "FAIL",
+            "FF65": "NOTRUN",
+            "SF12": "FAIL",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "FAIL": 3,
+            "NOTRUN": 1
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-onshippingaddresschange-attribute.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Must have a onshippingaddresschange IDL attribute": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\"": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "onshippingaddresschange attribute and listeners both work": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-hasenrolledinstrument-method.tentative.https.html": {
+      "byUA": {
+        "CH75": "OK"
+      },
+      "totals": {
+        "OK": 1
+      },
+      "subtests": {
+        "hasEnrolledInstrument() resolves to false for unsupported payment methods.": {
+          "byUA": {
+            "CH75": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "byUA": {
+            "CH75": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "byUA": {
+            "CH75": "FAIL"
+          },
+          "totals": {
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/onmerchantvalidation-attribute.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK"
+      },
+      "totals": {
+        "OK": 4
+      },
+      "subtests": {
+        "Must have a onmerchantvalidation IDL attribute": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 2
+          }
+        },
+        "onmerchantvalidation attribute is a generic handler for \"merchantvalidation\"": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 2
+          }
+        },
+        "onmerchantvalidation attribute is a handler for MerchantValidationEvent": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 2
+          }
+        },
+        "onmerchantvalidation attribute and listeners both work": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "FAIL": 2,
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/historical.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "ERROR",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 4,
+        "ERROR": 1
+      },
+      "subtests": {
+        "paymentRequestID in PaymentRequest": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "paymentRequestID in PaymentResponse": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "careOf in PaymentAddress": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "totalAmount in PaymentResponse": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "paymentRequestId in PaymentRequest": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "paymentRequestId in PaymentResponse": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "languageCode in PaymentAddress": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        },
+        "regionCode in PaymentAddress": {
+          "byUA": {
+            "CH75": "PASS"
+          },
+          "totals": {
+            "PASS": 1
+          }
+        },
+        "supportedMethods must not support sequence<DOMString>": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-insecure.http.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "PaymentRequest constructor must not be exposed in insecure context": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-onshippingoptionchange-attribute.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Must have a onshippingoptionchange IDL attribute": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\"": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "onshippingoptionchange attribute and listeners both work": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-shippingAddress-attribute.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Must have a .shippingAddress IDL attribute.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        ".shippingAddress attribute must default to null.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/PaymentMethodChangeEvent/methodDetails-attribute.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "The methodDetails member defaults to null": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/allowpaymentrequest/active-document-same-origin.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "PaymentRequest <iframe allowpaymentrequest> in non-active document (same-origin)": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/allowpaymentrequest/setting-allowpaymentrequest.https.sub.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "PaymentRequest setting allowpaymentrequest after load and then navigating": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "FAIL",
+            "SF12": "FAIL",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "FAIL": 5
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-constructor.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "If details.id is missing, assign an identifier": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If details.id is missing, assign a unique identifier": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If the same id is provided, then use it": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Use ids even if they are strange": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Use provided request ID": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If the length of the methodData sequence is zero, then throw a TypeError": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Modifier method data must be JSON-serializable object": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "Rethrow any exceptions of JSON-serializing paymentMethod.data into a string": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If details.total.amount.value is not a valid decimal monetary value, then throw a TypeError": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "PaymentDetailsBase members can be 0 length": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If the first character of details.total.amount.value is U+002D HYPHEN-MINUS, then throw a TypeError": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "For each item in details.displayItems: if item.amount.value is not a valid decimal monetary value, then throw a TypeError": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Negative values are allowed for displayItems.amount.value, irrespective of total amount": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "it handles high precision currency values without throwing": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "For each option in details.shippingOptions: if option.amount.value is not a valid decimal monetary value, then throw a TypeError": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If there is no selected shipping option, then PaymentRequest.shippingOption remains null": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If there is a selected shipping option, and requestShipping is set, then that option becomes synchronously selected": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "If requestShipping is set, and if there is a multiple selected shipping options, only the last is selected.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "If there are any duplicate shipping option ids, and shipping is requested, then throw a TypeError": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Throw when there are duplicate shippingOption ids, even if other values are different": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Throw TypeError if modifier.total.amount.value is not a valid decimal monetary value": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If amount.value of additionalDisplayItems is not a valid decimal monetary value, then throw a TypeError": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Modifier data must be JSON-serializable object (an Array in this case)": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "Modifier data must be JSON-serializable object (an Object in this case)": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Rethrow any exceptions of JSON-serializing modifier.data": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Shipping type should be valid": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "PaymentRequest.shippingAddress must initially be null": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If options.requestShipping is not set, then request.shippingType attribute is null.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "If options.requestShipping is true, request.shippingType will be options.shippingType.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/allowpaymentrequest/setting-allowpaymentrequest-timing.https.sub.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "PaymentRequest setting allowpaymentrequest after document creation, before response": {
+          "byUA": {
+            "CH75": "FAIL",
+            "ED44": "FAIL",
+            "FF65": "FAIL",
+            "SF12": "FAIL",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "FAIL": 5
+          }
+        }
+      }
+    },
+    "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-cross-origin-bc-containers.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "iframe": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "FAIL",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "frame": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "object": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "embed": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-not-exposed.https.worker.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "PaymentRequest constructor must not be exposed in worker global scope": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-constructor-crash.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Don't crash if there is an abusive number of payment methods in the methodData sequence": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Don't crash if PaymentMethodData.supportedMethods is an abusive length": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Don't crash if the request id has an abusive length": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Don't crash if PaymentDetailsInit.total.label is an abusive length": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Don't crash if total.amount.value is an abusive length": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Don't crash if details.displayItems has an abusive number of items": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Don't crash if details.shippingOptions has an abusive number of items": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Don't crash if PaymentShippingOptions.label is an abusive length": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Don't crash if the PaymentShippingOptions.amount.value is an abusive length": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Don't crash if PaymentItem.label is an abusive length": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        }
+      }
+    },
+    "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-same-origin-bc-containers.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "iframe": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "frame": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "object": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        },
+        "embed": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 3,
+            "FAIL": 2
+          }
+        }
+      }
+    },
+    "/payment-request/PaymentRequestUpdateEvent/updatewith-method.https.html": {
+      "byUA": {
+        "CH75": "OK",
+        "ED44": "OK",
+        "FF65": "OK",
+        "SF12": "OK",
+        "SI74": "OK"
+      },
+      "totals": {
+        "OK": 5
+      },
+      "subtests": {
+        "Let target be the request which is dispatching the event.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "PASS"
+          },
+          "totals": {
+            "PASS": 5
+          }
+        },
+        "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\"": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        },
+        "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\"": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "PASS",
+            "FF65": "PASS",
+            "SF12": "PASS",
+            "SI74": "FAIL"
+          },
+          "totals": {
+            "PASS": 4,
+            "FAIL": 1
+          }
+        }
+      }
+    },
     "/payment-request/payment-request-abort-method.https.html": {
       "byUA": {
-        "CH72": "OK",
+        "CH75": "OK",
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
@@ -2784,7 +4315,7 @@
       "subtests": {
         "Throws if the promise [[state]] is not \"interactive\"": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
@@ -2794,33 +4325,35 @@
             "PASS": 5
           }
         },
-        "The same request cannot be shown multiple times.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL"
-          },
-          "totals": {
-            "FAIL": 2
-          }
-        },
-        "Aborting a request before it is shown doesn't prevent it from being shown later.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL"
-          },
-          "totals": {
-            "FAIL": 2
-          }
-        },
         "Calling abort() multiple times is always a new object.": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS"
           },
           "totals": {
             "PASS": 4
+          }
+        },
+        "The same request cannot be shown multiple times.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        },
+        "Aborting a request before it is shown doesn't prevent it from being shown later.": {
+          "byUA": {
+            "CH75": "PASS",
+            "ED44": "FAIL"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
           }
         },
         "Test for PaymentRequest.abort() method": {
@@ -2845,1328 +4378,9 @@
         }
       }
     },
-    "/payment-request/payment-request-canmakepayment-method-protection.https.html": {
+    "/payment-request/MerchantValidationEvent/complete-method.https.html": {
       "byUA": {
-        "CH72": "OK",
-        "ED44": "TIMEOUT"
-      },
-      "totals": {
-        "OK": 1,
-        "TIMEOUT": 1
-      },
-      "subtests": {
-        "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "TIMEOUT"
-          },
-          "totals": {
-            "PASS": 1,
-            "TIMEOUT": 1
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-canmakepayment-method.https.html": {
-      "byUA": {
-        "CH72": "ERROR",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK"
-      },
-      "totals": {
-        "ERROR": 1,
-        "OK": 3
-      },
-      "subtests": {
-        "If payment method identifier are supported, resolve promise with true.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "PASS"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "FAIL",
-            "SF12": "FAIL"
-          },
-          "totals": {
-            "FAIL": 4
-          }
-        },
-        "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "FAIL",
-            "SF12": "FAIL"
-          },
-          "totals": {
-            "FAIL": 4
-          }
-        },
-        "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 1
-          }
-        },
-        "All methods are unsupported": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "PASS"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "Mix of supported and unsupported methods, at least one method is supported.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "PASS"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "If payment method identifier and serialized parts are supported, resolve promise with true.": {
-          "byUA": {
-            "FF65": "PASS",
-            "SF12": "FAIL"
-          },
-          "totals": {
-            "PASS": 1,
-            "FAIL": 1
-          }
-        },
-        "If payment method identifier is unknown, resolve promise with false.": {
-          "byUA": {
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
-          "byUA": {
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Calling canMakePayment() multiple times is always a new object.": {
-          "byUA": {
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-constructor-crash.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Don't crash if there is an abusive number of payment methods in the methodData sequence": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Don't crash if PaymentMethodData.supportedMethods is an abusive length": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Don't crash if the request id has an abusive length": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Don't crash if PaymentDetailsInit.total.label is an abusive length": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Don't crash if total.amount.value is an abusive length": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Don't crash if details.displayItems has an abusive number of items": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Don't crash if details.shippingOptions has an abusive number of items": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Don't crash if PaymentShippingOptions.label is an abusive length": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Don't crash if the PaymentShippingOptions.amount.value is an abusive length": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Don't crash if PaymentItem.label is an abusive length": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-constructor.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "If details.id is missing, assign an identifier": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If details.id is missing, assign a unique identifier": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If the same id is provided, then use it": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Use ids even if they are strange": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Use provided request ID": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If the length of the methodData sequence is zero, then throw a TypeError": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Modifier method data must be JSON-serializable object": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        },
-        "Rethrow any exceptions of JSON-serializing paymentMethod.data into a string": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If details.total.amount.value is not a valid decimal monetary value, then throw a TypeError": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "PaymentDetailsBase members can be 0 length": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If the first character of details.total.amount.value is U+002D HYPHEN-MINUS, then throw a TypeError": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "For each item in details.displayItems: if item.amount.value is not a valid decimal monetary value, then throw a TypeError": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Negative values are allowed for displayItems.amount.value, irrespective of total amount": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        },
-        "it handles high precision currency values without throwing": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        },
-        "For each option in details.shippingOptions: if option.amount.value is not a valid decimal monetary value, then throw a TypeError": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If there is no selected shipping option, then PaymentRequest.shippingOption remains null": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If there is a selected shipping option, and requestShipping is set, then that option becomes synchronously selected": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        },
-        "If requestShipping is set, and if there is a multiple selected shipping options, only the last is selected.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        },
-        "If there are any duplicate shipping option ids, and shipping is requested, then throw a TypeError": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Throw when there are duplicate shippingOption ids, even if other values are different": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Throw TypeError if modifier.total.amount.value is not a valid decimal monetary value": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If amount.value of additionalDisplayItems is not a valid decimal monetary value, then throw a TypeError": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Modifier data must be JSON-serializable object (an Array in this case)": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        },
-        "Modifier data must be JSON-serializable object (an Object in this case)": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Rethrow any exceptions of JSON-serializing modifier.data": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Shipping type should be valid": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "PaymentRequest.shippingAddress must initially be null": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If options.requestShipping is not set, then request.shippingType attribute is null.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If options.requestShipping is true, request.shippingType will be options.shippingType.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-ctor-currency-code-checks.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Check and canonicalize valid details.total.amount": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Check and canonicalize invalid details.total.amount and rethrow any exceptions.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Check and canonicalize valid details.displayItems amount": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Check and canonicalize invalid details.displayItems amount and rethrow RangeError.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Check and canonicalize valid details.shippingOptions amount.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Check and canonicalize valid modifiers[n].total amount.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Check and canonicalize valid modifiers[n].additionaDisplayItem amount.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-ctor-pmi-handling.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Must support valid standard URL PMIs": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Must not throw on syntactically valid standardized payment method identifiers, even if they are not supported": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Must throw on syntactically invalid standardized payment method identifiers": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        },
-        "Constructor MUST throw if given an invalid URL-based payment method identifier": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-id-attribute.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-insecure.http.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "PaymentRequest constructor must not be exposed in insecure context": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 3,
-            "FAIL": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-not-exposed.https.worker.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "PaymentRequest constructor must not be exposed in worker global scope": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-onshippingaddresschange-attribute.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Must have a onshippingaddresschange IDL attribute": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\"": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "onshippingaddresschange attribute and listeners both work": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-onshippingoptionchange-attribute.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Must have a onshippingoptionchange IDL attribute": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\"": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "onshippingoptionchange attribute and listeners both work": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-shippingAddress-attribute.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Must have a .shippingAddress IDL attribute.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        ".shippingAddress attribute must default to null.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-shippingOption-attribute.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Must have a .shippingOption IDL attribute.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        ".shippingOption attribute must default to null.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If there is a single shipping option, but selected is false, then .shippingOption must be null.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "Given multiple shipping options, it must use the selected shipping option for .shippingOption value.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        },
-        "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "PASS": 5
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-shippingType-attribute.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 5
-      },
-      "subtests": {
-        "Must have a shippingType IDL attribute": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        },
-        "If options.requestShipping is false, then request.shippingType attribute is null.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        },
-        "If options.requestShipping is true, request.shippingType will be options.shippingType.": {
-          "byUA": {
-            "CH72": "PASS",
-            "ED44": "PASS",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "PASS": 4,
-            "FAIL": 1
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-show-method.https.html": {
-      "byUA": {
-        "CH72": "TIMEOUT",
-        "ED44": "OK",
-        "FF65": "OK",
-        "SF12": "OK",
-        "SI74": "OK"
-      },
-      "totals": {
-        "TIMEOUT": 1,
-        "OK": 4
-      },
-      "subtests": {
-        "Calling show() without being triggered by user interaction throws": {
-          "byUA": {
-            "CH72": "TIMEOUT",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "FAIL": 2,
-            "PASS": 2
-          }
-        },
-        "Throws if the promise [[state]] is not 'created'.": {
-          "byUA": {
-            "CH72": "NOTRUN",
-            "ED44": "FAIL",
-            "FF65": "FAIL",
-            "SF12": "FAIL",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "NOTRUN": 1,
-            "FAIL": 4
-          }
-        },
-        "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.": {
-          "byUA": {
-            "CH72": "NOTRUN",
-            "ED44": "FAIL",
-            "FF65": "FAIL",
-            "SF12": "FAIL",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "NOTRUN": 1,
-            "FAIL": 4
-          }
-        },
-        "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.": {
-          "byUA": {
-            "CH72": "NOTRUN",
-            "ED44": "FAIL",
-            "FF65": "FAIL",
-            "SF12": "FAIL",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "NOTRUN": 1,
-            "FAIL": 4
-          }
-        },
-        "Calling show() multiple times is always a new object.": {
-          "byUA": {
-            "CH72": "NOTRUN",
-            "ED44": "FAIL",
-            "FF65": "FAIL",
-            "SF12": "FAIL"
-          },
-          "totals": {
-            "NOTRUN": 1,
-            "FAIL": 3
-          }
-        }
-      }
-    },
-    "/payment-request/payment-response/onpayerdetailchange-attribute.https.html": {
-      "byUA": {
-        "CH72": "OK",
+        "CH75": "OK",
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK"
@@ -4175,9 +4389,9 @@
         "OK": 4
       },
       "subtests": {
-        "PaymentResponse inherits from EventTarget": {
+        "If event's isTrusted attribute is false, then then throw an InvalidStateError DOMException.": {
           "byUA": {
-            "CH72": "PASS",
+            "CH75": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS"
@@ -4185,74 +4399,6 @@
           "totals": {
             "PASS": 3,
             "FAIL": 1
-          }
-        },
-        "PaymentResponse has an onpayerdetailchange in the prototype chain": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "PASS",
-            "SF12": "PASS"
-          },
-          "totals": {
-            "FAIL": 2,
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/rejects_if_not_active.https.html": {
-      "byUA": {
-        "CH72": "OK",
-        "ED44": "OK",
-        "FF65": "TIMEOUT",
-        "SF12": "ERROR",
-        "SI74": "OK"
-      },
-      "totals": {
-        "OK": 3,
-        "TIMEOUT": 1,
-        "ERROR": 1
-      },
-      "subtests": {
-        "PaymentRequest.show() aborts if the document is not active": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "TIMEOUT",
-            "SF12": "FAIL",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 4,
-            "TIMEOUT": 1
-          }
-        },
-        "PaymentRequest.show() aborts if the document is active, but not fully active": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "NOTRUN",
-            "SF12": "FAIL",
-            "SI74": "FAIL"
-          },
-          "totals": {
-            "FAIL": 4,
-            "NOTRUN": 1
-          }
-        },
-        "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.": {
-          "byUA": {
-            "CH72": "FAIL",
-            "ED44": "FAIL",
-            "FF65": "NOTRUN",
-            "SF12": "FAIL",
-            "SI74": "PASS"
-          },
-          "totals": {
-            "FAIL": 3,
-            "NOTRUN": 1,
-            "PASS": 1
           }
         }
       }
