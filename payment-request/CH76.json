@@ -479,6 +479,11 @@
           "message": null
         },
         {
+          "name": "PaymentRequest interface: operation hasEnrolledInstrument()",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "PaymentRequest interface: attribute id",
           "status": "PASS",
           "message": null
@@ -545,6 +550,11 @@
         },
         {
           "name": "PaymentRequest interface: paymentRequest must inherit property \"canMakePayment()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"hasEnrolledInstrument()\" with the proper type",
           "status": "PASS",
           "message": null
         },
@@ -1026,13 +1036,13 @@
       "subtests": [
         {
           "name": "The top browsing context can only show one payment sheet at a time.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: No show() or retry() in progress, so nothing to abort\""
         },
         {
           "name": "If an iframe shows a payment request, the top-level browsing context can't also show one.",
-          "status": "NOTRUN",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "An iframe cannot show a payment request if the top-level window is already showing one.",
@@ -1070,8 +1080,8 @@
           "message": null
         }
       ],
-      "status": "TIMEOUT",
-      "message": null
+      "status": "ERROR",
+      "message": "Request cancelled"
     },
     {
       "test": "/payment-request/payment-request-abort-method.https.html",
@@ -1105,11 +1115,11 @@
       "subtests": [
         {
           "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1657,27 +1667,27 @@
         },
         {
           "name": "Throws if the promise [[state]] is not 'created'.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "Calling show() multiple times always returns a new promise.",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         }
       ],
-      "status": "ERROR",
-      "message": "Unable to abort the payment"
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/payment-request/payment-response/onpayerdetailchange-attribute.https.html",
@@ -1701,11 +1711,11 @@
       "subtests": [
         {
           "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"AbortError: Request cancelled\""
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
