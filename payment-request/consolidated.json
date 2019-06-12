@@ -4,6 +4,7 @@
     "ED44",
     "FF65",
     "SF12",
+    "SF13",
     "SI94"
   ],
   "results": {
@@ -13,22 +14,30 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "If event's isTrusted attribute is false, then then throw an InvalidStateError DOMException.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         }
@@ -40,22 +49,27 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "MerchantValidationEvent constructor must not be exposed in insecure context": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -66,139 +80,201 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "MerchantValidationEvent can be constructed in secure-context.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent can be constructed with an EventInitDict, even if not trusted.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent can be dispatched, even if not trusted.": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "Must have a validationURL IDL attribute, which is initialized with to the validationURL dictionary value.": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "Must throw TypeError if initialized with an invalid URL.": {
+          "stNum": 4,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: function \"() => {\n    new MerchantValidationEvent(\"test\", { validationURL });\n  }\" threw object \"ReferenceError: 'MerchantValidationEvent' is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")",
+            "SI94": "assert_throws: function \"() => {\n    new MerchantValidationEvent(\"test\", { validationURL });\n  }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "Relative validationURLs use the document as the base.": {
+          "stNum": 5,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value.": {
+          "stNum": 6,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "When no methodName is passed, methodName attribute defaults to the empty string": {
+          "stNum": 7,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent can be constructed with valid PMIs": {
+          "stNum": 8,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent can't be constructed with invalid PMIs": {
+          "stNum": 9,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: expected to throw when constructed with invalid PMI: 'basic-💳' function \"() => {\n        const event = new MerchantValidationEvent(\"test\", { methodName });\n      }\" threw object \"ReferenceError: 'MerchantValidationEvent' is not defined\" (\"ReferenceError\") expected object \"RangeError\" (\"RangeError\")",
+            "SI94": "assert_throws: expected to throw when constructed with invalid PMI: 'basic-💳' function \"() => {\n        const event = new MerchantValidationEvent(\"test\", { methodName });\n      }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected object \"RangeError\" (\"RangeError\")"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         }
@@ -210,35 +286,49 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'PaymentMethodChangeEvent' is not defined",
+            "SI94": "PaymentMethodChangeEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "The methodDetails member defaults to null": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'PaymentMethodChangeEvent' is not defined",
+            "SI94": "PaymentMethodChangeEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         }
@@ -250,35 +340,49 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'PaymentMethodChangeEvent' is not defined",
+            "SI94": "PaymentMethodChangeEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "When no dictionary is passed, the methodName member defaults to the empty string": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'PaymentMethodChangeEvent' is not defined",
+            "SI94": "PaymentMethodChangeEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         }
@@ -290,22 +394,27 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequestUpdateEvent constructor must not be exposed in insecure context": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -316,47 +425,60 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequestUpdateEvent can be constructed in secure-context": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_true: set by EventInitDict expected true got undefined"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentRequestUpdateEvent can be dispatched, even if not trusted": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -367,46 +489,57 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Let target be the request which is dispatching the event.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\"": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\"": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -417,22 +550,29 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequest <iframe allowpaymentrequest> in non-active document (cross-origin)": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw object \"Error: Can't execute code from a freed script\" (\"Error\") expected object \"[object Object]\" (\"SecurityError\")"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         }
@@ -444,22 +584,29 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequest <iframe allowpaymentrequest> in non-active document (same-origin)": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw object \"Error: Can't execute code from a freed script\" (\"Error\") expected object \"[object Object]\" (\"SecurityError\")"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         }
@@ -471,60 +618,81 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "iframe": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "FAIL",
+            "SF13": "FAIL",
             "SI94": "PASS"
+          },
+          "UAmessage": {
+            "SF12": "assert_equals: expected \"Success\" but got \"Exception\"",
+            "SF13": "assert_equals: expected \"Success\" but got \"Exception\""
           },
           "totals": {
             "PASS": 4,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "frame": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "object": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "embed": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         }
@@ -536,59 +704,77 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "iframe": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "frame": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "object": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "embed": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         }
@@ -600,23 +786,31 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequest <iframe allowpaymentrequest> basic": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "FAIL",
+            "SF13": "FAIL",
             "SI94": "PASS"
+          },
+          "UAmessage": {
+            "SF12": "Trying to start an Apple Pay session from an insecure document.",
+            "SF13": "Trying to start an Apple Pay session from an insecure document."
           },
           "totals": {
             "PASS": 4,
-            "FAIL": 1
+            "FAIL": 2
           }
         }
       }
@@ -627,59 +821,77 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "iframe": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "frame": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "object": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "embed": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         }
@@ -691,59 +903,77 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "iframe": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "frame": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "object": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "embed": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         }
@@ -755,22 +985,34 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequest removing allowpaymentrequest after load and then navigating": {
+          "stNum": 0,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF12": "FAIL",
+            "SF13": "FAIL",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "CH76": "assert_array_equals: after navigation lengths differ, expected 3 got 4",
+            "ED44": "assert_equals: before navigation expected \"Success\" but got \"Exception\"",
+            "FF65": "assert_array_equals: after navigation lengths differ, expected 3 got 4",
+            "SF12": "assert_equals: before navigation expected \"Success\" but got \"Exception\"",
+            "SF13": "assert_equals: before navigation expected \"Success\" but got \"Exception\"",
+            "SI94": "assert_array_equals: after navigation lengths differ, expected 3 got 4"
+          },
           "totals": {
-            "FAIL": 5
+            "FAIL": 6
           }
         }
       }
@@ -781,22 +1023,34 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequest setting allowpaymentrequest after document creation, before response": {
+          "stNum": 0,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF12": "FAIL",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "CH76": "assert_equals: expected \"Exception\" but got \"Success\"",
+            "ED44": "assert_equals: expected \"Exception\" but got \"Success\"",
+            "FF65": "assert_equals: expected \"Exception\" but got \"Success\"",
+            "SF12": "assert_array_equals: lengths differ, expected 3 got 4",
+            "SI94": "assert_equals: expected \"Exception\" but got \"Success\""
+          },
           "totals": {
-            "FAIL": 5
+            "FAIL": 5,
+            "PASS": 1
           }
         }
       }
@@ -807,22 +1061,34 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequest setting allowpaymentrequest after load and then navigating": {
+          "stNum": 0,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF12": "FAIL",
+            "SF13": "FAIL",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "CH76": "assert_array_equals: before navigation lengths differ, expected 3 got 4",
+            "ED44": "assert_equals: before navigation expected \"Exception\" but got \"Success\"",
+            "FF65": "assert_array_equals: before navigation lengths differ, expected 3 got 4",
+            "SF12": "assert_array_equals: before navigation lengths differ, expected 3 got 4",
+            "SF13": "assert_equals: after navigation expected \"Success\" but got \"Exception\"",
+            "SI94": "assert_array_equals: before navigation lengths differ, expected 3 got 4"
+          },
           "totals": {
-            "FAIL": 5
+            "FAIL": 6
           }
         }
       }
@@ -831,40 +1097,56 @@
       "byUA": {
         "CH76": "OK",
         "ED44": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 3
+        "OK": 4
       },
       "subtests": {
         "Smoke test.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 4
           }
         },
         "Tries to convert data member during Payment Request construction, irrespective of PMI.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 4
           }
         },
         "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.": {
+          "stNum": 2,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
+            "SF13": "FAIL",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "CH76": "assert_throws: PaymentMethodData.data is invalid. function \"() => {\n          const badMethod = Object.assign(\n            {},\n            method,\n            /* This is invalid in both Apple Pay and Basic Card */\n            { data: { supportedNetworks: \"this will throw\" } }\n          );\n          new PaymentRequest([badMethod], details);\n        }\" did not throw",
+            "ED44": "assert_throws: PaymentMethodData.data is invalid. function \"() => {\n          const badMethod = Object.assign(\n            {},\n            method,\n            /* This is invalid in both Apple Pay and Basic Card */\n            { data: { supportedNetworks: \"this will throw\" } }\n          );\n          new PaymentRequest([badMethod], details);\n        }\" did not throw",
+            "SF13": "assert_throws: PaymentMethodData.data is invalid. function \"() => {\n          const badMethod = Object.assign(\n            {},\n            method,\n            /* This is invalid in both Apple Pay and Basic Card */\n            { data: { supportedNetworks: \"this will throw\" } }\n          );\n          new PaymentRequest([badMethod], details);\n        }\" did not throw",
+            "SI94": "assert_throws: PaymentMethodData.data is invalid. function \"() => {\n          const badMethod = Object.assign(\n            {},\n            method,\n            /* This is invalid in both Apple Pay and Basic Card */\n            { data: { supportedNetworks: \"this will throw\" } }\n          );\n          new PaymentRequest([badMethod], details);\n        }\" did not throw"
+          },
           "totals": {
-            "FAIL": 3
+            "FAIL": 4
           }
         }
       }
@@ -875,115 +1157,152 @@
         "ED44": "ERROR",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {
+        "ED44": "[object Object]"
+      },
       "totals": {
-        "OK": 4,
+        "OK": 5,
         "ERROR": 1
       },
       "subtests": {
         "paymentRequestID in PaymentRequest": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "paymentRequestID in PaymentResponse": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "careOf in PaymentAddress": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "totalAmount in PaymentResponse": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "paymentRequestId in PaymentRequest": {
+          "stNum": 4,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "paymentRequestId in PaymentResponse": {
+          "stNum": 5,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "languageCode in PaymentAddress": {
+          "stNum": 6,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_false: expected false got true",
+            "SI94": "assert_false: expected false got true"
+          },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 2
           }
         },
         "regionCode in PaymentAddress": {
+          "stNum": 7,
           "byUA": {
             "CH76": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "supportedMethods must not support sequence<DOMString>": {
+          "stNum": 8,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: function \"() => {\n    new PaymentRequest([{supportedMethods: methods}], {total: {label: 'bar', amount: {currency: 'BAZ', value: '0'}}});\n  }\" threw object \"Error: Could not complete the operation due to error 80020101.\" (\"Error\") expected object \"[object Object]\" (\"toString should be called\")",
+            "SI94": "assert_throws: function \"() => {\n    new PaymentRequest([{supportedMethods: methods}], {total: {label: 'bar', amount: {currency: 'BAZ', value: '0'}}});\n  }\" threw object \"[object Object]\" (\"sequence<DOMString> conversion is not allowed\") expected object \"[object Object]\" (\"toString should be called\")"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         }
@@ -995,1384 +1314,1890 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "idl_test setup": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: existence and properties of interface object": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: prototype of PaymentRequest is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"function() {\n    [native code]\n}\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentRequest interface object length": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface object name": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: existence and properties of interface prototype object": {
+          "stNum": 4,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 5,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: existence and properties of interface prototype object's @@unscopables property": {
+          "stNum": 6,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: operation show([object Object])": {
+          "stNum": 7,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: operation abort()": {
+          "stNum": 8,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: operation canMakePayment()": {
+          "stNum": 9,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: operation hasEnrolledInstrument()": {
+          "stNum": 10,
           "byUA": {
             "CH76": "PASS",
+            "SF13": "FAIL",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "SF13": "assert_own_property: interface prototype object missing non-static operation expected property \"hasEnrolledInstrument\" missing",
+            "SI94": "assert_own_property: interface prototype object missing non-static operation expected property \"hasEnrolledInstrument\" missing"
           },
           "totals": {
             "PASS": 1,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "PaymentRequest interface: attribute id": {
+          "stNum": 11,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get id' expected \"get id\" but got \"id\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentRequest interface: attribute shippingAddress": {
+          "stNum": 12,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get shippingAddress' expected \"get shippingAddress\" but got \"shippingAddress\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentRequest interface: attribute shippingOption": {
+          "stNum": 13,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get shippingOption' expected \"get shippingOption\" but got \"shippingOption\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentRequest interface: attribute shippingType": {
+          "stNum": 14,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get shippingType' expected \"get shippingType\" but got \"shippingType\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentRequest interface: attribute onmerchantvalidation": {
+          "stNum": 15,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "CH76": "assert_true: The prototype object must have a property \"onmerchantvalidation\" expected true got false",
+            "ED44": "assert_true: The prototype object must have a property \"onmerchantvalidation\" expected true got false",
+            "SI94": "assert_true: The prototype object must have a property \"onmerchantvalidation\" expected true got false"
           },
           "totals": {
             "FAIL": 3,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "PaymentRequest interface: attribute onshippingaddresschange": {
+          "stNum": 16,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get onshippingaddresschange' expected \"get onshippingaddresschange\" but got \"onshippingaddresschange\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentRequest interface: attribute onshippingoptionchange": {
+          "stNum": 17,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get onshippingoptionchange' expected \"get onshippingoptionchange\" but got \"onshippingoptionchange\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentRequest interface: attribute onpaymentmethodchange": {
+          "stNum": 18,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_true: The prototype object must have a property \"onpaymentmethodchange\" expected true got false",
+            "SI94": "assert_true: The prototype object must have a property \"onpaymentmethodchange\" expected true got false"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentRequest must be primary interface of paymentRequest": {
+          "stNum": 19,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Stringification of paymentRequest": {
+          "stNum": 20,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"show([object Object])\" with the proper type": {
+          "stNum": 21,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: calling show([object Object]) on paymentRequest with too few arguments must throw TypeError": {
+          "stNum": 22,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"abort()\" with the proper type": {
+          "stNum": 23,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"canMakePayment()\" with the proper type": {
+          "stNum": 24,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"hasEnrolledInstrument()\" with the proper type": {
+          "stNum": 25,
           "byUA": {
             "CH76": "PASS",
+            "SF13": "FAIL",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "SF13": "assert_inherits: property \"hasEnrolledInstrument\" not found in prototype chain",
+            "SI94": "assert_inherits: property \"hasEnrolledInstrument\" not found in prototype chain"
           },
           "totals": {
             "PASS": 1,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"id\" with the proper type": {
+          "stNum": 26,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"shippingAddress\" with the proper type": {
+          "stNum": 27,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"shippingOption\" with the proper type": {
+          "stNum": 28,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"shippingType\" with the proper type": {
+          "stNum": 29,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onmerchantvalidation\" with the proper type": {
+          "stNum": 30,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "CH76": "assert_inherits: property \"onmerchantvalidation\" not found in prototype chain",
+            "ED44": "assert_inherits: property \"onmerchantvalidation\" not found in prototype chain",
+            "SI94": "assert_inherits: property \"onmerchantvalidation\" not found in prototype chain"
           },
           "totals": {
             "FAIL": 3,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onshippingaddresschange\" with the proper type": {
+          "stNum": 31,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onshippingoptionchange\" with the proper type": {
+          "stNum": 32,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onpaymentmethodchange\" with the proper type": {
+          "stNum": 33,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_inherits: property \"onpaymentmethodchange\" not found in prototype chain",
+            "SI94": "assert_inherits: property \"onpaymentmethodchange\" not found in prototype chain"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentAddress interface: existence and properties of interface object": {
+          "stNum": 34,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentAddress interface object length": {
+          "stNum": 35,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentAddress interface object name": {
+          "stNum": 36,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentAddress interface: existence and properties of interface prototype object": {
+          "stNum": 37,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentAddress interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 38,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentAddress interface: existence and properties of interface prototype object's @@unscopables property": {
+          "stNum": 39,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentAddress interface: operation toJSON()": {
+          "stNum": 40,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentAddress interface: attribute city": {
+          "stNum": 41,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get city' expected \"get city\" but got \"city\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentAddress interface: attribute country": {
+          "stNum": 42,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get country' expected \"get country\" but got \"country\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentAddress interface: attribute dependentLocality": {
+          "stNum": 43,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get dependentLocality' expected \"get dependentLocality\" but got \"dependentLocality\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentAddress interface: attribute organization": {
+          "stNum": 44,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get organization' expected \"get organization\" but got \"organization\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentAddress interface: attribute phone": {
+          "stNum": 45,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get phone' expected \"get phone\" but got \"phone\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentAddress interface: attribute postalCode": {
+          "stNum": 46,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get postalCode' expected \"get postalCode\" but got \"postalCode\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentAddress interface: attribute recipient": {
+          "stNum": 47,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get recipient' expected \"get recipient\" but got \"recipient\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentAddress interface: attribute region": {
+          "stNum": 48,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get region' expected \"get region\" but got \"region\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentAddress interface: attribute sortingCode": {
+          "stNum": 49,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get sortingCode' expected \"get sortingCode\" but got \"sortingCode\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentAddress interface: attribute addressLine": {
+          "stNum": 50,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get addressLine' expected \"get addressLine\" but got \"addressLine\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentResponse interface: existence and properties of interface object": {
+          "stNum": 51,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: prototype of PaymentResponse is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"function() {\n    [native code]\n}\"",
+            "SI94": "assert_equals: prototype of PaymentResponse is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"function () { [native code] }\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentResponse interface object length": {
+          "stNum": 52,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentResponse interface object name": {
+          "stNum": 53,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentResponse interface: existence and properties of interface prototype object": {
+          "stNum": 54,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: prototype of PaymentResponse.prototype is not EventTarget.prototype expected object \"[object EventTargetPrototype]\" but got object \"[object Object]\"",
+            "SI94": "assert_equals: prototype of PaymentResponse.prototype is not EventTarget.prototype expected object \"[object EventTarget]\" but got object \"[object Object]\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentResponse interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 55,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentResponse interface: existence and properties of interface prototype object's @@unscopables property": {
+          "stNum": 56,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentResponse interface: operation toJSON()": {
+          "stNum": 57,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentResponse interface: attribute requestId": {
+          "stNum": 58,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get requestId' expected \"get requestId\" but got \"requestId\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentResponse interface: attribute methodName": {
+          "stNum": 59,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get methodName' expected \"get methodName\" but got \"methodName\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentResponse interface: attribute details": {
+          "stNum": 60,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get details' expected \"get details\" but got \"details\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentResponse interface: attribute shippingAddress": {
+          "stNum": 61,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get shippingAddress' expected \"get shippingAddress\" but got \"shippingAddress\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentResponse interface: attribute shippingOption": {
+          "stNum": 62,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get shippingOption' expected \"get shippingOption\" but got \"shippingOption\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentResponse interface: attribute payerName": {
+          "stNum": 63,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get payerName' expected \"get payerName\" but got \"payerName\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentResponse interface: attribute payerEmail": {
+          "stNum": 64,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get payerEmail' expected \"get payerEmail\" but got \"payerEmail\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentResponse interface: attribute payerPhone": {
+          "stNum": 65,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: getter must have the name 'get payerPhone' expected \"get payerPhone\" but got \"payerPhone\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentResponse interface: operation complete(PaymentComplete)": {
+          "stNum": 66,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentResponse interface: operation retry(PaymentValidationErrors)": {
+          "stNum": 67,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "FAIL",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: interface prototype object missing non-static operation expected property \"retry\" missing",
+            "SF12": "assert_equals: property has wrong .length expected 0 but got 1",
+            "SI94": "assert_own_property: interface prototype object missing non-static operation expected property \"retry\" missing"
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 3
           }
         },
         "PaymentResponse interface: attribute onpayerdetailchange": {
+          "stNum": 68,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_true: The prototype object must have a property \"onpayerdetailchange\" expected true got false",
+            "SI94": "assert_true: The prototype object must have a property \"onpayerdetailchange\" expected true got false"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: existence and properties of interface object": {
+          "stNum": 69,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface object length": {
+          "stNum": 70,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface object name": {
+          "stNum": 71,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: existence and properties of interface prototype object": {
+          "stNum": 72,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 73,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: existence and properties of interface prototype object's @@unscopables property": {
+          "stNum": 74,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: attribute methodName": {
+          "stNum": 75,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: attribute validationURL": {
+          "stNum": 76,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: operation complete([object Object])": {
+          "stNum": 77,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent must be primary interface of new MerchantValidationEvent(\"merchantvalidation\")": {
+          "stNum": 78,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "Stringification of new MerchantValidationEvent(\"merchantvalidation\")": {
+          "stNum": 79,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"methodName\" with the proper type": {
+          "stNum": 80,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"validationURL\" with the proper type": {
+          "stNum": 81,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"complete([object Object])\" with the proper type": {
+          "stNum": 82,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "MerchantValidationEvent interface: calling complete([object Object]) on new MerchantValidationEvent(\"merchantvalidation\") with too few arguments must throw TypeError": {
+          "stNum": 83,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface object": {
+          "stNum": 84,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface object length": {
+          "stNum": 85,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface object name": {
+          "stNum": 86,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface prototype object": {
+          "stNum": 87,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 88,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's @@unscopables property": {
+          "stNum": 89,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: attribute methodName": {
+          "stNum": 90,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: attribute methodDetails": {
+          "stNum": 91,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing",
+            "SI94": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent must be primary interface of new PaymentMethodChangeEvent(\"paymentmethodchange\")": {
+          "stNum": 92,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "Stringification of new PaymentMethodChangeEvent(\"paymentmethodchange\")": {
+          "stNum": 93,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodName\" with the proper type": {
+          "stNum": 94,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodDetails\" with the proper type": {
+          "stNum": 95,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith([object Object])\" with the proper type": {
+          "stNum": 96,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError": {
+          "stNum": 97,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\"",
+            "SI94": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: PaymentMethodChangeEvent is not defined\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface object": {
+          "stNum": 98,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: prototype of PaymentRequestUpdateEvent is not Event expected function \"function Event() { [native code] }\" but got function \"function() {\n    [native code]\n}\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "PaymentRequestUpdateEvent interface object length": {
+          "stNum": 99,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequestUpdateEvent interface object name": {
+          "stNum": 100,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object": {
+          "stNum": 101,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
+          "stNum": 102,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's @@unscopables property": {
+          "stNum": 103,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequestUpdateEvent interface: operation updateWith([object Object])": {
+          "stNum": 104,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequestUpdateEvent must be primary interface of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")": {
+          "stNum": 105,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Stringification of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")": {
+          "stNum": 106,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequestUpdateEvent interface: new PaymentRequestUpdateEvent(\"paymentrequestupdate\") must inherit property \"updateWith([object Object])\" with the proper type": {
+          "stNum": 107,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentRequestUpdateEvent(\"paymentrequestupdate\") with too few arguments must throw TypeError": {
+          "stNum": 108,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentAddress interface: attribute regionCode": {
+          "stNum": 47,
           "byUA": {
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "FAIL"
+          },
+          "UAmessage": {
+            "ED44": "assert_true: The prototype object must have a property \"regionCode\" expected true got false",
+            "SF12": "assert_true: The prototype object must have a property \"regionCode\" expected true got false"
           },
           "totals": {
             "FAIL": 2,
@@ -2387,62 +3212,92 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must have a onmerchantvalidation IDL attribute": {
+          "stNum": 0,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "CH76": "assert_idl_attribute: property \"onmerchantvalidation\" not found in prototype chain",
+            "ED44": "assert_idl_attribute: property \"onmerchantvalidation\" not found in prototype chain",
+            "SI94": "assert_idl_attribute: property \"onmerchantvalidation\" not found in prototype chain"
           },
           "totals": {
             "FAIL": 3,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "onmerchantvalidation attribute is a generic handler for \"merchantvalidation\"": {
+          "stNum": 1,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "CH76": "assert_true: event did not fire expected true got false",
+            "ED44": "assert_true: event did not fire expected true got false",
+            "SI94": "assert_true: event did not fire expected true got false"
           },
           "totals": {
             "FAIL": 3,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "onmerchantvalidation attribute is a handler for MerchantValidationEvent": {
+          "stNum": 2,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "CH76": "assert_true: event did not fire expected true got false",
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
           },
           "totals": {
             "FAIL": 3,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "onmerchantvalidation attribute and listeners both work": {
+          "stNum": 3,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "CH76": "assert_true: onmerchantvalidation must receive the event expected true got false",
+            "ED44": "'MerchantValidationEvent' is not defined",
+            "SI94": "MerchantValidationEvent is not defined"
           },
           "totals": {
             "FAIL": 3,
-            "PASS": 2
+            "PASS": 3
           }
         }
       }
@@ -2453,61 +3308,88 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must have a onpaymentmethodchange IDL attribute": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_idl_attribute: property \"onpaymentmethodchange\" not found in prototype chain",
+            "SI94": "assert_idl_attribute: property \"onpaymentmethodchange\" not found in prototype chain"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\"": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_true: event did not fire expected true got false",
+            "SI94": "assert_true: event did not fire expected true got false"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'PaymentMethodChangeEvent' is not defined",
+            "FF65": "Missing required 'methodName' member of PaymentMethodChangeEventInit.",
+            "SI94": "PaymentMethodChangeEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "onpaymentmethodchange attribute and listeners both work": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "'PaymentMethodChangeEvent' is not defined",
+            "SI94": "PaymentMethodChangeEvent is not defined"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         }
@@ -2516,94 +3398,140 @@
     "/payment-request/payment-is-showing.https.html": {
       "byUA": {
         "CH76": "ERROR",
+        "SF13": "ERROR",
         "SI94": "TIMEOUT"
       },
+      "UAmessage": {
+        "CH76": "Request cancelled",
+        "SF13": "show() must be triggered by user activation."
+      },
       "totals": {
-        "ERROR": 1,
+        "ERROR": 2,
         "TIMEOUT": 1
       },
       "subtests": {
         "The top browsing context can only show one payment sheet at a time.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "FAIL",
+            "SF13": "FAIL",
             "SI94": "TIMEOUT"
           },
+          "UAmessage": {
+            "CH76": "promise_test: Unhandled rejection with value: object \"InvalidStateError: No show() or retry() in progress, so nothing to abort\"",
+            "SF13": "assert_throws: Attempting to show a second payment request must reject. function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException InvalidStateError: property \"code\" is equal to 20, expected 11",
+            "SI94": "Test timed out"
+          },
           "totals": {
-            "FAIL": 1,
+            "FAIL": 2,
             "TIMEOUT": 1
           }
         },
         "If an iframe shows a payment request, the top-level browsing context can't also show one.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "TIMEOUT",
+            "SF13": "PASS",
             "SI94": "NOTRUN"
+          },
+          "UAmessage": {
+            "CH76": "Test timed out"
           },
           "totals": {
             "TIMEOUT": 1,
+            "PASS": 1,
             "NOTRUN": 1
           }
         },
         "An iframe cannot show a payment request if the top-level window is already showing one.": {
+          "stNum": 2,
           "byUA": {
             "CH76": "NOTRUN",
+            "SF13": "PASS",
             "SI94": "NOTRUN"
           },
+          "UAmessage": {},
           "totals": {
-            "NOTRUN": 2
+            "NOTRUN": 2,
+            "PASS": 1
           }
         },
         "Using a popup window prevents the top-browsing context from showing a payment request": {
+          "stNum": 3,
           "byUA": {
             "CH76": "NOTRUN",
+            "SF13": "FAIL",
             "SI94": "NOTRUN"
           },
+          "UAmessage": {
+            "SF13": "promise_test: Unhandled rejection with value: object \"InvalidStateError: The object is in an invalid state.\""
+          },
           "totals": {
-            "NOTRUN": 2
+            "NOTRUN": 2,
+            "FAIL": 1
           }
         },
         "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.": {
+          "stNum": 4,
           "byUA": {
             "CH76": "NOTRUN",
+            "SF13": "TIMEOUT",
             "SI94": "NOTRUN"
           },
+          "UAmessage": {
+            "SF13": "Test timed out"
+          },
           "totals": {
-            "NOTRUN": 2
+            "NOTRUN": 2,
+            "TIMEOUT": 1
           }
         },
         "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.": {
+          "stNum": 5,
           "byUA": {
             "CH76": "NOTRUN",
+            "SF13": "NOTRUN",
             "SI94": "NOTRUN"
           },
+          "UAmessage": {},
           "totals": {
-            "NOTRUN": 2
+            "NOTRUN": 3
           }
         },
         "Given multiple nested browsing contexts, and an iframe calls show() first, other nested browsing contexts can't show a request.": {
+          "stNum": 6,
           "byUA": {
             "CH76": "NOTRUN",
+            "SF13": "NOTRUN",
             "SI94": "NOTRUN"
           },
+          "UAmessage": {},
           "totals": {
-            "NOTRUN": 2
+            "NOTRUN": 3
           }
         },
         "Navigating an iframe as a nested browsing context sets 'payment request is showing boolean' to false.": {
+          "stNum": 7,
           "byUA": {
             "CH76": "NOTRUN",
+            "SF13": "NOTRUN",
             "SI94": "NOTRUN"
           },
+          "UAmessage": {},
           "totals": {
-            "NOTRUN": 2
+            "NOTRUN": 3
           }
         },
         "Navigating a popup as a nested browsing context sets 'payment request is showing boolean' to false.": {
+          "stNum": 8,
           "byUA": {
             "CH76": "NOTRUN",
+            "SF13": "NOTRUN",
             "SI94": "NOTRUN"
           },
+          "UAmessage": {},
           "totals": {
-            "NOTRUN": 2
+            "NOTRUN": 3
           }
         }
       }
@@ -2614,71 +3542,99 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Throws if the promise [[state]] is not \"interactive\"": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Calling abort() multiple times is always a new object.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "The same request cannot be shown multiple times.": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_unreached: Unexpected promise rejection: InvalidStateError Reached unreachable code"
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Aborting a request before it is shown doesn't prevent it from being shown later.": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_unreached: Unexpected promise rejection: InvalidStateError Reached unreachable code"
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Test for PaymentRequest.abort() method": {
+          "stNum": 1,
           "byUA": {
             "FF65": "FAIL",
             "SF12": "FAIL"
+          },
+          "UAmessage": {
+            "FF65": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
           },
           "totals": {
             "FAIL": 2
           }
         },
         "Test for PaymentRequest.abort() method 1": {
+          "stNum": 2,
           "byUA": {
             "FF65": "FAIL",
             "SF12": "FAIL"
+          },
+          "UAmessage": {
+            "FF65": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
           },
           "totals": {
             "FAIL": 2
@@ -2690,21 +3646,28 @@
       "byUA": {
         "CH76": "OK",
         "ED44": "TIMEOUT",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 2,
+        "OK": 3,
         "TIMEOUT": 1
       },
       "subtests": {
         "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "TIMEOUT",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "Test timed out"
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "TIMEOUT": 1
           }
         }
@@ -2716,88 +3679,128 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "If payment method identifier are supported, resolve promise with true.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "SI94": "promise_test: Unhandled rejection with value: object \"NotAllowedError: Not allowed to check whether can make payment\""
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "FAIL",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "SF12": "assert_equals: if it throws, then it must be a NotAllowedError. expected \"NotAllowedError\" but got \"Error\""
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "All methods are unsupported": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "SI94": "promise_test: Unhandled rejection with value: object \"NotAllowedError: Not allowed to check whether can make payment\""
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "Mix of supported and unsupported methods, at least one method is supported.": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "SI94": "promise_test: Unhandled rejection with value: object \"NotAllowedError: Not allowed to check whether can make payment\""
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 1
           }
         },
         "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "stNum": 4,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF12": "FAIL",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_unreached: Should have rejected: undefined Reached unreachable code",
+            "FF65": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 3
           }
         },
         "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "stNum": 5,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF12": "FAIL",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "promise_test: Unhandled rejection with value: object \"InvalidStateError\"",
+            "FF65": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 3
           }
         },
         "If payment method identifier and serialized parts are supported, resolve promise with true.": {
+          "stNum": 1,
           "byUA": {
             "FF65": "PASS",
             "SF12": "FAIL"
+          },
+          "UAmessage": {
+            "SF12": "assert_true: basic-card should be supported expected true got false"
           },
           "totals": {
             "PASS": 1,
@@ -2805,28 +3808,34 @@
           }
         },
         "If payment method identifier is unknown, resolve promise with false.": {
+          "stNum": 2,
           "byUA": {
             "FF65": "PASS",
             "SF12": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 2
           }
         },
         "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
+          "stNum": 3,
           "byUA": {
             "FF65": "PASS",
             "SF12": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 2
           }
         },
         "Calling canMakePayment() multiple times is always a new object.": {
+          "stNum": 6,
           "byUA": {
             "FF65": "PASS",
             "SF12": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 2
           }
@@ -2839,130 +3848,162 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Don't crash if there is an abusive number of payment methods in the methodData sequence": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Don't crash if PaymentMethodData.supportedMethods is an abusive length": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Don't crash if the request id has an abusive length": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Don't crash if PaymentDetailsInit.total.label is an abusive length": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Don't crash if total.amount.value is an abusive length": {
+          "stNum": 4,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Don't crash if details.displayItems has an abusive number of items": {
+          "stNum": 5,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Don't crash if details.shippingOptions has an abusive number of items": {
+          "stNum": 6,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Don't crash if PaymentShippingOptions.label is an abusive length": {
+          "stNum": 7,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Don't crash if the PaymentShippingOptions.amount.value is an abusive length": {
+          "stNum": 8,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Don't crash if PaymentItem.label is an abusive length": {
+          "stNum": 9,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -2973,358 +4014,447 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "If details.id is missing, assign an identifier": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If details.id is missing, assign a unique identifier": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If the same id is provided, then use it": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Use ids even if they are strange": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Use provided request ID": {
+          "stNum": 4,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If the length of the methodData sequence is zero, then throw a TypeError": {
+          "stNum": 5,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Modifier method data must be JSON-serializable object": {
+          "stNum": 6,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Rethrow any exceptions of JSON-serializing paymentMethod.data into a string": {
+          "stNum": 7,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If details.total.amount.value is not a valid decimal monetary value, then throw a TypeError": {
+          "stNum": 8,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentDetailsBase members can be 0 length": {
+          "stNum": 9,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If the first character of details.total.amount.value is U+002D HYPHEN-MINUS, then throw a TypeError": {
+          "stNum": 10,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "For each item in details.displayItems: if item.amount.value is not a valid decimal monetary value, then throw a TypeError": {
+          "stNum": 11,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Negative values are allowed for displayItems.amount.value, irrespective of total amount": {
+          "stNum": 12,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "it handles high precision currency values without throwing": {
+          "stNum": 13,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "For each option in details.shippingOptions: if option.amount.value is not a valid decimal monetary value, then throw a TypeError": {
+          "stNum": 14,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If there is no selected shipping option, then PaymentRequest.shippingOption remains null": {
+          "stNum": 15,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If there is a selected shipping option, and requestShipping is set, then that option becomes synchronously selected": {
+          "stNum": 16,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If requestShipping is set, and if there is a multiple selected shipping options, only the last is selected.": {
+          "stNum": 17,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If there are any duplicate shipping option ids, and shipping is requested, then throw a TypeError": {
+          "stNum": 18,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Throw when there are duplicate shippingOption ids, even if other values are different": {
+          "stNum": 19,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Throw TypeError if modifier.total.amount.value is not a valid decimal monetary value": {
+          "stNum": 20,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If amount.value of additionalDisplayItems is not a valid decimal monetary value, then throw a TypeError": {
+          "stNum": 21,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Modifier data must be JSON-serializable object (an Array in this case)": {
+          "stNum": 22,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Modifier data must be JSON-serializable object (an Object in this case)": {
+          "stNum": 23,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Rethrow any exceptions of JSON-serializing modifier.data": {
+          "stNum": 24,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Shipping type should be valid": {
+          "stNum": 25,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest.shippingAddress must initially be null": {
+          "stNum": 26,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If options.requestShipping is not set, then request.shippingType attribute is null.": {
+          "stNum": 27,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If options.requestShipping is true, request.shippingType will be options.shippingType.": {
+          "stNum": 28,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -3335,139 +4465,191 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Check and canonicalize valid details.total.amount": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "Check and canonicalize invalid details.total.amount and rethrow any exceptions.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "Check and canonicalize valid details.displayItems amount": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "Check and canonicalize invalid details.displayItems amount and rethrow RangeError.": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "Check and canonicalize valid details.shippingOptions amount.": {
+          "stNum": 4,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError.": {
+          "stNum": 5,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "Check and canonicalize valid modifiers[n].total amount.": {
+          "stNum": 6,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError.": {
+          "stNum": 7,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "Check and canonicalize valid modifiers[n].additionaDisplayItem amount.": {
+          "stNum": 8,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         },
         "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError.": {
+          "stNum": 9,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         }
@@ -3479,59 +4661,78 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must support valid standard URL PMIs": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Must not throw on syntactically valid standardized payment method identifiers, even if they are not supported": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Must throw on syntactically invalid standardized payment method identifiers": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: expected RangeError processing invalid standardized PMI \"basic-💳\" function \"() => {\n        const methods = [{ supportedMethods: invalidMethod }];\n        new PaymentRequest(methods, defaultDetails);\n      }\" did not throw",
+            "SI94": "assert_throws: expected RangeError processing invalid standardized PMI \"visa,mastercard\" function \"() => {\n        const methods = [{ supportedMethods: invalidMethod }];\n        new PaymentRequest(methods, defaultDetails);\n      }\" did not throw"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "Constructor MUST throw if given an invalid URL-based payment method identifier": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_throws: expected RangeError processing invalid URL PMI \"https://username@example.com/pay\" function \"() => {\n        const methods = [{ supportedMethods: invalidMethod }];\n        new PaymentRequest(methods, defaultDetails);\n      }\" did not throw"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         }
@@ -3540,20 +4741,28 @@
     "/payment-request/payment-request-hasenrolledinstrument-method-protection.tentative.https.html": {
       "byUA": {
         "CH76": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 2
+        "OK": 3
       },
       "subtests": {
         "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
+            "SF13": "FAIL",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "SF13": "assert_equals: If it throws, then it must be a NotAllowedError. expected \"NotAllowedError\" but got \"TypeError\"",
+            "SI94": "assert_equals: If it throws, then it must be a NotAllowedError. expected \"NotAllowedError\" but got \"TypeError\""
           },
           "totals": {
             "PASS": 1,
-            "FAIL": 1
+            "FAIL": 2
           }
         }
       }
@@ -3561,40 +4770,64 @@
     "/payment-request/payment-request-hasenrolledinstrument-method.tentative.https.html": {
       "byUA": {
         "CH76": "OK",
+        "SF13": "ERROR",
         "SI94": "TIMEOUT"
+      },
+      "UAmessage": {
+        "SF13": "The operation is not supported."
       },
       "totals": {
         "OK": 1,
+        "ERROR": 1,
         "TIMEOUT": 1
       },
       "subtests": {
         "hasEnrolledInstrument() resolves to false for unsupported payment methods.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
+            "SF13": "FAIL",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "SF13": "promise_test: Unhandled rejection with value: object \"TypeError: request.hasEnrolledInstrument is not a function. (In 'request.hasEnrolledInstrument()', 'request.hasEnrolledInstrument' is undefined)\"",
+            "SI94": "promise_test: Unhandled rejection with value: object \"TypeError: request.hasEnrolledInstrument is not a function\""
           },
           "totals": {
             "PASS": 1,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
+            "SF13": "FAIL",
             "SI94": "FAIL"
+          },
+          "UAmessage": {
+            "SF13": "promise_test: Unhandled rejection with value: object \"TypeError: request.hasEnrolledInstrument is not a function. (In 'request.hasEnrolledInstrument()', 'request.hasEnrolledInstrument' is undefined)\"",
+            "SI94": "promise_test: Unhandled rejection with value: object \"TypeError: request.hasEnrolledInstrument is not a function\""
           },
           "totals": {
             "PASS": 1,
-            "FAIL": 1
+            "FAIL": 2
           }
         },
         "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
+            "SF13": "FAIL",
             "SI94": "TIMEOUT"
+          },
+          "UAmessage": {
+            "SF13": "assert_throws: function \"function () { throw e }\" threw object \"NotSupportedError: The operation is not supported.\" that is not a DOMException AbortError: property \"code\" is equal to 9, expected 20",
+            "SI94": "Test timed out"
           },
           "totals": {
             "PASS": 1,
+            "FAIL": 1,
             "TIMEOUT": 1
           }
         }
@@ -3606,34 +4839,42 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -3644,22 +4885,29 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequest constructor must not be exposed in insecure context": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "assert_false: expected false got true"
+          },
           "totals": {
-            "PASS": 4,
+            "PASS": 5,
             "FAIL": 1
           }
         }
@@ -3671,22 +4919,27 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentRequest constructor must not be exposed in worker global scope": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -3697,58 +4950,72 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must have a onshippingaddresschange IDL attribute": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\"": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "onshippingaddresschange attribute and listeners both work": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -3759,58 +5026,72 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must have a onshippingoptionchange IDL attribute": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\"": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "onshippingoptionchange attribute and listeners both work": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -3821,34 +5102,42 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must have a .shippingAddress IDL attribute.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         ".shippingAddress attribute must default to null.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -3859,82 +5148,102 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must have a .shippingOption IDL attribute.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         ".shippingOption attribute must default to null.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If there is a single shipping option, but selected is false, then .shippingOption must be null.": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null.": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "Given multiple shipping options, it must use the selected shipping option for .shippingOption value.": {
+          "stNum": 4,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order.": {
+          "stNum": 5,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -3945,46 +5254,57 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Must have a shippingType IDL attribute": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If options.requestShipping is false, then request.shippingType attribute is null.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         },
         "If options.requestShipping is true, request.shippingType will be options.shippingType.": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 5
+            "PASS": 6
           }
         }
       }
@@ -3995,79 +5315,119 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "Calling show() without being triggered by user interaction throws": {
+          "stNum": 0,
           "byUA": {
             "CH76": "TIMEOUT",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "TIMEOUT"
+          },
+          "UAmessage": {
+            "CH76": "Test timed out",
+            "ED44": "assert_throws: function \"function () { throw e }\" threw object \"AbortError\" that is not a DOMException SecurityError: property \"code\" is equal to 20, expected 18",
+            "SI94": "Test timed out"
           },
           "totals": {
             "TIMEOUT": 2,
             "FAIL": 1,
-            "PASS": 2
+            "PASS": 3
           }
         },
         "Throws if the promise [[state]] is not 'created'.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF12": "FAIL",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "FF65": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 3
           }
         },
         "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.": {
+          "stNum": 2,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF12": "FAIL",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {
+            "ED44": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "FF65": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          },
           "totals": {
-            "PASS": 2,
+            "PASS": 3,
             "FAIL": 3
           }
         },
         "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.": {
+          "stNum": 3,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF12": "FAIL",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "FF65": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SI94": "assert_throws: function \"function() { throw e }\" threw object \"InvalidStateError: Already called show() once\" that is not a DOMException NotSupportedError: property \"code\" is equal to 11, expected 9"
+          },
           "totals": {
-            "PASS": 1,
+            "PASS": 2,
             "FAIL": 4
           }
         },
         "Calling show() multiple times always returns a new promise.": {
+          "stNum": 4,
           "byUA": {
             "CH76": "PASS",
+            "SF13": "PASS",
             "SI94": "PASS"
           },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2
+            "PASS": 3
           }
         },
         "Calling show() multiple times is always a new object.": {
+          "stNum": 4,
           "byUA": {
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF12": "FAIL"
+          },
+          "UAmessage": {
+            "ED44": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "FF65": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
           },
           "totals": {
             "FAIL": 3
@@ -4081,35 +5441,49 @@
         "ED44": "OK",
         "FF65": "OK",
         "SF12": "OK",
+        "SF13": "OK",
         "SI94": "OK"
       },
+      "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 6
       },
       "subtests": {
         "PaymentResponse inherits from EventTarget": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_equals: expected function \"function EventTarget() { [native code] }\" but got function \"function() {\n    [native code]\n}\"",
+            "SI94": "assert_equals: expected function \"function EventTarget() { [native code] }\" but got function \"function () { [native code] }\""
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         },
         "PaymentResponse has an onpayerdetailchange in the prototype chain": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
             "SF12": "PASS",
+            "SF13": "PASS",
             "SI94": "FAIL"
           },
+          "UAmessage": {
+            "ED44": "assert_true: expected true got false",
+            "SI94": "assert_true: expected true got false"
+          },
           "totals": {
-            "PASS": 3,
+            "PASS": 4,
             "FAIL": 2
           }
         }
@@ -4121,33 +5495,52 @@
         "ED44": "OK",
         "FF65": "TIMEOUT",
         "SF12": "ERROR",
+        "SF13": "TIMEOUT",
         "SI94": "TIMEOUT"
+      },
+      "UAmessage": {
+        "SF12": "show() must be triggered by user activation."
       },
       "totals": {
         "OK": 2,
-        "TIMEOUT": 2,
+        "TIMEOUT": 3,
         "ERROR": 1
       },
       "subtests": {
         "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "FAIL",
             "ED44": "FAIL",
             "FF65": "NOTRUN",
             "SF12": "FAIL",
+            "SF13": "TIMEOUT",
             "SI94": "TIMEOUT"
+          },
+          "UAmessage": {
+            "CH76": "promise_test: Unhandled rejection with value: object \"AbortError: Request cancelled\"",
+            "ED44": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "assert_throws: The iframe was navigated away, so showPromise must reject with AbortError function \"function () { throw e }\" threw object \"SecurityError: show() must be triggered by user activation.\" that is not a DOMException AbortError: property \"code\" is equal to 18, expected 20",
+            "SF13": "Test timed out",
+            "SI94": "Test timed out"
           },
           "totals": {
             "FAIL": 3,
             "NOTRUN": 1,
-            "TIMEOUT": 1
+            "TIMEOUT": 2
           }
         },
         "PaymentRequest.show() aborts if the document is not active": {
+          "stNum": 0,
           "byUA": {
             "ED44": "FAIL",
             "FF65": "TIMEOUT",
             "SF12": "FAIL"
+          },
+          "UAmessage": {
+            "ED44": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "FF65": "Test timed out",
+            "SF12": "promise_test: Unhandled rejection with value: object \"InvalidStateError: The object is in an invalid state.\""
           },
           "totals": {
             "FAIL": 2,
@@ -4155,10 +5548,15 @@
           }
         },
         "PaymentRequest.show() aborts if the document is active, but not fully active": {
+          "stNum": 1,
           "byUA": {
             "ED44": "FAIL",
             "FF65": "NOTRUN",
             "SF12": "FAIL"
+          },
+          "UAmessage": {
+            "ED44": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
+            "SF12": "promise_test: Unhandled rejection with value: object \"ReferenceError: Can't find variable: iframe\""
           },
           "totals": {
             "FAIL": 2,
@@ -4171,22 +5569,27 @@
       "byUA": {
         "CH76": "OK"
       },
+      "UAmessage": {},
       "totals": {
         "OK": 1
       },
       "subtests": {
         "PaymentRequest.show() aborts if the document is not active.": {
+          "stNum": 0,
           "byUA": {
             "CH76": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 1
           }
         },
         "PaymentRequest.show() aborts if the document is active, but not fully active.": {
+          "stNum": 1,
           "byUA": {
             "CH76": "PASS"
           },
+          "UAmessage": {},
           "totals": {
             "PASS": 1
           }
