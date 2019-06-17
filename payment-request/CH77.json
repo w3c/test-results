@@ -320,8 +320,8 @@
       "subtests": [
         {
           "name": "PaymentRequest removing allowpaymentrequest after load and then navigating",
-          "status": "FAIL",
-          "message": "assert_array_equals: after navigation lengths differ, expected 3 got 4"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -344,8 +344,8 @@
       "subtests": [
         {
           "name": "PaymentRequest setting allowpaymentrequest after load and then navigating",
-          "status": "FAIL",
-          "message": "assert_array_equals: before navigation lengths differ, expected 3 got 4"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -366,8 +366,8 @@
         },
         {
           "name": "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.",
-          "status": "FAIL",
-          "message": "assert_throws: PaymentMethodData.data is invalid. function \"() => {\n          const badMethod = Object.assign(\n            {},\n            method,\n            /* This is invalid in both Apple Pay and Basic Card */\n            { data: { supportedNetworks: \"this will throw\" } }\n          );\n          new PaymentRequest([badMethod], details);\n        }\" did not throw"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1036,43 +1036,43 @@
       "subtests": [
         {
           "name": "The top browsing context can only show one payment sheet at a time.",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: No show() or retry() in progress, so nothing to abort\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "If an iframe shows a payment request, the top-level browsing context can't also show one.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "An iframe cannot show a payment request if the top-level window is already showing one.",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "Using a popup window prevents the top-browsing context from showing a payment request",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "Given multiple nested browsing contexts, and an iframe calls show() first, other nested browsing contexts can't show a request.",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "Navigating an iframe as a nested browsing context sets 'payment request is showing boolean' to false.",
-          "status": "NOTRUN",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Navigating a popup as a nested browsing context sets 'payment request is showing boolean' to false.",
@@ -1081,7 +1081,7 @@
         }
       ],
       "status": "ERROR",
-      "message": "Request cancelled"
+      "message": "The website has aborted the payment"
     },
     {
       "test": "/payment-request/payment-request-abort-method.https.html",
@@ -1713,23 +1713,6 @@
           "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.",
           "status": "FAIL",
           "message": "promise_test: Unhandled rejection with value: object \"AbortError: Request cancelled\""
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/rejects_if_not_active_manual.https.html",
-      "subtests": [
-        {
-          "name": "PaymentRequest.show() aborts if the document is not active.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest.show() aborts if the document is active, but not fully active.",
-          "status": "PASS",
-          "message": null
         }
       ],
       "status": "OK",
