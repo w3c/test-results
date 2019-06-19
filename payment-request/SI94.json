@@ -320,8 +320,8 @@
       "subtests": [
         {
           "name": "PaymentRequest removing allowpaymentrequest after load and then navigating",
-          "status": "FAIL",
-          "message": "assert_array_equals: after navigation lengths differ, expected 3 got 4"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -344,8 +344,8 @@
       "subtests": [
         {
           "name": "PaymentRequest setting allowpaymentrequest after load and then navigating",
-          "status": "FAIL",
-          "message": "assert_array_equals: before navigation lengths differ, expected 3 got 4"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1036,28 +1036,28 @@
       "subtests": [
         {
           "name": "The top browsing context can only show one payment sheet at a time.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "If an iframe shows a payment request, the top-level browsing context can't also show one.",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "An iframe cannot show a payment request if the top-level window is already showing one.",
-          "status": "NOTRUN",
+          "status": "PASS",
           "message": null
         },
         {
           "name": "Using a popup window prevents the top-browsing context from showing a payment request",
-          "status": "NOTRUN",
-          "message": null
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"AbortError: Request cancelled\""
         },
         {
           "name": "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.",
-          "status": "NOTRUN",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.",
@@ -1080,8 +1080,8 @@
           "message": null
         }
       ],
-      "status": "TIMEOUT",
-      "message": null
+      "status": "ERROR",
+      "message": "Request cancelled"
     },
     {
       "test": "/payment-request/payment-request-abort-method.https.html",
