@@ -939,17 +939,16 @@
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF13": "FAIL",
-            "SI94": "FAIL"
+            "SI94": "PASS"
           },
           "UAmessage": {
             "ED44": "assert_equals: before navigation expected \"Success\" but got \"Exception\"",
             "FF65": "assert_array_equals: after navigation lengths differ, expected 3 got 4",
-            "SF13": "assert_equals: before navigation expected \"Success\" but got \"Exception\"",
-            "SI94": "assert_array_equals: after navigation lengths differ, expected 3 got 4"
+            "SF13": "assert_equals: before navigation expected \"Success\" but got \"Exception\""
           },
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2,
+            "FAIL": 3
           }
         }
       }
@@ -1009,17 +1008,16 @@
             "ED44": "FAIL",
             "FF65": "FAIL",
             "SF13": "FAIL",
-            "SI94": "FAIL"
+            "SI94": "PASS"
           },
           "UAmessage": {
             "ED44": "assert_equals: before navigation expected \"Exception\" but got \"Success\"",
             "FF65": "assert_array_equals: before navigation lengths differ, expected 3 got 4",
-            "SF13": "assert_equals: after navigation expected \"Success\" but got \"Exception\"",
-            "SI94": "assert_array_equals: before navigation lengths differ, expected 3 got 4"
+            "SF13": "assert_equals: after navigation expected \"Success\" but got \"Exception\""
           },
           "totals": {
-            "PASS": 1,
-            "FAIL": 4
+            "PASS": 2,
+            "FAIL": 3
           }
         }
       }
@@ -3201,15 +3199,15 @@
       "byUA": {
         "CH77": "ERROR",
         "SF13": "ERROR",
-        "SI94": "TIMEOUT"
+        "SI94": "ERROR"
       },
       "UAmessage": {
         "CH77": "The website has aborted the payment",
-        "SF13": "show() must be triggered by user activation."
+        "SF13": "show() must be triggered by user activation.",
+        "SI94": "Request cancelled"
       },
       "totals": {
-        "ERROR": 2,
-        "TIMEOUT": 1
+        "ERROR": 3
       },
       "subtests": {
         "The top browsing context can only show one payment sheet at a time.": {
@@ -3217,16 +3215,14 @@
           "byUA": {
             "CH77": "PASS",
             "SF13": "FAIL",
-            "SI94": "TIMEOUT"
+            "SI94": "PASS"
           },
           "UAmessage": {
-            "SF13": "assert_throws: Attempting to show a second payment request must reject. function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException InvalidStateError: property \"code\" is equal to 20, expected 11",
-            "SI94": "Test timed out"
+            "SF13": "assert_throws: Attempting to show a second payment request must reject. function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException InvalidStateError: property \"code\" is equal to 20, expected 11"
           },
           "totals": {
-            "PASS": 1,
-            "FAIL": 1,
-            "TIMEOUT": 1
+            "PASS": 2,
+            "FAIL": 1
           }
         },
         "If an iframe shows a payment request, the top-level browsing context can't also show one.": {
@@ -3234,12 +3230,11 @@
           "byUA": {
             "CH77": "PASS",
             "SF13": "PASS",
-            "SI94": "NOTRUN"
+            "SI94": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "NOTRUN": 1
+            "PASS": 3
           }
         },
         "An iframe cannot show a payment request if the top-level window is already showing one.": {
@@ -3247,12 +3242,11 @@
           "byUA": {
             "CH77": "PASS",
             "SF13": "PASS",
-            "SI94": "NOTRUN"
+            "SI94": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "NOTRUN": 1
+            "PASS": 3
           }
         },
         "Using a popup window prevents the top-browsing context from showing a payment request": {
@@ -3260,15 +3254,15 @@
           "byUA": {
             "CH77": "PASS",
             "SF13": "FAIL",
-            "SI94": "NOTRUN"
+            "SI94": "FAIL"
           },
           "UAmessage": {
-            "SF13": "promise_test: Unhandled rejection with value: object \"InvalidStateError: The object is in an invalid state.\""
+            "SF13": "promise_test: Unhandled rejection with value: object \"InvalidStateError: The object is in an invalid state.\"",
+            "SI94": "promise_test: Unhandled rejection with value: object \"AbortError: Request cancelled\""
           },
           "totals": {
             "PASS": 1,
-            "FAIL": 1,
-            "NOTRUN": 1
+            "FAIL": 2
           }
         },
         "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.": {
@@ -3276,15 +3270,15 @@
           "byUA": {
             "CH77": "PASS",
             "SF13": "TIMEOUT",
-            "SI94": "NOTRUN"
+            "SI94": "TIMEOUT"
           },
           "UAmessage": {
-            "SF13": "Test timed out"
+            "SF13": "Test timed out",
+            "SI94": "Test timed out"
           },
           "totals": {
             "PASS": 1,
-            "TIMEOUT": 1,
-            "NOTRUN": 1
+            "TIMEOUT": 2
           }
         },
         "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.": {
