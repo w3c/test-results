@@ -311,8 +311,8 @@
       "subtests": [
         {
           "name": "aria-current with unrecognized value NEW",
-          "status": "FAIL",
-          "message": "assert_true: \"property objectAttributes contains current:true\" failed   \n**Actual value:** '['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'current:foo', 'margin-top:0px', 'xml-roles:group', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']'  \n;  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -386,8 +386,8 @@
       "subtests": [
         {
           "name": "aria-disabled value changes",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"event type is object:state-changed:enabled\" failed   \n; \"event detail1 is 0\" failed   \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -511,6 +511,42 @@
       "subtests": [
         {
           "name": "aria-expanded=true",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/aria-expanded_true_on_application-manual.html",
+      "subtests": [
+        {
+          "name": "aria-expanded=true on application",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/aria-expanded_true_on_checkbox-manual.html",
+      "subtests": [
+        {
+          "name": "aria-expanded=true on checkbox",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/aria-expanded_true_on_switch-manual.html",
+      "subtests": [
+        {
+          "name": "aria-expanded=true on switch",
           "status": "PASS",
           "message": null
         }
@@ -665,8 +701,8 @@
       "subtests": [
         {
           "name": "aria-hidden=true",
-          "status": "FAIL",
-          "message": "assert_true: \"property accessible is false\" failed   \n**Actual value:** 'true'  \n;  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -677,8 +713,8 @@
       "subtests": [
         {
           "name": "aria-hidden=true when element is focused or fires event NEW",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_true: \"property accessible is true\" failed   \n**Actual value:** 'false'  \n; \"property objectAttributes contains hidden:true\" failed   \n**Actual value:** 'None'  \nERROR: Object not found  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1039,8 +1075,8 @@
       "subtests": [
         {
           "name": "aria-placeholder NEW",
-          "status": "FAIL",
-          "message": "assert_true: \"property objectAttributes contains placeholder-text:hello world\" failed   \n**Actual value:** '['formatting:block', 'display:block', 'margin-right:0px', 'margin-bottom:0px', 'placeholder:hello world', 'margin-top:0px', 'xml-roles:textbox', 'tag:div', 'id:test', 'text-indent:0px', 'text-align:start', 'margin-left:0px']'  \n;  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1051,6 +1087,18 @@
       "subtests": [
         {
           "name": "aria-posinset",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/aria-posinset_and_aria-setsize_on_row-manual.html",
+      "subtests": [
+        {
+          "name": "aria-posinset and aria-setsize on row",
           "status": "PASS",
           "message": null
         }
@@ -1215,6 +1263,18 @@
       "subtests": [
         {
           "name": "aria-required=true",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/aria-required_true_on_checkbox-manual.html",
+      "subtests": [
+        {
+          "name": "aria-required=true on checkbox",
           "status": "PASS",
           "message": null
         }
@@ -1495,7 +1555,7 @@
         {
           "name": "banner",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1627,7 +1687,7 @@
         {
           "name": "complementary",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1639,7 +1699,7 @@
         {
           "name": "contentinfo",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1651,7 +1711,19 @@
         {
           "name": "definition",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_DESCRIPTION_VALUE\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_DESCRIPTION_VALUE\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/deletion-manual.html",
+      "subtests": [
+        {
+          "name": "deletion",
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE\\_CONTENT\\_DELETION\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1866,8 +1938,8 @@
       "subtests": [
         {
           "name": "Exclude presentational children of slider",
-          "status": "FAIL",
-          "message": "assert_true: \"property accessible is false\" failed   \n**Actual value:** 'true'  \n;  expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1927,7 +1999,7 @@
         {
           "name": "form",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_FORM'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_FORM'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -1962,6 +2034,18 @@
       "subtests": [
         {
           "name": "group",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/group_as_child_of_listbox-manual.html",
+      "subtests": [
+        {
+          "name": "group as child of listbox",
           "status": "PASS",
           "message": null
         }
@@ -2102,6 +2186,18 @@
       "message": null
     },
     {
+      "test": "/core-aam/insertion-manual.html",
+      "subtests": [
+        {
+          "name": "insertion",
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE\\_CONTENT\\_INSERTION\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/core-aam/link-manual.html",
       "subtests": [
         {
@@ -2167,7 +2263,7 @@
         {
           "name": "log",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LOG\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_LOG\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2179,7 +2275,7 @@
         {
           "name": "main",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2191,7 +2287,7 @@
         {
           "name": "marquee",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_MARQUEE\" failed   \n**Actual value:** 'ROLE\\_ANIMATION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_MARQUEE\" failed   \n**Actual value:** 'ROLE\\_ANIMATION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2203,7 +2299,19 @@
         {
           "name": "math",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_MATH\" failed   \n**Actual value:** 'ROLE\\_UNKNOWN'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_MATH\" failed   \n**Actual value:** 'ROLE\\_UNKNOWN'  \n;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/math_role_children_are_not_presentational-manual.html",
+      "subtests": [
+        {
+          "name": "Math role children are not presentational",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -2282,6 +2390,18 @@
       "message": null
     },
     {
+      "test": "/core-aam/menuitemcheckbox_child_of_group-manual.html",
+      "subtests": [
+        {
+          "name": "menuitemcheckbox child of group",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/core-aam/menuitemradio-manual.html",
       "subtests": [
         {
@@ -2294,12 +2414,24 @@
       "message": null
     },
     {
+      "test": "/core-aam/meter-manual.html",
+      "subtests": [
+        {
+          "name": "meter",
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE\\_LEVEL_BAR\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n; \"property interfaces contains Value\" failed   \n**Actual value:** '['Accessible', 'Collection', 'Component', 'EditableText', 'Hypertext', 'Hyperlink', 'Text']'  \n;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/core-aam/navigation-manual.html",
       "subtests": [
         {
           "name": "navigation",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2575,7 +2707,7 @@
         {
           "name": "search",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_LANDMARK\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2648,6 +2780,30 @@
           "name": "status",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/subscript-manual.html",
+      "subtests": [
+        {
+          "name": "subscript",
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE\\_SUBSCRIPT\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/core-aam/superscript-manual.html",
+      "subtests": [
+        {
+          "name": "superscript",
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE\\_SUPERSCRIPT\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",
@@ -2750,12 +2906,24 @@
       "message": null
     },
     {
+      "test": "/core-aam/time-manual.html",
+      "subtests": [
+        {
+          "name": "time",
+          "status": "FAIL",
+          "message": "assert_true: \"property role is ROLE\\_STATIC\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/core-aam/timer-manual.html",
       "subtests": [
         {
           "name": "timer",
           "status": "FAIL",
-          "message": "assert_true: \"property role is ROLE_TIMER\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
+          "message": "assert_true: \"property role is ROLE\\_TIMER\" failed   \n**Actual value:** 'ROLE\\_SECTION'  \n;  expected true got false"
         }
       ],
       "status": "OK",

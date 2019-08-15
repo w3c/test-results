@@ -51,3 +51,10 @@ Index of Implementations
 * ME04 - Edge on Windows using UIA
   * email: Melanie.Richards@microsoft.com
   * link: <https://www.microsoft.com/microsoft-edge>
+
+Generating Results
+------------------
+1. Save the new results in test-results/core-aam-1.2
+2. Be sure to update filter.js to include tests specific to changes in 1.2
+3. Run `wptreport -f -m -s "Core-AAM 1.2"` from test-results/core-aam-1.2
+
