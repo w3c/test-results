@@ -58,6 +58,11 @@
           "message": null
         },
         {
+          "name": "Relative validationURLs use the document.baseURI as the base.",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"https://pass.com/pass\" but got \"https://web-platform.test:8443/payment-request/MerchantValidationEvent/pass\""
+        },
+        {
           "name": "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value.",
           "status": "PASS",
           "message": null
@@ -176,11 +181,11 @@
       "subtests": [
         {
           "name": "PaymentRequest <iframe allowpaymentrequest> in non-active document (cross-origin)",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -200,26 +205,26 @@
       "subtests": [
         {
           "name": "iframe",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"Success\" but got \"Exception\""
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "frame",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "object",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "embed",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -266,26 +271,26 @@
       "subtests": [
         {
           "name": "iframe",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "frame",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "object",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
           "name": "embed",
-          "status": "PASS",
-          "message": null
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -320,35 +325,29 @@
       "subtests": [
         {
           "name": "PaymentRequest removing allowpaymentrequest after load and then navigating",
-          "status": "FAIL",
-          "message": "assert_equals: before navigation expected \"Success\" but got \"Exception\""
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
       "test": "/payment-request/allowpaymentrequest/setting-allowpaymentrequest-timing.https.sub.html",
-      "subtests": [
-        {
-          "name": "PaymentRequest setting allowpaymentrequest after document creation, before response",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/payment-request/allowpaymentrequest/setting-allowpaymentrequest.https.sub.html",
       "subtests": [
         {
           "name": "PaymentRequest setting allowpaymentrequest after load and then navigating",
-          "status": "FAIL",
-          "message": "assert_equals: after navigation expected \"Success\" but got \"Exception\""
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         }
       ],
-      "status": "OK",
+      "status": "TIMEOUT",
       "message": null
     },
     {
@@ -1033,55 +1032,9 @@
     },
     {
       "test": "/payment-request/payment-is-showing.https.html",
-      "subtests": [
-        {
-          "name": "The top browsing context can only show one payment sheet at a time.",
-          "status": "FAIL",
-          "message": "assert_throws: Attempting to show a second payment request must reject. function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException InvalidStateError: property \"code\" is equal to 20, expected 11"
-        },
-        {
-          "name": "If an iframe shows a payment request, the top-level browsing context can't also show one.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "An iframe cannot show a payment request if the top-level window is already showing one.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Using a popup window prevents the top-browsing context from showing a payment request",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: The object is in an invalid state.\""
-        },
-        {
-          "name": "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Given multiple nested browsing contexts, and an iframe calls show() first, other nested browsing contexts can't show a request.",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Navigating an iframe as a nested browsing context sets 'payment request is showing boolean' to false.",
-          "status": "NOTRUN",
-          "message": null
-        },
-        {
-          "name": "Navigating a popup as a nested browsing context sets 'payment request is showing boolean' to false.",
-          "status": "NOTRUN",
-          "message": null
-        }
-      ],
-      "status": "ERROR",
-      "message": "show() must be triggered by user activation."
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/payment-request/payment-request-abort-method.https.html",
@@ -1710,12 +1663,12 @@
       "test": "/payment-request/rejects_if_not_active.https.html",
       "subtests": [
         {
-          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.",
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     }
   ]
