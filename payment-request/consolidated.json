@@ -261,6 +261,18 @@
             "PASS": 3,
             "FAIL": 2
           }
+        },
+        "Relative validationURLs use the document.baseURI as the base.": {
+          "stNum": 6,
+          "byUA": {
+            "SF13": "FAIL"
+          },
+          "UAmessage": {
+            "SF13": "assert_equals: expected \"https://pass.com/pass\" but got \"https://web-platform.test:8443/payment-request/MerchantValidationEvent/pass\""
+          },
+          "totals": {
+            "FAIL": 1
+          }
         }
       }
     },
@@ -517,12 +529,13 @@
         "CH78": "OK",
         "ED44": "OK",
         "FF65": "OK",
-        "SF13": "OK",
+        "SF13": "TIMEOUT",
         "SI94": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 4,
+        "TIMEOUT": 1
       },
       "subtests": {
         "PaymentRequest <iframe allowpaymentrequest> in non-active document (cross-origin)": {
@@ -531,15 +544,17 @@
             "CH78": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
-            "SF13": "PASS",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
           "UAmessage": {
-            "ED44": "assert_throws: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw object \"Error: Can't execute code from a freed script\" (\"Error\") expected object \"[object Object]\" (\"SecurityError\")"
+            "ED44": "assert_throws: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw object \"Error: Can't execute code from a freed script\" (\"Error\") expected object \"[object Object]\" (\"SecurityError\")",
+            "SF13": "Test timed out"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 3,
+            "FAIL": 1,
+            "TIMEOUT": 1
           }
         }
       }
@@ -581,12 +596,13 @@
         "CH78": "OK",
         "ED44": "OK",
         "FF65": "OK",
-        "SF13": "OK",
+        "SF13": "TIMEOUT",
         "SI94": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 4,
+        "TIMEOUT": 1
       },
       "subtests": {
         "iframe": {
@@ -595,15 +611,15 @@
             "CH78": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
-            "SF13": "FAIL",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
           "UAmessage": {
-            "SF13": "assert_equals: expected \"Success\" but got \"Exception\""
+            "SF13": "Test timed out"
           },
           "totals": {
             "PASS": 4,
-            "FAIL": 1
+            "TIMEOUT": 1
           }
         },
         "frame": {
@@ -612,12 +628,15 @@
             "CH78": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
-            "SF13": "PASS",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "SF13": "Test timed out"
+          },
           "totals": {
-            "PASS": 5
+            "PASS": 4,
+            "TIMEOUT": 1
           }
         },
         "object": {
@@ -626,15 +645,17 @@
             "CH78": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
-            "SF13": "PASS",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
           "UAmessage": {
-            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference",
+            "SF13": "Test timed out"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 3,
+            "FAIL": 1,
+            "TIMEOUT": 1
           }
         },
         "embed": {
@@ -643,15 +664,17 @@
             "CH78": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
-            "SF13": "PASS",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
           "UAmessage": {
-            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference",
+            "SF13": "Test timed out"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 3,
+            "FAIL": 1,
+            "TIMEOUT": 1
           }
         }
       }
@@ -770,12 +793,13 @@
         "CH78": "OK",
         "ED44": "OK",
         "FF65": "OK",
-        "SF13": "OK",
+        "SF13": "TIMEOUT",
         "SI94": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 4,
+        "TIMEOUT": 1
       },
       "subtests": {
         "iframe": {
@@ -784,12 +808,15 @@
             "CH78": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
-            "SF13": "PASS",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "SF13": "Test timed out"
+          },
           "totals": {
-            "PASS": 5
+            "PASS": 4,
+            "TIMEOUT": 1
           }
         },
         "frame": {
@@ -798,12 +825,15 @@
             "CH78": "PASS",
             "ED44": "PASS",
             "FF65": "PASS",
-            "SF13": "PASS",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
-          "UAmessage": {},
+          "UAmessage": {
+            "SF13": "Test timed out"
+          },
           "totals": {
-            "PASS": 5
+            "PASS": 4,
+            "TIMEOUT": 1
           }
         },
         "object": {
@@ -812,15 +842,17 @@
             "CH78": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
-            "SF13": "PASS",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
           "UAmessage": {
-            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference",
+            "SF13": "Test timed out"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 3,
+            "FAIL": 1,
+            "TIMEOUT": 1
           }
         },
         "embed": {
@@ -829,15 +861,17 @@
             "CH78": "PASS",
             "ED44": "FAIL",
             "FF65": "PASS",
-            "SF13": "PASS",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
           "UAmessage": {
-            "ED44": "Unable to get property 'postMessage' of undefined or null reference"
+            "ED44": "Unable to get property 'postMessage' of undefined or null reference",
+            "SF13": "Test timed out"
           },
           "totals": {
-            "PASS": 4,
-            "FAIL": 1
+            "PASS": 3,
+            "FAIL": 1,
+            "TIMEOUT": 1
           }
         }
       }
@@ -924,12 +958,13 @@
         "CH78": "OK",
         "ED44": "OK",
         "FF65": "OK",
-        "SF13": "OK",
+        "SF13": "TIMEOUT",
         "SI94": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 4,
+        "TIMEOUT": 1
       },
       "subtests": {
         "PaymentRequest removing allowpaymentrequest after load and then navigating": {
@@ -938,17 +973,18 @@
             "CH78": "PASS",
             "ED44": "FAIL",
             "FF65": "FAIL",
-            "SF13": "FAIL",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
           "UAmessage": {
             "ED44": "assert_equals: before navigation expected \"Success\" but got \"Exception\"",
             "FF65": "assert_array_equals: after navigation lengths differ, expected 3 got 4",
-            "SF13": "assert_equals: before navigation expected \"Success\" but got \"Exception\""
+            "SF13": "Test timed out"
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 3
+            "FAIL": 2,
+            "TIMEOUT": 1
           }
         }
       }
@@ -958,12 +994,15 @@
         "CH78": "OK",
         "ED44": "OK",
         "FF65": "OK",
-        "SF13": "OK",
+        "SF13": "TIMEOUT",
         "SI94": "OK"
       },
-      "UAmessage": {},
+      "UAmessage": {
+        "SF13": ""
+      },
       "totals": {
-        "OK": 5
+        "OK": 4,
+        "TIMEOUT": 1
       },
       "subtests": {
         "PaymentRequest setting allowpaymentrequest after document creation, before response": {
@@ -972,7 +1011,6 @@
             "CH78": "FAIL",
             "ED44": "FAIL",
             "FF65": "FAIL",
-            "SF13": "PASS",
             "SI94": "FAIL"
           },
           "UAmessage": {
@@ -982,8 +1020,7 @@
             "SI94": "assert_equals: expected \"Exception\" but got \"Success\""
           },
           "totals": {
-            "FAIL": 4,
-            "PASS": 1
+            "FAIL": 4
           }
         }
       }
@@ -993,12 +1030,13 @@
         "CH78": "OK",
         "ED44": "OK",
         "FF65": "OK",
-        "SF13": "OK",
+        "SF13": "TIMEOUT",
         "SI94": "OK"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 5
+        "OK": 4,
+        "TIMEOUT": 1
       },
       "subtests": {
         "PaymentRequest setting allowpaymentrequest after load and then navigating": {
@@ -1007,17 +1045,18 @@
             "CH78": "PASS",
             "ED44": "FAIL",
             "FF65": "FAIL",
-            "SF13": "FAIL",
+            "SF13": "TIMEOUT",
             "SI94": "PASS"
           },
           "UAmessage": {
             "ED44": "assert_equals: before navigation expected \"Exception\" but got \"Success\"",
             "FF65": "assert_array_equals: before navigation lengths differ, expected 3 got 4",
-            "SF13": "assert_equals: after navigation expected \"Success\" but got \"Exception\""
+            "SF13": "Test timed out"
           },
           "totals": {
             "PASS": 2,
-            "FAIL": 3
+            "FAIL": 2,
+            "TIMEOUT": 1
           }
         }
       }
@@ -3198,139 +3237,126 @@
     "/payment-request/payment-is-showing.https.html": {
       "byUA": {
         "CH78": "OK",
-        "SF13": "ERROR",
+        "SF13": "TIMEOUT",
         "SI94": "ERROR"
       },
       "UAmessage": {
-        "SF13": "show() must be triggered by user activation.",
+        "SF13": "",
         "SI94": "Request cancelled"
       },
       "totals": {
         "OK": 1,
-        "ERROR": 2
+        "TIMEOUT": 1,
+        "ERROR": 1
       },
       "subtests": {
         "The top browsing context can only show one payment sheet at a time.": {
           "stNum": 0,
           "byUA": {
             "CH78": "PASS",
-            "SF13": "FAIL",
             "SI94": "PASS"
           },
-          "UAmessage": {
-            "SF13": "assert_throws: Attempting to show a second payment request must reject. function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException InvalidStateError: property \"code\" is equal to 20, expected 11"
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 2,
-            "FAIL": 1
+            "PASS": 2
           }
         },
         "If an iframe shows a payment request, the top-level browsing context can't also show one.": {
           "stNum": 1,
           "byUA": {
             "CH78": "PASS",
-            "SF13": "PASS",
             "SI94": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 2
           }
         },
         "An iframe cannot show a payment request if the top-level window is already showing one.": {
           "stNum": 2,
           "byUA": {
             "CH78": "PASS",
-            "SF13": "PASS",
             "SI94": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 3
+            "PASS": 2
           }
         },
         "Using a popup window prevents the top-browsing context from showing a payment request": {
           "stNum": 3,
           "byUA": {
             "CH78": "PASS",
-            "SF13": "FAIL",
             "SI94": "FAIL"
           },
           "UAmessage": {
-            "SF13": "promise_test: Unhandled rejection with value: object \"InvalidStateError: The object is in an invalid state.\"",
             "SI94": "promise_test: Unhandled rejection with value: object \"AbortError: Request cancelled\""
           },
           "totals": {
             "PASS": 1,
-            "FAIL": 2
+            "FAIL": 1
           }
         },
         "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.": {
           "stNum": 4,
           "byUA": {
             "CH78": "PASS",
-            "SF13": "TIMEOUT",
             "SI94": "TIMEOUT"
           },
           "UAmessage": {
-            "SF13": "Test timed out",
             "SI94": "Test timed out"
           },
           "totals": {
             "PASS": 1,
-            "TIMEOUT": 2
+            "TIMEOUT": 1
           }
         },
         "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.": {
           "stNum": 5,
           "byUA": {
             "CH78": "PASS",
-            "SF13": "NOTRUN",
             "SI94": "NOTRUN"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 1,
-            "NOTRUN": 2
+            "NOTRUN": 1
           }
         },
         "Given multiple nested browsing contexts, and an iframe calls show() first, other nested browsing contexts can't show a request.": {
           "stNum": 6,
           "byUA": {
             "CH78": "PASS",
-            "SF13": "NOTRUN",
             "SI94": "NOTRUN"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 1,
-            "NOTRUN": 2
+            "NOTRUN": 1
           }
         },
         "Navigating an iframe as a nested browsing context sets 'payment request is showing boolean' to false.": {
           "stNum": 7,
           "byUA": {
             "CH78": "PASS",
-            "SF13": "NOTRUN",
             "SI94": "NOTRUN"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 1,
-            "NOTRUN": 2
+            "NOTRUN": 1
           }
         },
         "Navigating a popup as a nested browsing context sets 'payment request is showing boolean' to false.": {
           "stNum": 8,
           "byUA": {
             "CH78": "PASS",
-            "SF13": "NOTRUN",
             "SI94": "NOTRUN"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 1,
-            "NOTRUN": 2
+            "NOTRUN": 1
           }
         }
       }
@@ -5169,23 +5195,24 @@
         "CH78": "OK",
         "ED44": "OK",
         "FF65": "TIMEOUT",
-        "SF13": "TIMEOUT",
+        "SF13": "OK",
         "SI94": "TIMEOUT"
       },
       "UAmessage": {},
       "totals": {
-        "OK": 2,
-        "TIMEOUT": 3
+        "OK": 3,
+        "TIMEOUT": 2
       },
       "subtests": {
         "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.": {
           "stNum": 0,
           "byUA": {
-            "CH78": "PASS"
+            "CH78": "PASS",
+            "SF13": "PASS"
           },
           "UAmessage": {},
           "totals": {
-            "PASS": 1
+            "PASS": 2
           }
         },
         "PaymentRequest.show() aborts if the document is not active": {
@@ -5222,18 +5249,16 @@
           "byUA": {
             "ED44": "FAIL",
             "FF65": "NOTRUN",
-            "SF13": "TIMEOUT",
             "SI94": "TIMEOUT"
           },
           "UAmessage": {
             "ED44": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\"",
-            "SF13": "Test timed out",
             "SI94": "Test timed out"
           },
           "totals": {
             "FAIL": 1,
             "NOTRUN": 1,
-            "TIMEOUT": 2
+            "TIMEOUT": 1
           }
         }
       }
