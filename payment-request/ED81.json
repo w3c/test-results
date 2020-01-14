@@ -6,7 +6,7 @@
         {
           "name": "If event's isTrusted attribute is false, then then throw an InvalidStateError DOMException.",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         }
       ],
       "status": "OK",
@@ -30,52 +30,57 @@
         {
           "name": "MerchantValidationEvent can be constructed in secure-context.",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         },
         {
           "name": "MerchantValidationEvent can be constructed with an EventInitDict, even if not trusted.",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         },
         {
           "name": "MerchantValidationEvent can be dispatched, even if not trusted.",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         },
         {
           "name": "Must have a validationURL IDL attribute, which is initialized with to the validationURL dictionary value.",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         },
         {
           "name": "Must throw TypeError if initialized with an invalid URL.",
           "status": "FAIL",
-          "message": "assert_throws: function \"() => {\n    new MerchantValidationEvent(\"test\", { validationURL });\n  }\" threw object \"ReferenceError: 'MerchantValidationEvent' is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws: function \"() => {\n    new MerchantValidationEvent(\"test\", { validationURL });\n  }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
         },
         {
           "name": "Relative validationURLs use the document as the base.",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
+        },
+        {
+          "name": "Relative validationURLs use the document.baseURI as the base.",
+          "status": "FAIL",
+          "message": "MerchantValidationEvent is not defined"
         },
         {
           "name": "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value.",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         },
         {
           "name": "When no methodName is passed, methodName attribute defaults to the empty string",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         },
         {
           "name": "MerchantValidationEvent can be constructed with valid PMIs",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         },
         {
           "name": "MerchantValidationEvent can't be constructed with invalid PMIs",
           "status": "FAIL",
-          "message": "assert_throws: expected to throw when constructed with invalid PMI: 'basic-💳' function \"() => {\n        const event = new MerchantValidationEvent(\"test\", { methodName });\n      }\" threw object \"ReferenceError: 'MerchantValidationEvent' is not defined\" (\"ReferenceError\") expected object \"RangeError\" (\"RangeError\")"
+          "message": "assert_throws: expected to throw when constructed with invalid PMI: 'basic-💳' function \"() => {\n        const event = new MerchantValidationEvent(\"test\", { methodName });\n      }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected object \"RangeError\" (\"RangeError\")"
         }
       ],
       "status": "OK",
@@ -86,13 +91,13 @@
       "subtests": [
         {
           "name": "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value",
-          "status": "FAIL",
-          "message": "'PaymentMethodChangeEvent' is not defined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "The methodDetails member defaults to null",
-          "status": "FAIL",
-          "message": "'PaymentMethodChangeEvent' is not defined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -103,13 +108,13 @@
       "subtests": [
         {
           "name": "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value",
-          "status": "FAIL",
-          "message": "'PaymentMethodChangeEvent' is not defined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "When no dictionary is passed, the methodName member defaults to the empty string",
-          "status": "FAIL",
-          "message": "'PaymentMethodChangeEvent' is not defined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -137,8 +142,8 @@
         },
         {
           "name": "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted",
-          "status": "FAIL",
-          "message": "assert_true: set by EventInitDict expected true got undefined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequestUpdateEvent can be dispatched, even if not trusted",
@@ -176,8 +181,8 @@
       "subtests": [
         {
           "name": "PaymentRequest <iframe allowpaymentrequest> in non-active document (cross-origin)",
-          "status": "FAIL",
-          "message": "assert_throws: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw object \"Error: Can't execute code from a freed script\" (\"Error\") expected object \"[object Object]\" (\"SecurityError\")"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -188,8 +193,8 @@
       "subtests": [
         {
           "name": "PaymentRequest <iframe allowpaymentrequest> in non-active document (same-origin)",
-          "status": "FAIL",
-          "message": "assert_throws: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw object \"Error: Can't execute code from a freed script\" (\"Error\") expected object \"[object Object]\" (\"SecurityError\")"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -210,13 +215,13 @@
         },
         {
           "name": "object",
-          "status": "FAIL",
-          "message": "Unable to get property 'postMessage' of undefined or null reference"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "embed",
-          "status": "FAIL",
-          "message": "Unable to get property 'postMessage' of undefined or null reference"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -237,13 +242,13 @@
         },
         {
           "name": "object",
-          "status": "FAIL",
-          "message": "Unable to get property 'postMessage' of undefined or null reference"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "embed",
-          "status": "FAIL",
-          "message": "Unable to get property 'postMessage' of undefined or null reference"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -276,13 +281,13 @@
         },
         {
           "name": "object",
-          "status": "FAIL",
-          "message": "Unable to get property 'postMessage' of undefined or null reference"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "embed",
-          "status": "FAIL",
-          "message": "Unable to get property 'postMessage' of undefined or null reference"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -303,13 +308,13 @@
         },
         {
           "name": "object",
-          "status": "FAIL",
-          "message": "Unable to get property 'postMessage' of undefined or null reference"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "embed",
-          "status": "FAIL",
-          "message": "Unable to get property 'postMessage' of undefined or null reference"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -320,8 +325,8 @@
       "subtests": [
         {
           "name": "PaymentRequest removing allowpaymentrequest after load and then navigating",
-          "status": "FAIL",
-          "message": "assert_equals: before navigation expected \"Success\" but got \"Exception\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -332,8 +337,8 @@
       "subtests": [
         {
           "name": "PaymentRequest setting allowpaymentrequest after document creation, before response",
-          "status": "FAIL",
-          "message": "assert_equals: expected \"Exception\" but got \"Success\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -344,8 +349,8 @@
       "subtests": [
         {
           "name": "PaymentRequest setting allowpaymentrequest after load and then navigating",
-          "status": "FAIL",
-          "message": "assert_equals: before navigation expected \"Exception\" but got \"Success\""
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -366,8 +371,8 @@
         },
         {
           "name": "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.",
-          "status": "FAIL",
-          "message": "assert_throws: PaymentMethodData.data is invalid. function \"() => {\n          const badMethod = Object.assign(\n            {},\n            method,\n            /* This is invalid in both Apple Pay and Basic Card */\n            { data: { supportedNetworks: \"this will throw\" } }\n          );\n          new PaymentRequest([badMethod], details);\n        }\" did not throw"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -408,17 +413,22 @@
         },
         {
           "name": "languageCode in PaymentAddress",
-          "status": "FAIL",
-          "message": "assert_false: expected false got true"
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "regionCode in PaymentAddress",
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "supportedMethods must not support sequence<DOMString>",
-          "status": "FAIL",
-          "message": "assert_throws: function \"() => {\n    new PaymentRequest([{supportedMethods: methods}], {total: {label: 'bar', amount: {currency: 'BAZ', value: '0'}}});\n  }\" threw object \"Error: Could not complete the operation due to error 80020101.\" (\"Error\") expected object \"[object Object]\" (\"toString should be called\")"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "ERROR",
-      "message": "[object Object]"
+      "status": "OK",
+      "message": null
     },
     {
       "test": "/payment-request/idlharness.https.window.html",
@@ -429,9 +439,14 @@
           "message": null
         },
         {
+          "name": "idl_test validation",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "PaymentRequest interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of PaymentRequest is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"function() {\n    [native code]\n}\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest interface object length",
@@ -474,24 +489,29 @@
           "message": null
         },
         {
+          "name": "PaymentRequest interface: operation hasEnrolledInstrument()",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "PaymentRequest interface: attribute id",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get id' expected \"get id\" but got \"id\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest interface: attribute shippingAddress",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get shippingAddress' expected \"get shippingAddress\" but got \"shippingAddress\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest interface: attribute shippingOption",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get shippingOption' expected \"get shippingOption\" but got \"shippingOption\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest interface: attribute shippingType",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get shippingType' expected \"get shippingType\" but got \"shippingType\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest interface: attribute onmerchantvalidation",
@@ -500,18 +520,18 @@
         },
         {
           "name": "PaymentRequest interface: attribute onshippingaddresschange",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get onshippingaddresschange' expected \"get onshippingaddresschange\" but got \"onshippingaddresschange\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest interface: attribute onshippingoptionchange",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get onshippingoptionchange' expected \"get onshippingoptionchange\" but got \"onshippingoptionchange\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest interface: attribute onpaymentmethodchange",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onpaymentmethodchange\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest must be primary interface of paymentRequest",
@@ -540,6 +560,11 @@
         },
         {
           "name": "PaymentRequest interface: paymentRequest must inherit property \"canMakePayment()\" with the proper type",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"hasEnrolledInstrument()\" with the proper type",
           "status": "PASS",
           "message": null
         },
@@ -580,8 +605,8 @@
         },
         {
           "name": "PaymentRequest interface: paymentRequest must inherit property \"onpaymentmethodchange\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"onpaymentmethodchange\" not found in prototype chain"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: existence and properties of interface object",
@@ -620,63 +645,58 @@
         },
         {
           "name": "PaymentAddress interface: attribute city",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get city' expected \"get city\" but got \"city\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: attribute country",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get country' expected \"get country\" but got \"country\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: attribute dependentLocality",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get dependentLocality' expected \"get dependentLocality\" but got \"dependentLocality\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: attribute organization",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get organization' expected \"get organization\" but got \"organization\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: attribute phone",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get phone' expected \"get phone\" but got \"phone\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: attribute postalCode",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get postalCode' expected \"get postalCode\" but got \"postalCode\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: attribute recipient",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get recipient' expected \"get recipient\" but got \"recipient\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: attribute region",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get region' expected \"get region\" but got \"region\""
-        },
-        {
-          "name": "PaymentAddress interface: attribute regionCode",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"regionCode\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: attribute sortingCode",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get sortingCode' expected \"get sortingCode\" but got \"sortingCode\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentAddress interface: attribute addressLine",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get addressLine' expected \"get addressLine\" but got \"addressLine\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of PaymentResponse is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"function() {\n    [native code]\n}\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface object length",
@@ -690,8 +710,8 @@
         },
         {
           "name": "PaymentResponse interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of PaymentResponse.prototype is not EventTarget.prototype expected object \"[object EventTargetPrototype]\" but got object \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -710,43 +730,43 @@
         },
         {
           "name": "PaymentResponse interface: attribute requestId",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get requestId' expected \"get requestId\" but got \"requestId\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: attribute methodName",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get methodName' expected \"get methodName\" but got \"methodName\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: attribute details",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get details' expected \"get details\" but got \"details\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: attribute shippingAddress",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get shippingAddress' expected \"get shippingAddress\" but got \"shippingAddress\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: attribute shippingOption",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get shippingOption' expected \"get shippingOption\" but got \"shippingOption\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: attribute payerName",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get payerName' expected \"get payerName\" but got \"payerName\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: attribute payerEmail",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get payerEmail' expected \"get payerEmail\" but got \"payerEmail\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: attribute payerPhone",
-          "status": "FAIL",
-          "message": "assert_equals: getter must have the name 'get payerPhone' expected \"get payerPhone\" but got \"payerPhone\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: operation complete(PaymentComplete)",
@@ -755,13 +775,13 @@
         },
         {
           "name": "PaymentResponse interface: operation retry(PaymentValidationErrors)",
-          "status": "FAIL",
-          "message": "assert_own_property: interface prototype object missing non-static operation expected property \"retry\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: attribute onpayerdetailchange",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onpayerdetailchange\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "MerchantValidationEvent interface: existence and properties of interface object",
@@ -811,107 +831,107 @@
         {
           "name": "MerchantValidationEvent must be primary interface of new MerchantValidationEvent(\"merchantvalidation\")",
           "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\""
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
         },
         {
           "name": "Stringification of new MerchantValidationEvent(\"merchantvalidation\")",
           "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\""
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
         },
         {
           "name": "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"methodName\" with the proper type",
           "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\""
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
         },
         {
           "name": "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"validationURL\" with the proper type",
           "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\""
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
         },
         {
           "name": "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"complete([object Object])\" with the proper type",
           "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\""
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
         },
         {
           "name": "MerchantValidationEvent interface: calling complete([object Object]) on new MerchantValidationEvent(\"merchantvalidation\") with too few arguments must throw TypeError",
           "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'MerchantValidationEvent' is not defined\""
+          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
         },
         {
           "name": "PaymentMethodChangeEvent interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent interface object length",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent interface object name",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's \"constructor\" property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's @@unscopables property",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent interface: attribute methodName",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent interface: attribute methodDetails",
-          "status": "FAIL",
-          "message": "assert_own_property: self does not have own property \"PaymentMethodChangeEvent\" expected property \"PaymentMethodChangeEvent\" missing"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent must be primary interface of new PaymentMethodChangeEvent(\"paymentmethodchange\")",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Stringification of new PaymentMethodChangeEvent(\"paymentmethodchange\")",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodName\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodDetails\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith([object Object])\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError",
-          "status": "FAIL",
-          "message": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: 'PaymentMethodChangeEvent' is not defined\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequestUpdateEvent interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of PaymentRequestUpdateEvent is not Event expected function \"function Event() { [native code] }\" but got function \"function() {\n    [native code]\n}\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequestUpdateEvent interface object length",
@@ -983,12 +1003,12 @@
         {
           "name": "onmerchantvalidation attribute is a handler for MerchantValidationEvent",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         },
         {
           "name": "onmerchantvalidation attribute and listeners both work",
           "status": "FAIL",
-          "message": "'MerchantValidationEvent' is not defined"
+          "message": "MerchantValidationEvent is not defined"
         }
       ],
       "status": "OK",
@@ -999,27 +1019,33 @@
       "subtests": [
         {
           "name": "Must have a onpaymentmethodchange IDL attribute",
-          "status": "FAIL",
-          "message": "assert_idl_attribute: property \"onpaymentmethodchange\" not found in prototype chain"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\"",
-          "status": "FAIL",
-          "message": "assert_true: event did not fire expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent",
-          "status": "FAIL",
-          "message": "'PaymentMethodChangeEvent' is not defined"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "onpaymentmethodchange attribute and listeners both work",
-          "status": "FAIL",
-          "message": "'PaymentMethodChangeEvent' is not defined"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
       "message": null
+    },
+    {
+      "test": "/payment-request/payment-is-showing.https.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/payment-request/payment-request-abort-method.https.html",
@@ -1030,19 +1056,19 @@
           "message": null
         },
         {
+          "name": "Calling abort() multiple times is always a new object.",
+          "status": "PASS",
+          "message": null
+        },
+        {
           "name": "The same request cannot be shown multiple times.",
           "status": "FAIL",
-          "message": "assert_unreached: Unexpected promise rejection: InvalidStateError Reached unreachable code"
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: Unable to abort the payment\""
         },
         {
           "name": "Aborting a request before it is shown doesn't prevent it from being shown later.",
           "status": "FAIL",
-          "message": "assert_unreached: Unexpected promise rejection: InvalidStateError Reached unreachable code"
-        },
-        {
-          "name": "Calling abort() multiple times is always a new object.",
-          "status": "PASS",
-          "message": null
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: Unable to abort the payment\""
         }
       ],
       "status": "OK",
@@ -1053,11 +1079,11 @@
       "subtests": [
         {
           "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     },
     {
@@ -1067,16 +1093,6 @@
           "name": "If payment method identifier are supported, resolve promise with true.",
           "status": "PASS",
           "message": null
-        },
-        {
-          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "FAIL",
-          "message": "assert_unreached: Should have rejected: undefined Reached unreachable code"
-        },
-        {
-          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError\""
         },
         {
           "name": "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.",
@@ -1092,13 +1108,23 @@
           "name": "Mix of supported and unsupported methods, at least one method is supported.",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: Unable to abort the payment\""
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Unhandled rejection: Unable to abort the payment"
     },
     {
-      "test": "/payment-request/payment-request-constructor-crash.https.html",
+      "test": "/payment-request/payment-request-constructor-thcrash.https.html",
       "subtests": [
         {
           "name": "Don't crash if there is an abusive number of payment methods in the methodData sequence",
@@ -1311,53 +1337,53 @@
       "subtests": [
         {
           "name": "Check and canonicalize valid details.total.amount",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Check and canonicalize invalid details.total.amount and rethrow any exceptions.",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Check and canonicalize valid details.displayItems amount",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Check and canonicalize invalid details.displayItems amount and rethrow RangeError.",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Check and canonicalize valid details.shippingOptions amount.",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError.",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Check and canonicalize valid modifiers[n].total amount.",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError.",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Check and canonicalize valid modifiers[n].additionaDisplayItem amount.",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError.",
-          "status": "FAIL",
-          "message": "assert_throws: Expected smoke test to throw. function \"function smokeTest() {\n  new PaymentRequest(defaultMethods, invalidTotal);\n}\" did not throw"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1378,13 +1404,47 @@
         },
         {
           "name": "Must throw on syntactically invalid standardized payment method identifiers",
-          "status": "FAIL",
-          "message": "assert_throws: expected RangeError processing invalid standardized PMI \"basic-💳\" function \"() => {\n        const methods = [{ supportedMethods: invalidMethod }];\n        new PaymentRequest(methods, defaultDetails);\n      }\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Constructor MUST throw if given an invalid URL-based payment method identifier",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-hasenrolledinstrument-method-protection.tentative.https.html",
+      "subtests": [
+        {
+          "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-hasenrolledinstrument-method.tentative.https.html",
+      "subtests": [
+        {
+          "name": "hasEnrolledInstrument() resolves to false for unsupported payment methods.",
           "status": "FAIL",
-          "message": "assert_throws: expected RangeError processing invalid URL PMI \"https://username@example.com/pay\" function \"() => {\n        const methods = [{ supportedMethods: invalidMethod }];\n        new PaymentRequest(methods, defaultDetails);\n      }\" did not throw"
+          "message": "promise_test: Unhandled rejection with value: object \"NotAllowedError: Exceeded query quota for hasEnrolledInstrument\""
+        },
+        {
+          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1412,8 +1472,8 @@
       "subtests": [
         {
           "name": "PaymentRequest constructor must not be exposed in insecure context",
-          "status": "FAIL",
-          "message": "assert_false: expected false got true"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1567,44 +1627,44 @@
         {
           "name": "Calling show() without being triggered by user interaction throws",
           "status": "FAIL",
-          "message": "assert_throws: function \"function () { throw e }\" threw object \"AbortError\" that is not a DOMException SecurityError: property \"code\" is equal to 20, expected 18"
+          "message": "assert_throws: function \"function() { throw e }\" threw object \"AbortError: User closed the Payment Request UI.\" that is not a DOMException SecurityError: property \"code\" is equal to 20, expected 18"
         },
         {
           "name": "Throws if the promise [[state]] is not 'created'.",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: Unable to abort the payment\""
         },
         {
           "name": "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.",
           "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: Unable to abort the payment\""
         },
         {
           "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "status": "TIMEOUT",
+          "message": "Test timed out"
         },
         {
-          "name": "Calling show() multiple times is always a new object.",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "name": "Calling show() multiple times always returns a new promise.",
+          "status": "NOTRUN",
+          "message": null
         }
       ],
-      "status": "OK",
-      "message": null
+      "status": "ERROR",
+      "message": "Unhandled rejection: Payment handler rejected the promise passed into PaymentRequestEvent.respondWith(). This is how payment handlers close their own window programmatically."
     },
     {
       "test": "/payment-request/payment-response/onpayerdetailchange-attribute.https.html",
       "subtests": [
         {
           "name": "PaymentResponse inherits from EventTarget",
-          "status": "FAIL",
-          "message": "assert_equals: expected function \"function EventTarget() { [native code] }\" but got function \"function() {\n    [native code]\n}\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse has an onpayerdetailchange in the prototype chain",
-          "status": "FAIL",
-          "message": "assert_true: expected true got false"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -1614,19 +1674,9 @@
       "test": "/payment-request/rejects_if_not_active.https.html",
       "subtests": [
         {
-          "name": "PaymentRequest.show() aborts if the document is not active",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
-        },
-        {
-          "name": "PaymentRequest.show() aborts if the document is active, but not fully active",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
-        },
-        {
-          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"Error: unimplemented\""
+          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.",
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
