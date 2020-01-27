@@ -50,10 +50,15 @@
         {
           "name": "Must throw TypeError if initialized with an invalid URL.",
           "status": "FAIL",
-          "message": "assert_throws: function \"() => {\n    new MerchantValidationEvent(\"test\", { validationURL });\n  }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected object \"TypeError\" (\"TypeError\")"
+          "message": "assert_throws_js: function \"() => {\n    new MerchantValidationEvent(\"test\", { validationURL });\n  }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected instance of function \"function TypeError() { [native code] }\" (\"TypeError\")"
         },
         {
           "name": "Relative validationURLs use the document as the base.",
+          "status": "FAIL",
+          "message": "MerchantValidationEvent is not defined"
+        },
+        {
+          "name": "Relative validationURLs use the document.baseURI as the base.",
           "status": "FAIL",
           "message": "MerchantValidationEvent is not defined"
         },
@@ -75,7 +80,7 @@
         {
           "name": "MerchantValidationEvent can't be constructed with invalid PMIs",
           "status": "FAIL",
-          "message": "assert_throws: expected to throw when constructed with invalid PMI: 'basic-💳' function \"() => {\n        const event = new MerchantValidationEvent(\"test\", { methodName });\n      }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected object \"RangeError\" (\"RangeError\")"
+          "message": "assert_throws_js: expected to throw when constructed with invalid PMI: 'basic-💳' function \"() => {\n        const event = new MerchantValidationEvent(\"test\", { methodName });\n      }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected instance of function \"function RangeError() { [native code] }\" (\"RangeError\")"
         }
       ],
       "status": "OK",
@@ -367,7 +372,7 @@
         {
           "name": "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.",
           "status": "FAIL",
-          "message": "assert_throws: PaymentMethodData.data is invalid. function \"() => {\n          const badMethod = Object.assign(\n            {},\n            method,\n            /* This is invalid in both Apple Pay and Basic Card */\n            { data: { supportedNetworks: \"this will throw\" } }\n          );\n          new PaymentRequest([badMethod], details);\n        }\" did not throw"
+          "message": "assert_throws_js: PaymentMethodData.data is invalid. function \"() => {\n          const badMethod = Object.assign(\n            {},\n            method,\n            /* This is invalid in both Apple Pay and Basic Card */\n            { data: { supportedNetworks: \"this will throw\" } }\n          );\n          new PaymentRequest([badMethod], details);\n        }\" did not throw"
         }
       ],
       "status": "OK",
@@ -418,8 +423,8 @@
         },
         {
           "name": "supportedMethods must not support sequence<DOMString>",
-          "status": "FAIL",
-          "message": "assert_throws: function \"() => {\n    new PaymentRequest([{supportedMethods: methods}], {total: {label: 'bar', amount: {currency: 'BAZ', value: '0'}}});\n  }\" threw object \"[object Object]\" (\"sequence<DOMString> conversion is not allowed\") expected object \"[object Object]\" (\"toString should be called\")"
+          "status": "PASS",
+          "message": null
         }
       ],
       "status": "OK",
@@ -430,6 +435,11 @@
       "subtests": [
         {
           "name": "idl_test setup",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "idl_test validation",
           "status": "PASS",
           "message": null
         },
@@ -685,8 +695,8 @@
         },
         {
           "name": "PaymentResponse interface: existence and properties of interface object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of PaymentResponse is not EventTarget expected function \"function EventTarget() { [native code] }\" but got function \"function () { [native code] }\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface object length",
@@ -700,8 +710,8 @@
         },
         {
           "name": "PaymentResponse interface: existence and properties of interface prototype object",
-          "status": "FAIL",
-          "message": "assert_equals: prototype of PaymentResponse.prototype is not EventTarget.prototype expected object \"[object EventTarget]\" but got object \"[object Object]\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse interface: existence and properties of interface prototype object's \"constructor\" property",
@@ -1033,49 +1043,35 @@
     },
     {
       "test": "/payment-request/payment-is-showing.https.html",
-      "subtests": [
-        {
-          "name": "The top browsing context can only show one payment sheet at a time.",
+      "subtests": [                                                                                                                                                                                  {                                                                                                                                                                                              "name": "The top browsing context can only show one payment sheet at a time.",
+          "status": "PASS",
+          "message": null
+        },                                                                                                                                                                                           {                                                                                                                                                                                              "name": "If an iframe shows a payment request, the top-level browsing context can't also show one.",
+          "status": "PASS",
+          "message": null
+        },                                                                                                                                                                                           {                                                                                                                                                                                              "name": "An iframe cannot show a payment request if the top-level window is already showing one.",
           "status": "PASS",
           "message": null
         },
-        {
-          "name": "If an iframe shows a payment request, the top-level browsing context can't also show one.",
-          "status": "PASS",
-          "message": null
+        {                                                                                                                                                                                              "name": "Using a popup window prevents the top-browsing context from showing a payment request",
+          "status": "FAIL",                                                                                                                                                                            "message": "promise_test: Unhandled rejection with value: object \"AbortError: Request cancelled\""
         },
-        {
-          "name": "An iframe cannot show a payment request if the top-level window is already showing one.",
-          "status": "PASS",
-          "message": null
+        {                                                                                                                                                                                              "name": "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.",
+          "status": "TIMEOUT",                                                                                                                                                                         "message": "Test timed out"
         },
-        {
-          "name": "Using a popup window prevents the top-browsing context from showing a payment request",
-          "status": "FAIL",
-          "message": "promise_test: Unhandled rejection with value: object \"AbortError: Request cancelled\""
-        },
-        {
-          "name": "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.",
+        {                                                                                                                                                                                              "name": "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.",
           "status": "NOTRUN",
           "message": null
         },
-        {
-          "name": "Given multiple nested browsing contexts, and an iframe calls show() first, other nested browsing contexts can't show a request.",
+        {                                                                                                                                                                                              "name": "Given multiple nested browsing contexts, and an iframe calls show() first, other nested browsing contexts can't show a request.",
           "status": "NOTRUN",
           "message": null
         },
-        {
-          "name": "Navigating an iframe as a nested browsing context sets 'payment request is showing boolean' to false.",
+        {                                                                                                                                                                                              "name": "Navigating an iframe as a nested browsing context sets 'payment request is showing boolean' to false.",
           "status": "NOTRUN",
           "message": null
         },
-        {
-          "name": "Navigating a popup as a nested browsing context sets 'payment request is showing boolean' to false.",
+        {                                                                                                                                                                                              "name": "Navigating a popup as a nested browsing context sets 'payment request is showing boolean' to false.",
           "status": "NOTRUN",
           "message": null
         }
@@ -1160,7 +1156,7 @@
       "message": null
     },
     {
-      "test": "/payment-request/payment-request-constructor-crash.https.html",
+      "test": "/payment-request/payment-request-constructor-thcrash.https.html",
       "subtests": [
         {
           "name": "Don't crash if there is an abusive number of payment methods in the methodData sequence",
@@ -1440,8 +1436,8 @@
         },
         {
           "name": "Must throw on syntactically invalid standardized payment method identifiers",
-          "status": "FAIL",
-          "message": "assert_throws: expected RangeError processing invalid standardized PMI \"visa,mastercard\" function \"() => {\n        const methods = [{ supportedMethods: invalidMethod }];\n        new PaymentRequest(methods, defaultDetails);\n      }\" did not throw"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Constructor MUST throw if given an invalid URL-based payment method identifier",
@@ -1483,8 +1479,8 @@
           "message": "Test timed out"
         }
       ],
-      "status": "TIMEOUT",
-      "message": null
+      "status": "ERROR",
+      "message": "Unhandled rejection: Request cancelled"
     },
     {
       "test": "/payment-request/payment-request-id-attribute.https.html",
@@ -1677,8 +1673,8 @@
         },
         {
           "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.",
-          "status": "FAIL",
-          "message": "assert_throws: function \"function() { throw e }\" threw object \"InvalidStateError: Already called show() once\" that is not a DOMException NotSupportedError: property \"code\" is equal to 11, expected 9"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "Calling show() multiple times always returns a new promise.",
@@ -1694,8 +1690,8 @@
       "subtests": [
         {
           "name": "PaymentResponse inherits from EventTarget",
-          "status": "FAIL",
-          "message": "assert_equals: expected function \"function EventTarget() { [native code] }\" but got function \"function () { [native code] }\""
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentResponse has an onpayerdetailchange in the prototype chain",
@@ -1710,12 +1706,12 @@
       "test": "/payment-request/rejects_if_not_active.https.html",
       "subtests": [
         {
-          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment request aborts.",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
+          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.",
+          "status": "PASS",
+          "message": null
         }
       ],
-      "status": "TIMEOUT",
+      "status": "OK",
       "message": null
     }
   ]
