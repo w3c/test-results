@@ -1,22 +1,25 @@
 {
   "results": [
     {
-      "test": "/payment-request/MerchantValidationEvent/complete-method.https.html",
+      "test": "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-same-origin-bc-containers.https.html",
       "subtests": [
         {
-          "name": "If event's isTrusted attribute is false, then then throw an InvalidStateError DOMException.",
+          "name": "iframe",
           "status": "PASS",
           "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/MerchantValidationEvent/constructor.http.html",
-      "subtests": [
+        },
         {
-          "name": "MerchantValidationEvent constructor must not be exposed in insecure context",
+          "name": "frame",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "embed",
           "status": "PASS",
           "message": null
         }
@@ -59,8 +62,8 @@
         },
         {
           "name": "Relative validationURLs use the document.baseURI as the base.",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_equals: expected \"https://pass.com/pass\" but got \"https://web-platform.test:8443/payment-request/MerchantValidationEvent/pass\""
         },
         {
           "name": "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value.",
@@ -87,15 +90,47 @@
       "message": null
     },
     {
-      "test": "/payment-request/PaymentMethodChangeEvent/methodDetails-attribute.https.html",
+      "test": "/payment-request/allowpaymentrequest/removing-allowpaymentrequest.https.sub.html",
       "subtests": [
         {
-          "name": "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value",
+          "name": "PaymentRequest removing allowpaymentrequest after load and then navigating",
+          "status": "FAIL",
+          "message": "assert_equals: before navigation expected \"Success\" but got \"Exception\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-shippingOption-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a .shippingOption IDL attribute.",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "The methodDetails member defaults to null",
+          "name": ".shippingOption attribute must default to null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If there is a single shipping option, but selected is false, then .shippingOption must be null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Given multiple shipping options, it must use the selected shipping option for .shippingOption value.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order.",
           "status": "PASS",
           "message": null
         }
@@ -104,15 +139,55 @@
       "message": null
     },
     {
-      "test": "/payment-request/PaymentMethodChangeEvent/methodName-attribute.https.html",
+      "test": "/payment-request/payment-request-ctor-currency-code-checks.https.sub.html",
       "subtests": [
         {
-          "name": "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value",
+          "name": "Check and canonicalize valid details.total.amount",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "When no dictionary is passed, the methodName member defaults to the empty string",
+          "name": "Check and canonicalize invalid details.total.amount and rethrow any exceptions.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check and canonicalize valid details.displayItems amount",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check and canonicalize invalid details.displayItems amount and rethrow RangeError.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check and canonicalize valid details.shippingOptions amount.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check and canonicalize valid modifiers[n].total amount.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check and canonicalize valid modifiers[n].additionaDisplayItem amount.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError.",
           "status": "PASS",
           "message": null
         }
@@ -121,10 +196,15 @@
       "message": null
     },
     {
-      "test": "/payment-request/PaymentRequestUpdateEvent/constructor.http.html",
+      "test": "/payment-request/payment-request-id-attribute.https.html",
       "subtests": [
         {
-          "name": "PaymentRequestUpdateEvent constructor must not be exposed in insecure context",
+          "name": "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing",
           "status": "PASS",
           "message": null
         }
@@ -133,20 +213,30 @@
       "message": null
     },
     {
-      "test": "/payment-request/PaymentRequestUpdateEvent/constructor.https.html",
+      "test": "/payment-request/payment-request-show-method.https.html",
       "subtests": [
         {
-          "name": "PaymentRequestUpdateEvent can be constructed in secure-context",
+          "name": "Calling show() without being triggered by user interaction throws",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted",
+          "name": "Throws if the promise [[state]] is not 'created'.",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "PaymentRequestUpdateEvent can be dispatched, even if not trusted",
+          "name": "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Calling show() multiple times always returns a new promise.",
           "status": "PASS",
           "message": null
         }
@@ -155,20 +245,20 @@
       "message": null
     },
     {
-      "test": "/payment-request/PaymentRequestUpdateEvent/updatewith-method.https.html",
+      "test": "/payment-request/payment-request-shippingType-attribute.https.html",
       "subtests": [
         {
-          "name": "Let target be the request which is dispatching the event.",
+          "name": "Must have a shippingType IDL attribute",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\"",
+          "name": "If options.requestShipping is false, then request.shippingType attribute is null.",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\"",
+          "name": "If options.requestShipping is true, request.shippingType will be options.shippingType.",
           "status": "PASS",
           "message": null
         }
@@ -181,196 +271,18 @@
       "subtests": [
         {
           "name": "PaymentRequest <iframe allowpaymentrequest> in non-active document (cross-origin)",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_throws_dom: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw an exception from the wrong global"
         }
       ],
       "status": "OK",
       "message": null
     },
     {
-      "test": "/payment-request/allowpaymentrequest/active-document-same-origin.https.html",
+      "test": "/payment-request/payment-request-not-exposed.https.worker.html",
       "subtests": [
         {
-          "name": "PaymentRequest <iframe allowpaymentrequest> in non-active document (same-origin)",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-cross-origin-bc-containers.https.html",
-      "subtests": [
-        {
-          "name": "iframe",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "frame",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "embed",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-same-origin-bc-containers.https.html",
-      "subtests": [
-        {
-          "name": "iframe",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "frame",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "embed",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/allowpaymentrequest/basic.https.html",
-      "subtests": [
-        {
-          "name": "PaymentRequest <iframe allowpaymentrequest> basic",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/allowpaymentrequest/no-attribute-cross-origin-bc-containers.https.html",
-      "subtests": [
-        {
-          "name": "iframe",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "frame",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "embed",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/allowpaymentrequest/no-attribute-same-origin-bc-containers.https.html",
-      "subtests": [
-        {
-          "name": "iframe",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "frame",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "object",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "embed",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/allowpaymentrequest/removing-allowpaymentrequest.https.sub.html",
-      "subtests": [
-        {
-          "name": "PaymentRequest removing allowpaymentrequest after load and then navigating",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/allowpaymentrequest/setting-allowpaymentrequest-timing.https.sub.html",
-      "subtests": [
-        {
-          "name": "PaymentRequest setting allowpaymentrequest after document creation, before response",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/allowpaymentrequest/setting-allowpaymentrequest.https.sub.html",
-      "subtests": [
-        {
-          "name": "PaymentRequest setting allowpaymentrequest after load and then navigating",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/constructor_convert_method_data.https.html",
-      "subtests": [
-        {
-          "name": "Smoke test.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Tries to convert data member during Payment Request construction, irrespective of PMI.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.",
+          "name": "PaymentRequest constructor must not be exposed in worker global scope",
           "status": "PASS",
           "message": null
         }
@@ -417,12 +329,348 @@
           "message": null
         },
         {
-          "name": "regionCode in PaymentAddress",
+          "name": "supportedMethods must not support sequence<DOMString>",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/active-document-same-origin.https.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest <iframe allowpaymentrequest> in non-active document (same-origin)",
+          "status": "FAIL",
+          "message": "assert_throws_dom: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw an exception from the wrong global"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/PaymentRequestUpdateEvent/constructor.http.html",
+      "subtests": [
+        {
+          "name": "PaymentRequestUpdateEvent constructor must not be exposed in insecure context",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/setting-allowpaymentrequest-timing.https.sub.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest setting allowpaymentrequest after document creation, before response",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-response/onpayerdetailchange-attribute.https.html",
+      "subtests": [
+        {
+          "name": "PaymentResponse inherits from EventTarget",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "supportedMethods must not support sequence<DOMString>",
+          "name": "PaymentResponse has an onpayerdetailchange in the prototype chain",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/onmerchantvalidation-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a onmerchantvalidation IDL attribute",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onmerchantvalidation attribute is a generic handler for \"merchantvalidation\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onmerchantvalidation attribute is a handler for MerchantValidationEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onmerchantvalidation attribute and listeners both work",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-hasenrolledinstrument-method-protection.tentative.https.html",
+      "subtests": [
+        {
+          "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
+          "status": "FAIL",
+          "message": "assert_equals: If it throws, then it must be a NotAllowedError. expected \"NotAllowedError\" but got \"TypeError\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-cross-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "name": "iframe",
+          "status": "FAIL",
+          "message": "assert_equals: expected \"Success\" but got \"Exception\""
+        },
+        {
+          "name": "frame",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/setting-allowpaymentrequest.https.sub.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest setting allowpaymentrequest after load and then navigating",
+          "status": "FAIL",
+          "message": "assert_equals: after navigation expected \"Success\" but got \"Exception\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/PaymentMethodChangeEvent/methodName-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "When no dictionary is passed, the methodName member defaults to the empty string",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-shippingAddress-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a .shippingAddress IDL attribute.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": ".shippingAddress attribute must default to null.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/MerchantValidationEvent/complete-method.https.html",
+      "subtests": [
+        {
+          "name": "If event's isTrusted attribute is false, then then throw an InvalidStateError DOMException.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-onshippingaddresschange-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a onshippingaddresschange IDL attribute",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingaddresschange attribute and listeners both work",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/constructor_convert_method_data.https.html",
+      "subtests": [
+        {
+          "name": "Smoke test.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Tries to convert data member during Payment Request construction, irrespective of PMI.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/rejects_if_not_active.https.html",
+      "subtests": [
+        {
+          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-onshippingoptionchange-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a onshippingoptionchange IDL attribute",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onshippingoptionchange attribute and listeners both work",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-canmakepayment-method.https.html",
+      "subtests": [
+        {
+          "name": "If payment method identifier are supported, resolve promise with true.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "All methods are unsupported",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Mix of supported and unsupported methods, at least one method is supported.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/basic.https.html",
+      "subtests": [
+        {
+          "name": "PaymentRequest <iframe allowpaymentrequest> basic",
+          "status": "FAIL",
+          "message": "Trying to start an Apple Pay session from an insecure document."
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/no-attribute-cross-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "name": "iframe",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "frame",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "embed",
           "status": "PASS",
           "message": null
         }
@@ -474,7 +722,7 @@
           "message": null
         },
         {
-          "name": "PaymentRequest interface: operation show([object Object])",
+          "name": "PaymentRequest interface: operation show(optional Promise<PaymentDetailsUpdate>)",
           "status": "PASS",
           "message": null
         },
@@ -490,8 +738,8 @@
         },
         {
           "name": "PaymentRequest interface: operation hasEnrolledInstrument()",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_own_property: interface prototype object missing non-static operation expected property \"hasEnrolledInstrument\" missing"
         },
         {
           "name": "PaymentRequest interface: attribute id",
@@ -515,8 +763,8 @@
         },
         {
           "name": "PaymentRequest interface: attribute onmerchantvalidation",
-          "status": "FAIL",
-          "message": "assert_true: The prototype object must have a property \"onmerchantvalidation\" expected true got false"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest interface: attribute onshippingaddresschange",
@@ -544,12 +792,12 @@
           "message": null
         },
         {
-          "name": "PaymentRequest interface: paymentRequest must inherit property \"show([object Object])\" with the proper type",
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"show(optional Promise<PaymentDetailsUpdate>)\" with the proper type",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "PaymentRequest interface: calling show([object Object]) on paymentRequest with too few arguments must throw TypeError",
+          "name": "PaymentRequest interface: calling show(optional Promise<PaymentDetailsUpdate>) on paymentRequest with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
         },
@@ -565,8 +813,8 @@
         },
         {
           "name": "PaymentRequest interface: paymentRequest must inherit property \"hasEnrolledInstrument()\" with the proper type",
-          "status": "PASS",
-          "message": null
+          "status": "FAIL",
+          "message": "assert_inherits: property \"hasEnrolledInstrument\" not found in prototype chain"
         },
         {
           "name": "PaymentRequest interface: paymentRequest must inherit property \"id\" with the proper type",
@@ -590,8 +838,8 @@
         },
         {
           "name": "PaymentRequest interface: paymentRequest must inherit property \"onmerchantvalidation\" with the proper type",
-          "status": "FAIL",
-          "message": "assert_inherits: property \"onmerchantvalidation\" not found in prototype chain"
+          "status": "PASS",
+          "message": null
         },
         {
           "name": "PaymentRequest interface: paymentRequest must inherit property \"onshippingaddresschange\" with the proper type",
@@ -769,12 +1017,12 @@
           "message": null
         },
         {
-          "name": "PaymentResponse interface: operation complete(PaymentComplete)",
+          "name": "PaymentResponse interface: operation complete(optional PaymentComplete)",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "PaymentResponse interface: operation retry(PaymentValidationErrors)",
+          "name": "PaymentResponse interface: operation retry(optional PaymentValidationErrors)",
           "status": "PASS",
           "message": null
         },
@@ -824,7 +1072,7 @@
           "message": null
         },
         {
-          "name": "MerchantValidationEvent interface: operation complete([object Object])",
+          "name": "MerchantValidationEvent interface: operation complete(Promise<any>)",
           "status": "PASS",
           "message": null
         },
@@ -849,12 +1097,12 @@
           "message": null
         },
         {
-          "name": "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"complete([object Object])\" with the proper type",
+          "name": "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"complete(Promise<any>)\" with the proper type",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "MerchantValidationEvent interface: calling complete([object Object]) on new MerchantValidationEvent(\"merchantvalidation\") with too few arguments must throw TypeError",
+          "name": "MerchantValidationEvent interface: calling complete(Promise<any>) on new MerchantValidationEvent(\"merchantvalidation\") with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
         },
@@ -919,12 +1167,12 @@
           "message": null
         },
         {
-          "name": "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith([object Object])\" with the proper type",
+          "name": "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith(Promise<PaymentDetailsUpdate>)\" with the proper type",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError",
+          "name": "PaymentRequestUpdateEvent interface: calling updateWith(Promise<PaymentDetailsUpdate>) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
         },
@@ -959,7 +1207,7 @@
           "message": null
         },
         {
-          "name": "PaymentRequestUpdateEvent interface: operation updateWith([object Object])",
+          "name": "PaymentRequestUpdateEvent interface: operation updateWith(Promise<PaymentDetailsUpdate>)",
           "status": "PASS",
           "message": null
         },
@@ -974,12 +1222,12 @@
           "message": null
         },
         {
-          "name": "PaymentRequestUpdateEvent interface: new PaymentRequestUpdateEvent(\"paymentrequestupdate\") must inherit property \"updateWith([object Object])\" with the proper type",
+          "name": "PaymentRequestUpdateEvent interface: new PaymentRequestUpdateEvent(\"paymentrequestupdate\") must inherit property \"updateWith(Promise<PaymentDetailsUpdate>)\" with the proper type",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "PaymentRequestUpdateEvent interface: calling updateWith([object Object]) on new PaymentRequestUpdateEvent(\"paymentrequestupdate\") with too few arguments must throw TypeError",
+          "name": "PaymentRequestUpdateEvent interface: calling updateWith(Promise<PaymentDetailsUpdate>) on new PaymentRequestUpdateEvent(\"paymentrequestupdate\") with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
         }
@@ -988,246 +1236,7 @@
       "message": null
     },
     {
-      "test": "/payment-request/onmerchantvalidation-attribute.https.html",
-      "subtests": [
-        {
-          "name": "Must have a onmerchantvalidation IDL attribute",
-          "status": "FAIL",
-          "message": "assert_idl_attribute: property \"onmerchantvalidation\" not found in prototype chain"
-        },
-        {
-          "name": "onmerchantvalidation attribute is a generic handler for \"merchantvalidation\"",
-          "status": "FAIL",
-          "message": "assert_true: event did not fire expected true got false"
-        },
-        {
-          "name": "onmerchantvalidation attribute is a handler for MerchantValidationEvent",
-          "status": "FAIL",
-          "message": "assert_true: event did not fire expected true got false"
-        },
-        {
-          "name": "onmerchantvalidation attribute and listeners both work",
-          "status": "FAIL",
-          "message": "assert_true: onmerchantvalidation must receive the event expected true got false"
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/onpaymentmenthodchange-attribute.https.html",
-      "subtests": [
-        {
-          "name": "Must have a onpaymentmethodchange IDL attribute",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\"",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "onpaymentmethodchange attribute and listeners both work",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-is-showing.https.html",
-      "subtests": [
-        {
-          "name": "The top browsing context can only show one payment sheet at a time.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If an iframe shows a payment request, the top-level browsing context can't also show one.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "An iframe cannot show a payment request if the top-level window is already showing one.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Using a popup window prevents the top-browsing context from showing a payment request",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Given multiple nested browsing contexts, and window calls show() first, other nested browsing contexts can't show a request.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Given multiple nested browsing contexts, and popup calls show() first, other nested browsing contexts can't show a request.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Given multiple nested browsing contexts, and an iframe calls show() first, other nested browsing contexts can't show a request.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Navigating an iframe as a nested browsing context sets 'payment request is showing boolean' to false.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Navigating a popup as a nested browsing context sets 'payment request is showing boolean' to false.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-abort-method.https.html",
-      "subtests": [
-        {
-          "name": "Throws if the promise [[state]] is not \"interactive\"",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Calling abort() multiple times is always a new object.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "The same request cannot be shown multiple times.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Aborting a request before it is shown doesn't prevent it from being shown later.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-canmakepayment-method-protection.https.html",
-      "subtests": [
-        {
-          "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-canmakepayment-method.https.html",
-      "subtests": [
-        {
-          "name": "If payment method identifier are supported, resolve promise with true.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "All methods are unsupported",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Mix of supported and unsupported methods, at least one method is supported.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-constructor-thcrash.https.html",
-      "subtests": [
-        {
-          "name": "Don't crash if there is an abusive number of payment methods in the methodData sequence",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Don't crash if PaymentMethodData.supportedMethods is an abusive length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Don't crash if the request id has an abusive length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Don't crash if PaymentDetailsInit.total.label is an abusive length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Don't crash if total.amount.value is an abusive length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Don't crash if details.displayItems has an abusive number of items",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Don't crash if details.shippingOptions has an abusive number of items",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Don't crash if PaymentShippingOptions.label is an abusive length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Don't crash if the PaymentShippingOptions.amount.value is an abusive length",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Don't crash if PaymentItem.label is an abusive length",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-constructor.https.html",
+      "test": "/payment-request/payment-request-constructor.https.sub.html",
       "subtests": [
         {
           "name": "If details.id is missing, assign an identifier",
@@ -1258,6 +1267,11 @@
           "name": "If the length of the methodData sequence is zero, then throw a TypeError",
           "status": "PASS",
           "message": null
+        },
+        {
+          "name": "If payment method is duplicate, then throw a RangeError",
+          "status": "FAIL",
+          "message": "assert_throws_js: function \"() => new PaymentRequest(duplicateMethods, defaultDetails)\" did not throw"
         },
         {
           "name": "Modifier method data must be JSON-serializable object",
@@ -1379,55 +1393,55 @@
       "message": null
     },
     {
-      "test": "/payment-request/payment-request-ctor-currency-code-checks.https.html",
+      "test": "/payment-request/payment-request-constructor-thcrash.https.html",
       "subtests": [
         {
-          "name": "Check and canonicalize valid details.total.amount",
+          "name": "Don't crash if there is an abusive number of payment methods in the methodData sequence",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Check and canonicalize invalid details.total.amount and rethrow any exceptions.",
+          "name": "Don't crash if PaymentMethodData.supportedMethods is an abusive length",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Check and canonicalize valid details.displayItems amount",
+          "name": "Don't crash if the request id has an abusive length",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Check and canonicalize invalid details.displayItems amount and rethrow RangeError.",
+          "name": "Don't crash if PaymentDetailsInit.total.label is an abusive length",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Check and canonicalize valid details.shippingOptions amount.",
+          "name": "Don't crash if total.amount.value is an abusive length",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError.",
+          "name": "Don't crash if details.displayItems has an abusive number of items",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Check and canonicalize valid modifiers[n].total amount.",
+          "name": "Don't crash if details.shippingOptions has an abusive number of items",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError.",
+          "name": "Don't crash if PaymentShippingOptions.label is an abusive length",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Check and canonicalize valid modifiers[n].additionaDisplayItem amount.",
+          "name": "Don't crash if the PaymentShippingOptions.amount.value is an abusive length",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError.",
+          "name": "Don't crash if PaymentItem.label is an abusive length",
           "status": "PASS",
           "message": null
         }
@@ -1436,7 +1450,168 @@
       "message": null
     },
     {
-      "test": "/payment-request/payment-request-ctor-pmi-handling.https.html",
+      "test": "/payment-request/PaymentRequestUpdateEvent/constructor.https.html",
+      "subtests": [
+        {
+          "name": "PaymentRequestUpdateEvent can be constructed in secure-context",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "PaymentRequestUpdateEvent can be dispatched, even if not trusted",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-hasenrolledinstrument-method.tentative.https.html",
+      "subtests": [
+        {
+          "name": "hasEnrolledInstrument() resolves to false for unsupported payment methods.",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: request.hasEnrolledInstrument is not a function. (In 'request.hasEnrolledInstrument()', 'request.hasEnrolledInstrument' is undefined)\""
+        },
+        {
+          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"TypeError: request.hasEnrolledInstrument is not a function. (In 'request.hasEnrolledInstrument()', 'request.hasEnrolledInstrument' is undefined)\""
+        },
+        {
+          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
+          "status": "FAIL",
+          "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"NotSupportedError: The operation is not supported.\" that is not a DOMException AbortError: property \"code\" is equal to 9, expected 20"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/PaymentMethodChangeEvent/methodDetails-attribute.https.html",
+      "subtests": [
+        {
+          "name": "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The methodDetails member defaults to null",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-canmakepayment-method-protection.https.html",
+      "subtests": [
+        {
+          "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/MerchantValidationEvent/constructor.http.html",
+      "subtests": [
+        {
+          "name": "MerchantValidationEvent constructor must not be exposed in insecure context",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/allowpaymentrequest/no-attribute-same-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "name": "iframe",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "frame",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "object",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "embed",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/PaymentRequestUpdateEvent/updatewith-method.https.html",
+      "subtests": [
+        {
+          "name": "Let target be the request which is dispatching the event.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\"",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-abort-method.https.html",
+      "subtests": [
+        {
+          "name": "Throws if the promise [[state]] is not \"interactive\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Calling abort() multiple times is always a new object.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "The same request cannot be shown multiple times.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Aborting a request before it is shown doesn't prevent it from being shown later.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/payment-request/payment-request-ctor-pmi-handling.https.sub.html",
       "subtests": [
         {
           "name": "Must support valid standard URL PMIs",
@@ -1463,10 +1638,25 @@
       "message": null
     },
     {
-      "test": "/payment-request/payment-request-hasenrolledinstrument-method-protection.tentative.https.html",
+      "test": "/payment-request/onpaymentmethodchange-attribute.https.html",
       "subtests": [
         {
-          "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.",
+          "name": "Must have a onpaymentmethodchange IDL attribute",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\"",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "onpaymentmethodchange attribute and listeners both work",
           "status": "PASS",
           "message": null
         }
@@ -1475,252 +1665,16 @@
       "message": null
     },
     {
-      "test": "/payment-request/payment-request-hasenrolledinstrument-method.tentative.https.html",
-      "subtests": [
-        {
-          "name": "hasEnrolledInstrument() resolves to false for unsupported payment methods.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-id-attribute.https.html",
-      "subtests": [
-        {
-          "name": "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
+      "test": "/payment-request/payment-is-showing.https.html",
+      "subtests": [],
+      "status": "TIMEOUT",
+      "message": ""
     },
     {
       "test": "/payment-request/payment-request-insecure.http.html",
       "subtests": [
         {
           "name": "PaymentRequest constructor must not be exposed in insecure context",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-not-exposed.https.worker.html",
-      "subtests": [
-        {
-          "name": "PaymentRequest constructor must not be exposed in worker global scope",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-onshippingaddresschange-attribute.https.html",
-      "subtests": [
-        {
-          "name": "Must have a onshippingaddresschange IDL attribute",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\"",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "onshippingaddresschange attribute and listeners both work",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-onshippingoptionchange-attribute.https.html",
-      "subtests": [
-        {
-          "name": "Must have a onshippingoptionchange IDL attribute",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\"",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "onshippingoptionchange attribute and listeners both work",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-shippingAddress-attribute.https.html",
-      "subtests": [
-        {
-          "name": "Must have a .shippingAddress IDL attribute.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": ".shippingAddress attribute must default to null.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-shippingOption-attribute.https.html",
-      "subtests": [
-        {
-          "name": "Must have a .shippingOption IDL attribute.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": ".shippingOption attribute must default to null.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If there is a single shipping option, but selected is false, then .shippingOption must be null.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Given multiple shipping options, it must use the selected shipping option for .shippingOption value.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-shippingType-attribute.https.html",
-      "subtests": [
-        {
-          "name": "Must have a shippingType IDL attribute",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If options.requestShipping is false, then request.shippingType attribute is null.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If options.requestShipping is true, request.shippingType will be options.shippingType.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-request-show-method.https.html",
-      "subtests": [
-        {
-          "name": "Calling show() without being triggered by user interaction throws",
-          "status": "TIMEOUT",
-          "message": "Test timed out"
-        },
-        {
-          "name": "Throws if the promise [[state]] is not 'created'.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "Calling show() multiple times always returns a new promise.",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/payment-response/onpayerdetailchange-attribute.https.html",
-      "subtests": [
-        {
-          "name": "PaymentResponse inherits from EventTarget",
-          "status": "PASS",
-          "message": null
-        },
-        {
-          "name": "PaymentResponse has an onpayerdetailchange in the prototype chain",
-          "status": "PASS",
-          "message": null
-        }
-      ],
-      "status": "OK",
-      "message": null
-    },
-    {
-      "test": "/payment-request/rejects_if_not_active.https.html",
-      "subtests": [
-        {
-          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.",
           "status": "PASS",
           "message": null
         }
