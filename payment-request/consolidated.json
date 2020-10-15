@@ -1,12 +1,12 @@
 {
   "ua": [
-    "CH85",
+    "CH86",
     "SF14"
   ],
   "results": {
-    "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-same-origin-bc-containers.https.html": {
+    "/payment-request/PaymentMethodChangeEvent/methodDetails-attribute.https.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -14,10 +14,10 @@
         "OK": 2
       },
       "subtests": {
-        "iframe": {
+        "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -25,32 +25,10 @@
             "PASS": 2
           }
         },
-        "frame": {
+        "The methodDetails member defaults to null": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "object": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "embed": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -60,9 +38,9 @@
         }
       }
     },
-    "/payment-request/MerchantValidationEvent/constructor.https.html": {
+    "/payment-request/PaymentMethodChangeEvent/methodName-attribute.https.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -70,715 +48,33 @@
         "OK": 2
       },
       "subtests": {
-        "MerchantValidationEvent can be constructed in secure-context.": {
+        "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value": {
           "stNum": 0,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
-        "MerchantValidationEvent can be constructed with an EventInitDict, even if not trusted.": {
+        "When no dictionary is passed, the methodName member defaults to the empty string": {
           "stNum": 1,
           "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent can be dispatched, even if not trusted.": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "Must have a validationURL IDL attribute, which is initialized with to the validationURL dictionary value.": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "Must throw TypeError if initialized with an invalid URL.": {
-          "stNum": 4,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_throws_js: function \"() => {\n    new MerchantValidationEvent(\"test\", { validationURL });\n  }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected instance of function \"function TypeError() { [native code] }\" (\"TypeError\")"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "Relative validationURLs use the document as the base.": {
-          "stNum": 5,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "Relative validationURLs use the document.baseURI as the base.": {
-          "stNum": 6,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "FAIL"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined",
-            "SF14": "assert_equals: expected \"https://pass.com/pass\" but got \"https://web-platform.test:8443/payment-request/MerchantValidationEvent/pass\""
-          },
-          "totals": {
-            "FAIL": 2
-          }
-        },
-        "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value.": {
-          "stNum": 7,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "When no methodName is passed, methodName attribute defaults to the empty string": {
-          "stNum": 8,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent can be constructed with valid PMIs": {
-          "stNum": 9,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent can't be constructed with invalid PMIs": {
-          "stNum": 10,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_throws_js: expected to throw when constructed with invalid PMI: 'basic-💳' function \"() => {\n        const event = new MerchantValidationEvent(\"test\", { methodName });\n      }\" threw object \"ReferenceError: MerchantValidationEvent is not defined\" (\"ReferenceError\") expected instance of function \"function RangeError() { [native code] }\" (\"RangeError\")"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/removing-allowpaymentrequest.https.sub.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "PaymentRequest removing allowpaymentrequest after load and then navigating": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "FAIL"
-          },
-          "UAmessage": {
-            "SF14": "assert_equals: before navigation expected \"Success\" but got \"Exception\""
-          },
-          "totals": {
-            "PASS": 1,
-            "FAIL": 1
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-shippingOption-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Must have a .shippingOption IDL attribute.": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 2
-          }
-        },
-        ".shippingOption attribute must default to null.": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "If there is a single shipping option, but selected is false, then .shippingOption must be null.": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null.": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Given multiple shipping options, it must use the selected shipping option for .shippingOption value.": {
-          "stNum": 4,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order.": {
-          "stNum": 5,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-ctor-currency-code-checks.https.sub.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Check and canonicalize valid details.total.amount": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Check and canonicalize invalid details.total.amount and rethrow any exceptions.": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Check and canonicalize valid details.displayItems amount": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Check and canonicalize invalid details.displayItems amount and rethrow RangeError.": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Check and canonicalize valid details.shippingOptions amount.": {
-          "stNum": 4,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError.": {
-          "stNum": 5,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Check and canonicalize valid modifiers[n].total amount.": {
-          "stNum": 6,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError.": {
-          "stNum": 7,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Check and canonicalize valid modifiers[n].additionaDisplayItem amount.": {
-          "stNum": 8,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError.": {
-          "stNum": 9,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-id-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-show-method.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Calling show() without being triggered by user interaction throws": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "TIMEOUT",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "Test timed out"
-          },
-          "totals": {
-            "TIMEOUT": 1,
-            "PASS": 1
-          }
-        },
-        "Throws if the promise [[state]] is not 'created'.": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Calling show() multiple times always returns a new promise.": {
-          "stNum": 4,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-shippingType-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Must have a shippingType IDL attribute": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "If options.requestShipping is false, then request.shippingType attribute is null.": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "If options.requestShipping is true, request.shippingType will be options.shippingType.": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/active-document-cross-origin.https.sub.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "PaymentRequest <iframe allowpaymentrequest> in non-active document (cross-origin)": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "FAIL"
-          },
-          "UAmessage": {
-            "CH85": "assert_throws_dom: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw an exception from the wrong global",
-            "SF14": "assert_throws_dom: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw an exception from the wrong global"
-          },
-          "totals": {
-            "FAIL": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-not-exposed.https.worker.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "PaymentRequest constructor must not be exposed in worker global scope": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/historical.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "paymentRequestID in PaymentRequest": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "paymentRequestID in PaymentResponse": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "careOf in PaymentAddress": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "totalAmount in PaymentResponse": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "paymentRequestId in PaymentRequest": {
-          "stNum": 4,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "paymentRequestId in PaymentResponse": {
-          "stNum": 5,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "languageCode in PaymentAddress": {
-          "stNum": 6,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "supportedMethods must not support sequence<DOMString>": {
-          "stNum": 7,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/active-document-same-origin.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "PaymentRequest <iframe allowpaymentrequest> in non-active document (same-origin)": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "FAIL"
-          },
-          "UAmessage": {
-            "CH85": "assert_throws_dom: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw an exception from the wrong global",
-            "SF14": "assert_throws_dom: function \"() => {\n        new grabbedPaymentRequest(...paymentArgs);\n      }\" threw an exception from the wrong global"
-          },
-          "totals": {
-            "FAIL": 2
           }
         }
       }
     },
     "/payment-request/PaymentRequestUpdateEvent/constructor.http.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -789,7 +85,7 @@
         "PaymentRequestUpdateEvent constructor must not be exposed in insecure context": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -799,9 +95,9 @@
         }
       }
     },
-    "/payment-request/allowpaymentrequest/setting-allowpaymentrequest-timing.https.sub.html": {
+    "/payment-request/PaymentRequestUpdateEvent/constructor.https.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -809,33 +105,10 @@
         "OK": 2
       },
       "subtests": {
-        "PaymentRequest setting allowpaymentrequest after document creation, before response": {
+        "PaymentRequestUpdateEvent can be constructed in secure-context": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-response/onpayerdetailchange-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "PaymentResponse inherits from EventTarget": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -843,90 +116,33 @@
             "PASS": 2
           }
         },
-        "PaymentResponse has an onpayerdetailchange in the prototype chain": {
+        "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 2
           }
-        }
-      }
-    },
-    "/payment-request/onmerchantvalidation-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Must have a onmerchantvalidation IDL attribute": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_idl_attribute: property \"onmerchantvalidation\" not found in prototype chain"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
         },
-        "onmerchantvalidation attribute is a generic handler for \"merchantvalidation\"": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_true: event did not fire expected true got false"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "onmerchantvalidation attribute is a handler for MerchantValidationEvent": {
+        "PaymentRequestUpdateEvent can be dispatched, even if not trusted": {
           "stNum": 2,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "onmerchantvalidation attribute and listeners both work": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         }
       }
     },
-    "/payment-request/payment-request-hasenrolledinstrument-method-protection.tentative.https.html": {
+    "/payment-request/PaymentRequestUpdateEvent/updatewith-method.https.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -934,25 +150,90 @@
         "OK": 2
       },
       "subtests": {
-        "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
+        "Let target be the request which is dispatching the event.": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
-            "SF14": "FAIL"
+            "CH86": "PASS",
+            "SF14": "PASS"
           },
-          "UAmessage": {
-            "SF14": "assert_equals: If it throws, then it must be a NotAllowedError. expected \"NotAllowedError\" but got \"TypeError\""
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
+            "PASS": 2
+          }
+        },
+        "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\"": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\"": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
           }
         }
       }
     },
-    "/payment-request/allowpaymentrequest/allowpaymentrequest-attribute-cross-origin-bc-containers.https.html": {
+    "/payment-request/allowpayment/active-document-cross-origin.https.sub.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "PaymentRequest <iframe allow=\"payment\"> in non-active document (cross-origin)": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/allowpayment/active-document-same-origin.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "PaymentRequest <iframe allow=\"payment\"> in non-active document (same-origin)": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/allowpayment/allowpaymentrequest-attribute-cross-origin-bc-containers.https.html": {
+      "byUA": {
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -963,7 +244,7 @@
         "iframe": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "FAIL"
           },
           "UAmessage": {
@@ -977,7 +258,7 @@
         "frame": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -988,7 +269,7 @@
         "object": {
           "stNum": 2,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -999,7 +280,7 @@
         "embed": {
           "stNum": 3,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1009,9 +290,9 @@
         }
       }
     },
-    "/payment-request/allowpaymentrequest/setting-allowpaymentrequest.https.sub.html": {
+    "/payment-request/allowpayment/no-attribute-cross-origin-bc-containers.https.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -1019,10 +300,148 @@
         "OK": 2
       },
       "subtests": {
-        "PaymentRequest setting allowpaymentrequest after load and then navigating": {
+        "iframe": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "frame": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "object": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "embed": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/allowpayment/no-attribute-same-origin-bc-containers.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "iframe": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "frame": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "object": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "embed": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/allowpayment/removing-allowpaymentrequest.https.sub.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "PaymentRequest removing allow=\"payment\" after load and then navigating": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "FAIL"
+          },
+          "UAmessage": {
+            "SF14": "assert_equals: before navigation expected \"Success\" but got \"Exception\""
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/allowpayment/setting-allowpaymentrequest.https.sub.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "PaymentRequest setting allow=\"payment\" after load and then navigating": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
             "SF14": "FAIL"
           },
           "UAmessage": {
@@ -1035,159 +454,9 @@
         }
       }
     },
-    "/payment-request/PaymentMethodChangeEvent/methodName-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "When no dictionary is passed, the methodName member defaults to the empty string": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-shippingAddress-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Must have a .shippingAddress IDL attribute.": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        ".shippingAddress attribute must default to null.": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/MerchantValidationEvent/complete-method.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "If event's isTrusted attribute is false, then then throw an InvalidStateError DOMException.": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "MerchantValidationEvent is not defined"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-onshippingaddresschange-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Must have a onshippingaddresschange IDL attribute": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\"": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "onshippingaddresschange attribute and listeners both work": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
     "/payment-request/constructor_convert_method_data.https.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -1198,7 +467,7 @@
         "Smoke test.": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1209,7 +478,7 @@
         "Tries to convert data member during Payment Request construction, irrespective of PMI.": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1220,7 +489,7 @@
         "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction.": {
           "stNum": 2,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1230,9 +499,9 @@
         }
       }
     },
-    "/payment-request/rejects_if_not_active.https.html": {
+    "/payment-request/historical.https.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -1240,33 +509,10 @@
         "OK": 2
       },
       "subtests": {
-        "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.": {
+        "paymentRequestID in PaymentRequest": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-onshippingoptionchange-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Must have a onshippingoptionchange IDL attribute": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1274,10 +520,10 @@
             "PASS": 2
           }
         },
-        "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\"": {
+        "paymentRequestID in PaymentResponse": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1285,10 +531,10 @@
             "PASS": 2
           }
         },
-        "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent": {
+        "careOf in PaymentAddress": {
           "stNum": 2,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1296,33 +542,10 @@
             "PASS": 2
           }
         },
-        "onshippingoptionchange attribute and listeners both work": {
+        "totalAmount in PaymentResponse": {
           "stNum": 3,
           "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-canmakepayment-method.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "If payment method identifier are supported, resolve promise with true.": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1330,43 +553,10 @@
             "PASS": 2
           }
         },
-        "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "All methods are unsupported": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Mix of supported and unsupported methods, at least one method is supported.": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+        "paymentRequestId in PaymentRequest": {
           "stNum": 4,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1374,92 +564,46 @@
             "PASS": 2
           }
         },
-        "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+        "paymentRequestId in PaymentResponse": {
           "stNum": 5,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 2
           }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/basic.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "PaymentRequest <iframe allowpaymentrequest> basic": {
-          "stNum": 0,
+        },
+        "languageCode in PaymentAddress": {
+          "stNum": 6,
           "byUA": {
-            "CH85": "PASS",
-            "SF14": "FAIL"
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "allowPaymentRequest in HTMLIFrameElement": {
+          "stNum": 7,
+          "byUA": {
+            "CH86": "FAIL",
+            "SF14": "PASS"
           },
           "UAmessage": {
-            "SF14": "Trying to start an Apple Pay session from an insecure document."
+            "CH86": "assert_false: expected false got true"
           },
           "totals": {
-            "PASS": 1,
-            "FAIL": 1
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/no-attribute-cross-origin-bc-containers.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "iframe": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
+            "FAIL": 1,
+            "PASS": 1
           }
         },
-        "frame": {
-          "stNum": 1,
+        "supportedMethods must not support sequence<DOMString>": {
+          "stNum": 8,
           "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "object": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "embed": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1471,7 +615,7 @@
     },
     "/payment-request/idlharness.https.window.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -1482,7 +626,7 @@
         "idl_test setup": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1493,7 +637,7 @@
         "idl_test validation": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1504,7 +648,7 @@
         "PaymentRequest interface: existence and properties of interface object": {
           "stNum": 2,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1515,11 +659,11 @@
         "PaymentRequest interface object length": {
           "stNum": 3,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "FAIL",
             "SF14": "PASS"
           },
           "UAmessage": {
-            "CH85": "assert_equals: wrong value for PaymentRequest.length expected 2 but got 1"
+            "CH86": "assert_equals: wrong value for PaymentRequest.length expected 2 but got 1"
           },
           "totals": {
             "FAIL": 1,
@@ -1529,7 +673,7 @@
         "PaymentRequest interface object name": {
           "stNum": 4,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1540,7 +684,7 @@
         "PaymentRequest interface: existence and properties of interface prototype object": {
           "stNum": 5,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1551,7 +695,7 @@
         "PaymentRequest interface: existence and properties of interface prototype object's \"constructor\" property": {
           "stNum": 6,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1562,7 +706,7 @@
         "PaymentRequest interface: existence and properties of interface prototype object's @@unscopables property": {
           "stNum": 7,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1573,63 +717,40 @@
         "PaymentRequest interface: operation show(optional Promise<PaymentDetailsUpdate>)": {
           "stNum": 8,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
-          "UAmessage": {
-            "CH85": "assert_equals: property has wrong .name expected \"show\" but got \"\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "PaymentRequest interface: operation abort()": {
           "stNum": 9,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
-          "UAmessage": {
-            "CH85": "assert_equals: property has wrong .name expected \"abort\" but got \"\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "PaymentRequest interface: operation canMakePayment()": {
           "stNum": 10,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
-          "UAmessage": {
-            "CH85": "assert_equals: property has wrong .name expected \"canMakePayment\" but got \"\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "PaymentRequest interface: operation hasEnrolledInstrument()": {
-          "stNum": 11,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "FAIL"
-          },
-          "UAmessage": {
-            "CH85": "assert_equals: property has wrong .name expected \"hasEnrolledInstrument\" but got \"\"",
-            "SF14": "assert_own_property: interface prototype object missing non-static operation expected property \"hasEnrolledInstrument\" missing"
-          },
-          "totals": {
-            "FAIL": 2
+            "PASS": 2
           }
         },
         "PaymentRequest interface: attribute id": {
-          "stNum": 12,
+          "stNum": 11,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1638,9 +759,9 @@
           }
         },
         "PaymentRequest interface: attribute shippingAddress": {
-          "stNum": 13,
+          "stNum": 12,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1649,9 +770,9 @@
           }
         },
         "PaymentRequest interface: attribute shippingOption": {
-          "stNum": 14,
+          "stNum": 13,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1660,9 +781,9 @@
           }
         },
         "PaymentRequest interface: attribute shippingType": {
-          "stNum": 15,
+          "stNum": 14,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1670,24 +791,10 @@
             "PASS": 2
           }
         },
-        "PaymentRequest interface: attribute onmerchantvalidation": {
-          "stNum": 16,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_true: The prototype object must have a property \"onmerchantvalidation\" expected true got false"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
         "PaymentRequest interface: attribute onshippingaddresschange": {
-          "stNum": 17,
+          "stNum": 15,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1696,9 +803,9 @@
           }
         },
         "PaymentRequest interface: attribute onshippingoptionchange": {
-          "stNum": 18,
+          "stNum": 16,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1707,9 +814,9 @@
           }
         },
         "PaymentRequest interface: attribute onpaymentmethodchange": {
-          "stNum": 19,
+          "stNum": 17,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1718,9 +825,9 @@
           }
         },
         "PaymentRequest must be primary interface of paymentRequest": {
-          "stNum": 20,
+          "stNum": 18,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1729,9 +836,9 @@
           }
         },
         "Stringification of paymentRequest": {
-          "stNum": 21,
+          "stNum": 19,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1740,9 +847,9 @@
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"show(optional Promise<PaymentDetailsUpdate>)\" with the proper type": {
-          "stNum": 22,
+          "stNum": 20,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1751,9 +858,9 @@
           }
         },
         "PaymentRequest interface: calling show(optional Promise<PaymentDetailsUpdate>) on paymentRequest with too few arguments must throw TypeError": {
-          "stNum": 23,
+          "stNum": 21,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1762,9 +869,9 @@
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"abort()\" with the proper type": {
-          "stNum": 24,
+          "stNum": 22,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1773,9 +880,9 @@
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"canMakePayment()\" with the proper type": {
-          "stNum": 25,
+          "stNum": 23,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1783,24 +890,10 @@
             "PASS": 2
           }
         },
-        "PaymentRequest interface: paymentRequest must inherit property \"hasEnrolledInstrument()\" with the proper type": {
-          "stNum": 26,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "FAIL"
-          },
-          "UAmessage": {
-            "SF14": "assert_inherits: property \"hasEnrolledInstrument\" not found in prototype chain"
-          },
-          "totals": {
-            "PASS": 1,
-            "FAIL": 1
-          }
-        },
         "PaymentRequest interface: paymentRequest must inherit property \"id\" with the proper type": {
-          "stNum": 27,
+          "stNum": 24,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1809,9 +902,9 @@
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"shippingAddress\" with the proper type": {
-          "stNum": 28,
+          "stNum": 25,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1820,9 +913,9 @@
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"shippingOption\" with the proper type": {
-          "stNum": 29,
+          "stNum": 26,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1831,9 +924,9 @@
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"shippingType\" with the proper type": {
-          "stNum": 30,
+          "stNum": 27,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1841,24 +934,10 @@
             "PASS": 2
           }
         },
-        "PaymentRequest interface: paymentRequest must inherit property \"onmerchantvalidation\" with the proper type": {
-          "stNum": 31,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_inherits: property \"onmerchantvalidation\" not found in prototype chain"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
         "PaymentRequest interface: paymentRequest must inherit property \"onshippingaddresschange\" with the proper type": {
-          "stNum": 32,
+          "stNum": 28,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1867,9 +946,9 @@
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onshippingoptionchange\" with the proper type": {
-          "stNum": 33,
+          "stNum": 29,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1878,9 +957,9 @@
           }
         },
         "PaymentRequest interface: paymentRequest must inherit property \"onpaymentmethodchange\" with the proper type": {
-          "stNum": 34,
+          "stNum": 30,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1889,9 +968,9 @@
           }
         },
         "PaymentAddress interface: existence and properties of interface object": {
-          "stNum": 35,
+          "stNum": 31,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1900,9 +979,9 @@
           }
         },
         "PaymentAddress interface object length": {
-          "stNum": 36,
+          "stNum": 32,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1911,9 +990,9 @@
           }
         },
         "PaymentAddress interface object name": {
-          "stNum": 37,
+          "stNum": 33,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1922,9 +1001,9 @@
           }
         },
         "PaymentAddress interface: existence and properties of interface prototype object": {
-          "stNum": 38,
+          "stNum": 34,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1933,9 +1012,9 @@
           }
         },
         "PaymentAddress interface: existence and properties of interface prototype object's \"constructor\" property": {
-          "stNum": 39,
+          "stNum": 35,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1944,9 +1023,9 @@
           }
         },
         "PaymentAddress interface: existence and properties of interface prototype object's @@unscopables property": {
-          "stNum": 40,
+          "stNum": 36,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1955,23 +1034,20 @@
           }
         },
         "PaymentAddress interface: operation toJSON()": {
-          "stNum": 41,
+          "stNum": 37,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
-          "UAmessage": {
-            "CH85": "assert_equals: property has wrong .name expected \"toJSON\" but got \"\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "PaymentAddress interface: attribute city": {
-          "stNum": 42,
+          "stNum": 38,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1980,9 +1056,9 @@
           }
         },
         "PaymentAddress interface: attribute country": {
-          "stNum": 43,
+          "stNum": 39,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -1991,9 +1067,9 @@
           }
         },
         "PaymentAddress interface: attribute dependentLocality": {
-          "stNum": 44,
+          "stNum": 40,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2002,9 +1078,9 @@
           }
         },
         "PaymentAddress interface: attribute organization": {
-          "stNum": 45,
+          "stNum": 41,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2013,9 +1089,9 @@
           }
         },
         "PaymentAddress interface: attribute phone": {
-          "stNum": 46,
+          "stNum": 42,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2024,9 +1100,9 @@
           }
         },
         "PaymentAddress interface: attribute postalCode": {
-          "stNum": 47,
+          "stNum": 43,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2035,9 +1111,9 @@
           }
         },
         "PaymentAddress interface: attribute recipient": {
-          "stNum": 48,
+          "stNum": 44,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2046,9 +1122,9 @@
           }
         },
         "PaymentAddress interface: attribute region": {
-          "stNum": 49,
+          "stNum": 45,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2057,9 +1133,9 @@
           }
         },
         "PaymentAddress interface: attribute sortingCode": {
-          "stNum": 50,
+          "stNum": 46,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2068,9 +1144,9 @@
           }
         },
         "PaymentAddress interface: attribute addressLine": {
-          "stNum": 51,
+          "stNum": 47,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2079,9 +1155,9 @@
           }
         },
         "PaymentResponse interface: existence and properties of interface object": {
-          "stNum": 52,
+          "stNum": 48,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2090,9 +1166,9 @@
           }
         },
         "PaymentResponse interface object length": {
-          "stNum": 53,
+          "stNum": 49,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2101,9 +1177,9 @@
           }
         },
         "PaymentResponse interface object name": {
-          "stNum": 54,
+          "stNum": 50,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2112,9 +1188,9 @@
           }
         },
         "PaymentResponse interface: existence and properties of interface prototype object": {
-          "stNum": 55,
+          "stNum": 51,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2123,9 +1199,9 @@
           }
         },
         "PaymentResponse interface: existence and properties of interface prototype object's \"constructor\" property": {
-          "stNum": 56,
+          "stNum": 52,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2134,9 +1210,9 @@
           }
         },
         "PaymentResponse interface: existence and properties of interface prototype object's @@unscopables property": {
-          "stNum": 57,
+          "stNum": 53,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2145,23 +1221,20 @@
           }
         },
         "PaymentResponse interface: operation toJSON()": {
-          "stNum": 58,
+          "stNum": 54,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
-          "UAmessage": {
-            "CH85": "assert_equals: property has wrong .name expected \"toJSON\" but got \"\""
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "PaymentResponse interface: attribute requestId": {
-          "stNum": 59,
+          "stNum": 55,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2170,9 +1243,9 @@
           }
         },
         "PaymentResponse interface: attribute methodName": {
-          "stNum": 60,
+          "stNum": 56,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2181,9 +1254,9 @@
           }
         },
         "PaymentResponse interface: attribute details": {
-          "stNum": 61,
+          "stNum": 57,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2192,9 +1265,9 @@
           }
         },
         "PaymentResponse interface: attribute shippingAddress": {
-          "stNum": 62,
+          "stNum": 58,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2203,9 +1276,9 @@
           }
         },
         "PaymentResponse interface: attribute shippingOption": {
-          "stNum": 63,
+          "stNum": 59,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2214,9 +1287,9 @@
           }
         },
         "PaymentResponse interface: attribute payerName": {
-          "stNum": 64,
+          "stNum": 60,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2225,9 +1298,9 @@
           }
         },
         "PaymentResponse interface: attribute payerEmail": {
-          "stNum": 65,
+          "stNum": 61,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2236,9 +1309,9 @@
           }
         },
         "PaymentResponse interface: attribute payerPhone": {
-          "stNum": 66,
+          "stNum": 62,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2247,37 +1320,9 @@
           }
         },
         "PaymentResponse interface: operation complete(optional PaymentComplete)": {
-          "stNum": 67,
+          "stNum": 63,
           "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_equals: property has wrong .name expected \"complete\" but got \"\""
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "PaymentResponse interface: operation retry(optional PaymentValidationErrors)": {
-          "stNum": 68,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_equals: property has wrong .name expected \"retry\" but got \"\""
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "PaymentResponse interface: attribute onpayerdetailchange": {
-          "stNum": 69,
-          "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2285,220 +1330,32 @@
             "PASS": 2
           }
         },
-        "MerchantValidationEvent interface: existence and properties of interface object": {
-          "stNum": 70,
+        "PaymentResponse interface: operation retry(optional PaymentValidationErrors)": {
+          "stNum": 64,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
-          "UAmessage": {
-            "CH85": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
-        "MerchantValidationEvent interface object length": {
-          "stNum": 71,
+        "PaymentResponse interface: attribute onpayerdetailchange": {
+          "stNum": 65,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
-          "UAmessage": {
-            "CH85": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-          },
+          "UAmessage": {},
           "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface object name": {
-          "stNum": 72,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: existence and properties of interface prototype object": {
-          "stNum": 73,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
-          "stNum": 74,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: existence and properties of interface prototype object's @@unscopables property": {
-          "stNum": 75,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: attribute methodName": {
-          "stNum": 76,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: attribute validationURL": {
-          "stNum": 77,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: operation complete(Promise<any>)": {
-          "stNum": 78,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_own_property: self does not have own property \"MerchantValidationEvent\" expected property \"MerchantValidationEvent\" missing"
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent must be primary interface of new MerchantValidationEvent(\"merchantvalidation\")": {
-          "stNum": 79,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "Stringification of new MerchantValidationEvent(\"merchantvalidation\")": {
-          "stNum": 80,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"methodName\" with the proper type": {
-          "stNum": 81,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"validationURL\" with the proper type": {
-          "stNum": 82,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: new MerchantValidationEvent(\"merchantvalidation\") must inherit property \"complete(Promise<any>)\" with the proper type": {
-          "stNum": 83,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
-          }
-        },
-        "MerchantValidationEvent interface: calling complete(Promise<any>) on new MerchantValidationEvent(\"merchantvalidation\") with too few arguments must throw TypeError": {
-          "stNum": 84,
-          "byUA": {
-            "CH85": "FAIL",
-            "SF14": "PASS"
-          },
-          "UAmessage": {
-            "CH85": "assert_equals: Unexpected exception when evaluating object expected null but got object \"ReferenceError: MerchantValidationEvent is not defined\""
-          },
-          "totals": {
-            "FAIL": 1,
-            "PASS": 1
+            "PASS": 2
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface object": {
-          "stNum": 85,
+          "stNum": 66,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2507,9 +1364,9 @@
           }
         },
         "PaymentMethodChangeEvent interface object length": {
-          "stNum": 86,
+          "stNum": 67,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2518,9 +1375,9 @@
           }
         },
         "PaymentMethodChangeEvent interface object name": {
-          "stNum": 87,
+          "stNum": 68,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2529,9 +1386,9 @@
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface prototype object": {
-          "stNum": 88,
+          "stNum": 69,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2540,9 +1397,9 @@
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
-          "stNum": 89,
+          "stNum": 70,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2551,9 +1408,9 @@
           }
         },
         "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's @@unscopables property": {
-          "stNum": 90,
+          "stNum": 71,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2562,9 +1419,9 @@
           }
         },
         "PaymentMethodChangeEvent interface: attribute methodName": {
-          "stNum": 91,
+          "stNum": 72,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2573,9 +1430,9 @@
           }
         },
         "PaymentMethodChangeEvent interface: attribute methodDetails": {
-          "stNum": 92,
+          "stNum": 73,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2584,9 +1441,9 @@
           }
         },
         "PaymentMethodChangeEvent must be primary interface of new PaymentMethodChangeEvent(\"paymentmethodchange\")": {
-          "stNum": 93,
+          "stNum": 74,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2595,9 +1452,9 @@
           }
         },
         "Stringification of new PaymentMethodChangeEvent(\"paymentmethodchange\")": {
-          "stNum": 94,
+          "stNum": 75,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2606,9 +1463,9 @@
           }
         },
         "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodName\" with the proper type": {
-          "stNum": 95,
+          "stNum": 76,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2617,9 +1474,9 @@
           }
         },
         "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodDetails\" with the proper type": {
-          "stNum": 96,
+          "stNum": 77,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2628,9 +1485,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith(Promise<PaymentDetailsUpdate>)\" with the proper type": {
-          "stNum": 97,
+          "stNum": 78,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2639,9 +1496,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface: calling updateWith(Promise<PaymentDetailsUpdate>) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError": {
-          "stNum": 98,
+          "stNum": 79,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2650,9 +1507,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface object": {
-          "stNum": 99,
+          "stNum": 80,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2661,9 +1518,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface object length": {
-          "stNum": 100,
+          "stNum": 81,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2672,9 +1529,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface object name": {
-          "stNum": 101,
+          "stNum": 82,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2683,9 +1540,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object": {
-          "stNum": 102,
+          "stNum": 83,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2694,9 +1551,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's \"constructor\" property": {
-          "stNum": 103,
+          "stNum": 84,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2705,9 +1562,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's @@unscopables property": {
-          "stNum": 104,
+          "stNum": 85,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2716,9 +1573,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface: operation updateWith(Promise<PaymentDetailsUpdate>)": {
-          "stNum": 105,
+          "stNum": 86,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2727,9 +1584,9 @@
           }
         },
         "PaymentRequestUpdateEvent must be primary interface of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")": {
-          "stNum": 106,
+          "stNum": 87,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2738,9 +1595,9 @@
           }
         },
         "Stringification of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")": {
-          "stNum": 107,
+          "stNum": 88,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2749,9 +1606,9 @@
           }
         },
         "PaymentRequestUpdateEvent interface: new PaymentRequestUpdateEvent(\"paymentrequestupdate\") must inherit property \"updateWith(Promise<PaymentDetailsUpdate>)\" with the proper type": {
-          "stNum": 108,
+          "stNum": 89,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2760,9 +1617,321 @@
           }
         },
         "PaymentRequestUpdateEvent interface: calling updateWith(Promise<PaymentDetailsUpdate>) on new PaymentRequestUpdateEvent(\"paymentrequestupdate\") with too few arguments must throw TypeError": {
-          "stNum": 109,
+          "stNum": 90,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/onpaymentmethodchange-attribute.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Must have a onpaymentmethodchange IDL attribute": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\"": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "onpaymentmethodchange attribute and listeners both work": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-abort-method.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Throws if the promise [[state]] is not \"interactive\"": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Calling abort() multiple times is always a new object.": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "The same request cannot be shown multiple times.": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Aborting a request before it is shown doesn't prevent it from being shown later.": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-canmakepayment-method.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "If payment method identifier are supported, resolve promise with true.": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "If request.[[state]] is \"created\", then return a promise that resolves to true for known method.": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "All methods are unsupported": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Mix of supported and unsupported methods, at least one method is supported.": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "stNum": 4,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
+          "stNum": 5,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-constructor-thcrash.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Don't crash if there is an abusive number of payment methods in the methodData sequence": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Don't crash if PaymentMethodData.supportedMethods is an abusive length": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Don't crash if the request id has an abusive length": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Don't crash if PaymentDetailsInit.total.label is an abusive length": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Don't crash if total.amount.value is an abusive length": {
+          "stNum": 4,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Don't crash if details.displayItems has an abusive number of items": {
+          "stNum": 5,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Don't crash if details.shippingOptions has an abusive number of items": {
+          "stNum": 6,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Don't crash if PaymentShippingOptions.label is an abusive length": {
+          "stNum": 7,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Don't crash if the PaymentShippingOptions.amount.value is an abusive length": {
+          "stNum": 8,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Don't crash if PaymentItem.label is an abusive length": {
+          "stNum": 9,
+          "byUA": {
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2774,7 +1943,7 @@
     },
     "/payment-request/payment-request-constructor.https.sub.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -2785,7 +1954,7 @@
         "If details.id is missing, assign an identifier": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2796,7 +1965,7 @@
         "If details.id is missing, assign a unique identifier": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2807,7 +1976,7 @@
         "If the same id is provided, then use it": {
           "stNum": 2,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2818,7 +1987,7 @@
         "Use ids even if they are strange": {
           "stNum": 3,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2829,7 +1998,7 @@
         "Use provided request ID": {
           "stNum": 4,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2840,7 +2009,7 @@
         "If the length of the methodData sequence is zero, then throw a TypeError": {
           "stNum": 5,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2851,7 +2020,7 @@
         "If payment method is duplicate, then throw a RangeError": {
           "stNum": 6,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "FAIL"
           },
           "UAmessage": {
@@ -2865,7 +2034,7 @@
         "Modifier method data must be JSON-serializable object": {
           "stNum": 7,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2876,7 +2045,7 @@
         "Rethrow any exceptions of JSON-serializing paymentMethod.data into a string": {
           "stNum": 8,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2887,7 +2056,7 @@
         "If details.total.amount.value is not a valid decimal monetary value, then throw a TypeError": {
           "stNum": 9,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2898,7 +2067,7 @@
         "PaymentDetailsBase members can be 0 length": {
           "stNum": 10,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2909,7 +2078,7 @@
         "If the first character of details.total.amount.value is U+002D HYPHEN-MINUS, then throw a TypeError": {
           "stNum": 11,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2920,7 +2089,7 @@
         "For each item in details.displayItems: if item.amount.value is not a valid decimal monetary value, then throw a TypeError": {
           "stNum": 12,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2931,7 +2100,7 @@
         "Negative values are allowed for displayItems.amount.value, irrespective of total amount": {
           "stNum": 13,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2942,7 +2111,7 @@
         "it handles high precision currency values without throwing": {
           "stNum": 14,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2953,7 +2122,7 @@
         "For each option in details.shippingOptions: if option.amount.value is not a valid decimal monetary value, then throw a TypeError": {
           "stNum": 15,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2964,7 +2133,7 @@
         "If there is no selected shipping option, then PaymentRequest.shippingOption remains null": {
           "stNum": 16,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2975,7 +2144,7 @@
         "If there is a selected shipping option, and requestShipping is set, then that option becomes synchronously selected": {
           "stNum": 17,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2986,7 +2155,7 @@
         "If requestShipping is set, and if there is a multiple selected shipping options, only the last is selected.": {
           "stNum": 18,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -2997,7 +2166,7 @@
         "If there are any duplicate shipping option ids, and shipping is requested, then throw a TypeError": {
           "stNum": 19,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3008,7 +2177,7 @@
         "Throw when there are duplicate shippingOption ids, even if other values are different": {
           "stNum": 20,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3019,7 +2188,7 @@
         "Throw TypeError if modifier.total.amount.value is not a valid decimal monetary value": {
           "stNum": 21,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3030,7 +2199,7 @@
         "If amount.value of additionalDisplayItems is not a valid decimal monetary value, then throw a TypeError": {
           "stNum": 22,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3041,7 +2210,7 @@
         "Modifier data must be JSON-serializable object (an Array in this case)": {
           "stNum": 23,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3052,7 +2221,7 @@
         "Modifier data must be JSON-serializable object (an Object in this case)": {
           "stNum": 24,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3063,7 +2232,7 @@
         "Rethrow any exceptions of JSON-serializing modifier.data": {
           "stNum": 25,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3074,7 +2243,7 @@
         "Shipping type should be valid": {
           "stNum": 26,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3085,7 +2254,7 @@
         "PaymentRequest.shippingAddress must initially be null": {
           "stNum": 27,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3096,7 +2265,7 @@
         "If options.requestShipping is not set, then request.shippingType attribute is null.": {
           "stNum": 28,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3107,7 +2276,7 @@
         "If options.requestShipping is true, request.shippingType will be options.shippingType.": {
           "stNum": 29,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3117,9 +2286,9 @@
         }
       }
     },
-    "/payment-request/payment-request-constructor-thcrash.https.html": {
+    "/payment-request/payment-request-ctor-currency-code-checks.https.sub.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -3127,10 +2296,10 @@
         "OK": 2
       },
       "subtests": {
-        "Don't crash if there is an abusive number of payment methods in the methodData sequence": {
+        "Check and canonicalize valid details.total.amount": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3138,10 +2307,10 @@
             "PASS": 2
           }
         },
-        "Don't crash if PaymentMethodData.supportedMethods is an abusive length": {
+        "Check and canonicalize invalid details.total.amount and rethrow any exceptions.": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3149,10 +2318,10 @@
             "PASS": 2
           }
         },
-        "Don't crash if the request id has an abusive length": {
+        "Check and canonicalize valid details.displayItems amount": {
           "stNum": 2,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3160,10 +2329,10 @@
             "PASS": 2
           }
         },
-        "Don't crash if PaymentDetailsInit.total.label is an abusive length": {
+        "Check and canonicalize invalid details.displayItems amount and rethrow RangeError.": {
           "stNum": 3,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3171,10 +2340,10 @@
             "PASS": 2
           }
         },
-        "Don't crash if total.amount.value is an abusive length": {
+        "Check and canonicalize valid details.shippingOptions amount.": {
           "stNum": 4,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3182,10 +2351,10 @@
             "PASS": 2
           }
         },
-        "Don't crash if details.displayItems has an abusive number of items": {
+        "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError.": {
           "stNum": 5,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3193,10 +2362,10 @@
             "PASS": 2
           }
         },
-        "Don't crash if details.shippingOptions has an abusive number of items": {
+        "Check and canonicalize valid modifiers[n].total amount.": {
           "stNum": 6,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3204,10 +2373,10 @@
             "PASS": 2
           }
         },
-        "Don't crash if PaymentShippingOptions.label is an abusive length": {
+        "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError.": {
           "stNum": 7,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3215,10 +2384,10 @@
             "PASS": 2
           }
         },
-        "Don't crash if the PaymentShippingOptions.amount.value is an abusive length": {
+        "Check and canonicalize valid modifiers[n].additionaDisplayItem amount.": {
           "stNum": 8,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3226,10 +2395,10 @@
             "PASS": 2
           }
         },
-        "Don't crash if PaymentItem.label is an abusive length": {
+        "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError.": {
           "stNum": 9,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3239,9 +2408,9 @@
         }
       }
     },
-    "/payment-request/PaymentRequestUpdateEvent/constructor.https.html": {
+    "/payment-request/payment-request-ctor-pmi-handling.https.sub.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -3249,10 +2418,10 @@
         "OK": 2
       },
       "subtests": {
-        "PaymentRequestUpdateEvent can be constructed in secure-context": {
+        "Must support valid standard URL PMIs": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3260,10 +2429,10 @@
             "PASS": 2
           }
         },
-        "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted": {
+        "Must not throw on syntactically valid standardized payment method identifiers, even if they are not supported": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3271,22 +2440,59 @@
             "PASS": 2
           }
         },
-        "PaymentRequestUpdateEvent can be dispatched, even if not trusted": {
+        "Must throw on syntactically invalid standardized payment method identifiers": {
           "stNum": 2,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 2
+          }
+        },
+        "Constructor MUST throw if given an invalid URL-based payment method identifier": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-hasenrolledinstrument-method-protection.tentative.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "FAIL"
+          },
+          "UAmessage": {
+            "SF14": "assert_equals: If it throws, then it must be a NotAllowedError. expected \"NotAllowedError\" but got \"TypeError\""
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
           }
         }
       }
     },
     "/payment-request/payment-request-hasenrolledinstrument-method.tentative.https.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -3297,11 +2503,11 @@
         "hasEnrolledInstrument() resolves to false for unsupported payment methods.": {
           "stNum": 0,
           "byUA": {
-            "CH85": "FAIL",
+            "CH86": "FAIL",
             "SF14": "FAIL"
           },
           "UAmessage": {
-            "CH85": "promise_test: Unhandled rejection with value: object \"NotAllowedError: Exceeded query quota for hasEnrolledInstrument\"",
+            "CH86": "promise_test: Unhandled rejection with value: object \"NotAllowedError: Exceeded query quota for hasEnrolledInstrument\"",
             "SF14": "promise_test: Unhandled rejection with value: object \"TypeError: request.hasEnrolledInstrument is not a function. (In 'request.hasEnrolledInstrument()', 'request.hasEnrolledInstrument' is undefined)\""
           },
           "totals": {
@@ -3311,7 +2517,7 @@
         "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "FAIL"
           },
           "UAmessage": {
@@ -3325,7 +2531,7 @@
         "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.": {
           "stNum": 2,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "FAIL"
           },
           "UAmessage": {
@@ -3338,9 +2544,9 @@
         }
       }
     },
-    "/payment-request/PaymentMethodChangeEvent/methodDetails-attribute.https.html": {
+    "/payment-request/payment-request-id-attribute.https.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -3348,10 +2554,10 @@
         "OK": 2
       },
       "subtests": {
-        "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value": {
+        "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
@@ -3359,363 +2565,22 @@
             "PASS": 2
           }
         },
-        "The methodDetails member defaults to null": {
+        "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing": {
           "stNum": 1,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
           "totals": {
             "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-canmakepayment-method-protection.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/MerchantValidationEvent/constructor.http.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "MerchantValidationEvent constructor must not be exposed in insecure context": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/allowpaymentrequest/no-attribute-same-origin-bc-containers.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "iframe": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "frame": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "object": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "embed": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/PaymentRequestUpdateEvent/updatewith-method.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Let target be the request which is dispatching the event.": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\"": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\"": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-abort-method.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Throws if the promise [[state]] is not \"interactive\"": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Calling abort() multiple times is always a new object.": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "The same request cannot be shown multiple times.": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Aborting a request before it is shown doesn't prevent it from being shown later.": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-request-ctor-pmi-handling.https.sub.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Must support valid standard URL PMIs": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Must not throw on syntactically valid standardized payment method identifiers, even if they are not supported": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Must throw on syntactically invalid standardized payment method identifiers": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "Constructor MUST throw if given an invalid URL-based payment method identifier": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/onpaymentmethodchange-attribute.https.html": {
-      "byUA": {
-        "CH85": "OK",
-        "SF14": "OK"
-      },
-      "UAmessage": {},
-      "totals": {
-        "OK": 2
-      },
-      "subtests": {
-        "Must have a onpaymentmethodchange IDL attribute": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\"": {
-          "stNum": 1,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent": {
-          "stNum": 2,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        },
-        "onpaymentmethodchange attribute and listeners both work": {
-          "stNum": 3,
-          "byUA": {
-            "CH85": "PASS",
-            "SF14": "PASS"
-          },
-          "UAmessage": {},
-          "totals": {
-            "PASS": 2
-          }
-        }
-      }
-    },
-    "/payment-request/payment-is-showing.https.html": {
-      "byUA": {
-        "CH85": "TIMEOUT",
-        "SF14": "TIMEOUT"
-      },
-      "UAmessage": {
-        "CH85": "",
-        "SF14": ""
-      },
-      "totals": {
-        "TIMEOUT": 2
-      },
-      "subtests": {
-        "/payment-request/payment-is-showing.https.html": {
-          "stNum": 0,
-          "byUA": {
-            "CH85": "TIMEOUT",
-            "SF14": "TIMEOUT"
-          },
-          "UAmessage": {},
-          "totals": {
-            "TIMEOUT": 2
           }
         }
       }
     },
     "/payment-request/payment-request-insecure.http.html": {
       "byUA": {
-        "CH85": "OK",
+        "CH86": "OK",
         "SF14": "OK"
       },
       "UAmessage": {},
@@ -3726,7 +2591,590 @@
         "PaymentRequest constructor must not be exposed in insecure context": {
           "stNum": 0,
           "byUA": {
-            "CH85": "PASS",
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-not-exposed.https.worker.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "PaymentRequest constructor must not be exposed in worker global scope": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-onshippingaddresschange-attribute.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Must have a onshippingaddresschange IDL attribute": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\"": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "onshippingaddresschange attribute and listeners both work": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-onshippingoptionchange-attribute.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Must have a onshippingoptionchange IDL attribute": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\"": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "onshippingoptionchange attribute and listeners both work": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-shippingAddress-attribute.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Must have a .shippingAddress IDL attribute.": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        ".shippingAddress attribute must default to null.": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-shippingOption-attribute.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Must have a .shippingOption IDL attribute.": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        ".shippingOption attribute must default to null.": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "If there is a single shipping option, but selected is false, then .shippingOption must be null.": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null.": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Given multiple shipping options, it must use the selected shipping option for .shippingOption value.": {
+          "stNum": 4,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order.": {
+          "stNum": 5,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-shippingType-attribute.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Must have a shippingType IDL attribute": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "If options.requestShipping is false, then request.shippingType attribute is null.": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "If options.requestShipping is true, request.shippingType will be options.shippingType.": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-request-show-method.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Calling show() without being triggered by user interaction throws": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "TIMEOUT",
+            "SF14": "FAIL"
+          },
+          "UAmessage": {
+            "CH86": "Test timed out",
+            "SF14": "promise_rejects_dom: function \"function () { throw e }\" threw object \"SecurityError: show() must be triggered by user activation.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 18, expected 0"
+          },
+          "totals": {
+            "TIMEOUT": 1,
+            "FAIL": 1
+          }
+        },
+        "Throws if the promise [[state]] is not 'created'.": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "FAIL",
+            "SF14": "FAIL"
+          },
+          "UAmessage": {
+            "CH86": "promise_rejects_dom: function \"function() { throw e }\" threw object \"InvalidStateError: Failed to execute 'show' on 'PaymentRequest': Already called show() once\" that is not a DOMException NotAllowedError: property \"code\" is equal to 11, expected 0",
+            "SF14": "promise_rejects_dom: function \"function () { throw e }\" threw object \"InvalidStateError: The object is in an invalid state.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 11, expected 0"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        },
+        "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "FAIL",
+            "SF14": "FAIL"
+          },
+          "UAmessage": {
+            "CH86": "promise_rejects_dom: function \"function() { throw e }\" threw object \"AbortError: Cannot show PaymentRequest UI in a background tab.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 20, expected 0",
+            "SF14": "promise_rejects_dom: function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 20, expected 0"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        },
+        "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "FAIL"
+          },
+          "UAmessage": {
+            "SF14": "promise_rejects_dom: function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException NotSupportedError: property \"code\" is equal to 20, expected 9"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        },
+        "Calling show() multiple times always returns a new promise.": {
+          "stNum": 4,
+          "byUA": {
+            "CH86": "FAIL",
+            "SF14": "FAIL"
+          },
+          "UAmessage": {
+            "CH86": "promise_test: Unhandled rejection with value: object \"InvalidStateError: Failed to execute 'abort' on 'PaymentRequest': No show() or retry() in progress, so nothing to abort\"",
+            "SF14": "promise_test: Unhandled rejection with value: object \"InvalidStateError: The object is in an invalid state.\""
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        }
+      }
+    },
+    "/payment-request/payment-response/onpayerdetailchange-attribute.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "PaymentResponse inherits from EventTarget": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "PaymentResponse has an onpayerdetailchange in the prototype chain": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        }
+      }
+    },
+    "/payment-request/rejects_if_not_active.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "FAIL"
+          },
+          "UAmessage": {
+            "SF14": "assert_true: Second payment should be pending but is rejected. expected true got false"
+          },
+          "totals": {
+            "PASS": 1,
+            "FAIL": 1
+          }
+        }
+      }
+    },
+    "/payment-request/show-consume-activation.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Calling share consumes user activation": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "FAIL",
+            "SF14": "FAIL"
+          },
+          "UAmessage": {
+            "CH86": "promise_rejects_dom: function \"function() { throw e }\" threw object \"AbortError: User closed the Payment Request UI.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 20, expected 0",
+            "SF14": "promise_rejects_dom: function \"function () { throw e }\" threw object \"SecurityError: show() must be triggered by user activation.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 18, expected 0"
+          },
+          "totals": {
+            "FAIL": 2
+          }
+        }
+      }
+    },
+    "/payment-request/show-method-optional-promise-rejects.https.html": {
+      "byUA": {
+        "CH86": "OK",
+        "SF14": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 2
+      },
+      "subtests": {
+        "Rejection of detailsPromise must abort the update with an 'AbortError' DOMException.": {
+          "stNum": 0,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Total in the update is a string, so converting to IDL must abort the update with a TypeError.": {
+          "stNum": 1,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Total is recursive, so converting to IDL must abort the update with a TypeError.": {
+          "stNum": 2,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Updating with a negative total results in a TypeError.": {
+          "stNum": 3,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Updating with a displayItem with an invalid currency results in RangeError.": {
+          "stNum": 4,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Updating with duplicate shippingOptions (same IDs) results in a TypeError.": {
+          "stNum": 5,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Updating with a shippingOption with an invalid currency value results in a RangError.": {
+          "stNum": 6,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Must throw a RangeError when a modifier's total item has an invalid currency.": {
+          "stNum": 7,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Must throw a RangeError when a modifier display item has an invalid currency.": {
+          "stNum": 8,
+          "byUA": {
+            "CH86": "PASS",
+            "SF14": "PASS"
+          },
+          "UAmessage": {},
+          "totals": {
+            "PASS": 2
+          }
+        },
+        "Must throw as Modifier has a recursive dictionary.": {
+          "stNum": 9,
+          "byUA": {
+            "CH86": "PASS",
             "SF14": "PASS"
           },
           "UAmessage": {},
