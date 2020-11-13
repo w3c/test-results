@@ -1,1 +1,1791 @@
-{"run_info": {"product": "safari", "python_version": 2, "has_sandbox": true, "verify": false, "headless": false, "automation": false, "os_version": "10.15", "browser_version": "Technology Preview (Release 114, 15611.1.1.3)", "browser_channel": "preview", "wasm": false, "os": "mac", "version": "OS X 10.15.7", "webrender": false, "debug": false, "bits": 64, "processor": "x86_64", "revision": "7ea7da06dba1aded1f2247907d72d46e0ff3b13f"}, "time_start": 1602804015294, "results": [{"status": "OK", "known_intermittent": [], "test": "/payment-request/PaymentMethodChangeEvent/methodDetails-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "The methodDetails member defaults to null"}], "duration": 779, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/PaymentMethodChangeEvent/methodName-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "When no dictionary is passed, the methodName member defaults to the empty string"}], "duration": 489, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/PaymentRequestUpdateEvent/constructor.http.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent constructor must not be exposed in insecure context"}], "duration": 610, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/PaymentRequestUpdateEvent/constructor.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent can be constructed in secure-context"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent can be dispatched, even if not trusted"}], "duration": 700, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/PaymentRequestUpdateEvent/updatewith-method.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Let target be the request which is dispatching the event."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\""}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\""}], "duration": 541, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/allowpayment/active-document-cross-origin.https.sub.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest <iframe allow=\"payment\"> in non-active document (cross-origin)"}], "duration": 702, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/allowpayment/active-document-same-origin.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest <iframe allow=\"payment\"> in non-active document (same-origin)"}], "duration": 548, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/allowpayment/allowpaymentrequest-attribute-cross-origin-bc-containers.https.html", "subtests": [{"status": "FAIL", "expected": "PASS", "message": "assert_equals: expected \"Success\" but got \"Exception\"", "name": "iframe", "known_intermittent": []}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "frame"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "embed"}], "duration": 1155, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/allowpayment/no-attribute-cross-origin-bc-containers.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "iframe"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "frame"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "embed"}], "duration": 1175, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/allowpayment/no-attribute-same-origin-bc-containers.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "iframe"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "frame"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "embed"}], "duration": 993, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/allowpayment/removing-allowpaymentrequest.https.sub.html", "subtests": [{"status": "FAIL", "expected": "PASS", "message": "assert_equals: before navigation expected \"Success\" but got \"Exception\"", "name": "PaymentRequest removing allow=\"payment\" after load and then navigating", "known_intermittent": []}], "duration": 497, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/allowpayment/setting-allowpaymentrequest.https.sub.html", "subtests": [{"status": "FAIL", "expected": "PASS", "message": "assert_equals: after navigation expected \"Success\" but got \"Exception\"", "name": "PaymentRequest setting allow=\"payment\" after load and then navigating", "known_intermittent": []}], "duration": 825, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/constructor_convert_method_data.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Smoke test."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Tries to convert data member during Payment Request construction, irrespective of PMI."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction."}], "duration": 1380, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/historical.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "paymentRequestID in PaymentRequest"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "paymentRequestID in PaymentResponse"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "careOf in PaymentAddress"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "totalAmount in PaymentResponse"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "paymentRequestId in PaymentRequest"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "paymentRequestId in PaymentResponse"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "languageCode in PaymentAddress"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "allowPaymentRequest in HTMLIFrameElement"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "supportedMethods must not support sequence<DOMString>"}], "duration": 388, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/idlharness.https.window.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "idl_test setup"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "idl_test validation"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: existence and properties of interface object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface object length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface object name"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: existence and properties of interface prototype object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: existence and properties of interface prototype object's \"constructor\" property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: existence and properties of interface prototype object's @@unscopables property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: operation show(optional Promise<PaymentDetailsUpdate>)"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: operation abort()"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: operation canMakePayment()"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: attribute id"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: attribute shippingAddress"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: attribute shippingOption"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: attribute shippingType"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: attribute onshippingaddresschange"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: attribute onshippingoptionchange"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: attribute onpaymentmethodchange"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest must be primary interface of paymentRequest"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Stringification of paymentRequest"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"show(optional Promise<PaymentDetailsUpdate>)\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: calling show(optional Promise<PaymentDetailsUpdate>) on paymentRequest with too few arguments must throw TypeError"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"abort()\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"canMakePayment()\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"id\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingAddress\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingOption\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingType\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"onshippingaddresschange\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"onshippingoptionchange\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest interface: paymentRequest must inherit property \"onpaymentmethodchange\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: existence and properties of interface object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface object length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface object name"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: existence and properties of interface prototype object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: existence and properties of interface prototype object's \"constructor\" property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: existence and properties of interface prototype object's @@unscopables property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: operation toJSON()"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute city"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute country"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute dependentLocality"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute organization"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute phone"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute postalCode"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute recipient"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute region"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute sortingCode"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentAddress interface: attribute addressLine"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: existence and properties of interface object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface object length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface object name"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: existence and properties of interface prototype object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: existence and properties of interface prototype object's \"constructor\" property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: existence and properties of interface prototype object's @@unscopables property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: operation toJSON()"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: attribute requestId"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: attribute methodName"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: attribute details"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: attribute shippingAddress"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: attribute shippingOption"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: attribute payerName"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: attribute payerEmail"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: attribute payerPhone"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: operation complete(optional PaymentComplete)"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: operation retry(optional PaymentValidationErrors)"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse interface: attribute onpayerdetailchange"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface: existence and properties of interface object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface object length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface object name"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's \"constructor\" property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's @@unscopables property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface: attribute methodName"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface: attribute methodDetails"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent must be primary interface of new PaymentMethodChangeEvent(\"paymentmethodchange\")"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Stringification of new PaymentMethodChangeEvent(\"paymentmethodchange\")"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodName\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodDetails\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith(Promise<PaymentDetailsUpdate>)\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface: calling updateWith(Promise<PaymentDetailsUpdate>) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface: existence and properties of interface object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface object length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface object name"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's \"constructor\" property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's @@unscopables property"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface: operation updateWith(Promise<PaymentDetailsUpdate>)"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent must be primary interface of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Stringification of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface: new PaymentRequestUpdateEvent(\"paymentrequestupdate\") must inherit property \"updateWith(Promise<PaymentDetailsUpdate>)\" with the proper type"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequestUpdateEvent interface: calling updateWith(Promise<PaymentDetailsUpdate>) on new PaymentRequestUpdateEvent(\"paymentrequestupdate\") with too few arguments must throw TypeError"}], "duration": 659, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/onpaymentmethodchange-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Must have a onpaymentmethodchange IDL attribute"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\""}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "onpaymentmethodchange attribute and listeners both work"}], "duration": 388, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-abort-method.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Throws if the promise [[state]] is not \"interactive\""}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Calling abort() multiple times is always a new object."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "The same request cannot be shown multiple times."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Aborting a request before it is shown doesn't prevent it from being shown later."}], "duration": 804, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-canmakepayment-method.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "If payment method identifier are supported, resolve promise with true."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If request.[[state]] is \"created\", then return a promise that resolves to true for known method."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "All methods are unsupported"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Mix of supported and unsupported methods, at least one method is supported."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException."}], "duration": 3818, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-constructor-thcrash.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if there is an abusive number of payment methods in the methodData sequence"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if PaymentMethodData.supportedMethods is an abusive length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if the request id has an abusive length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if PaymentDetailsInit.total.label is an abusive length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if total.amount.value is an abusive length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if details.displayItems has an abusive number of items"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if details.shippingOptions has an abusive number of items"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if PaymentShippingOptions.label is an abusive length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if the PaymentShippingOptions.amount.value is an abusive length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Don't crash if PaymentItem.label is an abusive length"}], "duration": 584, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-constructor.https.sub.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "If details.id is missing, assign an identifier"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If details.id is missing, assign a unique identifier"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If the same id is provided, then use it"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Use ids even if they are strange"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Use provided request ID"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If the length of the methodData sequence is zero, then throw a TypeError"}, {"status": "FAIL", "expected": "PASS", "message": "assert_throws_js: function \"() => new PaymentRequest(duplicateMethods, defaultDetails)\" did not throw", "name": "If payment method is duplicate, then throw a RangeError", "known_intermittent": []}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Modifier method data must be JSON-serializable object"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Rethrow any exceptions of JSON-serializing paymentMethod.data into a string"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If details.total.amount.value is not a valid decimal monetary value, then throw a TypeError"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentDetailsBase members can be 0 length"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If the first character of details.total.amount.value is U+002D HYPHEN-MINUS, then throw a TypeError"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "For each item in details.displayItems: if item.amount.value is not a valid decimal monetary value, then throw a TypeError"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Negative values are allowed for displayItems.amount.value, irrespective of total amount"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "it handles high precision currency values without throwing"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "For each option in details.shippingOptions: if option.amount.value is not a valid decimal monetary value, then throw a TypeError"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If there is no selected shipping option, then PaymentRequest.shippingOption remains null"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If there is a selected shipping option, and requestShipping is set, then that option becomes synchronously selected"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If requestShipping is set, and if there is a multiple selected shipping options, only the last is selected."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If there are any duplicate shipping option ids, and shipping is requested, then throw a TypeError"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Throw when there are duplicate shippingOption ids, even if other values are different"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Throw TypeError if modifier.total.amount.value is not a valid decimal monetary value"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If amount.value of additionalDisplayItems is not a valid decimal monetary value, then throw a TypeError"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Modifier data must be JSON-serializable object (an Array in this case)"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Modifier data must be JSON-serializable object (an Object in this case)"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Rethrow any exceptions of JSON-serializing modifier.data"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Shipping type should be valid"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest.shippingAddress must initially be null"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If options.requestShipping is not set, then request.shippingType attribute is null."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If options.requestShipping is true, request.shippingType will be options.shippingType."}], "duration": 547, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-ctor-currency-code-checks.https.sub.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize valid details.total.amount"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize invalid details.total.amount and rethrow any exceptions."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize valid details.displayItems amount"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize invalid details.displayItems amount and rethrow RangeError."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize valid details.shippingOptions amount."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize valid modifiers[n].total amount."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize valid modifiers[n].additionaDisplayItem amount."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError."}], "duration": 816, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-ctor-pmi-handling.https.sub.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Must support valid standard URL PMIs"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Must not throw on syntactically valid standardized payment method identifiers, even if they are not supported"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Must throw on syntactically invalid standardized payment method identifiers"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Constructor MUST throw if given an invalid URL-based payment method identifier"}], "duration": 447, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-hasenrolledinstrument-method-protection.tentative.https.html", "subtests": [{"status": "FAIL", "expected": "PASS", "message": "assert_equals: If it throws, then it must be a NotAllowedError. expected \"NotAllowedError\" but got \"TypeError\"", "name": "Optionally, at the user agent's discretion, return a promise rejected with a \"NotAllowedError\" DOMException.", "known_intermittent": []}], "duration": 399, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-hasenrolledinstrument-method.tentative.https.html", "subtests": [{"status": "FAIL", "expected": "PASS", "message": "promise_test: Unhandled rejection with value: object \"TypeError: request.hasEnrolledInstrument is not a function. (In 'request.hasEnrolledInstrument()', 'request.hasEnrolledInstrument' is undefined)\"", "name": "hasEnrolledInstrument() resolves to false for unsupported payment methods.", "known_intermittent": []}, {"status": "FAIL", "expected": "PASS", "message": "promise_test: Unhandled rejection with value: object \"TypeError: request.hasEnrolledInstrument is not a function. (In 'request.hasEnrolledInstrument()', 'request.hasEnrolledInstrument' is undefined)\"", "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException.", "known_intermittent": []}, {"status": "FAIL", "expected": "PASS", "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"NotSupportedError: The operation is not supported.\" that is not a DOMException AbortError: property \"code\" is equal to 9, expected 20", "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException.", "known_intermittent": []}], "duration": 1021, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-id-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing"}], "duration": 772, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-insecure.http.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest constructor must not be exposed in insecure context"}], "duration": 593, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-not-exposed.https.worker.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentRequest constructor must not be exposed in worker global scope"}], "duration": 801, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-onshippingaddresschange-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Must have a onshippingaddresschange IDL attribute"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\""}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "onshippingaddresschange attribute and listeners both work"}], "duration": 495, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-onshippingoptionchange-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Must have a onshippingoptionchange IDL attribute"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\""}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "onshippingoptionchange attribute and listeners both work"}], "duration": 448, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-shippingAddress-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Must have a .shippingAddress IDL attribute."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": ".shippingAddress attribute must default to null."}], "duration": 550, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-shippingOption-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Must have a .shippingOption IDL attribute."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": ".shippingOption attribute must default to null."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If there is a single shipping option, but selected is false, then .shippingOption must be null."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Given multiple shipping options, it must use the selected shipping option for .shippingOption value."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order."}], "duration": 552, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-shippingType-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Must have a shippingType IDL attribute"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If options.requestShipping is false, then request.shippingType attribute is null."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "If options.requestShipping is true, request.shippingType will be options.shippingType."}], "duration": 552, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-request-show-method.https.html", "subtests": [{"status": "FAIL", "expected": "PASS", "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"SecurityError: show() must be triggered by user activation.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 18, expected 0", "name": "Calling show() without being triggered by user interaction throws", "known_intermittent": []}, {"status": "FAIL", "expected": "PASS", "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"InvalidStateError: The object is in an invalid state.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 11, expected 0", "name": "Throws if the promise [[state]] is not 'created'.", "known_intermittent": []}, {"status": "FAIL", "expected": "PASS", "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 20, expected 0", "name": "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.", "known_intermittent": []}, {"status": "FAIL", "expected": "PASS", "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException NotSupportedError: property \"code\" is equal to 20, expected 9", "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.", "known_intermittent": []}, {"status": "FAIL", "expected": "PASS", "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: The object is in an invalid state.\"", "name": "Calling show() multiple times always returns a new promise.", "known_intermittent": []}], "duration": 998, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/payment-response/onpayerdetailchange-attribute.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse inherits from EventTarget"}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "PaymentResponse has an onpayerdetailchange in the prototype chain"}], "duration": 869, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/rejects_if_not_active.https.html", "subtests": [{"status": "FAIL", "expected": "PASS", "message": "assert_true: Second payment should be pending but is rejected. expected true got false", "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.", "known_intermittent": []}], "duration": 1893, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/show-consume-activation.https.html", "subtests": [{"status": "FAIL", "expected": "PASS", "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"SecurityError: show() must be triggered by user activation.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 18, expected 0", "name": "Calling share consumes user activation", "known_intermittent": []}], "duration": 876, "message": null}, {"status": "OK", "known_intermittent": [], "test": "/payment-request/show-method-optional-promise-rejects.https.html", "subtests": [{"status": "PASS", "known_intermittent": [], "message": null, "name": "Rejection of detailsPromise must abort the update with an 'AbortError' DOMException."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Total in the update is a string, so converting to IDL must abort the update with a TypeError."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Total is recursive, so converting to IDL must abort the update with a TypeError."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Updating with a negative total results in a TypeError."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Updating with a displayItem with an invalid currency results in RangeError."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Updating with duplicate shippingOptions (same IDs) results in a TypeError."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Updating with a shippingOption with an invalid currency value results in a RangError."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Must throw a RangeError when a modifier's total item has an invalid currency."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Must throw a RangeError when a modifier display item has an invalid currency."}, {"status": "PASS", "known_intermittent": [], "message": null, "name": "Must throw as Modifier has a recursive dictionary."}], "duration": 1782, "message": null}], "time_end": 1602804059591}
+{
+  "run_info": {
+    "product": "safari",
+    "python_version": 2,
+    "has_sandbox": true,
+    "verify": false,
+    "headless": false,
+    "automation": false,
+    "os_version": "10.15",
+    "browser_version": "Technology Preview (Release 114, 15611.1.1.3)",
+    "browser_channel": "preview",
+    "wasm": false,
+    "os": "mac",
+    "version": "OS X 10.15.7",
+    "webrender": false,
+    "debug": false,
+    "bits": 64,
+    "processor": "x86_64",
+    "revision": "7ea7da06dba1aded1f2247907d72d46e0ff3b13f"
+  },
+  "time_start": 1602804015294,
+  "results": [
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/PaymentMethodChangeEvent/methodDetails-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must have a methodDetails IDL attribute, which is initialized with to the methodName dictionary value"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "The methodDetails member defaults to null"
+        }
+      ],
+      "duration": 779,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/PaymentMethodChangeEvent/methodName-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must have a methodName IDL attribute, which is initialized with to the methodName dictionary value"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "When no dictionary is passed, the methodName member defaults to the empty string"
+        }
+      ],
+      "duration": 489,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/PaymentRequestUpdateEvent/constructor.http.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent constructor must not be exposed in insecure context"
+        }
+      ],
+      "duration": 610,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/PaymentRequestUpdateEvent/constructor.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent can be constructed in secure-context"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent can be constructed with an EventInitDict, even if not trusted"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent can be dispatched, even if not trusted"
+        }
+      ],
+      "duration": 700,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/PaymentRequestUpdateEvent/updatewith-method.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Let target be the request which is dispatching the event."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Calling .updateWith() with an undispatched untrusted event throws \"InvalidStateError\""
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Calling .updateWith() with a dispatched, untrusted event, throws \"InvalidStateError\""
+        }
+      ],
+      "duration": 541,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/allowpayment/active-document-cross-origin.https.sub.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest <iframe allow=\"payment\"> in non-active document (cross-origin)"
+        }
+      ],
+      "duration": 702,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/allowpayment/active-document-same-origin.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest <iframe allow=\"payment\"> in non-active document (same-origin)"
+        }
+      ],
+      "duration": 548,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/allowpayment/allowpaymentrequest-attribute-cross-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "assert_equals: expected \"Success\" but got \"Exception\"",
+          "name": "iframe",
+          "known_intermittent": []
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "frame"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "embed"
+        }
+      ],
+      "duration": 1155,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/allowpayment/no-attribute-cross-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "iframe"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "frame"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "embed"
+        }
+      ],
+      "duration": 1175,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/allowpayment/no-attribute-same-origin-bc-containers.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "iframe"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "frame"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "embed"
+        }
+      ],
+      "duration": 993,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/allowpayment/removing-allowpaymentrequest.https.sub.html",
+      "subtests": [
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "assert_equals: before navigation expected \"Success\" but got \"Exception\"",
+          "name": "PaymentRequest removing allow=\"payment\" after load and then navigating",
+          "known_intermittent": []
+        }
+      ],
+      "duration": 497,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/allowpayment/setting-allowpaymentrequest.https.sub.html",
+      "subtests": [
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "assert_equals: after navigation expected \"Success\" but got \"Exception\"",
+          "name": "PaymentRequest setting allow=\"payment\" after load and then navigating",
+          "known_intermittent": []
+        }
+      ],
+      "duration": 825,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/constructor_convert_method_data.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Smoke test."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Tries to convert data member during Payment Request construction, irrespective of PMI."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Converts PaymentMethodData's data to mandated IDL type during PaymentRequest construction."
+        }
+      ],
+      "duration": 1380,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/historical.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "paymentRequestID in PaymentRequest"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "paymentRequestID in PaymentResponse"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "careOf in PaymentAddress"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "totalAmount in PaymentResponse"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "paymentRequestId in PaymentRequest"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "paymentRequestId in PaymentResponse"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "languageCode in PaymentAddress"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "allowPaymentRequest in HTMLIFrameElement"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "supportedMethods must not support sequence<DOMString>"
+        }
+      ],
+      "duration": 388,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/idlharness.https.window.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "idl_test setup"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "idl_test validation"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: existence and properties of interface object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface object length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface object name"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: existence and properties of interface prototype object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: existence and properties of interface prototype object's \"constructor\" property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: existence and properties of interface prototype object's @@unscopables property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: operation show(optional Promise<PaymentDetailsUpdate>)"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: operation abort()"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: operation canMakePayment()"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: attribute id"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: attribute shippingAddress"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: attribute shippingOption"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: attribute shippingType"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: attribute onshippingaddresschange"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: attribute onshippingoptionchange"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: attribute onpaymentmethodchange"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest must be primary interface of paymentRequest"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Stringification of paymentRequest"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"show(optional Promise<PaymentDetailsUpdate>)\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: calling show(optional Promise<PaymentDetailsUpdate>) on paymentRequest with too few arguments must throw TypeError"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"abort()\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"canMakePayment()\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"id\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingAddress\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingOption\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"shippingType\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"onshippingaddresschange\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"onshippingoptionchange\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest interface: paymentRequest must inherit property \"onpaymentmethodchange\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: existence and properties of interface object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface object length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface object name"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: existence and properties of interface prototype object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: existence and properties of interface prototype object's \"constructor\" property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: existence and properties of interface prototype object's @@unscopables property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: operation toJSON()"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute city"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute country"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute dependentLocality"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute organization"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute phone"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute postalCode"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute recipient"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute region"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute sortingCode"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentAddress interface: attribute addressLine"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: existence and properties of interface object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface object length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface object name"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: existence and properties of interface prototype object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: existence and properties of interface prototype object's \"constructor\" property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: existence and properties of interface prototype object's @@unscopables property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: operation toJSON()"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: attribute requestId"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: attribute methodName"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: attribute details"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: attribute shippingAddress"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: attribute shippingOption"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: attribute payerName"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: attribute payerEmail"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: attribute payerPhone"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: operation complete(optional PaymentComplete)"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: operation retry(optional PaymentValidationErrors)"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse interface: attribute onpayerdetailchange"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface: existence and properties of interface object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface object length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface object name"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's \"constructor\" property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface: existence and properties of interface prototype object's @@unscopables property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface: attribute methodName"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface: attribute methodDetails"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent must be primary interface of new PaymentMethodChangeEvent(\"paymentmethodchange\")"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Stringification of new PaymentMethodChangeEvent(\"paymentmethodchange\")"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodName\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentMethodChangeEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"methodDetails\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface: new PaymentMethodChangeEvent(\"paymentmethodchange\") must inherit property \"updateWith(Promise<PaymentDetailsUpdate>)\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface: calling updateWith(Promise<PaymentDetailsUpdate>) on new PaymentMethodChangeEvent(\"paymentmethodchange\") with too few arguments must throw TypeError"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface object length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface object name"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's \"constructor\" property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface: existence and properties of interface prototype object's @@unscopables property"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface: operation updateWith(Promise<PaymentDetailsUpdate>)"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent must be primary interface of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Stringification of new PaymentRequestUpdateEvent(\"paymentrequestupdate\")"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface: new PaymentRequestUpdateEvent(\"paymentrequestupdate\") must inherit property \"updateWith(Promise<PaymentDetailsUpdate>)\" with the proper type"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequestUpdateEvent interface: calling updateWith(Promise<PaymentDetailsUpdate>) on new PaymentRequestUpdateEvent(\"paymentrequestupdate\") with too few arguments must throw TypeError"
+        }
+      ],
+      "duration": 659,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/onpaymentmethodchange-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must have a onpaymentmethodchange IDL attribute"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "onpaymentmethodchange attribute is a generic handler for \"paymentmethodchange\""
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "onpaymentmethodchange attribute is a handler for PaymentMethodChangeEvent"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "onpaymentmethodchange attribute and listeners both work"
+        }
+      ],
+      "duration": 388,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-abort-method.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Throws if the promise [[state]] is not \"interactive\""
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Calling abort() multiple times is always a new object."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "The same request cannot be shown multiple times."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Aborting a request before it is shown doesn't prevent it from being shown later."
+        }
+      ],
+      "duration": 804,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-canmakepayment-method.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If payment method identifier are supported, resolve promise with true."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If request.[[state]] is \"created\", then return a promise that resolves to true for known method."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "All methods are unsupported"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Mix of supported and unsupported methods, at least one method is supported."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If request.[[state]] is \"interactive\", then return a promise rejected with an \"InvalidStateError\" DOMException."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If request.[[state]] is \"closed\", then return a promise rejected with an \"InvalidStateError\" DOMException."
+        }
+      ],
+      "duration": 3818,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-constructor-thcrash.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if there is an abusive number of payment methods in the methodData sequence"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if PaymentMethodData.supportedMethods is an abusive length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if the request id has an abusive length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if PaymentDetailsInit.total.label is an abusive length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if total.amount.value is an abusive length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if details.displayItems has an abusive number of items"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if details.shippingOptions has an abusive number of items"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if PaymentShippingOptions.label is an abusive length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if the PaymentShippingOptions.amount.value is an abusive length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Don't crash if PaymentItem.label is an abusive length"
+        }
+      ],
+      "duration": 584,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-constructor.https.sub.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If details.id is missing, assign an identifier"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If details.id is missing, assign a unique identifier"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If the same id is provided, then use it"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Use ids even if they are strange"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Use provided request ID"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If the length of the methodData sequence is zero, then throw a TypeError"
+        },
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "assert_throws_js: function \"() => new PaymentRequest(duplicateMethods, defaultDetails)\" did not throw",
+          "name": "If payment method is duplicate, then throw a RangeError",
+          "known_intermittent": []
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Modifier method data must be JSON-serializable object"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Rethrow any exceptions of JSON-serializing paymentMethod.data into a string"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If details.total.amount.value is not a valid decimal monetary value, then throw a TypeError"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentDetailsBase members can be 0 length"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If the first character of details.total.amount.value is U+002D HYPHEN-MINUS, then throw a TypeError"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "For each item in details.displayItems: if item.amount.value is not a valid decimal monetary value, then throw a TypeError"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Negative values are allowed for displayItems.amount.value, irrespective of total amount"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "it handles high precision currency values without throwing"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "For each option in details.shippingOptions: if option.amount.value is not a valid decimal monetary value, then throw a TypeError"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If there is no selected shipping option, then PaymentRequest.shippingOption remains null"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If there is a selected shipping option, and requestShipping is set, then that option becomes synchronously selected"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If requestShipping is set, and if there is a multiple selected shipping options, only the last is selected."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If there are any duplicate shipping option ids, and shipping is requested, then throw a TypeError"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Throw when there are duplicate shippingOption ids, even if other values are different"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Throw TypeError if modifier.total.amount.value is not a valid decimal monetary value"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If amount.value of additionalDisplayItems is not a valid decimal monetary value, then throw a TypeError"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Modifier data must be JSON-serializable object (an Array in this case)"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Modifier data must be JSON-serializable object (an Object in this case)"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Rethrow any exceptions of JSON-serializing modifier.data"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Shipping type should be valid"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest.shippingAddress must initially be null"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If options.requestShipping is not set, then request.shippingType attribute is null."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If options.requestShipping is true, request.shippingType will be options.shippingType."
+        }
+      ],
+      "duration": 547,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-ctor-currency-code-checks.https.sub.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize valid details.total.amount"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize invalid details.total.amount and rethrow any exceptions."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize valid details.displayItems amount"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize invalid details.displayItems amount and rethrow RangeError."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize valid details.shippingOptions amount."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize invalid details.shippingOptions amount and rethrow RangeError."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize valid modifiers[n].total amount."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize invalid modifiers[n].total amount and rethrow RangeError."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize valid modifiers[n].additionaDisplayItem amount."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Check and canonicalize invalid modifiers[n].additionaDisplayItem amount and rethrow RangeError."
+        }
+      ],
+      "duration": 816,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-ctor-pmi-handling.https.sub.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must support valid standard URL PMIs"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must not throw on syntactically valid standardized payment method identifiers, even if they are not supported"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must throw on syntactically invalid standardized payment method identifiers"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Constructor MUST throw if given an invalid URL-based payment method identifier"
+        }
+      ],
+      "duration": 447,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-id-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest's id attribute's value can be set via PaymentDetailsInit dictionary"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest's id attribute must be a UUID when PaymentDetailsInit.id is missing"
+        }
+      ],
+      "duration": 772,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-insecure.http.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest constructor must not be exposed in insecure context"
+        }
+      ],
+      "duration": 593,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-not-exposed.https.worker.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentRequest constructor must not be exposed in worker global scope"
+        }
+      ],
+      "duration": 801,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-onshippingaddresschange-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must have a onshippingaddresschange IDL attribute"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "onshippingaddresschange attribute is a generic handler for \"shippingaddresschange\""
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "onshippingaddresschange attribute is a handler for PaymentRequestUpdateEvent"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "onshippingaddresschange attribute and listeners both work"
+        }
+      ],
+      "duration": 495,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-onshippingoptionchange-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must have a onshippingoptionchange IDL attribute"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "onshippingoptionchange attribute is a generic handler for \"shippingoptionchange\""
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "onshippingoptionchange attribute is a handler for PaymentRequestUpdateEvent"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "onshippingoptionchange attribute and listeners both work"
+        }
+      ],
+      "duration": 448,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-shippingAddress-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must have a .shippingAddress IDL attribute."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": ".shippingAddress attribute must default to null."
+        }
+      ],
+      "duration": 550,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-shippingOption-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must have a .shippingOption IDL attribute."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": ".shippingOption attribute must default to null."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If there is a single shipping option, but selected is false, then .shippingOption must be null."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If there are multiple shipping options all with `selected` set to false, then .shippingOption is null."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Given multiple shipping options, it must use the selected shipping option for .shippingOption value."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If there are multiple of the shipping options with selected true, then .shippingOption is the last selected shipping option in order."
+        }
+      ],
+      "duration": 552,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-shippingType-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must have a shippingType IDL attribute"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If options.requestShipping is false, then request.shippingType attribute is null."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "If options.requestShipping is true, request.shippingType will be options.shippingType."
+        }
+      ],
+      "duration": 552,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-request-show-method.https.html",
+      "subtests": [
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"SecurityError: show() must be triggered by user activation.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 18, expected 0",
+          "name": "Calling show() without being triggered by user interaction throws",
+          "known_intermittent": []
+        },
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"InvalidStateError: The object is in an invalid state.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 11, expected 0",
+          "name": "Throws if the promise [[state]] is not 'created'.",
+          "known_intermittent": []
+        },
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 20, expected 0",
+          "name": "If the user agent's \"payment request is showing\" boolean is true, then return a promise rejected with an \"AbortError\" DOMException.",
+          "known_intermittent": []
+        },
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"AbortError: The operation was aborted.\" that is not a DOMException NotSupportedError: property \"code\" is equal to 20, expected 9",
+          "name": "If payment method consultation produces no supported method of payment, then return a promise rejected with a \"NotSupportedError\" DOMException.",
+          "known_intermittent": []
+        },
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "promise_test: Unhandled rejection with value: object \"InvalidStateError: The object is in an invalid state.\"",
+          "name": "Calling show() multiple times always returns a new promise.",
+          "known_intermittent": []
+        }
+      ],
+      "duration": 998,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/payment-response/onpayerdetailchange-attribute.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse inherits from EventTarget"
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "PaymentResponse has an onpayerdetailchange in the prototype chain"
+        }
+      ],
+      "duration": 869,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/rejects_if_not_active.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "expected": "PASS",
+          "message": "assert_true: Second payment should be pending but is rejected. expected true got false",
+          "name": "If a payment request is showing, but its document is navigated away (so no longer fully active), the payment sheet is dismissed.",
+          "known_intermittent": []
+        }
+      ],
+      "duration": 1893,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/show-consume-activation.https.html",
+      "subtests": [
+        {
+          "status": "FAIL",
+          "expected": "PASS",
+          "message": "promise_rejects_dom: function \"function () { throw e }\" threw object \"SecurityError: show() must be triggered by user activation.\" that is not a DOMException NotAllowedError: property \"code\" is equal to 18, expected 0",
+          "name": "Calling share consumes user activation",
+          "known_intermittent": []
+        }
+      ],
+      "duration": 876,
+      "message": null
+    },
+    {
+      "status": "OK",
+      "known_intermittent": [],
+      "test": "/payment-request/show-method-optional-promise-rejects.https.html",
+      "subtests": [
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Rejection of detailsPromise must abort the update with an 'AbortError' DOMException."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Total in the update is a string, so converting to IDL must abort the update with a TypeError."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Total is recursive, so converting to IDL must abort the update with a TypeError."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Updating with a negative total results in a TypeError."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Updating with a displayItem with an invalid currency results in RangeError."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Updating with duplicate shippingOptions (same IDs) results in a TypeError."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Updating with a shippingOption with an invalid currency value results in a RangError."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must throw a RangeError when a modifier's total item has an invalid currency."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must throw a RangeError when a modifier display item has an invalid currency."
+        },
+        {
+          "status": "PASS",
+          "known_intermittent": [],
+          "message": null,
+          "name": "Must throw as Modifier has a recursive dictionary."
+        }
+      ],
+      "duration": 1782,
+      "message": null
+    }
+  ],
+  "time_end": 1602804059591
+}
