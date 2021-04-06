@@ -3,9 +3,8 @@ Core Accessibility API Mappings 1.2: Test Results
 
 Implementation Report
 ---------------------
-* [all](all.html)
-* [less than two](less-than-2.html)
-* [complete failures](complete-fails.html)
+At this time we are still writing tests, obtaining results, and seeking
+missing implementations.
 
 Supported Platform Accessibility APIs
 -------------------------------------
