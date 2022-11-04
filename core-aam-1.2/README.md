@@ -29,7 +29,10 @@ Index of Implementations
   * link: <https://webkitgtk.org>
 
 * FF01 - Firefox on Linux using ATK
-  * email: jdiggs@igalia.com
+  * Date of results collection: 2022-11-04
+  * Firefox Version: Version 104.0.0
+  * ATK Version: Package: libatk1.0-0, Version: 2.46.0-3
+  * email: spectranaut@igalia.com
   * link: <http://www.mozilla.org>
 
 * GC01 - Chromium on Linux using ATK
