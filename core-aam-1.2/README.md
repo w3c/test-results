@@ -6,6 +6,8 @@ Implementation Report
 At this time we are still writing tests, obtaining results, and seeking
 missing implementations.
 
+[All Results](https://spectranaut.github.io/test-results/core-aam-1.2/all)
+
 Supported Platform Accessibility APIs
 -------------------------------------
 
