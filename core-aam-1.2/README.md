@@ -3,8 +3,7 @@ Core Accessibility API Mappings 1.2: Test Results
 
 Implementation Report
 ---------------------
-At this time we are still writing tests, obtaining results, and seeking
-missing implementations.
+These test comprise the proof of implementation for [ARIA 1.2 specification](https://www.w3.org/TR/wai-aria-1.2/) for all testable AUTHORS MUST statements new to ARIA 1.2.
 
 [All Results](https://spectranaut.github.io/test-results/core-aam-1.2/all)
 
@@ -32,6 +31,13 @@ Index of Implementations
 * FF01 - Firefox on Linux using ATK
   * email: jdiggs@igalia.com
   * link: <http://www.mozilla.org>
+
+* GC01 - Chromium on Linux using ATK
+  * Date of results collection: 2022-11-04
+  * Chrome Version: Version 106.0.5249.91 (Official Build) (64-bit)
+  * ATK Version: Package: libatk1.0-0, Version: 2.46.0-3
+  * email: spectranaut@igalia.com
+  * link: <https://www.google.com/chrome/>
 
 * WK02 - WebKit/Safari on macOS using AX API
   * email: jdiggs@igalia.com
