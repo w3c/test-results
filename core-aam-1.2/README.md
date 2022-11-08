@@ -50,7 +50,10 @@ Index of Implementations
   * link: <https://webkit.org>
 
 * GC02 - Chromium on macOS using AX API
-  * email: jdiggs@igalia.com
+  * Date of results collection: 2022-11-08
+  * Chrome Version 107.0.5304.87 (Official Build) (arm64)
+  * MacOSX Version 12.6
+  * email: spectranaut@gmail.com
   * link: <https://www.google.com/chrome/>
 
 * FF02 - Firefox on macOS using AX API
