@@ -43,7 +43,10 @@ Index of Implementations
   * link: <https://www.google.com/chrome/>
 
 * WK02 - WebKit/Safari on macOS using AX API
-  * email: jdiggs@igalia.com
+  * Date of results collection: 2022-11-08
+  * Safari Version 16.0 (17614.1.25.9.10, 17614)
+  * MacOSX Version 12.6
+  * email: spectranaut@gmail.com
   * link: <https://webkit.org>
 
 * GC02 - Chromium on macOS using AX API
