@@ -57,7 +57,10 @@ Index of Implementations
   * link: <https://www.google.com/chrome/>
 
 * FF02 - Firefox on macOS using AX API
-  * email: jdiggs@igalia.com
+  * Date of results collection: 2022-11-08
+  * Firefox Version 106.0.5
+  * MacOSX Version 12.6
+  * email: spectranaut@gmail.com
   * link: <http://www.mozilla.org>
 
 * FF03 - Firefox on Windows using MSAA + IAccessible2
