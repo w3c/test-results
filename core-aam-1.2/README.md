@@ -63,8 +63,18 @@ Index of Implementations
   * email: spectranaut@gmail.com
   * link: <http://www.mozilla.org>
 
+* GC03 - Chromium on Windows using MSAA + IAccessible2
+  * Date of results collection: 2022-11-30
+  * Chrome Version 107.0.5304.122 (Official Build) (64-bit)
+  * Windows 10 Version 21H2
+  * email: spectranaut@gmail.com
+  * link: <https://www.google.com/chrome/>
+
 * FF03 - Firefox on Windows using MSAA + IAccessible2
-  * email: jongund@illinois.edu
+  * Date of results collection: 2022-11-30
+  * Firefox Version 107.0.1
+  * Windows 10 Version 21H2
+  * email: spectranaut@gmail.com
   * link: <http://www.mozilla.org>
 
 * ME04 - Edge on Windows using UIA
