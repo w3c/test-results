@@ -789,7 +789,7 @@
             "FF01": "Result test.getAttribute(roledescription)=foo Expected: test.getAttribute(roledescription)=<error>",
             "FF02": "Result test.accessibilityAttributeValue(AXRoleDescription)='foo' Expected: test.accessibilityAttributeValue(AXRoleDescription)=''",
             "FF03": "Result test.QueryInterface(IAccessible2).get_localizedExtendedRole=<error> Expected: test.QueryInterface(IAccessible2).get_localizedExtendedRole=\"\"",
-            "WK02": "Result test.accessibilityAttributeValue(AXRoleDescription)='foo' Expected: test.accessibilityAttributeValue(AXRoleDescription)=''"
+            "WK02": "[BUG](https://bugs.webkit.org/show_bug.cgi?id=174248)"
           },
           "totals": {
             "FAIL": 4,
@@ -848,6 +848,324 @@
           "totals": {
             "PASS": 2,
             "FAIL": 2
+          }
+        }
+      }
+    },
+    "/core-aam/aria-expanded_not_supported_on_alert-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "FF03": "OK",
+        "GC01": "OK",
+        "GC02": "OK",
+        "GC03": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 7
+      },
+      "subtests": {
+        "aria-expanded=true on alert": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "FF03": "FAIL",
+            "GC01": "PASS",
+            "GC02": "PASS",
+            "GC03": "FAIL",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF02": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1",
+            "GC03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+          },
+          "totals": {
+            "FAIL": 4,
+            "PASS": 3
+          }
+        },
+        "aria-expanded=true on alert 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "FAIL",
+            "GC01": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "Result test.hasState(ATSPI_STATE_EXPANDED)=1 Expected: test.hasState(ATSPI_STATE_EXPANDED)=0"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/core-aam/aria-expanded_not_supported_on_banner-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "FF03": "OK",
+        "GC01": "OK",
+        "GC02": "OK",
+        "GC03": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 7
+      },
+      "subtests": {
+        "aria-expanded=true on banner": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "FF03": "FAIL",
+            "GC01": "PASS",
+            "GC02": "PASS",
+            "GC03": "FAIL",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF02": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1",
+            "GC03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+          },
+          "totals": {
+            "FAIL": 4,
+            "PASS": 3
+          }
+        },
+        "aria-expanded=true on banner 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "FAIL",
+            "GC01": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "Result test.hasState(ATSPI_STATE_EXPANDED)=1 Expected: test.hasState(ATSPI_STATE_EXPANDED)=0"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/core-aam/aria-expanded_not_supported_on_dialog-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "FF03": "OK",
+        "GC01": "OK",
+        "GC02": "OK",
+        "GC03": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 7
+      },
+      "subtests": {
+        "aria-expanded=true on dialog": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "FF03": "FAIL",
+            "GC01": "PASS",
+            "GC02": "PASS",
+            "GC03": "FAIL",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF02": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1",
+            "GC03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+          },
+          "totals": {
+            "FAIL": 4,
+            "PASS": 3
+          }
+        },
+        "aria-expanded=true on dialog 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "FAIL",
+            "GC01": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "Result test.hasState(ATSPI_STATE_EXPANDED)=1 Expected: test.hasState(ATSPI_STATE_EXPANDED)=0"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/core-aam/aria-expanded_not_supported_on_feed-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "FF03": "OK",
+        "GC01": "OK",
+        "GC02": "OK",
+        "GC03": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 7
+      },
+      "subtests": {
+        "aria-expanded=true on feed": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "FF03": "FAIL",
+            "GC01": "PASS",
+            "GC02": "PASS",
+            "GC03": "FAIL",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF02": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1",
+            "GC03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+          },
+          "totals": {
+            "FAIL": 4,
+            "PASS": 3
+          }
+        },
+        "aria-expanded=true on feed 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "FAIL",
+            "GC01": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "Result test.hasState(ATSPI_STATE_EXPANDED)=1 Expected: test.hasState(ATSPI_STATE_EXPANDED)=0"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/core-aam/aria-expanded_not_supported_on_form-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "FF03": "OK",
+        "GC01": "OK",
+        "GC02": "OK",
+        "GC03": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 7
+      },
+      "subtests": {
+        "aria-expanded=true on form": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "FF03": "FAIL",
+            "GC01": "PASS",
+            "GC02": "PASS",
+            "GC03": "FAIL",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF02": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1",
+            "GC03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+          },
+          "totals": {
+            "FAIL": 4,
+            "PASS": 3
+          }
+        },
+        "aria-expanded=true on form 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "FAIL",
+            "GC01": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "Result test.hasState(ATSPI_STATE_EXPANDED)=1 Expected: test.hasState(ATSPI_STATE_EXPANDED)=0"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 1
+          }
+        }
+      }
+    },
+    "/core-aam/aria-expanded_not_supported_on_group-manual.html": {
+      "byUA": {
+        "FF01": "OK",
+        "FF02": "OK",
+        "FF03": "OK",
+        "GC01": "OK",
+        "GC02": "OK",
+        "GC03": "OK",
+        "WK02": "OK"
+      },
+      "UAmessage": {},
+      "totals": {
+        "OK": 7
+      },
+      "subtests": {
+        "aria-expanded=true on group": {
+          "stNum": 0,
+          "byUA": {
+            "FF01": "FAIL",
+            "FF02": "FAIL",
+            "FF03": "FAIL",
+            "GC01": "PASS",
+            "GC02": "PASS",
+            "GC03": "FAIL",
+            "WK02": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF02": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1726354)",
+            "FF03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1",
+            "GC03": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+          },
+          "totals": {
+            "FAIL": 4,
+            "PASS": 3
+          }
+        },
+        "aria-expanded=true on group 1": {
+          "stNum": 1,
+          "byUA": {
+            "FF01": "FAIL",
+            "GC01": "PASS"
+          },
+          "UAmessage": {
+            "FF01": "Result test.hasState(ATSPI_STATE_EXPANDED)=1 Expected: test.hasState(ATSPI_STATE_EXPANDED)=0"
+          },
+          "totals": {
+            "FAIL": 1,
+            "PASS": 1
           }
         }
       }
@@ -1144,7 +1462,7 @@
           },
           "UAmessage": {
             "FF02": "Result test.accessibilityAttributeValue(AXARIAPosInSet)=ERROR:AXGetAttributeValue(AXARIAPosInSet): no value Expected: test.accessibilityAttributeValue(AXARIAPosInSet)=2",
-            "GC02": "Result test.accessibilityAttributeValue(AXARIAPosInSet)=ERROR:AXGetAttributeValue(AXARIAPosInSet): no value Expected: test.accessibilityAttributeValue(AXARIAPosInSet)=2",
+            "GC02": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1234710), [Pending ARIA issue](https://github.com/w3c/aria/issues/1602)",
             "GC03": "Unknown failure, test probably not supported by ax_dump_tree"
           },
           "totals": {
@@ -1606,7 +1924,7 @@
             "WK02": "FAIL"
           },
           "UAmessage": {
-            "WK02": "Unknown failure, test probably not supported by ax_dump_tree"
+            "WK02": "WebKit does not expose rowgroups so the element being tested is not in the accessibility tree"
           },
           "totals": {
             "PASS": 6,
