@@ -11,7 +11,7 @@
 				{
 					"name": "blockquote 1",
 					"status": "FAIL",
-					"message": "Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value"
+					"message": "Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role."
 				}
 			],
 			"status": "OK",
@@ -96,7 +96,7 @@
 				{
 					"name": "generic 1",
 					"status": "FAIL",
-					"message": "Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value"
+					"message": "Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role."
 				}
 			],
 			"status": "OK",
@@ -130,7 +130,7 @@
 				{
 					"name": "meter 1",
 					"status": "FAIL",
-					"message": "Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value"
+					"message": "Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role."
 				}
 			],
 			"status": "OK",
@@ -147,7 +147,7 @@
 				{
 					"name": "paragraph 1",
 					"status": "FAIL",
-					"message": "Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value"
+					"message": "Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role."
 				}
 			],
 			"status": "OK",
@@ -407,12 +407,12 @@
 				{
 					"name": "aria-posinset and aria-setsize on treegrid row",
 					"status": "FAIL",
-					"message": "Result test.accessibilityAttributeValue(AXARIAPosInSet)=ERROR:AXGetAttributeValue(AXARIAPosInSet): no value Expected: test.accessibilityAttributeValue(AXARIAPosInSet)=2"
+					"message": "Firefox on macOS fails to expose aria-posinset and aria-setsize for all roles; not just treegrid row."
 				},
 				{
 					"name": "aria-posinset and aria-setsize on treegrid row 1",
 					"status": "FAIL",
-					"message": "Result test.accessibilityAttributeValue(AXARIASetSize)=ERROR:AXGetAttributeValue(AXARIASetSize): no value Expected: test.accessibilityAttributeValue(AXARIASetSize)=100"
+					"message": "Firefox on macOS fails to expose aria-posinset and aria-setsize for all roles; not just treegrid row."
 				}
 			],
 			"status": "OK",
@@ -518,7 +518,7 @@
 				{
 					"name": "menuitemcheckbox child of group 1",
 					"status": "FAIL",
-					"message": "Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value"
+					"message": "Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role."
 				}
 			],
 			"status": "OK",
@@ -530,12 +530,12 @@
 				{
 					"name": "progressbar no min or max",
 					"status": "FAIL",
-					"message": "Result test.accessibilityAttributeValue(AXMinValue)=ERROR:AXGetAttributeValue(AXMinValue): no value Expected: test.accessibilityAttributeValue(AXMinValue)=0"
+					"message": "Firefox does not support AXMinValue or AXMaxValue even when its explicitly provided by the author. This is not new to the 1.2 change."
 				},
 				{
 					"name": "progressbar no min or max 1",
 					"status": "FAIL",
-					"message": "Result test.accessibilityAttributeValue(AXMaxValue)=ERROR:AXGetAttributeValue(AXMaxValue): no value Expected: test.accessibilityAttributeValue(AXMaxValue)=100"
+					"message": "Firefox does not support AXMinValue or AXMaxValue even when its explicitly provided by the author. This is not new to the 1.2 change."
 				}
 			],
 			"status": "OK",
