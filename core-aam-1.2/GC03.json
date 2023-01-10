@@ -115,7 +115,7 @@
 				{
 					"name": "meter",
 					"status": "FAIL",
-					"message": "Result test.QueryInterface(IAccessible2).role=\"ROLE_SYSTEM_PROGRESSBAR\" Expected: test.QueryInterface(IAccessible2).role=\"IA2_ROLE_LEVEL_BAR\""
+					"message": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=944542)"
 				},
 				{
 					"name": "meter 1",
@@ -137,7 +137,7 @@
 				{
 					"name": "paragraph 1",
 					"status": "FAIL",
-					"message": "Result test.role=\"ROLE_SYSTEM_GROUPING\" Expected: test.role=\"ROLE_SYSTEM_TEXT\""
+					"message": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1406242)"
 				}
 			],
 			"status": "OK",
@@ -215,7 +215,7 @@
 				{
 					"name": "time 1",
 					"status": "FAIL",
-					"message": "Result test.role=\"ROLE_SYSTEM_TEXT\" Expected: test.role=\"ROLE_SYSTEM_STATICTEXT\""
+					"message": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1406243)"
 				}
 			],
 			"status": "OK",
@@ -250,13 +250,13 @@
 			"subtests": [
 				{
 					"name": "aria-errormessage",
-					"status": "FAIL",
-					"message": "Result test.QueryInterface(IAccessible2).getRelation(IA2_RELATION_ERROR)=<error> Expected: test.QueryInterface(IAccessible2).getRelation(IA2_RELATION_ERROR)=\"error\""
+					"status": "PASS",
+					"message": null
 				},
 				{
 					"name": "aria-errormessage 1",
-					"status": "FAIL",
-					"message": "Result error.QueryInterface(IAccessible2).getRelation(IA2_RELATION_ERROR_FOR)=<error> Expected: error.QueryInterface(IAccessible2).getRelation(IA2_RELATION_ERROR_FOR)=\"test\""
+					"status": "PASS",
+					"message": null
 				}
 			],
 			"status": "OK",
@@ -267,8 +267,8 @@
 			"subtests": [
 				{
 					"name": "aria-expanded=true on alert",
-					"status": "FAIL",
-					"message": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+					"status": "PASS",
+					"message": null
 				}
 			],
 			"status": "OK",
@@ -279,8 +279,8 @@
 			"subtests": [
 				{
 					"name": "aria-expanded=true on banner",
-					"status": "FAIL",
-					"message": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+					"status": "PASS",
+					"message": null
 				}
 			],
 			"status": "OK",
@@ -291,8 +291,8 @@
 			"subtests": [
 				{
 					"name": "aria-expanded=true on dialog",
-					"status": "FAIL",
-					"message": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+					"status": "PASS",
+					"message": null
 				}
 			],
 			"status": "OK",
@@ -303,8 +303,8 @@
 			"subtests": [
 				{
 					"name": "aria-expanded=true on feed",
-					"status": "FAIL",
-					"message": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+					"status": "PASS",
+					"message": null
 				}
 			],
 			"status": "OK",
@@ -315,8 +315,8 @@
 			"subtests": [
 				{
 					"name": "aria-expanded=true on form",
-					"status": "FAIL",
-					"message": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+					"status": "PASS",
+					"message": null
 				}
 			],
 			"status": "OK",
@@ -327,8 +327,8 @@
 			"subtests": [
 				{
 					"name": "aria-expanded=true on group",
-					"status": "FAIL",
-					"message": "Result test.hasState(STATE_SYSTEM_EXPANDED)=0 Expected: test.hasState(STATE_SYSTEM_EXPANDED)=1"
+					"status": "PASS",
+					"message": null
 				}
 			],
 			"status": "OK",
@@ -412,22 +412,22 @@
 				{
 					"name": "aria-posinset and aria-setsize on treegrid row",
 					"status": "FAIL",
-					"message": "Unknown failure, test probably not supported by ax_dump_tree"
+					"message": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1234710), [Pending ARIA issue](https://github.com/w3c/aria/issues/1602)"
 				},
 				{
 					"name": "aria-posinset and aria-setsize on treegrid row 1",
 					"status": "FAIL",
-					"message": "Unknown failure, test probably not supported by ax_dump_tree"
+					"message": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1234710), [Pending ARIA issue](https://github.com/w3c/aria/issues/1602)"
 				},
 				{
 					"name": "aria-posinset and aria-setsize on treegrid row 2",
 					"status": "FAIL",
-					"message": "Unknown failure, test probably not supported by ax_dump_tree"
+					"message": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1234710), [Pending ARIA issue](https://github.com/w3c/aria/issues/1602)"
 				},
 				{
 					"name": "aria-posinset and aria-setsize on treegrid row 3",
 					"status": "FAIL",
-					"message": "Unknown failure, test probably not supported by ax_dump_tree"
+					"message": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1234710), [Pending ARIA issue](https://github.com/w3c/aria/issues/1602)"
 				}
 			],
 			"status": "OK",
@@ -539,13 +539,13 @@
 			"subtests": [
 				{
 					"name": "progressbar no min or max",
-					"status": "FAIL",
-					"message": "Result test.QueryInterface(IAccessibleValue).get_minimumValue=<error> Expected: test.QueryInterface(IAccessibleValue).get_minimumValue=\"0\""
+					"status": "PASS",
+					"message": null
 				},
 				{
 					"name": "progressbar no min or max 1",
-					"status": "FAIL",
-					"message": "Result test.QueryInterface(IAccessibleValue).get_maximumValue=<error> Expected: test.QueryInterface(IAccessibleValue).get_maximumValue=\"100\""
+					"status": "PASS",
+					"message": null
 				}
 			],
 			"status": "OK",
