@@ -29,18 +29,15 @@
           "byUA": {
             "FF01": "PASS",
             "FF02": "PASS",
-            "FF03": "FAIL",
+            "FF03": "PASS",
             "GC01": "PASS",
             "GC02": "PASS",
             "GC03": "PASS",
             "WK02": "PASS"
           },
-          "UAmessage": {
-            "FF03": "Result test.QueryInterface(IAccessible2).role=\"IA2_ROLE_BLOCK_QUOTE\" Expected: test.QueryInterface(IAccessible2).role=\"IA2_ROLE_SECTION\""
-          },
+          "UAmessage": {},
           "totals": {
-            "PASS": 6,
-            "FAIL": 1
+            "PASS": 7
           }
         },
         "blockquote 1": {
@@ -103,7 +100,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF03": "Result test.role=\"caption\" Expected: test.role=\"ROLE_SYSTEM_TEXT\""
+            "FF03": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1809473)"
           },
           "totals": {
             "PASS": 4,
@@ -397,7 +394,7 @@
             "WK02": "PASS"
           },
           "UAmessage": {
-            "FF03": "Result test.QueryInterface(IAccessible2).role=\"ROLE_SYSTEM_PROGRESSBAR\" Expected: test.QueryInterface(IAccessible2).role=\"IA2_ROLE_LEVEL_BAR\"",
+            "FF03": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1809479)",
             "GC03": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=944542)"
           },
           "totals": {
@@ -418,7 +415,7 @@
           },
           "UAmessage": {
             "FF02": "Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role.",
-            "FF03": "Result test.QueryInterface(IAccessibleValue)=<error> Expected: test.QueryInterface(IAccessibleValue)=IAccessible2ValueInterface"
+            "FF03": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1809479)"
           },
           "totals": {
             "PASS": 5,
@@ -469,7 +466,7 @@
           },
           "UAmessage": {
             "FF02": "Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role.",
-            "FF03": "Result test.role=\"paragraph\" Expected: test.role=\"ROLE_SYSTEM_TEXT\"",
+            "FF03": "[BUG](https://bugzilla.mozilla.org/show_bug.cgi?id=1809475)",
             "GC03": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1406242)"
           },
           "totals": {
@@ -1462,7 +1459,7 @@
           },
           "UAmessage": {
             "FF02": "Firefox on macOS fails to expose aria-posinset and aria-setsize for all roles; not just treegrid row.",
-            "GC02": "Result test.accessibilityAttributeValue(AXARIASetSize)=ERROR:AXGetAttributeValue(AXARIASetSize): no value Expected: test.accessibilityAttributeValue(AXARIASetSize)=100",
+            "GC02": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1234710), [Pending ARIA issue](https://github.com/w3c/aria/issues/1602)",
             "GC03": "[BUG](https://bugs.chromium.org/p/chromium/issues/detail?id=1234710), [Pending ARIA issue](https://github.com/w3c/aria/issues/1602)"
           },
           "totals": {
