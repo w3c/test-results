@@ -1,14 +1,19 @@
-Core Accessibility API Mappings 1.2: Test Results
-=================================================
+ARIA 1.2 Implementation Report: CORE-AAM Test Results
+=====================================================
 
-Implementation Report
----------------------
-These test comprise the proof of implementation for [ARIA 1.2 specification](https://www.w3.org/TR/wai-aria-1.2/) for all testable AUTHORS MUST statements new to ARIA 1.2.
+These test comprise the proof of implementation for [ARIA 1.2 specification](https://www.w3.org/TR/wai-aria-1.2/) for all testable AUTHORS MUST statements new to ARIA 1.2. The tests are part of the [wpt/CORE-AAM test suite](https://github.com/web-platform-tests/wpt/tree/master/core-aam). Each test shows how the ARIA 1.2 feature must be surface in the platform specific accessibility API as specified in the [CORE-AAM](https://www.w3.org/TR/core-aam-1.2/).
 
-[All Results](https://spectranaut.github.io/test-results/core-aam-1.2/all)
+[Results for All New Tests](all.html)
 
-Supported Platform Accessibility APIs
--------------------------------------
+How to interpret the test results:
+* Each test file is a single "test" with one or more "subtests". The tests are platform specific. The number of subtests for a test might vary across platforms.
+   * For example, look at the test for [the new role deletion](http://www.w3c-test.org/core-aam/deletion-manual.html): it has 2 subtests when run on the GNU/Linux platform (ATK API) or macOS platform (AXAPI), but only 1 subtest when run on the Windows platform (IAccessible2 API).
+   * Note: The yellow boxes have no meaning. For example, look at [the results for test for the deletion role](https://spectranaut.github.io/test-results/core-aam-1.2/all#test-file-3). All of these tests pass in full. If one platform has less subtests than a different platform, then a yellow box is used to fill space.
+* When a test "passes" it proves the implementation of that feature by a browser on a specific platform. For a test to "pass", all of the subtests of the test must pass in a specific browser on a specific platform. According to these test results, we can say that [the new aria `role="deletion"`](https://spectranaut.github.io/test-results/core-aam-1.2/all#test-file-3) has been implemented successfully in Firefox on GNU/Linux, Firefox on Windows (using IAccessible2), Firefox on macOS, Chrome on GNU/Linux, Chrome on macOS, Chrome on Windows (using IAccessible2) and Webkit on macOS.
+* All new feature tests pass on at least three browser/platform combinations.
+
+Platform Accessibility APIs
+---------------------------
 
 The following platform accessibility APIs are included in the Graphics ARIA
 Accessibility API Mappings specification:
@@ -16,17 +21,13 @@ Accessibility API Mappings specification:
 * 01: ATK (GNU/Linux)
 * 02: AX API (macOS)
 * 03: MSAA + IAccessible2 (Windows)
-* 04: UIA (Windows)
+* 04: UIA (Windows) (results not included here)
 
 These two-digit designators are appended to a two-character identifier for the
 user agent to identify the implementation being tested.
 
-Index of Implementations
-------------------------
-
-* WK01 - WebKit on Linux using ATK
-  * email: jdiggs@igalia.com
-  * link: <https://webkitgtk.org>
+Index of Implementations in thie Report
+---------------------------------------
 
 * FF01 - Firefox on Linux using ATK
   * Date of results collection: 2022-11-04
@@ -76,10 +77,6 @@ Index of Implementations
   * Windows 10 Version 21H2
   * email: spectranaut@gmail.com
   * link: <http://www.mozilla.org>
-
-* ME04 - Edge on Windows using UIA
-  * email: Melanie.Richards@microsoft.com
-  * link: <https://www.microsoft.com/microsoft-edge>
 
 Generating Results
 ------------------
