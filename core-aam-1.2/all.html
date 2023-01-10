@@ -61,7 +61,7 @@
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).role="IA2<em>ROLE</em>BLOCK<em>QUOTE" Expected: test.QueryInterface(IAccessible2).role="IA2</em>ROLE_SECTION"</td></tr>
 </table></td></tr>
 <tr id='subtest-0-1' class='subtest'><td>blockquote 1</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role.</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-1'><td><a href='http://www.w3c-test.org/core-aam/caption-manual.html' target='_blank'>/core-aam/caption-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-1-0' class='subtest'><td>caption</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -71,28 +71,28 @@
 <tr class='test' id='test-file-2'><td><a href='http://www.w3c-test.org/core-aam/code-manual.html' target='_blank'>/core-aam/code-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-2-0' class='subtest'><td>code</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr id='subtest-2-1' class='subtest'><td>code 1</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value Expected: test.accessibilityAttributeValue(AXSubrole)='AXCodeStyleGroup'</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> <a href="https://bugs.webkit.org/show_bug.cgi?id=203257">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-3'><td><a href='http://www.w3c-test.org/core-aam/deletion-manual.html' target='_blank'>/core-aam/deletion-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-3-0' class='subtest'><td>deletion</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr id='subtest-3-1' class='subtest'><td>deletion 1</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='PASS'>PASS</td></tr>
 <tr class='test' id='test-file-4'><td><a href='http://www.w3c-test.org/core-aam/emphasis-manual.html' target='_blank'>/core-aam/emphasis-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-4-0' class='subtest'><td>emphasis</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.role=section Expected: test.role=static</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).role="IA2<em>ROLE</em>SECTION" Expected: test.QueryInterface(IAccessible2).role="IA2<em>ROLE</em>TEXT_FRAME"</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-4-1' class='subtest'><td>emphasis 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)='AXApplicationGroup' Expected: test.accessibilityAttributeValue(AXSubrole)='AXEmphasisStyleGroup'</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value Expected: test.accessibilityAttributeValue(AXSubrole)='AXEmphasisStyleGroup'</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> <a href="https://bugs.webkit.org/show_bug.cgi?id=203257">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-5'><td><a href='http://www.w3c-test.org/core-aam/generic-manual.html' target='_blank'>/core-aam/generic-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-5-0' class='subtest'><td>generic</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.role=paragraph Expected: test.role=section</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).role="IA2<em>ROLE</em>PARAGRAPH" Expected: test.QueryInterface(IAccessible2).role="IA2<em>ROLE</em>SECTION"</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-5-1' class='subtest'><td>generic 1</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.role="generic" Expected: test.role="ROLE<em>SYSTEM</em>GROUPING"</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role.</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-6'><td><a href='http://www.w3c-test.org/core-aam/insertion-manual.html' target='_blank'>/core-aam/insertion-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-6-0' class='subtest'><td>insertion</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -100,134 +100,117 @@
 <tr class='test' id='test-file-7'><td><a href='http://www.w3c-test.org/core-aam/meter-manual.html' target='_blank'>/core-aam/meter-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-7-0' class='subtest'><td>meter</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).role="ROLE<em>SYSTEM</em>PROGRESSBAR" Expected: test.QueryInterface(IAccessible2).role="IA2<em>ROLE</em>LEVEL_BAR"</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.QueryInterface(IAccessible2).role="ROLE<em>SYSTEM</em>PROGRESSBAR" Expected: test.QueryInterface(IAccessible2).role="IA2<em>ROLE</em>LEVEL_BAR"</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=944542">BUG</a></td></tr>
 </table></td></tr>
-<tr id='subtest-7-1' class='subtest'><td>meter 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value</td></tr>
+<tr id='subtest-7-1' class='subtest'><td>meter 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role.</td></tr>
 <tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessibleValue)=<error> Expected: test.QueryInterface(IAccessibleValue)=IAccessible2ValueInterface</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)='AXMeter' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-8'><td><a href='http://www.w3c-test.org/core-aam/paragraph-manual.html' target='_blank'>/core-aam/paragraph-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-8-0' class='subtest'><td>paragraph</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr id='subtest-8-1' class='subtest'><td>paragraph 1</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role.</td></tr>
 <tr class='message'><td class='ua'>FF03:</td><td> Result test.role="paragraph" Expected: test.role="ROLE<em>SYSTEM</em>TEXT"</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.role="ROLE<em>SYSTEM</em>GROUPING" Expected: test.role="ROLE<em>SYSTEM</em>TEXT"</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1406242">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-9'><td><a href='http://www.w3c-test.org/core-aam/strong-manual.html' target='_blank'>/core-aam/strong-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-9-0' class='subtest'><td>strong</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.role=section Expected: test.role=static</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).role="IA2<em>ROLE</em>SECTION" Expected: test.QueryInterface(IAccessible2).role="IA2<em>ROLE</em>TEXT_FRAME"</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-9-1' class='subtest'><td>strong 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)='AXApplicationGroup' Expected: test.accessibilityAttributeValue(AXSubrole)='AXStrongStyleGroup'</td></tr>
-<tr class='message'><td class='ua'>WK02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value Expected: test.accessibilityAttributeValue(AXSubrole)='AXStrongStyleGroup'</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
+<tr class='message'><td class='ua'>WK02:</td><td> <a href="https://bugs.webkit.org/show_bug.cgi?id=203257">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-10'><td><a href='http://www.w3c-test.org/core-aam/subscript-manual.html' target='_blank'>/core-aam/subscript-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-10-0' class='subtest'><td>subscript</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.role=section Expected: test.role=subscript</td></tr>
-</table></td></tr>
-<tr id='subtest-10-1' class='subtest'><td>subscript 1</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessibleText).getAttribute(text-position)=<error> Expected: test.QueryInterface(IAccessibleText).getAttribute(text-position)="sub"</td></tr>
-</table></td></tr>
+<tr id='subtest-10-0' class='subtest'><td>subscript</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-10-1' class='subtest'><td>subscript 1</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr id='subtest-10-2' class='subtest'><td>subscript 2</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
 <tr class='test' id='test-file-11'><td><a href='http://www.w3c-test.org/core-aam/superscript-manual.html' target='_blank'>/core-aam/superscript-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-11-0' class='subtest'><td>superscript</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.role=section Expected: test.role=superscript</td></tr>
-</table></td></tr>
-<tr id='subtest-11-1' class='subtest'><td>superscript 1</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessibleText).getAttribute(text-position)=<error> Expected: test.QueryInterface(IAccessibleText).getAttribute(text-position)="super"</td></tr>
-</table></td></tr>
+<tr id='subtest-11-0' class='subtest'><td>superscript</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-11-1' class='subtest'><td>superscript 1</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr id='subtest-11-2' class='subtest'><td>superscript 2</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
 <tr class='test' id='test-file-12'><td><a href='http://www.w3c-test.org/core-aam/time-manual.html' target='_blank'>/core-aam/time-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-12-0' class='subtest'><td>time</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.role=section Expected: test.role=static</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-12-1' class='subtest'><td>time 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)='AXApplicationGroup' Expected: test.accessibilityAttributeValue(AXSubrole)='AXTimeGroup'</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.role="time" Expected: test.role="ROLE<em>SYSTEM</em>STATICTEXT"</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.role="ROLE<em>SYSTEM</em>TEXT" Expected: test.role="ROLE<em>SYSTEM</em>STATICTEXT"</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732306">BUG</a></td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1406243">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-13'><td><a href='http://www.w3c-test.org/core-aam/combobox-value-calculation-manual.html' target='_blank'>/core-aam/combobox-value-calculation-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-13-0' class='subtest'><td>combobox value calculation</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.getAttribute(valuetext)=<error> Expected: test.getAttribute(valuetext)=Apple</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Unknown failure, test probably not supported by ax<em>dump</em>tree</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732284">BUG</a></td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://github.com/w3c/core-aam/issues/70">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-14'><td><a href='http://www.w3c-test.org/core-aam/generic_roledescription_prohibited-manual.html' target='_blank'>/core-aam/generic_roledescription_prohibited-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-14-0' class='subtest'><td>generic roledescription prohibited</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.getAttribute(roledescription)=foo Expected: test.getAttribute(roledescription)=<error></td></tr>
-<tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXRoleDescription)='foo' Expected: test.accessibilityAttributeValue(AXRoleDescription)=''</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).get<em>localizedExtendedRole=<error> Expected: test.QueryInterface(IAccessible2).get</em>localizedExtendedRole=""</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732312">BUG</a></td></tr>
+<tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732312">BUG</a></td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732312">BUG</a></td></tr>
 <tr class='message'><td class='ua'>WK02:</td><td> <a href="https://bugs.webkit.org/show_bug.cgi?id=174248">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-15'><td><a href='http://www.w3c-test.org/core-aam/aria-errormessage_aria-invalid_false-manual.html' target='_blank'>/core-aam/aria-errormessage_aria-invalid_false-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-15-0' class='subtest'><td>aria-errormessage</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).getRelation(IA2<em>RELATION</em>ERROR)=<error> Expected: test.QueryInterface(IAccessible2).getRelation(IA2<em>RELATION</em>ERROR)="error"</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.QueryInterface(IAccessible2).getRelation(IA2<em>RELATION</em>ERROR)=<error> Expected: test.QueryInterface(IAccessible2).getRelation(IA2<em>RELATION</em>ERROR)="error"</td></tr>
+<tr id='subtest-15-0' class='subtest'><td>aria-errormessage</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732025">BUG</a></td></tr>
 </table></td></tr>
-<tr id='subtest-15-1' class='subtest'><td>aria-errormessage 1</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> Result error.QueryInterface(IAccessible2).getRelation(IA2<em>RELATION</em>ERROR<em>FOR)=<error> Expected: error.QueryInterface(IAccessible2).getRelation(IA2</em>RELATION<em>ERROR</em>FOR)="test"</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result error.QueryInterface(IAccessible2).getRelation(IA2<em>RELATION</em>ERROR<em>FOR)=<error> Expected: error.QueryInterface(IAccessible2).getRelation(IA2</em>RELATION<em>ERROR</em>FOR)="test"</td></tr>
+<tr id='subtest-15-1' class='subtest'><td>aria-errormessage 1</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732025">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-16'><td><a href='http://www.w3c-test.org/core-aam/aria-expanded_not_supported_on_alert-manual.html' target='_blank'>/core-aam/aria-expanded_not_supported_on_alert-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-16-0' class='subtest'><td>aria-expanded=true on alert</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-16-0' class='subtest'><td>aria-expanded=true on alert</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-16-1' class='subtest'><td>aria-expanded=true on alert 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.hasState(ATSPI<em>STATE</em>EXPANDED)=1 Expected: test.hasState(ATSPI<em>STATE</em>EXPANDED)=0</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-17'><td><a href='http://www.w3c-test.org/core-aam/aria-expanded_not_supported_on_banner-manual.html' target='_blank'>/core-aam/aria-expanded_not_supported_on_banner-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-17-0' class='subtest'><td>aria-expanded=true on banner</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-17-0' class='subtest'><td>aria-expanded=true on banner</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-17-1' class='subtest'><td>aria-expanded=true on banner 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.hasState(ATSPI<em>STATE</em>EXPANDED)=1 Expected: test.hasState(ATSPI<em>STATE</em>EXPANDED)=0</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-18'><td><a href='http://www.w3c-test.org/core-aam/aria-expanded_not_supported_on_dialog-manual.html' target='_blank'>/core-aam/aria-expanded_not_supported_on_dialog-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-18-0' class='subtest'><td>aria-expanded=true on dialog</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-18-0' class='subtest'><td>aria-expanded=true on dialog</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-18-1' class='subtest'><td>aria-expanded=true on dialog 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.hasState(ATSPI<em>STATE</em>EXPANDED)=1 Expected: test.hasState(ATSPI<em>STATE</em>EXPANDED)=0</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-19'><td><a href='http://www.w3c-test.org/core-aam/aria-expanded_not_supported_on_feed-manual.html' target='_blank'>/core-aam/aria-expanded_not_supported_on_feed-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-19-0' class='subtest'><td>aria-expanded=true on feed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-19-0' class='subtest'><td>aria-expanded=true on feed</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-19-1' class='subtest'><td>aria-expanded=true on feed 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.hasState(ATSPI<em>STATE</em>EXPANDED)=1 Expected: test.hasState(ATSPI<em>STATE</em>EXPANDED)=0</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-20'><td><a href='http://www.w3c-test.org/core-aam/aria-expanded_not_supported_on_form-manual.html' target='_blank'>/core-aam/aria-expanded_not_supported_on_form-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-20-0' class='subtest'><td>aria-expanded=true on form</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-20-0' class='subtest'><td>aria-expanded=true on form</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-20-1' class='subtest'><td>aria-expanded=true on form 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.hasState(ATSPI<em>STATE</em>EXPANDED)=1 Expected: test.hasState(ATSPI<em>STATE</em>EXPANDED)=0</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-21'><td><a href='http://www.w3c-test.org/core-aam/aria-expanded_not_supported_on_group-manual.html' target='_blank'>/core-aam/aria-expanded_not_supported_on_group-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-21-0' class='subtest'><td>aria-expanded=true on group</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr id='subtest-21-0' class='subtest'><td>aria-expanded=true on group</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 <tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.hasState(STATE<em>SYSTEM</em>EXPANDED)=0 Expected: test.hasState(STATE<em>SYSTEM</em>EXPANDED)=1</td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-21-1' class='subtest'><td>aria-expanded=true on group 1</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.hasState(ATSPI<em>STATE</em>EXPANDED)=1 Expected: test.hasState(ATSPI<em>STATE</em>EXPANDED)=0</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1726354">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-22'><td><a href='http://www.w3c-test.org/core-aam/aria-expanded_true_on_application-manual.html' target='_blank'>/core-aam/aria-expanded_true_on_application-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-22-0' class='subtest'><td>aria-expanded=true on application</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -249,22 +232,20 @@
 <tr id='subtest-27-1' class='subtest'><td>aria-expanded=true on switch 1</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='undefined'>-</td></tr>
 <tr class='test' id='test-file-28'><td><a href='http://www.w3c-test.org/core-aam/aria-posinset_and_aria-setsize_on_treegrid_row-manual.html' target='_blank'>/core-aam/aria-posinset_and_aria-setsize_on_treegrid_row-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-28-0' class='subtest'><td>aria-posinset and aria-setsize on treegrid row</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXARIAPosInSet)=ERROR:AXGetAttributeValue(AXARIAPosInSet): no value Expected: test.accessibilityAttributeValue(AXARIAPosInSet)=2</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Firefox on macOS fails to expose aria-posinset and aria-setsize for all roles; not just treegrid row.</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1234710">BUG</a>, <a href="https://github.com/w3c/aria/issues/1602">Pending ARIA issue</a></td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Unknown failure, test probably not supported by ax<em>dump</em>tree</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1234710">BUG</a>, <a href="https://github.com/w3c/aria/issues/1602">Pending ARIA issue</a></td></tr>
 </table></td></tr>
-<tr id='subtest-28-1' class='subtest'><td>aria-posinset and aria-setsize on treegrid row 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXARIASetSize)=ERROR:AXGetAttributeValue(AXARIASetSize): no value Expected: test.accessibilityAttributeValue(AXARIASetSize)=100</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).get<em>groupPosition(positionInGroup)=1 Expected: test.QueryInterface(IAccessible2).get</em>groupPosition(positionInGroup)="2"</td></tr>
+<tr id='subtest-28-1' class='subtest'><td>aria-posinset and aria-setsize on treegrid row 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Firefox on macOS fails to expose aria-posinset and aria-setsize for all roles; not just treegrid row.</td></tr>
 <tr class='message'><td class='ua'>GC02:</td><td> Result test.accessibilityAttributeValue(AXARIASetSize)=ERROR:AXGetAttributeValue(AXARIASetSize): no value Expected: test.accessibilityAttributeValue(AXARIASetSize)=100</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Unknown failure, test probably not supported by ax<em>dump</em>tree</td></tr>
+<tr class='message'><td class='ua'>GC03:</td><td> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1234710">BUG</a>, <a href="https://github.com/w3c/aria/issues/1602">Pending ARIA issue</a></td></tr>
 </table></td></tr>
 <tr id='subtest-28-2' class='subtest'><td>aria-posinset and aria-setsize on treegrid row 2</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC03:</td><td> Unknown failure, test probably not supported by ax<em>dump</em>tree</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC03:</td><td> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1234710">BUG</a>, <a href="https://github.com/w3c/aria/issues/1602">Pending ARIA issue</a></td></tr>
 </table></td></tr>
-<tr id='subtest-28-3' class='subtest'><td>aria-posinset and aria-setsize on treegrid row 3</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).get<em>groupPosition(similarItemsInGroup)=1 Expected: test.QueryInterface(IAccessible2).get</em>groupPosition(similarItemsInGroup)="100"</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Unknown failure, test probably not supported by ax<em>dump</em>tree</td></tr>
+<tr id='subtest-28-3' class='subtest'><td>aria-posinset and aria-setsize on treegrid row 3</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>GC03:</td><td> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1234710">BUG</a>, <a href="https://github.com/w3c/aria/issues/1602">Pending ARIA issue</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-29'><td><a href='http://www.w3c-test.org/core-aam/aria-required_true_on_checkbox-manual.html' target='_blank'>/core-aam/aria-required_true_on_checkbox-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-29-0' class='subtest'><td>aria-required=true on checkbox</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -273,20 +254,20 @@
 <tr id='subtest-30-1' class='subtest'><td>spinbutton 1</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td></tr>
 <tr class='test' id='test-file-31'><td><a href='http://www.w3c-test.org/core-aam/grid-level-not-supported-manual.html' target='_blank'>/core-aam/grid-level-not-supported-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-31-0' class='subtest'><td>grid level not supported</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.getAttribute(level)=2 Expected: test.getAttribute(level)=<error></td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).getAttribute(level)="2" Expected: test.QueryInterface(IAccessible2).getAttribute(level)=<error></td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732289">BUG</a></td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732289">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-32'><td><a href='http://www.w3c-test.org/core-aam/tablist-level-not-supported-manual.html' target='_blank'>/core-aam/tablist-level-not-supported-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-32-0' class='subtest'><td>tablist level not supported</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> Result test.getAttribute(level)=2 Expected: test.getAttribute(level)=<error></td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessible2).getAttribute(level)="2" Expected: test.QueryInterface(IAccessible2).getAttribute(level)=<error></td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF01:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732289">BUG</a></td></tr>
+<tr class='message'><td class='ua'>FF03:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732289">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-33'><td><a href='http://www.w3c-test.org/core-aam/group_as_child_of_listbox-manual.html' target='_blank'>/core-aam/group_as_child_of_listbox-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-33-0' class='subtest'><td>group as child of listbox</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Unknown failure, test probably not supported by ax<em>dump</em>tree</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732320">BUG</a></td></tr>
 </table></td></tr>
 <tr id='subtest-33-1' class='subtest'><td>group as child of listbox 1</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Unknown failure, test probably not supported by ax<em>dump</em>tree</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1732320">BUG</a></td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-34'><td><a href='http://www.w3c-test.org/core-aam/heading-no-level-manual.html' target='_blank'>/core-aam/heading-no-level-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-34-0' class='subtest'><td>heading with no author-provided level</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
@@ -295,21 +276,17 @@
 <tr class='test' id='test-file-36'><td><a href='http://www.w3c-test.org/core-aam/menuitemcheckbox_child_of_group-manual.html' target='_blank'>/core-aam/menuitemcheckbox_child_of_group-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
 <tr id='subtest-36-0' class='subtest'><td>menuitemcheckbox child of group</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
 <tr id='subtest-36-1' class='subtest'><td>menuitemcheckbox child of group 1</td><td class='undefined'>-</td><td class='FAIL'>FAIL</td><td class='undefined'>-</td><td class='undefined'>-</td><td class='PASS'>PASS</td><td class='undefined'>-</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXSubrole)='AXUnknown' Expected: test.accessibilityAttributeValue(AXSubrole)=ERROR:AXGetAttributeValue(AXSubrole): no value</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Firefox never exposes an empty/nil subrole. In those cases it exposes AXUnknown. That is not unique or specific to this ARIA 1.2 role.</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-37'><td><a href='http://www.w3c-test.org/core-aam/progressbar-no-min-or-max-manual.html' target='_blank'>/core-aam/progressbar-no-min-or-max-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-37-0' class='subtest'><td>progressbar no min or max</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXMinValue)=ERROR:AXGetAttributeValue(AXMinValue): no value Expected: test.accessibilityAttributeValue(AXMinValue)=0</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessibleValue).get<em>minimumValue=<error> Expected: test.QueryInterface(IAccessibleValue).get</em>minimumValue="0"</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.QueryInterface(IAccessibleValue).get<em>minimumValue=<error> Expected: test.QueryInterface(IAccessibleValue).get</em>minimumValue="0"</td></tr>
+<tr id='subtest-37-0' class='subtest'><td>progressbar no min or max</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Firefox does not support AXMinValue or AXMaxValue even when its explicitly provided by the author. This is not new to the 1.2 change.</td></tr>
 </table></td></tr>
-<tr id='subtest-37-1' class='subtest'><td>progressbar no min or max 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td></tr>
-<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Result test.accessibilityAttributeValue(AXMaxValue)=ERROR:AXGetAttributeValue(AXMaxValue): no value Expected: test.accessibilityAttributeValue(AXMaxValue)=100</td></tr>
-<tr class='message'><td class='ua'>FF03:</td><td> Result test.QueryInterface(IAccessibleValue).get<em>maximumValue=<error> Expected: test.QueryInterface(IAccessibleValue).get</em>maximumValue="100"</td></tr>
-<tr class='message'><td class='ua'>GC03:</td><td> Result test.QueryInterface(IAccessibleValue).get<em>maximumValue=<error> Expected: test.QueryInterface(IAccessibleValue).get</em>maximumValue="100"</td></tr>
+<tr id='subtest-37-1' class='subtest'><td>progressbar no min or max 1</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td></tr>
+<tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>FF02:</td><td> Firefox does not support AXMinValue or AXMaxValue even when its explicitly provided by the author. This is not new to the 1.2 change.</td></tr>
 </table></td></tr>
 <tr class='test' id='test-file-38'><td><a href='http://www.w3c-test.org/core-aam/rowgroup-no-name-from-contents-manual.html' target='_blank'>/core-aam/rowgroup-no-name-from-contents-manual.html</a></td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td><td class='OK'>OK</td></tr>
-<tr id='subtest-38-0' class='subtest'><td>rowgroup no name from contents</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='FAIL'>FAIL</td></tr>
+<tr id='subtest-38-0' class='subtest'><td>rowgroup no name from contents</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='PASS'>PASS</td><td class='NOTRUN'>NOTRUN</td></tr>
 <tr class='messages'><td colspan='8'><table><tr class='message'><td class='ua'>WK02:</td><td> WebKit does not expose rowgroups so the element being tested is not in the accessibility tree</td></tr>
 </table></td></tr>
 
