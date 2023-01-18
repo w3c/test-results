@@ -44,33 +44,33 @@ Index of Implementations in this Report
   * Date of results collection: 2022-11-08
   * Safari Version 16.0 (17614.1.25.9.10, 17614)
   * MacOSX Version 12.6
-  * email: spectranaut@gmail.com
+  * email: spectranaut@igalia.com
   * link: <https://webkit.org>
 
 * Chromium on macOS using AX API
   * Date of results collection: 2022-11-08
   * Chrome Version 107.0.5304.87 (Official Build) (arm64)
   * MacOSX Version 12.6
-  * email: spectranaut@gmail.com
+  * email: spectranaut@igalia.com
   * link: <https://www.google.com/chrome/>
 
 * Firefox on macOS using AX API
   * Date of results collection: 2022-11-08
   * Firefox Version 106.0.5
   * MacOSX Version 12.6
-  * email: spectranaut@gmail.com
+  * email: spectranaut@igalia.com
   * link: <http://www.mozilla.org>
 
 * Chromium on Windows using MSAA + IAccessible2
   * Date of results collection: 2022-11-30
   * Chrome Version 107.0.5304.122 (Official Build) (64-bit)
   * Windows 10 Version 21H2
-  * email: spectranaut@gmail.com
+  * email: spectranaut@igalia.com
   * link: <https://www.google.com/chrome/>
 
 * Firefox on Windows using MSAA + IAccessible2
   * Date of results collection: 2022-11-30
   * Firefox Version 107.0.1
   * Windows 10 Version 21H2
-  * email: spectranaut@gmail.com
+  * email: spectranaut@igalia.com
   * link: <http://www.mozilla.org>
