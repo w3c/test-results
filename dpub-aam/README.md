@@ -1,4 +1,4 @@
-Digital Publishing Accessibility API Mappings 1.0: Test Results
+Digital Publishing Accessibility API Mappings 1.1: Test Results
 ===============================================================
 
 Candidate Recommendation Exit Criteria

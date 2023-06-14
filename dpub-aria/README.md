@@ -1,4 +1,4 @@
-Digital Publishing WAI-ARIA Module 1.0: Test Results
+Digital Publishing WAI-ARIA Module 1.1: Test Results
 ====================================================
 
 Candidate Recommendation Exit Criteria
@@ -6,7 +6,7 @@ Candidate Recommendation Exit Criteria
 
 The Accessible Rich Internet Applications Working Group intends to exit the
 Candidate Recommendation stage and submit the Digital Publishing WAI-ARIA
-Module 1.0 specification for consideration as a W3C Proposed Recommendation
+Module 1.1 specification for consideration as a W3C Proposed Recommendation
 after documenting implementation of each feature.
 
 For this specification to be advanced to Proposed Recommendation, it has to be
