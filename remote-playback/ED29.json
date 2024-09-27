@@ -4,12 +4,12 @@
       "test": "/remote-playback/cancel-watch-availability.html",
       "subtests": [
         {
-          "name": "Test that calling cancelWatchAvailability() with an id does remove the callback.",
+          "name": "Test that calling cancelWatchAvailability() with an id does remove the callback, and calling cancelWatchAvailability with a removed id throws NotFoundError.",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "Test that calling cancelWatchAvailability() without an id removes all the callbacks.",
+          "name": "Test that calling cancelWatchAvailability() without an id removes all the callbacks, and calling cancelWatchAvailability() with a removed id throws NotFoundError.",
           "status": "PASS",
           "message": null
         }
@@ -21,7 +21,7 @@
       "test": "/remote-playback/disable-remote-playback-cancel-watch-availability-throws.html",
       "subtests": [
         {
-          "name": "Test that calling cancelWatchAvailability() when disableRemotePlayback attribute is set throws an exception.",
+          "name": "Test that calling cancelWatchAvailability() when disableRemotePlayback attribute is set throws InvalidStateError.",
           "status": "PASS",
           "message": null
         }
@@ -77,12 +77,12 @@
           "message": null
         },
         {
-          "name": "HTMLElement includes GlobalEventHandlers: member names are unique",
+          "name": "Partial interface Element: member names are unique",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "HTMLElement includes DocumentAndElementEventHandlers: member names are unique",
+          "name": "HTMLElement includes GlobalEventHandlers: member names are unique",
           "status": "PASS",
           "message": null
         },
@@ -112,7 +112,7 @@
           "message": null
         },
         {
-          "name": "Element includes Slotable: member names are unique",
+          "name": "Element includes Slottable: member names are unique",
           "status": "PASS",
           "message": null
         },
@@ -152,7 +152,7 @@
           "message": null
         },
         {
-          "name": "RemotePlayback interface: operation cancelWatchAvailability(long)",
+          "name": "RemotePlayback interface: operation cancelWatchAvailability(optional long)",
           "status": "PASS",
           "message": null
         },
@@ -202,12 +202,12 @@
           "message": null
         },
         {
-          "name": "RemotePlayback interface: media.remote must inherit property \"cancelWatchAvailability(long)\" with the proper type",
+          "name": "RemotePlayback interface: media.remote must inherit property \"cancelWatchAvailability(optional long)\" with the proper type",
           "status": "PASS",
           "message": null
         },
         {
-          "name": "RemotePlayback interface: calling cancelWatchAvailability(long) on media.remote with too few arguments must throw TypeError",
+          "name": "RemotePlayback interface: calling cancelWatchAvailability(optional long) on media.remote with too few arguments must throw TypeError",
           "status": "PASS",
           "message": null
         },
@@ -251,12 +251,136 @@
       "message": null
     },
     {
+      "test": "/remote-playback/prompt-in-detached-iframe.html",
+      "subtests": [
+        {
+          "name": "Calling remote.prompt() in a detached context should throw InvalidAccessError",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/remote-playback/watch-availability-callback-parameter.html",
+      "subtests": [
+        {
+          "name": "Test that the callback is called with boolean parameter when calling watchAvailability().",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
       "test": "/remote-playback/watch-availability-initial-callback.html",
       "subtests": [
         {
-          "name": "Test that the callback is called once watchAvailability() resolves.",
+          "name": "Test that the callback is called after the Promise returned by watchAvailability() resolves.",
           "status": "PASS",
           "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/remote-playback/watch-availability-promise-return-callback-id.html",
+      "subtests": [
+        {
+          "name": "Test that the Promise returned by watchAvailability() resolves with a numeric callback id.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/remote-playback/event-handlers-manual.html",
+      "subtests": [],
+      "status": "FAIL",
+      "message": ""
+    },
+    {
+      "test": "/remote-playback/prompt-and-cancel-selection-manual.html",
+      "subtests": [
+        {
+          "name": "Test that the Promise returned by prompt() is rejected when user cancels device selection.",
+          "status": "PASS",
+          "message": null
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/remote-playback/prompt-and-select-device-manual.html",
+      "subtests": [
+        {
+          "name": "Test that the Promise returned by prompt() is resolved when user selects a device.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Prompt resolves",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotAllowedError: The prompt was dismissed.\""
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/remote-playback/prompt-and-watch-availability-no-device-manual.html",
+      "subtests": [],
+      "status": "FAIL",
+      "message": ""
+    },
+    {
+      "test": "/remote-playback/prompt-and-watch-availability-with-device-manual.html",
+      "subtests": [
+        {
+          "name": "Test that watchAvailability() runs the callback with true when user selects a device.",
+          "status": "FAIL",
+          "message": "assert_unreached: Selecting a remote device was not successful. Reached unreachable code"
+        }
+      ],
+      "status": "OK",
+      "message": null
+    },
+    {
+      "test": "/remote-playback/remote-video-control-pausing-manual.html",
+      "subtests": [],
+      "status": "FAIL",
+      "message": ""
+    },
+    {
+      "test": "/remote-playback/remote-video-control-seek-manual.html",
+      "subtests": [],
+      "status": "FAIL",
+      "message": ""
+    },
+    {
+      "test": "/remote-playback/remote-video-playback-manual.html",
+      "subtests": [],
+      "status": "FAIL",
+      "message": ""
+    },
+    {
+      "test": "/remote-playback/state-attribute-changes-when-selecting-device-manual.html",
+      "subtests": [
+        {
+          "name": "Test that the remote playback state changes when selecting a device.",
+          "status": "PASS",
+          "message": null
+        },
+        {
+          "name": "Prompt call resolves",
+          "status": "FAIL",
+          "message": "promise_test: Unhandled rejection with value: object \"NotAllowedError: The prompt was dismissed.\""
         }
       ],
       "status": "OK",
