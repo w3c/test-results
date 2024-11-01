@@ -31,7 +31,7 @@ Index of Implementations in this Report
   * Firefox Version: Version 104.0.0
   * ATK Version: Package: libatk1.0-0, Version: 2.46.0-3
   * email: spectranaut@igalia.com
-  * link: <http://www.mozilla.org>
+  * link: <https://www.mozilla.org>
 
 * Chromium on Linux using ATK
   * Date of results collection: 2022-11-04
@@ -59,7 +59,7 @@ Index of Implementations in this Report
   * Firefox Version 106.0.5
   * MacOSX Version 12.6
   * email: spectranaut@igalia.com
-  * link: <http://www.mozilla.org>
+  * link: <https://www.mozilla.org>
 
 * Chromium on Windows using MSAA + IAccessible2
   * Date of results collection: 2022-11-30
@@ -73,4 +73,4 @@ Index of Implementations in this Report
   * Firefox Version 107.0.1
   * Windows 10 Version 21H2
   * email: spectranaut@igalia.com
-  * link: <http://www.mozilla.org>
+  * link: <https://www.mozilla.org>
